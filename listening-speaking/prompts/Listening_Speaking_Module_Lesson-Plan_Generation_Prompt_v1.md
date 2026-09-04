@@ -43,14 +43,14 @@ moving through both tracks in parallel will meet the same skill-verb sequence in
 
 ---
 
-## 0. Program Rotation Log (read before planning, update after approval)
+## 0. Rotation Log (read before planning, update after approval)
 
 **What it is:** a running record, separate from any one Set's plan, of what every already-planned
 Listening/Speaking Set actually used - content format, listening strategy, speaking skill, Phase 1 hook,
 Phase 3 protocol, vocabulary theme, and topic direction, one row per lesson, grouped by Set within each
 Module/Band section.
 
-**Where it lives:** `claude/Listening Speaking Program Rotation Log.md`, one project doc, appended to (never
+**Where it lives:** `Rotation_Log.md`, one project doc, appended to (never
 overwritten) each time a Set's plan is approved. If it does not exist yet, this is the first Set of the first
 Module ever planned for this track; create it fresh and skip the cross-Module and cross-Set checks below.
 
@@ -100,12 +100,12 @@ for Set 2 onward.) Do not append a draft still being revised.
 - **Source of truth for objectives:** `learningobjectives.csv`, filtered to this Module, this band's task Levels,
   and the **Listening/Speaking modality only**. Reading and Writing objectives are out of scope for this plan the
   same way Listening/Speaking is out of scope for the Reading plan.
-- **Program Rotation Log:** `claude/Listening Speaking Program Rotation Log.md`, read in full before planning; if
+- **Rotation Log:** `Rotation_Log.md`, read in full before planning; if
   it doesn't exist yet, treat this as the first Set of the first Module.
 
 ## TASK
 
-1. Read the Program Rotation Log per Section 0. If this Module/Band already has one or more Sets planned,
+1. Read the Rotation Log per Section 0. If this Module/Band already has one or more Sets planned,
    identify the highest lesson number used so far (this Set's numbering starts at the next integer) and the most
    recently planned Set's final lesson row (for the cross-Set adjacency check). Otherwise, identify the previous
    Module's most recently planned Set's final lesson row (for the cross-Module check) and the set of vocabulary
@@ -160,4 +160,4 @@ for Set 2 onward.) Do not append a draft still being revised.
 
 The plan table, then the self-check paragraph. Once reviewed and approved, also produce the Program Rotation
 Log entry (Section 0's format, under this Module/Band's existing section if one exists) ready to append to
-`claude/Listening Speaking Program Rotation Log.md`. Nothing else.
+`Rotation_Log.md`. Nothing else.

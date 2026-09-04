@@ -406,7 +406,7 @@ Content Sample`'s conclusion guidance). Approximately 300-450 words total across
     does Day 8 close with every student producing one new instance of that exact skill out loud or on paper, with
     a few students sharing, rather than a self-report confidence check?
 13. Rotation check (0.9): different grammar focuses, different Scenario topic, and different real-world writing
-    form than the immediately preceding cycle for the same class, checked against the Program Rotation Log.
+    form than the immediately preceding cycle for the same class, checked against the Rotation Log.
 14. No em-dashes anywhere in generated content (style constraint, shared with Reading).
 15. Content volume check (0.4b): does each grammar/practice day have at least 3 distinct activities, and does
     each activity meet its item-count minimum (6-8 items; 6-8 sentences with 6-8 verified errors for an editing
@@ -766,12 +766,12 @@ grammar focus across nearby Modules even when they are not strictly consecutive 
 Focus A for both a Describing lesson and an Evaluating lesson generated back to back), since both draw from the
 same shared grammar range and can overlap without the topic itself repeating.
 
-**Before generating a lesson:** read `Academic Writing Program Rotation Log.md` in full. Check the grammar focus
+**Before generating a lesson:** read `Rotation_Log.md` in full. Check the grammar focus
 pair, Scenario topic, and real-world writing form against at least the immediately preceding logged lesson (any
 Band or Module), and scan the fuller log for a grammar focus that has recurred more than once in the last 3-4
 entries. Flag any repeat before finalizing the lesson rather than after.
 
-**After a lesson is generated and approved:** append one row to `Academic Writing Program Rotation Log.md`
+**After a lesson is generated and approved:** append one row to `Rotation_Log.md`
 per its own format instructions. This is the mechanism the log depends on; a lesson that is generated but never
 logged breaks the rotation check for every lesson generated after it.
 

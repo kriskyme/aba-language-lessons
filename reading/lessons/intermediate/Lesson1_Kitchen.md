@@ -1,7 +1,7 @@
 # Module 1 (Describing) - Intermediate Band - Lesson 1
 
 Generated per `Passage Reading Lesson Generation Prompt v2.5 BandCalibrated.md`, against Module 1's approved
-plan (`claude/Passage Reading Program Rotation Log.md`, Lesson 1 row).
+plan (`Rotation_Log.md`, Lesson 1 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** Short narrative/personal-story article | **Reading strategy:** Teacher Read-Aloud with Interactive Stops

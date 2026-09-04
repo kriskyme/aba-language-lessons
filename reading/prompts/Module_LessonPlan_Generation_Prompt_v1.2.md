@@ -12,7 +12,7 @@ treating as "8 lessons" - actually 16 days (8 lessons x 2 days each). Corrected:
 (4 x 2 days = 8 instructional days). Every reference below to "8 lessons" / "8 rows" / "Lesson 8" is corrected to
 "4 lessons" / "4 rows" / "Lesson 4." Any module plan already approved and logged under the old 8-lesson count
 should be read as having only its first 4 rows in scope; lessons already generated against rows 1-4 are
-unaffected and remain the complete module - see the Program Rotation Log's own correction note for Module 1,
+unaffected and remain the complete module - see the Rotation Log's own correction note for Module 1,
 Describing, Intermediate Band.
 
 **What changed in v1.2:** aligned with the lesson generation prompt's v2.7 correction (Section 0.10). v1.1 had
@@ -48,7 +48,7 @@ requiring them to be planned all at once.
 
 ---
 
-## 0. Program Rotation Log (read before planning, update after approval)
+## 0. Rotation Log (read before planning, update after approval)
 
 **What it is:** a single running record, separate from any one module's plan, of what every already-planned
 module actually used - genre, reading strategy, Phase 1 hook, Phase 3 protocol, vocabulary theme, and topic, one
@@ -56,7 +56,7 @@ row per lesson. It is the only thing that lets a new module's plan avoid repeati
 did; without it, each module-planning run only ever sees its own 4 lessons and cross-module repetition is
 invisible until a teacher notices it in the classroom.
 
-**Where it lives:** `claude/Passage Reading Program Rotation Log.md`, one project doc, appended to (never
+**Where it lives:** `Rotation_Log.md`, one project doc, appended to (never
 overwritten) each time a module plan is approved. If it does not exist yet, this is the first module ever planned;
 create it fresh and note that cross-module checks below are not applicable this time.
 
@@ -122,12 +122,12 @@ actually approved and are actually going to be taught.
   tracing it to a Writing (or Listening/Speaking) Can-do statement. Writing can still appear as an occasional
   activity format inside a lesson or its homework - that is fine and expected - it just is not what grounds the
   task design.
-- **Program Rotation Log:** `claude/Passage Reading Program Rotation Log.md`, read in full before planning
+- **Rotation Log:** `Rotation_Log.md`, read in full before planning
   (see Section 0 above); if it does not exist yet, treat this as the first module and skip cross-module checks
 
 ## TASK
 
-1. Read the Program Rotation Log per Section 0. Identify the previous module's Lesson 4 row (for the adjacency
+1. Read the Rotation Log per Section 0. Identify the previous module's Lesson 4 row (for the adjacency
    checks) and the full set of vocabulary themes and topics used so far (for the recency flag). If the log doesn't
    exist yet, note that this is the first planned module.
 
@@ -223,5 +223,4 @@ actually approved and are actually going to be taught.
 ## OUTPUT
 
 The plan table, then the self-check paragraph. Once the plan is reviewed and approved, also produce the
-Program Rotation Log entry (Section 0's format) ready to append to `claude/Passage Reading Program Rotation
-Log.md`. Nothing else.
+Rotation Log entry (Section 0's format) ready to append to `Rotation_Log.md`. Nothing else.

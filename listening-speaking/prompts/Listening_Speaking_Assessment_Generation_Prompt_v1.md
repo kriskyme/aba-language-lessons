@@ -3,7 +3,7 @@
 Companion to the Listening/Speaking Lesson Generation Prompt (v1) and Module Lesson-Plan Generation Prompt (v1).
 Generates the assessment layer that sits on top of a taught Set: not a lesson, and not a new source's worth of
 teaching, but a way to check whether students can transfer what a Set actually built. This is the first version
-of this prompt - the family's Master Generation Document listed an assessment prompt as pending work since
+of this prompt - the family's Index doc listed an assessment prompt as pending work since
 2026-08-30; this fills that gap. Expect it to be lightly field-tested, like the Lesson and Module Lesson-Plan
 prompts were at v1.
 
@@ -62,7 +62,7 @@ Two things, kept separate in the item design:
 2. **The specific listening strategies actually taught across the Set's 4 lessons** (e.g., if a Set's four
    strategies were Listen for Main Ideas/Gist, Recognize Examples, Listen for Sequence Markers, and Predict from
    Context Before Confirming, the assessment should include at least one item per strategy, not just a generic
-   comprehension check). Pull the actual four strategies from the Set's lesson files or its Program Rotation Log
+   comprehension check). Pull the actual four strategies from the Set's lesson files or its Rotation Log
    entry rather than re-guessing from the Module Lesson-Plan alone.
    Do not test vocabulary items from the Set's own 4 lessons directly (a student who missed one lesson would be
    penalized for absence, not for a comprehension gap), but do test the same _kind_ of vocabulary-in-context

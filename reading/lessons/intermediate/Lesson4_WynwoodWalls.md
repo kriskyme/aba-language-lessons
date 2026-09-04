@@ -1,7 +1,7 @@
 # Module 1 (Describing) - Intermediate Band - Lesson 4
 
 Generated per `Passage Reading Lesson Generation Prompt v2.5 BandCalibrated.md`, against Module 1's approved
-plan (`claude/Passage Reading Program Rotation Log.md`, Lesson 4 row).
+plan (`Rotation_Log.md`, Lesson 4 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** Short interview transcript (Q&A) | **Reading strategy:** Reader's Theater

@@ -1,4 +1,4 @@
-# Listening Speaking Program Rotation Log
+# Listening/Speaking Rotation Log
 
 Running record of every approved Listening/Speaking Set's content-format, listening-strategy, speaking-skill,
 Phase 1 hook, Phase 3 protocol, vocabulary theme, and topic-direction choices - one row per lesson, one

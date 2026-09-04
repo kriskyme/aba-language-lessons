@@ -1,4 +1,4 @@
-# Passage Reading Program Rotation Log
+# Passage Reading Rotation Log
 
 Running record of every approved Passage Reading module plan's genre, reading strategy, Phase 1 hook, Phase 3
 protocol, vocabulary theme, and topic - one row per lesson, one section per module, in the order modules were
@@ -13,7 +13,7 @@ rows; rows 5-8 (Lesson 5: an apartment renovation in Bushwick, Brooklyn; Lesson 
 Angel's Landing, Zion National Park; Lesson 7: a food truck in a Portland food cart pod; Lesson 8: a bicycle-repair
 workshop in Amsterdam) were planned but never generated as lesson content, and are removed below as out of
 scope under the corrected 4-lesson model. Lessons 1-4, already generated, are the complete Module 1
-Intermediate module, not half of it. See the Passage Reading Master Generation Document for current status.
+Intermediate module, not half of it. See `Index.md` for current status.
 
 Modules are appended below in the order they were planned. When planning the next module, read the LAST
 lesson row of the most recently logged module for the adjacency checks, and the full set of vocabulary themes
