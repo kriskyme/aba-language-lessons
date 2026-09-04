@@ -27,36 +27,57 @@ Beginner / Intermediate / Advanced / Proficient.
 
 ## Repo layout
 
-Each modality folder is intended to have this shape:
+A modality can hold more than one **lesson type** — a fixed generation format
+with its own prompt family, rotation log, and lessons — so every modality
+folder is one level of grouping above that:
 
 ```
 <modality>/
-├── Index.md            # living index: what each file does, sync status, pending work
-├── Changelog.md         # dated version history for this modality's prompt family
-├── Rotation_Log.md      # tracks every generated lesson (topic/skill rotation, avoids repeats)
-├── lessons/{beginner,intermediate,advanced,proficient}/
-├── prompts/             # versioned generation prompts
-└── source/
+├── Index.md                 # thin: lists this modality's lesson type(s), points into each
+└── <lesson-type>/           # one subfolder per lesson type this modality generates
+    ├── Index.md              # living index: what each file does, sync status, pending work
+    ├── Changelog.md          # dated version history for this lesson type's prompt family
+    ├── Rotation_Log.md       # tracks every generated lesson (topic/skill rotation, avoids repeats)
+    ├── lessons/{beginner,intermediate,advanced,proficient}/
+    ├── prompts/              # versioned generation prompts
+    └── source/
 ```
 
-No modality prefix on these three filenames — the folder path already says
-which modality it is. When referring to one from a *different* modality's
-doc, name the modality in prose instead (e.g. "Reading's `Index.md`"), since
-"Index.md" alone is ambiguous across the three folders.
+Worked example: `reading/passage-reading/` (Reading's one active lesson
+type today; `reading/novel-reading/` is planned as a sibling once real work
+on it starts — see `reading/Index.md`). `listening-speaking/` and `writing/`
+currently have exactly one lesson type each, so they each hold exactly one
+such subfolder (`listening-speaking/listening-speaking/`,
+`writing/academic-writing/`) — the lesson-type folder is named after what the
+docs call that lesson type, not forced to match the modality name, so
+Listening/Speaking's repeats the modality name (it has no more specific name
+yet) while Writing's doesn't (its one lesson type has always been called
+"Academic Writing").
 
-Each modality's actual lesson cycle differs by design:
+No modality or lesson-type prefix on the three per-lesson-type filenames —
+the folder path already says which lesson type it is. When referring to one
+from a *different* lesson type's doc, name the lesson type in prose instead
+(e.g. "Passage Reading's `Index.md`"), since "Index.md" alone is ambiguous
+across folders.
 
-- **`reading/`** — 2-day lesson / 4-lesson module, built around one shared
-  anchor text with lettered `[STOP & CHECK]` checkpoints.
-- **`listening-speaking/`** — 2-day lesson (Day 1 Listening / Day 2 Speaking),
-  built around one real, sourced audio/video clip (URL, speaker, platform,
-  runtime, glossary pulled from the source's own captions) — no printed
-  passage.
-- **`writing/`** — 8-day lesson built around a shared "Scenario" plus a
-  **Leveled Mentor Set** (one exemplar per task Level) instead of a single
-  shared anchor text, with a Focus A/Focus B grammar pairing structure. No
-  module concept yet — lessons are generated one at a time against a flat
-  rotation log.
+Each lesson type's actual cycle differs by design:
+
+- **Passage Reading** (`reading/passage-reading/`) — 2-day lesson / 4-lesson
+  module, built around one shared anchor text with lettered
+  `[STOP & CHECK]` checkpoints.
+- **Novel Reading** (planned, `reading/novel-reading/`) — not yet started;
+  expected to be variable-length/multi-chapter, a different enough shape
+  (e.g. an 8-day format spanning what Passage Reading treats as two modules)
+  that it can't share Passage Reading's prompt family.
+- **Listening/Speaking** (`listening-speaking/listening-speaking/`) — 2-day
+  lesson (Day 1 Listening / Day 2 Speaking), built around one real, sourced
+  audio/video clip (URL, speaker, platform, runtime, glossary pulled from the
+  source's own captions) — no printed passage.
+- **Academic Writing** (`writing/academic-writing/`) — 8-day lesson built
+  around a shared "Scenario" plus a **Leveled Mentor Set** (one exemplar per
+  task Level) instead of a single shared anchor text, with a Focus A/Focus B
+  grammar pairing structure. No module concept yet — lessons are generated
+  one at a time against a flat rotation log.
 
 ## Canonical conventions (apply going forward)
 
@@ -64,9 +85,16 @@ These reconcile inconsistencies found during consolidation. When generating
 or renaming content, use these — don't propagate the older mismatched styles
 noted in Known Issues.
 
-- **Per-modality docs**: `Index.md`, `Changelog.md`, `Rotation_Log.md` — no
-  modality prefix, `Title_Case_With_Underscores` for multi-word names. Already
-  applied across all three modalities.
+- **Nest by lesson type, not just modality.** Every modality folder holds one
+  subfolder per lesson type it generates — even a modality with only one
+  today (`listening-speaking/listening-speaking/`, `writing/academic-writing/`)
+  — plus a thin modality-level `Index.md` that just lists the lesson type(s)
+  and points into each. Don't put lesson-type content directly in the
+  modality folder; a second lesson type should never require restructuring
+  what's already there.
+- **Per-lesson-type docs**: `Index.md`, `Changelog.md`, `Rotation_Log.md` — no
+  modality or lesson-type prefix, `Title_Case_With_Underscores` for
+  multi-word names. Already applied across all three modalities.
 - **Lesson files**: one naming scheme repo-wide — Reading's terse slug style
   is the target (`Lesson<N>_<TopicSlug>.md`,
   `<TopicSlug>_<Level>_L<N>_Packet.html`). Listening/Speaking currently has
@@ -84,40 +112,46 @@ noted in Known Issues.
 
 ## Known issues / pending consolidation work
 
-- `writing/lessons/` is **empty**, but `writing/Rotation_Log.md` describes two
-  fully generated, multiply-revised lessons (Intermediate 1 "my phone case,"
-  Advanced 1 "Two apartments... for Sam") as current/synced. That content
-  appears to have never been saved into this repo and needs to be
-  regenerated or recovered.
-- `listening-speaking/lessons/intermediate/Listening_Speaking_Module_1__Intermediate__-_Set_1_Assessment.md`
+- `writing/academic-writing/lessons/` is **empty**, but
+  `writing/academic-writing/Rotation_Log.md` describes two fully generated,
+  multiply-revised lessons (Intermediate 1 "my phone case," Advanced 1 "Two
+  apartments... for Sam") as current/synced. That content appears to have
+  never been saved into this repo and needs to be regenerated or recovered.
+- `listening-speaking/listening-speaking/lessons/intermediate/Listening_Speaking_Module_1__Intermediate__-_Set_1_Assessment.md`
   is a 1-line corrupted stub (a mangled filename string, not content), while
-  `listening-speaking/Index.md` and `Rotation_Log.md` claim this assessment
-  was generated with real content (Part A/Part B, real source) — likely lost
-  during consolidation and needs regenerating. Both docs also still cite it
-  under a stale `claude/...` path prefix left over from before this repo
-  existed.
-- Reading's `Index.md` and `Rotation_Log.md` reference filenames that don't
-  match what's actually on disk, e.g. doc says `Passage Reading Lesson
-  Generation Prompt v2.7 BandCalibrated.md` / `Module 1 Lesson 1 - A
-  Grandmother's Kitchen.md`, but the real files are
-  `Lesson_Generation_Prompt_v2.7_CURRENT.md` / `Lesson1_Kitchen.md`. Needs
-  reconciling (fix the docs to match reality, not the other way around).
-- Writing has no Module-Lesson-Plan, Homework, or Assessment prompt yet (only
-  a Lesson Generation prompt and a Student Print Formatting prompt) — flagged
-  as pending in its own `Index.md`.
+  `listening-speaking/listening-speaking/Index.md` and `Rotation_Log.md`
+  claim this assessment was generated with real content (Part A/Part B, real
+  source) — likely lost during consolidation and needs regenerating. Both
+  docs also still cite it under a stale `claude/...` path prefix left over
+  from before this repo existed.
+- Passage Reading's `Index.md` and `Rotation_Log.md`
+  (`reading/passage-reading/`) reference filenames that don't match what's
+  actually on disk, e.g. doc says `Passage Reading Lesson Generation Prompt
+  v2.7 BandCalibrated.md` / `Module 1 Lesson 1 - A Grandmother's Kitchen.md`,
+  but the real files are `Lesson_Generation_Prompt_v2.7_CURRENT.md` /
+  `Lesson1_Kitchen.md`. Needs reconciling (fix the docs to match reality, not
+  the other way around).
+- Academic Writing has no Module-Lesson-Plan, Homework, or Assessment prompt
+  yet (only a Lesson Generation prompt and a Student Print Formatting
+  prompt) — flagged as pending in its own `Index.md`.
 - Within Listening/Speaking itself, intermediate lessons use
   `Listening_Speaking_Module_1__Lesson_1__Intermediate__-_....md` while
   advanced lessons use `Listening Speaking Module 1, Lesson 1 (Advanced) -
-  ....md` — two schemes in one modality; migrate both to the canonical slug
-  style above.
+  ....md` — two schemes in one lesson type; migrate both to the canonical
+  slug style above.
 
 ## Working notes for future sessions
 
 - There's nothing to build, run, lint, or test — "verification" here means
-  checking that a modality's `Index.md` and `Rotation_Log.md` actually match
-  the files present in its `lessons/` and `prompts/` folders,
-  and that a lesson's HTML packet stays structurally/stylistically
-  consistent with its Markdown source and with other modalities' packets.
+  checking that a lesson type's `Index.md` and `Rotation_Log.md` actually
+  match the files present in its `lessons/` and `prompts/` folders, and that
+  a lesson's HTML packet stays structurally/stylistically consistent with its
+  Markdown source and with other lesson types' packets.
 - When adding or renaming lesson files, follow the canonical conventions
-  above rather than matching whatever scheme is already in that modality's
-  folder — the point of this repo is to converge on one scheme.
+  above rather than matching whatever scheme is already in that lesson
+  type's folder — the point of this repo is to converge on one scheme.
+- Adding a new lesson type (e.g. Novel Reading) means creating a new
+  `<modality>/<lesson-type>/` subfolder with its own `Index.md`,
+  `Changelog.md`, `Rotation_Log.md`, `prompts/`, `lessons/`, `source/` — and
+  adding it to that modality's thin top-level `Index.md`. Never add a second
+  lesson type's content directly into an existing lesson-type folder.

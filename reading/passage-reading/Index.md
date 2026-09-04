@@ -9,9 +9,9 @@ A single reference for everything in the Passage Reading prompt family: what eac
 with the current lesson-generation prompt, and the order to actually run them in to produce a module of lessons.
 "Passage Reading" is the lesson type these prompts generate: a fixed 2-day cycle built around one shared anchor
 text. A module is **4 lessons** (4 x 2-day cycles = 8 instructional days); do not plan or expect 8 lessons per
-module. A second lesson type, tentatively **Novel Reading** (variable-length,
-multi-chapter), is planned separately and will get its own file family and its own section in a future version of
-this document; nothing here currently supports it.
+module. A second lesson type, **Novel Reading** (variable-length, multi-chapter), is planned as a sibling
+`../novel-reading/` folder with its own file family, prompts, and rotation log - see `../Index.md` for the
+modality-level list of lesson types. Nothing here currently supports it.
 
 ## File index
 
@@ -179,6 +179,6 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
 - **Teacher-facing formatted/print version** - not started; a possible future companion to the Step 6 prompt,
   noted but out of scope until requested.
 - **Novel Reading lesson type** - not started. Will need its own lesson-generation prompt, its own Module
-  Lesson-Plan-equivalent (or a shared one adapted to variable day-counts), and likely its own section in this
-  document rather than being folded into the tables above, since day-count is fixed for Passage Reading and
-  variable for Novel Reading.
+  Lesson-Plan-equivalent (or a shared one adapted to variable day-counts), and its own `../novel-reading/`
+  folder (index, prompts, rotation log) rather than being folded into the tables above, since day-count is
+  fixed for Passage Reading and variable for Novel Reading.

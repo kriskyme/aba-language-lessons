@@ -1,6 +1,6 @@
 # Listening/Speaking Index
 
-_This is the Listening/Speaking counterpart to Reading's `Index.md` - same purpose (a living index of the file
+_This is the Listening/Speaking counterpart to Passage Reading's `Index.md` - same purpose (a living index of the file
 family, sync status, and run order), same living-document rule (update it whenever a doc in this family is added,
 renamed, or revised). Both index docs describe sibling prompt families that share `learningobjectives.csv` and
 the same 8-Module skill taxonomy, but each family's lesson type and workflow are otherwise independent. Version
