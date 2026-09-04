@@ -1,39 +1,20 @@
 # Listening/Speaking Master Generation Document
 
-_Created 2026-08-30. Last updated 2026-09-04: Advanced Module 1 Set 1's Lessons 1-2 restructured to the current
-2-day cycle and their student packets rebuilt to current formatting conventions, closing the last known gap
-between generated content and the current prompts across the whole family (see the Advanced Band progress
-section and Pending work below). Earlier the same day: Assessment Generation Prompt v1 added and then revised.
-Both Listening and Speaking assessments now run every Set (not staggered). Speaking's mechanism now splits by
-band: Beginner/Intermediate are scored via a Teams Speaking Progress solo recording (that recording IS the
-formal assessment, with a same-task teacher-approved live-delivery option); Advanced/Proficient default to a
-live solo/group presentation, with a same-task Teams-recording version always also generated as a standing
-scored alternate (e.g. for an absence), budget/approval for using that alternate tracked outside this prompt.
-Previously updated 2026-09-03: Unit Architecture corrected from an 8-day to a 2-day cycle, module size corrected
-from 8 to 4 lessons, the Sets concept introduced (a Module/Band can hold more than one 4-lesson rotation over
-time), and Module 1 Intermediate Set 1 completed (Lessons 1-4) and retroactively rewritten to match. This is the
-Listening/Speaking counterpart to `Passage Reading Master Generation Document.md` - same purpose (a living index
-of the file family, sync status, and run order), same living-document rule (update it whenever a doc in this
-family is added, renamed, or revised). Both master documents describe sibling prompt families that share
-`learningobjectives.csv` and the same 8-Module skill taxonomy, but each family's lesson type and workflow are
-otherwise independent._
+_This is the Listening/Speaking counterpart to `Passage Reading Master Generation Document.md` - same purpose (a
+living index of the file family, sync status, and run order), same living-document rule (update it whenever a
+doc in this family is added, renamed, or revised). Both master documents describe sibling prompt families that
+share `learningobjectives.csv` and the same 8-Module skill taxonomy, but each family's lesson type and workflow
+are otherwise independent._
 
-**Note on module size, corrected 2026-09-03 (supersedes the 2026-09-01 version below).** The reasoning below for
-keeping 8 lessons per module rested on a "the cycle is 8 days, not 2" premise that turned out to be wrong: the
-Lesson Generation Prompt's Unit Architecture is a real 2-day cycle (Day 1 = Unit A/Listening, Day 2 = Unit
-B/Speaking, 75 minutes each - see that prompt's fifth addendum), matching Passage Reading's cycle length after
-all. With that parity restored, this family now matches Passage Reading's own corrected module size: **a module
-is 4 lessons (8 real class days), not 8 lessons (16 days).** The Module Lesson-Plan Generation Prompt's default
-lesson count is corrected to match.
+## Changelog
 
-**Superseded note (2026-09-01, kept for history - see correction above):** Passage Reading's own Master
-Generation Document was corrected the same day to say a Reading module is 4 lessons (8 days), not 8 lessons (16
-days) - a miscount fixed after the fact. This family's 8-lessons-per-module choice was reconfirmed rather than
-changed: the two cycle lengths are different enough (2 days vs. an 8-day starting point) that day-count parity
-with Reading was never really achievable either way, and 8 lessons remains the plan. Per the user, treat a
-module's ~64 instructional days as the target, with each lesson's actual day count set per-source at generation
-time rather than rigidly fixed at 8 - see Lesson 1's plan and generated content for how this played out in
-practice.
+| Date | Version | Summary |
+| --- | --- | --- |
+| 2026-09-04 | — | Advanced Module 1 Set 1's Lessons 1-2 restructured to the current 2-day cycle and their student packets rebuilt to current formatting conventions, closing the last known gap between generated content and the current prompts across the whole family. |
+| 2026-09-04 | v1 | Assessment Generation Prompt added and then revised (earlier the same day): Listening and Speaking assessments now run every Set (not staggered); Speaking scoring splits by band (Beginner/Intermediate via a Teams solo recording as the formal assessment; Advanced/Proficient via live solo/group presentation, with a Teams-recording version as a standing scored alternate). |
+| 2026-09-03 | — | Unit Architecture corrected from an 8-day to a 2-day cycle (Day 1 = Unit A/Listening, Day 2 = Unit B/Speaking, 75 min each) and module size corrected from 8 to 4 lessons to match, restoring parity with Passage Reading's cycle length. The Sets concept introduced (a Module/Band can hold more than one 4-lesson rotation over time); Module 1 Intermediate Set 1 completed (Lessons 1-4) and retroactively rewritten to match. |
+| 2026-09-01 | — | Module size initially reconfirmed at 8 lessons/module (~64 instructional days as the target, day count set per-source at generation time) rather than adopting Reading's same-day 4-lesson correction, on the reasoning that the two cycle lengths weren't comparable. Superseded 2026-09-03 above once Unit Architecture turned out to already be a 2-day cycle. |
+| 2026-08-30 | — | Document created. |
 
 ## What this document is
 

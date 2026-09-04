@@ -1,37 +1,18 @@
 # Passage Reading Master Generation Document
-_Last updated: 2026-09-01 (second pass same day, correcting the first pass's own Fishbowl/Concentric Circles
-diagnosis). Four corrections stand as of this update, in order of consequence: (1) a module is 4 lessons, not 8 -
-a lesson is a 2-day cycle, and "8 days worth of lessons" was originally miscounted as "8 lessons" (16 days)
-instead of "4 lessons of 2 days each" (8 days); Module 1 Intermediate's already-generated Lessons 1-4 are
-therefore the COMPLETE module, not half of it, and its cumulative Lessons-1-4 assessment is already the full
-end-of-module assessment, not a partial one. The Module Lesson-Plan Generation Prompt and the Program
-Rotation Log are both corrected to match; (2) Fishbowl and Concentric Circles were first diagnosed (v2.6,
-earlier 2026-09-01) as unworkable at this program's realistic class size (roughly 8-12 students) and replaced
-with a small-group default - that diagnosis was itself corrected the same day: the actual problem was a single
-static discussion prompt and a passive outer circle, not the protocols themselves. The Lesson Generation Prompt
-is now **v2.7** (Section 0.10 rewritten): Fishbowl and Concentric Circles are reinstated as fully valid Phase 3
-choices at 8-12 students, provided Fishbowl gives every outer-circle student an explicit active task (never
-passive listening) and every protocol rotates through 2-3 discussion prompts rather than running one prompt for
-the full window. The Module Lesson-Plan Generation Prompt (now **v1.2**) is realigned to match. (3) the Student
-Print Formatting Prompt (v1.1) is corrected against two finished packets the user supplied (Intermediate Lesson
-1 "Kitchen," Advanced Lesson 1 "Sagrada Família"): it pulls its 2-3 discussion prompts directly from a source
-lesson instead of inventing them, generalizes the "Read & Mark It Up" annotation key to every packet regardless
-of source reading strategy, documents the word-bank dashed-rule as an intentional exception, and gains a
-required base stylesheet (Section 3.5) so future packets reproduce the same fonts/colors/spacing without
-needing an existing packet as a reference; (4) Module 1 Lesson 1 (Advanced)'s raw lesson doc and the full
-Module 1 Advanced module plan were both previously referenced in this file but never actually saved as project
-docs, or (for the plan) never actually logged to the Program Rotation Log despite claiming otherwise - both gaps
-are now closed: the Lesson 1 raw doc and the plan (trimmed to the corrected 4-lesson model, with a note on its
-own inaccurate claim) are saved, and the Program Rotation Log has a proper Advanced Band entry.
-Prior update 2026-08-31: Student Print Formatting Prompt v1 added, a new Step 6 producing a print-ready
-black-and-white student handout from a completed lesson; tested end-to-end against Module 1 Lesson 1 Advanced.
-Prior update 2026-08-30: all five prompts synced to v2.5; Module Lesson-Plan now Reading-only grounded with
-a reality-grounded, band-conditioned topic rule; v2.5's genre and reading-strategy banks expanded; Module 1
-Intermediate plan approved and logged, Lessons 1-4 generated, homework generated for Lessons 1-4, cumulative
-assessment plus 4 study guides generated; Module 1 Advanced plan approved, Lesson 1 generated.
-This is a living index, not a prompt - update it whenever a doc in the family is added, renamed, or synced to a
+_This is a living index, not a prompt - update it whenever a doc in the family is added, renamed, or synced to a
 new lesson-prompt version, so it never falls out of date the way the individual prompts did before this project
 started tracking them here._
+
+## Changelog
+
+| Date | Version | Summary |
+| --- | --- | --- |
+| 2026-09-01 | v2.7 | Module = 4 lessons (2-day cycle), not 8; Module 1 Intermediate's already-generated Lessons 1-4 confirmed as the complete module, and its cumulative assessment as the full end-of-module assessment. Module Lesson-Plan Prompt and Program Rotation Log corrected to match. |
+| 2026-09-01 | v2.7 | Fishbowl and Concentric Circles reinstated as valid Phase 3 choices at 8-12 students (Section 0.10: active task for every outer-circle student, 2-3 rotated discussion prompts), reversing the same-day v2.6 call to replace them with a small-group default. Module Lesson-Plan Prompt realigned (v1.2). |
+| 2026-09-01 | v1.1 | Student Print Formatting Prompt corrected against two finished packets (Kitchen, Sagrada Família): pulls discussion prompts from the source lesson, generalizes the annotation key, documents the word-bank dashed-rule exception, and adds a required base stylesheet (Section 3.5). |
+| 2026-09-01 | — | Module 1 Lesson 1 (Advanced) raw doc and the full Advanced module plan, previously referenced but never actually saved/logged, are now saved and the Program Rotation Log has a proper Advanced Band entry. |
+| 2026-08-31 | v1.0 | Student Print Formatting Prompt added (new Step 6): produces a print-ready black-and-white student handout from a completed lesson; tested against Module 1 Lesson 1 Advanced. |
+| 2026-08-30 | v2.5 | All five prompts synced to v2.5; Module Lesson-Plan now reality-grounded with a band-conditioned topic rule. Module 1 Intermediate plan approved and logged, Lessons 1-4 + homework + cumulative assessment + 4 study guides generated; Module 1 Advanced plan approved, Lesson 1 generated. |
 
 ## What this document is
 
