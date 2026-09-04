@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Choose a Backpack: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+
+      .objective {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        min-width: 130px;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .image-placeholder {
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .image-caption {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qlist .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        max-width: 320px;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      /* Picture-based multiple choice: placeholder boxes instead of words */
+      .pic-options {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 8px 0 4px 4px;
+      }
+      .pic-option {
+        width: 110px;
+      }
+      .pic-option .pic-box {
+        border: 2px dashed var(--ink);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 10.5px;
+        color: var(--ink-soft);
+        padding: 6px;
+      }
+      .pic-option .pic-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      /* Matching items: one pair per line with a blank, not compressed with arrows */
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14px;
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      .upside-down {
+        transform: rotate(180deg);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .discuss-block,
+        .wrapup,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: How to Choose a Backpack</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> listen for the order steps happen in, notice
+        the details that support each step, and compare two types of backpack
+        frame by naming a feature of each and a reason for the difference.
+      </p>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Good to Know</div>
+        <p class="model-step">
+          REI has been an outdoor gear store since 1938. It's a co-op, which
+          means shoppers who join as members can earn a yearly reward based on
+          what they buy.
+        </p>
+        <p class="model-step">
+          A liter is a metric unit of volume. A backpack's capacity in liters
+          tells you how much space is inside it, not how heavy it is.
+        </p>
+      </div>
+
+      <div class="section-title">Before You Watch</div>
+
+      <div class="image-placeholder">
+        [ TEACHER: insert cropped close-up photo of a backpack's padded hip belt
+        and buckle here - no straps, pockets, or full pack shape visible ]
+      </div>
+      <p class="image-caption">A mystery close-up. What is this a part of?</p>
+
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          With a partner, describe what you see in 2-3 sentences. What do you
+          think it's part of? Write your guess below.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+
+      <p class="instr" style="margin-top: 14px">
+        Still not sure? Flip the clue below for a hint. It's printed upside-down
+        on purpose, so don't peek before you've made your first guess.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          <strong>Clue:</strong> "Whatever this belongs to, most of its weight
+          is supposed to rest right here - not on your shoulders."
+        </p>
+      </div>
+
+      <div class="qitem" style="margin-top: 10px">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Write your final guess, then check it as a class.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. capacity</span
+          ><span>how much a backpack can hold, usually measured in liters</span>
+        </div>
+        <div class="vrow">
+          <span class="word">2. frame</span
+          ><span
+            >the structure inside or along a backpack that gives it shape and
+            support</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">3. pocket</span
+          ><span
+            >a small, separate section of a backpack for storing things</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">4. waterproof</span
+          ><span>able to keep water from getting in</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. comfortable</span
+          ><span>causing no pain; easy and pleasant to wear</span>
+        </div>
+        <div class="vrow">
+          <span class="word">6. adjust</span
+          ><span
+            >to change the fit of something slightly, usually with straps</span
+          >
+        </div>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll watch:</strong> "How to Choose a Backpack," a video from
+        REI Co-op about the three things to think about when picking a
+        backpacking pack: size, features, and fit.
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you watch, fill in what you learn about the two frame types below.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>&nbsp;</th>
+          <th>Internal Frame</th>
+          <th>External Frame</th>
+        </tr>
+        <tr>
+          <td>Where's the frame?</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Ventilation</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="section-title">Listen Closely</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Circle the correct answer for each question below.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              What does this guide help you choose?
+              <div class="pic-options">
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a backpack ]</div>
+                  <div class="pic-label">a backpack</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a bicycle ]</div>
+                  <div class="pic-label">a bicycle</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a tent ]</div>
+                  <div class="pic-label">a tent</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              This guide is about backpacks for (school / hiking trips /
+              shopping).
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              An internal frame backpack is (hidden / visible / heavy).
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              A side pocket is good for holding (a water bottle / shoes / a
+              phone).
+            </div>
+          </li>
+          <li>
+            <span class="num">5.</span>
+            <div class="qbody">
+              Most of a backpack's weight should rest on your (shoulders / hips
+              / feet). Do you think most people get this right without any help?
+              (yes / no)
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Circle the correct answer, or fill in the blank using the word bank
+          right above it.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              This backpack guide is about (a big, colorful bag / an adjustable
+              bag / a small, cheap bag).
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              The right capacity range for a weekend trip is (30-50 liters / 70+
+              liters).
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              <div class="wordbank">
+                <strong>Word bank:</strong> visible &middot; good for big loads
+                &middot; heavy &middot; cheap
+              </div>
+              An external frame pack is ___ and ___.
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              <div class="wordbank">
+                <strong>Word bank:</strong> dry &middot; colorful &middot; light
+              </div>
+              A raincover helps keep your backpack ___.
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Name one feature of a good backpack, one comparison between two
+              backpack types, and the reason given for that difference.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              <div class="wordbank">
+                <strong>Capacities:</strong> 30-50 liters &middot; 50-80 liters
+                &middot; 70+ liters
+              </div>
+              Match each trip length to its typical capacity.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">Weekend trip</span
+                  ><span class="ans-line"></span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">Multiday trip</span
+                  ><span class="ans-line"></span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">Extended trip</span
+                  ><span class="ans-line"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Name two features of internal-frame backpacks, one way they're
+              different from external-frame backpacks, and the reason the guide
+              gives for that difference.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-4 sentences, summarize the guide: what it covers and the
+              order it gives its advice in.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find the part where the guide suggests getting help from an REI
+              specialist to fit a pack. What does this suggest about how easy or
+              hard it is to get the fit right alone, even though the guide never
+              says "this is hard"?
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Show What You Noticed</div>
+      <div class="wrapup">
+        <p class="instr">
+          <strong>Don't read ahead.</strong> Your teacher will read a short
+          paragraph out loud. Listen for the order things happen in - don't
+          worry about catching every word.
+        </p>
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            With a partner, retell the order out loud, using words like "first"
+            and "then." Then write it below. Be ready to share with the class.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
+      <p class="instr" style="font-style: italic; margin-bottom: 6px">
+        This is printed upside-down on purpose. Don't turn the page around until
+        you've said and written your answer above.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          Before Maya's camping trip, she needed a new tent. She looked at the
+          capacity first - she wanted one for two people, not just one. The tent
+          had a strong frame that held its shape even in the wind. Inside, there
+          was a small pocket for her phone and keys. The material was
+          waterproof, so rain wouldn't get through. It also felt comfortable to
+          sleep in, with enough room to stretch out. Before she left, she had to
+          adjust the poles until the tent stood up straight.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: How to Choose a Backpack</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> produce a short description that puts steps
+        in order, using words like "first," "once," and "then."
+      </p>
+
+      <div class="section-title">Learn the Phrase</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Sequencing Language</div>
+        <p class="model-step">
+          When you explain how to do something, it helps to make the order
+          clear. In the guide, REI does this:
+          <em
+            >"There are three main areas where you'll need to make choices."</em
+          >
+          Later, it says:
+          <em
+            >"Once you've chosen the type of backpack you want, it's time to fit
+            your pack."</em
+          >
+        </p>
+        <p class="model-step">
+          <strong>Example:</strong> "First, decide how many nights you'll be
+          gone. Once you know that, it's time to pick the size."
+        </p>
+        <p class="model-step">
+          Now it's your turn. In the tasks below, you'll describe the steps for
+          choosing a backpack, in order, using frames like these:
+        </p>
+        <ul class="qlist">
+          <li><span class="num">&bull;</span> "First, ___. Next, ___."</li>
+          <li>
+            <span class="num">&bull;</span> "Once you've ___, it's time to ___."
+          </li>
+          <li><span class="num">&bull;</span> "After that, ___."</li>
+        </ul>
+      </div>
+
+      <div class="section-title">Practice It</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing.
+      </p>
+
+      <div class="pic-options" style="margin: 14px 0 4px 4px">
+        <div class="pic-option">
+          <div class="pic-box">[ photo: choosing a pack size ]</div>
+          <div class="pic-label">choose the size</div>
+        </div>
+        <div class="pic-option">
+          <div class="pic-box">[ photo: comparing frame types ]</div>
+          <div class="pic-label">choose the type</div>
+        </div>
+        <div class="pic-option">
+          <div class="pic-box">[ photo: adjusting shoulder straps ]</div>
+          <div class="pic-label">check the fit</div>
+        </div>
+      </div>
+      <p class="image-caption">
+        The three steps for choosing a backpack, out of order.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Complete each sentence below using the word bank right below.
+        </p>
+        <div class="wordbank">
+          <strong>Word bank:</strong> choose the size &middot; choose the type
+          &middot; check the fit
+        </div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">First, ___.</div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">Then, ___.</div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">After that, ___.</div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Write 1, 2, 3 next to the three pictures above to put the steps in
+              the right order.
+            </div>
+          </li>
+        </ol>
+        <div class="starter">"First, ___. Then, ___. After that, ___."</div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Fill in each frame below to describe your own steps.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Use the model below to write your own.
+              <div class="starter">
+                Model: "First, choose the size. Then, choose the frame."
+              </div>
+              Your turn:
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Complete a second frame:
+              <div class="starter">"Once you've ___, it's time to ___."</div>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Put your two sentences together and read them aloud to a partner
+              as one connected description.
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe, in order, how you'd choose a backpack for a weekend
+              trip, and explain why you'd do one step before another.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Now describe the same steps for a much longer, multi-week trip.
+              What changes, and why? <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Write an extended, step-by-step description of choosing a
+              backpack. Include one word that shows which step you think matters
+              most, without saying "I think this matters most" (for example,
+              calling a step "the tricky part"). <span class="ans-line"></span
+              ><span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Ask a partner which step they think matters most and why. Write
+              one sentence agreeing or pushing back on their answer.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Say It Like a Native Speaker</div>
+        <p class="model-step">
+          Speakers often link words together smoothly instead of pausing between
+          them. Practice this sentence: "Once you've chosen the type of backpack
+          you want, it's time to fit your pack." Underline the places where you
+          think the words link together.
+        </p>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+      <div class="discuss-block">
+        <p class="instr">
+          Get into a small group. Your group will get one question below. Take
+          turns discussing it out loud, using a starter phrase from the list.
+          While your group talks, keep a tally: how many times does someone use
+          a sequencing word like "first," "once," or "then"?
+        </p>
+
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            If you were going on a weekend trip, what size backpack would you
+            choose, and in what order would you make your decisions?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            Which matters more: how many pockets a backpack has, or how
+            comfortable it feels? Why?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">3.</span>
+          <div class="qbody">
+            What's one step people might forget when choosing a backpack?
+          </div>
+        </div>
+
+        <p class="instr" style="font-weight: 700; margin-bottom: 6px">
+          Starter phrases:
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span> "First, ___."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "First, ___. Then, ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;</span> "Once you've ___,
+            it's time to ___, because ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "First, ___.
+            After that, ___. The tricky part is ___, because ___."
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <p class="instr">
+          With a partner, pick something else you might buy (a phone, shoes, a
+          laptop). Describe, in order, how you'd choose it.
+        </p>
+        <ul class="stems">
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "First, ___. Then, ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "First, ___.
+            Once you've ___, it's time to ___, and after that, ___."
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

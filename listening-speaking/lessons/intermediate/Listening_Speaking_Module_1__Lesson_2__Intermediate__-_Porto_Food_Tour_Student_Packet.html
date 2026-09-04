@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Food Tour Through Porto's Old Market: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+
+      .objective {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        min-width: 130px;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .image-placeholder {
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .image-caption {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qlist .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        max-width: 320px;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      /* Picture-based multiple choice: placeholder boxes instead of words */
+      .pic-options {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 8px 0 4px 4px;
+      }
+      .pic-option {
+        width: 110px;
+      }
+      .pic-option .pic-box {
+        border: 2px dashed var(--ink);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 10.5px;
+        color: var(--ink-soft);
+        padding: 6px;
+      }
+      .pic-option .pic-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      /* Matching items: one pair per line with a blank, not compressed with arrows */
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14px;
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      .upside-down {
+        transform: rotate(180deg);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .discuss-block,
+        .wrapup,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 2A: A Food Tour Through Porto's Old Market</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> listen for examples that support a bigger
+        idea, notice the details that confirm it, and compare a historic stop to
+        something more typical by naming a feature of each and a reason for the
+        difference.
+      </p>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Good to Know</div>
+        <p class="model-step">
+          Porto is a real historic city in northern Portugal, famous for its
+          food and for port wine, which is actually named after the city.
+        </p>
+        <p class="model-step">
+          A "tasca" is a small, traditional Portuguese tavern - a simple, casual
+          place to eat and drink, found all over Portugal, not just in Porto.
+        </p>
+      </div>
+
+      <div class="section-title">Before You Watch</div>
+
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Which statement below sounds most like you when you're trying new
+          food? Circle one, then compare with a partner.
+          <ul class="qlist" style="margin-top: 6px">
+            <li><span class="num">&bull;</span> I love trying new foods.</li>
+            <li>
+              <span class="num">&bull;</span> I get overwhelmed by too many
+              choices.
+            </li>
+            <li><span class="num">&bull;</span> I like talking to vendors.</li>
+            <li>
+              <span class="num">&bull;</span> I'd rather just order the same
+              thing every time.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. gastronomy</span
+          ><span
+            >the art and practice of good, interesting cooking and eating</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">2. tavern</span
+          ><span
+            >a small, informal restaurant or bar with traditional food and
+            drink</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">3. grocery</span
+          ><span>a store that sells food and household items</span>
+        </div>
+        <div class="vrow">
+          <span class="word">4. sardine</span
+          ><span>a small, oily fish, often eaten grilled or canned</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. grill</span
+          ><span>to cook food over direct heat</span>
+        </div>
+        <div class="vrow">
+          <span class="word">6. variety</span
+          ><span>many different types of something</span>
+        </div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">in spite of</span>: even though something
+          is a problem.
+        </div>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll watch:</strong> "Porto Food Tour," a video following a
+        real walking food tour through Porto, Portugal's historic old market and
+        a few nearby food stops.
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you watch, fill in what you learn about the old grocery store
+        below.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>&nbsp;</th>
+          <th>The Old Grocery Store</th>
+          <th>A Typical Modern Store</th>
+        </tr>
+        <tr>
+          <td>When it opened</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>What it sells</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Why people like it</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="section-title">Listen Closely</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Circle the correct answer for each question below.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              What kind of tour is this?
+              <div class="pic-options">
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a food tour ]</div>
+                  <div class="pic-label">a food tour</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a bike tour ]</div>
+                  <div class="pic-label">a bike tour</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a museum tour ]</div>
+                  <div class="pic-label">a museum tour</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Andre shows us ___ (sardines / cars / shoes).
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Andre is a real (tour guide / chef / taxi driver).
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              The tour takes visitors to the old (market / museum / hospital).
+            </div>
+          </li>
+          <li>
+            <span class="num">5.</span>
+            <div class="qbody">
+              According to the video, when did the grocery store open? (1896 /
+              1996 / 2018). Do you think that's a long time or a short time for
+              one store to stay open? (long / short)
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Circle the correct answer, or fill in the blank using the word bank
+          right above it.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              This is... (a bus tour, long / a food tour, local / a museum tour,
+              quiet).
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              <div class="wordbank">
+                <strong>Word bank:</strong> old &middot; new &middot; small
+                &middot; big &middot; historic &middot; modern
+              </div>
+              The grocery store is ___ and ___.
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              The market survives in spite of competition from (modern shopping
+              malls / other markets / restaurants).
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Andre wants to show visitors the best of Porto's (gastronomy /
+              history / weather).
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Name one stop on the tour, one way it's different from a regular
+              grocery store, and the stated reason Andre gives for visiting it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              List two features of the grocery store, one comparison to a
+              typical modern store, and the stated reason people still visit.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-4 sentences, summarize the tour: who Andre is, what stops the
+              tour covers, and why he thinks it matters.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Summarize how the tour is organized (market intro, sardines,
+              canned seafood shop, grocery store, tavern, closing thoughts) and
+              note the order of stops.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find the phrase in the opening narration that says the market
+              survives "in spite of competition from modern shopping malls."
+              What unstated opinion or admiration does this signal about the
+              market's importance, even though nobody directly says "this market
+              is special"?
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Show What You Noticed</div>
+      <div class="wrapup">
+        <p class="instr">
+          <strong>Don't read ahead.</strong> Your teacher will read a short
+          paragraph out loud. Listen for the general claim the speaker makes,
+          and the specific example she gives to support it.
+        </p>
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            With a partner, say the claim and the example out loud. Then write
+            them below. Be ready to share with the class.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
+      <p class="instr" style="font-style: italic; margin-bottom: 6px">
+        This is printed upside-down on purpose. Don't turn the page around until
+        you've said and written your answer above.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          My aunt loves showing visitors around her hometown, especially its
+          food. She says the best way to understand a place's gastronomy is to
+          taste it, not just read about it. Last week she took me to a tiny
+          tavern near the old grocery store downtown, the kind of place where
+          they grill fresh fish right in front of you. We tried a whole variety
+          of small dishes, but the grilled sardines were still her favorite.
+          She's been eating there for twenty years and says nothing else
+          compares.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 2B: A Food Tour Through Porto's Old Market</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> give a specific example to support a bigger
+        point, the way a guide points to one real stop to show off a whole
+        city's food culture.
+      </p>
+
+      <div class="section-title">Learn the Phrase</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Giving Examples</div>
+        <p class="model-step">
+          Andre's whole tour works this way: instead of just saying "Porto has
+          great food," he takes visitors to specific, named stops - the sardine
+          stand, the canned-seafood shop, the old grocery store - as real
+          examples.
+        </p>
+        <p class="model-step">
+          <strong>Example:</strong> "For example, the old grocery store has
+          stayed open since 1896, which shows how much history is packed into
+          this one market."
+        </p>
+        <p class="model-step">
+          Now it's your turn. In the tasks below, you'll give your own examples
+          using frames like these:
+        </p>
+        <ul class="qlist">
+          <li><span class="num">&bull;</span> "For example, ___."</li>
+          <li><span class="num">&bull;</span> "Like ___, for instance."</li>
+          <li><span class="num">&bull;</span> "Take ___, for example."</li>
+        </ul>
+      </div>
+
+      <div class="section-title">Practice It</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing.
+      </p>
+
+      <div class="image-placeholder">
+        [ TEACHER: insert two photos here - sardines, and the old grocery store
+        ]
+      </div>
+      <p class="image-caption">Two real stops from the tour.</p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">Complete each sentence below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">For example, ___. (sardines)</div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">For example, ___. (the grocery store)</div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">Like ___, for instance. (any tour stop)</div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Practice saying one of your completed frames to a partner.
+            </div>
+          </li>
+        </ol>
+        <div class="starter">"For example, ___."</div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">Complete each frame below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              "For example, ___ is a great place because ___."
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              "Take ___, for example - it's ___." <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Put your two sentences together and read them aloud to a partner
+              as one connected description.
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Finish and explain: "One good example of Porto's food culture is
+              ___, because ___." <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Give a second example from a completely different stop on the
+              tour, using a different connector than the first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Write an extended example including one word that shows your
+              opinion without saying "I like it" (for example, calling a stop
+              "unforgettable" or "overrated"). <span class="ans-line"></span
+              ><span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Ask a partner if they'd pick the same stop as their example, and
+              why or why not. Write their answer in one sentence.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Say It Like a Native Speaker</div>
+        <p class="model-step">
+          Speakers stress the important words in a sentence, not every word.
+          Practice this sentence: "If you want a good sardine, it has to be like
+          this because the fat content will keep all of the flavors in when you
+          grill them." Circle the words you think should be said louder: good
+          &middot; sardine &middot; fat &middot; content &middot; flavors
+          &middot; grill.
+        </p>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+      <div class="discuss-block">
+        <p class="instr">
+          Get into a small group. Your group will become "experts" on one of the
+          tour's four stops (sardines / canned seafood shop / grocery store /
+          tavern). Prepare one "for example" statement about your stop, then
+          take turns sharing with a new group so everyone hears about the whole
+          tour. While you talk, keep a tally: how many times does someone use an
+          example phrase like "for example" or "take ___, for instance"?
+        </p>
+
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            Which stop would you want to visit yourself, and why?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            What's one specific example that shows why Porto's food culture is
+            special?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">3.</span>
+          <div class="qbody">
+            Which stop do you think Andre likes best? What makes you think so?
+          </div>
+        </div>
+
+        <p class="instr" style="font-weight: 700; margin-bottom: 6px">
+          Starter phrases:
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span> "For example, ___."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "Like ___, for instance."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;</span> "Take ___, for
+            example, because ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "One example
+            that really stood out was ___, because ___."
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <p class="instr">
+          With a partner, pick something else you know well (two restaurants,
+          two stores, two hobbies). Give one specific example to support a
+          bigger point about it.
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;&#9733;</span> "For example, ___."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "Take ___,
+            for example - it shows that ___, which is why I think ___."
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
