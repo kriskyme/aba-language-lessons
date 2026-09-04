@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Grandmother's Kitchen: Student Packet</title>
+<style>
+  :root{
+    --ink:#000000;
+    --ink-soft:#333333;
+    --paper:#ffffff;
+    --rule:#999999;
+    --rule-light:#cccccc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#e8e8e8;
+    color:var(--ink);
+    font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+    line-height:1.55;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    background:var(--paper);
+    padding:48px 40px 60px;
+  }
+  .toolbar{
+    max-width:820px;
+    margin:0 auto;
+    padding:14px 40px 0;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .print-btn{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 16px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .print-btn:hover{background:#333;}
+
+  h1,h2,h3{font-family:'Iowan Old Style',Georgia,serif; margin:0; color:var(--ink);}
+  .masthead{
+    text-align:left;
+    margin-bottom:20px;
+  }
+  .masthead h1{font-size:26px; margin-bottom:6px;}
+  .masthead + .masthead,
+  .masthead.masthead-later{margin-top:60px;}
+
+  .objective{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+    color:var(--ink);
+    margin:0 0 24px;
+  }
+  .objective strong{
+    font-weight:700;
+  }
+
+  .section-title{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    font-weight:700;
+    margin:32px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .section-title::after{content:""; flex:1; height:1px; background:var(--rule-light);}
+
+  .exercise-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .instr-inline{
+    margin-top:20px;
+  }
+  .instr-inline .exercise-label{
+    margin-right:6px;
+  }
+
+  .section-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:20px 0 8px;
+  }
+
+  p{margin:0 0 12px;}
+  .instr{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+
+  .spotlight-box{
+    border:1px solid var(--ink);
+    padding:16px 20px;
+    margin:14px 0;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .spotlight-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .model-step{
+    font-size:14px;
+    margin-bottom:10px;
+  }
+  .model-step:last-child{margin-bottom:0;}
+  .model-step strong{font-family:system-ui,-apple-system,sans-serif; font-size:12.5px; letter-spacing:.03em;}
+
+  .vocab-list{
+    margin:10px 0 6px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+  .vocab-list .vrow{
+    display:flex;
+    gap:10px;
+    padding:6px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .vocab-list .vrow:last-child{border-bottom:none;}
+  .vocab-list .word{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-weight:700;
+    white-space:nowrap;
+    min-width:130px;
+  }
+
+  .idiom-item{margin-bottom:10px;}
+  .idiom-item:last-child{margin-bottom:0;}
+  .idiom-phrase{font-weight:700; font-style:italic;}
+
+  .annot-key{
+    float:right;
+    width:190px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    margin:2px 0 12px 20px;
+    padding:12px 14px;
+    border:1px solid var(--ink);
+  }
+  .annot-key-title{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .annot-key .k-row{margin:7px 0;}
+  .annot-key .k-mark{font-family:Georgia,serif; font-weight:700; display:block;}
+  .clearfloat{clear:both;}
+
+  .image-placeholder{
+    border:2px dashed var(--ink);
+    padding:44px 20px;
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:14px 0 4px;
+  }
+  .image-caption{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin:0 0 20px;
+  }
+
+  .article{
+    padding:6px 0 0;
+    margin:18px 0 22px;
+  }
+  .article .headline{
+    font-size:22px;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0 4px;
+  }
+  .article .byline{
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .article p{
+    font-size:15.5px;
+    margin-bottom:14px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .para-letter{
+    font-weight:700;
+    margin-right:2px;
+  }
+  .footref{font-weight:700;}
+  .idiom-mark{text-decoration:underline dotted var(--ink); text-decoration-thickness:1.5px;}
+  .article .footnotes{
+    margin-top:22px;
+    padding:14px 0 22px;
+    border-top:1px solid var(--rule-light);
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .article .footnotes div{margin-bottom:6px;}
+
+  .qlist{margin:0; padding-left:0; list-style:none;}
+  .qlist li{
+    display:flex;
+    gap:10px;
+    margin-bottom:11px;
+    font-size:14.5px;
+  }
+  .qlist .num{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-weight:700;
+    flex-shrink:0;
+    width:20px;
+  }
+  .qlist .blank{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    min-width:70px;
+  }
+  .qbody{flex:1;}
+  .ans-line{
+    display:block;
+    border-bottom:1px solid var(--ink-soft);
+    height:22px;
+    margin-top:4px;
+  }
+  .ans-line-sm{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    width:100%;
+    max-width:320px;
+    height:18px;
+    margin-top:2px;
+  }
+
+  .subgroup-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:14px 0 8px;
+  }
+
+  .fillblank{margin:0; padding-left:0; list-style:none;}
+  .fillblank li{margin-bottom:9px; font-size:14.5px;}
+  .fillblank .num{font-family:system-ui,-apple-system,sans-serif; font-weight:700; margin-right:8px;}
+
+  .refresher{
+    padding:16px 0;
+    margin:14px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .refresher.refresher-noline{border-bottom:none;}
+  .refresher .headline{font-size:17px; font-weight:700; margin-bottom:12px; text-align:center;}
+  .refresher p{font-size:14.5px;}
+
+  .task-block{
+    margin:18px 0 22px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .task-block .stars{
+    font-size:16px;
+    letter-spacing:2px;
+  }
+  .task-block p, .task-block li{font-size:14.5px;}
+  .task-block .instr-line{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .task-block .instr-line .exercise-label{margin-right:2px;}
+  .task-block .instr-line .stars{margin-right:8px;}
+  .wordbank{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 0;
+    margin:10px 0;
+    border-top:1px dashed var(--rule-light);
+    border-bottom:1px dashed var(--rule-light);
+  }
+  .task-block .starter{
+    font-style:italic;
+    padding:8px 0 8px 14px;
+    margin:10px 0;
+    border-left:3px solid var(--ink);
+    font-size:14px;
+  }
+
+  .discuss-block{
+    margin:16px 0;
+  }
+  .discuss-block .prompt{
+    font-size:16px;
+    font-weight:400;
+    text-align:left;
+    margin:10px 0 16px;
+  }
+  .stems{margin:0; padding-left:0; list-style:none;}
+  .stems li{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    margin-bottom:9px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+  }
+  .stems .stars{font-size:13px; flex-shrink:0; width:52px; letter-spacing:1px;}
+
+  .wrapup{
+    margin:16px 0;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .sheet{padding:0 12px; max-width:100%;}
+    .spotlight-box, .task-block, .article p, .refresher, .discuss-block, .wrapup, .article{page-break-inside:avoid; break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <button class="print-btn" onclick="window.print()">Print this packet</button>
+</div>
+
+<div class="sheet">
+
+  <div class="masthead">
+    <h1>Unit 1A: A Grandmother's Kitchen</h1>
+  </div>
+
+  <p class="objective"><strong>Objective:</strong> describe a place by naming specific features and comparing
+  it to somewhere more familiar, and notice small sensory details a writer uses to make a place feel real.</p>
+
+  <div class="section-title">Before You Read</div>
+
+  <div class="image-placeholder">
+    [ TEACHER: insert photo of a trullo with a wood-fired oven here ]
+  </div>
+  <p class="image-caption">A trullo, a traditional stone house from Puglia, southern Italy.</p>
+
+  <p class="instr">Look at the photo above. As a class, talk through these questions out loud. Your teacher
+  will write your guesses on the board, and you'll check them against the article after you read.</p>
+  <ul class="qlist">
+    <li><span class="num">&bull;</span> What do you think people cook here?</li>
+    <li><span class="num">&bull;</span> How is this kitchen different from your own?</li>
+  </ul>
+
+  <p class="section-label">Words to Know</p>
+  <div class="vocab-list">
+    <div class="vrow"><span class="word">1. aroma</span><span>a pleasant smell</span></div>
+    <div class="vrow"><span class="word">2. clay pot</span><span>a container made of baked earth/clay</span></div>
+    <div class="vrow"><span class="word">3. herbs</span><span>plants used to add flavor to food</span></div>
+    <div class="vrow"><span class="word">4. warmth</span><span>a comfortable feeling of heat</span></div>
+    <div class="vrow"><span class="word">5. traditional</span><span>done the same way for a long time, passed down</span></div>
+    <div class="vrow"><span class="word">6. wood-fired (oven)</span><span>an oven heated by burning wood, not electricity or gas</span></div>
+  </div>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Phrase Spotlight</div>
+    <div class="idiom-item">
+      <span class="idiom-phrase">in no time</span>: very quickly.
+    </div>
+  </div>
+
+  <div class="section-title">Read &amp; Mark It Up</div>
+
+  <p class="instr">Read the article below on your own or with a partner. As you read, mark it up using the
+  guide beside it.</p>
+
+  <div class="article">
+    <div class="headline">A Grandmother's Kitchen</div>
+
+    <div class="annot-key">
+      <div class="annot-key-title">Mark It Up</div>
+      <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+      <div class="k-row"><span class="k-mark">( circle )</span> a connector word: but, because, when</div>
+      <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+      <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+    </div>
+
+    <p><span class="para-letter">[A]</span> Every summer, Elena visits her grandmother's house in Puglia, a
+    sunny region in southern Italy. The house is called a trullo<span class="footref">¹</span>, and it has a
+    round white roof made of stone. Inside, the kitchen still uses an old wood-fired oven instead of a modern
+    stove.</p>
+
+    <p><span class="para-letter">[B]</span> When Elena walks into the kitchen, the aroma of baking bread
+    fills the room. Her grandmother keeps fresh herbs in a row of clay pots near the window, and their smell
+    mixes with the smoke from the fire. She grows basil, rosemary, and oregano herself in the garden behind
+    the house. The wood-fired oven gives the whole kitchen a steady warmth, even on a cool morning.</p>
+
+    <div class="clearfloat"></div>
+
+    <p><span class="para-letter">[C]</span> Elena's grandmother cooks the traditional way, and she never
+    uses a timer. She checks the bread by tapping it and listening for a hollow sound. She says a modern
+    electric oven heats food fast, but it never gives bread the same smoky flavor. The wood fire, she
+    explains, cooks slowly and evenly. That is why the crust turns dark gold <span class="idiom-mark">in no
+    time</span>, but the inside stays soft.</p>
+
+    <p><span class="para-letter">[D]</span> The kitchen table is old and covered in small burn marks from
+    years of cooking. Elena's grandmother says every mark tells a story about a meal the family shared. Elena
+    likes to touch each mark and guess which meal made it. Above the table, dried herbs hang from the
+    ceiling, ready to be added to the next pot of soup.</p>
+
+    <p><span class="para-letter">[E]</span> Elena loves this kitchen because it feels different from her own
+    kitchen at home. At home, the stove is electric and the room stays quiet. Here, the fire crackles and the
+    herbs smell strong. Her grandmother hums while she cooks. For Elena, this kitchen is not just a room for
+    cooking. It is the warmest part of the whole house, and she always asks her grandmother to teach her one
+    new recipe before summer ends.</p>
+
+    <div class="footnotes">
+      <div>¹ A trullo is a traditional stone house from Puglia, in southern Italy, with a round white roof
+      and no cement between the stones.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Check Your Understanding</div>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task A.</span> Answer using the text. Write the paragraph letter that gives you each answer, then write your answer on the lines.</p>
+  <ol class="qlist">
+    <li>
+      <span class="num">1.</span>
+      <div class="qbody">
+        What color is the roof of the trullo? (Paragraph <span class="blank"></span>)
+        <span class="ans-line-sm"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">2.</span>
+      <div class="qbody">
+        What does Elena smell when she walks into the kitchen? (Paragraph <span class="blank"></span>)
+        <span class="ans-line-sm"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">3.</span>
+      <div class="qbody">
+        Where does the grandmother keep her herbs? (Paragraph <span class="blank"></span>)
+        <span class="ans-line-sm"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">4.</span>
+      <div class="qbody">
+        The bread's crust turns dark gold "in no time." Why? Finish the sentence: because the wood fire
+        cooks <span class="blank"></span>.
+        <span class="ans-line-sm"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">5.</span>
+      <div class="qbody">
+        Why doesn't the grandmother use a timer? Finish the sentence: because she checks the bread by
+        <span class="blank"></span>.
+        <span class="ans-line-sm"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">6.</span>
+      <div class="qbody">
+        Give one reason the electric oven is faster, but the wood-fired oven still wins for the grandmother.
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+  </ol>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task B.</span> Fill in each blank with one of your words to know.</p>
+  <div class="wordbank"><strong>Word bank:</strong> aroma &middot; clay pot &middot; herbs &middot; warmth &middot; traditional &middot; wood-fired</div>
+  <ol class="fillblank">
+    <li><span class="num">1.</span> Elena smelled the ______ of baking bread.</li>
+    <li><span class="num">2.</span> Her grandmother's herbs sat in small ______s by the window.</li>
+    <li><span class="num">3.</span> Even on a cool day, the kitchen felt full of ______.</li>
+    <li><span class="num">4.</span> She cooked the ______ way, using a real ______ oven.</li>
+  </ol>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Focus on the Objective</div>
+    <p class="model-step"><strong>Feature and comparison.</strong> In Paragraph [C], the article describes the
+    wood-fired oven's feature: it "cooks slowly and evenly." The comparison is to the electric oven, which
+    "heats food fast" but "never gives bread the same smoky flavor." Naming a feature and comparing it to
+    something else is exactly what makes this a description, not just a list of facts.</p>
+    <p class="model-step"><strong>Sensory detail.</strong> In Paragraph [E], the article says "the fire
+    crackles and the herbs smell strong." These are small sensory details, sound and smell, not just what the
+    kitchen looks like. Details like this are why the writer can say the kitchen "feels different" without
+    ever using the word "different" again.</p>
+  </div>
+
+  <div class="masthead masthead-later">
+    <h1>Unit 1B: A Grandmother's Kitchen</h1>
+  </div>
+
+  <div class="section-title">Warm-Up</div>
+  <p class="instr">Find the 5 words to know from before in the following short piece. Then tell a partner, in one sentence, how Maria's candles are like Elena's grandmother's kitchen.</p>
+
+  <div class="refresher refresher-noline">
+    <div class="headline">At the Market</div>
+    <p>At the Saturday market, Maria sells candles at a small stall. She makes each candle the traditional
+    way, using melted wax and small clay pots. Maria adds dried herbs, like lavender and rosemary, to the wax
+    before it cools. The herbs give every candle a soft, natural aroma. Customers often stop at her stall just
+    to smell the candles before they buy one. Maria says her candles bring warmth to any room, even without a
+    flame. Some customers say the smell reminds them of their own grandmother's kitchen. Maria smiles every
+    time someone tells her this. Her grandmother taught her this method years ago, and Maria still uses the
+    same steps today.</p>
+  </div>
+
+  <div class="section-title">Investigate the Text (Choose Your Task)</div>
+
+  <p class="instr">Pick one task below. When you're done, find a small group with people who worked on a
+  different task than you, and take turns sharing what you found.</p>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">★</span><br>Use the photo and Paragraph [E] only.</p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">Look at the photo from the beginning of the packet. Finish the sentence: "It is ___."<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">Circle the word that best shows how Elena feels in this kitchen, using Paragraph [E] as a clue: <strong>happy</strong> &nbsp; / &nbsp; <strong>bored</strong></div>
+      </li>
+    </ol>
+    <div class="wordbank"><strong>Word bank:</strong> old &middot; warm &middot; round &middot; white</div>
+    <div class="starter">"It is ___."</div>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          Name two features of the kitchen. Finish the sentence: "It is ___ and ___."
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Pick one feature you named above. What paragraph did you find it in?
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">★★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          Find the sentence that compares the wood-fired oven to a modern electric oven (Paragraph [C]).
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          What reason does the grandmother give for preferring the wood fire? Write one sentence with your
+          answer.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">★★★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          In 2 to 3 sentences, summarize how the text moves: from describing the house, to the oven, to how
+          Elena feels about it.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Find one phrase in Paragraph [E] that shows the writer likes this kitchen without saying "I love
+          this kitchen" directly.
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section-title">Discuss It</div>
+
+  <div class="discuss-block">
+    <p class="instr">Get into a small group. Your group will get one question below. Take turns discussing
+    it out loud, using a starter phrase from the list.</p>
+
+    <div class="prompt">1. Which kitchen would you rather cook in, Elena's grandmother's or a modern kitchen? Why?</div>
+    <div class="prompt">2. Which detail in the article makes the kitchen feel most real to you: the smell of the bread, the burn marks on the table, or something else?</div>
+    <div class="prompt">3. Is a kitchen like this better for cooking, or is a modern kitchen better? What would you miss if you traded one for the other?</div>
+
+    <p class="instr" style="font-weight:700; margin-bottom:6px;">Starter phrases:</p>
+    <ul class="stems">
+      <li><span class="stars">★</span> "It is ___."</li>
+      <li><span class="stars">★★</span> "It is ___ and ___."</li>
+      <li><span class="stars">★★★</span> "I think the [wood-fired oven / electric oven] is better because ___."</li>
+      <li><span class="stars">★★★★</span> "The writer organizes the text by ___, and I think the phrase '___' shows that Elena feels ___ about the kitchen."</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Wrap It Up</div>
+  <div class="wrapup">
+    <p class="instr">With a partner, pick one object or place in the room. Describe a feature of it and
+    compare it to something else you know.</p>
+    <ul class="stems">
+      <li><span class="stars">★★</span> "This ___ is like my ___ at home because ___."</li>
+      <li><span class="stars">★★★★</span> "This ___ is ___ and ___, which reminds me of ___ because ___."</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

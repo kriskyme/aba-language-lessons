@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Forge at Dawn: Student Packet</title>
+<style>
+  :root{
+    --ink:#000000;
+    --ink-soft:#333333;
+    --paper:#ffffff;
+    --rule:#999999;
+    --rule-light:#cccccc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#e8e8e8;
+    color:var(--ink);
+    font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+    line-height:1.55;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    background:var(--paper);
+    padding:48px 40px 60px;
+  }
+  .toolbar{
+    max-width:820px;
+    margin:0 auto;
+    padding:14px 40px 0;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .print-btn{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 16px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .print-btn:hover{background:#333;}
+
+  h1,h2,h3{font-family:'Iowan Old Style',Georgia,serif; margin:0; color:var(--ink);}
+  .masthead{
+    text-align:left;
+    margin-bottom:20px;
+  }
+  .masthead h1{font-size:26px; margin-bottom:6px;}
+  .masthead + .masthead,
+  .masthead.masthead-later{margin-top:60px;}
+
+  .objective{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+    color:var(--ink);
+    margin:0 0 24px;
+  }
+  .objective strong{
+    font-weight:700;
+  }
+
+  .section-title{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    font-weight:700;
+    margin:32px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .section-title::after{content:""; flex:1; height:1px; background:var(--rule-light);}
+
+  .exercise-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .instr-inline{
+    margin-top:20px;
+  }
+  .instr-inline .exercise-label{
+    margin-right:6px;
+  }
+
+  .section-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:20px 0 8px;
+  }
+
+  p{margin:0 0 12px;}
+  .instr{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+
+  .spotlight-box{
+    border:1px solid var(--ink);
+    padding:16px 20px;
+    margin:14px 0;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .spotlight-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .model-step{
+    font-size:14px;
+    margin-bottom:10px;
+  }
+  .model-step:last-child{margin-bottom:0;}
+  .model-step strong{font-family:system-ui,-apple-system,sans-serif; font-size:12.5px; letter-spacing:.03em;}
+
+  .vocab-list{
+    margin:10px 0 6px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+  .vocab-list .vrow{
+    display:flex;
+    gap:10px;
+    padding:6px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .vocab-list .vrow:last-child{border-bottom:none;}
+  .vocab-list .word{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-weight:700;
+    white-space:nowrap;
+    min-width:120px;
+  }
+
+  .idiom-item{margin-bottom:10px;}
+  .idiom-item:last-child{margin-bottom:0;}
+  .idiom-phrase{font-weight:700; font-style:italic;}
+
+  .annot-key{
+    float:right;
+    width:190px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    margin:2px 0 12px 20px;
+    padding:12px 14px;
+    border:1px solid var(--ink);
+  }
+  .annot-key-title{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .annot-key .k-row{margin:7px 0;}
+  .annot-key .k-mark{font-family:Georgia,serif; font-weight:700; display:block;}
+  .clearfloat{clear:both;}
+
+  .image-placeholder{
+    border:2px dashed var(--ink);
+    padding:44px 20px;
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:14px 0 4px;
+  }
+  .image-caption{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin:0 0 20px;
+  }
+
+  .article{
+    padding:6px 0 0;
+    margin:18px 0 22px;
+  }
+  .article .headline{
+    font-size:22px;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0 4px;
+  }
+  .article .byline{
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .article p{
+    font-size:15.5px;
+    margin-bottom:14px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .para-letter{
+    font-weight:700;
+    margin-right:2px;
+  }
+  .footref{font-weight:700;}
+  .idiom-mark{text-decoration:underline dotted var(--ink); text-decoration-thickness:1.5px;}
+  .article .footnotes{
+    margin-top:22px;
+    padding:14px 0 22px;
+    border-top:1px solid var(--rule-light);
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .article .footnotes div{margin-bottom:6px;}
+
+  .qlist{margin:0; padding-left:0; list-style:none;}
+  .qlist li{
+    display:flex;
+    gap:10px;
+    margin-bottom:11px;
+    font-size:14.5px;
+  }
+  .qlist .num{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-weight:700;
+    flex-shrink:0;
+    width:20px;
+  }
+  .qlist .blank{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    min-width:70px;
+  }
+  .qbody{flex:1;}
+  .ans-line{
+    display:block;
+    border-bottom:1px solid var(--ink-soft);
+    height:22px;
+    margin-top:4px;
+  }
+  .ans-line-sm{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    width:100%;
+    max-width:320px;
+    height:18px;
+    margin-top:2px;
+  }
+
+  .subgroup-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:14px 0 8px;
+  }
+
+  .fillblank{margin:0; padding-left:0; list-style:none;}
+  .fillblank li{margin-bottom:9px; font-size:14.5px;}
+  .fillblank .num{font-family:system-ui,-apple-system,sans-serif; font-weight:700; margin-right:8px;}
+
+  .refresher{
+    padding:16px 0;
+    margin:14px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .refresher.refresher-noline{border-bottom:none;}
+  .refresher .headline{font-size:17px; font-weight:700; margin-bottom:12px; text-align:center;}
+  .refresher p{font-size:14.5px;}
+
+  .task-block{
+    margin:18px 0 22px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .task-block .stars{
+    font-size:16px;
+    letter-spacing:2px;
+  }
+  .task-block p, .task-block li{font-size:14.5px;}
+  .task-block .instr-line{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .task-block .instr-line .exercise-label{margin-right:2px;}
+  .task-block .instr-line .stars{margin-right:8px;}
+  .wordbank{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 0;
+    margin:10px 0;
+    border-top:1px dashed var(--rule-light);
+    border-bottom:1px dashed var(--rule-light);
+  }
+  .task-block .starter{
+    font-style:italic;
+    padding:8px 0 8px 14px;
+    margin:10px 0;
+    border-left:3px solid var(--ink);
+    font-size:14px;
+  }
+
+  .discuss-block{
+    margin:16px 0;
+  }
+  .discuss-block .prompt{
+    font-size:16px;
+    font-weight:400;
+    text-align:left;
+    margin:10px 0 16px;
+  }
+  .stems{margin:0; padding-left:0; list-style:none;}
+  .stems li{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    margin-bottom:9px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+  }
+  .stems .stars{font-size:13px; flex-shrink:0; width:52px; letter-spacing:1px;}
+  .stems .tip{
+    display:block;
+    font-style:italic;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin:2px 0 9px 62px;
+  }
+
+  .wrapup{
+    margin:16px 0;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .sheet{padding:0 12px; max-width:100%;}
+    .spotlight-box, .task-block, .article p, .refresher, .discuss-block, .wrapup, .article{page-break-inside:avoid; break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <button class="print-btn" onclick="window.print()">Print this packet</button>
+</div>
+
+<div class="sheet">
+
+  <div class="masthead">
+    <h1>Unit 2A: The Forge at Dawn</h1>
+  </div>
+
+  <p class="objective"><strong>Objective:</strong> describe a craft by noticing specific steps and comparing them
+  to a more familiar, modern process, and identify the words a writer uses to show respect or admiration
+  without stating it directly.</p>
+
+  <div class="section-title">Before You Read</div>
+
+  <p class="instr">Talk through these questions as a class. Your teacher will write your ideas on the board, and
+  you'll check them against the story after you read.</p>
+  <ul class="qlist">
+    <li><span class="num">&bull;</span> What do you already know about how a sword is made?</li>
+    <li><span class="num">&bull;</span> What do you want to find out?</li>
+  </ul>
+
+  <p class="section-label">Words to Know</p>
+  <div class="vocab-list">
+    <div class="vrow"><span class="word">1. forge</span><span>a workshop with a fire, used for heating and shaping metal</span></div>
+    <div class="vrow"><span class="word">2. anvil</span><span>a heavy iron block that metal is hammered against</span></div>
+    <div class="vrow"><span class="word">3. hammer</span><span>a tool used to strike and shape metal; also, to strike metal with it</span></div>
+    <div class="vrow"><span class="word">4. quench</span><span>to cool hot metal quickly, usually in water</span></div>
+    <div class="vrow"><span class="word">5. temper</span><span>the balance of hardness and flexibility in a piece of metal</span></div>
+    <div class="vrow"><span class="word">6. blade</span><span>the flat, sharp part of a knife or sword</span></div>
+  </div>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Phrase Spotlight</div>
+    <div class="idiom-item">
+      <span class="idiom-phrase">trial by fire</span>: a difficult first experience that tests whether someone
+      can handle something hard.
+    </div>
+    <div class="idiom-item">
+      <span class="idiom-phrase">get the hang of it</span>: to start doing something more easily after
+      practicing it.
+    </div>
+  </div>
+
+  <div class="section-title">Read &amp; Mark It Up</div>
+
+  <p class="instr">Read the story below on your own or with a partner. As you read, mark it up using the guide
+  beside it.</p>
+
+  <div class="article">
+    <div class="headline">The Forge at Dawn</div>
+
+    <div class="annot-key">
+      <div class="annot-key-title">Mark It Up</div>
+      <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+      <div class="k-row"><span class="k-mark">( circle )</span> a connector word: however, even so, since, because</div>
+      <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+      <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+      <div class="k-row"><span class="k-mark">!</span> next to a word that feels like the writer's opinion</div>
+    </div>
+
+    <p><span class="para-letter">[A]</span> Every morning before sunrise, Kenta walks the narrow mountain path
+    to his master's forge, a low stone building with a thatched roof and a hearth of packed clay. Inside, the
+    air already smells of charcoal smoke and hot iron. His master, a swordsmith named Watanabe, has worked at
+    this same anvil for over thirty years, and Kenta has been his apprentice for barely six months.</p>
+
+    <p><span class="para-letter">[B]</span> Today, Watanabe begins folding a block of tamahagane<span
+    class="footref">¹</span>, the traditional steel used for Japanese swords. He heats it in the coals,
+    hammers it flat, folds it in half, and heats it again, over and over. A modern steel factory rolls sheet
+    metal in one smooth pass, uniform from edge to edge. Watanabe's steel is different: each fold traps a thin
+    layer of air and impurity, and each hammer strike drives it back out, so the finished blade ends up
+    stronger, not weaker, for having been broken down so many times.</p>
+
+    <div class="clearfloat"></div>
+
+    <p><span class="para-letter">[C]</span> Kenta's own arms ache just from watching. His master's hammer
+    falls in a steady rhythm, never rushed, never wasted. When Kenta tries it himself, his first few strikes
+    land unevenly, and Watanabe laughs and tells him every apprentice's <span class="idiom-mark">trial by
+    fire</span> looks exactly the same. Little by little, Kenta begins to <span class="idiom-mark">get the
+    hang of it</span>, though his rhythm is nowhere near his master's.</p>
+
+    <p><span class="para-letter">[D]</span> By afternoon, the folded steel has become a rough blade shape,
+    glowing orange-white. Watanabe checks its color against the daylight one final time, then plunges it into
+    a trough of water to quench it. The forge fills with a sharp hiss and a cloud of steam. "Every quench is
+    the same motion," he says, wiping his hands, "though no two blades ever come out quite identical."
+    Afterward, he reheats the blade gently over low coals. This second, slower step gives it temper, the
+    balance of hardness and flexibility that keeps a blade from shattering. A hairline crack can still appear
+    in the coldest half-second, and then there is nothing to do but start again.</p>
+
+    <p><span class="para-letter">[E]</span> Kenta watches the blade cool, its surface now a dull grey where it
+    had glowed only minutes before. What strikes him most is not the blade itself but how carefully his
+    master moves around it, the way someone might handle something remarkable, not something merely useful.
+    Watanabe has never called the blade beautiful out loud, but the way he holds it, turning it slowly under
+    the light, says more than the word ever could.</p>
+
+    <p><span class="para-letter">[F]</span> Kenta still has years of practice ahead before he folds his own
+    steel from start to finish. For now, he sweeps the ash from the hearth and banks the coals for tomorrow,
+    already looking forward to the next early walk up the mountain.</p>
+
+    <div class="footnotes">
+      <div>¹ Tamahagane is a type of steel made from iron sand, smelted in a traditional Japanese furnace and
+      prized for making sword blades.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Check Your Understanding</div>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task A.</span> Answer using the text. Write the
+  paragraph letter that gives you each answer, then write your answer on the lines.</p>
+  <ol class="qlist">
+    <li>
+      <span class="num">1.</span>
+      <div class="qbody">
+        What is tamahagane, and what is it used for? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">2.</span>
+      <div class="qbody">
+        What does Watanabe do right before he plunges the blade into the water? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">3.</span>
+      <div class="qbody">
+        What does the second, slower reheating step give the blade? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">4.</span>
+      <div class="qbody">
+        What is Kenta's job for the rest of the day, after the blade cools? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">5.</span>
+      <div class="qbody">
+        Why does folded steel end up stronger than factory-rolled steel? Quote the reason.
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">6.</span>
+      <div class="qbody">
+        Why can a hairline crack appear during the quench? What effect does that have on the process?
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">7.</span>
+      <div class="qbody">
+        Kenta's rhythm improves over the course of the day. What causes that change?
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+  </ol>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task B.</span> Fill in each blank with one of your
+  words to know.</p>
+  <div class="wordbank"><strong>Word bank:</strong> forge &middot; anvil &middot; hammer &middot; quench
+  &middot; temper &middot; blade</div>
+  <ol class="fillblank">
+    <li><span class="num">1.</span> Watanabe has worked at the same ______ for over thirty years.</li>
+    <li><span class="num">2.</span> A ______ is a workshop with a fire, used for shaping metal.</li>
+    <li><span class="num">3.</span> The blade needs to be cooled quickly, so Watanabe plans to ______ it in
+    water.</li>
+    <li><span class="num">4.</span> The gentle second heating gives the blade its ______, the balance between
+    hardness and flexibility.</li>
+  </ol>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Focus on the Objective</div>
+    <p class="model-step"><strong>Feature and comparison.</strong> In Paragraph [B], the story says a modern
+    steel factory "rolls sheet metal in one smooth pass, uniform from edge to edge." The feature is Watanabe's
+    folding process. The comparison is to factory steel. The reason follows right after: each fold "traps a
+    thin layer of air and impurity," and each hammer strike "drives it back out," so the blade ends up
+    stronger.</p>
+    <p class="model-step"><strong>Evaluative language.</strong> In Paragraph [E], the story says Watanabe
+    handles the blade "the way someone might handle something remarkable, not something merely useful." The
+    writer never says "this blade is amazing," but "remarkable" is doing that work. It's a judgment, not a
+    fact you could check with a ruler.</p>
+  </div>
+
+  <div class="masthead masthead-later">
+    <h1>Unit 2B: The Forge at Dawn</h1>
+  </div>
+
+  <div class="section-title">Warm-Up</div>
+  <p class="instr">Find the 6 words to know from before in the following short piece. Then tell a partner, in
+  one sentence, what a ring-maker and a swordsmith have in common.</p>
+
+  <div class="refresher refresher-noline">
+    <div class="headline">A Ring for a Wedding</div>
+    <p>Every Saturday, Mei works at her grandmother's small jewelry shop, learning how to make silver rings by
+    hand. She heats a bar of silver over a small forge until it glows soft orange, then places it on a tiny
+    anvil and taps it gently with a jeweler's hammer. Unlike a factory machine that presses out a hundred
+    identical rings in a minute, Mei's grandmother shapes each ring slowly, checking its curve against her
+    finger after every few strikes. Once the ring is close to its final shape, she quenches it in a small dish
+    of cool water, and the metal hisses softly. Afterward comes the temper, a gentle second heating that keeps
+    the silver strong without making it brittle. Mei has learned that a blade for cutting and a ring for a
+    finger are shaped by almost the same steps, just at very different sizes. This week, for the first time,
+    her grandmother let her hold the hammer herself.</p>
+  </div>
+
+  <div class="section-title">Investigate the Text (Choose Your Task)</div>
+
+  <p class="instr">Pick one task below. When you're done, find a small group with people who worked on a
+  different task than you, and take turns sharing what you found.</p>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">★</span><br>Use Paragraph [B] only.</p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">Name one feature of Watanabe's folding process.<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">The text compares Watanabe's steel to something. What is it compared to?<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">What reason does the text give for why the folded steel ends up stronger?<span class="ans-line-sm"></span></div>
+      </li>
+    </ol>
+    <div class="wordbank"><strong>Word bank:</strong> factory steel &middot; one smooth pass &middot; air and impurity &middot; hammer strike</div>
+    <div class="starter">"One feature of Watanabe's process is ___. The text compares it to ___ because ___."</div>
+    <ol class="qlist" start="4">
+      <li><span class="num">4.</span> Which step sounds more interesting to you, the folding or the
+      quenching? Circle one and finish the sentence: "I think the ___ step sounds more interesting because
+      the text describes it as ___."</li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          In 2 to 3 sentences, summarize how the story is organized. (Does it move step by step through the
+          day, or some other way?)
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Find one word in Paragraph [E] that clearly signals the writer's positive attitude toward the
+          blade, even though the writer never says "this is amazing." Explain what that word suggests.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">★★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          List two facts stated directly in Paragraph [D] (no opinion words).
+          <span class="ans-line-sm"></span>
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">List one clearly evaluative phrase from Paragraph [E] that shows judgment rather
+        than fact.<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">
+          Find the spot in Paragraph [C] where Watanabe's tone shifts from confident reassurance ("every
+          apprentice's trial by fire looks exactly the same") to something closer to hedging. Quote both
+          halves of the shift.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">★★★★</span><br>Read
+    the second text below, then compare it to the story.</p>
+
+    <div class="refresher refresher-noline" style="margin:12px 0;">
+      <div class="headline" style="font-size:15px;">Traditional Swordsmithing: A Living Heritage Craft</div>
+      <p style="font-size:13.5px;">Visit our newly renovated Metalworking Hall to see traditional Japanese
+      swordsmithing demonstrated by certified master artisans, using techniques passed down for over a
+      thousand years. Guests can watch as tamahagane steel, the same material once reserved for samurai
+      blades, is folded, hammered, and quenched using only fire, water, and hand tools, no modern machinery
+      involved. Our resident swordsmith performs live folding demonstrations every weekend, followed by a
+      guided question and answer session included with general admission. This priceless craft survives today
+      only through dedicated apprenticeship programs like the one supported by this museum's Heritage
+      Preservation Fund. Visitors are warmly encouraged to consider a tax-deductible donation to help train
+      the next generation of master swordsmiths before these skills are lost forever. Museum members receive
+      early access to limited-edition replica blades crafted on site, available exclusively in our gift shop.
+      Group tours and school visits can be booked online.</p>
+    </div>
+
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          List one detail the story includes that the museum text leaves out, and one detail the museum text
+          includes that the story leaves out.
+          <span class="ans-line-sm"></span>
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Both texts describe the same craft but create a different impression. In 2 to 3 sentences, describe
+          that difference.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">
+          Museums that ask for donations want you to give money. Where in the museum text can you see that
+          goal shaping how it describes the craft, even though it never says "please give us money" directly?
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section-title">Discuss It</div>
+
+  <div class="discuss-block">
+    <p class="instr">Get into a small group. Your group will get one question below. Take turns discussing it
+    out loud, using a starter phrase from the list.</p>
+
+    <div class="prompt">1. Which do you think produces a better blade: Watanabe's traditional folding method,
+    or a modern factory's one-pass steel? Use details from the story to support your answer.</div>
+    <div class="prompt">2. Which moment in the story best shows Watanabe's skill: the folding, the hammering,
+    or the quenching? Describe it and explain why you chose it.</div>
+    <div class="prompt">3. The story never uses the word "beautiful," but shows Kenta noticing something
+    remarkable about the blade. What detail in the story made you think the writer respects this craft?</div>
+
+    <p class="instr" style="font-weight:700; margin-bottom:6px;">Starter phrases:</p>
+    <ul class="stems">
+      <li><span class="stars">★</span> "I think the [folding method/factory method] makes a better blade
+      because the text says ___."</li>
+      <li class="tip">If you have this line, practice it quietly with a partner first. While your group
+      talks, keep a tally of which method - traditional or factory - each person prefers, then use your line
+      when there's a good pause.</li>
+      <li><span class="stars">★★</span> "One reason I'd choose ___ is that the writer describes ___, which
+      shows ___."</li>
+      <li><span class="stars">★★★</span> "The writer's language shifts when describing ___, which suggests
+      ___ rather than just stating fact."</li>
+      <li><span class="stars">★★★★</span> "Comparing the two texts, I noticed the [museum text/story] frames
+      this as ___, which serves the goal of ___."</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Wrap It Up</div>
+  <div class="wrapup">
+    <p class="instr">With a partner, pick one object in the room. Describe a feature of it, compare it to
+    something else, and use one word that shows your opinion without stating it directly.</p>
+    <ul class="stems">
+      <li><span class="stars">★★</span> "This ___ is made [by hand/by machine], which is different from ___
+      because ___."</li>
+      <li><span class="stars">★★★★</span> "Notice how I just used the word ___ to show I think this is
+      well-made, without saying it directly."</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

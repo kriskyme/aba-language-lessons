@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Sagrada Família: Student Packet</title>
+<style>
+  :root{
+    --ink:#000000;
+    --ink-soft:#333333;
+    --paper:#ffffff;
+    --rule:#999999;
+    --rule-light:#cccccc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#e8e8e8;
+    color:var(--ink);
+    font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+    line-height:1.55;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    background:var(--paper);
+    padding:48px 40px 60px;
+  }
+  .toolbar{
+    max-width:820px;
+    margin:0 auto;
+    padding:14px 40px 0;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .print-btn{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 16px;
+    background:#000;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  .print-btn:hover{background:#333;}
+
+  h1,h2,h3{font-family:'Iowan Old Style',Georgia,serif; margin:0; color:var(--ink);}
+  .masthead{
+    text-align:left;
+    margin-bottom:20px;
+  }
+  .masthead .kicker{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
+  .masthead h1{font-size:26px; margin-bottom:6px;}
+  .masthead .sub{font-size:15px; color:var(--ink-soft); font-style:italic;}
+  .masthead + .masthead,
+  .masthead.masthead-later{margin-top:60px;}
+
+  .objective{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+    color:var(--ink);
+    margin:0 0 24px;
+  }
+  .objective strong{
+    font-weight:700;
+  }
+
+  .section-title{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    font-weight:700;
+    margin:32px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .section-title::after{content:""; flex:1; height:1px; background:var(--rule-light);}
+
+  /* Lettered exercise label, e.g. "Exercise A" */
+  .exercise-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .instr-inline{
+    margin-top:20px;
+  }
+  .instr-inline .exercise-label{
+    margin-right:6px;
+  }
+
+  /* Plain sub-heading for non-exercise content, e.g. "Words to Know" */
+  .section-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:20px 0 8px;
+  }
+
+  p{margin:0 0 12px;}
+  .instr{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+
+  /* Reserved for genuine callouts only: idiom/phrase spotlight, footnotes-style asides */
+  .spotlight-box{
+    border:1px solid var(--ink);
+    padding:16px 20px;
+    margin:14px 0;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .spotlight-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .model-intro{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .model-step{
+    font-size:14px;
+    margin-bottom:10px;
+  }
+  .model-step:last-child{margin-bottom:0;}
+  .model-step strong{font-family:system-ui,-apple-system,sans-serif; font-size:12.5px; letter-spacing:.03em;}
+
+  /* Plain vocabulary list, no border/box */
+  .vocab-list{
+    margin:10px 0 6px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+  .vocab-list .vrow{
+    display:flex;
+    gap:10px;
+    padding:6px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .vocab-list .vrow:last-child{border-bottom:none;}
+  .vocab-list .word{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-weight:700;
+    white-space:nowrap;
+    min-width:120px;
+  }
+
+  .idiom-item{margin-bottom:10px;}
+  .idiom-item:last-child{margin-bottom:0;}
+  .idiom-phrase{font-weight:700; font-style:italic;}
+
+  .annot-key{
+    float:right;
+    width:190px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11.5px;
+    margin:2px 0 12px 20px;
+    padding:12px 14px;
+    border:1px solid var(--ink);
+  }
+  .annot-key-title{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .annot-key .k-row{margin:7px 0;}
+  .annot-key .k-mark{font-family:Georgia,serif; font-weight:700; display:block;}
+  .clearfloat{clear:both;}
+
+  .image-placeholder{
+    border:2px dashed var(--ink);
+    padding:44px 20px;
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:14px 0 4px;
+  }
+  .image-caption{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-style:italic;
+    color:var(--ink-soft);
+    text-align:center;
+    margin:0 0 20px;
+  }
+
+  .article{
+    padding:6px 0 0;
+    margin:18px 0 22px;
+  }
+  .article .headline{
+    font-size:22px;
+    font-weight:700;
+    text-align:center;
+    margin:20px 0 4px;
+  }
+  .article .byline{
+    text-align:center;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .article p{
+    font-size:15.5px;
+    margin-bottom:14px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .para-letter{
+    font-weight:700;
+    margin-right:2px;
+  }
+  .footref{font-weight:700;}
+  .idiom-mark{text-decoration:underline dotted var(--ink); text-decoration-thickness:1.5px;}
+  .article .footnotes{
+    margin-top:22px;
+    padding:14px 0 22px;
+    border-top:1px solid var(--rule-light);
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .article .footnotes div{margin-bottom:6px;}
+
+  .qlist{margin:0; padding-left:0; list-style:none;}
+  .qlist li{
+    display:flex;
+    gap:10px;
+    margin-bottom:11px;
+    font-size:14.5px;
+  }
+  .qlist .num{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-weight:700;
+    flex-shrink:0;
+    width:20px;
+  }
+  .qlist .blank{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    min-width:70px;
+  }
+  .qbody{flex:1;}
+  .ans-line{
+    display:block;
+    border-bottom:1px solid var(--ink-soft);
+    height:22px;
+    margin-top:4px;
+  }
+  .ans-line-sm{
+    display:inline-block;
+    border-bottom:1px solid var(--ink-soft);
+    width:100%;
+    max-width:320px;
+    height:18px;
+    margin-top:2px;
+  }
+
+  .subgroup-label{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    font-style:italic;
+    color:var(--ink);
+    margin:14px 0 8px;
+  }
+
+  .fillblank{margin:0; padding-left:0; list-style:none;}
+  .fillblank li{margin-bottom:9px; font-size:14.5px;}
+  .fillblank .num{font-family:system-ui,-apple-system,sans-serif; font-weight:700; margin-right:8px;}
+
+  .refresher{
+    padding:16px 0;
+    margin:14px 0;
+    border-bottom:1px solid var(--rule-light);
+  }
+  .refresher.refresher-noline{border-bottom:none;}
+  .refresher .headline{font-size:17px; font-weight:700; margin-bottom:12px; text-align:center;}
+  .refresher p{font-size:14.5px;}
+
+  .task-block{
+    margin:18px 0 22px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .task-block .stars{
+    font-size:16px;
+    letter-spacing:2px;
+  }
+  .task-block p, .task-block li{font-size:14.5px;}
+  .task-block .instr-line{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14.5px;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .task-block .instr-line .exercise-label{margin-right:2px;}
+  .task-block .instr-line .stars{margin-right:8px;}
+  .wordbank{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13px;
+    padding:8px 0;
+    margin:10px 0;
+    border-top:1px dashed var(--rule-light);
+    border-bottom:1px dashed var(--rule-light);
+  }
+  .task-block .starter{
+    font-style:italic;
+    padding:8px 0 8px 14px;
+    margin:10px 0;
+    border-left:3px solid var(--ink);
+    font-size:14px;
+  }
+
+  .discuss-block{
+    margin:16px 0;
+  }
+  .discuss-block .prompt{
+    font-size:16px;
+    font-weight:400;
+    text-align:left;
+    margin:10px 0 16px;
+  }
+  .stems{margin:0; padding-left:0; list-style:none;}
+  .stems li{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    margin-bottom:9px;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:13.5px;
+  }
+  .stems .stars{font-size:13px; flex-shrink:0; width:52px; letter-spacing:1px;}
+
+  .wrapup{
+    margin:16px 0;
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:14px;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .sheet{padding:0 12px; max-width:100%;}
+    .spotlight-box, .task-block, .article p, .refresher, .discuss-block, .wrapup, .article{page-break-inside:avoid; break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <button class="print-btn" onclick="window.print()">Print this packet</button>
+</div>
+
+<div class="sheet">
+
+  <div class="masthead">
+    <h1>Unit 1A: The Basilica That Refuses to Be Finished</h1>
+  </div>
+
+  <p class="objective"><strong>Objective:</strong> describe a place by noting specific features and comparing
+  them to something more familiar, and identify the words a writer uses to show admiration or judgment
+  without stating it directly.</p>
+
+  <div class="section-title">Before You Read</div>
+
+  <div class="image-placeholder">
+    [ TEACHER: insert photo of the Sagrada Família's towers here ]
+  </div>
+  <p class="image-caption">The towers of the Sagrada Família, Barcelona.</p>
+
+  <p class="instr">Look at the photo above. As a class, talk through these questions out loud. Your teacher
+  will write your guesses on the board, and you'll check them against the article after you read.</p>
+  <ul class="qlist">
+    <li><span class="num">&bull;</span> What do you notice?</li>
+    <li><span class="num">&bull;</span> What questions do you have?</li>
+    <li><span class="num">&bull;</span> Does it look finished to you?</li>
+  </ul>
+
+  <p class="section-label">Words to Know</p>
+  <div class="vocab-list">
+    <div class="vrow"><span class="word">1. facade</span><span>the front or outer face of a building</span></div>
+    <div class="vrow"><span class="word">2. ornamentation</span><span>decorative details added to a building</span></div>
+    <div class="vrow"><span class="word">3. spire</span><span>a tall, narrow, pointed structure on top of a building</span></div>
+    <div class="vrow"><span class="word">4. mosaic</span><span>a picture or pattern made from small pieces of colored material</span></div>
+    <div class="vrow"><span class="word">5. organic</span><span>shaped like something found in nature, not straight or geometric</span></div>
+    <div class="vrow"><span class="word">6. structural</span><span>related to how a building is built and holds itself up</span></div>
+  </div>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Phrase Spotlight</div>
+    <div class="idiom-item">
+      <span class="idiom-phrase">a running joke</span>: something people joke about again and again
+      because it keeps happening.
+    </div>
+    <div class="idiom-item">
+      <span class="idiom-phrase">completely blown away</span>: extremely impressed or surprised, like a
+      strong wind hit you.
+    </div>
+  </div>
+
+  <div class="section-title">Read &amp; Mark It Up</div>
+
+  <p class="instr">Read the article below on your own or with a partner. As you read, mark it up using the
+  guide beside it.</p>
+
+  <div class="article">
+    <div class="headline">The Basilica That Refuses to Be Finished</div>
+    <div class="byline">A closer look at Antoni Gaudí's unfinished masterpiece</div>
+
+    <div class="annot-key">
+      <div class="annot-key-title">Mark It Up</div>
+      <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+      <div class="k-row"><span class="k-mark">( circle )</span> a connector word: however, even so, since, because</div>
+      <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+      <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+      <div class="k-row"><span class="k-mark">!</span> next to a word that feels like the writer's opinion</div>
+    </div>
+
+    <p><span class="para-letter">[A]</span> More than a hundred years after construction began, the Basílica
+    de la Sagrada Família still rises above Barcelona, unfinished and unmistakable. Antoni Gaudí spent over
+    forty years on the project and never lived to see it completed. Visitors arriving from Gothic cathedrals
+    often expect something familiar: grey stone, matching towers, a facade built to impress through scale.
+    What they find instead is stranger, and to most eyes, far more alive.</p>
+
+    <p><span class="para-letter">[B]</span> The building's three main facades tell three different stories.
+    The Nativity Facade, the oldest, is crowded with carved doves and twisting vines, so densely arranged
+    that some visitors call it a stone forest. Gaudí worked on this facade himself, choosing organic,
+    flowing shapes over the straight lines of a typical Gothic cathedral. The Passion Facade, finished
+    decades after his death, is the opposite: stark, angular figures meant to convey suffering rather than
+    joy. The Glory Facade, still unfinished, is planned as the largest of the three.</p>
+
+    <div class="clearfloat"></div>
+
+    <p><span class="para-letter">[C]</span> Inside, stone columns rise like actual trees, branching near the
+    ceiling into narrower supports that spread the roof's weight outward. Gaudí based this design on trees
+    he had studied near his childhood home. A forest canopy, he reasoned, already solves the problem a roof
+    needs to solve: holding enormous weight using the least material. Sunlight enters through stained glass
+    arranged by color, blue and green on one side, orange and red on the other, so the light inside shifts
+    through the day.</p>
+
+    <p><span class="para-letter">[D]</span> Construction has always moved slowly, funded mainly by ticket
+    sales and private donations rather than government money. For decades, the building's completion date
+    was <span class="idiom-mark">a running joke</span> among Barcelona residents. Engineers now use computer
+    modeling and stone-cutting robots that Gaudí never had, which has sped up the work considerably. Even
+    so, project leaders stay careful about naming a firm finish date, since structural challenges have
+    delayed the basilica before and could do so again.</p>
+
+    <p><span class="para-letter">[E]</span> What makes the building remarkable, according to architects who
+    study it, is not just its size but how it fuses natural forms with engineering decades ahead of its
+    time. Gaudí spent years building small hanging models<span class="footref">¹</span> made of weighted
+    string to calculate his stone arches. This let him design shapes a drafting table alone could never have
+    produced. Critics who tour the site often use words like extraordinary and awe-inspiring to describe
+    standing beneath the towers as light pours through the glass.</p>
+
+    <p><span class="para-letter">[F]</span> The basilica became a UNESCO World Heritage Site<span
+    class="footref">²</span> in 2005, alongside several other Gaudí works in the city. Architecture students
+    now travel from around the world to study its structural innovations, and local guides say many visitors
+    arrive for a quick photo and end up staying for hours, <span class="idiom-mark">completely blown
+    away</span>. Whether the building will ever truly be finished, Barcelona seems, for now, content to
+    wonder.</p>
+
+    <div class="footnotes">
+      <div>¹ Gaudí calculated his arches using upside-down hanging models: a string weighted at points would
+      naturally curve into the exact shape a stone arch needed to stand without extra support, so he built
+      the model, then flipped a photo of it right-side up to get his design.</div>
+      <div>² UNESCO is the United Nations agency that names and protects sites of major cultural importance
+      around the world.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Check Your Understanding</div>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task A.</span> Answer using the text. Write the paragraph letter that gives you each answer, then write your answer on the lines.</p>
+  <ol class="qlist">
+    <li>
+      <span class="num">1.</span>
+      <div class="qbody">
+        Name one feature of the Nativity Facade. (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">2.</span>
+      <div class="qbody">
+        What did Gaudí compare the stone columns to inside the basilica? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">3.</span>
+      <div class="qbody">
+        What year did the basilica become a UNESCO World Heritage Site? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">4.</span>
+      <div class="qbody">
+        What do the project leaders avoid doing, and why? (Paragraph <span class="blank"></span>)
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">5.</span>
+      <div class="qbody">
+        Why does sunlight inside the basilica shift through the day? Quote the reason.
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">6.</span>
+      <div class="qbody">
+        Why did Gaudí build small hanging models before cutting any stone? What effect did this have on
+        his design?
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+    <li>
+      <span class="num">7.</span>
+      <div class="qbody">
+        Construction sped up in recent years. What caused that change?
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+    </li>
+  </ol>
+
+  <p class="instr instr-inline"><span class="exercise-label">Task B.</span> Fill in each blank with one of your words to know.</p>
+  <div class="wordbank"><strong>Word bank:</strong> facade &middot; ornamentation &middot; spire &middot; mosaic &middot; organic &middot; structural</div>
+  <ol class="fillblank">
+    <li><span class="num">1.</span> The Nativity Facade uses curved, ______ shapes instead of straight lines.</li>
+    <li><span class="num">2.</span> A ______ is the front or outer face of a building.</li>
+    <li><span class="num">3.</span> The colored glass windows create a kind of ______ effect with light.</li>
+    <li><span class="num">4.</span> The columns solve a ______ problem: how to hold up the roof.</li>
+  </ol>
+
+  <div class="spotlight-box">
+    <div class="spotlight-label">Focus on the Objective</div>
+    <p class="model-step"><strong>Feature and comparison.</strong> In Paragraph [B], the article says the
+    Nativity Facade is "so densely arranged that some visitors call it a stone forest." The feature is how
+    crowded the carving is. The comparison is to a stone forest. The reason follows right after: Gaudí chose
+    "organic, flowing shapes over the straight lines of a typical Gothic cathedral."</p>
+    <p class="model-step"><strong>Evaluative language.</strong> In Paragraph [A], the article says what
+    visitors find "is stranger, and to most eyes, far more alive." The writer never says "I like this
+    building," but "far more alive" is doing that work. It's a judgment, not a fact you could check with a
+    ruler.</p>
+  </div>
+
+  <div class="masthead masthead-later">
+    <h1>Unit 1B: The Basilica That Refuses to Be Finished</h1>
+  </div>
+
+  <div class="section-title">Warm-Up</div>
+  <p class="instr">Find the 6 words to know from before in the following short piece. Then tell a partner, in one sentence, what changed about the bakery.</p>
+
+  <div class="refresher refresher-noline">
+    <div class="headline">A Neighborhood Bakery Gets a New Look</div>
+    <p>When the Ferreira family renovated their bakery last spring, they wanted the new facade to feel
+    different from every other shop on the street. Instead of a flat, straight-lined storefront, they chose
+    an organic design with curved wooden shelving visible through the window and a small mosaic of colored
+    tile above the door. A local artist added light ornamentation around the sign, small carved leaves that
+    customers now stop to look at before going in. The renovation wasn't simple. It required real structural
+    changes to the old building, including a new support beam that had been a running joke among the family
+    for years before anyone finally paid for it. Regulars say the new look completely blew them away.</p>
+  </div>
+
+  <div class="section-title">Investigate the Text (Choose Your Task)</div>
+
+  <p class="instr">Pick one task below. When you're done, find a small group with people who worked on a
+  different task than you, and take turns sharing what you found.</p>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">★</span><br>Use Paragraph [B] only.</p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">Name one feature of the Nativity Facade.<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">The text compares the Nativity Facade to something. What is it compared to?<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">What reason does the text give for why Gaudí chose organic shapes instead of straight lines?<span class="ans-line-sm"></span></div>
+      </li>
+    </ol>
+    <div class="wordbank"><strong>Word bank:</strong> stone forest &middot; straight lines &middot; doves &middot; vines</div>
+    <div class="starter">"One feature of the Nativity Facade is ___. The text compares it to ___ because ___."</div>
+    <ol class="qlist" start="4">
+      <li><span class="num">4.</span> Which facade sounds more interesting to you, the Nativity Facade or the Passion Facade? Circle one and finish the sentence: "I think the ___ Facade sounds more interesting because the text describes it as ___."</li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          In 2 to 3 sentences, summarize how the article is organized. (Does it move facade by facade? Inside vs. outside? Something else?)
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Find one word in Paragraph [E] that clearly signals the writer's positive attitude toward the building, even though the writer never says "I love this building." Explain what that word suggests.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">★★★</span></p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          List two facts stated directly in Paragraph [D] (no opinion words).
+          <span class="ans-line-sm"></span>
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">List one clearly evaluative phrase from Paragraph [E] that shows judgment rather than fact.<span class="ans-line-sm"></span></div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">
+          Find the spot in Paragraph [D] where the writer's tone shifts from a confident claim ("has sped up the work considerably") to a hedge ("Even so, project leaders stay careful..."). Quote both halves of the shift.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="task-block">
+    <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">★★★★</span><br>Read the second text below, then compare it to the article.</p>
+
+    <div class="refresher refresher-noline" style="margin:12px 0;">
+      <div class="headline" style="font-size:15px;">Visit Casa Gaudí: Plan Your Sagrada Família Experience</div>
+      <p style="font-size:13.5px;">No trip to Barcelona is complete without the Sagrada Família, the city's
+      most beloved landmark and a must-see for every visitor. Skip the line with a Priority Access ticket and
+      step straight into one of the most breathtaking interiors in the world, where soaring stone columns and
+      rainbow-colored light create a truly unforgettable atmosphere for the whole family. Our expert-led
+      tours reveal secrets most visitors miss: Gaudí's ingenious hanging-model technique, the hidden
+      symbolism carved into every facade, and the best photo spots for capturing the towers at golden hour.
+      Combine your visit with a Park Güell ticket and save 15%. Tickets sell out weeks in advance during peak
+      season, so book today to guarantee your spot at Barcelona's crown jewel. Groups, students, and
+      skip-the-line audio guides available in 12 languages.</p>
+    </div>
+
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <div class="qbody">
+          List one detail the magazine article includes that the tour-website text leaves out, and one detail the tour-website text includes that the magazine article leaves out.
+          <span class="ans-line-sm"></span>
+          <span class="ans-line-sm"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <div class="qbody">
+          Both texts describe the same basilica but create a different impression. In 2 to 3 sentences, describe that difference.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <div class="qbody">
+          Companies that sell tickets want you to book with them. Where in the tour-website text can you see that goal shaping how it describes the basilica, even though it never says "we want your money" directly?
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section-title">Discuss It</div>
+
+  <div class="discuss-block">
+    <p class="instr">Get into a small group. Your group will get one question below. Take turns discussing
+    it out loud, using a starter phrase from the list.</p>
+
+    <div class="prompt">1. Is the Sagrada Família more impressive as a feat of engineering, or as a work of art?</div>
+    <div class="prompt">2. Which facade, the Nativity Facade or the Passion Facade, does a better job of matching its mood to its subject?</div>
+    <div class="prompt">3. Should the Sagrada Família ever be declared finished, or does it work better as a project that never quite ends?</div>
+
+    <p class="instr" style="font-weight:700; margin-bottom:6px;">Starter phrases:</p>
+    <ul class="stems">
+      <li><span class="stars">★</span> "I think it's more ___ because the text says ___."</li>
+      <li><span class="stars">★★</span> "One reason I'd argue for ___ is that the writer describes ___, which shows ___."</li>
+      <li><span class="stars">★★★</span> "The writer's language shifts when describing ___, which suggests ___ rather than just stating fact."</li>
+      <li><span class="stars">★★★★</span> "Comparing the two texts, I noticed the [tour website/magazine article] frames this as ___, which serves the goal of ___."</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Wrap It Up</div>
+  <div class="wrapup">
+    <p class="instr">With a partner, pick one object in the room. Describe a feature of it, compare it to
+    something else, and use one word that shows your opinion without stating it directly.</p>
+    <ul class="stems">
+      <li><span class="stars">★★</span> "This ___ has ___, which is different from ___ because ___."</li>
+      <li><span class="stars">★★★★</span> "Notice how I just used the word ___ to show I think this is good, without saying it directly."</li>
+    </ul>
+  </div>
+
+
+</div>
+</body>
+</html>
