@@ -121,8 +121,9 @@ length, no decorative rules.
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
 Identical to the lesson packet's Section 3: single self-contained HTML file, black-and-white only,
-no em-dashes, print-safe page breaks. **Reuse the same base stylesheet and CSS class additions
-already established** (`.citebox`, `.notes-table`, `.task-instr`, `.pic-options`/`.pic-option`,
+no em-dashes, print-safe page breaks. **Reuse `shared/Student_Packet_Style_Guide.md`'s base
+stylesheet directly, plus the CSS class additions already established in the Student Print
+Formatting Prompt (v1)** (`.citebox`, `.notes-table`, `.task-instr`, `.pic-options`/`.pic-option`,
 `.match-list`/`.match-row`, `.qitem`) rather than inventing new ones. Add a page-break rule between
 each task Level's Listening Test page (`page-break-before: always` on each Level's section) so
 selective printing (2.2) produces clean single-Level printouts.

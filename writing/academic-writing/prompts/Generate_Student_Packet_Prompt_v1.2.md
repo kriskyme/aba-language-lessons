@@ -286,28 +286,15 @@ omit it.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
-### 3.1 Single self-contained HTML file
-
-Produce one HTML file with all CSS embedded in a `<style>` block in the head and no external resources (fonts,
-scripts, images) other than a simple browser print trigger (`window.print()` on an on-screen button hidden via
-`@media print`). This is what makes the document reliably printable directly from a browser without setup.
-
-### 3.2 Black and white only
-
-Design for black-and-white printing exclusively: no color-dependent meaning anywhere in the layout (star counts,
-not color, indicate difficulty; borders and typographic weight, not color, distinguish content types). Use a pure
-black/white/gray palette.
-
-### 3.3 No em-dashes
-
-Never use em-dashes anywhere in the generated document. Use standard hyphens, colons, or parentheses
-instead, consistent with the lesson generation prompt's own constraint.
-
-### 3.4 Print-safe layout
-
-Use `page-break-inside:avoid` / `break-inside:avoid` (or the modern equivalent) on content blocks that should not
-split awkwardly across a printed page: callout boxes, task blocks, individual items with their answer lines, and
-worked-example blocks.
+**Moved to a shared, cross-modality doc:** paste `shared/Student_Packet_Style_Guide.md` alongside
+this prompt when generating. It holds the universal format constraints (single self-contained
+file, black-and-white, no em-dashes, print-safe layout), the base stylesheet (including the
+`.ans-line`/`.ans-line-sm` classes 2.12 above already assumes), and the HTML markup conventions.
+Reuse the base stylesheet unmodified; add a new class only for a structural element genuinely not
+covered there (e.g. the essay-structure teaching boxes in 2.11), following the same rule-formatting
+conventions (`shared/Student_Packet_Style_Guide.md` §C). Before this note, this section had no
+actual CSS or stylesheet reference at all - a gap masked only by the fact that no Academic Writing
+packet has been generated yet (see `Changelog.md`).
 
 ## SECTION 4: WORKFLOW
 

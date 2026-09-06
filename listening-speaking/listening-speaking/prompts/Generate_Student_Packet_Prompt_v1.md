@@ -228,25 +228,24 @@ answer length, no decorative rules.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
-Identical to Passage Reading Section 3: single self-contained HTML file, black-and-white only, no em-dashes,
-print-safe page breaks. **Reuse Passage Reading's Section 3.5 base stylesheet unmodified**, with two required
-exceptions (added 2026-09-03, after user review): (1) broaden the base stylesheet's `.qlist .num` rule to a
-plain `.num{...}` rule (drop the `.qlist` ancestor requirement), so numbers inside `.qitem` (2.4a) get the same
-bold weight and fixed width as numbers inside `.qlist li` - as scoped in the base stylesheet, `.qitem` numbers
-render unbolded and unspaced, which is the inconsistency 2.4a exists to prevent. (2) drop the base stylesheet's
-separate `.discuss-block .prompt` font-size rule entirely, since Discuss It prompts now use `.qitem` (2.11) and
-should match every other numbered question's size, not carry their own. For visual consistency across the whole
-program, add only:
+**Moved to a shared, cross-modality doc:** paste `shared/Student_Packet_Style_Guide.md` alongside
+this prompt when generating. It holds the universal format constraints (single self-contained
+file, black-and-white, no em-dashes, print-safe layout), the base stylesheet, and the HTML markup
+conventions. **Reuse that base stylesheet unmodified** - the two exceptions this prompt used to
+patch on top of it (broadening `.qlist .num` to a plain `.num` rule, and dropping the separate
+`.discuss-block .prompt` font-size rule) are now folded into the shared stylesheet itself, so no
+exception needs tracking here anymore.
+
+For visual consistency across the whole program, this lesson type adds only the following classes
+on top of the shared base stylesheet, following the same rule-formatting conventions
+(`shared/Student_Packet_Style_Guide.md` §C):
 
 ```css
 .citebox {
   border: 1px solid var(--ink);
   padding: 12px 16px;
   margin: 10px 0 16px;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 13.5px;
 }
 .citebox strong {
@@ -257,10 +256,7 @@ program, add only:
   width: 100%;
   border-collapse: collapse;
   margin: 10px 0 20px;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 13.5px;
 }
 .notes-table th,
@@ -283,10 +279,7 @@ program, add only:
 }
 
 .task-instr {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 13px;
   font-style: italic;
   color: var(--ink-soft);
@@ -309,19 +302,13 @@ program, add only:
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 10.5px;
   color: var(--ink-soft);
   padding: 6px;
 }
 .pic-option .pic-label {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 12.5px;
   text-align: center;
   margin-top: 5px;
@@ -403,5 +390,5 @@ followed by regeneration; if no, it's safe to apply here directly.
   framing, and is the Closing Transfer Check script printed upside-down in addition to sitting after the
   response space?
 - Are Background Notes translated into Good to Know boxes, informational only?
-- Is the document black-and-white, em-dash-free, single self-contained HTML file, reusing the Passage Reading
-  base stylesheet plus only the classes documented in Section 3 above?
+- Is the document black-and-white, em-dash-free, single self-contained HTML file, reusing
+  `shared/Student_Packet_Style_Guide.md`'s base stylesheet plus only the classes documented in Section 3 above?

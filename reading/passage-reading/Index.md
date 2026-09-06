@@ -24,7 +24,7 @@ modality-level list of lesson types. Nothing here currently supports it.
 | `Generate_Homework_Prompt_v1.md`                | Generates one homework assignment (vocabulary/idiom production + skill practice) from a single completed 2-day lesson, general track only. Does not reference Phase 3 protocol mechanics.                                                                                                                                                                                                       | Synced to v2.5 (v2.7-compatible, unchanged) |
 | `Generate_TOEFL_Extension_Prompt_v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
 | `Generate_Assessment_Prompt_v4.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a set of completed lessons. Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. | Synced to v2.5 (v2.7-compatible, unchanged) |
-| `Generate_Student_Packet_Prompt_v1.2.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and embeds a required base stylesheet (Section 3.5). Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.2)                     |
+| `Generate_Student_Packet_Prompt_v1.2.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and reuses the required base stylesheet in `shared/Student_Packet_Style_Guide.md`. Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.2)                     |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
 
@@ -66,7 +66,7 @@ section, with a note to distribute that section alongside any single task-Level 
 
 **Print formatting (Step 6), student version:** Lesson 1's packet (`Unit 1A`/`Unit 1B: A Grandmother's Kitchen`,
 `Module 1 Lesson 1 (Intermediate) - Kitchen Student Packet.html`) exists as a finished HTML file; its settled CSS
-is now the base stylesheet embedded in the Student Print Formatting Prompt (Section 3.5). Lesson 2's packet
+is now the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's packet
 (`Unit 2A`/`Unit 2B: New Corner of Yoyogi Park`, `Module 1 Lesson 2 (Intermediate) - Yoyogi Park Student
 Packet.html`) is current against the print prompt, and its three discussion prompts match Lesson 1 and Lesson
 2's own source docs. Lessons 3-4 have not been print-formatted yet.
@@ -106,7 +106,7 @@ No homework, TOEFL extension, or assessment work has started yet for the Advance
 
 **Print formatting (Step 6), student version:** Lesson 1's student packet (`Unit 1A`/`Unit 1B: The Basilica That
 Refuses to Be Finished`, `Module 1 Lesson 1 (Advanced) - Sagrada Família Student Packet.html`) exists as an HTML
-file; its CSS is the v1.1 base stylesheet (Section 3.5). Lesson 2's student packet (`Unit 2A`/`Unit 2B: The
+file; its CSS is the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's student packet (`Unit 2A`/`Unit 2B: The
 Forge at Dawn`, `Module 1 Lesson 2 (Advanced) - The Forge at Dawn Student Packet.html`) is current against the
 print prompt. Both use the 5-mark annotation key (Advanced band and up); Lesson 1 has no byline (short-story
 genre), and Lesson 2's Task D (Level 7) embeds the lesson's second comparison text - a museum-placard passage
@@ -157,8 +157,8 @@ Module 1 is the complete end-of-module assessment - there is no separate 8-lesso
 
 **Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v1.2.md`
 against a completed 2-day lesson from Step 2 (both days, in full) to produce a single, print-ready,
-black-and-white student handout as one self-contained HTML file, reusing the prompt's required base
-stylesheet (Section 3.5) and pulling its 2-3 discussion prompts directly from the source lesson. This step is
+black-and-white student handout as one self-contained HTML file, reusing the required base
+stylesheet in `shared/Student_Packet_Style_Guide.md` and pulling its 2-3 discussion prompts directly from the source lesson. This step is
 independent of Steps 3-5 and can run any time after Step 2 completes for that lesson. Deliver as an HTML
 preview first; format feedback typically comes as scoped edits to that file rather than a full regeneration. No
 teacher-facing formatted version exists yet - out of scope for this prompt.
