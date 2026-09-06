@@ -29,6 +29,15 @@ Inquiry, Fishbowl, Bread & baking sensations.
 - **[Segment 4: Whole grain pastries]** - pastries, the team
 - **[Segment 5: It's the taste]** - closing, Bethony's quote about taste/experience
 
+## Governing CSV objective (Level 3, Listening/Speaking, Module 1: Describing)
+
+> Listening: Can listen to one short spoken description using a two-slot frame ("It is ___ and
+> ___.") and identify the described object among a small set of choices, with a model available
+> for reference. Speaking: Can describe a familiar object using the memorized frame with two
+> open slots, with a model available rather than being prompted step-by-step.
+
+Listening half governs Day 1's task-Level basis column; Speaking half governs Day 2's.
+
 ## Task Levels for this lesson (Intermediate band: 2, 3, 4, 5)
 
 | Level | Role            | Listening basis (Day 1)                                                     | Speaking basis (Day 2)                                                           |
@@ -216,8 +225,7 @@ the source page rather than defaulting to "watch."
   yes/no question) and a real production role (the rehearsed pair-share feeding into the Fishbowl), not just
   fact-retrieval and silent participation?
 - Brief reflection: "What's one thing you learned about how bread is made that you didn't know before?" No Part
-  2/presentation-project extension is being used for this cycle (not yet built - see Master Generation
-  Document).
+  2/presentation-project extension is being used for this cycle (not yet built for this lesson type).
 
 ---
 
@@ -232,7 +240,7 @@ the source page rather than defaulting to "watch."
    with a stated comparison to typical bakeries and a stated reason for the difference, matching Module 1
    (Describing), not drifting into Explaining or Evaluating.
 4. **Task Levels by band:** all 4 Intermediate task Levels (2, 3, 4, 5) present, Listening half for Day 1,
-   Speaking half for Day 2, both quoted verbatim in the table above.
+   Speaking half for Day 2, both quoted verbatim above.
 5. **Vocabulary:** all 6 target words are the source's own "Words in This Story" glossary entries, not invented.
    One transparent chunk ("mixing and matching") glossed; no opaque idiom present in this source.
 6. **Fair-use ceiling:** direct quotations used (Bethony's and Fromartz's quotes) are each one to two sentences;

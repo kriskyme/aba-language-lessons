@@ -52,6 +52,15 @@ the student packet (a print-layer fix, not a content change) as a physical deter
 - **[Segment 2: Features]** - frame types, ventilation, pockets
 - **[Segment 3: Fit]** - torso length, hip size, straps
 
+## Governing CSV objective (Level 3, Listening/Speaking, Module 1: Describing)
+
+> Listening: Can listen to one short spoken description using a two-slot frame ("It is ___ and
+> ___.") and identify the described object among a small set of choices, with a model available
+> for reference. Speaking: Can describe a familiar object using the memorized frame with two
+> open slots, with a model available rather than being prompted step-by-step.
+
+Listening half governs Day 1's task-Level basis column; Speaking half governs Day 2's.
+
 ## Task Levels for this lesson (Intermediate band: 2, 3, 4, 5)
 
 | Level | Role            | Listening basis (Day 1)                                                     | Speaking basis (Day 2)                                                           |
@@ -240,8 +249,7 @@ instead of eight.
 - **Respectful Tiers check:** across the whole cycle, did Level 2 get a genuine production role (the rehearsed
   pair-share), not silence?
 - Brief whole-class reflection: "What's one thing you'll think about differently next time you buy gear?" No
-  Part 2/presentation-project extension is being used for this cycle (not yet built - see Master Generation
-  Document).
+  Part 2/presentation-project extension is being used for this cycle (not yet built for this lesson type).
 
 ---
 
@@ -258,7 +266,7 @@ instead of eight.
    matching Module 1 (Describing); its "first...then" language is used specifically to teach this lesson's
    assigned Speaking Skill (Sequencing Language) rather than to teach a procedure.
 4. **Task Levels by band:** all 4 Intermediate task Levels (2, 3, 4, 5) present, Listening half for Day 1,
-   Speaking half for Day 2, both quoted verbatim from the CSV in the table above.
+   Speaking half for Day 2, both quoted verbatim above.
 5. **Vocabulary:** all 6 target words are grounded in the real source's simpler sections, not invented. No
    opaque or transparent idiom present in the material this lesson draws from.
 6. **Fair-use ceiling:** no long direct quotations are used; all source language is paraphrased into original

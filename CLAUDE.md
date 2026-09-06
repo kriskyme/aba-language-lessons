@@ -54,6 +54,20 @@ one large file (1,000+ lines). Open it only when a task specifically calls
 for consulting the source material (e.g. checking a prompt's claims against
 it), not as part of general repo work.
 
+Outside the three modality folders, one more top-level folder holds facts
+that don't belong to any single modality:
+
+```
+shared/
+├── Program_Conventions.md        # cross-modality facts: taxonomy, Sets, Rotation Log mechanics
+├── Student_Packet_Style_Guide.md # base CSS/HTML shell every HTML student packet reuses
+└── Changelog.md                  # version history for shared/Program_Conventions.md
+```
+
+Every lesson type's prompts and `Index.md` point here for this content rather
+than restating it — see the "Cross-modality conventions live in one shared
+file" bullet below for what that means in practice.
+
 Worked example: `reading/passage-reading/` (Reading's one active lesson
 type today; `reading/novel-reading/` is planned as a sibling once real work
 on it starts — see `reading/Index.md`). `listening-speaking/` and `writing/`
@@ -187,6 +201,19 @@ noted in Known Issues.
   match the files present in its `lessons/` and `prompts/` folders, and that
   a lesson's HTML packet stays structurally/stylistically consistent with its
   Markdown source and with other lesson types' packets.
+- **How to use these docs, in order:** this file for repo-wide orientation →
+  the relevant lesson type's own `Index.md` for its file inventory and
+  "Generation workflow" section (what order to run that lesson type's prompts
+  in) → `shared/Program_Conventions.md` for any cross-modality fact the
+  workflow needs (taxonomy, Sets, Rotation Log mechanics). Don't re-derive
+  any of that from scratch each session — it's already written down.
+- **Update as you go, not as a later cleanup:** once you generate, rename, or
+  sync any doc in a lesson type's family, update that lesson type's `Index.md`
+  (file table, sync status, and its "Module/Band progress" section) and
+  append to the right `Rotation_Log_<Band>.md` in the same pass — this is
+  what each Index.md's own opening line already means by "living index."
+  Leaving that for later is exactly how the mismatches under Known Issues
+  above happened.
 - When adding or renaming lesson files, follow the canonical conventions
   above rather than matching whatever scheme is already in that lesson
   type's folder — the point of this repo is to converge on one scheme.

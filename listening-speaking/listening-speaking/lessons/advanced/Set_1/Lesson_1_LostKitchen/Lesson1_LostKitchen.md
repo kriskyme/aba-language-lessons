@@ -50,6 +50,18 @@ in real elapsed times on first playthrough):**
 - **[Segment 5: Reinvention and philosophy]** - the airstream pop-ups, the restored mill, "cook by intuition"
 - **[Segment 6: Community and looking ahead]** - the COVID pivot, the aid fund, closing reflections
 
+## Governing CSV objective (Level 5, Listening/Speaking, Module 1: Describing)
+
+> Listening: Can listen to an extended spoken description of a familiar or semi-familiar
+> place or object, summarize how it's organized, and identify one clearly evaluative word
+> choice that signals the speaker's opinion even though the speaker never states the opinion
+> directly (e.g. a positive or negative adjective standing in for "I like/dislike this").
+> Speaking: Can give an extended description, organizing details logically and including at
+> least one clearly evaluative word choice that signals an opinion without stating it outright,
+> working independently.
+
+Listening half governs Day 1's task-Level basis column; Speaking half governs Day 2's.
+
 ## Task Levels for this lesson (Advanced band: 4, 5, 6, 7)
 
 | Level | Role            | Listening basis (Day 1)                                                                                                                                 | Speaking basis (Day 2)                                                                                                                       |
@@ -219,8 +231,7 @@ Context sentences (paraphrased from the source, not quoted verbatim):
   real production role (Day 2's rehearsed pair-share into the Town Hall), not fact-retrieval and silent
   participation only?
 - Brief reflection: "What's one thing about running a small restaurant that surprised you?" No Part
-  2/presentation-project extension is being used for this cycle (not yet built - see Master Generation
-  Document).
+  2/presentation-project extension is being used for this cycle (not yet built for this lesson type).
 
 ---
 
@@ -233,7 +244,7 @@ Context sentences (paraphrased from the source, not quoted verbatim):
 3. **Module alignment:** confirmed - centers on describing a person, place, and process (the restaurant, its
    setting, her approach), with stated comparisons and reasons, not drifting into Explaining or Evaluating.
 4. **Task Levels by band:** all 4 Advanced task Levels (4, 5, 6, 7) present, Listening half for Day 1, Speaking
-   half for Day 2; Level 7 correctly built on both sources per its own CSV requirement, not forced onto the
+   half for Day 2; Level 7 correctly built on both sources per the CSV objective quoted above, not forced onto the
    single primary source.
 5. **Vocabulary:** all 6 target words and both idioms are actually present in the real transcript, not invented.
 6. **Fair-use ceiling:** every direct quotation (both sources) is one to two sentences; neither transcript is

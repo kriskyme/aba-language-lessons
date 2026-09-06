@@ -40,6 +40,15 @@ Asking for Clarification, K-W-L Walk, Concentric Circles, Personality & characte
 - **[Segment 3: Global Perspectives]** - Japan's English ranking, becoming "global members"
 - **[Segment 4: A lifetime of Olympics]** - the 1964 Olympics memory, the closing quote
 
+## Governing CSV objective (Level 3, Listening/Speaking, Module 1: Describing)
+
+> Listening: Can listen to one short spoken description using a two-slot frame ("It is ___ and
+> ___.") and identify the described object among a small set of choices, with a model available
+> for reference. Speaking: Can describe a familiar object using the memorized frame with two
+> open slots, with a model available rather than being prompted step-by-step.
+
+Listening half governs Day 1's task-Level basis column; Speaking half governs Day 2's.
+
 ## Task Levels for this lesson (Intermediate band: 2, 3, 4, 5)
 
 | Level | Role            | Listening basis (Day 1)                                                     | Speaking basis (Day 2)                                                           |
@@ -244,7 +253,7 @@ filled in during Day 2, Phase 5.
    teaching process, and a stated comparison between then (WWII, English banned) and now (family support,
    global outlook), matching Module 1 (Describing), not drifting into Instructing or Arguing.
 4. **Task Levels by band:** all 4 Intermediate task Levels (2, 3, 4, 5) present, Listening half for Day 1,
-   Speaking half for Day 2, both quoted verbatim from the CSV in the table above.
+   Speaking half for Day 2, both quoted verbatim above.
 5. **Vocabulary:** all 6 target words are the source's own "Words in This Story" glossary entries, not invented.
    Vocabulary-theme mismatch flagged above and reasoned through rather than silently forced. No idiom present
    in this source.

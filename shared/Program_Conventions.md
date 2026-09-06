@@ -1,4 +1,4 @@
-# Program Conventions (v1.0)
+# Program Conventions (v1.1)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -69,6 +69,26 @@ instead changes the *shape of the required output* (a spelled word in a frame at
 an independently authored multi-paragraph piece at Level 7-8) — the table and its underlying
 band-distance logic are identical, but each lesson type's own prompt documents what a "task" means
 concretely for that modality.
+
+**Star ratings on the student-facing packet.** Every lesson type's `Generate_Student_Packet_Prompt_*.md`
+hides the numeric task Level from students and shows a star rating instead: the lowest task Level in
+the band's row above gets ★, and each step up that row adds one star, up to ★★★★ for the row's
+highest task Level. Because each band's row has a different mix of native/borrowed Levels, the same
+star count lands on a different band-relative position per band:
+
+| Band | ★ | ★★ | ★★★ | ★★★★ |
+|---|---|---|---|---|
+| Beginner | native lower (1) | native upper (2) | 1 band above (3) | *(none — only 3 stars)* |
+| Intermediate | 1 band below (2) | native lower (3) | native upper (4) | 1 band above (5) |
+| Advanced | 1 band below (4) | native lower (5) | native upper (6) | 1 band above (7) |
+| Proficient | 1 band below (5) | 1 band below (6) | native lower (7) | native upper (8) |
+
+Don't over-generalize "★★/★★★ = the band's own two native Levels, ★ = one band below, ★★★★ = one
+band above" from the Intermediate/Advanced rows to all four bands — it breaks at both ends of the
+scale. Beginner has no ★★★★ at all (only 3 stars, since it can't extend below Level 1, per the
+asymmetry above). Proficient's ★ *and* ★★ are both "1 band below" (it borrows two Levels down from
+Advanced instead of one, since it can't extend above Level 8), so its native Levels are ★★★/★★★★,
+not ★★/★★★.
 
 ## C. What a Set is
 

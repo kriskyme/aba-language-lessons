@@ -53,6 +53,18 @@ labels below are my own, for teacher navigation - pencil in real elapsed times o
 - **[Segment 6: Falling in love with an old building]** - DeMarco on the old post office turned into Postino
   wine bar; King's closing "architecture is shelter" line
 
+## Governing CSV objective (Level 5, Listening/Speaking, Module 1: Describing)
+
+> Listening: Can listen to an extended spoken description of a familiar or semi-familiar
+> place or object, summarize how it's organized, and identify one clearly evaluative word
+> choice that signals the speaker's opinion even though the speaker never states the opinion
+> directly (e.g. a positive or negative adjective standing in for "I like/dislike this").
+> Speaking: Can give an extended description, organizing details logically and including at
+> least one clearly evaluative word choice that signals an opinion without stating it outright,
+> working independently.
+
+Listening half governs Day 1's task-Level basis column; Speaking half governs Day 2's.
+
 ## Task Levels for this lesson (Advanced band: 4, 5, 6, 7)
 
 | Level | Role            | Listening basis (Day 1)                                                                                                                                 | Speaking basis (Day 2)                                                                                                                       |
@@ -251,8 +263,8 @@ Context sentences (paraphrased from the source, not quoted verbatim):
    (before/after, preserved/torn-down), not drifting into Arguing despite the debate content the source itself
    contains.
 4. **Task Levels by band:** all 4 Advanced task Levels (4, 5, 6, 7) present, Listening half for Day 1, Speaking
-   half for Day 2; Level 7 correctly built on both sources per its own CSV requirement, not forced onto the
-   single primary source.
+   half for Day 2; Level 7 correctly built on both sources per the CSV objective quoted above, not forced onto
+   the single primary source.
 5. **Vocabulary:** all 6 target words and both figurative chunks are actually present in the real
    transcript/page, not invented. No opaque idiom was fabricated to fill a quota where the real source didn't
    supply one.
