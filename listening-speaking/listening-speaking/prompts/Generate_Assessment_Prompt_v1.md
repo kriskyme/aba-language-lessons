@@ -2,15 +2,7 @@
 
 Companion to the Listening/Speaking Lesson Generation Prompt (v1) and Module Lesson-Plan Generation Prompt (v1).
 Generates the assessment layer that sits on top of a taught Set: not a lesson, and not a new source's worth of
-teaching, but a way to check whether students can transfer what a Set actually built. This is the first version
-of this prompt - the family's Index doc listed an assessment prompt as pending work since
-2026-08-30; this fills that gap. Expect it to be lightly field-tested, like the Lesson and Module Lesson-Plan
-prompts were at v1.
-
-**Revision history.** An earlier draft of this prompt staggered the two assessment types (Listening every Set,
-Speaking cumulative every 2 Sets) and defaulted every band to a solo Teams recording. Per user direction
-2026-09-04, both parts now run **every Set**, and Part B's mechanism now splits by band rather than defaulting
-to one mechanism everywhere - see Part B below for the current model.
+teaching, but a way to check whether students can transfer what a Set actually built.
 
 **Why two assessment types, not one.** Listening and Speaking scale differently in a real classroom. Listening
 comprehension can be checked individually and simultaneously - every student listens on their own (headphones,
@@ -27,25 +19,21 @@ of that (see Part B for how it's actually used at each band):
 | Scope     | The Set just completed only                               | The Set just completed only                                                                                                                                                                                                                                                                                                         |
 | Basis     | A new source, never one of the Set's own 4 taught sources | A new prompt, not tied to any one source                                                                                                                                                                                                                                                                                            |
 
-If a program is not using Teams or an equivalent asynchronous recording tool, Part B below still produces a
-usable prompt and rubric - substitute whatever recording/submission mechanism is actually available where this
-prompt says "Teams Speaking Progress."
-
 ---
 
 ## PART A: LISTENING ASSESSMENT (every Set)
 
 ### A.0 Scope and inputs
 
-Run this after a Set's 4 lessons are complete (Lessons N through N+3 for whatever Set just finished). Required
-inputs: the Module, the Band, and the Set number (or the 4 lesson files themselves, to confirm which task
+Run this after a Set's lessons are complete. Required
+inputs: the Module, the Band, and the Set number (or the completed lesson files themselves, to confirm which task
 Levels, listening strategies, and vocabulary themes were actually taught - this assessment must trace to what
 was actually taught, not just what the Module Lesson-Plan originally planned, in case a generated lesson
 deviated from its plan row per that prompt's own self-check).
 
 **A new source is required, exactly like a lesson's own source (Section 0.3 sourcing rules, reused wholesale):
 never fabricated, always found and verified via search, cited in full, with a real transcript/captions
-confirmed before any item is built on it.** Do not reuse any of the Set's 4 taught sources, and do not reuse a
+confirmed before any item is built on it.** Do not reuse any of the Set's taught sources, and do not reuse a
 source already used in an earlier Set's assessment for this Module/Band. The new source must match the same
 Module verb (Describing, Narrating, etc.) and the same band-lower-Level calibration (Section 0.2's runtime/
 pace/register table) that governed the Set's own sources, so that performance on the assessment reflects
@@ -59,12 +47,12 @@ Two things, kept separate in the item design:
    way the Lesson prompt's Section 0.1 pulls it - the same objective each lesson's Day 1 was already built to
    satisfy. The assessment is not testing new content; it is testing whether the can-do transfers to a source
    the student has never heard.
-2. **The specific listening strategies actually taught across the Set's 4 lessons** (e.g., if a Set's four
+2. **The specific listening strategies actually taught across the Set's lessons** (e.g., if a Set's
    strategies were Listen for Main Ideas/Gist, Recognize Examples, Listen for Sequence Markers, and Predict from
    Context Before Confirming, the assessment should include at least one item per strategy, not just a generic
-   comprehension check). Pull the actual four strategies from the Set's lesson files or its Rotation Log
+   comprehension check). Pull the actual strategies from the Set's lesson files or its Rotation Log
    entry rather than re-guessing from the Module Lesson-Plan alone.
-   Do not test vocabulary items from the Set's own 4 lessons directly (a student who missed one lesson would be
+   Do not test vocabulary items from the Set's own lessons directly (a student who missed one lesson would be
    penalized for absence, not for a comprehension gap), but do test the same _kind_ of vocabulary-in-context
    skill using words drawn from the new source's own transcript, glossed the same way a lesson's Phase 1 would.
 

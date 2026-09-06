@@ -186,9 +186,16 @@ task-Level tiered) and a per-Set Speaking assessment (Part B, mechanism split by
 default and formal assessment for Beginner/Intermediate, with a same-task teacher-approved live-delivery option;
 live presentation as the default for Advanced/Proficient, with a same-task Teams-recording alternate always also
 generated). First assessment generated 2026-09-04 against Module 1 Intermediate Set 1 - see
-`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md` (still a corrupted stub on disk, not real
-content - see Known Issues in the root `CLAUDE.md`). Not yet run for Advanced Band, since
+`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`. Not yet run for Advanced Band, since
 Advanced Set 1 is not yet complete (see open items above).
+
+**Intermediate Set 1 assessment regenerated (2026-09-06), replacing the corrupted stub.** Part A (Listening)
+uses a real, verified source, "Visitors Laugh Away Troubles at the HaHaHouse Museum" (VOA Learning English,
+Andrea Golubic's laughter museum in Zagreb, Croatia), distinct from all 4 taught sources, with tiered items
+covering all four of the Set's listening strategies (Main Ideas/Gist, Recognize Examples, Sequence Markers,
+Predict from Context). Part B (Speaking) is a Teams Speaking Progress solo recording (Intermediate's default
+mechanism), emphasizing Making Comparisons and Sequencing Language, with the same-task live-delivery option
+noted. See `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`.
 
 ---
 

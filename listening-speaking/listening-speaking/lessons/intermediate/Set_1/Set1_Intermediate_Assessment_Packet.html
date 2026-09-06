@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 1 Set 1 Assessment: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+
+      .objective {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .section-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        min-width: 130px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+
+      /* Picture-based multiple choice: placeholder boxes instead of words */
+      .pic-options {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 8px 0 4px 4px;
+      }
+      .pic-option {
+        width: 110px;
+      }
+      .pic-option .pic-box {
+        border: 2px dashed var(--ink);
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 10.5px;
+        color: var(--ink-soft);
+        padding: 6px;
+      }
+      .pic-option .pic-label {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 12.5px;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      /* Matching items: one pair per line with a blank, not compressed with arrows */
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block .instr-line {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      /* One printed page per task Level, for selective distribution/printing */
+      .level-page {
+        page-break-before: always;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .task-block,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Listening Test: Module 1 Set 1 Assessment</h1>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll listen to:</strong> "Visitors Laugh Away Troubles at the
+        HaHaHouse Museum," an audio from VOA Learning English about a new
+        museum in Zagreb, Croatia built entirely around laughter.
+      </div>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. museum</span
+          ><span
+            >a building that holds many exhibits about a subject people are
+            interested in</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">2. negativity</span
+          ><span>an attitude that only sees the bad qualities in something</span>
+        </div>
+        <div class="vrow">
+          <span class="word">3. interactive</span
+          ><span>designed to respond to what a person does</span>
+        </div>
+        <div class="vrow">
+          <span class="word">4. embrace</span
+          ><span>to accept something readily and gladly</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. tickle</span
+          ><span>to make someone laugh by lightly touching them</span>
+        </div>
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you listen, fill in what you learn about HaHaHouse below.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>&nbsp;</th>
+          <th>HaHaHouse Museum</th>
+          <th>A Typical Museum</th>
+        </tr>
+        <tr>
+          <td>What visitors do when they arrive</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>What's inside</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>How visitors say they feel afterward</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;</div>
+        <p class="task-instr">Answer each question below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              What is HaHaHouse?
+              <div class="pic-options">
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a museum ]</div>
+                  <div class="pic-label">a museum</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a hospital ]</div>
+                  <div class="pic-label">a hospital</div>
+                </div>
+                <div class="pic-option">
+                  <div class="pic-box">[ photo: a school ]</div>
+                  <div class="pic-label">a school</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              First, visitors walk into a cloud of ___ (smoke / water /
+              balls).
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Then, visitors climb into a giant ___ (washing machine /
+              airplane / boat).
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              What do visitors do at each part of HaHaHouse?
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">rubber chickens</span>(sing /
+                  sleep)
+                </div>
+                <div class="match-row">
+                  <span class="match-label">Bed of Nails</span>(lie down /
+                  jump)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">5.</span>
+            <div class="qbody">
+              Complete: "It is ___ and ___." using two words from the bank
+              below to describe HaHaHouse.
+              <div class="wordbank">
+                <strong>Word bank:</strong> fun &middot; interactive &middot;
+                boring &middot; quiet
+              </div>
+              <span class="ans-line"></span>
+              Do you think visitors feel happy after visiting? (yes / no) Why
+              do you think so?
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;</div>
+        <p class="task-instr">
+          Circle the correct answer, or fill in the blank, for each question
+          below.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Choose the best sentence: "It is ___ and ___." (a museum,
+              boring / a museum, interactive / a hospital, quiet)
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Put these steps in the order they really happen. Write 1, 2, or
+              3 next to each one.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label"
+                    >___ climb into the washing machine</span
+                  >
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ walk through the smoke</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label"
+                    >___ slide into the ball pit</span
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Circle two real zones mentioned in the audio: (karaoke room /
+              Sumo Arena / dance floor / movie theater)
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Before you hear the rest, guess: why do you think Aleksandar
+              liked the Bed of Nails?
+              <span class="ans-line"></span>
+              Now complete: "Aleksandar liked the Bed of Nails because it ___
+              him." (tickled / hurt / scared)
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;&#9733;</div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-3 sentences, name one feature of HaHaHouse, one way it's
+              different from a typical museum, and the reason Andrea Golubic
+              gives for creating it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              List two real zones from the audio and explain what kind of
+              humor each one represents.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Before you hear the visitors' own words, predict: how do you
+              think an adult visitor might feel about a museum built for
+              laughing?
+              <span class="ans-line"></span>
+              Now write what Bruno Dadic and Zorica Bucic actually said, and
+              whether your prediction was right.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;&#9733;&#9733;</div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Write a one-paragraph summary: who Andrea Golubic is, what
+              HaHaHouse does, and why it matters to her.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Summarize how the audio is organized (the arrival experience,
+              Golubic's story, inside the zones, visitor voices, the
+              psychologist's closing words) and name the words that show the
+              order of the arrival steps.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find the part near the end where the psychologist shows what he
+              really thinks about laughter, without saying "everyone should
+              visit this museum." Write what he says and explain what it
+              shows.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Speaking Task: Module 1 Set 1 Assessment</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Topic:</strong> describe and compare two rooms in your home
+        (or two places you know well), and explain the order in which you
+        would show a visitor around them.
+      </p>
+
+      <p class="instr">
+        Record yourself using Microsoft Teams Speaking Progress. You may
+        re-record as many times as you want before you submit. You may also
+        do this task live in class instead of recording; ask your
+        teacher.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">Target length: 30-45 seconds.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe two rooms in your home. Say one thing about each room
+              using "It is ___."
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Then say "First I would show you ___. Then I would show you
+              ___."
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Submit by:</strong> [teacher-set date], using Teams
+          Speaking Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">Target length: 45-60 seconds.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe two rooms using the frame "It is ___ and ___." for
+              each room. Use the model card if you need it.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Then describe the order you would show a visitor around, using
+              at least two order words (first, then, after that).
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Submit by:</strong> [teacher-set date], using Teams
+          Speaking Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">Target length: 60-90 seconds.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe two rooms in your home (or two places you know well)
+              in your own words, including one comparison between them and a
+              short reason for the comparison.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Then explain, using your own order words, the order you would
+              show a visitor around both places.
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Submit by:</strong> [teacher-set date], using Teams
+          Speaking Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">Target length: 90-120 seconds.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Give an extended, organized description comparing two places
+              you know well.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Include a clear order for how a visitor would move through both
+              places.
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Use at least one word that shows your opinion of one place over
+              the other without saying that opinion directly (for example,
+              "cozy" vs. "cramped").
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Submit by:</strong> [teacher-set date], using Teams
+          Speaking Progress.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

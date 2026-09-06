@@ -141,14 +141,6 @@ noted in Known Issues.
   multiply-revised lessons (Intermediate 1 "my phone case," Advanced 1 "Two
   apartments... for Sam") as current/synced. That content appears to have
   never been saved into this repo and needs to be regenerated or recovered.
-- `listening-speaking/listening-speaking/lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`
-  is a 1-line corrupted stub (a mangled filename string, not content), while
-  `listening-speaking/listening-speaking/Index.md` and `Rotation_Log.md`
-  claim this assessment was generated with real content (Part A/Part B, real
-  source) — likely lost during consolidation and needs regenerating. (The
-  stale `claude/...` path prefix both docs used to cite it under has been
-  corrected to this real relative path; only the content-loss part of this
-  issue is still open.)
 - Passage Reading's `Index.md` and `Rotation_Log.md`
   (`reading/passage-reading/`) reference filenames that don't match what's
   actually on disk, e.g. doc says `Passage Reading Lesson Generation Prompt

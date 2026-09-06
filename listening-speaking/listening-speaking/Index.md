@@ -50,6 +50,7 @@ out of scoping this against that sample:
 | `Changelog.md`                                                        | Version history for this prompt family. Not a prompt itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | N/A (data, not a prompt)                                                                                                                                                                                            |
 | `Generate_Student_Packet_Prompt_v1.md`           | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML), mirroring Passage Reading's print prompt (same base stylesheet, same star-rating system), adapted for a real-source lesson: a plain citation box instead of a printed passage, a fillable Listening Notes organizer instead of an annotation key, two parts (Unit \_A Listening / Unit \_B Speaking) instead of Unit \_A/\_B by calendar day.                                                                                                                                                                                                       | Current (v1); six packets generated (Intermediate 1-4, Advanced 1-2), all six current against this prompt's conventions                                                                            |
 | `Generate_Assessment_Prompt_v1.md`              | Generates the assessment layer on top of a taught Set, both parts run every Set: Part A, an individual Listening assessment (new unseen source, task-Level-tiered items, in-class, same period length as a lesson's Day 1); Part B, a Speaking assessment whose mechanism splits by band - Beginner/Intermediate scored via a Teams Speaking Progress solo recording (the recording IS the assessment); Advanced/Proficient default to a live solo/group presentation, with a same-task, same-rubric Teams-recording version always also generated as a standing scored alternate. | Current (v1); one assessment generated (Intermediate Set 1) - not yet run for Advanced, field-testing pending                                                                                                       |
+| `Generate_Assessment_Student_Packet_Prompt_v1.md` | Takes a completed Assessment (Part A + Part B) and produces a single, print-ready student handout: a Listening Test section (one page per task Level, citation box, fillable notes organizer, that Level's items only) and a Speaking Task section (a plain instruction card per Level - topic, target length, submission info). Strips every answer key, point value, holistic pass note, and rubric - none of that is student-facing. Mirrors `Generate_Student_Packet_Prompt_v1.md`'s translation approach and reuses its base stylesheet/classes. | Current (v1); one packet generated (Intermediate Set 1) |
 | `learningobjectives.csv` (project file, shared with Passage Reading) | Source of truth for every Learning Objective, including the Listening/Speaking modality rows this family pulls from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | N/A (data)                                                                                                                                                                                                          |
 
 Not yet started for this family: a homework-generation prompt and the Part-2/presentation-project extension
@@ -80,9 +81,8 @@ picture placeholders, word banks positioned before their items, universal questi
 lines, the `.match-row`/`.qitem`/`.num` consistency fixes) - see that prompt's own changelog for the complete
 list. Not yet reviewed against a printed page.
 
-**Set 1's Listening/Speaking Assessment:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`
-(still a corrupted stub on disk, not real content - see Known Issues in the root `CLAUDE.md`). Part A
-(Listening) uses a new, verified real source - "Visitors Laugh
+**Set 1's Listening/Speaking Assessment:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`.
+Part A (Listening) uses a new, verified real source - "Visitors Laugh
 Away Troubles at the HaHaHouse Museum" (VOA Learning English, a real laughter museum in Zagreb, Croatia) -
 distinct from all 4 taught sources, with tiered items covering all four of the Set's listening strategies (Main
 Ideas/Gist, Recognize Examples, Sequence Markers, Predict from Context). Part B (Speaking) is a Teams Speaking
@@ -91,6 +91,12 @@ Language, with the same-task live-delivery option noted per the current prompt. 
 ever generated against this prompt - not yet given to a real class, so treat every number in it (period length,
 item counts, target recording lengths) as a reasoned starting point pending real classroom feedback, per the
 prompt's own open items.
+
+**Student-facing packet:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment_Packet.html`, generated
+against `Generate_Assessment_Student_Packet_Prompt_v1.md` - a Listening Test section (one printable page per
+task Level) and a Speaking Task section (a plain instruction card per Level), with every answer key, point
+value, holistic pass note, and rubric stripped. Not yet reviewed against a printed page, same as the six lesson
+packets.
 
 ## Module 1 progress, Advanced Band (Describing, Advanced)
 
@@ -168,9 +174,9 @@ Teams-recording alternate for standing use (e.g. an absence). See that prompt's 
   the same way the Lesson prompt got five.
 - **Homework Generation Prompt** - not started. Will need its own rules given a homework assignment can't
   hand a student the full copyrighted transcript the way Passage Reading homework reuses the anchor text.
-- **A student-facing print/submission version of the Assessment Generation Prompt's output** - not started,
-  mirroring what the Student Print Formatting Prompt does for lessons. Flagged as an open item in the Assessment
-  prompt itself.
+- **Generate the Advanced Set 1 assessment's student packet, and any future Set's** - once the Advanced Set 1
+  assessment above is generated, run `Generate_Assessment_Student_Packet_Prompt_v1.md` against it the same way
+  it was just run for Intermediate Set 1.
 - **Part 2 + Presentation Project Extension** - not started. Planned to mirror the content sample's second
   (video) source, cross-source synthesis, and group-presentation assignment, as an optional add-on after a core
   lesson is complete - analogous to how the TOEFL Track Extension sits on top of a completed Passage Reading
