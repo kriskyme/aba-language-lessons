@@ -2,16 +2,19 @@
 
 Running record of every generated Academic Writing lesson's grammar focus (a Focus A / Focus B pair as of v2),
 Scenario topic, and real-world writing form, one row per lesson, in the order lessons were generated. Maintained
-by `Generate_Lesson_Prompt_v3.3.md` (Section 0.9): read in full before generating a new lesson,
+by `Generate_Lesson_Prompt_v3.4.md` (Section 0.9): read in full before generating a new lesson,
 appended to (never overwritten) once a lesson is generated and approved.
 
-**Why this exists, and how it differs from Reading's log:** Reading's Rotation Log is organized in blocks
-of 4 lessons because Reading plans a full module upfront with its own Module Lesson-Plan Generation Prompt
-before any lesson content is generated. No Writing equivalent of that planning prompt exists yet (see the
-companion `Index.md`'s Pending work section), so lessons are currently generated one at a
-time against a bare Module/Band request, and this log is a flat, chronological table rather than per-module
-blocks. If an Academic Writing Module Lesson-Plan prompt is built later, this log's format should likely be
-restructured to match Reading's block structure at that point, the same way its content should carry forward.
+**Why this exists, and how it differs from Reading's log:** Reading's and Listening/Speaking's Rotation Logs are
+both organized in nested Module/Band → Set blocks because each plans a full Set upfront with its own Module
+Lesson-Plan Generation Prompt before any lesson content is generated. No Writing equivalent of that planning
+prompt exists yet (see the companion `Index.md`'s Pending work and "Sets (aspirational)" sections), so lessons
+are currently generated one at a time against a bare Module/Band request, and this log is a flat, chronological
+table rather than nested blocks. If an Academic Writing Module Lesson-Plan prompt is built later, this log's
+format should likely be restructured to nest by Module/Band and Set at that point, the same way its content
+should carry forward - noting that, since a Writing lesson is already an 8-day cycle, a Writing Set would
+currently be just 1 lesson (see Index.md), so the practical effect on this log's shape may be smaller than
+Reading/Listening-Speaking's restructuring was.
 
 **What to check before generating a lesson:** compare the new lesson's intended grammar focus, Scenario topic,
 and real-world writing form against at least the last logged row, and scan further back for a grammar focus that

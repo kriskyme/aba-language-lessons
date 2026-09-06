@@ -1,25 +1,40 @@
 # Passage Reading Rotation Log
 
-Running record of every approved Passage Reading module plan's genre, reading strategy, Phase 1 hook, Phase 3
-protocol, vocabulary theme, and topic - one row per lesson, one section per module, in the order modules were
-planned. Maintained by the Passage Reading Module Lesson-Plan Generation Prompt (v1.1): read in full before
-planning a new module, appended to (never overwritten) once a module's plan is reviewed and approved. See that
-prompt's Section 0 for the cross-module adjacency/recency rules this log supports.
+Running record of every approved Passage Reading Set's genre, reading strategy, Phase 1 hook, Phase 3 protocol,
+vocabulary theme, and topic - one row per lesson, one subsection per Set, grouped under one section per
+Module/Band, in the order Sets were planned. Maintained by the Passage Reading Module Lesson-Plan Generation
+Prompt (v1.3): read in full before planning a new Set, appended to (never overwritten) once a Set's plan is
+reviewed and approved. See that prompt's Section 0 for the cross-Set and cross-Module adjacency/recency rules
+this log supports, and its Sets note for how a Module/Band can hold more than one Set over time (a fresh
+rotation of topics for a semester where the module is retaught).
 
-**Correction, 2026-09-01:** a module is 4 lessons (4 x 2-day cycles = 8 instructional days), not 8 lessons (which
-would be 16 days) - a miscount from early on, when "8 days worth of lessons" was read as "8 lessons" rather
-than "4 lessons of 2 days each." The Module 1, Describing, Intermediate Band entry below originally listed 8
-rows; rows 5-8 (Lesson 5: an apartment renovation in Bushwick, Brooklyn; Lesson 6: a hiker's journal entry at
-Angel's Landing, Zion National Park; Lesson 7: a food truck in a Portland food cart pod; Lesson 8: a bicycle-repair
-workshop in Amsterdam) were planned but never generated as lesson content, and are removed below as out of
-scope under the corrected 4-lesson model. Lessons 1-4, already generated, are the complete Module 1
-Intermediate module, not half of it. See `Index.md` for current status.
+**Correction, 2026-09-01:** a Set is however many lessons together cover a module's 8 instructional days (4 x
+2-day cycles); with Passage Reading's 2-day lesson, that's 4 lessons, not 8 (which would be 16 days) - a miscount
+from early on, when "8 days worth of lessons" was read as "8 lessons" rather than "4 lessons of 2 days each."
+The Module 1, Describing, Intermediate Band entry below originally listed 8 rows; rows 5-8 (Lesson 5: an
+apartment renovation in Bushwick, Brooklyn; Lesson 6: a hiker's journal entry at Angel's Landing, Zion National
+Park; Lesson 7: a food truck in a Portland food cart pod; Lesson 8: a bicycle-repair workshop in Amsterdam) were
+planned but never generated as lesson content, and are removed below as out of scope under the corrected
+4-lesson model. Unlike Listening/Speaking, where the equivalent leftover rows became that Module/Band's Set 2,
+Reading's rows 5-8 are simply dropped, since no Set 2 has been planned for either Module/Band below - Lessons
+1-4, already generated, are each Module/Band's complete Set 1, not half of an 8-lesson module. See `Index.md`
+for current status.
 
-Modules are appended below in the order they were planned. When planning the next module, read the LAST
-lesson row of the most recently logged module for the adjacency checks, and the full set of vocabulary themes
-and topics below for the recency flag.
+**Sets concept introduced (2026-09-06), for parity with Listening/Speaking.** A Module/Band can hold more than
+one Set over time - a fresh rotation of lessons for a semester where the module is retaught, without discarding
+or conflating it with what was taught before. A Set is however many lessons together cover the module's 8
+instructional days; today that's 4 lessons, since Passage Reading's lesson is a 2-day cycle. Lesson numbering
+stays global within a Module/Band, continuing across Sets rather than restarting (a Set 2, if planned, would
+continue at Lesson 5). This log's two existing sections below are relabeled `### Set 1` under their Module/Band
+headings to match - no row data changed, only the heading structure.
 
-## Module 1: Describing, Intermediate Band (planned 2026-08-30; corrected to 4 lessons 2026-09-01)
+Modules are appended below in the order they were planned. When planning the next Set, read the LAST lesson row
+of the most recently logged Set for the adjacency checks, and the full set of vocabulary themes and topics below
+for the recency flag.
+
+## Module 1: Describing, Intermediate Band
+
+### Set 1 (planned 2026-08-30; corrected to 4 lessons 2026-09-01) - Complete
 
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic |
 |---|---|---|---|---|---|---|
@@ -42,9 +57,11 @@ lesson's own doc for the full patch note.
 
 ---
 
-## Module 1: Describing, Advanced Band (planned 2026-08-30; corrected to 4 lessons 2026-09-01)
+## Module 1: Describing, Advanced Band
 
-**Correction, 2026-09-01:** this module's plan was approved 2026-08-30 as an 8-lesson plan, under the same
+### Set 1 (planned 2026-08-30; corrected to 4 lessons 2026-09-01) - 2 of 4 lessons generated
+
+**Correction, 2026-09-01:** this Set's plan was approved 2026-08-30 as an 8-lesson plan, under the same
 early miscount corrected above for the Intermediate Band entry (a module is 4 lessons / 8 instructional days,
 not 8 lessons / 16 days). The plan text as originally drafted also stated it had already been logged to this
 Rotation Log - it had not; this is that log entry, added retroactively on recovery of the plan. Rows 5-8
@@ -68,14 +85,20 @@ Lessons 2-4, which have not yet been generated.
 
 ---
 
-**Format for the next module's entry** (append below this line, do not overwrite anything above):
+**Format for the next Set's entry** (append below this line, do not overwrite anything above):
 
 ```
-## Module N: <Name>, <Band> Band (planned <date>)
+## Module N: <Name>, <Band> Band
+
+### Set S (planned <date>)
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic |
 |---|---|---|---|---|---|---|
-| 1 | ... | ... | ... | ... | ... | ... |
-| 2 | ... | ... | ... | ... | ... | ... |
-| 3 | ... | ... | ... | ... | ... | ... |
-| 4 | ... | ... | ... | ... | ... | ... |
+| ... | ... | ... | ... | ... | ... | ... |
+| ... | ... | ... | ... | ... | ... | ... |
+| ... | ... | ... | ... | ... | ... | ... |
+| ... | ... | ... | ... | ... | ... | ... |
 ```
+
+(Lesson # continues the global numbering for this Module/Band across every Set already planned - do not restart
+at 1 for Set 2 onward. If this Module/Band's section already exists above, append this Set as a new subsection
+under it rather than creating a duplicate `## Module N` heading.)

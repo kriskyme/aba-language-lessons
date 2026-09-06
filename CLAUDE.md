@@ -81,8 +81,8 @@ Each lesson type's actual cycle differs by design:
   audio/video clip (URL, speaker, platform, runtime, glossary pulled from the
   source's own captions) — no printed passage.
 - **Academic Writing** (`writing/academic-writing/`) — 8-day lesson built
-  around a shared "Scenario" plus a **Leveled Mentor Set** (one exemplar per
-  task Level) instead of a single shared anchor text, with a Focus A/Focus B
+  around a shared "Scenario" plus a **Leveled Mentor Ladder** (one exemplar
+  per task Level) instead of a single shared anchor text, with a Focus A/Focus B
   grammar pairing structure. No module concept yet — lessons are generated
   one at a time against a flat rotation log.
 
@@ -106,17 +106,29 @@ noted in Known Issues.
   is the target (`Lesson<N>_<TopicSlug>.md`,
   `<TopicSlug>_<Level>_L<N>_Packet.html`). Listening/Speaking has migrated
   both of its former divergent long-form styles to this.
-- **Listening/Speaking nests one level deeper than Reading**, since a lesson
-  there belongs to a Set and its files (raw `.md`, student packet `.html`,
-  later homework) travel together: `lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/`
-  holds one lesson's files. A Set's own assessment (one per Set, not per
-  lesson) sits in `Set_<N>/` itself rather than inside any one lesson's
-  folder. The Module/Band Lesson Plan spans every Set generated for that
-  band so far, and sits at the band-folder root (`lessons/<band>/`), above
-  the `Set_<N>/` folders. Neither the Lesson, Assessment, nor Module
-  Lesson-Plan generation prompts currently specify an output location
-  themselves, so this note is the convention to follow when saving newly
-  generated Listening/Speaking content.
+- **Lessons nest by Set.** A **Set** is however many lessons together cover
+  one Module's planned instructional time (8 class days) for a Band — not a
+  fixed lesson count, but derived from how many days each modality's lesson
+  runs. Reading and Listening/Speaking both use a 2-day lesson, so a Set is
+  4 lessons for each of them today; a shorter or longer lesson would change
+  that count, since the invariant is the 8 days, not the number "4." A
+  lesson's files (raw `.md`, student packet `.html`, later homework) travel
+  together: `lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/` holds one lesson's
+  files. A Set's own assessment (one per Set, not per lesson) sits in
+  `Set_<N>/` itself rather than inside any one lesson's folder. The
+  Module/Band Lesson Plan spans every Set generated for that band so far,
+  and sits at the band-folder root (`lessons/<band>/`), above the `Set_<N>/`
+  folders. Listening/Speaking adopted this convention first (2026-09-03,
+  after correcting an early miscount that had inflated its module size);
+  Reading followed for parity (2026-09-06), physically migrating its
+  already-generated lessons into the nested shape. Academic Writing's
+  `Index.md` documents the same shape aspirationally for when it gets a
+  Module Lesson-Plan prompt of its own — since its lesson is already an
+  8-day cycle, a Writing Set is currently 1 lesson, not 4. Neither the
+  Lesson, Assessment, nor Module Lesson-Plan generation prompts currently
+  specify an output location themselves, so this note is the convention to
+  follow when saving newly generated content in any of the three
+  modalities.
 - **`Index.md` files must only reference filenames that actually exist on
   disk.** Several currently describe files/content that were never saved, or
   that were saved under different names — treat any such mismatch as a bug

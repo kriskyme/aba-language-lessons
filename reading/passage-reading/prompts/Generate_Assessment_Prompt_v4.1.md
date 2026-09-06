@@ -1,4 +1,4 @@
-# Passage Reading Assessment Generation Prompt (v4)
+# Passage Reading Assessment Generation Prompt (v4.1)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.5, Band-Calibrated). Updated to match v2.5's
 band-scoped task-Level system: every assessed section is keyed to a specific task Level from that band's Task
@@ -10,8 +10,8 @@ itself uses and that the Passage Reading Homework Generation Prompt was already 
 differentiated assessment - one section per task Level actually present in the band, plus below-the-lowest-task-
 Level Foundation Support where applicable - from already-completed lessons.
 
-**Current version: v4.** For the full dated version history and the reasoning behind each change, see
-`Changelog.md`.
+**Current version: v4.1.** For the full dated version history and the reasoning behind each change (including
+the v4.1 Set-formality update), see `Changelog.md`.
 
 Use this prompt to generate a differentiated reading assessment - one section per task Level in the relevant
 band's table, plus a below-the-lowest-task-Level Foundation Support check where applicable - from a set of
@@ -29,9 +29,16 @@ input, stop and ask for them before generating anything.
 - Which lessons are being assessed: the actual lesson content (anchor texts, target vocabulary,
   idioms/slang, Module, Band). Pull vocabulary and idiom lists directly from each lesson's Phase 1
   pre-teaching list; do not re-derive them from learningobjectives.csv or invent new ones.
-- Scope: cumulative or per-lesson. A cumulative assessment covers multiple lessons (e.g. all lessons in a
-  Module, or a mid-unit checkpoint); a per-lesson assessment covers a single 2-day cycle. Ask if this is not
-  specified: the two produce very different-length documents.
+- **Set number:** which Set (per `Rotation_Log.md` and the Module Lesson-Plan prompt's Sets note) this
+  assessment covers, alongside the Module and Band. The normal, full-scope case is one completed Set (today,
+  4 lessons = 8 instructional days): run this prompt once a Set's lessons are all complete, the same cadence
+  Listening/Speaking uses. A mid-unit checkpoint or an assessment spanning more than one Set is still supported
+  (see the Scope bullet below) but should say explicitly which Set(s) it draws from, since Set number is what
+  ties an assessment to a place in `lessons/<band>/Set_<N>/` and to a Rotation Log entry.
+- Scope: cumulative or per-lesson. A cumulative assessment covers multiple lessons - typically a full Set, but
+  a mid-unit checkpoint spanning fewer lessons, or a review spanning more than one Set, are also valid with
+  scope stated explicitly; a per-lesson assessment covers a single 2-day cycle. Ask if this is not specified:
+  these produce very different-length documents.
 - Band and task-Level structure: confirm the same band (per Section 0.1 of the lesson prompt) applies
   across all lessons being assessed. Do not combine lessons from two different bands into one assessment
   without flagging it; a lowest-task-Level task on a Beginner-band lesson and a lowest-task-Level task on an
@@ -360,9 +367,13 @@ Assessment (Advanced Band, Levels 4-7).docx" and "... Study Guide - Levels 4-7.d
 
 ### 2.2 Required elements
 
-- A name/task-Level-assigned/date header block, plus a list of which lessons are in scope for this
-  assessment (by number and topic) so a reader can see the full scope at a glance before reading any
-  section.
+- A name/task-Level-assigned/date header block, naming the Module, Band, and Set number this assessment
+  covers, plus a list of which lessons are in scope for this assessment (by number and topic) so a reader can
+  see the full scope at a glance before reading any section. When the assessment covers exactly one completed
+  Set, save it alongside that Set's lesson folders as `Set{N}_{Band}_Assessment.md` (plus its student-facing
+  packet, once that companion prompt exists), per `lessons/<band>/Set_<N>/` - the same convention
+  Listening/Speaking uses. A checkpoint or multi-Set assessment that doesn't map to one Set folder can be named
+  and placed by scope instead; state which case applies.
 - A note on whether the assessment is open-book or closed-book. Since Section 2 now prints a new
   passage per lesson by default (Section 1.1), this note will typically read "open-book - new passages
   printed below" rather than pointing back to a separate packet.

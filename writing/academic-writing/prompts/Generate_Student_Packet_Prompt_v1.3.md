@@ -1,13 +1,13 @@
-# Academic Writing Student Print Formatting Prompt (v1.2)
+# Academic Writing Student Print Formatting Prompt (v1.3)
 
-Companion to the Academic Writing Lesson Generation Prompt (v3.3). Takes one completed Academic Writing lesson (an
+Companion to the Academic Writing Lesson Generation Prompt (v3.4). Takes one completed Academic Writing lesson (an
 8-day cycle) and produces a set of print-ready, black-and-white student handouts for it: one **Lesson Introduction
 Page**, plus one **Unit** per day (Units 1-8, one source lesson day each), each its own self-contained HTML
 document. Every piece of teacher-facing pedagogical language is translated into plain instructions a student (or
-a parent glancing at the page) can act on without decoding jargon like "Focus A," "the Leveled Mentor Set," "task
+a parent glancing at the page) can act on without decoding jargon like "Focus A," "the Leveled Mentor Ladder," "task
 Level," or "board-dependent moment."
 
-**Current version: v1.2.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.3.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 **Units, not segments:** Passage Reading lessons are a fixed 2-day cycle, so its print prompt
@@ -48,7 +48,7 @@ attempt to serve both audiences from one output.
 - Which Unit is being formatted (Unit 1-8, or a lettered continuation like Unit 4a/4b), or that the request is for
   the Lesson Introduction Page instead.
 - The source lesson's content for that specific day in full: the grammar mini-lesson(s) with their rule and
-  examples, the controlled-practice activities, the Leveled Mentor Set (on the day it appears), the prewriting
+  examples, the controlled-practice activities, the Leveled Mentor Ladder (on the day it appears), the prewriting
   materials, the drafting task and its Section 0.2 target for each task Level, the self-edit checklist, the Peer
   Editing Form, and the Closing Transfer Check (Day 8 only). Pull all content directly from the completed lesson;
   do not invent new activities, examples, or checklist items, and do not drop any task Level present in the
@@ -64,7 +64,7 @@ attempt to serve both audiences from one output.
 
 The underlying content, task Levels, and pedagogical structure are fixed by the source lesson. This prompt is a
 presentation and translation layer, not a content-generation step: it does not add, cut, or reweight activities or
-checklist items, does not change which task Levels exist, and does not alter the Mentor Set or drafting targets.
+checklist items, does not change which task Levels exist, and does not alter the Mentor Ladder or drafting targets.
 Where the source lesson's structure genuinely does not translate to a clean print layout (see Section 1), this
 prompt may restructure _presentation_ (for example, merging two adjacent controlled-practice activities into one
 shared exercise with lettered sub-items) without cutting content or changing the difficulty of any task Level's
@@ -81,7 +81,7 @@ the student what to actually do, silently, without narrating the pedagogy behind
 | Focus A / Focus B (Grammar Focus)                                                                            | No "Focus A/B" labels shown. Each grammar mini-lesson gets a plain topic name in the section heading (e.g. "Comparing Things," "Joining Sentences") instead.                        |
 | Scenario                                                                                                     | Not named as a "Scenario." Present the writing topic and stimulus directly (the picture, the prompt) with no framing language about why it was chosen.                              |
 | Task Level / Level (numeric); frame-regime / composition-regime                                              | A star rating (★ to ★★★★, more stars = more challenging), with no numeric Level shown, no regime language, and no tier name ("Foundation," "Extension," etc.).                      |
-| Leveled Mentor Set / Mentor Text                                                                             | Presented as worked examples labeled only by star count ("★★★ Example," not "Level 4 Mentor Text"), with no reference to a "ladder" or "set."                                       |
+| Leveled Mentor Ladder / Mentor Text                                                                             | Presented as worked examples labeled only by star count ("★★★ Example," not "Level 4 Mentor Text"), with no reference to a "ladder" or "set."                                       |
 | Skill Spotlight                                                                                              | A plain can-do objective statement near the start of the packet (see 2.2), not narrated as "today we are practicing X."                                                             |
 | Closing Transfer Check                                                                                       | A closing activity instruction (see 2.8), without naming it as a "check" or referencing assessment/evidence language.                                                               |
 | Required feature                                                                                             | Not named as a "required feature." State it as a plain instruction inside the task itself (e.g. "Include one comparison and one reason," not "this task's required feature is..."). |
@@ -199,14 +199,14 @@ work is fundamentally a fill-in-the-blank and a composition-regime task Level's 
 present each star rating's actual instruction as written (a blank frame for ★/★★, a blank writing space for
 ★★★/★★★★); do not paper over the difference in kind with identical instruction wording across all four stars.
 
-### 2.7 The Leveled Mentor Set as star-labeled worked examples
+### 2.7 The Leveled Mentor Ladder as star-labeled worked examples
 
 **Include this section only on the unit whose day presents it, and only where it adds something that unit's own
 tasks do not already model (revised in v1.1).** If the same unit's tasks already embed and work with a shared
 model text at multiple star levels (for example, an essay-analysis task that has students read and question a
 shared model essay), a second, separate showcase of finished writing at every level can read as redundant bulk
 rather than a genuine spotlight, and should be omitted. Where it does add real value, present the source lesson's
-Mentor Set as a short run of worked examples, one per task Level, labeled only by star count and shown in
+Mentor Ladder as a short run of worked examples, one per task Level, labeled only by star count and shown in
 ascending order (★ example, then ★★, then ★★★, then ★★★★). Do not use the words "Mentor," "Level," or "ladder"
 anywhere near them; a plain heading such as "See How It's Done" is sufficient, ideally with one lead-in sentence
 saying why it's there (e.g. "you won't draft your own until later this unit - these are here so you can see what
@@ -341,7 +341,7 @@ inventing new decorative structure.
   inline with their instruction text?
 - Do differentiated tasks show only filled stars (★ up to ★★★★), with no numeric Level, no regime language, no
   tier name, and no "choose your own adventure" framing?
-- If this unit's day includes the Leveled Mentor Set, are the worked examples shown in ascending star order with
+- If this unit's day includes the Leveled Mentor Ladder, are the worked examples shown in ascending star order with
   no "Mentor," "Level," or "ladder" language anywhere near them?
 - Is the closing activity ("Wrap It Up") present only on Unit 8, and does it connect back to the same objective
   stated at the top?

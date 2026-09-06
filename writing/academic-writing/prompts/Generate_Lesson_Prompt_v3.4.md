@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v3.3)
+# Academic Writing Lesson Generation Prompt (v3.4)
 
 **Lesson type:** this prompt generates an **Academic Writing Lesson**, the Writing-modality counterpart to the
 existing Passage Reading Lesson. Where Passage Reading is a fixed 2-day cycle built around one shared anchor
@@ -35,7 +35,7 @@ student output exist to check them against, the same way Reading's Level 3 ceili
 separate rounds of coming in short. The move to 8 days does not raise these ceilings; the CSV still governs the
 size of the student product, and extra days buy depth of instruction and revision time, not a bigger target.
 
-**Current version: v3.3.** For the full dated version history and the reasoning behind each change, see
+**Current version: v3.4.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 ---
@@ -114,7 +114,7 @@ Scenario. A Beginner-band lesson on Module 1 (Describing) and an Intermediate-ba
 might both use "describing a person's daily routine," but every task Level within a single generated lesson
 describes the _same_ routine, person, or object.
 
-**0.1b Leveled Mentor Set, not one shared anchor text.** In place of Reading's single anchor text, produce one
+**0.1b Leveled Mentor Ladder, not one shared anchor text.** In place of Reading's single anchor text, produce one
 short worked model per task Level in the band, all built on the same Scenario, each modeling exactly that Level's
 expected output form and required feature per Section 0.2. At Levels 1-5 this is a **Mentor Text** (one word, one
 frame, or one paragraph, per that Level's regime). At Levels 6-8 this is a **Mentor Essay**: a complete
@@ -332,7 +332,7 @@ Content Sample`'s conclusion guidance). Approximately 300-450 words total across
     added, does it draw only on grammar content already taught by that point in the lesson, never reaching into
     a later day's not-yet-taught point?
     If any check fails, rewrite before proceeding. Do not build the drafting and editing days' content on top of a
-    Mentor Set that fails its own Level ceilings.
+    Mentor Ladder that fails its own Level ceilings.
 
 ### 0.4 Grammar-in-Context focus: a two-point cluster, selection, and bank
 
@@ -638,7 +638,7 @@ Section 0.7. With 8 days there is room for one clearly homed moment per day rath
 persists-across-days exception the way the v1, 4-day cycle sometimes had to. Typical placements:
 
 - **Day 1:** co-construct one new example sentence live, on a fresh prompt, using Focus A.
-- **Day 2:** as the class examines the Leveled Mentor Set, co-construct a live "what changes at each Level" board,
+- **Day 2:** as the class examines the Leveled Mentor Ladder, co-construct a live "what changes at each Level" board,
   built from student observations of the ladder rather than pre-written by the teacher.
 - **Day 3:** co-construct one new example sentence live using Focus B, the same way Day 1 did for Focus A.
 - **Day 4:** synthesize prewriting ideas from every task Level's pair/group work into one shared idea board for
@@ -714,7 +714,7 @@ DAY 1: GRAMMAR FOCUS A - INPUT AND MODELING (75 MIN)
 DAY 2: GRAMMAR FOCUS A - DEEPER PRACTICE AND THE MENTOR SET (75 MIN)
 |-- Phase 1: Editing-a-paragraph on Focus A, stated error count (20 min)
 |-- Phase 2: Frame warm-up (Levels 1-3) / original sentences with Focus A (Levels 4+) (25 min)
-|-- Phase 3: Leveled Mentor Set walkthrough (30 min)
+|-- Phase 3: Leveled Mentor Ladder walkthrough (30 min)
 
 DAY 3: GRAMMAR FOCUS B - SENTENCE VARIETY (75 MIN)
 |-- Phase 1: Focus B mini-lesson: rule + examples (20 min)
@@ -727,7 +727,7 @@ DAY 4: TASK-LADDER PRACTICE AND PREWRITING (75 MIN)
 |-- Phase 3: Prewriting share and board synthesis (20 min)
 
 DAY 5: DRAFTING, PART 1 (75 MIN)
-|-- Phase 1: Mentor Set and prewriting re-look (10 min)
+|-- Phase 1: Mentor Ladder and prewriting re-look (10 min)
 |-- Phase 2: Independent/guided drafting: opening and body (50 min)
 |-- Phase 3: Mid-draft share-out (15 min)
 
@@ -763,7 +763,7 @@ inside Intermediate, now one regime higher:
   plan. Grammar Focus A/B is not dropped for these Levels, it runs as a lighter sentence-craft component inside
   the same days (their essay still needs correctly formed comparative sentences and compound sentences), mirroring
   how Levels 1-3 get a light Grammar Focus A/B fold-in inside a Paragraph Composition band's Day 1-2.
-- **Mentor Set walkthrough (Day 2, Phase 3) and prewriting share (Day 4, Phase 3)** already present every task
+- **Mentor Ladder walkthrough (Day 2, Phase 3) and prewriting share (Day 4, Phase 3)** already present every task
   Level together in one place (0.1b); keep doing this. Levels 6-8's Mentor Essays sit at the top of the same
   ascending ladder Levels 4-5's Mentor Texts sit in, so the jump from paragraph to essay is visible material, not
   a note explaining it.
@@ -795,7 +795,7 @@ _Phase 1: Hook, Skill Spotlight (15 min)_
   Focus A.
 - Board-dependent moment (0.7): co-construct one fresh example live.
 
-### Day 2: Grammar Focus A, Deeper Practice and the Mentor Set
+### Day 2: Grammar Focus A, Deeper Practice and the Mentor Ladder
 
 _Phase 1: Editing a paragraph on Focus A (20 min)_
 
@@ -803,8 +803,8 @@ _Phase 1: Editing a paragraph on Focus A (20 min)_
   _Phase 2: Frame warm-up / original sentences with Focus A (25 min)_
 - Levels 1-3 (where present): guided practice completing frames on the Scenario picture.
 - Levels 4+: write original sentences using Focus A correctly, one per target item.
-  _Phase 3: Leveled Mentor Set walkthrough (30 min)_
-- Present the Leveled Mentor Set (0.1b) in Level order, on the shared Scenario. For each task Level's Mentor
+  _Phase 3: Leveled Mentor Ladder walkthrough (30 min)_
+- Present the Leveled Mentor Ladder (0.1b) in Level order, on the shared Scenario. For each task Level's Mentor
   Text, briefly name what makes it that Level's version (the frame it fills, or the required feature it demonstrates).
 - Students identify their own task Level's Mentor Text and the one directly above it.
 - Board-dependent moment (0.7): co-construct a live "what changes at each Level" board from student
@@ -845,7 +845,7 @@ _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
 
 ### Day 5: Drafting, Part 1
 
-_Phase 1: Mentor Set and prewriting re-look (10 min)_
+_Phase 1: Mentor Ladder and prewriting re-look (10 min)_
 
 - Each student re-reads their own task Level's Mentor Text and their Day 4 prewriting notes.
   _Phase 2: Independent/guided drafting, opening and body (50 min)_
@@ -900,7 +900,7 @@ _Phase 1: Final polish / proofread pass (20 min)_
 - **Pacing diagrams:** include a visual ASCII timeline at the start of each of the 8 days, matching the format
   above.
 - **No em-dashes:** never use em-dashes anywhere in generated content; use hyphens, colons, or parentheses.
-- **Leveled Mentor Set clearly labeled:** label every Mentor Text with its task Level number, visible at a glance,
+- **Leveled Mentor Ladder clearly labeled:** label every Mentor Text with its task Level number, visible at a glance,
   the way Reading labels anchor-text paragraphs with letters.
 - **Regime language:** when describing a task Level's work in the lesson materials, use the plain-language
   regime name ("frame-based," "single-paragraph," "essay") rather than internal labels like "Level A/B/C."
