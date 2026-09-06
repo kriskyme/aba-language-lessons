@@ -31,22 +31,22 @@ can hold more than one Set over time (a fresh rotation of topics for a semester 
 **Set 1 lessons:**
 
 **Lesson 1 generated (2026-09-01):** real source found and confirmed - "New Bakery, Old Baking Method," VOA
-Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.). See `Listening Speaking Module 1, Lesson 1
-(Intermediate) - New Bakery, Old Baking Method.md`. Runtime (4:31) ran slightly past the Level 3 target
+Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.). See
+`lessons/intermediate/Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`. Runtime (4:31) ran slightly past the Level 3 target
 (2-4 min) - noted in that lesson's self-check as an accepted minor deviation, not a rewrite trigger. Real video
 timestamps could not be verified directly; the source's own five headed sections were used as segment labels
 instead - see the Lesson Generation Prompt's addendum note.
 
 **Lesson 2 generated (2026-09-02):** real source found and confirmed - "Porto Food Tour," Rick Steves Classroom
-Europe (guide Andre, Taste Porto Food Tours; narrated by Rick Steves). See `Listening Speaking Module 1, Lesson
-2 (Intermediate) - A Food Tour Through Porto's Old Market.md`. Runtime not stated on the page, estimated rather
+Europe (guide Andre, Taste Porto Food Tours; narrated by Rick Steves). See
+`lessons/intermediate/Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`. Runtime not stated on the page, estimated rather
 than confirmed - flagged as an open item. Topic direction broadened from "open-air public market" to a covered
 historic market hall plus a short walking food tour past three nearby shops, since that is what the verified
 real source actually shows - flagged, not silently substituted.
 
 **Lesson 3 generated (2026-09-03):** real source found and confirmed - "How to Choose a Backpack," REI Co-op
-Expert Advice (article + embedded companion video "How to Choose Backpacking Packs"). See `Listening Speaking
-Module 1, Lesson 3 (Intermediate) - How to Choose a Backpack.md`. Runtime not stated on the page, estimated at
+Expert Advice (article + embedded companion video "How to Choose Backpacking Packs"). See
+`lessons/intermediate/Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`. Runtime not stated on the page, estimated at
 3-5 minutes based on similar REI videos - flagged as an open item, same as Lesson 2. Register is a larger flagged
 deviation than Lessons 1-2's runtime overshoots: REI's full written guide is not simplified for learners, so
 this lesson draws only from its simpler sections (capacity, basic frame types, core fit advice) and leaves
@@ -72,7 +72,7 @@ students to do.
 **Lesson 4 generated (2026-09-03):** real source found and confirmed - "Great-Grandmother Proves It Is Never
 Too Late to Learn," VOA Learning English (Setsuko Takamizawa, 91, learning English from her granddaughter
 Natsuko to volunteer at the Tokyo Olympics; reported for Reuters by Jack Tarrant, adapted by John Russell). See
-`Listening Speaking Module 1, Lesson 4 (Intermediate) - Great-Grandmother Learns English.md`. Runtime 4:01,
+`lessons/intermediate/Set_1/Lesson_4_GreatGrandmother/Lesson4_GreatGrandmother.md`. Runtime 4:01,
 1 second past the Level 3 target - negligible, consistent with the established soft-target treatment. Two
 genuine deviations flagged rather than silently forced: (1) the plan's vocabulary theme is "Personality &
 character traits," but the source's real glossary is family-relationship and general vocabulary; the
@@ -116,9 +116,9 @@ differentiated activity was cut, only reorganized, matching Intermediate Set 1's
 Both lessons' student packets were also rebuilt from scratch to match every current Student Print Formatting
 Prompt convention (Good to Know at the top, citebox at the point of watching, compact inline multiple-choice,
 real picture placeholders, word banks positioned before their items, multi-source Task D layout for Level 7,
-upside-down Closing Transfer Check script) - see `Listening Speaking Module 1, Lesson 1 (Advanced) - The Lost
-Kitchen.md` and `... Lesson 2 (Advanced) - Living Textbooks Preserving Mid-Century Phoenix.md`, and their
-matching `... Student Packet.html` files. **Still open:** Set 1 remains incomplete - only 2 of its 4 lessons
+upside-down Closing Transfer Check script) - see `lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`
+and `lessons/advanced/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`, and their
+matching `..._Packet.html` files in each lesson's own folder. **Still open:** Set 1 remains incomplete - only 2 of its 4 lessons
 exist (Lessons 3-4, Nature/conservation and Fine-art craft-studio per the table above, are not yet generated).
 This was a deliberate scope decision (per user direction 2026-09-04: restructure what exists, don't generate
 what's missing in the same pass) rather than an oversight - generate Lessons 3-4 whenever Advanced Band work
@@ -127,13 +127,13 @@ next resumes, the same way Set 1 (Lessons 1-2) was generated originally.
 **Lesson 1 generated (2026-09-01), restructured (2026-09-04):** two real sources - primary: PBS NewsHour, "It
 was supposed to be a 'quiet little cafe' in Maine. It turned into a culinary phenomenon" (Erin French, The Lost
 Kitchen, Freedom, Maine); secondary (Level 7 only, excerpt): Radio Cherry Bombe podcast interview with Erin
-French. See `Listening Speaking Module 1, Lesson 1 (Advanced) - The Lost Kitchen.md`.
+French. See `lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
 
 **Lesson 2 generated (2026-09-02), restructured (2026-09-04):** two real sources - primary: PBS NewsHour
 Weekend, "What's behind an effort to preserve mid-century modern architecture in Phoenix" (Alison King/Modern
 Phoenix, Robrt Pela, Adam Millsap, Rashad Shabazz, Craig DeMarco, Tyler Sternberg); secondary (Level 7 only,
-excerpt): Modern Phoenix's Beadle Archive page on the White Gates Residence. See `Listening Speaking Module 1,
-Lesson 2 (Advanced) - Living Textbooks Preserving Mid-Century Phoenix.md`.
+excerpt): Modern Phoenix's Beadle Archive page on the White Gates Residence. See
+`lessons/advanced/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`.
 
 ---
 
@@ -186,7 +186,8 @@ task-Level tiered) and a per-Set Speaking assessment (Part B, mechanism split by
 default and formal assessment for Beginner/Intermediate, with a same-task teacher-approved live-delivery option;
 live presentation as the default for Advanced/Proficient, with a same-task Teams-recording alternate always also
 generated). First assessment generated 2026-09-04 against Module 1 Intermediate Set 1 - see
-`claude/Listening Speaking Module 1 (Intermediate) - Set 1 Assessment.md`. Not yet run for Advanced Band, since
+`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md` (still a corrupted stub on disk, not real
+content - see Known Issues in the root `CLAUDE.md`). Not yet run for Advanced Band, since
 Advanced Set 1 is not yet complete (see open items above).
 
 ---

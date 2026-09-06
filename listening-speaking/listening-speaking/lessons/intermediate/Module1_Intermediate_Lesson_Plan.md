@@ -118,9 +118,9 @@ Circles) from the start, rather than needing a later patch.
 
 **Approved 2026-09-01.** Logged to `Rotation_Log.md` (first entry in that
 file). **Set 1 complete as of 2026-09-03:** Lessons 1-4 have been generated and fill one full rotation's 8-day
-allocation - see `Listening Speaking Module 1, Lesson 1 (Intermediate) - New Bakery, Old Baking Method.md`,
-`... Lesson 2 ... - A Food Tour Through Porto's Old Market.md`, `... Lesson 3 ... - How to Choose a
-Backpack.md`, and `... Lesson 4 ... - Great-Grandmother Learns English.md`. **Set 2 (Lessons 5-8) remains
+allocation - see `Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`,
+`Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`, `Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`,
+and `Set_1/Lesson_4_GreatGrandmother/Lesson4_GreatGrandmother.md`. **Set 2 (Lessons 5-8) remains
 planned only** - generate against it the same way Set 1 was generated (Step 2 of the Lesson Generation Prompt)
 whenever this module is retaught with fresh material.
 

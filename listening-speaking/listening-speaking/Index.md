@@ -57,16 +57,17 @@ described above. See Pending work.
 
 ## Module 1 progress, Intermediate Band (Describing, Intermediate)
 
-Plan approved and logged: `Listening Speaking Module 1 (Intermediate) - Lesson Plan.md`. Task
+Plan approved and logged: `lessons/intermediate/Module1_Intermediate_Lesson_Plan.md`. Task
 Levels 2, 3, 4, 5 (Intermediate band). **Set 1 complete:** Lessons 1-4 fill one full rotation's
-8-day allocation.
+8-day allocation. Each lesson's `.md` and student-packet `.html` now live together in their own
+`Set_1/Lesson_<N>_<Slug>/` folder.
 
 | File                                                                                               | Lesson # | Real source                                                                                              | Status                                                                                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Listening Speaking Module 1, Lesson 1 (Intermediate) - New Bakery, Old Baking Method.md`          | 1        | "New Bakery, Old Baking Method," VOA Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.) | Current (source is audio, not video; item counts balanced)                                                                        |
-| `Listening Speaking Module 1, Lesson 2 (Intermediate) - A Food Tour Through Porto's Old Market.md` | 2        | "Porto Food Tour," Rick Steves Classroom Europe (guide Andre, Taste Porto Food Tours)                    | Current                                                                                                                                                                    |
-| `Listening Speaking Module 1, Lesson 3 (Intermediate) - How to Choose a Backpack.md`               | 3        | "How to Choose a Backpack," REI Co-op Expert Advice (article + embedded video)                           | Current. Flagged deviations: source register not simplified for learners (draws only from simpler sections); module alignment reasoned through (Describing vs. Instructing)                                       |
-| `Listening Speaking Module 1, Lesson 4 (Intermediate) - Great-Grandmother Learns English.md`       | 4        | "Great-Grandmother Proves It Is Never Too Late to Learn," VOA Learning English (Setsuko Takamizawa)      | Current. Flagged deviations: vocabulary-theme mismatch (family-relationship words vs. planned "personality & character traits"); Speaking Skill grounded in source context rather than a directly quoted exchange |
+| `Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`                | 1        | "New Bakery, Old Baking Method," VOA Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.) | Current (source is audio, not video; item counts balanced)                                                                        |
+| `Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`        | 2        | "Porto Food Tour," Rick Steves Classroom Europe (guide Andre, Taste Porto Food Tours)                    | Current                                                                                                                                                                    |
+| `Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`                  | 3        | "How to Choose a Backpack," REI Co-op Expert Advice (article + embedded video)                           | Current. Flagged deviations: source register not simplified for learners (draws only from simpler sections); module alignment reasoned through (Describing vs. Instructing)                                       |
+| `Set_1/Lesson_4_GreatGrandmother/Lesson4_GreatGrandmother.md` | 4        | "Great-Grandmother Proves It Is Never Too Late to Learn," VOA Learning English (Setsuko Takamizawa)      | Current. Flagged deviations: vocabulary-theme mismatch (family-relationship words vs. planned "personality & character traits"); Speaking Skill grounded in source context rather than a directly quoted exchange |
 
 **Set 2 (Lessons 5-8: Nature description, Craft-studio tour, Museum/exhibit-guide description, Atelier/workshop
 profile) is planned only, not yet generated** - a second full rotation of topics for whenever this module is
@@ -79,8 +80,9 @@ picture placeholders, word banks positioned before their items, universal questi
 lines, the `.match-row`/`.qitem`/`.num` consistency fixes) - see that prompt's own changelog for the complete
 list. Not yet reviewed against a printed page.
 
-**Set 1's Listening/Speaking Assessment:** `claude/Listening Speaking Module 1
-(Intermediate) - Set 1 Assessment.md`. Part A (Listening) uses a new, verified real source - "Visitors Laugh
+**Set 1's Listening/Speaking Assessment:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`
+(still a corrupted stub on disk, not real content - see Known Issues in the root `CLAUDE.md`). Part A
+(Listening) uses a new, verified real source - "Visitors Laugh
 Away Troubles at the HaHaHouse Museum" (VOA Learning English, a real laughter museum in Zagreb, Croatia) -
 distinct from all 4 taught sources, with tiered items covering all four of the Set's listening strategies (Main
 Ideas/Gist, Recognize Examples, Sequence Markers, Predict from Context). Part B (Speaking) is a Teams Speaking
@@ -92,14 +94,14 @@ prompt's own open items.
 
 ## Module 1 progress, Advanced Band (Describing, Advanced)
 
-Plan approved and logged: `Listening Speaking Module 1 (Advanced) - Lesson Plan.md`. Task Levels
+Plan approved and logged: `lessons/advanced/Module1_Advanced_Lesson_Plan.md`. Task Levels
 4, 5, 6, 7 (Advanced band). Level 7's Listening objective needs two real sources on the same subject (compare
 rhetorical framing) - flagged per lesson with a suggested angle in the plan. **Set 1 (Lessons 1-4, 2 of 4 generated)** and **Set 2 (Lessons 5-8, planned only)**:
 
 | File                                                                                                    | Lesson # | Real source(s)                                                                                                                                                                         | Status                                                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Listening Speaking Module 1, Lesson 1 (Advanced) - The Lost Kitchen.md`                                | 1        | Primary: PBS NewsHour feature on Erin French/The Lost Kitchen (Freedom, Maine). Secondary (Level 7 excerpt only): Radio Cherry Bombe podcast interview with Erin French.               | Current, per the Lesson prompt's fifth-addendum mapping table. No task, quote, vocabulary item, or differentiated activity was cut, only reorganized |
-| `Listening Speaking Module 1, Lesson 2 (Advanced) - Living Textbooks Preserving Mid-Century Phoenix.md` | 2        | Primary: PBS NewsHour Weekend feature on Phoenix mid-century modern preservation. Secondary (Level 7 excerpt only): Modern Phoenix's Beadle Archive page on the White Gates Residence. | Current, same treatment as Lesson 1                                                                                                                    |
+| `Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`             | 1        | Primary: PBS NewsHour feature on Erin French/The Lost Kitchen (Freedom, Maine). Secondary (Level 7 excerpt only): Radio Cherry Bombe podcast interview with Erin French.               | Current, per the Lesson prompt's fifth-addendum mapping table. No task, quote, vocabulary item, or differentiated activity was cut, only reorganized |
+| `Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`     | 2        | Primary: PBS NewsHour Weekend feature on Phoenix mid-century modern preservation. Secondary (Level 7 excerpt only): Modern Phoenix's Beadle Archive page on the White Gates Residence. | Current, same treatment as Lesson 1                                                                                                                    |
 
 Both lessons above follow the current Day 1 (Unit A)/Day 2 (Unit B) architecture, and their student packets
 match the current Student Print Formatting Prompt conventions (Good to Know at the top, citebox at the point of
@@ -114,23 +116,22 @@ whenever Advanced Band work next resumes.
 
 **Print formatting (student version), all current:**
 
-- Intermediate Lesson 1: `Listening Speaking Module 1, Lesson 1 (Intermediate) - Bakery Student Packet.html`.
+- Intermediate Lesson 1: `Set_1/Lesson_1_NewBakery/NewBakery_Intermediate_L1_Packet.html`.
   Two parts (Unit 1A Listening / Unit 1B Speaking), each with its own star-rated choose-your-task block merging
   that half's differentiated day content into one block per Level, a plain citation box in place of a printed
   passage, and a fillable Listening Notes comparison table.
-- Intermediate Lesson 2: `Listening Speaking Module 1, Lesson 2 (Intermediate) - Porto Food Tour Student
-Packet.html`. Same two-part structure; the Four-Corner Debate hook was translated into a plain "which sounds
+- Intermediate Lesson 2: `Set_1/Lesson_2_PortoFoodTour/PortoFoodTour_Intermediate_L2_Packet.html`. Same
+  two-part structure; the Four-Corner Debate hook was translated into a plain "which sounds
   most like you" print activity rather than the live corner-moving version, and the Jigsaw protocol collapsed
   into three simultaneous small-group discussion prompts, per Section 1's translation rules.
-- Intermediate Lesson 3: `Listening Speaking Module 1, Lesson 3 (Intermediate) - Backpack Student Packet.html`.
-- Intermediate Lesson 4: `Listening Speaking Module 1, Lesson 4 (Intermediate) - Great-Grandmother Student
-Packet.html`.
-- Advanced Lesson 1: `Listening Speaking Module 1, Lesson 1 (Advanced) - The Lost Kitchen Student Packet.html`.
+- Intermediate Lesson 3: `Set_1/Lesson_3_Backpack/Backpack_Intermediate_L3_Packet.html`.
+- Intermediate Lesson 4: `Set_1/Lesson_4_GreatGrandmother/GreatGrandmother_Intermediate_L4_Packet.html`.
+- Advanced Lesson 1: `Set_1/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_Packet.html`.
   Same structure as the Intermediate packets, plus one
   pattern the Intermediate ones don't need: Level 7's star task (Task D, both halves) compares two real sources
   directly inside the task block, using a labeled two-part excerpt layout kept within the fair-use ceiling, per
   the Print Formatting Prompt's Section 2.7 multi-source guidance.
-- Advanced Lesson 2: `Listening Speaking Module 1, Lesson 2 (Advanced) - Living Textbooks Student Packet.html`.
+- Advanced Lesson 2: `Set_1/Lesson_2_LivingTextbooks/LivingTextbooks_Advanced_L2_Packet.html`.
   Same two-part structure; Task D again uses the
   multi-source compare-pair pattern (news segment vs. an archive website), introducing the second source inline
   within the task itself per the "never name an unintroduced source" rule.

@@ -40,8 +40,15 @@ folder is one level of grouping above that:
     ├── Rotation_Log.md       # tracks every generated lesson (topic/skill rotation, avoids repeats)
     ├── lessons/{beginner,intermediate,advanced,proficient}/
     ├── prompts/              # versioned generation prompts
-    └── source/
+    └── source/               # raw reference material (see note below)
 ```
+
+`source/` holds raw text pasted in from outside sources (textbook excerpts,
+sample transcripts) as generation reference material — not lesson output, and
+not something to read by default. Each modality's `source/` currently holds
+one large file (1,000+ lines). Open it only when a task specifically calls
+for consulting the source material (e.g. checking a prompt's claims against
+it), not as part of general repo work.
 
 Worked example: `reading/passage-reading/` (Reading's one active lesson
 type today; `reading/novel-reading/` is planned as a sibling once real work
@@ -97,9 +104,19 @@ noted in Known Issues.
   multi-word names. Already applied across all three modalities.
 - **Lesson files**: one naming scheme repo-wide — Reading's terse slug style
   is the target (`Lesson<N>_<TopicSlug>.md`,
-  `<TopicSlug>_<Level>_L<N>_Packet.html`). Listening/Speaking currently has
-  two divergent long-form styles (underscore-heavy vs. spaces/commas) that
-  should migrate to this.
+  `<TopicSlug>_<Level>_L<N>_Packet.html`). Listening/Speaking has migrated
+  both of its former divergent long-form styles to this.
+- **Listening/Speaking nests one level deeper than Reading**, since a lesson
+  there belongs to a Set and its files (raw `.md`, student packet `.html`,
+  later homework) travel together: `lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/`
+  holds one lesson's files. A Set's own assessment (one per Set, not per
+  lesson) sits in `Set_<N>/` itself rather than inside any one lesson's
+  folder. The Module/Band Lesson Plan spans every Set generated for that
+  band so far, and sits at the band-folder root (`lessons/<band>/`), above
+  the `Set_<N>/` folders. Neither the Lesson, Assessment, nor Module
+  Lesson-Plan generation prompts currently specify an output location
+  themselves, so this note is the convention to follow when saving newly
+  generated Listening/Speaking content.
 - **`Index.md` files must only reference filenames that actually exist on
   disk.** Several currently describe files/content that were never saved, or
   that were saved under different names — treat any such mismatch as a bug
@@ -109,6 +126,13 @@ noted in Known Issues.
   print styling across modalities; normalize generated-markup formatting
   (indentation, self-closing tags) so packets don't visibly differ by which
   session/tool produced them.
+- **Prompt preambles stay short; version history lives in `Changelog.md`.**
+  A prompt file's opening section states only the current lesson-type
+  description and, once there's more than one version, a pointer to that
+  lesson type's `Changelog.md` for full history — not a dated "what changed
+  in vX" narrative inline. That narrative belongs in `Changelog.md`, which
+  exists for exactly this. Keeps prompts shorter to paste and maintain
+  without losing the reasoning behind past changes.
 
 ## Known issues / pending consolidation work
 
@@ -117,13 +141,14 @@ noted in Known Issues.
   multiply-revised lessons (Intermediate 1 "my phone case," Advanced 1 "Two
   apartments... for Sam") as current/synced. That content appears to have
   never been saved into this repo and needs to be regenerated or recovered.
-- `listening-speaking/listening-speaking/lessons/intermediate/Listening_Speaking_Module_1__Intermediate__-_Set_1_Assessment.md`
+- `listening-speaking/listening-speaking/lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`
   is a 1-line corrupted stub (a mangled filename string, not content), while
   `listening-speaking/listening-speaking/Index.md` and `Rotation_Log.md`
   claim this assessment was generated with real content (Part A/Part B, real
-  source) — likely lost during consolidation and needs regenerating. Both
-  docs also still cite it under a stale `claude/...` path prefix left over
-  from before this repo existed.
+  source) — likely lost during consolidation and needs regenerating. (The
+  stale `claude/...` path prefix both docs used to cite it under has been
+  corrected to this real relative path; only the content-loss part of this
+  issue is still open.)
 - Passage Reading's `Index.md` and `Rotation_Log.md`
   (`reading/passage-reading/`) reference filenames that don't match what's
   actually on disk, e.g. doc says `Passage Reading Lesson Generation Prompt
@@ -134,11 +159,6 @@ noted in Known Issues.
 - Academic Writing has no Module-Lesson-Plan, Homework, or Assessment prompt
   yet (only a Lesson Generation prompt and a Student Print Formatting
   prompt) — flagged as pending in its own `Index.md`.
-- Within Listening/Speaking itself, intermediate lessons use
-  `Listening_Speaking_Module_1__Lesson_1__Intermediate__-_....md` while
-  advanced lessons use `Listening Speaking Module 1, Lesson 1 (Advanced) -
-  ....md` — two schemes in one lesson type; migrate both to the canonical
-  slug style above.
 
 ## Working notes for future sessions
 

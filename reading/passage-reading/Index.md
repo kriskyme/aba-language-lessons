@@ -17,17 +17,14 @@ modality-level list of lesson types. Nothing here currently supports it.
 
 | File                                                              | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Sync status                        |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| `Passage Reading Lesson Generation Prompt v2.7 BandCalibrated.md` | Generates one 2-day lesson: anchor text, tiered tasks, comprehension work. The current version. Section 0.10: all five Phase 3 protocols - Town Hall Role-Play, Fishbowl, Concentric Circles, Jigsaw Expert Panels, small-group discussion carousel - are valid at this program's actual class size (8-12 students), provided the lesson supplies 2-3 rotated discussion prompts (not one static prompt for the full window) and, for Fishbowl, an explicit active task for every outer-circle student (Section 0.10) - never passive listening.                                     | Current                            |
-| `Passage Reading Lesson Generation Prompt v2.6 BandCalibrated.md` | Same, intermediate Phase 3 model (small groups as the default, Fishbowl/Concentric Circles reserved for 16+ students). Superseded by v2.7.                                                                                                                                                                                                                                                | Superseded - kept for history only |
-| `Passage Reading Lesson Generation Prompt v2.5 BandCalibrated.md` | Same, earlier Phase 3 model (Fishbowl/Concentric Circles as defaults, only one discussion prompt authored, no outer-circle task). Superseded by v2.6/v2.7.                                                                                                                                                                                                                                                                                                    | Superseded - kept for history only |
-| `Passage Reading Lesson Generation Prompt v2.4 BandCalibrated.md` | Same, previous tier model (fixed three-tier Level A/B/C). Superseded by v2.5.                                                                                                                                                                                                                                                                                                                                                                                  | Superseded - kept for history only |
-| `Passage Reading Module Lesson-Plan Generation Prompt v1.md`      | Plans one module's **4 lessons** (topics, genres, strategy rotation, vocabulary themes, task-Level-to-objective mapping) before any lesson content is generated. Reading-modality objectives only (Writing/Listening-Speaking out of scope); topics for Intermediate and up must be grounded in a real, verifiable referent, with a guardrail against fabricating quotes attributed to real named individuals. | Synced to v2.7 (v1.2)              |
+| `Generate_Lesson_Prompt_v2.7.md` | Generates one 2-day lesson: anchor text, tiered tasks, comprehension work. The current version. Section 0.10: all five Phase 3 protocols - Town Hall Role-Play, Fishbowl, Concentric Circles, Jigsaw Expert Panels, small-group discussion carousel - are valid at this program's actual class size (8-12 students), provided the lesson supplies 2-3 rotated discussion prompts (not one static prompt for the full window) and, for Fishbowl, an explicit active task for every outer-circle student (Section 0.10) - never passive listening.                                     | Current                            |
+| `Generate_Module_Lesson_Plan_Prompt_v1.2.md`      | Plans one module's **4 lessons** (topics, genres, strategy rotation, vocabulary themes, task-Level-to-objective mapping) before any lesson content is generated. Reading-modality objectives only (Writing/Listening-Speaking out of scope); topics for Intermediate and up must be grounded in a real, verifiable referent, with a guardrail against fabricating quotes attributed to real named individuals. | Synced to v2.7 (v1.2)              |
 | `Rotation_Log.md`                                                  | Running record of every approved module plan's genre/strategy/hook/protocol/vocabulary/topic choices, one row per lesson. Read before planning a new module; appended to after a plan is approved. Not a prompt itself. | N/A (data, not a prompt)           |
 | `Changelog.md`                                                     | Version history for this prompt family. Not a prompt itself. | N/A (data, not a prompt)           |
-| `Passage Reading Homework Generation Prompt v1.md`                | Generates one homework assignment (vocabulary/idiom production + skill practice) from a single completed 2-day lesson, general track only. Does not reference Phase 3 protocol mechanics.                                                                                                                                                                                                       | Synced to v2.5 (v2.7-compatible, unchanged) |
-| `Passage Reading TOEFL Track Extension Prompt v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
-| `Passage Reading Assessment Generation Prompt v4.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a set of completed lessons. Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. | Synced to v2.5 (v2.7-compatible, unchanged) |
-| `Passage Reading Student Print Formatting Prompt v1.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and embeds a required base stylesheet (Section 3.5). Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.2)                     |
+| `Generate_Homework_Prompt_v1.md`                | Generates one homework assignment (vocabulary/idiom production + skill practice) from a single completed 2-day lesson, general track only. Does not reference Phase 3 protocol mechanics.                                                                                                                                                                                                       | Synced to v2.5 (v2.7-compatible, unchanged) |
+| `Generate_TOEFL_Extension_Prompt_v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
+| `Generate_Assessment_Prompt_v4.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a set of completed lessons. Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. | Synced to v2.5 (v2.7-compatible, unchanged) |
+| `Generate_Student_Packet_Prompt_v1.2.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and embeds a required base stylesheet (Section 3.5). Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.2)                     |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
 
@@ -86,8 +83,8 @@ student print packets.
 Plan approved and logged to the Rotation Log, saved as `Module 1 (Advanced) - Lesson Plan.md`. This
 module needs Lessons 1-4 total, not 1-8 (the original plan's Lessons 5-8 - Aoraki Mackenzie stargazing,
 Shinkansen review, Plan Vélo bike lanes, Iron Gwazi roller coaster - are out of scope and dropped, matching how
-Intermediate's Lessons 5-8 were handled). Lesson 1 was generated via `Passage Reading Lesson Generation Prompt
-v2.5 BandCalibrated.md`:
+Intermediate's Lessons 5-8 were handled). Lesson 1 was generated via `Generate_Lesson_Prompt_v2.7.md` (then at
+v2.5; since renamed and updated in place):
 
 | File                                                          | Lesson # | Topic                                                                              | Status                        |
 | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ | ------------------------------ |
@@ -101,7 +98,7 @@ the outer-circle task / multi-prompt requirements; see Pending work. Lesson 2 (4
 generated directly against v2.7, so its Jigsaw Phase 3 already carries the current Section 0.10 scaffolding
 (three discussion prompts split across the mixed groups). **Lessons 3-4 remain to be generated**: Lesson 3 (the vinyl record shop resurgence,
 Think-Aloud Modeling, opinion-editorial, Town Hall) is next per the plan, against
-`Passage Reading Lesson Generation Prompt v2.7 BandCalibrated.md`, including its Section 0.10 scaffolding
+`Generate_Lesson_Prompt_v2.7.md`, including its Section 0.10 scaffolding
 requirements (2-3 rotated prompts for every lesson; an explicit outer-circle task where Fishbowl or Concentric
 Circles is used - Lesson 4's plan calls for Concentric Circles).
 
@@ -125,13 +122,13 @@ generated).
 This is the process for producing one module's worth of lessons, in order. A module is **4 lessons** (8
 instructional days).
 
-**Step 1 - Plan the module.** Run `Passage Reading Module Lesson-Plan Generation Prompt v1.md` (v1.2) for the
+**Step 1 - Plan the module.** Run `Generate_Module_Lesson_Plan_Prompt_v1.2.md` for the
 target Module and Band. It reads the Rotation Log first (for cross-module genre/strategy/vocabulary
 checks against whatever module was planned immediately before it), produces the 4-lesson plan table, and runs
 its self-check. Review the plan and approve it before moving on - do not generate lesson content against an
 unapproved plan. Once approved, append its Rotation Log entry to `Rotation_Log.md` per that prompt's Section 0.
 
-**Step 2 - Generate lessons two at a time.** Run `Passage Reading Lesson Generation Prompt v2.7 BandCalibrated.md`
+**Step 2 - Generate lessons two at a time.** Run `Generate_Lesson_Prompt_v2.7.md`
 against the approved plan, generating two lessons per pass rather than one at a time or all four at once. Two at a
 time keeps each pass small enough to actually check (word count, Section 0.2 band ceiling, and the plan's own
 per-lesson variety requirements from Section 0.3's self-check) before moving on, while still letting adjacent-lesson
@@ -140,17 +137,17 @@ both lessons in a pair are visible at once.
 
 Order within Step 2: Lessons 1-2, then 3-4.
 
-**Step 3 - Generate homework per completed lesson.** Run `Passage Reading Homework Generation Prompt v1.md`
+**Step 3 - Generate homework per completed lesson.** Run `Generate_Homework_Prompt_v1.md`
 against each completed lesson from Step 2, supplying both Day 1 and Day 2 in full. One homework assignment per
 lesson, general track only; TOEFL-track students use Step 4 instead for the same cycle, never both. Default timing
 is after Day 1, due at the start of Day 2 - if a class is a lesson or more ahead, homework can instead be generated
 after Day 2 per that prompt's Section 0.2, but state which timing was used.
 
-**Step 4 - TOEFL Track Extension.** Run `Passage Reading TOEFL Track Extension Prompt v1.md` per completed
+**Step 4 - TOEFL Track Extension.** Run `Generate_TOEFL_Extension_Prompt_v1.md` per completed
 Advanced/Proficient-band lesson, as an optional add-on for TOEFL-interested students, replacing Step 3's
 homework for that student on that cycle rather than adding to it.
 
-**Step 5 - Assessment.** Run `Passage Reading Assessment Generation Prompt v4.md` after a set of completed
+**Step 5 - Assessment.** Run `Generate_Assessment_Prompt_v4.md` after a set of completed
 lessons exists (per its own scope note, from a set of lessons, not a single one) - typically at the end of a module
 (all 4 lessons), after Steps 2-4 have been run across the relevant lessons, not per lesson. Confirm scope
 (cumulative vs per-lesson) and which task Level each student/group actually completed before generating; it
@@ -158,7 +155,7 @@ produces one test section and one study guide per task Level in the band, plus a
 where applicable. A module is 4 lessons, so the Lessons-1-4 assessment already generated for Intermediate
 Module 1 is the complete end-of-module assessment - there is no separate 8-lesson pass to run.
 
-**Step 6 - Print formatting for students.** Run `Passage Reading Student Print Formatting Prompt v1.md` (v1.2)
+**Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v1.2.md`
 against a completed 2-day lesson from Step 2 (both days, in full) to produce a single, print-ready,
 black-and-white student handout as one self-contained HTML file, reusing the prompt's required base
 stylesheet (Section 3.5) and pulling its 2-3 discussion prompts directly from the source lesson. This step is
@@ -171,7 +168,7 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
 - **Module 1 Advanced Lesson 1's Fishbowl** - not yet checked/patched against v2.7's Section 0.10 outer-circle
   task and multi-prompt requirements. Worth doing the same pass once convenient.
 - **Module 1 Advanced, Lessons 3-4** - not yet generated. Lesson 3 (vinyl record shop resurgence) is next,
-  against `Passage Reading Lesson Generation Prompt v2.7 BandCalibrated.md`, with Section 0.10 scaffolding
+  against `Generate_Lesson_Prompt_v2.7.md`, with Section 0.10 scaffolding
   (2-3 rotated prompts throughout; an explicit outer-circle task for Lesson 4's planned Concentric Circles at
   generation time - Concentric Circles needs the multi-prompt treatment but not a separate outer-circle task).
 - **Module 1 Advanced Homework/TOEFL/Assessment** - not started; waits on Lessons 2-4 per Steps 3-5.
