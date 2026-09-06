@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v1.2)
+# Passage Reading Student Print Formatting Prompt (v1.3)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.7, Band-Calibrated). Takes one completed 2-day
 lesson cycle and produces a single, print-ready, black-and-white student handout: one self-contained HTML
@@ -6,7 +6,7 @@ document covering both days, with every piece of teacher-facing pedagogical lang
 instructions a student (or a parent glancing at the page) can act on without decoding jargon like "close reading
 with annotation," "Fishbowl," or "Task Level."
 
-**Current version: v1.2.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.3.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson's Day 1 and Day 2 already exist. Do not use it to generate lesson content, and
@@ -93,13 +93,17 @@ directly into the section heading text itself (e.g., "Unit 1A: The Basilica That
 aligned, rather than as a separate divider bar or rule. The second heading (Unit 1B) restarts its own task/exercise
 lettering independently of the first; do not carry letters across the boundary.
 
-### 2.4 No kicker lines, no metadata fields
+### 2.4 Modality label, top-right; no other kicker lines or metadata fields
 
-Do not include: a Name/Date field, a subject/module/band kicker line under the title (e.g. "Reading Packet ·
-Describing"), a subtitle line under any heading, or a footer note at the bottom of the document. The title and
-objective statement are the only material above "Before You Read." (This applies to the visible page only - see
-`shared/Student_Packet_Style_Guide.md` §B for why the base stylesheet still defines unused `.kicker`/`.sub`
-classes and why a fresh document should drop them rather than copy them forward.)
+The document's opening masthead (the very first one - never the Unit 1B masthead) carries a `.masthead-tag`
+span reading exactly `Reading`, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B - a plain
+class-identifier for whoever is handling the printed packet, nothing else (no Level/Band, no "Class" or
+"Packet" suffix).
+
+Beyond that one tag, do not include: a Name/Date field, a subject/module/band kicker line under the title
+(e.g. "Reading Packet · Describing"), a subtitle line under any heading, or a footer note at the bottom of the
+document. The title, its `.masthead-tag`, and the objective statement are the only material above "Before You
+Read."
 
 ### 2.5 Section and task labeling
 
@@ -278,7 +282,9 @@ adding a new one.
   closing activity connect back to that same stated objective?
 - Are the two sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the section heading text
   itself rather than a separate divider?
-- Are there no Name/Date fields, no module/band kicker line, no subtitle lines, and no footer note?
+- Does the opening masthead carry a `.masthead-tag` reading exactly "Reading" (no Level/Band, no "Class" or
+  "Packet" suffix), and only there - never on the Unit 1B masthead? Beyond that tag, are there no Name/Date
+  fields, no module/band kicker line, no subtitle lines, and no footer note?
 - Are all exercises labeled with letters ("Task A," "Task B"...) rather than "Exercise," with labels inline with
   their instruction text?
 - Do differentiated tasks show only filled stars (★ up to ★★★★), with no numeric Level, no tier name, and no

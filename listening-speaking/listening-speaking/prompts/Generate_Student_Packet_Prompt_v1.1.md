@@ -1,11 +1,14 @@
-# Listening/Speaking Student Print Formatting Prompt (v1)
+# Listening/Speaking Student Print Formatting Prompt (v1.1)
 
 Companion to the Listening/Speaking Lesson Generation Prompt (v1). Takes one completed lesson (all days) and
 produces a single, print-ready, black-and-white student handout: one self-contained HTML document, with every
 piece of teacher-facing pedagogical language translated into plain instructions. Mirrors Passage Reading's
-Student Print Formatting Prompt (v1.2) closely - same translation principle, same base stylesheet, same
+Student Print Formatting Prompt (v1.3) closely - same translation principle, same base stylesheet, same
 star-rating system for task Levels - adapted for a lesson type where the "text" is a real audio/video source the
 class plays together, not a printed passage.
+
+**Current version: v1.1.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
 Use this prompt only after a lesson already exists in full. Do not use it to generate lesson content. This
 produces the **student version only**.
@@ -65,9 +68,12 @@ packet where students actually begin watching (typically right before the Listen
 first "while you watch" instruction), not at the top of the unit alongside the objective. Students shouldn't be
 told what they're about to watch several activities before they actually watch it.
 
-### 2.4 No kicker lines, no metadata fields
+### 2.4 Modality label, top-right; no other kicker lines or metadata fields
 
-Same as Passage Reading 2.4: no Name/Date field, no module/band kicker, no subtitle line, no footer note.
+Same as Passage Reading 2.4, with this modality's own label: the document's opening masthead carries a
+`.masthead-tag` span reading exactly `Listening & Speaking`, alongside the `h1`, per
+`shared/Student_Packet_Style_Guide.md` §B. Beyond that one tag: no Name/Date field, no module/band kicker, no
+subtitle line, no footer note.
 
 ### 2.4a Every question gets a number (added 2026-09-03, after user review)
 
@@ -390,5 +396,8 @@ followed by regeneration; if no, it's safe to apply here directly.
   framing, and is the Closing Transfer Check script printed upside-down in addition to sitting after the
   response space?
 - Are Background Notes translated into Good to Know boxes, informational only?
+- Does the opening masthead carry a `.masthead-tag` reading exactly "Listening & Speaking" (no Level/Band, no
+  "Class" or "Packet" suffix)? Beyond that tag, are there no Name/Date fields, no module/band kicker line, no
+  subtitle lines, and no footer note?
 - Is the document black-and-white, em-dash-free, single self-contained HTML file, reusing
   `shared/Student_Packet_Style_Guide.md`'s base stylesheet plus only the classes documented in Section 3 above?

@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.0)
+# Student Packet Style Guide (v1.2)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -98,6 +98,10 @@ h3 {
   color: var(--ink);
 }
 .masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -108,6 +112,16 @@ h3 {
 .masthead + .masthead,
 .masthead.masthead-later {
   margin-top: 60px;
+}
+.masthead-tag {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+  margin-top: 4px;
 }
 
 .objective {
@@ -222,11 +236,14 @@ p {
 
 .idiom-item {
   margin-bottom: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
 }
 .idiom-item:last-child {
   margin-bottom: 0;
 }
 .idiom-phrase {
+  font-family: Georgia, serif;
   font-weight: 700;
   font-style: italic;
 }
@@ -502,9 +519,13 @@ p {
 }
 ```
 
-Do not carry forward `.kicker` or `.sub` classes in a fresh document - they belonged to a masthead
-subtitle line no current lesson type's Section 2 uses; a fresh document should not define them at
-all.
+The document's opening masthead (only - never a later `.masthead.masthead-later` heading) includes
+exactly one `<span class="masthead-tag">` alongside the `h1`, holding that modality's plain class
+label (`Reading`, `Listening & Speaking`, or `Writing` - see each lesson type's own Student Packet
+prompt §2.4 for which one). This is a distinct, newly-defined element for a specific purpose (a
+quick visual identifier for whoever is handling the printed packet), not a revival of `.kicker` or
+`.sub`: those belonged to a masthead subtitle line no current lesson type's Section 2 uses, and a
+fresh document should still not define or carry them forward.
 
 ## C. HTML markup conventions
 
@@ -564,5 +585,5 @@ shared file (updating it for every modality at once), not as a modality-local ov
 
 ## Changelog
 
-**Current version: v1.0.** For the full dated version history and the reasoning behind each
+**Current version: v1.2.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.
