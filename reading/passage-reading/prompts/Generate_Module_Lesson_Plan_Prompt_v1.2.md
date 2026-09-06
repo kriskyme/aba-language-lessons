@@ -6,22 +6,8 @@ table (3 task Levels for the Beginner band, 4 for Intermediate, Advanced, and Pr
 three-tier Level A/B/C model this doc used against v2.4. The plan's structure (topics, genres, strategy rotation,
 vocabulary themes) is otherwise unchanged.
 
-**What changed in v1.1:** A lesson is a 2-day cycle (the lesson generation prompt's "Unit Architecture: 2-Day
-Text Cycle Model"). A module was always intended to span 8 instructional days, which this document had been
-treating as "8 lessons" - actually 16 days (8 lessons x 2 days each). Corrected: a module is **4 lessons**
-(4 x 2 days = 8 instructional days). Every reference below to "8 lessons" / "8 rows" / "Lesson 8" is corrected to
-"4 lessons" / "4 rows" / "Lesson 4." Any module plan already approved and logged under the old 8-lesson count
-should be read as having only its first 4 rows in scope; lessons already generated against rows 1-4 are
-unaffected and remain the complete module - see the Rotation Log's own correction note for Module 1,
-Describing, Intermediate Band.
-
-**What changed in v1.2:** aligned with the lesson generation prompt's v2.7 correction (Section 0.10). v1.1 had
-restricted Fishbowl and Concentric Circles to a class of 16+ students, following the v2.6 lesson prompt's own
-(later corrected) small-group default. v2.7 reinstated both as fully valid choices at this program's actual class
-size (8-12 students) once properly scaffolded (an explicit outer-circle task for Fishbowl, 2-3 rotating prompts for
-either). The Phase 3 protocol guidance below is updated to match: all five protocols (Town Hall Role-Play,
-Fishbowl, Concentric Circles, Jigsaw Expert Panels, small-group discussion carousel) are equally valid rotation
-options, not a tiered "defaults vs. large-class-only" split.
+**Current version: v1.2.** For the full dated version history and the reasoning behind each change (including the
+8-lesson vs. 4-lesson module-size correction), see `Changelog.md`.
 
 Produces a 4-lesson **module plan only** (4 lessons x 2 days each = 8 instructional days total) - topics, genres,
 reading-strategy and oral-protocol rotation, vocabulary themes, and task-Level-to-objective mapping - not anchor

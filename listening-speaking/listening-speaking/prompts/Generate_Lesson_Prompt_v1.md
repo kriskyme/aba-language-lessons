@@ -12,84 +12,34 @@ This is a first draft (v1), written the same way the Passage Reading prompt star
 refinement once real lessons are generated against it and something doesn't fit a real classroom. Treat every
 number below (runtimes, day count, phase minutes) as a reasoned starting point, not a fixed constant.
 
-**Addendum, added 2026-09-01 after generating Module 1 Lesson 1 against this prompt:** two real constraints
-surfaced that the sections below should be read against. (1) **Timestamps are often not verifiable.** Section
-0.3, item 5 calls for timestamp markers, but a generation pass that can search the web and fetch a page's text
-cannot always confirm a real video's exact minute:second captions. Where a source has its own internal
-structure (headed sections, chapter markers, a numbered list of topics), use that as the segment label instead
-of an invented timestamp, and instruct the teacher to pencil in real elapsed times on first playthrough. Do not
-invent a plausible-looking timestamp. (2) **Section 0.2's runtime ranges are a soft target for found sources, not
-a hard ceiling like Passage Reading's word counts.** A source running somewhat past its band's range (e.g. 4:31
-against a 2-4 minute Level 3 target) is a much smaller problem than an off-ceiling anchor text, since nothing
-about the source's actual pace or register changes - flag the deviation in the self-check and keep the source if
-it's otherwise a strong fit, rather than discarding a well-matched real source over a runtime overshoot of a
-minute or so.
+**Current version: v1.** Section 0's calibration and the day-by-day structure below reflect several corrections
+made after reviewing real generated lessons; see `Changelog.md` for the history. Operational rules those
+corrections put in place, still in force:
 
-**Second addendum, added after user review of the student packet:** (3) **the Day 4 Listening Closing Transfer
-Check must not leave "a new clip" unspecified, and should not be left to teacher improvisation either.** An
-earlier draft wrote "the teacher plays a different short clip" without ever naming one; a first fix moved to an
-unscripted teacher description, which solved the sourcing gap but still left the actual content undetermined
-lesson to lesson. Day 4 Phase 3 below now bakes in an actual short invented script (Passage Reading's Day 2
-refresher-text principle, applied here) that the teacher reads aloud and students do not see until after they've
-responded. (4) **a fixed-frame listening extraction item (the lowest task Level's "It is **_ and _**." style task)
-needs a complete, self-contained instruction, not a bare template sentence floating near a task.** State plainly,
-inline with the item, what the student listens for and what they fill in; do not add a separate unlabeled
-sentence-frame box unless the task also has a genuine speak-it-aloud step to anchor it to (a live comparison
-task, a discussion stem) - the Student Print Formatting Prompt's guidance now says the same.
-
-**Third addendum, added 2026-09-03 after user workflow discussion:** (5) **Generate the .md lesson and its
-student-facing .html packet back-to-back, as one workflow action, not as two separately-requested steps.** A
-lesson request now means: run this prompt to produce the full teacher-facing .md, then immediately run the
-Student Print Formatting Prompt against that completed .md to produce the matching .html, in the same session,
-without waiting for a separate request. This does not merge the two prompts' logic - the Student Print
-Formatting Prompt still requires a finished .md before it runs (see that prompt's own scope note) - it only
-removes the gap between the two steps. (6) **The .md is the single source of truth; the .html is always a
-regeneration from it, never an independently hand-edited artifact.** When a review round produces a
-student-facing change (a task's wording, a vocabulary item, an instruction's clarity), apply that change to the
-.md first, then regenerate the .html from the updated .md. Do not patch the .html directly for anything that
-reflects a change in what the lesson actually asks students to do - that leaves the .md silently stale and the
-two documents will drift apart over subsequent regenerations. The only edits that may be made directly to the
-.html without touching the .md are pure print/formatting-layer issues that don't change lesson content (e.g. a
-styling glitch, a translation-table miss covered by Student Print Formatting Prompt Section 1) - anything that
-changes what a student reads as an instruction, task, or vocabulary item goes through the .md.
-
-**Fourth addendum, added 2026-09-03 after user review of Module 1 Lesson 3's differentiated tasks:** (7)
-**Item counts per task Level must be calibrated so time-on-task is roughly balanced across all task Levels, not
-just item difficulty.** A first draft of Lesson 3 gave the lowest task Level roughly one merged item for every
-two-to-three the highest Level received, so the lowest Level finished in a fraction of the time the highest
-Level needed. The fix is not to pad either end with busywork, but to give the lower Levels more, individually
-shorter items (quick circle/complete items) and the higher Levels fewer, individually deeper items (compose,
-compare, analyze) so total working time lands in a similar range. Apply this when writing the Day 2, Day 3, and
-Day 5 differentiated item sets: after drafting, estimate rough time-per-item by type (a circle/point item is
-roughly 30-60 seconds; a fill-in-the-blank or two-slot frame is roughly 45-90 seconds; a freeform 2-3 sentence
-response is roughly 2-3 minutes; an extended, multi-sentence composition or analysis item is roughly 3-5
-minutes) and add or trim items per Level until the estimated totals are close, rather than leaving the item
-count purely a function of what felt natural to write for that Level's skill ceiling.
-
-**Fifth addendum, added 2026-09-03 after user clarification on day counts:** (8) **A "day" is one real 75-minute
-class period, and one unit (Unit A or Unit B) is one day - not four.** Every earlier lesson in this program
-(Lessons 1-4) was generated against a version of this prompt that spread Unit A across four days (300 minutes)
-and Unit B across another four (300 minutes), for 600 minutes per lesson. That was wrong: the student packets
-already condensed each unit down to what fits in a single sitting, and that packet-level scope was always the
-correct one - the old day-by-day `.md` structure was the part that didn't match reality. The Unit Architecture
-section below is now a 2-Day model (Day 1 = Unit A, Day 2 = Unit B, 75 minutes each), and Lessons 1-4 need to be
-regenerated against it. Practical effect on planning: **one module (8 real class days) needs 4 lessons at 2 days
-each, not 8 lessons at 8 days each.** A full band's 8-module curriculum (Describing through Socializing) totals
-8 modules times 8 days, which is 64 days - matching the "roughly 64 instructional days total" figure already in
-the Module 1 Lesson Plan, but that figure describes the whole band's curriculum across all 8 modules, not one
-module's 8 lessons as originally (incorrectly) written there. That document's day-count note needs the same
-correction.
-
-If a person is reading an older lesson file (Lessons 1-4, generated before this addendum) against this prompt,
-the old Day 1-4 content maps onto the new Day 1's five phases as follows, and old Day 5-8 onto new Day 2's five
-phases: old Day 1 (hook, vocab, predict) plus old Day 4 Phase 2 (Background Note) -> new Day 1 Phase 1; old Day
-2 Phase 2 plus old Day 3 Phase 2 plus old Day 4 Phase 1 (the three differentiated listening passes) -> new Day 1
-Phase 4, merged into one task per Level exactly the way the student packet already merges them; old Day 2 Phase
-3 (Listening Skill Instruction) -> new Day 1 Phase 3; old Day 3 Phase 1 and Phase 3 (note-taking skill, board
-synthesis) -> new Day 1 Phase 2; old Day 4 Phase 3 (Listening Transfer Check) -> new Day 1 Phase 5. Old Day 5 ->
-new Day 2 Phase 1; old Day 5 Phase 2 plus old Day 6 Phase 3 (guided practice, rehearsal) -> new Day 2 Phase 2;
-old Day 6 Phases 1-2 (pronunciation) -> new Day 2 Phase 3; old Day 7 -> new Day 2 Phase 4; old Day 8 -> new Day
-2 Phase 5.
+- Section 0.2's runtime ranges are a soft target for found sources, not a hard ceiling like Passage Reading's
+  word counts: a source running somewhat past its band's range is a much smaller problem than an off-ceiling
+  anchor text, since the source's own pace and register don't change. Flag the deviation in the self-check and
+  keep the source if it's otherwise a strong fit.
+- The Day 4 (Phase 5) Listening Closing Transfer Check must use an actual short invented script the teacher
+  reads aloud, not an unspecified "new clip" left to improvisation; students do not see the script until after
+  they've responded.
+- A fixed-frame listening extraction item (the lowest task Level's frame-style task) needs a complete,
+  self-contained instruction stated inline with the item - what the student listens for and what they fill in -
+  not a bare template sentence. Add a separate unlabeled sentence-frame box only when the task also has a
+  genuine speak-it-aloud step to anchor it to.
+- Generate the .md lesson and its student-facing .html packet back-to-back, as one workflow action: run this
+  prompt to produce the full teacher-facing .md, then immediately run the Student Print Formatting Prompt
+  against that completed .md. The .md is the single source of truth; the .html is always a regeneration from it,
+  never independently hand-edited for anything that changes lesson content (a student-facing wording or
+  vocabulary change goes into the .md first, then the .html is regenerated) - the only edits made directly to
+  the .html are pure print/formatting-layer fixes that don't change lesson content.
+- Item counts per task Level must be calibrated so time-on-task is roughly balanced across all task Levels, not
+  just item difficulty: give lower task Levels more, individually shorter items and higher task Levels fewer,
+  individually deeper items. Rough time-per-item to plan against: a circle/point item is 30-60 seconds; a
+  fill-in-the-blank or two-slot frame is 45-90 seconds; a freeform 2-3 sentence response is 2-3 minutes; an
+  extended multi-sentence composition or analysis item is 3-5 minutes. Add or trim items per Level until
+  estimated totals land in a similar range, applied when writing the Day 1 Phase 4, Day 2 Phase 2, and any other
+  differentiated item set.
 
 Scope note: this prompt generates the core Listening/Speaking Lesson only - one real source, one 2-day cycle.
 A planned, not-yet-written extension will add an optional second source plus a synthesis/group-presentation
@@ -311,7 +261,7 @@ _Phase 1: Hook, Good to Know & Vocabulary (20 min)_
   cover into a single sequential task per Level (the same merge principle the Student Print Formatting Prompt
   already applies for print; write it this way from the start rather than writing three separate un-merged
   passes and merging them later). The lowest task Level gets more, shorter items; the highest gets fewer, deeper
-  items, per the fourth addendum's balanced-duration rule.
+  items, per the balanced-duration rule above.
 - **Board-dependent moment:** students who worked on different task Levels briefly compare and report into the
   shared notes organizer from Phase 2, so the completed picture exists only once multiple Levels have
   contributed.
@@ -453,7 +403,7 @@ within a module (adjacency rule, same as Passage Reading).
 14. Is the listening strategy, speaking skill, note-taking structure, and oral output protocol each different from
     the immediately preceding lesson in this module (no adjacent repeats)?
 15. No em-dashes anywhere; ASCII pacing diagram present for each day.
-16. Per the fourth addendum: do Day 1 Phase 4 and Day 2 Phase 2's differentiated item counts give lower task
+16. Item-pacing check: do Day 1 Phase 4 and Day 2 Phase 2's differentiated item counts give lower task
     Levels more (but shorter) items and higher task Levels fewer (but deeper) items, so estimated time-on-task
     is roughly balanced across all task Levels rather than the lowest Level finishing in a fraction of the
     highest Level's time?

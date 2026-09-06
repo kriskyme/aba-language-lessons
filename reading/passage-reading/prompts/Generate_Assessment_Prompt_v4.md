@@ -10,29 +10,8 @@ itself uses and that the Passage Reading Homework Generation Prompt was already 
 differentiated assessment - one section per task Level actually present in the band, plus below-the-lowest-task-
 Level Foundation Support where applicable - from already-completed lessons.
 
-**What changed in v4:** the highest task Level's cross-text synthesis requirement (inherited unchanged from v1)
-is now scoped explicitly. It was always written against "the assessed lessons/texts" (plural), which only cleanly
-exists for a cumulative assessment; v1 through v3 never said what the highest task Level should do instead in a
-per-lesson assessment, where only one lesson is in scope. v4 makes the split explicit: a cumulative assessment
-(the expected default use case, e.g. an end-of-module assessment spanning all 8 lessons) generates a second
-new passage specifically so the highest task Level has two fresh passages to genuinely compare; a per-lesson
-assessment drops cross-text synthesis for the highest task Level entirely and substitutes extended reasoning
-about craft/technique within the one new passage in scope, rather than inventing an unrelated second passage
-just to satisfy the requirement. See Section 1.1 and 1.2. Self-check item 13 was added to enforce this.
-
-**Also added within v4 (this revision, no version bump):** two gaps in traceability, both raised directly by real use
-- a cumulative assessment gave no way to tell which lesson a given item came from or which specific CSV
-objective it was actually testing, and there was no clean way to drop one lesson from an assessment's scope
-(a lesson taught out of order, a student who missed it, a teacher who decides not to test it this cycle) without
-disturbing the rest of the document. Section 0.3 is new: every item now carries an explicit source-lesson tag and
-a one-line citation of the exact `learningobjectives.csv` row it tests. Section 1.1 is restructured around
-lesson-blocks (one new passage per lesson, not one passage shared across every lesson in scope) so a lesson's
-entire contribution to the test - its vocabulary items, its passage, its comprehension items - lives in one place
-and can be removed as a unit; Section 1.1a is new and gives the explicit removal procedure. Section 1.6.1's
-vocabulary review gained the same lesson tag. Section 2.2 gained the tag's required print format. Section 3's
-self-check gained three items for all of this. Nothing about task-Level task types (1.2), Respectful Tiers (1.3),
-Module-objective alignment (1.4), Foundation Support (1.5), or the 30-45 minute sizing target (1.0) changed in
-principle - they now simply apply per lesson-block instead of once across a merged passage.
+**Current version: v4.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
 Use this prompt to generate a differentiated reading assessment - one section per task Level in the relevant
 band's table, plus a below-the-lowest-task-Level Foundation Support check where applicable - from a set of

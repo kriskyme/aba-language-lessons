@@ -7,17 +7,10 @@ document. Every piece of teacher-facing pedagogical language is translated into 
 a parent glancing at the page) can act on without decoding jargon like "Focus A," "the Leveled Mentor Set," "task
 Level," or "board-dependent moment."
 
-**What changed in v1.2:** the unit convention changed from a 2-day segment to a single lesson day, matching how
-this program tracks lesson numbers by Band and needs a clean "what do we do today" handout per class meeting. See
-the rewritten "Units, not segments" section below, the new Lesson Introduction Page section, and updated Sections
-2.1, 2.3, and 2.5. Everything else (the plain-language translation table, star ratings, callout-box rules,
-Trade-and-Check / Check-Your-Own-Work translation, format constraints) carries forward unchanged from v1.1.
+**Current version: v1.2.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
-**What changed in v1.1:** direct review of Lesson 2's printed Unit 1 packet surfaced several formatting issues
-this version resolved, and brought the prompt's guidance up to date for v3's essay-regime content, which v1 had
-only handled ad hoc. See Sections 1, 2.7, and 2.11, and Section 5's self-check items.
-
-**Units, not segments (revised in v1.2):** Passage Reading lessons are a fixed 2-day cycle, so its print prompt
+**Units, not segments:** Passage Reading lessons are a fixed 2-day cycle, so its print prompt
 formats one whole lesson into one packet. Academic Writing lessons run 8 days. Printing all 8 days as one document
 would either force a teacher to hand out a packet for content two weeks away, or produce an unwieldy
 multi-section document that buries "what do I do today" under material for days the class hasn't reached yet. So

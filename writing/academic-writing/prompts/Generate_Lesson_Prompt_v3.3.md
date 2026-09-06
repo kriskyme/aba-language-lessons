@@ -10,17 +10,6 @@ the simple present, articles, and simple/compound sentences; one on the simple p
 complex sentences with time clauses, each chapter ending in a guided paragraph and peer edit) and forward from
 the existing Passage Reading Lesson Generation Prompt v2.5.
 
-**What changed in v2:** the cycle length doubled from 4 days to 8, and Section 0.4's grammar focus expanded from
-one primary point (with an occasional Level 5 extra) to a deliberate two-point cluster, Focus A and Focus B, in
-every lesson. This follows directly from the sample once it grew to two full chapters: each chapter does not
-teach one grammar point and stop, it teaches a verb-form focus (simple present, simple past) and then a
-sentence-structure focus (simple/compound sentences; complex sentences with time clauses) before the one
-paragraph task at the end. A single 75-minute Day 1 could not do that pairing justice; four extra days lets each
-focus get its own real input-and-practice day instead of being crammed together, and lets drafting and revision
-each get a full day instead of sharing one. Section 0.4 below also resolves, rather than flags, the judgment call
-Lesson 1 surfaced about which grammar row to center when a band spans rows, and formalizes the lighter
-self-revision practice Lesson 1 improvised at Level 5.
-
 Adopt the same Content-Based Instruction (CBI) / Task-Based Language Teaching (TBLT) commitment as Reading:
 writing practice should grow out of a real scenario and a real reason to write, not an abstract grammar drill for
 its own sake. Layered on top of that is a **process-writing** cycle (model, practice, draft, revise) borrowed
@@ -46,92 +35,8 @@ student output exist to check them against, the same way Reading's Level 3 ceili
 separate rounds of coming in short. The move to 8 days does not raise these ceilings; the CSV still governs the
 size of the student product, and extra days buy depth of instruction and revision time, not a bigger target.
 
-**History:** v1 (2026-08-30) was a 4-day cycle with a single grammar focus. Lesson 1 (Intermediate band, Module 1:
-Describing, "My Water Bottle") was generated under v1 and surfaced two open judgment calls, both resolved in
-this version: which grammar row to center when a band spans rows (0.4), and whether the Level 7-8 self-revision
-mechanism should extend to Level 5 (0.4a). Lesson 1 was regenerated under v2 (8 days, still one Scenario)
-shortly after. Its first printed Days 1-2 packet then surfaced a third issue: the content itself read thin per day.
-Within v2, Section 0.4b was added (no version bump) to set concrete content-volume minimums, and Lesson 1 was
-regenerated a second time to apply it.
-
-**What changed in v3:** Lesson 2 (Advanced band, Module 1: Describing, "My Apartment"), generated under v2,
-surfaced a deeper problem than thin content: v2 treated Levels 6-8 as longer, more sophisticated _single
-paragraphs_, when the CSV's own language for those Levels ("fluent, integrated extended description," "complex
-sentence structures with sustained control," "sophisticated cohesion") and the essay-writing textbook chapter the
-user supplied afterward (`Academic Writing Essay Content Sample`) both point to genuine multi-paragraph **essay**
-composition: a hook, a thesis statement, topic-sentence-led body paragraphs, a conclusion. A longer paragraph with
-fancier connectors is not the same skill, and calling it "Advanced" undersold what the band should actually
-produce. v3 introduces a third regime, Essay Composition, at Levels 6-8, alongside the existing Frame Composition
-(1-3) and Paragraph Composition (4-5) regimes; see the rewritten Section 0.1 and Section 0.2. This is a difficulty-
-ceiling change, not a cycle-length or Module-system change: bands, the 8-day cycle, `learningobjectives.csv`, and
-Focus A/B's role at Levels 1-5 are all unchanged. Lesson 2 was regenerated under v3.
-
-**What changed in v3.1:** reviewing Lesson 2's printed Unit 1 packet against Lesson 1's surfaced a real gap v3
-didn't touch: Section 0.4's row-selection rule anchored Grammar Focus A/B at "the band's lowest Paragraph
-Composition row" as a blanket default, reasoning that higher rows build additively on it. That happens to be
-correct for Intermediate, where Level 4 (the lowest Paragraph Composition Level in the band) is also
-Intermediate's own native ceiling. It is not correct for Advanced, where Level 4 is on loan from Intermediate
-(an extension-down accommodation, not a Level native to Advanced) while Level 5 is Advanced's own Paragraph
-Composition floor. Anchoring at Level 4 meant Advanced's entire Grammar Focus A/B centerpiece, the thing every
-Level 4-7 student spent Days 1 and 3 on, was word-for-word the row Intermediate already teaches as its own
-centerpiece: two bands' lessons read as the same lesson with the nouns swapped, everywhere except the essay
-track. The fix: row selection now anchors at the band's **native** Paragraph Composition Level(s), not simply
-its lowest. A band whose lowest Paragraph Composition Level is itself native (Intermediate: Level 4) is
-unaffected. A band whose lowest Paragraph Composition Level is instead an extension-down accommodation
-(Advanced: Level 4) now anchors at its actual native floor (Level 5) instead, and the extension-down Level gets
-its own row as a light warm-up addition, the same treatment frame-regime Levels already receive when they sit
-below a band's Paragraph Composition floor. See the rewritten row-selection paragraph in Section 0.4. This is a
-row-selection correction, not a new regime or cycle change: Section 0.1's regimes, the 8-day cycle, and Essay
-Focus A/B's own row selection (0.4c, already anchored at each band's native Essay Composition floor, Level 6)
-are all unchanged. Lesson 2 was regenerated under v3.1.
-
-**Clarification added within v3.1 (no version bump):** Lesson 2's first v3.1 draft gave the extension-down
-Level's row its own separately-labeled "warm-up," including its own box in the printed packet, which
-misrepresented how a real classroom works: grammar is a teaching moment, and a teacher delivers one Grammar (or
-Essay Focus) mini-lesson to the entire room, not two parallel mini-lessons to two subgroups at once. Section 0.4's
-row-selection rule and 0.4c's mirror now say this explicitly: an extension-down Level's own row is additional
-content folded into the _same_ whole-class teaching session, covered back to back with the band's native-row
-content, heard by every student regardless of task Level. Only the controlled-practice activities and drafting
-task that follow still differentiate by Level; that was already this program's standing model and needed no
-change. This applies to every "light warm-up" reference in this document, including the pre-existing
-frame-regime pattern, which was already intended to work this way (see 0.1's Mentor Set walkthrough and the Day
-1-2 frame fold-ins) but is now stated as a general rule rather than left implicit.
-
-**What changed in v3.2:** reviewing Lesson 2's restructured print packet surfaced another gap at the Paragraph
-Composition/Essay Composition boundary itself: in any band that reaches both regimes (Advanced, Proficient),
-Level 5 writes one paragraph and gets zero structural exposure to essays, while Level 6 is immediately expected to
-produce a full five-paragraph essay one Level up. That is a large jump in output demand with nothing bridging it.
-The fix is not to make Level 5 write an essay (0.2's Level 5 ceiling is unchanged, still a single paragraph); it is
-to give Level 5 a light, purely receptive engagement with essay structure, using the same shared model essay the
-Essay Composition Levels already analyze: for example, finding and underlining the topic sentence of one body
-paragraph, then stating in their own words what that paragraph is about. This costs Level 5 a few minutes of
-reading, not a writing task, and it means Level 5's own Essay Focus exposure starts one Level early instead of
-starting cold at Level 6. See the new paragraph in Section 0.4c ("Bridging the regime gap at Level 5") and
-Self-check item 16. This is a content addition, not a regime or ceiling change: Section 0.1's regimes, 0.2's
-per-Level output ceilings (including Level 5's own paragraph ceiling), and Grammar/Essay Focus A/B's row selection
-are all unchanged. Lesson 2 was updated to add this bridge activity to Day 1.
-
-**What changed in v3.3:** direct review of Lesson 2's printed Unit 1 packet (not the lesson text itself) surfaced
-three more issues, all now generalized here so future lessons are checked for them before finalizing rather than
-caught after printing:
-
-1. **Reason-connector richness.** A band's Grammar Focus Bank row for "because" (Level 4) was taught as a single
-   word with no richer alternatives, which reads as thin on its own and, when that row folds into a higher band
-   as light content (per 0.4's row-selection rule), reads as literally identical to whatever band Level 4 is
-   native to. See the new paragraph in Section 0.4 below.
-2. **Teaching content must precede the practice that depends on it.** A lesson's own Day 1 practice activity
-   asked students to identify and rewrite a thesis as direct or indirect before the lesson ever taught that
-   distinction, which was not introduced until Day 2. This is a sequencing bug the existing self-check did not
-   catch because no item asked about _order_, only about _presence_. See the new paragraph in Section 0.4c and
-   new Self-check item 17.
-3. **Single-audience activities should be paired with a lighter or heavier tier for the Level next to them,** the
-   same principle behind v3.2's Level 5 essay-structure bridge, generalized: wherever an activity serves only
-   part of a band's task-Level range with nothing for the Level immediately adjacent, consider whether a light
-   receptive tier (for the Level just below) or a combining/harder tier (for the Level just above) would close
-   that gap, the same way Level 5's bridge activity closed the paragraph/essay gap. See the new paragraph in
-   Section 0.4c and new Self-check item 18.
-   None of these are regime, ceiling, or row-selection changes; they are new checks and new default content
-   patterns layered on top of the existing structure. Lesson 2 was updated under v3.3.
+**Current version: v3.3.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
 ---
 

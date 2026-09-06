@@ -7,7 +7,7 @@
 **Vocabulary Theme:** Architecture & ornamentation (facade, spire, mosaic, ornamentation)
 **Topic:** La Sagrada Família, Antoni Gaudí's still-unfinished basilica in Barcelona, Spain
 
-Generated per `Passage Reading Lesson Generation Prompt v2.5 BandCalibrated.md`, following the approved
+Generated per `Generate_Lesson_Prompt_v2.7.md` (then at v2.5), following the approved
 `module1_advanced_plan_draft.md`, Lesson 1 row.
 
 ---

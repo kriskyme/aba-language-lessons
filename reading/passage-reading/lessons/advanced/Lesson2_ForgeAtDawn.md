@@ -8,7 +8,7 @@
 **Topic:** A day inside a traditional Japanese swordsmith's forge, following the real tamahagane steel-forging
 process
 
-Generated per `Passage Reading Lesson Generation Prompt v2.7 BandCalibrated.md`, following the approved
+Generated per `Generate_Lesson_Prompt_v2.7.md`, following the approved
 `Module 1 (Advanced) - Lesson Plan.md`, Lesson 2 row.
 
 **Fictional-subject note:** the apprentice narrator (Kenta) and the swordsmith he studies under (Watanabe) are

@@ -180,8 +180,8 @@ Set's Lesson 1 is checked against the most recent existing Set's final lesson, o
 cross-Module check). A Set is not tied to a semester in the plan itself; note an actual teaching term against a
 Set only once it's been assigned to one.
 
-**Assessment Generation Prompt introduced (2026-09-04).** A new prompt in this family (`Listening Speaking
-Assessment Generation Prompt v1.md`) generates a per-Set Listening assessment (Part A, new unseen source,
+**Assessment Generation Prompt introduced (2026-09-04).** A new prompt in this family
+(`Generate_Assessment_Prompt_v1.md`) generates a per-Set Listening assessment (Part A, new unseen source,
 task-Level tiered) and a per-Set Speaking assessment (Part B, mechanism split by band: Teams recording as the
 default and formal assessment for Beginner/Intermediate, with a same-task teacher-approved live-delivery option;
 live presentation as the default for Advanced/Proficient, with a same-task Teams-recording alternate always also

@@ -6,35 +6,8 @@ document covering both days, with every piece of teacher-facing pedagogical lang
 instructions a student (or a parent glancing at the page) can act on without decoding jargon like "close reading
 with annotation," "Fishbowl," or "Task Level."
 
-**What changed in v1.2:** one wording fix, no behavior change. Section 2.9's rationale for rendering a Fishbowl
-or Concentric Circles lesson as simultaneous small groups on the page used to say a realistic class "cannot be
-usefully split into an inner circle that talks and an outer circle that only listens." That was accurate under the
-v2.6-era diagnosis of Fishbowl (later corrected), but is no longer accurate about live Fishbowl as of the Lesson
-Generation Prompt's v2.7 (Section 0.10), which requires an explicit, active task for every outer-circle student -
-never passive listening. The rationale is reworded below to say the real constraint plainly: a printed page can't
-orchestrate a live, timed circle rotation between two groups, regardless of whether the live version is
-well-scaffolded. The output this prompt produces does not change - Fishbowl/Concentric Circles lessons still
-render as simultaneous small groups on the page - only the stated reason why.
-
-**What changed in v1.1:** four fixes made after comparing this prompt's rules against two finished packets
-(Module 1 Lesson 1 Intermediate, "A Grandmother's Kitchen," and Module 1 Lesson 1 Advanced, "La Sagrada
-Família"). (1) Section 2.9 previously required 2-3 discussion prompts while Section 0.2 promised never to add
-new content - a real contradiction, since a v2.5-or-earlier source lesson only ever wrote one Fishbowl-style
-prompt. A lesson generated under the Lesson Generation Prompt's v2.6+ (Section 0.10) now supplies 2-3 prompts
-directly, so this prompt pulls them rather than inventing them; Section 2.9 is reworded to say so, with a fallback
-noted for formatting an older, pre-v2.6 lesson that still has only one. (2) Section 2.10's floated annotation key
-was written as if it only applied to a Close Reading with Annotation source lesson, but both finished packets
-carry the "Read & Mark It Up" annotation treatment regardless of the source lesson's actual Phase 2 strategy -
-independent print readers need an annotation habit no matter what the classroom did together. Section 2.10 is
-generalized to make this the standing default, with the "!" (writer's-opinion) mark added only when the lesson's
-task Levels include evaluative-language-spotting objectives (typically Advanced band and up). (3) Section 2.12 is
-corrected: both finished packets give a word-bank line a light dashed top/bottom rule, which the prior wording
-forbade outright ("do not put a border around... a word bank"); this is now documented as the one allowed
-exception, distinct from a full bordered callout box. (4) Section 3 gains a new 3.5, embedding the settled base
-stylesheet (fonts, color tokens, and every class treatment used across both packets) as a required starting point,
-since nothing before this version actually locked in the visual style - Section 4.1's "refined through direct visual
-review" language meant a fresh run had no guarantee of reproducing the same look without an existing packet to
-copy from.
+**Current version: v1.2.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
 Use this prompt only after a lesson's Day 1 and Day 2 already exist. Do not use it to generate lesson content, and
 do not use the lesson prompt to produce a student handout: the input is always an already-completed 2-day

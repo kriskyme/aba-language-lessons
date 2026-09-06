@@ -14,87 +14,8 @@ paragraph lettering with contextual footnotes). v2.5 replaces the fixed two-leve
 differentiation model with a band-scoped set of same-modality Reading tasks, sized and pinned per band, and
 drops "Level" as a separate request input.
 
-**What changed in v2.1:** Section 0.7 is new. It requires at least one genuine, board-dependent activity per day
-(something co-constructed live by the class, not a restatement of material already on a handout or slide).
-Self-check item 12 in Section 0.3 was added to enforce it.
-
-**What changed in v2.2:** Section 0.8 is new, in two parts. Part A (Skill Spotlight) requires the lesson to name the
-actual transferable skill in plain student-facing language at the start of Day 1 and close the loop at the end of Day
-2. Part B (Differentiated Participation) requires Phase 3's oral protocol to give the lesson's lowest task level a
-genuinely different participation mode, not just easier sentence stems inside the same live-debate format, and
-adds a Foundation Support layer for students functioning below that lowest task level's own floor. Self-check
-items 13 and 14 were added to enforce these.
-
-**What changed in v2.3:** Section 0.8, Part A's closing mechanism is corrected. The v2.2 draft closed Day 2 with a
-thumbs-up/sideways/down self-report against a can-do statement; that is unreliable evidence, since a
-whole-class visible confidence vote tends to converge on "yes" regardless of whether the skill actually
-transferred (nobody wants to be the visible thumbs-down). v2.3 replaces self-report with a Closing Transfer
-Check: every student produces one instance of the skill on something new, out loud to a partner, and the teacher
-cold-calls two or three pairs to share, so the evidence is a demonstration, not a declaration. Self-check item 13
-was reworded to match.
-
-**What changed in v2.4:** Section 0.9 is new, in two parts. Part A requires every anchor text's paragraphs to be
-labeled with sequential capital letters (A, B, C...) so they can be referenced precisely and consistently across
-STOP & CHECK questions, Fact Finders, and the Collaborative Evidence Matrix, instead of by number. Part B
-adds textbook-style contextual footnotes: a superscript marker on a real person, place, or reference the text
-names but does not explain, with a brief note in the page footer, distinct from target-vocabulary pre-teaching and
-the Idiom/Slang Spotlight. Self-check items 15 and 16 were added to enforce these.
-
-**What changed in v2.5:** Section 0.1's tier model is replaced. The old model served every band with exactly
-three tiers (Level A/B/C), each mapped somewhere within that band's own two levels. The new model gives each
-band a fixed table of task Levels, pulled from the real 1-8 Level scale rather than reinvented per band: three task
-Levels for the Beginner band, four for Intermediate, Advanced, and Proficient. Each task Level is anchored to an
-actual row in `learningobjectives.csv` (Level x Modality=Reading x the requested Module), never an invented
-difficulty curve, and the anchor text's own complexity ceiling (Section 0.2) is still governed solely by the band, as
-in v2.4 - only the task ladder built on top of that shared anchor text changed. A lesson request now needs only a
-Module and a Band; a specific Level is no longer part of the request, since the Task Levels by Band table
-determines every task Level automatically. Every reference to "Level A / Level B / Level C" throughout this
-document is replaced with plain language ("the lowest task Level," "the band's native Levels," "the highest task
-Level," or a specific Level number), since the number of task Levels per lesson now varies by band and letters
-cannot map cleanly onto a variable, asymmetric set. Self-check items 6, 7, and 14 are reworded to match, and a
-new self-check item 17 is added. Sections 0.8 and 0.9 are also reordered into their correct numeric sequence (a
-v2.4 document-assembly artifact, not an intentional change). Everything else - Section 0.2's complexity ceilings,
-idiom rules (0.4), Day 2 refresher-text rules (0.5), genre rotation (0.6), board-dependent moments (0.7), and the
-Skill Spotlight / Closing Transfer Check mechanism (0.8, Part A) - is unchanged. Separately, this document and its
-lesson type are renamed from "Reading Lesson Generation Prompt" to **"Passage Reading Lesson Generation
-Prompt"** to distinguish it from the planned, not-yet-written Novel Reading Lesson type (see the note under the
-title). This is a naming change only - it does not alter any rule below.
-
-**Also added within v2.5 (this revision, no version bump):** Section 0.6's genre bank is expanded (6 new genres
-added: text-message/chat thread and product listing/description for Intermediate; social media post thread and
-advice-column letter-with-response for Advanced; podcast transcript excerpt and historical primary-source-style
-document for Proficient), each with a matching formatting-convention sentence. The Reading Execution Rules list
-is expanded with 3 new strategies (Think-Aloud Modeling, Say Something, Close Reading with Annotation), each
-with its own implementation instruction. This grows both banks without changing any existing entry, calibration
-ceiling, or self-check item, so it does not warrant a new version number on its own.
-
-**What changed in v2.6:** Section 0.10 is new. Fishbowl and Concentric Circles/Speed-Dating, as previously
-written, assume a class large enough that a 5-6 student inner circle still leaves a meaningful outer circle of
-observers who rotate in over time. At a realistic class size (roughly 8-12 students, confirmed against actual
-classes this program runs), that assumption breaks: an inner circle already contains most of the room, and one
-question circulating for the full 30-minute Phase 3 window is redundant rather than differentiated practice for
-whoever's left outside it. Phase 3 now defaults to simultaneous small groups (3-4 students, mixed task Level)
-working across 2-3 distinct discussion prompts written directly into the lesson, rather than one prompt and a
-rotating circle; Fishbowl and Concentric Circles remain available only where a class is genuinely large enough
-(roughly 16+) for an inner/outer split to leave a real audience. This also resolves a standing gap with the
-Student Print Formatting Prompt (v1), which independently reached the same simultaneous-small-groups
-conclusion for its own packets (its Section 2.9) but, until now, had to invent 2-3 discussion prompts on the spot
-because the source lesson only ever supplied one - a lesson generated under v2.6 supplies all of them directly.
-Section 0.7's Phase 3 board-dependent-moment guidance and Section 0.8 Part B's differentiated-participation
-wording are both updated to fit a small-group format instead of a single visible circle. Self-check item 18 is
-added.
-
-**What changed in v2.7:** Section 0.10 is corrected. v2.6's diagnosis was half right: a single static prompt
-circulating for 30 minutes past an unscaffolded outer circle (students just watching) is genuinely redundant at
-this program's actual class size (8-12 students). But the fix is to scaffold the format properly, not retire it -
-Fishbowl and Concentric Circles are reinstated as fully valid Phase 3 choices at 8-12 students, not reserved for
-16+, once every seat has an explicit, active task. Fishbowl now requires a concrete outer-circle task (a running
-word/method list, a tally, or a one-line reaction - never passive listening) for every student not currently inside
-the circle, and 2-3 distinct prompts rotated through at each inner-circle changeover rather than one prompt for
-the full window. Concentric Circles keeps both circles active by design (paired, rotating partners), so it needs
-the multiple-prompt treatment but not a separate outer-circle task. Section 0.7's Phase 3 board-dependent-moment
-guidance and Section 0.8 Part B's wording are adjusted to be protocol-agnostic rather than assuming small groups
-specifically. Self-check item 18 is reworded to match.
+**Current version: v2.7.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`.
 
 Adopt a Content-Based Instruction (CBI) and Task-Based Language Teaching (TBLT) framework. Treat reading
 as a tool to explore real-world ideas and build critical thinking, allowing language acquisition to occur naturally
