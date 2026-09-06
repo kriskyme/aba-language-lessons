@@ -76,7 +76,7 @@ generic artifact).
 
 ## Approval and logging
 
-**Approved 2026-09-01.** Logged to `Rotation_Log.md`. Step 2 (lesson
+**Approved 2026-09-01.** Logged to `Rotation_Log_Advanced.md`. Step 2 (lesson
 generation) is underway. Lesson 1 generated: see `Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
 
 ### Rotation Log entry (ready to append once approved)

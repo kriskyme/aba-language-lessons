@@ -17,8 +17,9 @@ drops "Level" as a separate request input.
 **Current version: v2.7.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
-Adopt a Content-Based Instruction (CBI) and Task-Based Language Teaching (TBLT) framework. Treat reading
-as a tool to explore real-world ideas and build critical thinking, allowing language acquisition to occur naturally
+**Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
+generating. §E's CBI/TBLT framework applies here with reading as the content vehicle: treat the anchor text as a
+tool to explore real-world ideas and build critical thinking, allowing language acquisition to occur naturally
 through meaningful communication.
 
 This version carries mandatory text-complexity calibration (Section 0) on top of the existing 2-day structure.
@@ -55,17 +56,11 @@ prompt's tier system until they are revised to match.
 
 ### 0.1 How to find the target band and task Levels
 
-Bands are defined as:
+**Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
+generating - §A has the Band/CEFR table.
 
-| Band | Levels | CEFR |
-|---|---|---|
-| Beginner | 1-2 | A1-A2 |
-| Intermediate | 3-4 | B1-B1+ |
-| Advanced | 5-6 | B2-B2+ |
-| Proficient | 7-8 | C1-C2 |
-
-**The anchor text is calibrated to the band's LOWER level**, exactly as in v2.4 (Level 3 for Intermediate, Level 5
-for Advanced, Level 1 for Beginner, Level 7 for Proficient). This single Level governs Section 0.2's word count,
+**The anchor text is calibrated to the band's LOWER level**, per §A (Level 3 for Intermediate, Level 5 for
+Advanced, Level 1 for Beginner, Level 7 for Proficient). This single Level governs Section 0.2's word count,
 grammar, and vocabulary ceiling for the whole lesson. The anchor text itself never changes complexity based on
 which task Levels are assigned within it - every student in the room reads the same text; only the task built on
 top of it differs by Level.
@@ -77,36 +72,10 @@ anchor text must satisfy. The anchor text's difficulty is governed ONLY by the R
 level, not by the Listening/Speaking or Writing objectives at the same level, which may describe more advanced
 production skills. Do not let those inflate the reading text's complexity.
 
-**Task Levels by band (v2.5):** each band has a fixed set of task Levels - one differentiated Reading task per
-Level, all built on the single shared anchor text described above:
-
-| Band | Task Levels | Count |
-|---|---|---|
-| Beginner | 1, 2, 3 | 3 |
-| Intermediate | 2, 3, 4, 5 | 4 |
-| Advanced | 4, 5, 6, 7 | 4 |
-| Proficient | 5, 6, 7, 8 | 4 |
-
-How this table is built: a band's own two Levels always get a task (its "native" Levels). Where a neighboring
-band has a Level to lend, the set extends one Level below and one Level above those native Levels, with two
-deliberate exceptions:
-
-- **Beginner does not extend below** (Level 1 is the floor of the whole scale) and extends only one Level
-  above, to Level 3 - producing 3 task Levels instead of 4.
-- **Proficient does not extend above** (Level 8 is the ceiling of the whole scale), so instead of stopping at 3
-  task Levels the way Beginner does, it extends two Levels below instead of one, borrowing both of the
-  Advanced band's Levels (5 and 6) to keep 4 task Levels.
-
-This asymmetry is deliberate, not an oversight: pushing a Beginner-band student's task up into
-Intermediate-scoped material is a real stretch risk for a still-developing reader, so that reach is capped at one
-Level. Pushing an Advanced-band student's task up into Proficient-scoped material is a much smaller risk - it is a
-step into "harder," not a foundational-literacy stretch - so the Proficient band is allowed to borrow both of
-Advanced's Levels rather than just one.
-
-**Band-distance invariant:** every task Level in the table above is at most one band away from the anchor text's
-own calibrated band. No task is ever built two bands away from what the class is actually reading. This is what
-makes it safe to share one anchor text across every task Level in a lesson: the widest gap any student faces is
-one band's worth of difficulty between their assigned task and the text they're all reading together, never two.
+**Task Levels by band:** see `shared/Program_Conventions.md` §B for the table (one differentiated Reading task
+per Level, all built on the single shared anchor text described above), how it's built (native Levels plus the
+Beginner/Proficient extension asymmetry), and the band-distance invariant - all identical here, reused wholesale
+rather than reinvented.
 
 **How to specify a lesson request:** every generation request must name at minimum a Module and a Band (e.g.
 "Advanced band, Module 6: Arguing"); a topic is optional but recommended. A specific Level is no longer part of

@@ -17,18 +17,9 @@ count and band ceiling on each before moving to the next. Do not generate an ent
 pass: batching that large is exactly where this program's own generation prompt has previously let
 band-calibration errors slip through undetected.
 
-**Sets, added 2026-09-06, for parity with Listening/Speaking.** A Module/Band can hold more than one Set over
-time - a fresh rotation of lessons for a semester where the module is retaught, without discarding or conflating
-it with what was taught before. A Set is however many lessons together cover the module's 8 instructional days;
-today that's 4 lessons, since a Passage Reading lesson is a 2-day cycle - if a shorter or longer lesson cycle
-were ever introduced, a Set's lesson count would change to match, since the invariant is the 8 days, not the
-number "4." Since Set size and module size are numerically identical today, every Module/Band planned so far is
-that Module/Band's Set 1 - no Set 2 exists anywhere yet. **Lesson numbering is global within a Module/Band,
-continuing across Sets, never resetting:** Set 1 is Lessons 1-4, Set 2 (if planned) would be Lessons 5-8, and so
-on - so "Lesson 6" unambiguously means Set 2's second lesson without needing to also state which Set. When
-planning a new Set, start numbering at the next integer after the highest lesson number already planned for that
-Module/Band, across every Set. A Set is not tied to a semester in the plan itself; note an actual teaching term
-against a Set only once it's been assigned to one, as a light annotation, not a planning input.
+**Sets.** See `shared/Program_Conventions.md` §C for what a Set is and the global-numbering-across-Sets rule
+(paste that file alongside this prompt when generating). Since Set size and module size are numerically
+identical today, every Module/Band planned so far is that Module/Band's Set 1 - no Set 2 exists anywhere yet.
 
 Why this exists: several of the lesson prompt's constraints are Set-wide, not lesson-wide (genre rotation across
 the whole bank, reading-strategy/activation/oral-protocol variety, no vocabulary overlap within a Set, task-Level
@@ -49,16 +40,12 @@ requiring them to be planned all at once.
 
 ## 0. Rotation Log (read before planning, update after approval)
 
-**What it is:** a single running record, separate from any one Set's plan, of what every already-planned
-Set actually used - genre, reading strategy, Phase 1 hook, Phase 3 protocol, vocabulary theme, and topic, one
-row per lesson, grouped by Set within each Module/Band section. It is the only thing that lets a new Set's plan
-avoid repeating what a previous Set or module already did; without it, each planning run only ever sees its own
-4 lessons and cross-Set/cross-module repetition is invisible until a teacher notices it in the classroom.
-
-**Where it lives:** `Rotation_Log.md`, one project doc, appended to (never
-overwritten) each time a Set's plan is approved. If it does not exist yet, this is the first Set of the first
-module ever planned; create it fresh and note that cross-Set and cross-module checks below are not applicable
-this time.
+**Read `Rotation_Log.md` and the target Module/Band's `Rotation_Log_<Band>.md` in full before planning; append
+the approved Set's entry to `Rotation_Log_<Band>.md` after approval** (create that Band's file if this is the
+Band's first Set, using the template at the bottom of any existing `Rotation_Log_<Band>.md`) - see
+`shared/Program_Conventions.md` §F for the full mechanics this supports. If neither file exists yet, this is the
+first Set of the first module ever planned; create them fresh and note that cross-Set and cross-module checks
+below are not applicable this time.
 
 **Before planning a new Set:** read the full log. If this Module/Band already has one or more Sets planned, note
 the highest lesson number used so far (this Set's numbering starts at the next integer) and the most recently
@@ -140,8 +127,9 @@ to be taught.
   tracing it to a Writing (or Listening/Speaking) Can-do statement. Writing can still appear as an occasional
   activity format inside a lesson or its homework - that is fine and expected - it just is not what grounds the
   task design.
-- **Rotation Log:** `Rotation_Log.md`, read in full before planning
-  (see Section 0 above); if it does not exist yet, treat this as the first Set and skip cross-Set/cross-module checks
+- **Rotation Log:** `Rotation_Log.md` plus this Module/Band's `Rotation_Log_<Band>.md`, read in full before
+  planning (see Section 0 above); if the Band's file does not exist yet, treat this as that Band's first Set and
+  skip cross-Set/cross-module checks
 
 ## TASK
 
@@ -250,4 +238,5 @@ to be taught.
 ## OUTPUT
 
 The plan table, then the self-check paragraph. Once the plan is reviewed and approved, also produce the
-Rotation Log entry (Section 0's format) ready to append to `Rotation_Log.md`. Nothing else.
+Rotation Log entry (Section 0's format) ready to append to this Module/Band's `Rotation_Log_<Band>.md`. Nothing
+else.

@@ -1,7 +1,7 @@
 # Module 1 (Describing) - Intermediate Band - Lesson 3
 
 Generated per `Generate_Lesson_Prompt_v2.7.md` (then at v2.5), against Module 1's approved
-plan (`Rotation_Log.md`, Lesson 3 row).
+plan (`Rotation_Log_Intermediate.md`, Lesson 3 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** How-to/instructional guide | **Reading strategy:** Whisper Reading

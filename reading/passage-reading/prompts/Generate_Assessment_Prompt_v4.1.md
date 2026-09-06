@@ -29,7 +29,7 @@ input, stop and ask for them before generating anything.
 - Which lessons are being assessed: the actual lesson content (anchor texts, target vocabulary,
   idioms/slang, Module, Band). Pull vocabulary and idiom lists directly from each lesson's Phase 1
   pre-teaching list; do not re-derive them from learningobjectives.csv or invent new ones.
-- **Set number:** which Set (per `Rotation_Log.md` and the Module Lesson-Plan prompt's Sets note) this
+- **Set number:** which Set (per that Module/Band's `Rotation_Log_<Band>.md` and the Module Lesson-Plan prompt's Sets note) this
   assessment covers, alongside the Module and Band. The normal, full-scope case is one completed Set (today,
   4 lessons = 8 instructional days): run this prompt once a Set's lessons are all complete, the same cadence
   Listening/Speaking uses. A mid-unit checkpoint or an assessment spanning more than one Set is still supported

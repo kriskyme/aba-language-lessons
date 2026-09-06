@@ -10,9 +10,10 @@ the simple present, articles, and simple/compound sentences; one on the simple p
 complex sentences with time clauses, each chapter ending in a guided paragraph and peer edit) and forward from
 the existing Passage Reading Lesson Generation Prompt v2.5.
 
-Adopt the same Content-Based Instruction (CBI) / Task-Based Language Teaching (TBLT) commitment as Reading:
-writing practice should grow out of a real scenario and a real reason to write, not an abstract grammar drill for
-its own sake. Layered on top of that is a **process-writing** cycle (model, practice, draft, revise) borrowed
+**Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
+generating. §E's CBI/TBLT framework applies here with the Scenario as the content vehicle: writing practice
+should grow out of a real scenario and a real reason to write, not an abstract grammar drill for its own sake.
+Layered on top of that is a **process-writing** cycle (model, practice, draft, revise) borrowed
 directly from the sample's own structure: two grammar boxes with examples, controlled practice on each, sentence-
 level editing and combining work, a scaffolded paragraph-writing task with a numbered checklist, and a
 peer-editing exchange at the end. Section 0 below exists for the same reason it exists in Reading: to keep every
@@ -44,24 +45,9 @@ size of the student product, and extra days buy depth of instruction and revisio
 
 ### 0.1 Bands, task Levels, and the frame/composition regime boundary
 
-Bands and the Level scale are identical to Reading:
-
-| Band         | Levels | CEFR   |
-| ------------ | ------ | ------ |
-| Beginner     | 1-2    | A1-A2  |
-| Intermediate | 3-4    | B1-B1+ |
-| Advanced     | 5-6    | B2-B2+ |
-| Proficient   | 7-8    | C1-C2  |
-
-**Task Levels by band** (identical table to Reading, reused rather than reinvented, since it is the program's
-shared difficulty ladder):
-
-| Band         | Task Levels | Count |
-| ------------ | ----------- | ----- |
-| Beginner     | 1, 2, 3     | 3     |
-| Intermediate | 2, 3, 4, 5  | 4     |
-| Advanced     | 4, 5, 6, 7  | 4     |
-| Proficient   | 5, 6, 7, 8  | 4     |
+**Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
+generating - §A has the Band/CEFR table, §B has the Task-Levels-by-Band table (identical here, reused rather
+than reinvented, since it's the program's shared difficulty ladder).
 
 **How to specify a lesson request:** every generation request must name at minimum a Module and a Band (e.g.
 "Intermediate band, Module 5: Evaluating"). A topic/scenario is optional but recommended. As in Reading, a
@@ -671,14 +657,17 @@ grammar focus across nearby Modules even when they are not strictly consecutive 
 Focus A for both a Describing lesson and an Evaluating lesson generated back to back), since both draw from the
 same shared grammar range and can overlap without the topic itself repeating.
 
-**Before generating a lesson:** read `Rotation_Log.md` in full. Check the grammar focus
-pair, Scenario topic, and real-world writing form against at least the immediately preceding logged lesson (any
-Band or Module), and scan the fuller log for a grammar focus that has recurred more than once in the last 3-4
-entries. Flag any repeat before finalizing the lesson rather than after.
+**Before generating a lesson:** read `Rotation_Log.md` (overview) and every existing `Rotation_Log_<Band>.md` in
+full - the check below spans every Band, not just the one being generated for, so a single Band's file is not
+enough on its own. Check the grammar focus pair, Scenario topic, and real-world writing form against at least
+the immediately preceding logged lesson across all Bands (by date), and scan the fuller set of logs for a
+grammar focus that has recurred more than once in the last 3-4 entries overall. Flag any repeat before
+finalizing the lesson rather than after.
 
-**After a lesson is generated and approved:** append one row to `Rotation_Log.md`
-per its own format instructions. This is the mechanism the log depends on; a lesson that is generated but never
-logged breaks the rotation check for every lesson generated after it.
+**After a lesson is generated and approved:** append one row to that lesson's own Band's `Rotation_Log_<Band>.md`
+(creating it from the template at the bottom of any existing `Rotation_Log_<Band>.md` if this is that Band's
+first lesson) per its own format instructions. This is the mechanism the log depends on; a lesson that is
+generated but never logged breaks the rotation check for every lesson generated after it.
 
 **Module-to-real-world-form mapping** (the Writing equivalent of Reading's genre bank in its 0.6; match
 formatting convention to the form, not generic paragraph formatting for everything). The rightmost column is new

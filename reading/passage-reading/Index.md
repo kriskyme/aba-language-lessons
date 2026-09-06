@@ -8,12 +8,10 @@ started tracking them here. Version history lives in `Changelog.md`._
 A single reference for everything in the Passage Reading prompt family: what each file does, whether it's in sync
 with the current lesson-generation prompt, and the order to actually run them in to produce a Set of lessons.
 "Passage Reading" is the lesson type these prompts generate: a fixed 2-day cycle built around one shared anchor
-text. A **Set** is however many lessons together cover one Module's 8 instructional days for a Band; today
-that's **4 lessons** (4 x 2-day cycles), since a Passage Reading lesson is a 2-day cycle - do not plan or expect
-8 lessons per Set. A Module/Band can hold more than one Set over time (a fresh rotation of lessons for a
-retaught semester); lesson numbering is global within a Module/Band, continuing across Sets rather than
-restarting. Since Set size and module size are numerically identical today, every Module/Band planned so far is
-that Module/Band's Set 1 - see "Module 1 progress" below. A second lesson type, **Novel Reading**
+text. See `shared/Program_Conventions.md` §C for what a Set is; today that's **4 lessons** (4 x 2-day cycles),
+since a Passage Reading lesson is a 2-day cycle - do not plan or expect 8 lessons per Set. Since Set size and
+module size are numerically identical today, every Module/Band planned so far is that Module/Band's Set 1 - see
+"Module 1 progress" below. A second lesson type, **Novel Reading**
 (variable-length, multi-chapter), is planned as a sibling `../novel-reading/` folder with its own file family,
 prompts, and rotation log - see `../Index.md` for the modality-level list of lesson types. Nothing here
 currently supports it.
@@ -24,7 +22,9 @@ currently supports it.
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | `Generate_Lesson_Prompt_v2.7.md` | Generates one 2-day lesson: anchor text, tiered tasks, comprehension work. The current version. Section 0.10: all five Phase 3 protocols - Town Hall Role-Play, Fishbowl, Concentric Circles, Jigsaw Expert Panels, small-group discussion carousel - are valid at this program's actual class size (8-12 students), provided the lesson supplies 2-3 rotated discussion prompts (not one static prompt for the full window) and, for Fishbowl, an explicit active task for every outer-circle student (Section 0.10) - never passive listening.                                     | Current                            |
 | `Generate_Module_Lesson_Plan_Prompt_v1.3.md`      | Plans **one Set** (4 lessons by default: topics, genres, strategy rotation, vocabulary themes, task-Level-to-objective mapping) before any lesson content is generated. A Module/Band can hold more than one Set over time; lesson numbering is global across Sets. Reading-modality objectives only (Writing/Listening-Speaking out of scope); topics for Intermediate and up must be grounded in a real, verifiable referent, with a guardrail against fabricating quotes attributed to real named individuals. | Synced to v2.7 (v1.3)              |
-| `Rotation_Log.md`                                                  | Running record of every approved Set's genre/strategy/hook/protocol/vocabulary/topic choices, one row per lesson, nested by Set within each Module/Band section. Read before planning a new Set; appended to after a plan is approved. Not a prompt itself. | N/A (data, not a prompt)           |
+| `Rotation_Log.md`                                                  | Overview only as of the per-Band split: purpose, notes that apply across every Band (the miscount correction, the Sets-concept introduction), and links to each Band's own log. | N/A (data, not a prompt)           |
+| `Rotation_Log_Intermediate.md`                                     | Running record of every approved Intermediate-Band Set's genre/strategy/hook/protocol/vocabulary/topic choices, one row per lesson, nested by Set. Read before planning a new Set; appended to after a plan is approved. | N/A (data, not a prompt)           |
+| `Rotation_Log_Advanced.md`                                         | Same, for the Advanced Band. A new Band's file is created lazily the first time a lesson in that Band is generated. | N/A (data, not a prompt)           |
 | `Changelog.md`                                                     | Version history for this prompt family. Not a prompt itself. | N/A (data, not a prompt)           |
 | `Generate_Homework_Prompt_v1.md`                | Generates one homework assignment (vocabulary/idiom production + skill practice) from a single completed 2-day lesson, general track only. Does not reference Phase 3 protocol mechanics.                                                                                                                                                                                                       | Synced to v2.5 (v2.7-compatible, unchanged) |
 | `Generate_TOEFL_Extension_Prompt_v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
@@ -125,8 +125,8 @@ generated).
 
 ## Generation workflow (current)
 
-This is the process for producing one Set's worth of lessons, in order. A Set is however many lessons together
-cover a module's 8 instructional days; today that's **4 lessons**.
+This is the process for producing one Set's worth of lessons, in order (see `shared/Program_Conventions.md` §C
+for what a Set is); today that's **4 lessons**.
 
 **Step 1 - Plan the Set.** Run `Generate_Module_Lesson_Plan_Prompt_v1.3.md` for the
 target Module, Band, and Set number. It reads the Rotation Log first (for cross-Set genre/strategy/vocabulary

@@ -116,7 +116,7 @@ Circles) from the start, rather than needing a later patch.
 
 ## Approval and logging
 
-**Approved 2026-09-01.** Logged to `Rotation_Log.md` (first entry in that
+**Approved 2026-09-01.** Logged to `Rotation_Log_Intermediate.md` (first entry in that
 file). **Set 1 complete as of 2026-09-03:** Lessons 1-4 have been generated and fill one full rotation's 8-day
 allocation - see `Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`,
 `Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`, `Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`,

@@ -10,27 +10,14 @@ rotation, and task-Level-to-objective mapping for that Set's lessons - not an ac
 key. Run this first, review/approve the plan, then generate the Set's lessons against it, checking each one
 before moving to the next. As with Passage Reading, do not generate a full Set's lessons in a single pass.
 
-**Correction, added 2026-09-03, after user review.** This prompt originally defaulted to 8 lessons per module,
-matching an earlier (incorrect) assumption that a Listening/Speaking lesson spans an 8-day cycle. The Lesson
-Generation Prompt's Unit Architecture was corrected to a real 2-day cycle (Day 1 = Unit A/Listening, Day 2 =
-Unit B/Speaking, 75 minutes each) - see that prompt's fifth addendum. A 2-day lesson matches Passage Reading's
-own cycle length, and Passage Reading's module size was independently corrected the same way (a Reading module
-is 4 lessons, 8 days, not 8 lessons, 16 days). With cycle-length parity restored, this family's module size is
-corrected to match: **4 lessons (8 real class days) per rotation, not 8 lessons (16 days).**
+**Correction, added 2026-09-03, after user review:** this prompt originally defaulted to 8 lessons per module,
+under an early (incorrect) 8-day-cycle assumption, corrected to 4 lessons (8 real class days) per rotation - see
+`Changelog.md` (2026-09-03 entry) for the full story, not restated here.
 
-**Sets, added 2026-09-03.** A Module/Band can hold more than one rotation of lessons over time - a fresh batch
-of topics for a semester where the module is retaught, without discarding or overwriting what was taught before.
-Each such rotation is a **Set**: 4 lessons (matching the corrected module size above) sharing one Module, one
-Band, and one plan, distinct in topic/format/strategy/skill from every other Set already planned for that same
-Module/Band. Module 1 (Intermediate), originally planned with a single 8-row table before this correction, is
-now Set 1 (Lessons 1-4, generated) and Set 2 (Lessons 5-8, planned only, not yet generated) - see that plan's
-own Set breakdown. A Set is not tied to a semester in the plan itself; note an actual teaching term against a
-Set only once it's been assigned to one, as a light annotation, not a planning input.
-
-**Lesson numbering is global within a Module/Band, continuing across Sets, never resetting.** Set 1 is Lessons
-1-4, Set 2 is Lessons 5-8, Set 3 is Lessons 9-12, and so on - so "Lesson 7" unambiguously means Set 2's third
-lesson without needing to also state which Set. When planning a new Set, start numbering at the next integer
-after the highest lesson number already planned for that Module/Band, across every Set.
+**Sets.** See `shared/Program_Conventions.md` §C for what a Set is and the global-numbering-across-Sets rule
+(paste that file alongside this prompt when generating). Module 1 (Intermediate), originally planned with a
+single 8-row table before the correction above, is now Set 1 (Lessons 1-4, generated) and Set 2 (Lessons 5-8,
+planned only, not yet generated) - see that plan's own Set breakdown.
 
 Why this exists: several of the lesson prompt's constraints are Set-wide (content-format rotation across the
 whole bank, listening-strategy/speaking-skill/protocol variety, no vocabulary-theme overlap within a Set,
@@ -50,9 +37,11 @@ Listening/Speaking Set actually used - content format, listening strategy, speak
 Phase 3 protocol, vocabulary theme, and topic direction, one row per lesson, grouped by Set within each
 Module/Band section.
 
-**Where it lives:** `Rotation_Log.md`, one project doc, appended to (never
-overwritten) each time a Set's plan is approved. If it does not exist yet, this is the first Set of the first
-Module ever planned for this track; create it fresh and skip the cross-Module and cross-Set checks below.
+**Where it lives:** `Rotation_Log.md` (overview) plus this Module/Band's `Rotation_Log_<Band>.md`, read in full
+before planning; append the approved Set's entry to `Rotation_Log_<Band>.md` (never overwritten) once approved -
+see `shared/Program_Conventions.md` §F for the full mechanics. If the Band's file does not exist yet, this is
+the first Set of the first Module ever planned for this Band; create it fresh (from the template at the bottom
+of any existing `Rotation_Log_<Band>.md`) and skip the cross-Module and cross-Set checks below.
 
 **Cross-Set rules (same Module/Band, a new Set added to one already planned):** identify the highest lesson
 number already used for this Module/Band across every existing Set, and start this Set's numbering at the next
@@ -100,8 +89,8 @@ for Set 2 onward.) Do not append a draft still being revised.
 - **Source of truth for objectives:** `learningobjectives.csv`, filtered to this Module, this band's task Levels,
   and the **Listening/Speaking modality only**. Reading and Writing objectives are out of scope for this plan the
   same way Listening/Speaking is out of scope for the Reading plan.
-- **Rotation Log:** `Rotation_Log.md`, read in full before planning; if
-  it doesn't exist yet, treat this as the first Set of the first Module.
+- **Rotation Log:** `Rotation_Log.md` plus this Band's `Rotation_Log_<Band>.md`, read in full before planning; if
+  the Band's file doesn't exist yet, treat this as the first Set of the first Module for that Band.
 
 ## TASK
 
@@ -159,5 +148,5 @@ for Set 2 onward.) Do not append a draft still being revised.
 ## OUTPUT
 
 The plan table, then the self-check paragraph. Once reviewed and approved, also produce the Program Rotation
-Log entry (Section 0's format, under this Module/Band's existing section if one exists) ready to append to
-`Rotation_Log.md`. Nothing else.
+Log entry (Section 0's format, under this Module/Band's existing section if one exists) ready to append to this
+Band's `Rotation_Log_<Band>.md`. Nothing else.

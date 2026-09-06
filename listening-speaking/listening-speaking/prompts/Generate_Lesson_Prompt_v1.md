@@ -47,9 +47,10 @@ project (mirroring the content sample's Part 2 and Put It Together sections) as 
 complete, the same way the TOEFL Track Extension sits on top of a completed Passage Reading lesson rather than
 inside it. Nothing below generates that extension.
 
-Adopt the same Content-Based Instruction (CBI) and Task-Based Language Teaching (TBLT) framework as the
-Passage Reading program: listening and speaking are tools to explore real ideas and build critical thinking, with
-language acquisition happening through meaningful communication, not isolated drills.
+**Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
+generating. §E's CBI/TBLT framework applies here with the real source as the content vehicle: listening and
+speaking are tools to explore real ideas and build critical thinking, with language acquisition happening
+through meaningful communication, not isolated drills.
 
 ---
 
@@ -58,14 +59,8 @@ language acquisition happening through meaningful communication, not isolated dr
 ### 0.1 How to find the target band and task Levels
 
 Bands and Levels are the same universal 1-8 scale used across the whole program (this is not a separate scale
-for Listening/Speaking):
-
-| Band         | Levels | CEFR   |
-| ------------ | ------ | ------ |
-| Beginner     | 1-2    | A1-A2  |
-| Intermediate | 3-4    | B1-B1+ |
-| Advanced     | 5-6    | B2-B2+ |
-| Proficient   | 7-8    | C1-C2  |
+for Listening/Speaking) - see `shared/Program_Conventions.md` §A for the Band/CEFR table (paste that file
+alongside this prompt when generating).
 
 **The real source is calibrated to the band's LOWER level**, exactly as Passage Reading calibrates its anchor text
 (Level 3 for Intermediate, Level 5 for Advanced, Level 1 for Beginner, Level 7 for Proficient). This single Level
@@ -80,16 +75,8 @@ half governs what the comprehension tasks (Days 1-4) must actually ask for, the 
 production tasks (Days 5-8) must actually elicit.
 
 **Task Levels by band:** identical table and identical reasoning to Passage Reading Section 0.1 (reused wholesale,
-since the Level scale is universal, not modality-specific):
-
-| Band         | Task Levels | Count |
-| ------------ | ----------- | ----- |
-| Beginner     | 1, 2, 3     | 3     |
-| Intermediate | 2, 3, 4, 5  | 4     |
-| Advanced     | 4, 5, 6, 7  | 4     |
-| Proficient   | 5, 6, 7, 8  | 4     |
-
-The band-distance invariant applies unchanged: every task Level is at most one band away from the source's own
+since the Level scale is universal, not modality-specific) - see `shared/Program_Conventions.md` §B. The
+band-distance invariant applies unchanged: every task Level is at most one band away from the source's own
 calibrated band, which is what makes it safe to share one source across every task Level in the room.
 
 **How to specify a lesson request:** every generation request must name at minimum a Module and a Band (e.g.

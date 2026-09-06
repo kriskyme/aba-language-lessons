@@ -8,7 +8,7 @@ lanes/Town Hall, Iron Gwazi roller coaster/Concentric Circles) are out of scope 
 for reference, matching how Intermediate Module 1's dropped Lessons 5-8 were handled. This doc was also missing
 from the project entirely until recovered from the user's own copy on 2026-09-01 - despite the "Approval and
 logging" section below claiming it had already been logged to the Rotation Log, it had not been; that
-gap is now closed (see `Rotation_Log.md`, Module 1: Describing, Advanced Band section).
+gap is now closed (see `Rotation_Log_Advanced.md`, Module 1: Describing section).
 The body below is otherwise the original approved text, generated under v2.5 of the lesson prompt (now
 superseded by v2.7) and v1 of the module-plan prompt (now superseded by v1.2); Lessons 2-4 have not yet been
 generated as lesson content and should be generated under the current prompts, including v2.7's Fishbowl/
@@ -19,7 +19,7 @@ topic rule + Writing-modality guardrail applied). Approved 2026-08-30. Module 1/
 generation). Lesson 1 has been generated - see `Index.md` for current
 progress.
  
-**Rotation Log check:** the log (`Rotation_Log.md`) currently has one
+**Rotation Log check:** the log (`Rotation_Log_Advanced.md`) currently has one
 entry - Module 1: Describing, Intermediate Band. This new plan is the same Module but a different Band, not a
 different Module, so it isn't really the "next module" the cross-module rules were written for - but since it will
 be the next entry appended to the log, I've applied the adjacency check literally anyway (see self-check below)
@@ -101,4 +101,4 @@ in the Intermediate Module 1 entry (the only entry currently in the log).
  
 Approved 2026-08-30; recovered and logged 2026-09-01. Module 1/Advanced is in Step 2 (lesson generation,
 two lessons at a time: 1-2, then 3-4). Lesson 1 is generated; see `Index.md` for current status. See
-`Rotation_Log.md`, "Module 1: Describing, Advanced Band" section, for the logged entry (Lessons 1-4 only).
+`Rotation_Log_Advanced.md`, "Module 1: Describing" section, for the logged entry (Lessons 1-4 only).

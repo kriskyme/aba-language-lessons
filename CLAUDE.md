@@ -23,7 +23,10 @@ below. Prior working location before consolidation: `~/Desktop/ESL Content/`.
 All three modalities key off the same skill taxonomy defined in
 [`learningobjectives.csv`](learningobjectives.csv): **8 Levels × 8 Modules**
 (Module 1: Describing … Module 8: Socializing), banded into
-Beginner / Intermediate / Advanced / Proficient.
+Beginner / Intermediate / Advanced / Proficient. See
+[`shared/Program_Conventions.md`](shared/Program_Conventions.md) §A/§B for the
+full canonical version — including the Band/CEFR and Task-Levels-by-Band
+tables — that lesson-generation prompts paste in directly.
 
 ## Repo layout
 
@@ -37,7 +40,8 @@ folder is one level of grouping above that:
 └── <lesson-type>/           # one subfolder per lesson type this modality generates
     ├── Index.md              # living index: what each file does, sync status, pending work
     ├── Changelog.md          # dated version history for this lesson type's prompt family
-    ├── Rotation_Log.md       # tracks every generated lesson (topic/skill rotation, avoids repeats)
+    ├── Rotation_Log.md       # overview: purpose + links to each Band's log
+    ├── Rotation_Log_<Band>.md  # one per Band with generated content; created lazily on that Band's first lesson
     ├── lessons/{beginner,intermediate,advanced,proficient}/
     ├── prompts/              # versioned generation prompts
     └── source/               # raw reference material (see note below)
@@ -106,29 +110,41 @@ noted in Known Issues.
   is the target (`Lesson<N>_<TopicSlug>.md`,
   `<TopicSlug>_<Level>_L<N>_Packet.html`). Listening/Speaking has migrated
   both of its former divergent long-form styles to this.
-- **Lessons nest by Set.** A **Set** is however many lessons together cover
-  one Module's planned instructional time (8 class days) for a Band — not a
-  fixed lesson count, but derived from how many days each modality's lesson
-  runs. Reading and Listening/Speaking both use a 2-day lesson, so a Set is
-  4 lessons for each of them today; a shorter or longer lesson would change
-  that count, since the invariant is the 8 days, not the number "4." A
-  lesson's files (raw `.md`, student packet `.html`, later homework) travel
-  together: `lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/` holds one lesson's
-  files. A Set's own assessment (one per Set, not per lesson) sits in
-  `Set_<N>/` itself rather than inside any one lesson's folder. The
-  Module/Band Lesson Plan spans every Set generated for that band so far,
-  and sits at the band-folder root (`lessons/<band>/`), above the `Set_<N>/`
-  folders. Listening/Speaking adopted this convention first (2026-09-03,
-  after correcting an early miscount that had inflated its module size);
-  Reading followed for parity (2026-09-06), physically migrating its
-  already-generated lessons into the nested shape. Academic Writing's
-  `Index.md` documents the same shape aspirationally for when it gets a
-  Module Lesson-Plan prompt of its own — since its lesson is already an
-  8-day cycle, a Writing Set is currently 1 lesson, not 4. Neither the
-  Lesson, Assessment, nor Module Lesson-Plan generation prompts currently
-  specify an output location themselves, so this note is the convention to
-  follow when saving newly generated content in any of the three
-  modalities.
+- **Lessons nest by Set.** See
+  [`shared/Program_Conventions.md`](shared/Program_Conventions.md) §C/§D for
+  what a Set is and the `lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/` folder
+  shape — canonical there, not restated here. Institutional history specific
+  to this repo (not duplicated in the shared file): Listening/Speaking
+  adopted the convention first (2026-09-03, after correcting an early
+  miscount that had inflated its module size); Reading followed for parity
+  (2026-09-06), physically migrating its already-generated lessons into the
+  nested shape; Academic Writing's `Index.md` documents the same shape
+  aspirationally for when it gets a Module Lesson-Plan prompt of its own —
+  since its lesson is already an 8-day cycle, a Writing Set is currently 1
+  lesson, not 4. Neither the Lesson, Assessment, nor Module Lesson-Plan
+  generation prompts currently specify an output location themselves, so
+  this note is the convention to follow when saving newly generated content
+  in any of the three modalities.
+- **Cross-modality conventions live in one shared file, not restated per
+  lesson type.** Facts that are true program-wide (the Level/Band taxonomy,
+  what a Set is, the Set/Lesson folder-nesting shape, the CBI/TBLT
+  framework, Rotation Log mechanics) belong in
+  [`shared/Program_Conventions.md`](shared/Program_Conventions.md),
+  following the same pattern already established for print styling
+  (`shared/Student_Packet_Style_Guide.md`). A lesson type's own `Index.md`,
+  `Changelog.md`, and prompts should point there rather than restate it —
+  this applies to Novel Reading and any future lesson type too, from the
+  start rather than as a later cleanup.
+- **Rotation Log splits by Band.** `Rotation_Log.md` is a short overview
+  (purpose, any note that applies across every Band, links to each Band's
+  file) rather than one growing file with every Band nested inside it. Each
+  Band gets its own `Rotation_Log_<Band>.md` the first time a lesson is
+  generated in that Band — created lazily, the same way `Set_<N>/` folders
+  are — holding just that Band's Set/lesson tables and its own
+  append-template. A note or correction that applies across every Band (a
+  miscount fix, a Sets-concept introduction) stays in the overview; never
+  duplicate it into every Band file. Applies to Novel Reading and any future
+  lesson type too, from the start.
 - **`Index.md` files must only reference filenames that actually exist on
   disk.** Several currently describe files/content that were never saved, or
   that were saved under different names — treat any such mismatch as a bug
