@@ -10,7 +10,7 @@ lesson in that Band is generated, mirroring how `Set_<N>/` folders are created l
 - [`Rotation_Log_Intermediate.md`](Rotation_Log_Intermediate.md) - Intermediate 1 ("my phone case")
 - [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Advanced 1 ("Two apartments... for Sam")
 
-Maintained by `Generate_Lesson_Prompt_v3.4.md` (Section 0.9): read every existing Band file in full before
+Maintained by `Generate_Lesson_Prompt_v3.5.md` (Section 0.9): read every existing Band file in full before
 generating a new lesson, appended to (never overwritten) once a lesson is generated and approved. Each Band
 file is still a flat, chronological table, not nested by Module/Band → Set the way Reading's and
 Listening/Speaking's per-Band files are (see "why this differs from Reading's log" below).
@@ -42,3 +42,11 @@ only, so it answers "how many Advanced lessons exist" or "what's the next Interm
 recounting rows across every Band file by hand. A Band's count restarts at 1 the first time a lesson is
 generated in that Band; regenerating an existing lesson in place (a new version of the same
 Scenario/Module/Band) does not advance either number, since it is still the same lesson, not a new one.
+
+## Lesson version numbers introduced (2026-09-07)
+
+Each Band file's "Format for the next entry" template now has a `Version` column
+(`S<Set>.<Lesson>.<Iteration>` - see `shared/Program_Conventions.md` §G). Since a Writing Set is currently 1
+lesson (`Index.md`'s "Sets (aspirational)" section), both the Set and Lesson segments are that entry's own
+`Band Lesson #`. Going-forward only: the two rows already logged (Intermediate 1, Advanced 1) predate this and
+are not retrofitted.

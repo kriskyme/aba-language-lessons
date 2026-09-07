@@ -1,12 +1,12 @@
-# Passage Reading Student Print Formatting Prompt (v1.3)
+# Passage Reading Student Print Formatting Prompt (v1.7)
 
-Companion to the Passage Reading Lesson Generation Prompt (v2.7, Band-Calibrated). Takes one completed 2-day
+Companion to the Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated). Takes one completed 2-day
 lesson cycle and produces a single, print-ready, black-and-white student handout: one self-contained HTML
 document covering both days, with every piece of teacher-facing pedagogical language translated into plain
 instructions a student (or a parent glancing at the page) can act on without decoding jargon like "close reading
 with annotation," "Fishbowl," or "Task Level."
 
-**Current version: v1.3.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.7.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson's Day 1 and Day 2 already exist. Do not use it to generate lesson content, and
@@ -93,17 +93,19 @@ directly into the section heading text itself (e.g., "Unit 1A: The Basilica That
 aligned, rather than as a separate divider bar or rule. The second heading (Unit 1B) restarts its own task/exercise
 lettering independently of the first; do not carry letters across the boundary.
 
-### 2.4 Modality label, top-right; no other kicker lines or metadata fields
+### 2.4 Modality/Band/Version stack, top-right; no other kicker lines or metadata fields
 
-The document's opening masthead (the very first one - never the Unit 1B masthead) carries a `.masthead-tag`
-span reading exactly `Reading`, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B - a plain
-class-identifier for whoever is handling the printed packet, nothing else (no Level/Band, no "Class" or
-"Packet" suffix).
+The document's opening masthead (the very first one - never the Unit 1B masthead) carries a
+`.masthead-meta` block, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B: two
+stacked `.masthead-tag` lines - the first reading exactly `Reading`, the second combining this
+lesson's Band and its version code as one string, `<Band> S<Set>.<Lesson>.<Iteration>`
+(e.g. `Advanced S1.1.0`) per `shared/Program_Conventions.md` §G. Nothing else on that stack - no
+"Class" or "Packet" suffix.
 
-Beyond that one tag, do not include: a Name/Date field, a subject/module/band kicker line under the title
+Beyond that one block, do not include: a Name/Date field, a subject/module kicker line under the title
 (e.g. "Reading Packet · Describing"), a subtitle line under any heading, or a footer note at the bottom of the
-document. The title, its `.masthead-tag`, and the objective statement are the only material above "Before You
-Read."
+document. The title, its `.masthead-meta` block, and the objective statement are the only material above
+"Before You Read."
 
 ### 2.5 Section and task labeling
 
@@ -225,6 +227,15 @@ reserved for content that is genuinely a spotlight moment: the idiom/slang Phras
 worked-model box in 2.7. Do not put a full border around ordinary content like a vocabulary list or a plain
 instruction paragraph - those render as plain text or a simple unbordered list.
 
+**Idioms to Know: table when there's a list, spotlight box when there's one.** A single idiom (the "Phrase
+Spotlight" case) keeps the `.spotlight-box` treatment above. When the lesson glosses 2 or more idioms with no
+single spotlight idiom, render them as a table using the shared `.idiom-list`/`.irow` classes (phrase, then
+gloss, one row per idiom) - the same two-column treatment "Words to Know" already gets from `.vocab-list`/
+`.vrow` - instead of stacked plain `.idiom-item` paragraphs. Number each row's phrase ("1. in the middle of
+nowhere," "2. keep my feet on the ground," ...), restarting at 1, matching the plain "N. " prefix "Words to
+Know" already uses inside its own `.word` spans. Both idiom classes and the vocabulary classes are defined in
+`shared/Student_Packet_Style_Guide.md`.
+
 **One documented exception:** a word bank (the small inline list of word-choice options accompanying a
 fill-in-the-blank or star-rated task) gets a light dashed rule above and below it, distinguishing it from
 surrounding prose without promoting it to a full bordered box. This is not a callout box and does not signal a
@@ -282,9 +293,11 @@ adding a new one.
   closing activity connect back to that same stated objective?
 - Are the two sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the section heading text
   itself rather than a separate divider?
-- Does the opening masthead carry a `.masthead-tag` reading exactly "Reading" (no Level/Band, no "Class" or
-  "Packet" suffix), and only there - never on the Unit 1B masthead? Beyond that tag, are there no Name/Date
-  fields, no module/band kicker line, no subtitle lines, and no footer note?
+- Does the opening masthead carry a `.masthead-meta` block with two stacked tags - "Reading," then this
+  lesson's Band and its `S<Set>.<Lesson>.<Iteration>` version code combined as one string - and only there
+  - never on the Unit 1B
+  masthead? Beyond that block, are there no Name/Date fields, no subject/module kicker line, no subtitle
+  lines, and no footer note?
 - Are all exercises labeled with letters ("Task A," "Task B"...) rather than "Exercise," with labels inline with
   their instruction text?
 - Do differentiated tasks show only filled stars (★ up to ★★★★), with no numeric Level, no tier name, and no

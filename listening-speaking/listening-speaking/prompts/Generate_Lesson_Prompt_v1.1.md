@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v1)
+# Listening/Speaking Lesson Generation Prompt (v1.1)
 
 **Lesson type:** this prompt generates a **Listening/Speaking Lesson** - a fixed 2-day cycle (Day 1 Listening,
 Day 2 Speaking) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -12,9 +12,13 @@ This is a first draft (v1), written the same way the Passage Reading prompt star
 refinement once real lessons are generated against it and something doesn't fit a real classroom. Treat every
 number below (runtimes, day count, phase minutes) as a reasoned starting point, not a fixed constant.
 
-**Current version: v1.** Section 0's calibration and the day-by-day structure below reflect several corrections
+**Current version: v1.1.** Section 0's calibration and the day-by-day structure below reflect several corrections
 made after reviewing real generated lessons; see `Changelog.md` for the history. Operational rules those
 corrections put in place, still in force:
+
+- **Lesson header metadata (added v1.1):** directly under the generated document's H1, include a metadata line
+  stating `**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per
+  `shared/Program_Conventions.md` §G (global lesson number, iteration `0` on first generation).
 
 - Section 0.2's runtime ranges are a soft target for found sources, not a hard ceiling like Passage Reading's
   word counts: a source running somewhat past its band's range is a much smaller problem than an off-ceiling

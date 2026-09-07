@@ -13,5 +13,10 @@ numbering-columns note.
 **Format for the next entry** (append below the table's last row, do not overwrite anything above):
 
 ```
-| N | Intermediate <Band Lesson #> | <date> | <Module #: Name> | Intermediate | Focus A: <core form> / Focus B: <sentence variety> | <Scenario/topic> | <real-world writing form> | <notes: judgment calls, repeats flagged, anything worth carrying forward> |
+| N | Intermediate <Band Lesson #> | <date> | <Module #: Name> | Intermediate | Focus A: <core form> / Focus B: <sentence variety> | <Scenario/topic> | <real-world writing form> | S<Band Lesson #>.<Band Lesson #>.0 | <notes: judgment calls, repeats flagged, anything worth carrying forward> |
 ```
+
+(`Version` is new as of 2026-09-07 - `shared/Program_Conventions.md` §G - and only applies from the next entry
+onward; the row above predates it and is not retrofitted. Since a Writing Set is currently 1 lesson
+(`Index.md`'s "Sets (aspirational)" section), the version's Set and Lesson segments are both this row's own
+`Band Lesson #`. Bump the Iteration digit in place whenever a lesson is substantively revised after generation.)

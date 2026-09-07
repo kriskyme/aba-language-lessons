@@ -87,14 +87,16 @@ Transfer Check).
 
 ```
 ### Set S (planned <date>)
-| Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction |
-|---|---|---|---|---|---|---|---|
-| ... | ... | ... | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... | ... |
+| Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
+|---|---|---|---|---|---|---|---|---|
+| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
 ```
 
 (Lesson # continues the global numbering for this Band across every Set already planned - do not restart at 1
 for Set 2 onward. If this Module already has a section above, append this Set as a new subsection under it
-rather than creating a duplicate `## Module N` heading.)
+rather than creating a duplicate `## Module N` heading. `Version` is new as of 2026-09-07 -
+`shared/Program_Conventions.md` §G - and only applies from this Set onward; bump a lesson's own Iteration
+digit in place here whenever that lesson is substantively revised after generation.)

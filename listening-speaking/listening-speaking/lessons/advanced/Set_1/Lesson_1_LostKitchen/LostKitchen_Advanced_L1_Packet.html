@@ -72,6 +72,13 @@
       .masthead.masthead-later {
         margin-top: 60px;
       }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 12px;
@@ -80,7 +87,6 @@
         text-transform: uppercase;
         color: var(--ink);
         white-space: nowrap;
-        margin-top: 4px;
       }
 
       .objective {
@@ -213,6 +219,25 @@
         font-family: Georgia, serif;
         font-weight: 700;
         font-style: italic;
+      }
+
+      .idiom-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-list .irow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .idiom-list .irow:last-child {
+        border-bottom: none;
+      }
+      .idiom-list .irow .idiom-phrase {
+        width: 180px;
+        flex-shrink: 0;
       }
 
       .image-placeholder {
@@ -477,7 +502,10 @@
     <div class="sheet">
       <div class="masthead">
         <h1>Unit 1A: The Lost Kitchen</h1>
-        <span class="masthead-tag">Listening &amp; Speaking</span>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking</span>
+          <span class="masthead-tag">Advanced S1.1.0</span>
+        </div>
       </div>
 
       <p class="objective">
@@ -554,13 +582,17 @@
       </div>
 
       <p class="section-label">Idioms to Know</p>
-      <div class="idiom-item">
-        <span class="idiom-phrase">in the middle of nowhere</span> - in a very
-        remote, isolated place
-      </div>
-      <div class="idiom-item">
-        <span class="idiom-phrase">keep my feet on the ground</span> - to stay
-        realistic and humble, not let success change you
+      <div class="idiom-list">
+        <div class="irow">
+          <span class="idiom-phrase">1. in the middle of nowhere</span
+          ><span>in a very remote, isolated place</span>
+        </div>
+        <div class="irow">
+          <span class="idiom-phrase">2. keep my feet on the ground</span
+          ><span
+            >to stay realistic and humble, not let success change you</span
+          >
+        </div>
       </div>
 
       <div class="citebox">

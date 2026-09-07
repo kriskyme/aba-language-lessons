@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Living Textbooks: Student Packet</title>
+    <title>The Last Glass Bender: Student Packet</title>
     <style>
       :root {
         --ink: #000000;
@@ -207,20 +207,6 @@
         min-width: 130px;
       }
 
-      .idiom-item {
-        margin-bottom: 10px;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 14px;
-      }
-      .idiom-item:last-child {
-        margin-bottom: 0;
-      }
-      .idiom-phrase {
-        font-family: Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-      }
-
       .idiom-list {
         margin: 10px 0 6px;
         font-family: system-ui, -apple-system, sans-serif;
@@ -238,24 +224,9 @@
       .idiom-list .irow .idiom-phrase {
         width: 180px;
         flex-shrink: 0;
-      }
-
-      .image-placeholder {
-        border: 2px dashed var(--ink);
-        padding: 44px 20px;
-        text-align: center;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13px;
-        color: var(--ink-soft);
-        margin: 14px 0 4px;
-      }
-      .image-caption {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 12px;
+        font-family: Georgia, serif;
+        font-weight: 700;
         font-style: italic;
-        color: var(--ink-soft);
-        text-align: center;
-        margin: 0 0 20px;
       }
 
       .qlist {
@@ -275,11 +246,6 @@
         flex-shrink: 0;
         width: 20px;
       }
-      .qlist .blank {
-        display: inline-block;
-        border-bottom: 1px solid var(--ink-soft);
-        min-width: 70px;
-      }
       .qitem {
         display: flex;
         gap: 10px;
@@ -295,42 +261,6 @@
         height: 22px;
         margin-top: 4px;
       }
-      .ans-line-sm {
-        display: inline-block;
-        border-bottom: 1px solid var(--ink-soft);
-        width: 100%;
-        max-width: 320px;
-        height: 18px;
-        margin-top: 2px;
-      }
-
-      .pic-options {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin: 8px 0 4px 4px;
-      }
-      .pic-option {
-        width: 110px;
-      }
-      .pic-option .pic-box {
-        border: 2px dashed var(--ink);
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 10.5px;
-        color: var(--ink-soft);
-        padding: 6px;
-      }
-      .pic-option .pic-label {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 12.5px;
-        text-align: center;
-        margin-top: 5px;
-      }
 
       .match-list {
         margin: 8px 0 4px 4px;
@@ -342,6 +272,18 @@
         display: block;
         font-weight: 700;
         margin-bottom: 3px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher p {
+        font-size: 14.5px;
       }
 
       .task-block {
@@ -368,21 +310,6 @@
       }
       .task-block .instr-line .stars {
         margin-right: 8px;
-      }
-      .wordbank {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13px;
-        padding: 8px 0;
-        margin: 10px 0;
-        border-top: 1px dashed var(--rule-light);
-        border-bottom: 1px dashed var(--rule-light);
-      }
-      .task-block .starter {
-        font-style: italic;
-        padding: 8px 0 8px 14px;
-        margin: 10px 0;
-        border-left: 3px solid var(--ink);
-        font-size: 14px;
       }
 
       .discuss-block {
@@ -451,24 +378,6 @@
         transform: rotate(180deg);
       }
 
-      .refresher {
-        padding: 16px 0;
-        margin: 14px 0;
-        border-bottom: 1px solid var(--rule-light);
-      }
-      .refresher.refresher-noline {
-        border-bottom: none;
-      }
-      .refresher .headline {
-        font-size: 17px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        text-align: center;
-      }
-      .refresher p {
-        font-size: 14.5px;
-      }
-
       @media print {
         body {
           background: #fff;
@@ -501,143 +410,136 @@
 
     <div class="sheet">
       <div class="masthead">
-        <h1>Unit 2A: Living Textbooks</h1>
+        <h1>Unit 4A: The Last Glass Bender</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Listening &amp; Speaking</span>
-          <span class="masthead-tag">Advanced S1.2.0</span>
+          <span class="masthead-tag">Advanced S1.4.0</span>
         </div>
       </div>
 
       <p class="objective">
-        <strong>Objective:</strong> recognize when a speaker gives one specific
-        example to support a bigger idea, and compare an old building's past use
-        to what it's used for now.
+        <strong>Objective:</strong> notice the exact words a speaker uses to
+        signal a contrast or a coming explanation, and summarize how a
+        craftsman describes his own process.
       </p>
 
       <div class="spotlight-box">
         <div class="spotlight-label">Good to Know</div>
         <p class="model-step">
-          Restrictive covenants were clauses once written into many U.S.
-          property deeds, including in Arizona, that barred certain groups,
-          often Black families, from buying homes in a neighborhood. They are no
-          longer legally enforceable, but the old wording still turns up in
-          historic deeds.
+          Neon signage was invented in the early 1910s by a French engineer,
+          and by the 1920s and 1930s neon signs had become common on
+          storefronts and theaters across the United States, the era Wil
+          Kirkman references in this video.
         </p>
         <p class="model-step">
-          "Mid-century modern" describes an architecture style popular roughly
-          from the 1940s through the 1960s. Phoenix has an unusually large
-          collection of it partly because so many soldiers trained at Arizona
-          military bases during World War II and returned afterward to build new
-          lives there.
+          <em>createid</em> is a documentary series produced by Idaho Public
+          Television that profiles working artists and makers around the
+          state. This episode is from the show's second season.
         </p>
       </div>
 
-      <div class="section-title">Before You Listen</div>
-      <div class="image-placeholder">
-        [ photo: a mid-century modern Phoenix home with a breeze-block wall ]
-      </div>
-      <p class="image-caption">A real home in Phoenix.</p>
+      <div class="section-title">Before You Watch</div>
       <p class="instr">
-        What decade do you think this was built? Do you think it's still
-        standing today, or was it torn down? Some people want to save buildings
-        like this one; others think old buildings should make way for something
-        new. What do you think decides whether a building gets saved or torn
-        down?
+        Fill in the first two columns below. Leave "What I Learned" blank for
+        now.
       </p>
-      <div class="qitem">
-        <span class="num">1.</span>
-        <div class="qbody">
-          Write your guess below.
-          <span class="ans-line"></span>
-        </div>
-      </div>
+      <table class="notes-table">
+        <tr>
+          <th>What I Know</th>
+          <th>What I Want to Know</th>
+          <th>What I Learned</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
 
       <p class="section-label">Words to Know</p>
       <div class="vocab-list">
         <div class="vrow">
-          <span class="word">1. preserve / preservation</span
+          <span class="word">1. trade</span
           ><span
-            >to protect something so it stays in its original condition</span
+            >a job or craft that requires special skill, usually learned
+            through years of practice</span
           >
         </div>
         <div class="vrow">
-          <span class="word">2. trove</span
-          ><span>a valuable collection of things</span>
+          <span class="word">2. transformer</span
+          ><span>a device that changes the voltage of an electric current</span>
         </div>
         <div class="vrow">
-          <span class="word">3. mid-century</span
+          <span class="word">3. circuit</span
+          ><span>a complete path that lets electricity flow all the way through</span>
+        </div>
+        <div class="vrow">
+          <span class="word">4. coating</span
+          ><span>a thin layer of material applied over a surface</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. vaporize</span
           ><span
-            >from around the middle of a certain century (here, roughly
-            1945-1965)</span
+            >to change from a liquid or solid into a gas, usually through
+            heat</span
           >
         </div>
         <div class="vrow">
-          <span class="word">4. register</span
-          ><span
-            >an official list, here of buildings recognized and protected for
-            their history</span
-          >
-        </div>
-        <div class="vrow">
-          <span class="word">5. covenant</span
-          ><span
-            >a formal condition written into a legal document, like a property
-            deed</span
-          >
-        </div>
-        <div class="vrow">
-          <span class="word">6. beholden</span
-          ><span>having a duty or obligation toward someone or something</span>
+          <span class="word">6. impurity</span
+          ><span>a small amount of an unwanted substance mixed into a material</span>
         </div>
       </div>
 
       <p class="section-label">Idioms to Know</p>
       <div class="idiom-list">
         <div class="irow">
-          <span class="idiom-phrase">1. the land of opportunity</span
+          <span class="idiom-phrase">1. aha moment</span
+          ><span>a sudden moment of realization or inspiration</span>
+        </div>
+        <div class="irow">
+          <span class="idiom-phrase">2. flow state</span
           ><span
-            >a place where people believe they can succeed and build a better
-            life</span
+            >a state of total focus where you lose track of everything
+            else</span
           >
         </div>
         <div class="irow">
-          <span class="idiom-phrase">2. living textbooks</span
+          <span class="idiom-phrase">3. comes alive</span
           ><span
-            >a description for buildings that teach us about the past just by
-            existing</span
+            >a way of saying something suddenly seems vibrant or full of
+            energy</span
           >
         </div>
       </div>
 
       <div class="citebox">
-        <strong>You'll watch:</strong> a PBS NewsHour Weekend segment about the
-        movement to preserve Phoenix's mid-century modern homes and buildings,
-        and the debate over whether they should be saved or replaced.
+        <strong>You'll watch:</strong> an episode of <em>createid</em> that
+        follows Wil Kirkman, a real neon glass bender in Boise, Idaho, as he
+        makes a neon sign from start to finish in his own studio.
       </div>
 
       <div class="section-title">Listening Notes</div>
       <p class="instr">
-        While you watch, fill in what you learn about one specific building on
-        the tour.
+        While you watch, fill in what he does and what he says about it.
       </p>
       <table class="notes-table">
         <tr>
           <th>&nbsp;</th>
-          <th>The Old Post Office, Before</th>
-          <th>Postino Wine Bar, Now</th>
+          <th>The Steps (What He Does)</th>
+          <th>The Meaning (What He Says About It)</th>
         </tr>
         <tr>
-          <td>What it was used for</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>What it looked like</td>
+          <td>Bending the glass</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td>Why people value it now</td>
+          <td>Filling it with gas</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Making the final connections</td>
           <td></td>
           <td></td>
         </tr>
@@ -658,10 +560,10 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              In 2-3 sentences, name two reasons speakers give for valuing
-              mid-century buildings, one comparison to what could happen instead
-              (demolition or new development), and the reason preservation
-              advocates give.
+              In 2-3 sentences, describe what Wil Kirkman makes and how,
+              including one comparison he draws (hot glass compared to
+              something else) and the reason he gives for preferring neon
+              over LEDs.
               <span class="ans-line"></span>
               <span class="ans-line"></span>
             </div>
@@ -669,10 +571,10 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              According to the segment, what does Adam Millsap say could happen
-              to housing prices if preservation rules are too strict? Do you
-              think that's a fair concern, or is it overstated? Circle one and
-              say why.
+              According to the video, what happens if a tube isn't heated hot
+              enough before filling it with gas? Do you think this craft is
+              worth keeping alive even though LEDs are easier? Circle yes or
+              no and say why.
               <span class="ans-line"></span>
             </div>
           </li>
@@ -688,19 +590,20 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Summarize how the segment is organized (Phoenix's postwar
-              architecture boom, then reasons to preserve, then the growth/cost
-              counterpoint, then two homeowners'/community stories, then the
-              closing statement).
+              Summarize how the video is organized (introducing Kirkman and
+              his trade, then the science of the gases and colors, then the
+              bending itself, then his reflection on the feeling of the work,
+              then powering the finished piece).
               <span class="ans-line"></span>
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Find one evaluative word or phrase (like "living textbooks" or
-              "trove") that signals admiration without anyone saying "this is
-              great." What is it, and what does it signal?
+              Find one evaluative word or phrase (like "neon is my heart" or
+              "that's really satisfying") that signals Kirkman's opinion
+              without him saying "I like this best." What is it, and what
+              does it signal?
               <span class="ans-line"></span>
             </div>
           </li>
@@ -716,11 +619,11 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              List two stated facts (like "over a million soldiers trained in
-              Arizona in the 1940s" or "Haver homes are affordable and easy to
-              customize") and two clearly-signaled evaluative comments (like
-              "architecture is shelter... a symbol of who we are as humans" or
-              "beholden to honor it"). Keep the two lists separate.
+              List two stated facts (like "a transformer sends 22,000 volts
+              through the tube" or "there are about 140 possible colors") and
+              two clearly-signaled evaluative comments (like "I love the aha
+              moment" or "that's really satisfying"). Keep the two lists
+              separate.
               <span class="ans-line"></span>
               <span class="ans-line"></span>
             </div>
@@ -728,10 +631,9 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Find one clear tonal shift in the segment (from a practical,
-              economic tone about growth and cost to a more personal,
-              historically-weighted tone about old property covenants). Describe
-              what changes in the language at that shift.
+              Find one clear tonal shift in the video (from technical,
+              process-focused explanation to a more personal, reflective
+              tone). Describe what changes in the language at that shift.
               <span class="ans-line"></span>
             </div>
           </li>
@@ -744,27 +646,26 @@
           <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
         </p>
         <p class="task-instr">
-          This task compares two real sources: the PBS video, and a heritage
-          archive page about one specific home.
+          This task compares two real sources: the video profile, and Wil
+          Kirkman's own words in a written interview.
         </p>
         <div class="match-list">
           <div class="match-row">
-            <span class="match-label">The TV Reporter's Version (PBS)</span>
+            <span class="match-label">The Video Profile's Version</span>
             <span
-              >A wider, multi-voice human-interest story about Phoenix's
-              preservation movement as a whole, featuring several speakers who
-              sometimes disagree.</span
+              >An observational, in-process portrait: Kirkman is "nearly the
+              last neon glass bender" in the state, shown making one object
+              start to finish, framed around craft heritage and
+              preservation.</span
             >
           </div>
           <div class="match-row">
-            <span class="match-label"
-              >The Archive's Version (Modern Phoenix, Beadle Archive)</span
-            >
+            <span class="match-label">In His Own Words (Written Interview)</span>
             <span
-              >A close, technical description of one specific endangered home,
-              the White Gates Residence - its "floating rectangle" form, its
-              custom screen wall, and its description as "probably Beadle's most
-              instagrammed architecture."</span
+              >A first-person reflection: everything is done by hand, with
+              "no jigs, no troughs, no help," and he makes art because he
+              wants to, saying he doesn't care whether people like it or
+              not.</span
             >
           </div>
         </div>
@@ -772,9 +673,9 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              How does the archive page's description of one home differ from
-              how the PBS segment describes Phoenix's preservation movement as a
-              whole?
+              How does Kirkman's own first-person framing in the written
+              interview differ in tone and focus from how the video profile
+              frames the same craft?
               <span class="ans-line"></span>
               <span class="ans-line"></span>
             </div>
@@ -782,8 +683,8 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Identify one unstated interest or assumption behind one of the two
-              framings.
+              Identify one unstated interest or assumption behind one of the
+              two framings.
               <span class="ans-line"></span>
             </div>
           </li>
@@ -799,9 +700,9 @@
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">
-            With a partner, say the general claim the speaker makes and the
-            specific example she gives to support it. Write both below before
-            you check the script.
+            With a partner, say the signpost phrase you heard and what it
+            signaled was coming next. Write both below before you check the
+            script.
             <span class="ans-line"></span>
             <span class="ans-line"></span>
           </div>
@@ -810,57 +711,57 @@
 
       <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
       <p class="instr" style="font-style: italic; margin-bottom: 6px">
-        This is printed upside-down on purpose. Don't turn the page around until
-        you've said and written your answer above.
+        This is printed upside-down on purpose. Don't turn the page around
+        until you've said and written your answer above.
       </p>
       <div class="refresher refresher-noline upside-down">
         <p>
-          My grandfather's old fishing cabin sits on a lake two hours north of
-          here. Small mid-century buildings like his hold a lot of local
-          history, and the town recently put it on the local historic register
-          because of that. Take my grandfather's cabin, for example: it's one of
-          the last buildings left with the original covenant still in its deed,
-          and inside it's still a small trove of old fishing gear and
-          photographs from the 1950s. My uncle wasn't thrilled about the
-          paperwork, but he says he feels beholden to preserve it anyway, for my
-          grandmother's sake.
+          An old-fashioned jukebox restorer has worked in her trade for over
+          fifteen years. You would think the hardest part is polishing the
+          wooden case, but actually, it's rebuilding the wiring inside. She
+          replaces the transformer that has weakened with age, and
+          reconnects every wire into one working circuit. Before that, she
+          strips away a cracked coating of old varnish, careful not to let
+          the cleaning solvent vaporize too quickly in the summer heat. Any
+          leftover impurity in a single solder joint can stop the whole
+          machine from lighting up again.
         </p>
       </div>
 
       <div class="masthead masthead-later">
-        <h1>Unit 2B: Living Textbooks</h1>
+        <h1>Unit 4B: The Last Glass Bender</h1>
       </div>
 
       <p class="objective">
-        <strong>Objective:</strong> summarize what someone said, taking a
-        person's point and restating it in your own words, shorter and clearer.
+        <strong>Objective:</strong> compare two things clearly, saying how
+        they're alike or different and which one you prefer, and why.
       </p>
 
       <div class="section-title">Learn the Phrase</div>
       <div class="spotlight-box">
-        <div class="spotlight-label">Summarizing What Someone Said</div>
+        <div class="spotlight-label">Making Comparisons</div>
         <p class="model-step">
-          The video opens with a line that compresses an entire community debate
-          into its two core positions:
+          In the video, Wil Kirkman compares neon signs to LEDs: "When I
+          first started, illuminated signs were all neon. And now it's LEDs,
+          and they don't have that warm glow that reaches out to you and
+          sucks you in. I'm not dissing LEDs, they have their place. But neon
+          is my heart."
         </p>
         <p class="model-step">
-          <strong>Real words from the video:</strong> "Some see older buildings
-          as revered artifacts that have stood the test of time. Others see them
-          as occupying sites that could be used for new development."
-        </p>
-        <p class="model-step">
-          Now it's your turn. In the tasks below, you'll practice summarizing
-          using frames like these:
+          Now it's your turn. In the tasks below, you'll practice making
+          comparisons using frames like these:
         </p>
         <ul class="qlist">
           <li>
-            <span class="num">&bull;</span> "Basically, ___ is saying that ___."
+            <span class="num">&bull;</span> "Unlike ___, ___ actually ___."
           </li>
           <li>
-            <span class="num">&bull;</span> "In other words, ___ thinks ___."
+            <span class="num">&bull;</span> "___ has its place, but ___ is
+            what I really ___."
           </li>
           <li>
-            <span class="num">&bull;</span> "To sum up what ___ said, ___."
+            <span class="num">&bull;</span> "Compared to ___, ___ is more
+            ___ because ___."
           </li>
         </ul>
       </div>
@@ -877,14 +778,14 @@
           <span class="stars">&#9733;</span>
         </p>
         <p class="task-instr">
-          Complete the sentence below using one interviewee's real quote and a
-          familiar idea.
+          Complete the sentence below using a familiar idea from the video.
         </p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              "Basically, ___ is saying ___." <span class="ans-line"></span>
+              "Unlike ___, neon signs actually ___."
+              <span class="ans-line"></span>
             </div>
           </li>
         </ol>
@@ -899,7 +800,7 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Give an extended summary of one speaker's overall position,
+              Give an extended description of Kirkman's studio or process,
               organizing your details and including one evaluative word.
               <span class="ans-line"></span><span class="ans-line"></span>
             </div>
@@ -916,9 +817,10 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Summarize two different speakers' positions, explicitly noting
-              where they disagree, shifting your tone once between the two
-              summaries (more measured for one side, warmer for the other).
+              Describe Kirkman's craft in a fluent, connected way, explaining
+              why one feature (the flow state he describes, the century-old
+              technique, the finished sign "coming alive") matters, and
+              shifting your tone once in response to a partner's reaction.
               <span class="ans-line"></span><span class="ans-line"></span>
             </div>
           </li>
@@ -934,9 +836,9 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Summarize a speaker's position using idiomatic phrasing, then
-              deliberately self-correct one word choice mid-sentence, the way a
-              fluent speaker repairs themselves in real time.
+              Describe Kirkman's craft using idiomatic phrasing, then
+              deliberately self-correct one word choice mid-sentence, the way
+              a fluent speaker repairs themselves in real time.
               <span class="ans-line"></span><span class="ans-line"></span>
             </div>
           </li>
@@ -946,43 +848,42 @@
       <div class="spotlight-box">
         <div class="spotlight-label">Say It Like a Native Speaker</div>
         <p class="model-step">
-          Contrast makes a sentence land. Practice this real line from the
-          video: "Some see older buildings as revered artifacts... others see
-          them as occupying sites that could be used for new development."
-          Stress "revered artifacts" and "new development" harder than the rest
-          of the sentence, since the contrast between them is the whole point.
+          Fluent speakers stress the exact word being contrasted, and say the
+          rest of the sentence more quickly and lightly. Practice this real
+          comparison line, stressing the capitalized words: "I'm not
+          DISSING LEDs, they have their place. But NEON is my HEART."
         </p>
       </div>
 
       <div class="section-title">Discuss It</div>
       <div class="discuss-block">
         <p class="instr">
-          Get into a small group. Your group will get one question below. Take
-          turns discussing it out loud, using a starter phrase from the list.
-          While your group talks, keep a tally: how many times does someone
-          summarize what another person said?
+          Form two circles, an inner circle facing out and an outer circle
+          facing in, with one partner across from you. Compare Kirkman's
+          neon craft to a modern technology that could replace it, then
+          rotate to a new partner and try a new comparison.
         </p>
 
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">
-            Should the city require owners to preserve buildings like White
-            Gates, even if the owner wants to tear it down?
+            Compare neon signs to LEDs or digital signage. Which would you
+            prefer, and why?
           </div>
         </div>
         <div class="qitem">
           <span class="num">2.</span>
           <div class="qbody">
-            Millsap says preservation rules can raise housing prices. Is that a
-            good enough reason to allow demolition?
+            Compare old, handmade craft skills in general to fast,
+            mass-produced work. Which matters more to you, and why?
           </div>
         </div>
         <div class="qitem">
           <span class="num">3.</span>
           <div class="qbody">
-            Compare the PBS segment and the Modern Phoenix archive page. Which
-            description makes you care more about saving a building like White
-            Gates, and why?
+            Compare Kirkman's slow, careful process to a faster way the same
+            sign could be made today. What would be gained, and what would
+            be lost?
           </div>
         </div>
 
@@ -991,19 +892,20 @@
         </p>
         <ul class="stems">
           <li>
-            <span class="stars">&#9733;</span> "Basically, ___ is saying ___."
+            <span class="stars">&#9733;</span> "Unlike ___, ___ actually
+            ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;</span> "In other words, ___
-            thinks ___."
+            <span class="stars">&#9733;&#9733;</span> "___ has its place, but
+            ___ is what I really ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;</span> "To sum up what ___
-            said, ___."
+            <span class="stars">&#9733;&#9733;&#9733;</span> "Compared to
+            ___, ___ is more ___ because ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "If I'm
-            hearing you right, you're saying ___."
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I'm not
+            dissing ___, but ___ is what I really ___."
           </li>
         </ul>
       </div>
@@ -1011,18 +913,19 @@
       <div class="section-title">Wrap It Up</div>
       <div class="wrapup">
         <p class="instr">
-          With a partner, summarize their opinion on a new topic unrelated to
-          today's video (a class rule, a neighborhood change, a school policy),
-          using this unit's frames.
+          With a partner, compare two ways of doing something you do often
+          (texting versus calling a friend, cooking at home versus ordering
+          food), stating a preference and a reason, using this unit's
+          frames.
         </p>
         <ul class="stems">
           <li>
-            <span class="stars">&#9733;&#9733;</span> "Basically, ___ is saying
-            ___."
+            <span class="stars">&#9733;&#9733;</span> "Unlike ___, ___
+            actually ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "To sum up
-            what you said, ___."
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "Compared
+            to ___, ___ is more ___ because ___."
           </li>
         </ul>
       </div>

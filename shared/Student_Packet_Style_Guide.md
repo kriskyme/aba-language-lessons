@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.2)
+# Student Packet Style Guide (v1.6)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -113,6 +113,13 @@ h3 {
 .masthead.masthead-later {
   margin-top: 60px;
 }
+.masthead-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  margin-top: 4px;
+}
 .masthead-tag {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 12px;
@@ -121,7 +128,6 @@ h3 {
   text-transform: uppercase;
   color: var(--ink);
   white-space: nowrap;
-  margin-top: 4px;
 }
 
 .objective {
@@ -246,6 +252,25 @@ p {
   font-family: Georgia, serif;
   font-weight: 700;
   font-style: italic;
+}
+
+.idiom-list {
+  margin: 10px 0 6px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+.idiom-list .irow {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule-light);
+}
+.idiom-list .irow:last-child {
+  border-bottom: none;
+}
+.idiom-list .irow .idiom-phrase {
+  width: 180px;
+  flex-shrink: 0;
 }
 
 .annot-key {
@@ -520,12 +545,27 @@ p {
 ```
 
 The document's opening masthead (only - never a later `.masthead.masthead-later` heading) includes
-exactly one `<span class="masthead-tag">` alongside the `h1`, holding that modality's plain class
-label (`Reading`, `Listening & Speaking`, or `Writing` - see each lesson type's own Student Packet
-prompt §2.4 for which one). This is a distinct, newly-defined element for a specific purpose (a
-quick visual identifier for whoever is handling the printed packet), not a revival of `.kicker` or
-`.sub`: those belonged to a masthead subtitle line no current lesson type's Section 2 uses, and a
-fresh document should still not define or carry them forward.
+a `<div class="masthead-meta">` alongside the `h1`, holding exactly two stacked
+`<span class="masthead-tag">` lines, in this order:
+
+1. That modality's plain class label (`Reading`, `Listening & Speaking`, or `Writing` - see each
+   lesson type's own Student Packet prompt §2.4 for which one).
+2. The lesson's Band and its version code, combined as one space-separated string:
+   `<Band> S<Set>.<Lesson>.<Iteration>` (e.g. `Advanced S1.1.0`). Band is plain language
+   (`Beginner`, `Intermediate`, `Advanced`, or `Proficient`); the version code format is defined in
+   `Program_Conventions.md` §G - the lesson number in it is the global one from
+   `Program_Conventions.md` §C, not restarted per Set.
+
+This is a distinct, newly-defined element for a specific purpose (a quick visual identifier for
+whoever is handling the printed packet, and at-a-glance proof of which revision they're holding),
+not a revival of `.kicker` or `.sub`: those belonged to a masthead subtitle line no current lesson
+type's Section 2 uses, and a fresh document should still not define or carry them forward. This
+lifts the original v1.1 rule ("no Level/Band" on the tag) now that Band and version are load-bearing
+information for telling two packets of the same lesson apart, not decorative kicker text.
+
+Going-forward convention only: a packet already generated before this two-line block existed is
+not retroactively updated - it keeps whatever masthead it already has (a bare title, a single
+modality-only tag, or nothing) until it is next regenerated or revised anyway.
 
 ## C. HTML markup conventions
 
@@ -585,5 +625,5 @@ shared file (updating it for every modality at once), not as a modality-local ov
 
 ## Changelog
 
-**Current version: v1.2.** For the full dated version history and the reasoning behind each
+**Current version: v1.6.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

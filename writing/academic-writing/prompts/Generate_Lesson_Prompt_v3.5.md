@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v3.4)
+# Academic Writing Lesson Generation Prompt (v3.5)
 
 **Lesson type:** this prompt generates an **Academic Writing Lesson**, the Writing-modality counterpart to the
 existing Passage Reading Lesson. Where Passage Reading is a fixed 2-day cycle built around one shared anchor
@@ -36,8 +36,13 @@ student output exist to check them against, the same way Reading's Level 3 ceili
 separate rounds of coming in short. The move to 8 days does not raise these ceilings; the CSV still governs the
 size of the student product, and extra days buy depth of instruction and revision time, not a bigger target.
 
-**Current version: v3.4.** For the full dated version history and the reasoning behind each change, see
+**Current version: v3.5.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
+
+**Lesson header metadata (added v3.5):** directly under the generated document's H1, include a metadata line
+stating `**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per
+`shared/Program_Conventions.md` §G (today's Writing Set is 1 lesson, per `Index.md`'s aspirational Sets note;
+iteration `0` on first generation).
 
 ---
 

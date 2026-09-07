@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v2.7, Band-Calibrated)
+# Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated)
 
 **Lesson type:** this prompt generates a **Passage Reading Lesson** - a fixed 2-day cycle built around one shared
 anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is renamed from "Reading
@@ -14,13 +14,17 @@ paragraph lettering with contextual footnotes). v2.5 replaces the fixed two-leve
 differentiation model with a band-scoped set of same-modality Reading tasks, sized and pinned per band, and
 drops "Level" as a separate request input.
 
-**Current version: v2.7.** For the full dated version history and the reasoning behind each change, see
+**Current version: v2.8.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 **Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
 generating. §E's CBI/TBLT framework applies here with reading as the content vehicle: treat the anchor text as a
 tool to explore real-world ideas and build critical thinking, allowing language acquisition to occur naturally
 through meaningful communication.
+
+**Lesson header metadata (added v2.8):** directly under the generated document's H1, include a metadata line
+stating `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` -
+the version code per `Program_Conventions.md` §G (global lesson number, iteration `0` on first generation).
 
 This version carries mandatory text-complexity calibration (Section 0) on top of the existing 2-day structure.
 Complexity calibration is a hard constraint: if a generated text or task exceeds the target band's ceiling below, it

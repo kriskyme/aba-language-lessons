@@ -1,13 +1,13 @@
-# Academic Writing Student Print Formatting Prompt (v1.4)
+# Academic Writing Student Print Formatting Prompt (v1.6)
 
-Companion to the Academic Writing Lesson Generation Prompt (v3.4). Takes one completed Academic Writing lesson (an
+Companion to the Academic Writing Lesson Generation Prompt (v3.5). Takes one completed Academic Writing lesson (an
 8-day cycle) and produces a set of print-ready, black-and-white student handouts for it: one **Lesson Introduction
 Page**, plus one **Unit** per day (Units 1-8, one source lesson day each), each its own self-contained HTML
 document. Every piece of teacher-facing pedagogical language is translated into plain instructions a student (or
 a parent glancing at the page) can act on without decoding jargon like "Focus A," "the Leveled Mentor Ladder," "task
 Level," or "board-dependent moment."
 
-**Current version: v1.4.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.6.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 **Units, not segments:** Passage Reading lessons are a fixed 2-day cycle, so its print prompt
@@ -157,17 +157,20 @@ left-aligned. Where a continuation applies (2.1), the heading reads "Unit Na: Ti
 lettering starts fresh at Task A within each Unit file (each file is now fully self-contained, covering exactly
 one source day), rather than continuing across files.
 
-### 2.4 Modality label, top-right; no other kicker lines or metadata fields
+### 2.4 Modality/Band/Version stack, top-right; no other kicker lines or metadata fields
 
 Every file's single masthead - the Lesson Introduction Page and every Unit file alike, since each is handed out
-and handled as its own standalone packet - carries a `.masthead-tag` span reading exactly `Writing`, alongside
-the `h1`, per `shared/Student_Packet_Style_Guide.md` §B. Nothing else: no Level/Band, no "Class" or "Packet"
-suffix.
+and handled as its own standalone packet - carries a `.masthead-meta` block, alongside the `h1`, per
+`shared/Student_Packet_Style_Guide.md` §B: two stacked `.masthead-tag` lines, the first reading exactly
+`Writing`, the second combining this lesson's Band and its version code as one string
+(`<Band> S<Set>.<Lesson>.<Iteration>` per `shared/Program_Conventions.md` §G - see that lesson type's own
+`Index.md`/aspirational Set note, since Writing has not yet adopted the Set folder convention on disk).
+Nothing else on that stack: no "Class" or "Packet" suffix.
 
-Beyond that one tag, do not include: a Name/Date field, a subject/module/band kicker line under the title (e.g.
+Beyond that one block, do not include: a Name/Date field, a subject/module kicker line under the title (e.g.
 "Writing Packet · Describing"), a subtitle line under any heading, or a footer note at the bottom of the
-document. The title, its `.masthead-tag`, and the objective statement are the only material above the first
-section, on both the Lesson Introduction Page and every Unit.
+document. The title, its `.masthead-meta` block, and the objective statement are the only material above the
+first section, on both the Lesson Introduction Page and every Unit.
 
 ### 2.5 Section and task labeling
 
@@ -341,9 +344,10 @@ inventing new decorative structure.
 - Does this unit reprint, for itself, whatever shared reference material (Word Bank, comparison table, picture)
   its own day's activities actually need, rather than assuming the Lesson Introduction Page or an earlier unit is
   also in hand?
-- Does this file's masthead carry a `.masthead-tag` reading exactly "Writing" (no Level/Band, no "Class" or
-  "Packet" suffix)? Beyond that tag, are there no Name/Date fields, no module/band kicker line, no subtitle
-  lines, and no footer note?
+- Does this file's masthead carry a `.masthead-meta` block with two stacked tags - "Writing," then this
+  lesson's Band and its `S<Set>.<Lesson>.<Iteration>` version code combined as one string? Beyond that block,
+  are there no Name/Date fields, no
+  subject/module kicker line, no subtitle lines, and no footer note?
 - Are all exercises labeled with letters ("Task A," "Task B"...) rather than "Exercise" or "Activity," with labels
   inline with their instruction text?
 - Do differentiated tasks show only filled stars (★ up to ★★★★), with no numeric Level, no regime language, no

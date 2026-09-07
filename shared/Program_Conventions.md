@@ -1,4 +1,4 @@
-# Program Conventions (v1.1)
+# Program Conventions (v1.2)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -159,6 +159,34 @@ against a bare Module/Band request instead stays a flat chronological table (Aca
 today). As of the per-Band split (see each lesson type's own `Rotation_Log.md`), a lesson type's
 "Rotation Log" is an overview file plus one file per Band that has entries — see that overview for
 the current file list and the rule for when a new Band's file gets created.
+
+## G. Lesson version numbers
+
+Every individual Lesson document and its student packet carries a version code,
+`S<Set>.<Lesson>.<Iteration>`, distinct from the "vX.Y" numbers used elsewhere in this repo (those
+version the *generation prompt files* themselves, e.g. `Generate_Lesson_Prompt_v2.7.md`, tracked in
+each lesson type's own `Changelog.md` - a separate axis from an individual lesson's own content
+version).
+
+- `<Set>` is the Set the lesson belongs to (see §C).
+- `<Lesson>` is that lesson's **global** lesson number (§C's continuing numbering across Sets - Set
+  2's first lesson is Lesson 5, not Lesson 1), not its position within the Set. This keeps the
+  version consistent with the one lesson-numbering scheme the program already uses everywhere else.
+- `<Iteration>` starts at `0` when a lesson is first generated and saved, and increments by 1 each
+  time that specific lesson's content is substantively revised afterward (e.g. after it's been
+  taught and a revision pass changes it) - tracked **per lesson**, not per Set, so two lessons in
+  the same Set can sit at different iterations if only one of them was revised.
+
+Example: Set 1's four lessons start at `S1.1.0`, `S1.2.0`, `S1.3.0`, `S1.4.0`; if Lesson 2 is later
+revised after being taught, it becomes `S1.2.1` while its Set-mates stay at their original iteration.
+
+Applies to individual Lesson docs/packets only - not Module Lesson-Plans or Assessments. A lesson
+type's own Rotation Log (§F) is the source of truth for a lesson's current version (see each
+`Rotation_Log_<Band>.md`'s lesson table); the Markdown lesson doc and its HTML student packet each
+restate it (see `Student_Packet_Style_Guide.md` §B for the packet masthead's version line).
+
+This is a going-forward convention: a Set planned before this section existed doesn't get a version
+retrofitted onto it, and its Rotation Log table is not restructured to add one.
 
 ## Changelog
 
