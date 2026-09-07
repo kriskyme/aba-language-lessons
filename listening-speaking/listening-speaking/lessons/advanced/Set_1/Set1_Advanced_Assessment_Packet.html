@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 1 Set 1 Assessment: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        min-width: 130px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      /* One printed page per task Level, for selective distribution/printing */
+      .level-page {
+        page-break-before: always;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .task-block,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Listening Test: Module 1 Set 1 Assessment</h1>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll watch:</strong> "Artists with disabilities let their
+        creativity soar at this Utah studio," a PBS News Weekend video about
+        an art studio in Utah that builds custom tools to help artists with
+        disabilities make their own art.
+      </div>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. contraption</span
+          ><span>an unusual or elaborate machine or gadget, often homemade</span>
+        </div>
+        <div class="vrow">
+          <span class="word">2. haven</span
+          ><span>a place of safety, comfort, or refuge</span>
+        </div>
+        <div class="vrow">
+          <span class="word">3. reckon with</span
+          ><span>to deal with or come to terms with something difficult</span>
+        </div>
+        <div class="vrow">
+          <span class="word">4. bane</span
+          ><span>a persistent source of annoyance or trouble</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. underdog</span
+          ><span>someone expected to lose, or seen as at a disadvantage</span>
+        </div>
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you watch, fill in what you learn about Jump the Moon below.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>&nbsp;</th>
+          <th>Your Notes</th>
+        </tr>
+        <tr>
+          <td>What the studio does</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A real example (a tool, or something a person made)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>An opinion or feeling someone expressed (and who said it)</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;</div>
+        <p class="task-instr">Answer each question below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-3 sentences, describe what Jump the Moon is and who it
+              helps.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Name one tool used at Jump the Moon and explain, in your own
+              words, why it was made that way.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              How is the painting pendulum different from a regular
+              paintbrush? Write one difference, using a word like "unlike" or
+              "instead of."
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Complete: "When Bingham's art room got too crowded, he decided
+              to ___."
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">5.</span>
+            <div class="qbody">
+              Do you think Bingham enjoys his work? Circle: yes / no. Give one
+              reason.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;</div>
+        <p class="task-instr">Answer each question below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Summarize how the video is organized (Bingham's approach, the
+              tools, two artists' stories, Bingham's own background, the
+              ending). Name at least two words or phrases that show when the
+              video moves to a new part.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one word or phrase Lori Jenson or Paul Prendergast uses
+              that shows they feel good about Jump the Moon, without saying
+              "I like it." Write it, and explain what feeling it shows.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Give one real example of a tool from the video and explain why
+              it helps the artist who uses it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Explain how Bingham's own childhood experience connects to why
+              he started Jump the Moon.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;&#9733;</div>
+        <p class="task-instr">Answer each question below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              List two facts about Jump the Moon (things that are just true)
+              and two opinions someone expresses about it (things that show a
+              feeling). Write the exact words used for each opinion.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Explain how Bingham's own experience as a child connects to how
+              he teaches today. Write the exact words that show the
+              connection.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find one place where the video shifts from one artist's story
+              to another. Write the words that show the shift, and explain
+              what changes.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="level-page">
+        <div class="section-title">Listening Test: &#9733;&#9733;&#9733;&#9733;</div>
+        <div class="citebox">
+          <strong>You'll also read:</strong> a short written page about Jump
+          the Moon from the Utah Division of Arts &amp; Museums, a state
+          government arts office.
+        </div>
+        <p class="task-instr">Answer each question below.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Compare how the video and the written page each describe
+              Michael Bingham. What does each one focus on? How does that
+              change your impression of him?
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              What is one thing either source might want you to think, even
+              though it never says so directly? Explain your reasoning.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find one place in the video where a word or phrase signals a
+              shift between ideas, and one place where the video explains
+              that one thing caused another. Explain how noticing both helped
+              you follow the video.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Speaking Task: Module 1 Set 1 Assessment</h1>
+      </div>
+
+      <p class="objective">
+        <strong>Topic:</strong> describe a workspace or creative space that
+        matters to you (your own, or one you know well because someone
+        described it to you), comparing it to a more ordinary version of that
+        kind of space, and giving your honest opinion of it without stating
+        that opinion outright.
+      </p>
+
+      <p class="instr">
+        Present this live in class on the date your teacher gives you. If
+        your teacher assigns you the recorded version instead, record
+        yourself using Microsoft Teams Speaking Progress and submit by the
+        date given. You may re-record as many times as you want before you
+        submit.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Target length: 45-60 seconds recorded, about 60-75 seconds live.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe a workspace or creative space you know well, in your
+              own words.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Compare it to a more typical version of that kind of space.
+              Give a short reason for the comparison.
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Present on:</strong> [teacher-set date], or
+          <strong>submit by:</strong> [teacher-set date] using Teams Speaking
+          Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Target length: 60-90 seconds recorded, about 90 seconds live.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Give an organized description of a workspace or creative space
+              you know well: what it's for, what's inside, and who uses it.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Use at least one word that shows what you think of it, without
+              saying your opinion directly.
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Present on:</strong> [teacher-set date], or
+          <strong>submit by:</strong> [teacher-set date] using Teams Speaking
+          Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Target length: 90-120 seconds recorded, about 2 minutes live.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe a workspace or creative space, moving between its
+              features and why each one matters. Explain clearly why at
+              least one feature matters.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Imagine your listener looks unsure partway through. Describe
+              how you would change your approach. Use words like "seems to,"
+              "tends to," or "in a way" instead of stating your opinion
+              directly.
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Present on:</strong> [teacher-set date], or
+          <strong>submit by:</strong> [teacher-set date] using Teams Speaking
+          Progress.
+        </div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Speaking Task</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Target length: 120-150 seconds recorded, about 2-3 minutes live.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe a workspace or creative space, choosing which details
+              to focus on so your listener gets a specific impression of it.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Catch yourself using the wrong word at least once, and fix it
+              as you keep talking.
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              If you're describing a space you haven't visited yourself,
+              include a moment where you retell, in your own words, what
+              someone else told you about it.
+            </div>
+          </li>
+        </ol>
+        <div class="wordbank">
+          <strong>Present on:</strong> [teacher-set date], or
+          <strong>submit by:</strong> [teacher-set date] using Teams Speaking
+          Progress.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

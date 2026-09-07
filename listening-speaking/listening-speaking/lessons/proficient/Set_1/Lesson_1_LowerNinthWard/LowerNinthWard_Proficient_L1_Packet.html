@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Great-Grandmother Learns English: Student Packet</title>
+    <title>Mixed Blessing: Student Packet</title>
     <style>
       :root {
         --ink: #000000;
@@ -207,36 +207,26 @@
         min-width: 130px;
       }
 
-      .idiom-item {
-        margin-bottom: 10px;
+      .idiom-list {
+        margin: 10px 0 6px;
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 14px;
       }
-      .idiom-item:last-child {
-        margin-bottom: 0;
+      .idiom-list .irow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
       }
-      .idiom-phrase {
+      .idiom-list .irow:last-child {
+        border-bottom: none;
+      }
+      .idiom-list .irow .idiom-phrase {
+        width: 180px;
+        flex-shrink: 0;
         font-family: Georgia, serif;
         font-weight: 700;
         font-style: italic;
-      }
-
-      .image-placeholder {
-        border: 2px dashed var(--ink);
-        padding: 44px 20px;
-        text-align: center;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13px;
-        color: var(--ink-soft);
-        margin: 14px 0 4px;
-      }
-      .image-caption {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 12px;
-        font-style: italic;
-        color: var(--ink-soft);
-        text-align: center;
-        margin: 0 0 20px;
       }
 
       .qlist {
@@ -256,11 +246,6 @@
         flex-shrink: 0;
         width: 20px;
       }
-      .qlist .blank {
-        display: inline-block;
-        border-bottom: 1px solid var(--ink-soft);
-        min-width: 70px;
-      }
       .qitem {
         display: flex;
         gap: 10px;
@@ -275,42 +260,6 @@
         border-bottom: 1px solid var(--ink-soft);
         height: 22px;
         margin-top: 4px;
-      }
-      .ans-line-sm {
-        display: inline-block;
-        border-bottom: 1px solid var(--ink-soft);
-        width: 100%;
-        max-width: 320px;
-        height: 18px;
-        margin-top: 2px;
-      }
-
-      .pic-options {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin: 8px 0 4px 4px;
-      }
-      .pic-option {
-        width: 110px;
-      }
-      .pic-option .pic-box {
-        border: 2px dashed var(--ink);
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 10.5px;
-        color: var(--ink-soft);
-        padding: 6px;
-      }
-      .pic-option .pic-label {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 12.5px;
-        text-align: center;
-        margin-top: 5px;
       }
 
       .match-list {
@@ -332,12 +281,6 @@
       }
       .refresher.refresher-noline {
         border-bottom: none;
-      }
-      .refresher .headline {
-        font-size: 17px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        text-align: center;
       }
       .refresher p {
         font-size: 14.5px;
@@ -367,21 +310,6 @@
       }
       .task-block .instr-line .stars {
         margin-right: 8px;
-      }
-      .wordbank {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13px;
-        padding: 8px 0;
-        margin: 10px 0;
-        border-top: 1px dashed var(--rule-light);
-        border-bottom: 1px dashed var(--rule-light);
-      }
-      .task-block .starter {
-        font-style: italic;
-        padding: 8px 0 8px 14px;
-        margin: 10px 0;
-        border-left: 3px solid var(--ink);
-        font-size: 14px;
       }
 
       .discuss-block {
@@ -446,35 +374,6 @@
         height: 38px;
       }
 
-      .kwl-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 10px 0 20px;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13.5px;
-      }
-      .kwl-table th,
-      .kwl-table td {
-        border: 1px solid var(--rule);
-        padding: 8px 10px;
-        text-align: left;
-        vertical-align: top;
-        width: 33.33%;
-      }
-      .kwl-table th {
-        font-weight: 700;
-        background: #f2f2f2;
-      }
-      .kwl-table td {
-        height: 70px;
-      }
-      .kwl-table td.locked {
-        background: #f7f7f7;
-        color: var(--ink-soft);
-        font-style: italic;
-        font-size: 12px;
-      }
-
       .upside-down {
         transform: rotate(180deg);
       }
@@ -511,110 +410,136 @@
 
     <div class="sheet">
       <div class="masthead">
-        <h1>Unit 4A: Great-Grandmother Learns English</h1>
+        <h1>Unit 1A: Mixed Blessing: The Lower Ninth Ward</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Listening &amp; Speaking</span>
-          <span class="masthead-tag">Intermediate S1.4.0</span>
+          <span class="masthead-tag">Proficient S1.1.0</span>
         </div>
       </div>
 
       <p class="objective">
-        <strong>Objective:</strong> predict what comes next from context, notice
-        the details that confirm or correct your prediction, and compare two
-        time periods by naming a feature of each and a reason for the
-        difference.
+        <strong>Objective:</strong> notice when a speaker's word choice
+        reveals an opinion they never state directly, and compare two real
+        accounts of the same neighborhood's recovery.
       </p>
 
       <div class="spotlight-box">
         <div class="spotlight-label">Good to Know</div>
         <p class="model-step">
-          The Tokyo Olympics that Takamizawa hoped to volunteer at were
-          originally planned for 2020, but were delayed to 2021 because of the
-          COVID-19 pandemic.
+          Hurricane Katrina struck the U.S. Gulf Coast in August 2005; the
+          levee failures that followed flooded roughly 80 percent of New
+          Orleans, and the Lower Ninth Ward, a historically Black,
+          working-class neighborhood, was among the hardest-hit and
+          slowest-to-recover areas in the city.
         </p>
         <p class="model-step">
-          The EF English Proficiency Index, mentioned in this story, is a real
-          yearly ranking that compares how well people speak English in
-          different countries.
+          The Make It Right Foundation was a nonprofit founded in 2007 by
+          actor Brad Pitt to build affordable, storm-resistant homes for
+          displaced Lower Ninth Ward families. It is the organization behind
+          the "Make It Right" homes you'll hear named in today's segment.
         </p>
       </div>
 
       <div class="section-title">Before You Watch</div>
       <p class="instr">
-        Think about older family members learning something new. Fill in what
-        you already know and what you're curious about. You'll come back to
-        finish this later.
+        Read the statement below. Circle how much you agree, then write one
+        reason why.
       </p>
-      <table class="kwl-table">
-        <tr>
-          <th>What I Already Know</th>
-          <th>What I Want to Know</th>
-          <th>What I Learned</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td class="locked">Come back to this at the end of the unit.</td>
-        </tr>
-      </table>
+      <p class="instr" style="font-weight: 700; margin-bottom: 6px">
+        "A neighborhood's most important people are the ones who have lived
+        there the longest."
+      </p>
+      <p class="instr">
+        Strongly Agree &nbsp;&nbsp;/&nbsp;&nbsp; Agree
+        &nbsp;&nbsp;/&nbsp;&nbsp; Disagree &nbsp;&nbsp;/&nbsp;&nbsp; Strongly
+        Disagree
+      </p>
+      <span class="ans-line"></span>
 
       <p class="section-label">Words to Know</p>
       <div class="vocab-list">
         <div class="vrow">
-          <span class="word">1. grandmother</span
-          ><span>the mother of your father or mother</span>
+          <span class="word">1. displacement</span
+          ><span
+            >the forcing of people to leave their home or community, often
+            because of money or development pressure</span
+          >
         </div>
         <div class="vrow">
-          <span class="word">2. great-grandmother</span
-          ><span>the mother of one's grandmother or grandfather</span>
+          <span class="word">2. redevelopment</span
+          ><span
+            >the process of rebuilding or reorganizing an area, often after
+            damage or decline</span
+          >
         </div>
         <div class="vrow">
-          <span class="word">3. granddaughter</span
-          ><span>a daughter of your son or daughter</span>
+          <span class="word">3. investment</span
+          ><span
+            >money put into something, with the goal of improving or growing
+            it</span
+          >
         </div>
         <div class="vrow">
-          <span class="word">4. phrase</span
-          ><span>a group of two or more words that express one idea</span>
+          <span class="word">4. gentrification</span
+          ><span
+            >a process in which a lower-income neighborhood changes as
+            wealthier residents move in and prices rise</span
+          >
         </div>
         <div class="vrow">
-          <span class="word">5. challenge</span
-          ><span>a difficult task or problem</span>
+          <span class="word">5. newcomer</span
+          ><span>a person who has recently arrived or moved to a place</span>
         </div>
         <div class="vrow">
-          <span class="word">6. global</span
-          ><span>involving the entire world</span>
+          <span class="word">6. incentive</span
+          ><span
+            >something, often money or a tax benefit, offered to encourage a
+            particular action</span
+          >
+        </div>
+      </div>
+
+      <p class="section-label">Idioms to Know</p>
+      <div class="idiom-list">
+        <div class="irow">
+          <span class="idiom-phrase">1. mixed blessing</span
+          ><span
+            >something that has both good and bad results at the same time,
+            so it's hard to call it simply good or bad</span
+          >
         </div>
       </div>
 
       <div class="citebox">
-        <strong>You'll watch:</strong> "Great-Grandmother Proves It Is Never Too
-        Late to Learn," a video from VOA Learning English about a 91-year-old
-        woman learning English with her granddaughter's help so she can
-        volunteer at the Tokyo Olympics.
+        <strong>You'll watch:</strong> a PBS NewsHour segment, "Are newcomers
+        a mixed blessing for the Lower Ninth Ward?" (William Brangham,
+        correspondent; aired August 25, 2015), following one real New Orleans
+        neighborhood ten years after Hurricane Katrina.
       </div>
 
       <div class="section-title">Listening Notes</div>
       <p class="instr">
-        While you watch, fill in what you learn about English then and now.
+        While you watch, note who's speaking, their stake in the
+        neighborhood, and what they say or how they seem to feel.
       </p>
       <table class="notes-table">
         <tr>
           <th>&nbsp;</th>
-          <th>Then (WWII years)</th>
-          <th>Now (today)</th>
+          <th>Who's Speaking (Their Stake)</th>
+          <th>What They Say / How They Seem to Feel</th>
         </tr>
         <tr>
-          <td>Could she learn English?</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Who helps her?</td>
+          <td>A longtime resident</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td>Why does it matter to her?</td>
+          <td>A newcomer</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>An official</td>
           <td></td>
           <td></td>
         </tr>
@@ -631,54 +556,33 @@
           <span class="exercise-label">Task A</span>
           <span class="stars">&#9733;</span>
         </p>
-        <p class="task-instr">
-          Circle the correct answer for each question below.
-        </p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Who is this story about?
-              <div class="pic-options">
-                <div class="pic-option">
-                  <div class="pic-box">[ photo: a great-grandmother ]</div>
-                  <div class="pic-label">a great-grandmother</div>
-                </div>
-                <div class="pic-option">
-                  <div class="pic-box">[ photo: a teacher ]</div>
-                  <div class="pic-label">a teacher</div>
-                </div>
-                <div class="pic-option">
-                  <div class="pic-box">[ photo: a soccer team ]</div>
-                  <div class="pic-label">a soccer team</div>
-                </div>
-              </div>
+              Summarize how the segment is organized (post-Katrina rebuilding
+              and its numbers, then longtime residents' concerns, then newer
+              residents' perspective, then an official and an academic
+              voice).
+              <span class="ans-line"></span>
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Takamizawa wants to help at the (Olympics / hospital / bank).
+              Find one clearly evaluative word choice that signals a
+              speaker's opinion without them stating it directly. What is it,
+              and what does it signal?
+              <span class="ans-line"></span>
             </div>
           </li>
           <li>
             <span class="num">3.</span>
             <div class="qbody">
-              In World War Two, English was (banned / required / easy).
-            </div>
-          </li>
-          <li>
-            <span class="num">4.</span>
-            <div class="qbody">
-              Natsuko sends Takamizawa a new word every (day / month / year).
-            </div>
-          </li>
-          <li>
-            <span class="num">5.</span>
-            <div class="qbody">
-              What does Takamizawa say at the end of the story? ("It's good to
-              live long" / "I am tired" / "I want to stop"). Do you think she is
-              happy about her life? (yes / no)
+              Based on his words, does Rev. Calhoun sound hopeful or
+              discouraged about the neighborhood's recovery? Circle one and
+              quote the exact words that show it.
+              <span class="ans-line"></span>
             </div>
           </li>
         </ol>
@@ -689,43 +593,24 @@
           <span class="exercise-label">Task B</span>
           <span class="stars">&#9733;&#9733;</span>
         </p>
-        <p class="task-instr">
-          Circle the correct answer, or fill in the blank using the word bank
-          right above it.
-        </p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              This story is about (a young student, nervous / an old woman,
-              determined / a teacher, strict).
+              List two stated facts and two clearly-signaled evaluative
+              comments from the segment. Keep the two lists separate.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Who teaches Takamizawa new English words? (her granddaughter / her
-              doctor / her neighbor)
-            </div>
-          </li>
-          <li>
-            <span class="num">3.</span>
-            <div class="qbody">
-              <div class="wordbank">
-                <strong>Word bank:</strong> volunteer &middot; teacher &middot;
-                Olympics &middot; hospital
-              </div>
-              Takamizawa wants to be a ___ at the ___.
-            </div>
-          </li>
-          <li>
-            <span class="num">4.</span>
-            <div class="qbody">
-              <div class="wordbank">
-                <strong>Word bank:</strong> granddaughter &middot; teacher
-                &middot; neighbor &middot; boss
-              </div>
-              Natsuko is Takamizawa's ___ and main English ___.
+              Find one clear tonal shift in the segment (from the hopeful,
+              statistics-driven opening to the more skeptical, personal tone
+              of the residents' interviews). Describe what changes in the
+              language at that shift.
+              <span class="ans-line"></span>
             </div>
           </li>
         </ol>
@@ -736,13 +621,34 @@
           <span class="exercise-label">Task C</span>
           <span class="stars">&#9733;&#9733;&#9733;</span>
         </p>
+        <p class="task-instr">
+          This task compares two real sources: the news segment, and the Make
+          It Right Foundation's own stated mission.
+        </p>
+        <div class="match-list">
+          <div class="match-row">
+            <span class="match-label">The News Segment's Version</span>
+            <span
+              >A mixed, on-the-ground account: real investment and rebuilding
+              numbers, alongside longtime residents' concerns about lasting
+              economic development.</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">The Foundation's Own Words</span>
+            <span
+              >A promotional mission statement: a promise of "150 safe,
+              energy-efficient and affordable homes," each built to "Cradle
+              to Cradle" and LEED Platinum standards.</span
+            >
+          </div>
+        </div>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Name one feature of how the family is learning together, one
-              comparison to how Takamizawa could (or couldn't) learn English
-              when she was young, and the reason for the difference.
+              How does the foundation's own framing differ in tone and focus
+              from how the news segment frames the same recovery?
               <span class="ans-line"></span>
               <span class="ans-line"></span>
             </div>
@@ -750,31 +656,8 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Match each time period to what it meant for English in Japan.
-              <div class="wordbank">
-                <strong>Word bank:</strong> banned as the "enemy language"
-                &middot; welcomed and taught to children
-              </div>
-              <div class="match-list">
-                <div class="match-row">
-                  <span class="match-label">World War Two</span
-                  ><span class="ans-line"></span>
-                </div>
-                <div class="match-row">
-                  <span class="match-label">Today</span
-                  ><span class="ans-line"></span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <span class="num">3.</span>
-            <div class="qbody">
-              List two features of how the family is learning together, one
-              comparison to a more typical way an older adult might try to learn
-              a language, and the reason Takamizawa gives for wanting to learn
-              now.
-              <span class="ans-line"></span>
+              Identify one unstated interest or assumption behind one of the
+              two framings.
               <span class="ans-line"></span>
             </div>
           </li>
@@ -786,12 +669,17 @@
           <span class="exercise-label">Task D</span>
           <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
         </p>
+        <p class="task-instr">
+          Mayor Mitch Landrieu says: "If a neighborhood that got hit was
+          wealthier with insurance, it would be doing better."
+        </p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              In 2-4 sentences, summarize the story: who Takamizawa is, what
-              she's doing, and why.
+              Reconstruct both the surface content of this claim and what it
+              downplays or leaves unnamed. Compare it against Kim Ford's more
+              direct line about who developers market the rebuilt homes to.
               <span class="ans-line"></span>
               <span class="ans-line"></span>
             </div>
@@ -799,95 +687,88 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Summarize how the story is organized (the wish to volunteer,
-              family teaching, global perspectives, closing reflection) and note
-              the order the parts appear in.
-              <span class="ans-line"></span>
-              <span class="ans-line"></span>
-            </div>
-          </li>
-          <li>
-            <span class="num">3.</span>
-            <div class="qbody">
-              Find the line where Takamizawa says "It's good to live long." What
-              unstated feeling does this reveal about how she feels about her
-              life, even though she never says "I am grateful"?
+              Articulate how the specific words "insurance" and "wealthier"
+              keep the explanation in economic, technical terms rather than
+              naming the more sensitive dynamic Kim Ford's own words point to
+              directly.
               <span class="ans-line"></span>
             </div>
           </li>
         </ol>
       </div>
 
-      <div class="section-title">Show What You Noticed</div>
+      <div class="section-title">Show What You Heard</div>
       <div class="wrapup">
         <p class="instr">
-          <strong>Don't read ahead.</strong> Your teacher will read the start of
-          a short story out loud, then stop partway through.
+          <strong>Don't read ahead.</strong> Your teacher will read a short
+          paragraph out loud once.
         </p>
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">
-            When your teacher stops, predict with a partner what happens next.
-            Write your prediction below before your teacher continues.
+            With a partner, say what opinion the speaker implies and exactly
+            which words signal it (not what he says on the surface, but what
+            his word choice reveals). Write both below before you check the
+            script.
             <span class="ans-line"></span>
             <span class="ans-line"></span>
           </div>
         </div>
       </div>
 
-      <p class="section-label" style="margin-top: 20px">Check What Happens</p>
+      <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
       <p class="instr" style="font-style: italic; margin-bottom: 6px">
-        This is printed upside-down on purpose. Don't turn the page around until
-        you've made and written your prediction above.
+        This is printed upside-down on purpose. Don't turn the page around
+        until you've said and written your answer above.
       </p>
       <div class="refresher refresher-noline upside-down">
         <p>
-          Every Saturday, Diego visits his grandmother to help her use her new
-          phone. His great-grandmother lives with them too, and she loves to
-          watch. Diego's grandmother finds the phone a real challenge.
-        </p>
-        <p>
-          <strong>[Your teacher stops here the first time through.]</strong>
-        </p>
-        <p>
-          So he teaches her one new phrase every visit, like "Please repeat
-          that" and "Can you help me?" His little sister, a granddaughter who is
-          learning her own lessons at school, watches and takes notes too. Diego
-          says helping his family feel connected to the global world outside
-          makes him proud.
+          A small fishing village on the coast is changing quickly. City
+          leaders have offered tax incentives to a hotel company, hoping new
+          investment will fund the redevelopment of the old harbor. Several
+          newcomers have already bought vacation homes near the water. A
+          longtime fisherman just shrugs and says the harbor "doesn't feel
+          like home anymore, but I guess that's progress." Some worry this
+          kind of gentrification could lead, eventually, to the displacement
+          of the families who have fished here for generations.
         </p>
       </div>
 
       <div class="masthead masthead-later">
-        <h1>Unit 4B: Great-Grandmother Learns English</h1>
+        <h1>Unit 1B: Mixed Blessing: The Lower Ninth Ward</h1>
       </div>
 
       <p class="objective">
-        <strong>Objective:</strong> ask for clarification when you don't
-        understand something, using natural, polite phrases.
+        <strong>Objective:</strong> compare two things, time periods, or
+        perspectives clearly, saying how they're alike or different.
       </p>
 
       <div class="section-title">Learn the Phrase</div>
       <div class="spotlight-box">
-        <div class="spotlight-label">Asking for Clarification</div>
+        <div class="spotlight-label">Making Comparisons</div>
         <p class="model-step">
-          In this story, Natsuko sends her grandmother a new English word every
-          day, and they work on phrases together. Learning something new like
-          this means you'll sometimes need to ask someone to explain again.
+          The segment itself sets up a real comparison: the neighborhood's
+          population today is roughly half of what it was before Katrina,
+          even though more than $500 million in public and private
+          investment has reached it since. That same kind of gap sits behind
+          Keisha Henry's point that her family has been there ninety years,
+          while others are only just arriving.
         </p>
         <p class="model-step">
-          <strong>Example:</strong> "What does 'challenge' mean?" ... "Could you
-          say that again? I didn't catch it."
-        </p>
-        <p class="model-step">
-          Now it's your turn. In the tasks below, you'll practice asking for
-          clarification using frames like these:
+          Now it's your turn. In the tasks below, you'll practice making
+          comparisons using frames like these:
         </p>
         <ul class="qlist">
-          <li><span class="num">&bull;</span> "What does ___ mean?"</li>
-          <li><span class="num">&bull;</span> "Could you say that again?"</li>
           <li>
-            <span class="num">&bull;</span> "Sorry, could you repeat that?"
+            <span class="num">&bull;</span> "Unlike ___, ___ actually ___."
+          </li>
+          <li>
+            <span class="num">&bull;</span> "Compared to how it was, ___ is
+            now more ___, but ___."
+          </li>
+          <li>
+            <span class="num">&bull;</span> "On the surface, ___ looks like
+            ___, but underneath, ___."
           </li>
         </ul>
       </div>
@@ -903,27 +784,18 @@
           <span class="exercise-label">Task A</span>
           <span class="stars">&#9733;</span>
         </p>
-        <p class="task-instr">Complete each sentence below.</p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
-            <div class="qbody">What does ___ mean?</div>
-          </li>
-          <li>
-            <span class="num">2.</span>
-            <div class="qbody">Could you say that (again / fast / never)?</div>
-          </li>
-          <li>
-            <span class="num">3.</span>
             <div class="qbody">
-              Practice saying both frames above to a partner, using one of
-              today's vocabulary words.
+              Give an extended description contrasting the neighborhood right
+              after Katrina with the neighborhood today, including one
+              evaluative word choice that signals an opinion without stating
+              it outright.
+              <span class="ans-line"></span><span class="ans-line"></span>
             </div>
           </li>
         </ol>
-        <div class="starter">
-          "What does ___ mean?" &middot; "Could you say that again?"
-        </div>
       </div>
 
       <div class="task-block">
@@ -931,21 +803,14 @@
           <span class="exercise-label">Task B</span>
           <span class="stars">&#9733;&#9733;</span>
         </p>
-        <p class="task-instr">Complete the frame below.</p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              "Sorry, could you ___? I didn't ___."
-              <span class="ans-line"></span>
-            </div>
-          </li>
-          <li>
-            <span class="num">2.</span>
-            <div class="qbody">
-              Practice with a partner: one person says a target vocabulary word
-              quickly and quietly, the other asks for clarification and gets it
-              repeated clearly.
+              Describe the tension between longtime residents and newcomers,
+              explaining why one specific detail matters, and shifting your
+              tone once in response to a partner's reaction.
+              <span class="ans-line"></span><span class="ans-line"></span>
             </div>
           </li>
         </ol>
@@ -960,15 +825,10 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Write a short exchange where one person asks for clarification
-              about a new word and explains why they're confused.
+              Deliver a well-structured comparison of how the news segment
+              and the foundation's own description each emphasize different
+              details, self-correcting one imprecise word choice mid-delivery.
               <span class="ans-line"></span><span class="ans-line"></span>
-            </div>
-          </li>
-          <li>
-            <span class="num">2.</span>
-            <div class="qbody">
-              Perform the exchange with a partner, then switch roles.
             </div>
           </li>
         </ol>
@@ -983,17 +843,12 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Write an extended exchange that includes a polite hedge before
-              asking for clarification (for example, "I don't want to interrupt,
-              but...") without directly saying "I'm confused."
+              Describe the neighborhood's recovery first in official,
+              statistics-driven terms. When your partner asks a follow-up
+              question, shift to a more personal or critical register that
+              names something the statistics leave out, self-correcting one
+              word choice that proves inaccurate or misleading.
               <span class="ans-line"></span><span class="ans-line"></span>
-            </div>
-          </li>
-          <li>
-            <span class="num">2.</span>
-            <div class="qbody">
-              Ask a partner a genuinely difficult vocabulary word from a
-              different subject, then use your clarification frames for real.
             </div>
           </li>
         </ol>
@@ -1002,42 +857,42 @@
       <div class="spotlight-box">
         <div class="spotlight-label">Say It Like a Native Speaker</div>
         <p class="model-step">
-          Questions and statements sound different. Practice this real sentence
-          from the video: "Welcome to Tokyo, this is the Olympic stadium, how
-          can I help you?" Mark where the voice rises for the question and falls
-          for the statement parts.
+          Fluent speakers stress the exact word being contrasted, and say the
+          rest of the sentence more quickly and lightly. Practice this real
+          line, stressing the capitalized words: "Developers market these to
+          people NOT FROM this community, primarily WHITE people."
         </p>
       </div>
 
       <div class="section-title">Discuss It</div>
       <div class="discuss-block">
         <p class="instr">
-          Get into a small group. Your group will get one question below. Take
-          turns discussing it out loud, using a starter phrase from the list.
-          While your group talks, keep a tally: how many times does someone use
-          a clarification phrase like "What does ___ mean?" or "Could you say
-          that again?"
+          Town Hall: each person takes on one real stakeholder role from the
+          segment (a longtime resident, a newer resident, a community
+          organizer, a city official). Prompt: "What should come next for a
+          neighborhood recovering from disaster?" Take turns speaking, using
+          today's comparison frames and contrastive stress.
         </p>
 
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">
-            Do you think it's ever too late to learn something new? Why or why
-            not?
+            As your role, compare the neighborhood before and after the
+            disaster. What's better now, and what still needs work?
           </div>
         </div>
         <div class="qitem">
           <span class="num">2.</span>
           <div class="qbody">
-            What's one thing an older family member has taught you, or could
-            teach you?
+            Compare your role's view of "progress" to another role's view.
+            Where do they agree, and where do they disagree?
           </div>
         </div>
         <div class="qitem">
           <span class="num">3.</span>
           <div class="qbody">
-            If you were Takamizawa, what English phrase would you want to learn
-            first?
+            Compare what the official numbers show to what a longtime
+            resident actually experiences day to day.
           </div>
         </div>
 
@@ -1045,18 +900,21 @@
           Starter phrases:
         </p>
         <ul class="stems">
-          <li><span class="stars">&#9733;</span> "What does ___ mean?"</li>
           <li>
-            <span class="stars">&#9733;&#9733;</span> "Sorry, could you say that
-            again?"
+            <span class="stars">&#9733;</span> "Unlike ___, ___ actually
+            ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;</span> "I don't quite
-            understand ___. Could you explain?"
+            <span class="stars">&#9733;&#9733;</span> "Compared to how it
+            was, ___ is now more ___, but ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I don't
-            want to interrupt, but could you say more about ___?"
+            <span class="stars">&#9733;&#9733;&#9733;</span> "On the surface,
+            ___ looks like ___, but underneath, ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I used
+            to think ___, but now I'd say ___, well, actually ___."
           </li>
         </ul>
       </div>
@@ -1064,29 +922,21 @@
       <div class="section-title">Wrap It Up</div>
       <div class="wrapup">
         <p class="instr">
-          With a partner, pick something else you might need explained (a new
-          recipe, a video game, a school subject). Ask for clarification about
-          it, then answer.
+          With a partner, compare a place you used to know well (a childhood
+          neighborhood, a favorite shop, a hometown) to how it is today, or
+          how you imagine it might change in the future.
         </p>
         <ul class="stems">
           <li>
-            <span class="stars">&#9733;&#9733;</span> "What does ___ mean?"
+            <span class="stars">&#9733;&#9733;</span> "Unlike ___, ___
+            actually ___."
           </li>
           <li>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "Sorry,
-            could you explain ___? I want to make sure I understand before I try
-            it."
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "On the
+            surface, ___ looks like ___, but underneath, ___."
           </li>
         </ul>
       </div>
-
-      <p class="section-label" style="margin-top: 20px">
-        Finish the K-W-L Chart
-      </p>
-      <p class="instr">
-        Go back to the "What I Learned" column at the start of this packet and
-        fill it in now, as a class.
-      </p>
     </div>
   </body>
 </html>

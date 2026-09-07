@@ -8,7 +8,9 @@ Band is generated, mirroring how `Set_<N>/` folders are created lazily - see `sh
 
 **Current files:**
 - [`Rotation_Log_Intermediate.md`](Rotation_Log_Intermediate.md) - Module 1: Describing, Set 1 (generated), Set 2 (planned only)
-- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Module 1: Describing, Set 1 (complete, 4 of 4 lessons generated), Set 2 (planned only)
+- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Module 1: Describing, Set 1 (complete, 4 of 4 lessons generated, assessment generated), Set 2 (planned only)
+- [`Rotation_Log_Proficient.md`](Rotation_Log_Proficient.md) - Module 1: Describing, Set 1 (planned 2026-09-07; Lesson 1 of 4 generated) - first Set ever planned for this Band
+- [`Rotation_Log_Beginner.md`](Rotation_Log_Beginner.md) - Module 1: Describing, Set 1 (planned 2026-09-07, Lesson 1 generated, Lessons 2-4 planned only) - first Set ever planned for this Band
 
 **Read the relevant Band's file in full before planning a new Set** (per the Module Lesson-Plan Generation
 Prompt's Section 0); append to it (never overwritten) once a Set's plan is reviewed and approved.
@@ -63,9 +65,10 @@ task-Level tiered) and a per-Set Speaking assessment (Part B, mechanism split by
 default and formal assessment for Beginner/Intermediate, with a same-task teacher-approved live-delivery option;
 live presentation as the default for Advanced/Proficient, with a same-task Teams-recording alternate always also
 generated). First assessment generated 2026-09-04 against Module 1 Intermediate Set 1 - see
-`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`. Not yet run for Advanced Band; Advanced Set 1
-was completed 2026-09-07 (see `Rotation_Log_Advanced.md`), so an Advanced Set 1 assessment is now a logical
-next step, not yet started.
+`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`. Advanced Set 1 was completed 2026-09-07, and its
+assessment was generated 2026-09-07 too (see `Rotation_Log_Advanced.md`) - see
+`lessons/advanced/Set_1/Set1_Advanced_Assessment.md`. Both Set 1 assessments are now generated; neither has
+been field-tested with a real class yet.
 
 **Lesson version numbers introduced (2026-09-07).** Each Band file's lesson table now has a `Version` column
 (`S<Set>.<Lesson>.<Iteration>` - see `shared/Program_Conventions.md` §G) in its "Format for the next Set's

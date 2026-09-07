@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TOEFL Practice: The Lost Kitchen</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+      .task-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .mc-list {
+        margin: 8px 0 4px 30px;
+        padding-left: 0;
+        list-style: none;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .mc-list li {
+        margin-bottom: 6px;
+      }
+      .mc-letter {
+        font-weight: 700;
+        margin-right: 6px;
+      }
+
+      .time-list {
+        margin: 8px 0 4px;
+        padding-left: 0;
+        list-style: none;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .time-list li {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--rule-light);
+        padding: 7px 2px;
+      }
+      .time-list li:last-child {
+        border-bottom: none;
+      }
+      .time-list .time-window {
+        color: var(--ink-soft);
+        white-space: nowrap;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>TOEFL Practice: The Lost Kitchen</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking</span>
+          <span class="masthead-tag">Advanced S1.1.0</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Optional extension:</strong> this packet is TOEFL iBT-style
+        practice built from the same real source and topic as Lesson 1 (The
+        Lost Kitchen). It does not replace any part of the Day 1/Day 2 lesson,
+        which stays the same for every student. Estimated time: 20-25 minutes.
+      </p>
+
+      <div class="citebox">
+        <strong>Based on:</strong> the same PBS NewsHour segment on chef Erin
+        French and The Lost Kitchen used in Lesson 1.
+      </div>
+
+      <div class="section-title">Part A: TOEFL Listening Practice</div>
+      <p class="task-instr">Listen to an Academic Talk</p>
+      <p class="instr">
+        Your teacher or a partner will read a short talk aloud <strong>once</strong>,
+        from their own copy. You will not see the talk printed here and you
+        will not be able to hear it again, just like the real TOEFL Listening
+        section. Listen carefully, then answer the four questions below by
+        choosing the best answer for each.
+      </p>
+
+      <div class="task-block">
+        <ol class="qlist">
+          <li class="qitem">
+            <span class="num">1.</span>
+            <div class="qbody">
+              What is the talk mainly about?
+              <ul class="mc-list">
+                <li><span class="mc-letter">A.</span> The history of a small town in Maine</li>
+                <li><span class="mc-letter">B.</span> How a small-town restaurant became famous, and how its owner has tried to keep it feeling the same despite that growth</li>
+                <li><span class="mc-letter">C.</span> A specific recipe the restaurant is known for</li>
+                <li><span class="mc-letter">D.</span> How to start a small restaurant</li>
+              </ul>
+            </div>
+          </li>
+          <li class="qitem">
+            <span class="num">2.</span>
+            <div class="qbody">
+              According to the talk, how does a guest get a table at The Lost Kitchen?
+              <ul class="mc-list">
+                <li><span class="mc-letter">A.</span> Applicants submit their name for a reservation and are chosen at random</li>
+                <li><span class="mc-letter">B.</span> Tables are given on a first-come, first-served basis</li>
+                <li><span class="mc-letter">C.</span> Only local residents may reserve a table</li>
+                <li><span class="mc-letter">D.</span> Reservations open once a year for the whole season</li>
+              </ul>
+            </div>
+          </li>
+          <li class="qitem">
+            <span class="num">3.</span>
+            <div class="qbody">
+              What can be inferred about Erin French's approach to cooking?
+              <ul class="mc-list">
+                <li><span class="mc-letter">A.</span> She follows a fixed weekly menu</li>
+                <li><span class="mc-letter">B.</span> She imports ingredients from other countries</li>
+                <li><span class="mc-letter">C.</span> She prefers deciding what to cook based on what ingredients are available that day</li>
+                <li><span class="mc-letter">D.</span> She rarely changes her recipes</li>
+              </ul>
+            </div>
+          </li>
+          <li class="qitem">
+            <span class="num">4.</span>
+            <div class="qbody">
+              What is French's attitude toward her restaurant's growing popularity?
+              <ul class="mc-list">
+                <li><span class="mc-letter">A.</span> Entirely comfortable with rapid growth</li>
+                <li><span class="mc-letter">B.</span> Indifferent to the restaurant's popularity</li>
+                <li><span class="mc-letter">C.</span> Regretful that the restaurant became popular</li>
+                <li><span class="mc-letter">D.</span> Cautious: she wants the restaurant to succeed but worries about losing what makes it special</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Part B: TOEFL Speaking Practice</div>
+
+      <p class="section-label">Listen and Repeat</p>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Scenario</div>
+        <p class="model-step">
+          You are training a new server at a small countryside restaurant
+          that only takes reservations by request. Listen to your manager
+          and repeat what she says.
+        </p>
+      </div>
+      <p class="instr">
+        Your teacher or a partner will read one sentence at a time aloud from
+        their copy. Repeat each sentence immediately, only once, before they
+        move to the next one. Sentences get longer and more complex as you go.
+      </p>
+      <ul class="time-list">
+        <li><span>Sentence 1</span><span class="time-window">8 seconds</span></li>
+        <li><span>Sentence 2</span><span class="time-window">8 seconds</span></li>
+        <li><span>Sentence 3</span><span class="time-window">10 seconds</span></li>
+        <li><span>Sentence 4</span><span class="time-window">10 seconds</span></li>
+        <li><span>Sentence 5</span><span class="time-window">10 seconds</span></li>
+        <li><span>Sentence 6</span><span class="time-window">12 seconds</span></li>
+        <li><span>Sentence 7</span><span class="time-window">12 seconds</span></li>
+      </ul>
+
+      <p class="section-label" style="margin-top: 28px">Take an Interview</p>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Scenario</div>
+        <p class="model-step">
+          You are taking part in a short online interview about food and
+          community for a local magazine. The interviewer will ask you some
+          questions.
+        </p>
+      </div>
+      <p class="instr">
+        Your teacher or a partner will ask you each question in turn, from
+        their copy. You will have 45 seconds to respond to each question, with
+        no time to prepare beforehand, just like the real TOEFL Speaking
+        section.
+      </p>
+      <ul class="time-list">
+        <li><span>Question 1</span><span class="time-window">45 seconds</span></li>
+        <li><span>Question 2</span><span class="time-window">45 seconds</span></li>
+        <li><span>Question 3</span><span class="time-window">45 seconds</span></li>
+        <li><span>Question 4</span><span class="time-window">45 seconds</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

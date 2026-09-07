@@ -32,12 +32,26 @@ Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.). See
 timestamps could not be verified directly; the source's own five headed sections were used as segment labels
 instead - see the Lesson Generation Prompt's addendum note.
 
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.1.0` in its `.md` and packet
+header, per `Program_Conventions.md` §G, and its packet's masthead was brought up to the current `.masthead-meta`
+two-tag stack in the same pass, matching the retrofit Advanced's Lesson 1 (LostKitchen) already got - a
+deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of Set 1's other lessons. Task
+A item 3's word bank was also moved inline with its item, matching Task B and the balanced-formatting convention
+Lessons 3-4 already follow.
+
 **Lesson 2 generated (2026-09-02):** real source found and confirmed - "Porto Food Tour," Rick Steves Classroom
 Europe (guide Andre, Taste Porto Food Tours; narrated by Rick Steves). See
 `lessons/intermediate/Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`. Runtime not stated on the page, estimated rather
 than confirmed - flagged as an open item. Topic direction broadened from "open-air public market" to a covered
 historic market hall plus a short walking food tour past three nearby shops, since that is what the verified
 real source actually shows - flagged, not silently substituted.
+
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.2.0` in its `.md` and packet
+header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
+pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
+one-line `font-family` formatting; its one idiom, "in spite of," also moved out of a spotlight-box into a plain
+"Idioms to Know" block) - a deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of
+Set 1's other lessons.
 
 **Lesson 3 generated (2026-09-03):** real source found and confirmed - "How to Choose a Backpack," REI Co-op
 Expert Advice (article + embedded companion video "How to Choose Backpacking Packs"). See
@@ -64,6 +78,12 @@ rotate(180deg)`) as a physical deterrent against reading ahead, and the "Unit 1A
 to "Unit 3A/3B" - both applied directly to the .html only, since neither changes what the lesson actually asks
 students to do.
 
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.3.0` in its `.md` and packet
+header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
+pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
+one-line `font-family` formatting) - a deliberate one-lesson exception to §G's going-forward-only rule, not a
+reopening of Set 1's other lessons.
+
 **Lesson 4 generated (2026-09-03):** real source found and confirmed - "Great-Grandmother Proves It Is Never
 Too Late to Learn," VOA Learning English (Setsuko Takamizawa, 91, learning English from her granddaughter
 Natsuko to volunteer at the Tokyo Olympics; reported for Reuters by Jack Tarrant, adapted by John Russell). See
@@ -80,6 +100,13 @@ review cycle (Good to Know at the top, citebox at the point of watching, compact
 picture placeholders, word banks positioned right before their items, balanced task-duration item counts, and
 the upside-down treatment extended to this lesson's own predict-from-context pause point in the Closing
 Transfer Check).
+
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.4.0` in its `.md` and packet
+header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
+pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
+`.vocab-list .word` column width realigned to 130px (was 150px), one-line `font-family` formatting) - a
+deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of Set 1's other lessons. With
+this, all four Set 1 Intermediate lessons are now synced to the current shared spec.
 
 ---
 

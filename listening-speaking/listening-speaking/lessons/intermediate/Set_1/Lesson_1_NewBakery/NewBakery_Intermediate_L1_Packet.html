@@ -72,6 +72,13 @@
       .masthead.masthead-later {
         margin-top: 60px;
       }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 12px;
@@ -80,7 +87,6 @@
         text-transform: uppercase;
         color: var(--ink);
         white-space: nowrap;
-        margin-top: 4px;
       }
 
       .objective {
@@ -479,7 +485,10 @@
     <div class="sheet">
       <div class="masthead">
         <h1>Unit 1A: New Bakery, Old Baking Method</h1>
-        <span class="masthead-tag">Listening &amp; Speaking</span>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking</span>
+          <span class="masthead-tag">Intermediate S1.1.0</span>
+        </div>
       </div>
 
       <p class="objective">
@@ -634,7 +643,13 @@
           </li>
           <li>
             <span class="num">3.</span>
-            <div class="qbody">It is ___ and ___.</div>
+            <div class="qbody">
+              <div class="wordbank">
+                <strong>Word bank:</strong> organic &middot; local &middot;
+                imported &middot; plastic
+              </div>
+              It is ___ and ___.
+            </div>
           </li>
           <li>
             <span class="num">4.</span>
@@ -651,10 +666,6 @@
             </div>
           </li>
         </ol>
-        <div class="wordbank">
-          <strong>Word bank (for item 3):</strong> organic &middot; local
-          &middot; imported &middot; plastic
-        </div>
       </div>
 
       <div class="task-block">

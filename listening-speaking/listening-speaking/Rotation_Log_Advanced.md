@@ -5,7 +5,7 @@ for cross-Band notes and mechanics that aren't repeated here.
 
 ## Module 1: Describing
 
-### Set 1 (planned 2026-09-01) - complete, 4 of 4 lessons generated
+### Set 1 (planned 2026-09-01) - complete, 4 of 4 lessons generated, assessment generated
 
 | Lesson # | Content Format                          | Listening Strategy                       | Speaking Skill                    | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                | Topic Direction                                                       |
 | -------- | --------------------------------------- | ----------------------------------------- | --------------------------------- | ------------------ | ------------------ | -------------------------------- | --------------------------------------------------------------------- |
@@ -39,6 +39,20 @@ direction 2026-09-04: restructure what exists, don't generate what's missing in 
 oversight; Lesson 3 was generated 2026-09-07 the same way Lessons 1-2 were originally, and Lesson 4 was
 generated 2026-09-07 as well, **completing Set 1 (4 of 4 lessons)**.
 
+**Set 1 assessment generated (2026-09-07):** Part A (Listening) uses a new, verified real source, "Artists with
+disabilities let their creativity soar at this Utah studio" (PBS News Weekend, Ali Rogin, published 2025-05-03;
+Jump the Moon art studio, Logan, Utah, founded by Michael Bingham), distinct from all 4 taught sources, with
+tiered items covering all four of the Set's listening strategies (Stated vs. Implied Opinion, Recognize
+Examples, Cause-and-Effect Language, Signposting/Discourse Markers). Level 7's item also draws on a second real
+source (a Utah Division of Arts & Museums profile page,
+https://artsandmuseums.utah.gov/jump-the-moon/) for the same two-source comparative-framing pattern this Set's
+own Level 7 lesson items use. Part B (Speaking) is a live solo presentation (Advanced's default mechanism), with
+a same-task, same-rubric Teams-recording version generated as the standing alternate, emphasizing Making
+Comparisons and Hedging an Opinion. Generated against `Generate_Assessment_Prompt_v1.md` and
+`Generate_Assessment_Student_Packet_Prompt_v1.md`. See
+`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. This is the
+first assessment generated against this prompt for the Advanced band - not yet given to a real class.
+
 **Lesson 4 generated (2026-09-07), completing Set 1:** two real sources - primary: Idaho Public Television's
 *createid* series, Season 2 Episode 2, "Glass Bender: Wil Kirkman" (Wil Kirkman, owner of Rocket Neon in Boise,
 narrating the making of a neon butterfly sign start to finish; runtime 6:10, stated on the PBS.org video page);
@@ -50,8 +64,8 @@ architecture from the start, no restructure needed) and `Generate_Student_Packet
 and `Lesson_4_GlassBender/GlassBender_Advanced_L4_Packet.html`. Open item flagged (not silently fixed): the
 primary source's page lists a post date (2024-07-11) rather than a confirmed original broadcast date for the
 episode; teacher should confirm against Idaho Public Television's own records if it matters for classroom
-framing. **With Lesson 4 generated, Set 1 is complete; Set 2 (Lessons 5-8, planned only) or an Advanced Module 1
-Set 1 assessment are the logical next steps for this Band.**
+framing. **With Lesson 4 generated, Set 1 is complete.** Its assessment has since been generated too (see above); Set 2
+(Lessons 5-8, planned only) is the remaining next step for this Band.
 
 **Lesson 3 generated (2026-09-07):** two real sources - primary: PBS News Weekend ("Saving Species" series),
 "Conservation groups try to save tiny deer in the Florida Keys from a warming planet" (William Brangham; Katy
@@ -71,6 +85,16 @@ French. See `lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`
 **Version added retroactively (2026-09-07):** this lesson is now tagged `S1.1.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G - a deliberate one-lesson exception to that section's
 going-forward-only rule, not a reopening of Set 1's other lessons.
+
+**TOEFL Practice Extension generated (2026-09-07), optional add-on, does not change this row:** against
+the new `Generate_TOEFL_LS_Extension_Prompt_v1.md`, this family's first worked example of that prompt.
+Part A (Listening) writes an original Academic Talk passage faithful to the real PBS segment (reusing
+only the lesson's own already-established short quotes), 4 items across Main Idea/Factual/Inference/
+Attitude. Part B (Speaking) authors 7 original Listen and Repeat sentences and 4 original Take an
+Interview questions grounded in the lesson's real topic/vocabulary. See
+`Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL.md` (instructor document) and its matching
+`..._TOEFL_Packet.html` (student packet, no passage/sentence text shown per the "heard, not read"
+rule). Not yet given to a real class.
 
 **Lesson 2 generated (2026-09-02), restructured (2026-09-04):** two real sources - primary: PBS NewsHour
 Weekend, "What's behind an effort to preserve mid-century modern architecture in Phoenix" (Alison King/Modern
