@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.11)
+# Student Packet Style Guide (v1.12)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -386,13 +386,20 @@ p {
   flex-shrink: 0;
   width: 20px;
 }
-.qlist .blank {
+.qbody {
+  flex: 1;
+}
+
+/* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+   blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+   `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+   `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+   for writing a full answer - never place either one mid-sentence, and never use
+   `.ans-line-sm` where you mean `.blank`. */
+.blank {
   display: inline-block;
   border-bottom: 1px solid var(--ink-soft);
   min-width: 70px;
-}
-.qbody {
-  flex: 1;
 }
 .ans-line {
   display: block;
@@ -625,5 +632,5 @@ shared file (updating it for every modality at once), not as a modality-local ov
 
 ## Changelog
 
-**Current version: v1.8.** For the full dated version history and the reasoning behind each
+**Current version: v1.12.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

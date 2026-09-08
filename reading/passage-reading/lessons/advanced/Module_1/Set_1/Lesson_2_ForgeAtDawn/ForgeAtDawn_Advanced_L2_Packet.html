@@ -47,6 +47,10 @@
 
   h1,h2,h3{font-family:'Iowan Old Style',Georgia,serif; margin:0; color:var(--ink);}
   .masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
     text-align:left;
     margin-bottom:20px;
   }
@@ -154,6 +158,9 @@
   .idiom-item:last-child{margin-bottom:0;}
   .idiom-phrase{font-weight:700; font-style:italic;}
   .idiom-tag{font-family:system-ui,-apple-system,sans-serif; font-size:10.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft); margin-left:6px;}
+
+  .masthead-meta{display:flex; flex-direction:column; align-items:flex-end; gap:4px; margin-top:4px;}
+  .masthead-tag{font-family:system-ui,-apple-system,sans-serif; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink); white-space:nowrap;}
 
   .annot-key{
     float:right;
@@ -368,6 +375,10 @@
 
   <div class="masthead">
     <h1>Unit 2A: The Forge at Dawn</h1>
+    <div class="masthead-meta">
+      <span class="masthead-tag">Reading</span>
+      <span class="masthead-tag">Advanced</span>
+    </div>
   </div>
 
   <p class="objective"><strong>Objective:</strong> describe a craft by noticing specific steps and comparing them
@@ -739,7 +750,7 @@
 
   <div class="section-title">Wrap It Up</div>
   <div class="wrapup">
-    <p class="instr">With a partner, pick one object in the room. Describe a feature of it, compare it to
+    <p class="instr">With a partner, pick a piece of furniture in the room. Describe a feature of it, compare it to
     something else, and use one word that shows your opinion without stating it directly.</p>
     <ul class="stems">
       <li><span class="stars">★★</span> "This ___ is made [by hand/by machine], which is different from ___

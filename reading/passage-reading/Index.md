@@ -30,7 +30,7 @@ currently supports it.
 | `Generate_TOEFL_Extension_Prompt_v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
 | `Generate_Assessment_Prompt_v4.2.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a completed Set of lessons (or an explicitly-scoped checkpoint/multi-Set span). Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. Takes a Set number as input and, for a full-Set assessment, saves alongside that Set's lesson folders as `Set{N}_{Band}_Assessment.md`. v4.2 updates its two `lessons/<band>/Set_<N>/` path mentions to `lessons/<band>/Module_<N>/Set_<N>/`, matching the new Module-level folder (`shared/Program_Conventions.md` §D). | Synced to v2.7 (v4.2)              |
 | `Generate_Student_Packet_Prompt_v1.12.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and reuses the required base stylesheet in `shared/Student_Packet_Style_Guide.md`. Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. As of v1.7, the opening masthead carries a top-right `.masthead-meta` stack of two tags - "Reading," then Band and version code combined as one string - per `shared/Student_Packet_Style_Guide.md` §B (corrected from a same-day three-line version). As of v1.8, §2.13's `.ans-line-sm` line begins on its own line below its question rather than packing inline (fixed at the shared CSS layer, `shared/Student_Packet_Style_Guide.md` v1.7), and §2.12 requires a word bank sit before the question/sentence frame it supplies words for. As of v1.9, §2.13's `.ans-line-sm` is full-width like `.ans-line` (its `max-width: 320px` cap dropped at the shared CSS layer, `shared/Student_Packet_Style_Guide.md` v1.8), distinguished from `.ans-line` only by its shorter height. As of v1.10, the masthead version-code placeholder is `<Module>.<Set>.<Lesson>.<Version>` (dropping the old `S<Set>.<Lesson>.<Iteration>` letter prefix). As of v1.11, §2.9 forbids adding a coaching note under a sentence-starter stem (e.g. "practice it quietly with a partner first," a filler tally/tracking task) - list only the stems. As of v1.12, §2.12 retires the v1.6 idiom-table rule: "Idioms to Know" always renders as the unnumbered `.spotlight-box`/`.idiom-item` "Phrase Spotlight" treatment regardless of idiom count, and a transparent-chunk phrase (per the Lesson prompt's §0.4 classification) gets a visible `.idiom-tag` "Slang" label; an opaque idiom stays unlabeled. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.12); every packet across all three modalities that embeds `.ans-line-sm` was hand-corrected for the v1.9 width fix in the same pass (see `shared/Changelog.md`), not just this modality's. Existing packets under `lessons/` predate the `.masthead-meta` stack and don't have it yet. The 4 packets that had a stray per-stem coaching "tip" line (Forge at Dawn, Portland Head Light, Yoyogi Park, Wynwood Walls) were hand-corrected for the v1.11 rule in the same pass. All 8 Reading packets with an idiom section (including `SagradaFamilia_Advanced_L1`/`ForgeAtDawn_Advanced_L2`, previously flagged as not yet swept to the now-retired v1.6 table rule, and `VinylComeback_Advanced_L3`, found reusing `.vocab-list`/`.vrow` for its idioms instead of either idiom class) were hand-corrected for the v1.12 rule in the same pass - see `Changelog.md`. |
-| `Generate_Assessment_Student_Packet_Prompt_v1.1.md`  | New (2026-09-08). Takes one completed Assessment `.md` and produces a single, print-ready, black-and-white student handout: four self-contained Task-Level sections (each with `page-break-before: always` for selective printing), source-lesson/Tests tags and the entire Scoring Guide (point values, rubrics) stripped, a per-Level plain objective statement translated from the CSV grounding quote, and no self-check-checklist substitute for rubric-scored items (they print as plain answer-line questions, matching how the Student Print Formatting Prompt already treats extended-response items). No Reading-specific delta CSS - reuses the base stylesheet and classes the lesson packet prompt already established. Mirrors Listening/Speaking's `Generate_Assessment_Student_Packet_Prompt_v1.md` and Writing's `Generate_Assessment_Student_Packet_Prompt_v3.md`, closing the gap noted in Pending work below. v1.1 updates the aside about why this prompt carries no `.masthead-meta` version tag to the new `<Module>.<Set>.<Lesson>.<Version>` shape (`shared/Program_Conventions.md` §G). | Current (v1.1); first run produced `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html` the same session |
+| `Generate_Assessment_Student_Packet_Prompt_v1.2.md`  | New (2026-09-08). Takes one completed Assessment `.md` and produces a single, print-ready, black-and-white student handout: four self-contained Task-Level sections (each with `page-break-before: always` for selective printing), source-lesson/Tests tags and the entire Scoring Guide (point values, rubrics) stripped, a per-Level plain objective statement translated from the CSV grounding quote, and no self-check-checklist substitute for rubric-scored items (they print as plain answer-line questions, matching how the Student Print Formatting Prompt already treats extended-response items). No Reading-specific delta CSS - reuses the base stylesheet and classes the lesson packet prompt already established. Mirrors Listening/Speaking's `Generate_Assessment_Student_Packet_Prompt_v1.md` and Writing's `Generate_Assessment_Student_Packet_Prompt_v3.md`, closing the gap noted in Pending work below. v1.1 updates the aside about why this prompt carries no `.masthead-meta` version tag to the new `<Module>.<Set>.<Lesson>.<Version>` shape (`shared/Program_Conventions.md` §G). v1.2 fixes §2.6, which had drifted into conflating `.blank` (inline mid-sentence) with `.ans-line-sm` (standalone full-width line) - corrected to match `shared/Student_Packet_Style_Guide.md`'s now-explicit distinction (v1.12). | Current (v1.2); first run produced `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html` the same session |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
 
@@ -77,7 +77,7 @@ each of the 4 Task-Level sections. No Foundation Support Check section - no less
 Foundation Support student.
 
 **Student-facing HTML packet: `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html`, generated 2026-09-08** against
-the new `Generate_Assessment_Student_Packet_Prompt_v1.1.md` (first run of this prompt for Reading - see Pending
+the new `Generate_Assessment_Student_Packet_Prompt_v1.2.md` (first run of this prompt for Reading - see Pending
 work, now resolved). One combined document, four Task-Level sections (★ through ★★★★), each with
 `page-break-before: always` so a teacher can print one Level's pages alone; all four lesson passages reprinted
 in full inside every Task-Level section, matching the source `.md`'s own self-contained-per-Level shape. Every
@@ -144,8 +144,9 @@ v2.5; since renamed and updated in place). **All 4 lessons of this Set are gener
 
 Anchor text calibrated to Level 5 (460 words, 6 paragraphs, B2), with task Levels 4 (extension-down), 5 and 6
 (native), and 7 (extension-up, requiring the second comparison text per the plan's note). Lesson 1 used Fishbowl
-as its Phase 3 protocol - a fully valid choice under v2.7, but this one has not yet been checked or patched for
-the outer-circle task / multi-prompt requirements; see Pending work. Lesson 2 (450 words, 6 paragraphs) was
+as its Phase 3 protocol - a fully valid choice under v2.7; **patched 2026-09-08** for Section 0.10 compliance
+(three rotating prompts, and a general outer-circle tally/vocabulary-tracking task for every outer-circle student,
+layered underneath the existing Level 4 and Foundation Support roles - see `Changelog.md`). Lesson 2 (450 words, 6 paragraphs) was
 generated directly against v2.7, so its Jigsaw Phase 3 already carries the current Section 0.10 scaffolding
 (three discussion prompts split across the mixed groups). Lesson 3 (434 words, 6 paragraphs) was generated
 against the current `Generate_Lesson_Prompt_v2.9.md`, carrying the required `**Version:** 1.1.3.0` header field
@@ -168,7 +169,9 @@ No homework, TOEFL extension, or assessment work has started yet for the Advance
 Refuses to Be Finished`, `Module_1/Set_1/Lesson_1_SagradaFamilia/SagradaFamilia_Advanced_L1_Packet.html`) exists as an HTML
 file; its CSS is the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's student packet (`Unit 2A`/`Unit 2B: The
 Forge at Dawn`, `Module_1/Set_1/Lesson_2_ForgeAtDawn/ForgeAtDawn_Advanced_L2_Packet.html`) is current against the
-print prompt. Both use the 5-mark annotation key (Advanced band and up); Lesson 1 has no byline (short-story
+print prompt. Both now carry the `.masthead-meta` tag stack on their opening masthead as of 2026-09-08
+(`Reading` / `Advanced` - Band only, no version code, since Lessons 1-2 stay unversioned by design; see
+`Changelog.md`), backfilled from Lessons 3-4. Both use the 5-mark annotation key (Advanced band and up); Lesson 1 has no byline (short-story
 genre), and Lesson 2's Task D (Level 7) embeds the lesson's second comparison text - a museum-placard passage
 promoting swordsmithing demonstrations - inline on the page rather than as a separate handout, per the module
 plan's note for this lesson's extension-up task. Lesson 2's discussion prompts (three, split across groups) came
@@ -177,8 +180,7 @@ sentence stems, mirroring the Level 4 tracking task from the lesson's own Phase 
 does not include this for its own Level 4 stem. Lesson 3's student packet (`Unit 3A`/`Unit 3B: The Vinyl Comeback
 Is Real`, `Module_1/Set_1/Lesson_3_VinylComeback/VinylComeback_Advanced_L3_Packet.html`) is the first Advanced packet
 generated against v1.7, so it's the first to carry the masthead `.masthead-meta` two-tag stack ("Reading",
-"Advanced 1.1.3.0") on its opening masthead; Lessons 1-2 predate that element and don't have it yet (see Pending
-work). Its idioms were also found reusing `.vocab-list`/`.vrow` ("Words to Know"'s own classes) instead of
+"Advanced 1.1.3.0") on its opening masthead. Its idioms were also found reusing `.vocab-list`/`.vrow` ("Words to Know"'s own classes) instead of
 either idiom class - corrected to the standard `.spotlight-box`/`.idiom-item` "Phrase Spotlight" treatment as
 part of the v1.12 idiom sweep (see `Changelog.md`). It embeds Task D's second comparison text (an industry-report
 pitch for vinyl-pressing investment) inline, with an L4 differentiated-participation tip line under the sentence
@@ -198,7 +200,17 @@ asset-naming convention (`shared/Program_Conventions.md` §H): `Lesson1_SagradaF
 for the Phase 1 Visual Inquiry hook photo. Embedded into `SagradaFamilia_Advanced_L1_Packet.html`'s
 "Before You Read" section as a base64 `<img class="photo">`, replacing the text placeholder that was
 there (mirroring how `Lesson3_RunningShoes_Img_Shoe.jpg` was embedded); the existing image caption
-already matched the photo, so it was left unchanged.
+already matched the photo, so it was left unchanged. **Recompressed 2026-09-08** (same day, later
+pass): the source file (294 KB at 750x750) was embedded as-is with no size reduction; re-embedded at
+~98 KB, matching the recompress-before-embed practice found in Listening/Speaking's
+`Backpack_Intermediate_L3_Packet.html`. The source `.jpg` on disk is unchanged; only the packet's
+embedded copy was replaced - see `Changelog.md`.
+
+All 4 Advanced Set 1 lessons' Closing Transfer Check activities (both the `.md` and packet wrapup) were
+rewritten 2026-09-08 to use distinct concrete scenarios instead of the shared "something/one thing in
+the room" framing - Lesson 1 a piece of clothing, Lesson 2 a piece of furniture, Lesson 3 a sound you
+can hear, Lesson 4 something visible out the window - per the v2.10 Closing Transfer Check Variety rule;
+see `Changelog.md`.
 
 ## Generation workflow (current)
 
@@ -240,7 +252,7 @@ it produces one test section and one study guide per task Level in the band, plu
 where applicable. A Set is 4 lessons, so the `Set1_Intermediate_Assessment.md` generated for Intermediate
 Module 1 Set 1 (2026-09-08) is the complete end-of-Set assessment - there is no separate 8-lesson pass to run.
 
-**Step 5a - Print formatting for the assessment.** Run `Generate_Assessment_Student_Packet_Prompt_v1.1.md`
+**Step 5a - Print formatting for the assessment.** Run `Generate_Assessment_Student_Packet_Prompt_v1.2.md`
 immediately after Step 5's Assessment `.md` is complete, in the same session, to produce a single, print-ready,
 black-and-white student handout as one self-contained HTML file - four Task-Level sections, each printable on
 its own, with every source-lesson/Tests tag and the entire Scoring Guide stripped. Independent of Step 6 below
@@ -256,16 +268,12 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
 
 ## Pending work
 
-- **Known issue, not retroactively fixed (2026-09-08):** Advanced Module 1 Set 1's Closing Transfer Check repeats
-  the same "something in this room" object/scenario near-verbatim across Lessons 1-4
-  (`Lesson1_SagradaFamilia.md`, `Lesson2_ForgeAtDawn.md`, `Lesson3_VinylComeback.md`/packet,
-  `Lesson4_PortlandHeadLight.md`/packet), and `YoyogiPark_Intermediate_L2_Packet.html` (Intermediate, one band
-  down) shows the same pattern. This predates the v2.10 fix to `Generate_Lesson_Prompt_v2.10.md` (see
-  `Changelog.md`) and is left as-is rather than silently rewritten; if these lessons are revised for any other
-  reason, take the opportunity to vary the Closing Transfer Check object per Section 0.8/the new Closing Transfer
-  Check Variety rule at the same time.
-- **Module 1 Advanced Lesson 1's Fishbowl** - not yet checked/patched against v2.7's Section 0.10 outer-circle
-  task and multi-prompt requirements. Worth doing the same pass once convenient.
+- **Resolved 2026-09-08**: Advanced Module 1 Set 1's Closing Transfer Check repetition (all 4 lessons sharing
+  "something/one thing in the room") and Lesson 1's Fishbowl (missing Section 0.10's multi-prompt/outer-circle-task
+  requirements) were both fixed - see `Changelog.md`'s retroactive entry. `YoyogiPark_Intermediate_L2_Packet.html`
+  (Intermediate, one band down) still shows the same Closing Transfer Check repetition pattern and remains
+  unfixed - not in scope of that pass; take the opportunity to vary its object per Section 0.8/the Closing
+  Transfer Check Variety rule if that lesson is revised for any other reason.
 - **Module 1 Advanced Homework/TOEFL/Assessment** - not started; now that all 4 lessons of Set 1 are generated,
   this is the next work per Steps 3-5.
 - **Print formatting for Advanced Set 1** - now complete for all 4 lessons (`SagradaFamilia_Advanced_L1_Packet.html`,
@@ -276,7 +284,7 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
 - **Teacher-facing formatted/print version** - not started; a possible future companion to the Step 6 prompt,
   noted but out of scope until requested.
 - **Resolved 2026-09-08**: Reading now has an Assessment Student Packet prompt
-  (`Generate_Assessment_Student_Packet_Prompt_v1.1.md`), matching Listening/Speaking's and Writing's own. First
+  (`Generate_Assessment_Student_Packet_Prompt_v1.2.md`), matching Listening/Speaking's and Writing's own. First
   run produced `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html` from the existing
   `Set1_Intermediate_Assessment.md` the same session - see the Module 1 Intermediate section above.
 - **Novel Reading lesson type** - not started. Will need its own lesson-generation prompt, its own Module

@@ -268,9 +268,9 @@ during the K-W-L board check from Day 1, they can point to the paragraph letter 
 reading it aloud. Pair this student with a peer buddy throughout Phase 2's matrix work as well.
 
 **Closing Transfer Check (5 min, ends Phase 3):** In pairs, every student produces one new instance of the Day
-1 Skill Spotlight skill, applied to something in the room, not the forge. Sentence frame: "This [object in the
-room] is made [by hand/by machine], which is different from [something familiar] because [reason]," or for
-Levels 5-7: "Notice how I just used the word ___ to show I think this is [good/well-made], without saying it
+1 Skill Spotlight skill, applied to a piece of furniture in the room, not the forge. Sentence frame: "This
+[piece of furniture] is made [by hand/by machine], which is different from [something familiar] because [reason],"
+or for Levels 5-7: "Notice how I just used the word ___ to show I think this is [good/well-made], without saying it
 directly." Say it out loud to a partner. The teacher cold-calls 2-3 pairs to share aloud. Nothing is collected or
 graded.
 

@@ -164,7 +164,11 @@ day-numbering changed (each lesson's own Markdown doc has a "reorganized from" n
 extracted from the packets actually taught, each covered 2 days, not 4). Lessons 1-2's packet text was kept
 close to that actually-taught wording per the user's request; Lessons 3-4 continue the same Scenario using the
 already-written drafting/revision content, rather than new topics. Lesson 4 was retrofitted a second time,
-same day, into Module Pair 1-2's Part 1 (see "Module Pairs" below). All 8 packets are first-pass generations per
+same day, into Module Pair 1-2's Part 1 (see "Module Pairs" below). Intermediate Lesson 1's packet was hand-corrected
+2026-09-08 for duplicate tasks (Unit 1A Task C/D, Unit 1B Task D/E - each pair merged to one task at the lower star
+rating) and picture references with no picture in the packet (Unit 1A's frame tasks reworded to use the student's
+own phone case; the "See How It's Done" section removed entirely) - see `Changelog.md`'s 2026-09-08
+hand-correction entry. All 8 packets are first-pass generations per
 the print prompt's own Section 4.1 ("iterate before finalizing") - review them against a real print/classroom
 pass before treating them as final. A Module Lesson-Plan prompt now exists
 (`Generate_Module_Lesson_Plan_Prompt_v3.md`) but has not yet been run before-the-fact against a new Set/Pair, so

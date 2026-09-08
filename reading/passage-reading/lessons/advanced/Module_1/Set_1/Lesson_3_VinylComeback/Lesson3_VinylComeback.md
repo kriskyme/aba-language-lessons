@@ -281,9 +281,9 @@ one member from each table reports one notable claim or detail back to the board
 the complete list; it exists only once every table has reported in.
 
 **Closing Transfer Check (5 min, ends Phase 3):** In pairs, every student produces one new instance of the Day 1
-Skill Spotlight skill, applied to something other than records. Sentence frame: "I would describe [something in
-this room] by comparing it to ___, because ___," or for Levels 5-7: "Notice how I just used the word ___ to show
-I think this is [good/well-made], without saying it directly." Say it out loud to a partner. The teacher
+Skill Spotlight skill, applied to something other than records. Sentence frame: "I would describe [a sound you can
+hear right now] by comparing it to ___, because ___," or for Levels 5-7: "Notice how I just used the word ___ to
+show I think this is [good/well-made], without saying it directly." Say it out loud to a partner. The teacher
 cold-calls 2-3 pairs to share aloud. Nothing is collected or graded.
 
 **Board-Dependent Moment Rotation note:** this lesson places its two board-dependent moments in Phase 1 (Day 1,

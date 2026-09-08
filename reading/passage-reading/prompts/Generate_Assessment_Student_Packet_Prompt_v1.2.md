@@ -1,4 +1,4 @@
-# Passage Reading Assessment Student Print Formatting Prompt (v1.1)
+# Passage Reading Assessment Student Print Formatting Prompt (v1.2)
 
 Companion to the Assessment Generation Prompt (v4.1). Takes one completed Set assessment (four
 Task-Level sections, each with its own Vocabulary & Idiom Mastery and Reading Comprehension
@@ -123,11 +123,13 @@ same reason the source `.md` itself reprints it.
 
 ### 2.6 Answer space, sized to what's asked
 
-Apply the same rule as the lesson packet's Section 2.13: a single short inline line
-(`.ans-line-sm`) for a one-word or short-phrase answer or a quoted phrase; two or more full-width
-lines (`.ans-line`) for a "write one sentence" or "in 2-3 sentences" answer. An item asking for a
-paragraph letter or a fill-in-the-blank word gets only the inline `.blank`/`.ans-line-sm` space the
-answer itself needs, not additional lines. The highest Task Level's cross-text synthesis item
+Apply `shared/Student_Packet_Style_Guide.md`'s `.blank` vs. `.ans-line`/`.ans-line-sm` distinction
+directly, the same rule the lesson packet's Section 2.13 also follows: an item asking for a
+paragraph letter or a fill-in-the-blank word gets only the inline `.blank` space the answer itself
+needs, not an additional line; a one-word or short-phrase answer or a quoted phrase gets a single
+short standalone `.ans-line-sm`, beginning on its own line below the question, never mid-sentence;
+two or more full-width lines (`.ans-line`) for a "write one sentence" or "in 2-3 sentences" answer.
+The highest Task Level's cross-text synthesis item
 ("in 3-4 sentences, compare... and explain which change...") gets three to four `.ans-line`s to
 match its longer expected answer, printed as the final numbered item in that Level's Reading
 Comprehension section (after both passages it references have already appeared earlier in that same
