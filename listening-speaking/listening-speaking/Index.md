@@ -44,7 +44,7 @@ out of scoping this against that sample:
 
 | File                                                                 | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Sync status                                                                                                                                                                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Generate_Lesson_Prompt_v1.1.md`                  | Generates one lesson (a 2-day cycle: Day 1 Listening, Day 2 Speaking): sources a real audio/video text, builds tiered listening and speaking tasks around it. Carries five addenda, including the day-count/Unit Architecture correction and balanced-duration item counts. v1.1 adds a required `**Band:** ... \| **Version:** ...` field (`shared/Program_Conventions.md` §G) to the opening metadata line.                                                                                                                                                                                                                                                                              | Current (v1.1 + five addenda); eight real lessons generated against it (Intermediate 1-4, Advanced 1-4), all eight on the current 2-day cycle                                                        |
+| `Generate_Lesson_Prompt_v1.7.md`                  | Generates one lesson (a 2-day cycle: Day 1 Listening, Day 2 Speaking): sources a real audio/video text, builds tiered listening and speaking tasks around it. Carries five addenda, including the day-count/Unit Architecture correction and balanced-duration item counts. v1.1 added a required `**Band:** ... \| **Version:** ...` field (`shared/Program_Conventions.md` §G) to the opening metadata line. v1.2 added Section 0.6, an optional Advanced/Proficient-only "TOEFL Track Tier" mechanism, originally a single alternate task at the band's highest task Level. v1.3 adds Section 0.3 item 7: every lesson now also produces a standalone `<Slug>_Transcript.md` file (same folder as the lesson `.md`/packet `.html`) holding the source's full real transcript verbatim - a teacher-only working reference exempt from the fair-use ceiling that still governs the lesson `.md` itself, never surfaced in the student packet. v1.4 redesigns Section 0.6 after real-use feedback that the single alternate task read as disconnected from the rest of the lesson: TOEFL-relevant skill practice now threads through most of both days via four touchpoint kinds - (A) one-sentence "TOEFL Connection" framing in Day 1/2 Phases 1 & 3, (B) three small in-class differentiated touchpoints (note-organizer tag column, extra transfer-check question, reframed oral-output prompt), (C) the Day 1 Phase 4 Listening capstone, and (D) the Day 2 Phase 2 Speaking capstone, split into an untimed in-class rehearsal plus a take-home page carrying the real timed practice (since individually-timed mechanics can't run live in a mixed class). v1.5 fixed a real flaw v1.4 left in C: it required a teacher/partner to read a freshly-authored passage aloud *separately, just for TOEFL-track students* while the rest of the class worked independently - the same shared-classroom-timing problem D already solved. C now answers from the exact same real source every student already heard together in Phase 2 - no new passage, no separate reading, no pulling anyone aside. Both C and D's in-class rehearsal also render in the packet as their own `Task D (TOEFL)` block (styled like the regular lettered tasks), not a nested "option" callout. v1.6 moved D's take-home content out of the main student packet entirely, into its own separate `_TOEFL_Homework.html` file (three artifacts per TOEFL Track Tier lesson now: `.md`, main packet, homework file) - the in-class rehearsal's pointer to "the take-home page" was dropped, since the homework file is a wholly separate document, never cross-referenced from the main packet. v1.7 redelivers D's homework as a real teacher-recorded audio assignment posted to Teams (reusing the Assessment prompt's own "Teams Speaking Progress recording" mechanism): the teacher records or produces audio from the homework file's script and posts it to Teams, students listen once and record their spoken response there, and the teacher scores using the same file's guides - so the homework file itself is now teacher-only, never a "reading partner" page.                                                                                                                                                                             | Current (v1.7 + five Unit Architecture-era addenda); eight real lessons generated against v1.1 (Intermediate 1-4, Advanced 1-4), all eight on the current 2-day cycle; one TOEFL Track Tier variant generated and revised four times same day against v1.2/v1.4/v1.5/v1.6/v1.7 (Advanced Set 1 Lesson 1, in `Set_1_T/`, now `S1T.1.4`); the v1.3 transcript-file requirement is going-forward only so far - see Pending work for the 9-lesson backfill list |
 | `Generate_Module_Lesson_Plan_Prompt_v1.md`      | Plans one Set (4 lessons by default, matching the 2-day cycle) for a given Module/Band - topic directions, content-format/strategy/skill rotation, task-Level-to-objective mapping - before any lesson content is generated. A Module/Band can hold more than one Set over time (a fresh rotation for a retaught semester); lesson numbering stays global across Sets. Listening/Speaking-modality objectives only.                                                                                                                                                                                                                                                       | Current (v1 + Sets correction); Module 1 Intermediate and Advanced retroactively relabeled as Set 1 + Set 2 - see progress sections below |
 | `Rotation_Log.md`                                                     | Overview only as of the per-Band split: purpose, the cross-Band historical notes (day-count correction, Sets/Assessment-prompt introductions), and links to each Band's own log.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | N/A (data, not a prompt) |
 | `Rotation_Log_Intermediate.md`                                        | Running record of every approved Intermediate-Band Set's format/strategy/skill/hook/protocol/vocabulary/topic choices, one subsection per Set. Read before planning a new Set; appended to after approval.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1/Set 2 |
@@ -52,10 +52,9 @@ out of scoping this against that sample:
 | `Rotation_Log_Proficient.md`                                          | Same, for the Proficient Band. Created 2026-09-07 - the first Band file created purely from a plan, before any lesson in the Band had been generated; Lesson 1 generated the same day.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 (Lesson 1 of 4 generated) |
 | `Rotation_Log_Beginner.md`                                            | Same, for the Beginner Band. Created 2026-09-07.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 (Lesson 1 generated) |
 | `Changelog.md`                                                        | Version history for this prompt family. Not a prompt itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | N/A (data, not a prompt)                                                                                                                                                                                            |
-| `Generate_Student_Packet_Prompt_v1.3.md`           | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML), mirroring Passage Reading's print prompt (same shared base stylesheet, in `shared/Student_Packet_Style_Guide.md`, same star-rating system), adapted for a real-source lesson: a plain citation box instead of a printed passage, a fillable Listening Notes organizer instead of an annotation key, two parts (Unit \_A Listening / Unit \_B Speaking) instead of Unit \_A/\_B by calendar day. As of v1.3, the opening masthead carries a top-right `.masthead-meta` stack of two tags - "Listening & Speaking," then Band and version code combined as one string (corrected from a same-day three-line version). Section 2.13 ("same rules as Passage Reading 2.12-2.14") inherits that prompt's v1.5 idiom-table rule automatically: a lesson with 2 or more idioms to gloss renders "Idioms to Know" as a table (`.idiom-list`/`.irow`), matching "Words to Know," instead of stacked plain paragraphs.                                                                                                                                                                                                       | Current (v1.3); eight packets generated (Intermediate 1-4, Advanced 1-4). The two Set 1 Lesson 1 packets (NewBakery, LostKitchen) were hand-corrected 2026-09-06 to add the `.masthead-tag` and to match the shared base stylesheet exactly (idiom styling, `.task-block .instr-line` spacing, vocab-list column width, one-line `font-family` formatting) - see `shared/Changelog.md`. LostKitchen was hand-corrected again 2026-09-07: its two idioms now render as a table (`.idiom-list`/`.irow`) instead of stacked plain paragraphs, per the new idiom-table rule above, and its masthead now carries the two-tag version-stack convention. `NewBakery` was also synced 2026-09-07: its masthead now carries the `.masthead-meta` two-tag stack too, and Task A item 3's word bank was moved inline with its item (it still has only one idiom, so the idiom-table rule doesn't apply). `LivingTextbooks_Advanced_L2` was fully synced to the current spec 2026-09-07 too (masthead-meta stack, idiom-table conversion, vocab-list/task-block CSS drift, missing `.refresher` CSS) - see `Changelog.md` and `Rotation_Log_Advanced.md`. `KeyDeer_Advanced_L3` and `GlassBender_Advanced_L4` were both generated fresh 2026-09-07 directly against the current spec (masthead-meta stack, idiom-table format from the start) - neither needs later sync. `PortoFoodTour_Intermediate_L2`, `Backpack_Intermediate_L3`, and `GreatGrandmother_Intermediate_L4` were also fully synced 2026-09-07 (masthead-meta stack, `.refresher` CSS, instr-line/idiom-item CSS drift, one-line `font-family` formatting; PortoFoodTour's idiom also moved out of a spotlight-box, GreatGrandmother's vocab-list column width realigned) - see `Changelog.md` and `Rotation_Log_Intermediate.md`. Every Set 1 packet across both bands is now swept |
-| `Generate_Assessment_Prompt_v1.md`              | Generates the assessment layer on top of a taught Set, both parts run every Set: Part A, an individual Listening assessment (new unseen source, task-Level-tiered items, in-class, same period length as a lesson's Day 1); Part B, a Speaking assessment whose mechanism splits by band - Beginner/Intermediate scored via a Teams Speaking Progress solo recording (the recording IS the assessment); Advanced/Proficient default to a live solo/group presentation, with a same-task, same-rubric Teams-recording version always also generated as a standing scored alternate. | Current (v1); two assessments generated (Intermediate Set 1, Advanced Set 1) - both still field-testing pending                                                                                                       |
-| `Generate_Assessment_Student_Packet_Prompt_v1.md` | Takes a completed Assessment (Part A + Part B) and produces a single, print-ready student handout: a Listening Test section (one page per task Level, citation box, fillable notes organizer, that Level's items only) and a Speaking Task section (a plain instruction card per Level - topic, target length, submission info). Strips every answer key, point value, holistic pass note, and rubric - none of that is student-facing. Mirrors `Generate_Student_Packet_Prompt_v1.3.md`'s translation approach and reuses the shared base stylesheet/classes. | Current (v1); two packets generated (Intermediate Set 1, Advanced Set 1) |
-| `Generate_TOEFL_LS_Extension_Prompt_v1.md` | Generates an optional TOEFL iBT Listening and Speaking practice packet from a completed Advanced/Proficient lesson - Part A (Listening: an original, faithful passage sized to a real TOEFL task format, 6-question-type item set) and Part B (Speaking: 7 original Listen and Repeat sentences, 4 original Take an Interview questions, both grounded in the lesson's real topic/vocabulary). Grounded in `source/TOEFL_Listening_extracted_text.txt` and `source/TOEFL_Speaking_extracted_text.txt`. Sibling to Passage Reading's `Generate_TOEFL_Extension_Prompt_v1.md`. | Current (v1); one packet generated (Advanced Set 1 Lesson 1, LostKitchen) |
+| `Generate_Student_Packet_Prompt_v1.8.md`           | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML), mirroring Passage Reading's print prompt (same shared base stylesheet, in `shared/Student_Packet_Style_Guide.md`, same star-rating system), adapted for a real-source lesson: a plain citation box instead of a printed passage, a fillable Listening Notes organizer instead of an annotation key, two parts (Unit \_A Listening / Unit \_B Speaking) instead of Unit \_A/\_B by calendar day. As of v1.3, the opening masthead carries a top-right `.masthead-meta` stack of two tags - "Listening & Speaking," then Band and version code combined as one string (corrected from a same-day three-line version). Section 2.13 ("same rules as Passage Reading 2.12-2.14") inherits that prompt's v1.5 idiom-table rule automatically: a lesson with 2 or more idioms to gloss renders "Idioms to Know" as a table (`.idiom-list`/`.irow`), matching "Words to Know," instead of stacked plain paragraphs. v1.4 added Sections 2.7a/2.10a for the original single-task TOEFL Track Tier alternate, plus `.mc-list`/`.mc-letter`/`.time-list`. v1.5 followed the Lesson Generation Prompt's Section 0.6 redesign: new Sections 2.6a (note-organizer TOEFL column), 2.8a (extra transfer-check question), 2.11a (reframed Discuss It prompt), rewritten 2.10a (Speaking capstone renders as an untimed in-class rehearsal, no `.time-list`), and new 2.10b (a separate, heavily-bordered take-home page carrying the real timed sentences/questions/scoring guides). v1.6 fixed 2.7a/2.10a: both TOEFL capstones render as their own sibling **`Task D (TOEFL)`** block, styled exactly like the regular lettered tasks (`exercise-label` + stars), not a `.section-label` "option" callout nested inside the regular task - and 2.7a dropped its extended explanatory paragraph, now that the Listening capstone answers from the same shared listening everyone already heard rather than a separately-read passage. v1.7 moved 2.10b's content out of the main packet into its own **separate file** (`<TopicSlug>_<Level>_L<n>_TOEFL_Homework.html`, same folder, generated in the same pass), reusing the same base stylesheet/masthead convention as the main packet; 2.10a dropped its pointer line to "the take-home page" and gained an explicit, up-front reader/listener instruction, dropping "no clock needed" language. v1.8 reframes that separate file as **teacher-only**: 2.10b now describes it as the teacher's own recording script and scoring guide (record real audio per item, post to Teams, students record their response there) rather than a "reading partner" page - `.reader-warn` text changes accordingly, no new CSS classes needed.                                                                                                                                                                                                       | Current (v1.8); eight packets generated against v1.3 (Intermediate 1-4, Advanced 1-4). The two Set 1 Lesson 1 packets (NewBakery, LostKitchen) were hand-corrected 2026-09-06 to add the `.masthead-tag` and to match the shared base stylesheet exactly (idiom styling, `.task-block .instr-line` spacing, vocab-list column width, one-line `font-family` formatting) - see `shared/Changelog.md`. LostKitchen was hand-corrected again 2026-09-07: its two idioms now render as a table (`.idiom-list`/`.irow`) instead of stacked plain paragraphs, per the new idiom-table rule above, and its masthead now carries the two-tag version-stack convention. `NewBakery` was also synced 2026-09-07: its masthead now carries the `.masthead-meta` two-tag stack too, and Task A item 3's word bank was moved inline with its item (it still has only one idiom, so the idiom-table rule doesn't apply). `LivingTextbooks_Advanced_L2` was fully synced to the current spec 2026-09-07 too (masthead-meta stack, idiom-table conversion, vocab-list/task-block CSS drift, missing `.refresher` CSS) - see `Changelog.md` and `Rotation_Log_Advanced.md`. `KeyDeer_Advanced_L3` and `GlassBender_Advanced_L4` were both generated fresh 2026-09-07 directly against the current spec (masthead-meta stack, idiom-table format from the start) - neither needs later sync. `PortoFoodTour_Intermediate_L2`, `Backpack_Intermediate_L3`, and `GreatGrandmother_Intermediate_L4` were also fully synced 2026-09-07 (masthead-meta stack, `.refresher` CSS, instr-line/idiom-item CSS drift, one-line `font-family` formatting; PortoFoodTour's idiom also moved out of a spotlight-box, GreatGrandmother's vocab-list column width realigned) - see `Changelog.md` and `Rotation_Log_Intermediate.md`. Every Set 1 packet across both bands is swept to v1.3's conventions; one packet (`Set_1_T/Lesson_1_LostKitchen`) regenerated against v1.8 with the corrected TOEFL Track Tier capstone rendering, plus its teacher-only sibling homework file. |
+| `Generate_Assessment_Prompt_v1.md`              | Generates the assessment layer on top of a taught Set, both parts run every Set: Part A, an individual Listening assessment (2-3 shorter new unseen clips, task-Level-tiered items, in-class, shorter period than a lesson's Day 1 since there's no vocab pre-teach or notes-taking step); Part B, a Speaking assessment whose mechanism splits by band - Beginner/Intermediate scored via a Teams Speaking Progress solo recording (the recording IS the assessment); Advanced/Proficient default to a live solo/group presentation, with a same-task, same-rubric Teams-recording version always also generated as a standing scored alternate. Part A's vocabulary is tested only through the graded items (pooled across the Set's 4 lessons, no separate pre-teach/review step), and every item at every task Level is multiple choice/fill-in-the-blank/matching - no open-ended items, even at the Levels whose can-dos call for summarizing or critically assessing (those get engineered near-miss distractors/matches instead). Part B's per-Level prompt now also states concrete, countable content requirements (not just a target length); its rubric stays teacher-only, with the student packet deriving a self-check checklist from it instead. | Current (v1, redesigned four times same-day 2026-09-07 - Part A twice, Part B twice); two assessments generated (Intermediate Set 1 on the current design, Advanced Set 1 still on the retired shape - see Pending work) |
+| `Generate_Assessment_Student_Packet_Prompt_v1.md` | Takes a completed Assessment (Part A + Part B) and produces a single, print-ready student handout: a Listening Test section (one page per task Level, one citation box per clip, that Level's items only - no vocabulary list, no notes organizer) and a Speaking Task section (a plain instruction card per Level - topic, concrete content requirements, target length, and a short self-check checklist derived from that Level's rubric Meets column). Strips Part A's answer keys, point values, and holistic pass notes, and Part B's actual rubric (Not yet/Developing/Meets table) - none of that is student-facing. No submission-mechanism info (platform name, submit-by date, recording/re-record/live-delivery note) anywhere in the document. Mirrors `Generate_Student_Packet_Prompt_v1.8.md`'s translation approach and reuses the shared base stylesheet/classes. | Current (v1, updated three times same-day 2026-09-07 - the Part A redesign, Part B's rubric-visibility change, then the rubric-to-checklist reversal); two packets generated (Intermediate Set 1 on the current design, Advanced Set 1 still on the retired shape) |
 | `learningobjectives.csv` (project file, shared with Passage Reading) | Source of truth for every Learning Objective, including the Listening/Speaking modality rows this family pulls from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | N/A (data)                                                                                                                                                                                                          |
 
 Not yet started for this family: a homework-generation prompt and the Part-2/presentation-project extension
@@ -77,7 +76,7 @@ generated:**
 | - | 4 | Colors and shapes of common items, shown and named | Not yet sourced - planned only |
 
 **Lesson 1's student packet:** `Set_1/Lesson_1_WhatIsIt/WhatIsIt_Beginner_L1_Packet.html`, generated
-against `Generate_Student_Packet_Prompt_v1.3.md` - two parts (Unit 1A Listening / Unit 1B Speaking),
+against `Generate_Student_Packet_Prompt_v1.4.md` - two parts (Unit 1A Listening / Unit 1B Speaking),
 each with 3 star-rated task blocks (Beginner has 3 task Levels, not 4), a plain citation box, a
 2-column order-and-name Listening Notes organizer (adapted from the module's usual comparison
 T-chart, since this source is a sequence of named objects rather than a two-category comparison),
@@ -112,15 +111,20 @@ lines, the `.match-row`/`.qitem`/`.num` consistency fixes) - see that prompt's o
 list. Not yet reviewed against a printed page.
 
 **Set 1's Listening/Speaking Assessment:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`.
-Part A (Listening) uses a new, verified real source - "Visitors Laugh
-Away Troubles at the HaHaHouse Museum" (VOA Learning English, a real laughter museum in Zagreb, Croatia) -
-distinct from all 4 taught sources, with tiered items covering all four of the Set's listening strategies (Main
-Ideas/Gist, Recognize Examples, Sequence Markers, Predict from Context). Part B (Speaking) is a Teams Speaking
-Progress solo recording (Intermediate's default mechanism), emphasizing Making Comparisons and Sequencing
-Language, with the same-task live-delivery option noted per the current prompt. This is the first assessment
-ever generated against this prompt - not yet given to a real class, so treat every number in it (period length,
-item counts, target recording lengths) as a reasoned starting point pending real classroom feedback, per the
-prompt's own open items.
+Part A (Listening) uses **2 new, verified real clips** (the current prompt's multi-clip design): "Visitors Laugh
+Away Troubles at the HaHaHouse Museum" (VOA Learning English, a real laughter museum in Zagreb, Croatia) and
+"Researchers Uncover a Bathhouse Complex in Ancient Pompeii" (VOA Learning English, a real excavated Roman
+bathhouse) - both distinct from all 4 taught sources and from each other, with items covering all four of the
+Set's listening strategies (Main Ideas/Gist, Recognize Examples, Sequence Markers, Predict from Context). Every
+item at every task Level is multiple choice, fill-in-the-blank, or matching (no open-ended items); vocabulary is
+folded into the items themselves (pooled across the Set's 4 lessons), with no separate pre-teach list and no
+notes-taking organizer. Part B (Speaking) is a Teams Speaking Progress solo recording (Intermediate's default
+mechanism), emphasizing Making Comparisons and Sequencing Language; each Level's prompt states concrete,
+countable content requirements (feature/comparison/connector counts) rather than only a target length, and the
+student packet shows a short self-check checklist derived from that Level's rubric (not the rubric itself) on
+its card, with no submission-mechanism info printed. Not yet given to a real class, so treat
+every number in it (period length, item counts, target recording lengths) as a reasoned starting point pending
+real classroom feedback, per the prompt's own open items.
 
 **Student-facing packet:** `lessons/intermediate/Set_1/Set1_Intermediate_Assessment_Packet.html`, generated
 against `Generate_Assessment_Student_Packet_Prompt_v1.md` - a Listening Test section (one printable page per
@@ -170,17 +174,43 @@ and a Speaking Task section (a plain instruction card per Level), with every ans
 pass note, and rubric stripped. Not yet reviewed against a printed page, same as the eight lesson packets and
 the Intermediate Set 1 assessment packet.
 
-**Lesson 1's TOEFL Practice Extension (optional add-on, new 2026-09-07):**
-`Set_1/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL.md` (instructor document: Part A Listening
-- an original Academic Talk passage faithful to the real PBS segment, 4 items across Main
-Idea/Factual/Inference/Attitude, full answer key; Part B Speaking - 7 original Listen and Repeat
-sentences and 4 original Take an Interview questions grounded in the lesson's real topic/vocabulary,
-real TOEFL scoring guides, item metadata table) and
-`Set_1/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Packet.html` (student packet - no passage
-or sentence/question text shown, per the "heard, not read" rule; only instructions, Part A's
-questions/answer choices, and Part B's response-time slots). Generated against the new
-`Generate_TOEFL_LS_Extension_Prompt_v1.md`, this family's first worked example of that prompt. Does
-not alter the base Day 1/Day 2 lesson. Not yet given to a real class.
+**Lesson 1's TOEFL Track Tier variant (new 2026-09-07, revised four times same day after real
+feedback):** `Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`, its matching
+`LostKitchen_Advanced_L1_Packet.html`, and a third, teacher-only sibling file,
+`LostKitchen_Advanced_L1_TOEFL_Homework.html` - a fork of `Set_1/Lesson_1_LostKitchen/`'s own files,
+generated against `Generate_Lesson_Prompt_v1.7.md` Section 0.6. Pass 1 (`S1T.1.0`) added TOEFL content
+only as a single alternate task at Level 7 (the band's highest task Level), isolated to Day 1 Phase 4 and
+Day 2 Phase 2 - feedback was that this read as disconnected from the rest of the lesson. Pass 2
+(`S1T.1.1`) threaded TOEFL-relevant skill practice through most of both days instead: a one-sentence
+"TOEFL Connection" note in Day 1 Phases 1 & 3 and Day 2 Phases 1 & 3 (teacher narration only); a
+note-organizer tag column, an extra Inference question on the Day 1 transfer check, and a reframed Town
+Hall turn on Day 2 (all in-class, opt-in, no individual timing needed); a Day 1 Phase 4 Listening
+capstone (at that point an original Academic Talk passage faithful to the real PBS segment); and a Day 2
+Phase 2 Speaking capstone split into an untimed in-class paired rehearsal plus a take-home page (at that
+point still inside the main packet) carrying the real 7 Listen and Repeat sentences, 4 Take an Interview
+questions, and TOEFL scoring guides - since the real individually-timed mechanics can't run live against
+one student while the rest of a mixed class works a different differentiated task. Pass 3 (`S1T.1.2`)
+fixed a real flaw pass 2 still had in the Listening capstone: its invented Academic Talk passage needed a
+teacher/partner to read it aloud *separately, just for TOEFL-track students* while everyone else worked
+independently - the same shared-classroom-timing problem the Speaking capstone already solved, just not
+yet applied here. The Listening capstone was rewritten to answer from the exact same real PBS segment
+every student already heard together in Phase 2 - no separate passage, no separate reading, no pulling
+anyone aside - and both capstones began rendering in the student packet as their own `Task D (TOEFL)`
+block, styled like the regular lettered tasks, instead of a nested "option" callout. Pass 4 (`S1T.1.3`)
+moved the Speaking capstone's take-home content out of the main packet entirely, into the new
+`LostKitchen_Advanced_L1_TOEFL_Homework.html` file - the in-class rehearsal's old pointer line ("the
+take-home page is at the end of this packet") was dropped, since the homework file is now a wholly
+separate document a teacher hands out on its own; the in-class box also dropped "no clock needed, just
+practice the shape of the real thing" and gained an explicit, up-front reader/listener instruction. The
+current pass (`S1T.1.4`) redelivers D's homework as a real teacher-recorded audio assignment posted to
+Teams, reusing the Assessment prompt's own "Teams Speaking Progress recording" mechanism: the teacher
+records (or otherwise produces) audio of the 7 sentences/4 questions from the homework file's script,
+posts it to Teams, and students listen once and record their own spoken response there, submitted by an
+assigned date - so the homework file itself is now teacher-only (a recording script and scoring guide,
+never shown to a student), its old "for your reading partner" framing dropped entirely. `Set_1/
+Lesson_1_LostKitchen/`'s own files are untouched - a class with no TOEFL-track students keeps using them
+exactly as before; a class with TOEFL-interested students uses the `Set_1_T/` copy instead. Not yet given
+to a real class.
 
 **Print formatting (student version), all current:**
 
@@ -279,7 +309,7 @@ idiom-table format, Four-Corner Debate translated to a plain circle-your-answer 
 C compare-pair layout for Level 7, upside-down Closing Transfer Check script) - no later sync expected. Not yet
 reviewed against a printed page, same as every other packet in this family.
 
-Next step for this Band: run `Generate_Lesson_Prompt_v1.1.md` for Lesson 2 against the approved plan, one lesson
+Next step for this Band: run `Generate_Lesson_Prompt_v1.7.md` for Lesson 2 against the approved plan, one lesson
 at a time, per the Generation workflow below.
 
 ## Generation workflow (current)
@@ -290,34 +320,62 @@ target Module and Band. It reads the Rotation Log first (`Rotation_Log.md` plus 
 default), and runs its self-check. Review and approve the plan before
 generating any lesson content. Once approved, append its Rotation Log entry to that Band's `Rotation_Log_<Band>.md`.
 
-**Step 2 - Generate lessons.** Run `Generate_Lesson_Prompt_v1.1.md` against the approved
+**Step 2 - Generate lessons.** Run `Generate_Lesson_Prompt_v1.7.md` against the approved
 plan. Because each lesson now requires finding and verifying a real source (not just writing to a word-count
 ceiling), generate **one lesson at a time** for this family rather than Passage Reading's two-at-a-time pacing,
-at least until the sourcing step has proven reliable enough to batch. Check each lesson's self-check
-(runtime/citation/task-Level checks) before moving to the next.
+at least until the sourcing step has proven reliable enough to batch. As of v1.3, generate three artifacts per
+lesson, in order: the source's `<Slug>_Transcript.md` (full real transcript, verbatim, teacher-only), then the
+lesson `.md`, then its student packet `.html`. Check each lesson's self-check (runtime/citation/task-Level/
+transcript-file checks) before moving to the next.
 
 **Step 3 - Assess.** Once a Set (4 lessons) is complete, run `Generate_Assessment_Prompt_v1.md` for that Set - both Part A (Listening) and Part B (Speaking) run every Set, not staggered. Part B's
 mechanism depends on the Band: Beginner/Intermediate produce a scored Teams Speaking Progress recording task
 (the formal assessment itself); Advanced/Proficient produce a live presentation task plus a same-task
 Teams-recording alternate for standing use (e.g. an absence). See that prompt's own scope notes (Section B.0-B.1).
 
-**Step 4 - TOEFL Practice Extension.** Run `Generate_TOEFL_LS_Extension_Prompt_v1.md` per completed
-Advanced/Proficient-band lesson, as an optional add-on for TOEFL-interested students, while the rest
-of the class continues on the standard lesson unchanged. Once a general-track homework prompt exists
-for this lesson type, this step should replace homework for that student on that cycle rather than
-adding to it, the same relationship Passage Reading's TOEFL Track Extension has to its own homework
-step - not yet actionable since Step 5 (homework) isn't built.
+**Step 4 - TOEFL Track Tier (optional, per Set).** When a TOEFL-capable variant of a completed Set is
+wanted, re-run `Generate_Lesson_Prompt_v1.7.md` Section 0.6 against each of that Set's already-generated
+lessons, forking the result into a sibling `Set_<N>_T/` folder rather than editing the existing
+`Set_<N>/` files in place. As of v1.4, this threads TOEFL-relevant skill practice through most of both
+days (a teacher-narrated connection in Phases 1/3 of each day, three small in-class touchpoints, and a
+capstone task per day - the Day 2 capstone split into an untimed in-class rehearsal plus a take-home
+Partner/Family Reader Copy) rather than one isolated task, for the band's highest task Level
+(Advanced/Proficient bands only) - a class can pick per student how deep into the TOEFL Track that
+Level's student goes. Version the fork's lesson docs/packets `S<Set>T.<Lesson>.<Iteration>`, bumping the
+iteration on any substantive revision. Not staggered against Step 3; run whenever a TOEFL-capable variant
+is actually wanted, not automatically for every Set.
 
 **Step 5+ - not yet built.** Homework and the Part 2/presentation-project extension remain pending (see below).
 
 ## Pending work
 
+- **Backfill transcript files for the 9 lessons generated before v1.3's requirement** - the
+  `<Slug>_Transcript.md` file (Section 0.3, item 7) is going-forward only as of 2026-09-07; these 9
+  lessons predate it and don't have one yet. Each needs the source re-fetched to confirm the full
+  real transcript, not just re-derived from the existing lesson `.md`'s own short quotes:
+  Beginner `Set_1/Lesson_1_WhatIsIt/`; Intermediate `Set_1/Lesson_1_NewBakery/`,
+  `Set_1/Lesson_2_PortoFoodTour/`, `Set_1/Lesson_3_Backpack/`, `Set_1/Lesson_4_GreatGrandmother/`;
+  Advanced `Set_1/Lesson_1_LostKitchen/`, `Set_1/Lesson_2_LivingTextbooks/`,
+  `Set_1/Lesson_3_KeyDeer/`, `Set_1/Lesson_4_GlassBender/` (all under their respective
+  `lessons/<band>/` root). Proficient Lesson 1 (`Lower Ninth Ward`) was generated before v1.3 too and
+  belongs on this list once confirmed.
 - **Generate Proficient Module 1 Set 1's remaining lessons (2-4)** - Lesson 1 is generated; Lessons 2-4 are still
-  planned only. Run `Generate_Lesson_Prompt_v1.1.md` one lesson at a time, per the Generation workflow below,
+  planned only. Run `Generate_Lesson_Prompt_v1.7.md` one lesson at a time, per the Generation workflow below,
   applying the same Level 7 two-source pattern and Level 8 withheld-content source each time.
 - **Give both Set 1 assessments to a real class** - Intermediate Set 1's and Advanced Set 1's assessments are
   both generated but neither has been field-tested. Once given, expect addenda the same way the Lesson prompt
   got five.
+- **Regenerate `Set1_Advanced_Assessment.md`/`.html` against the current Assessment design** -
+  `Generate_Assessment_Prompt_v1.md` was redesigned four times on 2026-09-07: Part A twice (vocabulary moved
+  from the assessment's new source to the Set's own taught pool, then folded directly into graded items with no
+  separate pre-teach/review step; the Play & Notes organizer dropped; every item made multiple choice/
+  fill-in-the-blank/matching; 2-3 shorter new clips replacing one longer source) and Part B twice (each Level's
+  speaking prompt now states concrete, countable content requirements instead of only a target length; the
+  student packet then shows a self-check checklist derived from that Level's rubric - not the rubric itself -
+  with no submission-mechanism info printed at all). Intermediate Set 1's assessment was fully regenerated to
+  match all of this. Advanced Set 1's still uses the fully retired shape (one source, a pre-taught word list, a
+  notes organizer, open-ended Part A items, an open-ended Part B prompt, a "Submit by..." line, no checklist) and
+  needs the same full regeneration, not a partial fix.
 - **Homework Generation Prompt** - not started. Will need its own rules given a homework assignment can't
   hand a student the full copyrighted transcript the way Passage Reading homework reuses the anchor text.
 - **Generate any future Set's assessment** - once Set 2 (either Band) is generated, run
@@ -325,11 +383,11 @@ step - not yet actionable since Step 5 (homework) isn't built.
   way both were just run for Advanced Set 1.
 - **Part 2 + Presentation Project Extension** - not started. Planned to mirror the content sample's second
   (video) source, cross-source synthesis, and group-presentation assignment, as an optional add-on after a core
-  lesson is complete - analogous to how this family's own TOEFL Practice Extension
-  (`Generate_TOEFL_LS_Extension_Prompt_v1.md`) now sits on top of a completed lesson rather than inside it.
-- **Generate TOEFL Practice Extensions for the remaining Set 1 lessons** - only Advanced Lesson 1 (LostKitchen)
-  has one so far. Advanced Lessons 2-4 and any completed Proficient-band lesson are equally eligible (Section
-  0.1: Advanced/Proficient bands only); generate on request, not automatically for every lesson.
-- **Give the LostKitchen TOEFL packet to a real class** - like every other assessment/extension artifact in this
+  lesson is complete - a genuinely separate, sit-on-top document (unlike the TOEFL Track Tier mechanism above,
+  which is embedded directly in the lesson).
+- **Generate TOEFL Track Tier forks for the remaining Set 1 lessons** - only Advanced Lesson 1 (LostKitchen) has
+  a `Set_1_T/` fork so far. Advanced Lessons 2-4 and any completed Proficient-band lesson are equally eligible
+  (Section 0.6: Advanced/Proficient bands only); fork on request, not automatically for every lesson.
+- **Give the `Set_1_T` Lesson 1 fork to a real class** - like every other assessment/extension artifact in this
   family, it hasn't been field-tested yet; expect the same kind of addenda the Lesson and Assessment prompts
   picked up after their own first real uses.

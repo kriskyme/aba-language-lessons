@@ -134,6 +134,13 @@ This nesting is kept even at one lesson per Set (Academic Writing's current case
 special-casing is needed later if a shorter lesson cycle ever makes room for more than one lesson
 per Set.
 
+**Variant-track Set fork (added 2026-09-07, introduced by Listening/Speaking; see §G's matching version-
+code note).** When a lesson type forks a Set into a variant track, its files live in a sibling
+`Set_<N><letter>/` folder next to `Set_<N>/` - `lessons/<band>/Set_<N><letter>/Lesson_<n>_<Slug>/`, same
+internal shape as the base Set. The base `Set_<N>/` files are never edited to build the fork; a fork can
+hold as few as one of the base Set's lessons (generated on request, not automatically for the whole Set).
+Example: Listening/Speaking's `Set_1_T/Lesson_1_LostKitchen/` sits beside `Set_1/Lesson_1_LostKitchen/`.
+
 ## E. Pedagogical framework (CBI/TBLT)
 
 Adopt a Content-Based Instruction (CBI) and Task-Based Language Teaching (TBLT) framework: treat
@@ -187,6 +194,17 @@ restate it (see `Student_Packet_Style_Guide.md` §B for the packet masthead's ve
 
 This is a going-forward convention: a Set planned before this section existed doesn't get a version
 retrofitted onto it, and its Rotation Log table is not restructured to add one.
+
+**Optional variant-track Set token (added 2026-09-07, introduced by Listening/Speaking).** A lesson type
+may fork a Set into a variant track that adds something to every lesson in it without changing their
+core content - Listening/Speaking's TOEFL Track Tier (its own Lesson Generation Prompt Section 0.6) is
+the first example: one tier of each lesson in the fork gains an added, optional alternate task. Such a
+fork's `<Set>` token carries a single uppercase letter suffixed onto the Set number (e.g. `1T`), giving
+version codes like `S1T.1.0` - still fitting this section's `S<Set>.<Lesson>.<Iteration>` shape exactly,
+just with a non-purely-numeric `<Set>`. The suffix identifies which variant track a lesson doc belongs
+to; see §D for where such a fork's files physically live. This is a mechanic a lesson type may use, not
+a requirement on every lesson type - Passage Reading's own TOEFL extension, for instance, is a separate
+companion document rather than a variant-track fork, and needs no such suffix.
 
 ## Changelog
 

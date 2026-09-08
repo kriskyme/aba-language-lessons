@@ -86,15 +86,76 @@ French. See `lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`
 header, per `Program_Conventions.md` §G - a deliberate one-lesson exception to that section's
 going-forward-only rule, not a reopening of Set 1's other lessons.
 
-**TOEFL Practice Extension generated (2026-09-07), optional add-on, does not change this row:** against
-the new `Generate_TOEFL_LS_Extension_Prompt_v1.md`, this family's first worked example of that prompt.
-Part A (Listening) writes an original Academic Talk passage faithful to the real PBS segment (reusing
-only the lesson's own already-established short quotes), 4 items across Main Idea/Factual/Inference/
-Attitude. Part B (Speaking) authors 7 original Listen and Repeat sentences and 4 original Take an
-Interview questions grounded in the lesson's real topic/vocabulary. See
-`Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL.md` (instructor document) and its matching
-`..._TOEFL_Packet.html` (student packet, no passage/sentence text shown per the "heard, not read"
-rule). Not yet given to a real class.
+**TOEFL Track Tier fork generated (2026-09-07), optional add-on, does not change this row:** per user
+direction, the standalone TOEFL Practice Extension approach noted here earlier the same day was retired
+in favor of embedding TOEFL practice directly in the lesson (`Generate_Lesson_Prompt_v1.1.md` → `_v1.2.md`
+Section 0.6). Since the alternate only applies to one tier, Lesson 1 was forked into a sibling
+`Set_1_T/Lesson_1_LostKitchen/` folder rather than edited in place - `Set_1/Lesson_1_LostKitchen/`'s own
+files (this row) are untouched. Versioned `S1T.1.0`. Not yet given to a real class.
+
+**TOEFL Track Tier redesigned same day (2026-09-07), `S1T.1.0` → `S1T.1.1`:** real feedback on the
+`S1T.1.0` pass above was that its single alternate task (isolated to Day 1 Phase 4 and Day 2 Phase 2)
+read as disconnected from the rest of the lesson. `Generate_Lesson_Prompt_v1.2.md` → `_v1.4.md` Section
+0.6 was redesigned to thread TOEFL-relevant skill practice through most of both days instead: a
+one-sentence "TOEFL Connection" note in Day 1 Phases 1 & 3 and Day 2 Phases 1 & 3 (teacher narration
+only); a note-organizer tag column, an extra Inference question on the Day 1 transfer check, and a
+reframed Town Hall turn (all in-class, opt-in, no individual timing); the original Day 1 Phase 4
+Listening capstone (an original Academic Talk passage faithful to the real PBS segment, reusing only the
+lesson's own already-established short quotes, 4 items across Main Idea/Factual/Inference/Attitude),
+unchanged; and the Day 2 Phase 2 Speaking capstone (7 original Listen and Repeat sentences, 4 original
+Take an Interview questions, both grounded in the lesson's real topic/vocabulary), now split into an
+untimed in-class paired rehearsal plus a take-home "Partner/Family Reader Copy" page carrying the real
+timed sentences/questions and TOEFL scoring guides - since individually-timed mechanics can't run live
+against one student while the rest of a mixed class works a different task. See
+`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html` (student packet,
+no passage/sentence text shown per "heard, not read," except the take-home page itself), versioned
+`S1T.1.1`. Not yet given to a real class.
+
+**TOEFL Track Tier corrected same day (2026-09-07), `S1T.1.1` → `S1T.1.2`:** review of the `S1T.1.1` pass
+above surfaced a real flaw in the Listening capstone (C) plus a labeling request. C's invented Academic
+Talk passage needed a teacher or partner to read it aloud *separately, just for TOEFL-track students*
+while the rest of the class worked independently - the same shared-classroom-timing problem D already
+solved, just not applied to C. Per user direction ("I don't want TOEFL track students to be listening to
+their own thing while the rest do something else"), `Generate_Lesson_Prompt_v1.4.md` → `_v1.5.md` Section
+0.6C is rewritten: no invented passage, no separate reading - TOEFL-track students now answer TOEFL-
+question-type items directly against the same real PBS segment every student already heard together in
+Phase 2, same as every other Level's task. Its 4 questions (Main Idea/Factual/Inference/Attitude) are
+reworded to reference "the segment" and reground their answer-key reasoning in facts/quotes already
+established elsewhere in the lesson, rather than the deleted passage text. Also, per the user's request,
+both capstones (C and D's in-class rehearsal) now render in the student packet as their own sibling
+`Task D (TOEFL)` block, styled like the regular lettered tasks, instead of a "TOEFL Track option" callout
+nested inside the regular task - and C drops its long explanatory paragraph along with the passage.
+`Generate_Student_Packet_Prompt_v1.5.md` → `_v1.6.md` updated to match. See
+`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html`, versioned
+`S1T.1.2`. Not yet given to a real class.
+
+**TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.2` → `S1T.1.3`:** two more user fixes to the
+Speaking capstone (D). First, D's take-home content is moved out of the main student packet entirely,
+into its own separate file, `Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html` -
+`Generate_Lesson_Prompt_v1.5.md` → `_v1.6.md` and `Generate_Student_Packet_Prompt_v1.6.md` → `_v1.7.md`
+both updated so a TOEFL Track Tier lesson now produces three files (lesson `.md`, main packet, homework
+file), not two. Task D (TOEFL)'s in-class rehearsal drops its old pointer line to "the take-home page,"
+since the homework file is now a wholly separate document a teacher hands out on its own - the same
+convention already used for the standalone transcript file. Second, the in-class rehearsal's own wording
+is cleaned up: "no clock needed, just practice the shape of the real thing" is dropped, and the vague
+"take turns with a partner" line is replaced with an explicit, up-front instruction ("one person reads,
+the other listens and repeats or answers - switch roles halfway through"). See
+`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`, its matching `..._Packet.html`, and the new
+`..._TOEFL_Homework.html`, versioned `S1T.1.3`. Not yet given to a real class.
+
+**TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.3` → `S1T.1.4`:** the teacher offered a better
+real delivery mechanism for D's homework - record real audio of the sentences/questions, post it to the
+class's Teams, and have students listen once and record their spoken response there, reusing this
+program's own established "Teams Speaking Progress recording" mechanism (already used for Beginner/
+Intermediate Speaking assessment) instead of asking a family member to read the items aloud from a page.
+`Generate_Lesson_Prompt_v1.6.md` → `_v1.7.md` Section 0.6D and `Generate_Student_Packet_Prompt_v1.7.md` →
+`_v1.8.md` Section 2.10b both updated: the separate homework file is now teacher-only - a recording
+script and scoring guide the teacher uses to produce Teams audio and later score submissions, never shown
+to or read by a student. Its `.reader-warn` label changes from "For your reading partner only" to
+"Teacher use only - recording script and scoring guide"; content (the sentences, questions, response
+windows, scoring guides) is unchanged. See `Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html`
+(reframed) and `Lesson1_LostKitchen.md` (Section 0.6D/self-check updated), versioned `S1T.1.4`. Not yet
+given to a real class.
 
 **Lesson 2 generated (2026-09-02), restructured (2026-09-04):** two real sources - primary: PBS NewsHour
 Weekend, "What's behind an effort to preserve mid-century modern architecture in Phoenix" (Alison King/Modern

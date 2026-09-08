@@ -16,7 +16,12 @@ lessons, not just the original Module Lesson-Plan row.
 
 ## PART A: LISTENING ASSESSMENT
 
-### Source citation (Section 0.3, reused wholesale)
+### Source citations (Section 0.3, reused wholesale)
+
+Per the redesigned prompt, this assessment uses **2 clips** instead of one, each shorter than a single-source
+assessment would need. Both are heard by the whole class regardless of assigned task Level.
+
+**Clip 1**
 
 - **Title:** "Visitors Laugh Away Troubles at the HaHaHouse Museum"
 - **Speaker/subject:** Andrea Golubic (creator of HaHaHouse); also features visitors Bruno Dadic, Aleksandar
@@ -28,23 +33,48 @@ lessons, not just the original Module Lesson-Plan row.
 - **Runtime:** approx. 4:26 (embedded audio). This runs slightly past Section 0.2's 2-4 minute target for Level
   3, the same soft-target overshoot already accepted across all four of this Set's own lessons - not a rewrite
   trigger.
-- **Distinctness check:** this source is not one of the Set's 4 taught sources (bakery, market, backpack,
-  oral-history profile) and has not been used in any prior Set's assessment for this Module/Band (this is the
-  first assessment generated for this Module/Band).
-- **Module/register match:** the piece describes a real place (a museum), its features, its zones, and stated
-  reasons behind its creation, the same Describing-module shape as the Set's own sources; register and pace are
-  VOA Learning English's own graded-for-learners standard, matching the band's lower-Level ceiling the same way
-  Lessons 1-4's sources did.
-- **Format note:** audio with a full graded-English text transcript (used below), matching the "Words in This
-  Story" glossary convention already used across this Set. No verified minute:second timestamps are available
-  for this source either, so segment labels (matching the article's own content flow) are used instead, the same
-  workaround as Lesson 1.
+- **Distinctness check:** not one of the Set's 4 taught sources (bakery, market, backpack, oral-history profile),
+  not used in any prior Set's assessment for this Module/Band, and distinct from Clip 2 below.
+- **Module/register match:** describes a real place (a museum), its features, its zones, and stated reasons
+  behind its creation - the same Describing-module shape as the Set's own sources; register and pace match VOA
+  Learning English's graded-for-learners standard, the same band-lower-Level ceiling Lessons 1-4's sources used.
+- **Format note:** audio with a graded-English text transcript, matching the "Words in This Story" glossary
+  convention already used across this Set. No verified minute:second timestamps are available, so segment labels
+  (matching the article's own content flow) are used instead, the same workaround as Lesson 1.
 
-- **[Segment 1: Arrival experience]** - the smoke, the "giant washing machine," the slide, the ball pit
-- **[Segment 2: Golubic's story]** - the pandemic idea, the childhood photo
-- **[Segment 3: Inside HaHaHouse]** - the eight zones (rubber chickens, karaoke, Sumo Arena), kinds of humor
-- **[Segment 4: Visitor voices]** - Dadic, Aleksandar, Bucic's reactions ("Inner child")
-- **[Segment 5: Expert take]** - psychologist Petar Kraljevic's closing quote
+  - **[Segment 1: Arrival experience]** - the smoke, the "giant washing machine," the slide, the ball pit
+  - **[Segment 2: Golubic's story]** - the pandemic idea, the childhood photo
+  - **[Segment 3: Inside HaHaHouse]** - the eight zones (rubber chickens, karaoke, Sumo Arena), kinds of humor
+  - **[Segment 4: Visitor voices]** - Dadic, Aleksandar, Bucic's reactions ("Inner child")
+  - **[Segment 5: Expert take]** - psychologist Petar Kraljevic's closing quote
+
+**Clip 2**
+
+- **Title:** "Researchers Uncover a Bathhouse Complex in Ancient Pompeii"
+- **Subject:** a large private Roman bathhouse, part of a wealthy family's house in the ancient city of Pompeii,
+  Italy (buried by Mount Vesuvius's eruption in 79 AD, preserved under volcanic ash and rediscovered by modern
+  archaeologists)
+- **Platform:** VOA Learning English (learningenglish.voanews.com)
+- **URL:** https://learningenglish.voanews.com/a/researchers-uncover-a-bathhouse-complex-in-ancient-pompeii/7946203.html
+- **Publication date:** January 2025
+- **Runtime:** approx. 3:17 (embedded audio) - within Section 0.2's 2-4 minute target for Level 3, no overshoot.
+- **Distinctness check:** not one of the Set's 4 taught sources, not used in any prior Set's assessment for this
+  Module/Band, and distinct from Clip 1 (a different real place, a different register of description - an
+  ancient archaeological find rather than a modern attraction).
+- **Module/register match:** describes a real place (an excavated bathhouse), its rooms, and how it was actually
+  used - the same Describing-module shape as Clip 1 and the Set's own sources; VOA Learning English graded
+  register, matching the band's lower-Level ceiling.
+- **Format note:** audio with a graded-English text transcript, including its own "Words in This Story" glossary
+  (not used for this assessment's vocabulary items - see A.1). No verified minute:second timestamps are
+  available, so segment labels are used instead, the same workaround as Clip 1.
+
+  - **[Segment 1: The discovery]** - archaeologists find a large private bathhouse, part of a wealthy family's
+    house
+  - **[Segment 2: Inside the bathhouse]** - a series of rooms for hot, warm, and cold bathing; the caldarium (a
+    very warm room); a large cold-water tub
+  - **[Segment 3: How it was used]** - wealthy owners bathed before a banquet (a big meal) held at the same
+    house; room for about 30 people to do the whole routine, the same routine people could also do at public
+    baths
 
 ### A.1 What this assessment checks
 
@@ -61,120 +91,149 @@ lessons, not just the original Module Lesson-Plan row.
 
 | Strategy | Where it appears below |
 | -------- | ----------------------- |
-| Listen for Main Ideas/Gist | Level 2 item 5, Level 3 item 1, Level 5 item 1 |
-| Recognize Examples | Level 2 item 4, Level 3 item 3, Level 4 item 2 |
-| Listen for Sequence Markers | Level 2 items 2-3, Level 3 item 2, Level 5 item 2 |
+| Listen for Main Ideas/Gist | Level 2 item 2, Level 3 item 2, Level 5 item 1 |
+| Recognize Examples | Level 2 item 4, Level 4 item 2 |
+| Listen for Sequence Markers | Level 2 item 3, Level 3 item 3 |
 | Predict from Context Before Confirming | Level 3 item 4, Level 4 item 3 |
 
-No vocabulary item below repeats a word from any of the Set's own 4 lessons' word lists; all target words are
-drawn from this new source's own glossary.
+**Vocabulary is tested through the graded items themselves, not a separate pre-teach or review step.** All target
+words are drawn from vocabulary already taught across Set 1's own 4 lessons, pooled rather than limited to a
+single lesson (Lesson 1 New Bakery x2, Lesson 2 Porto Food Tour, Lesson 3 Backpack, Lesson 4 Great-Grandmother),
+so a student who missed one lesson is only missing a fraction of the tested pool. Each item set's own item 1 is
+the vocabulary item, scaled by task Level (matching at Levels 2-3, fill-in-the-blank at Levels 4-5). None of the
+words come from either of this assessment's new clips.
 
 ### A.2 Structure
 
 ```
-LISTENING ASSESSMENT (approx. 50 MIN)  |--Setup & Vocab (10)--|--Play & Notes (15)--|--Tiered Items (20)--|--Wrap (5)--|
+LISTENING ASSESSMENT (approx. 40 MIN)  |--Setup (5)--|--Clip 1 + Items (15)--|--Clip 2 + Items (15)--|--Wrap (5)--|
 ```
 
-**Setup & Vocabulary (10 min)**
+**Setup (5 min)**
 
-- Present the citation block above.
-- Pre-teach 5 target words from the source's own "Words in This Story" glossary, using its real definitions:
-  - **museum** (n) - a building that holds many exhibits showing things related to a subject people are
-    interested in
-  - **negativity** (n) - an attitude in which someone considers only the bad qualities of someone or something
-  - **interactive** (adj) - designed to respond to the actions or commands of a user
-  - **embrace** (v) - to accept something or someone readily or gladly
-  - **tickle** (v) - to make someone laugh by lightly touching a very sensitive part of the body
+- Present both clips' citation blocks above. No vocabulary pre-teach or review here - vocabulary is tested
+  through the items themselves (below).
 
-**Play & Notes (15 min)**
+**Clip 1 + Items (15 min)**
 
-- Play the audio once (its 4:26 runtime does not comfortably allow a second full play inside this period, unlike
-  a shorter source).
-- Students take notes individually on a comparison T-chart, the same organizer type this Set's own lessons used:
-  columns "HaHaHouse Museum" vs. "A Typical Museum," rows "What visitors do when they arrive," "What's inside,"
-  "How visitors say they feel afterward." No shared board synthesis step - this is individual seatwork.
+- Play Clip 1 once (its 4:26 runtime does not comfortably allow a second full play inside this period).
+- Students immediately answer the items below that draw on Clip 1, at their own assigned task Level. No separate
+  notes-taking step - items are answered right after the clip plays.
 
-**Tiered Items (20 min)**
+- **Level 2:**
+  1. **(Vocabulary)** Match the word to its meaning: **ingredient** / **variety** / **capacity** -> "how much
+     something can hold" / "many different types of something" / "one of the things used to make a food"
+     [Answers: ingredient -> one of the things..., variety -> many different types..., capacity -> how much...]
+  2. **(Main Ideas/Gist)** Circle the picture that answers: "What is HaHaHouse?" (a museum / a hospital / a
+     school) [Answer: a museum]
+  3. **(Sequence Markers)** Fill in the blanks: "First, visitors walk into a cloud of \_\_\_. Then, they climb
+     into a giant \_\_\_." (smoke / washing machine / water / airplane) [Answers: smoke, washing machine]
+  4. **(Recognize Examples, Respectful Tiers)** Match the example to its zone, then answer the last question:
+     rubber chickens -> (singing / sleeping); Bed of Nails -> (lying down / jumping) [Answers: singing, lying
+     down]. Do you think visitors feel happy at HaHaHouse? Circle: yes / no. Which word tells you? Circle:
+     (fun / boring) [Answer: yes, fun - genuine interpretive step, Respectful Tiers]
+- **Level 3:**
+  1. **(Vocabulary)** Match all 5 words to their meanings: **ingredient**, **organic**, **variety**, **capacity**,
+     **challenge** -> their taught definitions (A.1), shuffled.
+  2. **(Main Ideas/Gist)** Choose the best sentence: "It is \_\_\_ and \_\_\_." (a) a museum, boring (b) a
+     museum, interactive (c) a hospital, quiet [Answer: b]
+  3. **(Sequence Markers)** Put these steps in order (1-3): climb into the washing machine / walk through the
+     smoke / slide into the ball pit [Answer: 2, 1, 3]
+  4. **(Predict from Context Before Confirming)** Before hearing the rest of Segment 4, circle your prediction:
+     why did Aleksandar like the Bed of Nails? (a) it tickled him (b) it hurt him (c) it scared him. After
+     hearing it, circle what the recording actually says. [Answer: a, both circles]
+- **Level 4:**
+  1. **(Vocabulary)** Fill in the blank using a word bank (ingredient, capacity, challenge): "Learning a new
+     language can be a real \_\_\_ at first." / "This backpack has a large \_\_\_, so it can hold many things."
+     / "Flour is the main \_\_\_ in bread." [Answers: challenge, capacity, ingredient]
+  2. **(Recognize Examples)** Match each example to the kind of humor it represents: rubber chickens singing ->
+     (silly/slapstick humor / informational humor); the "serious history of humor" told through theatre and film
+     -> (silly/slapstick humor / informational humor) [Answers: silly/slapstick, informational]
 
-Students work at their own assigned task Level (item counts balanced for time-on-task, more/shorter at Level 2,
-fewer/deeper at Level 5, matching this Set's own lessons):
+**Clip 2 + Items (15 min)**
 
-- **Level 2 (5 items):**
-  1. Circle the picture that answers: "What is HaHaHouse?" (a museum / a hospital / a school) [Answer: a museum]
-  2. Complete: "First, visitors walk into a cloud of \_\_\_." (smoke / water / balls) [Answer: smoke]
-  3. Circle: "Then, visitors climb into a giant \_\_\_." (washing machine / airplane / boat) [Answer: washing
-     machine]
-  4. Match the example to its zone: rubber chickens -> (singing / sleeping); Bed of Nails -> (lying down /
-     jumping) [Answers: singing, lying down]
-  5. Complete: "It is \_\_\_ and \_\_\_." using two words from a bank (fun, interactive, boring, quiet) to
-     describe HaHaHouse [Sample answer: fun, interactive] - also ask "Do you think visitors feel happy after
-     visiting? Circle: yes / no" [genuine interpretive step, Respectful Tiers]
-- **Level 3 (4 items):**
-  1. Choose the best sentence: "It is \_\_\_ and \_\_\_." (a) a museum, boring (b) a museum, interactive (c) a
-     hospital, quiet [Answer: b]
-  2. Put these steps in order (1-3): climb into the washing machine / walk through the smoke / slide into the
-     ball pit [Answer: 2, 1, 3]
-  3. Circle two real examples of interactive zones mentioned in the source: (karaoke room / Sumo Arena / dance
-     floor / movie theater) [Answer: karaoke room, Sumo Arena]
-  4. Predict, then confirm: before hearing the rest of Segment 4, predict why Aleksandar liked the Bed of Nails.
-     Then complete: "Aleksandar liked the Bed of Nails because it \_\_\_ him." (tickled / hurt / scared)
-     [Answer: tickled]
-- **Level 4 (3 items):**
-  1. In 2-3 sentences, name one feature of HaHaHouse, one way it's different from a typical museum, and the
-     stated reason Golubic created it.
-  2. List two real examples of interactive zones from the source and explain what kind of humor each represents
-     (e.g. rubber chickens singing = silly/slapstick humor; the "serious history of humor" told through theatre
-     and film = a more informational kind).
-  3. Predict, then confirm: before hearing Segment 4, predict how an adult visitor might feel about a museum
-     built for laughing. State what Bruno Dadic and Zorica Bucic actually said, and whether your prediction was
-     confirmed.
-- **Level 5 (3 items):**
-  1. Write a one-paragraph gist summary: who Andrea Golubic is, what HaHaHouse does, and why it matters to her.
-  2. Summarize how the piece is organized (arrival experience, Golubic's story, inside the zones, visitor voices,
-     the psychologist's closing take) and name the sequence markers used to move between the arrival steps.
-  3. Identify the evaluative language in Petar Kraljevic's closing quote ("laughter is a kind of weapon which
-     gives people strength...three hours of laughter a day") and explain what unstated opinion it signals about
-     the value of humor, even though he never says "everyone should visit this museum."
+- Play Clip 2 once (its 3:17 runtime comfortably allows a second play if a teacher judges the class needs it -
+  state this option, but one play is the default).
+- Students immediately answer the items below that draw on Clip 2 (or, at Level 5, on both clips), at their own
+  assigned task Level. No separate notes-taking step.
 
-**Wrap (5 min):** collect. No transfer-check performance step here; the tiered items already are the transfer
-check.
+- **Level 4 (continued):**
+  3. **(Predict from Context Before Confirming)** Before hearing why the bathhouse had both a hot room and a
+     cold tub, circle your prediction: why might Pompeii's wealthy families want both? (a) to save money (b) to
+     enjoy different temperatures as part of their bathing routine (c) to clean their clothes. After hearing it,
+     circle what the recording actually says. [Answer: b, both circles]
+- **Level 5:**
+  1. **(Vocabulary)** Fill in the blank, choosing the correct word between the two given (organic, variety):
+     "The market sells a wide \_\_\_ of vegetables, from potatoes to peppers." (variety / organic) "These
+     tomatoes are \_\_\_, so no artificial chemicals were used to grow them." (organic / variety) [Answers:
+     variety, organic]
+  2. **(Main Ideas/Gist, both clips)** Which sentence best summarizes what both recordings have in common? (a)
+     Both describe places built entirely for exercise. (b) Both describe real places that give visitors a
+     specific experience tied to an idea about well-being - laughter as therapy at HaHaHouse, bathing as ritual
+     at the Pompeii bathhouse. (c) Both describe historic buildings that are now closed to the public. [Answer:
+     b]
+  3. **(Evaluative Language, Clip 1)** Read Petar Kraljevic's closing quote: "laughter is a kind of weapon which
+     gives people strength...three hours of laughter a day." Which best describes the unstated opinion this
+     signals? (a) Kraljevic thinks laughter is a powerful, valuable tool for people's well-being, even though he
+     never says "you should visit this museum." (b) Kraljevic thinks laughter is dangerous and should be
+     limited. (c) Kraljevic has no opinion about laughter, just facts. [Answer: a]
+  4. **(Cross-clip framing comparison, both clips)** Match each description to the clip it applies to (HaHaHouse
+     / the Pompeii bathhouse): "Built for shared entertainment among strangers visiting today" -> ?; "Built for
+     a private family and their invited guests, in the ancient past" -> ?; "Uses humor as its main tool for a
+     good experience" -> ?; "Uses temperature changes as its main tool for a good experience" -> ? [Answers:
+     HaHaHouse, Pompeii bathhouse, HaHaHouse, Pompeii bathhouse]
+
+**Wrap (5 min):** collect. No transfer-check performance step here; the items already are the transfer check.
 
 ### A.3 Scoring
 
-Point values (not letter grades or percentages):
+Point values (not letter grades or percentages); every item is multiple choice, fill-in-the-blank, or matching:
 
 | Level | Points per item | Total |
 | ----- | ---------------- | ----- |
-| 2 | 1 point each (items 1-4), 1 point for the yes/no interpretive step | 5 |
-| 3 | 1 point each | 4 |
-| 4 | 2 points each (short-response) | 6 |
-| 5 | 2 points each (extended-response) | 6 |
+| 2 | Item 1: 3 (one per match); Items 2-3: 1 each; Item 4: 2 (one per match) plus 1 for the interpretive yes/no | 8 |
+| 3 | Item 1: 5 (one per match); Items 2-3: 1 each; Item 4: 2 (predict + confirm) | 9 |
+| 4 | Item 1: 3 (one per blank); Item 2: 2 (one per match); Item 3: 2 (predict + confirm) | 7 |
+| 5 | Item 1: 2 (one per blank); Items 2-3: 1 each; Item 4: 4 (one per match) | 8 |
 
 **Holistic pass note per Level:**
 
-- **Level 2:** correctly identifies HaHaHouse as a museum, sequences the two arrival steps in order, matches at
-  least one example to its zone, and offers a plausible yes/no with a reason when asked.
-- **Level 3:** correctly completes the two-slot frame, sequences all three arrival steps, identifies both real
-  zone examples, and makes a reasonable prediction before confirming the Bed of Nails detail.
-- **Level 4:** names a real feature, comparison, and stated reason; gives two zone examples with a plausible
-  humor-type label each; states a prediction and compares it accurately to what visitors actually said.
-- **Level 5:** summary accurately reflects who Golubic is and why she built HaHaHouse; organizational summary
-  names the real sequence of sections; evaluative-language item correctly identifies Kraljevic's stance without
-  him stating it directly.
+- **Level 2:** correctly identifies HaHaHouse as a museum, completes the sequence frame in order, matches at
+  least one example to its zone, and offers the correct yes/no plus the word that signals it.
+- **Level 3:** correctly matches all 5 vocabulary words, completes the two-slot frame, sequences all three
+  arrival steps, and predicts plausibly before confirming the Bed of Nails detail.
+- **Level 4:** correctly completes all three vocabulary blanks, matches both examples to their humor type, and
+  predicts plausibly before confirming the bathhouse's hot/cold purpose.
+- **Level 5:** correctly completes both precision vocabulary blanks, identifies the accurate cross-clip summary
+  and the accurate evaluative-language reading, and matches all four framing descriptions to the correct clip.
 
 ### A.4 Self-check
 
-1. Source is real, verified (web search plus direct fetch of the VOA page), cited in full; distinct from the
-   Set's 4 taught sources and from every prior Set's assessment source for this Module/Band (there is no prior
-   one). Pass.
-2. Register/pace match: VOA Learning English graded audio, same standard as all 4 of the Set's own sources.
-   Runtime (4:26) is a minor soft-target overshoot, same accepted pattern as this Set's own lessons. Pass.
+1. Are both clips real, verified (web search plus direct fetch of each VOA page), cited in full; distinct from
+   the Set's 4 taught sources, from every prior Set's assessment source for this Module/Band (there is no prior
+   one), and from each other? Pass.
+2. Do both clips match VOA Learning English's graded audio register, the same standard as all 4 of the Set's own
+   sources? Clip 1's runtime (4:26) is a minor soft-target overshoot, same accepted pattern as this Set's own
+   lessons; Clip 2's runtime (3:17) sits inside the target with no overshoot. Pass.
 3. Every task Level's item set traces to that Level's verbatim CSV Listening can-do (table in A.1). Pass.
 4. All four strategies taught in Set 1 are covered at least once each (table in A.1). Pass.
-5. Time-on-task is roughly balanced: Level 2 has more, shorter items; Level 5 has fewer, deeper items. Pass.
-6. Level 2 gets a genuine interpretive step (the yes/no plus reason), not fact-retrieval only. Pass.
-7. No em-dashes used. Citation block first. Segment labels used in place of timestamps, consistent with this
-   Set's own established workaround (flagged, not silently substituted).
+5. Time-on-task is roughly balanced across Levels (item/point counts 8, 9, 7, 8 - no Level is disproportionately
+   longer or shorter). Pass.
+6. Level 2 gets a genuine interpretive item (item 4's yes/no plus the word that signals it), not fact-retrieval
+   only - Respectful Tiers applied to an MC/matching format. Pass.
+7. Vocabulary is tested only through graded items (matching at Levels 2-3, fill-in-the-blank at Levels 4-5), with
+   no separate pre-teach or review step anywhere in the document; words are pooled across all 4 of the Set's
+   lessons rather than any single one, and none are pulled from either clip. Pass.
+8. Is every item at every task Level multiple choice, fill-in-the-blank, or matching? Yes - none open-ended.
+   Pass.
+9. At Level 5, whose can-do calls for summarizing and identifying evaluative language, are the items engineered
+   to require that judgment rather than simplified into recall? Yes - item 2's summary options are all
+   plausible-sounding, only one accurate; item 4's matching pairs a description to the clip it actually applies
+   to, not to a dictionary definition. Pass.
+10. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
+    Yes. Pass.
+11. No em-dashes used. Citation blocks first for both clips. Segment labels used in place of timestamps,
+    consistent with this Set's own established workaround (flagged, not silently substituted).
 
 ---
 
@@ -203,25 +262,27 @@ which of the two it emphasizes most.
 ### B.3 Prompts by task Level
 
 - **Level 2 (target length: 30-45 sec).** *Emphasizes: Making Comparisons, with Sequencing Language as a
-  supporting frame.* Describe two rooms in your home. Say one thing about each room using "It is \_\_\_." Then
-  say "First I would show you \_\_\_. Then I would show you \_\_\_." Submit your recording by [teacher-set date]
-  using Teams Speaking Progress, or ask your teacher about presenting live instead.
+  supporting frame.* Content requirements (concrete, countable): (1) name each of the 2 rooms using "It is
+  \_\_\_." - one description per room, 2 total; (2) sequence the visit using "First I would show you \_\_\_.
+  Then I would show you \_\_\_." - both slots filled. Submit your recording by [teacher-set date] using Teams
+  Speaking Progress, or ask your teacher about presenting live instead.
 - **Level 3 (target length: 45-60 sec).** *Emphasizes: Making Comparisons, with Sequencing Language as a
-  supporting frame.* Using a model card if you need one, describe two rooms using the two-slot frame: "It is
-  \_\_\_ and \_\_\_." for each room. Then describe the order you would show a visitor around, using at least two
-  sequence words (first, then, after that). Submit by [teacher-set date] using Teams Speaking Progress, or
-  present live instead, teacher-approved.
+  supporting frame.* Content requirements: (1) describe each of the 2 rooms using the two-slot frame ("It is
+  \_\_\_ and \_\_\_.") - 2 filled frames total, a model card available for reference; (2) sequence the visitor's
+  route using at least 2 sequence words (first, then, after that). Submit by [teacher-set date] using Teams
+  Speaking Progress, or present live instead, teacher-approved.
 - **Level 4 (target length: 60-90 sec).** *Emphasizes: Making Comparisons and Sequencing Language equally.*
-  Describe two rooms in your home (or two places you know well) in your own words, including one comparison
-  between them and a brief reason for the comparison. Then explain, using your own sequence connectors, the
-  order in which you would show a visitor around both places. Submit by [teacher-set date] using Teams Speaking
-  Progress, or present live instead, teacher-approved.
+  Content requirements: (1) describe at least 2 features of each room/place, in your own words (4 features
+  total); (2) include 1 comparison between the two with a stated reason; (3) sequence the visitor's route using
+  at least 2 of your own sequence connectors (not the fixed frame). Submit by [teacher-set date] using Teams
+  Speaking Progress, or present live instead, teacher-approved.
 - **Level 5 (target length: 90-120 sec).** *Emphasizes: Making Comparisons and Sequencing Language equally, plus
-  an evaluative word choice.* Give an extended, organized description comparing two places you know well.
-  Include a clear sequence of how a visitor would move through both, and at least one clearly evaluative word
-  choice that signals your opinion of one place over the other without stating that opinion directly (e.g.
-  "cozy" vs. "cramped"). Submit by [teacher-set date] using Teams Speaking Progress, or present live instead,
-  teacher-approved.
+  an evaluative word choice.* Content requirements: (1) describe at least 3 features of each place you know well
+  (6 features total), organized (e.g. by size, use, atmosphere); (2) include at least 1 comparison between the
+  two places with clear reasoning; (3) sequence a visitor's route using at least 3 varied sequence connectors
+  (not repeating the same word); (4) use at least 1 clearly evaluative word choice that signals your opinion of
+  one place over the other without stating that opinion directly (e.g. "cozy" vs. "cramped"). Submit by
+  [teacher-set date] using Teams Speaking Progress, or present live instead, teacher-approved.
 
 ### B.4 Scoring rubric
 
@@ -276,7 +337,9 @@ which of the two it emphasizes most.
    recitation alone. Pass.
 9. Not applicable (live-presentation time budget is an Advanced/Proficient requirement; this band's mechanism is
    individual recording).
-10. No em-dashes used.
+10. Every task Level's prompt specifies concrete, countable content requirements (feature counts, comparison
+    counts, connector counts), scaled by Level, not just a target length. Pass.
+11. No em-dashes used.
 
 ---
 

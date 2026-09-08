@@ -152,31 +152,6 @@
         margin: 0 0 10px;
       }
 
-      .vocab-list {
-        margin: 10px 0 6px;
-        font-family:
-          system-ui,
-          -apple-system,
-          sans-serif;
-        font-size: 14px;
-      }
-      .vocab-list .vrow {
-        display: flex;
-        gap: 10px;
-        padding: 6px 0;
-        border-bottom: 1px solid var(--rule-light);
-      }
-      .vocab-list .vrow:last-child {
-        border-bottom: none;
-      }
-      .vocab-list .word {
-        font-family: Georgia, serif;
-        font-style: italic;
-        font-weight: 700;
-        white-space: nowrap;
-        min-width: 130px;
-      }
-
       .qlist {
         margin: 0;
         padding-left: 0;
@@ -311,29 +286,24 @@
         font-weight: 700;
       }
 
-      .notes-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 10px 0 20px;
+      .checklist {
+        margin: 10px 0 4px;
+        padding-left: 0;
+        list-style: none;
         font-family:
           system-ui,
           -apple-system,
           sans-serif;
         font-size: 13.5px;
       }
-      .notes-table th,
-      .notes-table td {
-        border: 1px solid var(--rule);
-        padding: 8px 10px;
-        text-align: left;
-        vertical-align: top;
+      .checklist li {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 6px;
       }
-      .notes-table th {
-        font-weight: 700;
-        background: #f2f2f2;
-      }
-      .notes-table td {
-        height: 38px;
+      .checklist li::before {
+        content: "\2610";
+        flex-shrink: 0;
       }
 
       /* One printed page per task Level, for selective distribution/printing */
@@ -373,64 +343,15 @@
       </div>
 
       <div class="citebox">
-        <strong>You'll listen to:</strong> "Visitors Laugh Away Troubles at the
+        <strong>Clip 1:</strong> "Visitors Laugh Away Troubles at the
         HaHaHouse Museum," an audio from VOA Learning English about a new
         museum in Zagreb, Croatia built entirely around laughter.
       </div>
-
-      <p class="section-label">Words to Know</p>
-      <div class="vocab-list">
-        <div class="vrow">
-          <span class="word">1. museum</span
-          ><span
-            >a building that holds many exhibits about a subject people are
-            interested in</span
-          >
-        </div>
-        <div class="vrow">
-          <span class="word">2. negativity</span
-          ><span>an attitude that only sees the bad qualities in something</span>
-        </div>
-        <div class="vrow">
-          <span class="word">3. interactive</span
-          ><span>designed to respond to what a person does</span>
-        </div>
-        <div class="vrow">
-          <span class="word">4. embrace</span
-          ><span>to accept something readily and gladly</span>
-        </div>
-        <div class="vrow">
-          <span class="word">5. tickle</span
-          ><span>to make someone laugh by lightly touching them</span>
-        </div>
+      <div class="citebox">
+        <strong>Clip 2:</strong> "Researchers Uncover a Bathhouse Complex in
+        Ancient Pompeii," an audio from VOA Learning English about a private
+        Roman bathhouse discovered at the ancient city of Pompeii, Italy.
       </div>
-
-      <div class="section-title">Listening Notes</div>
-      <p class="instr">
-        While you listen, fill in what you learn about HaHaHouse below.
-      </p>
-      <table class="notes-table">
-        <tr>
-          <th>&nbsp;</th>
-          <th>HaHaHouse Museum</th>
-          <th>A Typical Museum</th>
-        </tr>
-        <tr>
-          <td>What visitors do when they arrive</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>What's inside</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>How visitors say they feel afterward</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
 
       <div class="level-page">
         <div class="section-title">Listening Test: &#9733;</div>
@@ -438,6 +359,26 @@
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
+            <div class="qbody">
+              Match the word to its meaning. Write the letter.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">___ ingredient</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ variety</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ capacity</span>
+                </div>
+              </div>
+              (a) many different types of something &middot; (b) how much
+              something can hold &middot; (c) one of the things used to make a
+              food
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
             <div class="qbody">
               What is HaHaHouse?
               <div class="pic-options">
@@ -457,23 +398,17 @@
             </div>
           </li>
           <li>
-            <span class="num">2.</span>
-            <div class="qbody">
-              First, visitors walk into a cloud of ___ (smoke / water /
-              balls).
-            </div>
-          </li>
-          <li>
             <span class="num">3.</span>
             <div class="qbody">
-              Then, visitors climb into a giant ___ (washing machine /
-              airplane / boat).
+              Fill in the blanks: "First, visitors walk into a cloud of ___
+              (smoke / water / balls). Then, they climb into a giant ___
+              (washing machine / airplane / boat)."
             </div>
           </li>
           <li>
             <span class="num">4.</span>
             <div class="qbody">
-              What do visitors do at each part of HaHaHouse?
+              Match the example to its zone. Then answer the last question.
               <div class="match-list">
                 <div class="match-row">
                   <span class="match-label">rubber chickens</span>(sing /
@@ -484,21 +419,8 @@
                   jump)
                 </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <span class="num">5.</span>
-            <div class="qbody">
-              Complete: "It is ___ and ___." using two words from the bank
-              below to describe HaHaHouse.
-              <div class="wordbank">
-                <strong>Word bank:</strong> fun &middot; interactive &middot;
-                boring &middot; quiet
-              </div>
-              <span class="ans-line"></span>
-              Do you think visitors feel happy after visiting? (yes / no) Why
-              do you think so?
-              <span class="ans-line"></span>
+              Do you think visitors feel happy at HaHaHouse? Circle: yes / no.
+              Which word tells you? Circle: (fun / boring)
             </div>
           </li>
         </ol>
@@ -507,19 +429,46 @@
       <div class="level-page">
         <div class="section-title">Listening Test: &#9733;&#9733;</div>
         <p class="task-instr">
-          Circle the correct answer, or fill in the blank, for each question
-          below.
+          Circle the correct answer, or match/order each item, below.
         </p>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
+            <div class="qbody">
+              Match all 5 words to their meanings. Write the letter.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">___ ingredient</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ organic</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ variety</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ capacity</span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">___ challenge</span>
+                </div>
+              </div>
+              (a) many different types of something &middot; (b) how much a
+              backpack can hold, usually measured in liters &middot; (c) one
+              of the things used to make a food &middot; (d) a difficult task
+              or problem &middot; (e) grown or made without artificial
+              chemicals
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
             <div class="qbody">
               Choose the best sentence: "It is ___ and ___." (a museum,
               boring / a museum, interactive / a hospital, quiet)
             </div>
           </li>
           <li>
-            <span class="num">2.</span>
+            <span class="num">3.</span>
             <div class="qbody">
               Put these steps in the order they really happen. Write 1, 2, or
               3 next to each one.
@@ -541,20 +490,12 @@
             </div>
           </li>
           <li>
-            <span class="num">3.</span>
-            <div class="qbody">
-              Circle two real zones mentioned in the audio: (karaoke room /
-              Sumo Arena / dance floor / movie theater)
-            </div>
-          </li>
-          <li>
             <span class="num">4.</span>
             <div class="qbody">
-              Before you hear the rest, guess: why do you think Aleksandar
-              liked the Bed of Nails?
-              <span class="ans-line"></span>
-              Now complete: "Aleksandar liked the Bed of Nails because it ___
-              him." (tickled / hurt / scared)
+              Before you hear the rest, circle your prediction: why did
+              Aleksandar like the Bed of Nails? (it tickled him / it hurt him
+              / it scared him). After you hear it, circle what the recording
+              actually says.
             </div>
           </li>
         </ol>
@@ -566,32 +507,43 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              In 2-3 sentences, name one feature of HaHaHouse, one way it's
-              different from a typical museum, and the reason Andrea Golubic
-              gives for creating it.
-              <span class="ans-line"></span>
-              <span class="ans-line"></span>
+              Fill in the blank using a word from the bank.
+              <div class="wordbank">
+                <strong>Word bank:</strong> ingredient &middot; capacity
+                &middot; challenge
+              </div>
+              Learning a new language can be a real ___ at first.<br />
+              This backpack has a large ___, so it can hold many things.<br />
+              Flour is the main ___ in bread.
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              List two real zones from the audio and explain what kind of
-              humor each one represents.
-              <span class="ans-line"></span>
-              <span class="ans-line"></span>
+              Match each example to the kind of humor it represents.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">rubber chickens singing</span
+                  >(silly/slapstick humor / informational humor)
+                </div>
+                <div class="match-row">
+                  <span class="match-label"
+                    >the "serious history of humor" told through theatre and
+                    film</span
+                  >(silly/slapstick humor / informational humor)
+                </div>
+              </div>
             </div>
           </li>
           <li>
             <span class="num">3.</span>
             <div class="qbody">
-              Before you hear the visitors' own words, predict: how do you
-              think an adult visitor might feel about a museum built for
-              laughing?
-              <span class="ans-line"></span>
-              Now write what Bruno Dadic and Zorica Bucic actually said, and
-              whether your prediction was right.
-              <span class="ans-line"></span>
+              Before you hear why the bathhouse had both a hot room and a cold
+              tub, circle your prediction: why might Pompeii's wealthy
+              families want both? (to save money / to enjoy different
+              temperatures as part of their bathing routine / to clean their
+              clothes). After you hear it, circle what the recording actually
+              says.
             </div>
           </li>
         </ol>
@@ -603,31 +555,67 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Write a one-paragraph summary: who Andrea Golubic is, what
-              HaHaHouse does, and why it matters to her.
-              <span class="ans-line"></span>
-              <span class="ans-line"></span>
-              <span class="ans-line"></span>
+              Fill in each blank, choosing the correct word from the two
+              given.
+              <br />"The market sells a wide ___ of vegetables, from potatoes
+              to peppers." (variety / organic)
+              <br />"These tomatoes are ___, so no artificial chemicals were
+              used to grow them." (organic / variety)
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Summarize how the audio is organized (the arrival experience,
-              Golubic's story, inside the zones, visitor voices, the
-              psychologist's closing words) and name the words that show the
-              order of the arrival steps.
-              <span class="ans-line"></span>
+              Which sentence best summarizes what both recordings have in
+              common? (a) Both describe places built entirely for exercise.
+              (b) Both describe real places that give visitors a specific
+              experience tied to an idea about well-being. (c) Both describe
+              historic buildings that are now closed to the public.
             </div>
           </li>
           <li>
             <span class="num">3.</span>
             <div class="qbody">
-              Find the part near the end where the psychologist shows what he
-              really thinks about laughter, without saying "everyone should
-              visit this museum." Write what he says and explain what it
-              shows.
-              <span class="ans-line"></span>
+              Read Petar Kraljevic's closing quote: "laughter is a kind of
+              weapon which gives people strength...three hours of laughter a
+              day." Which best describes the unstated opinion this signals?
+              (a) Kraljevic thinks laughter is a powerful, valuable tool for
+              people's well-being, even though he never says "you should
+              visit this museum." (b) Kraljevic thinks laughter is dangerous
+              and should be limited. (c) Kraljevic has no opinion about
+              laughter, just facts.
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Match each description to the clip it applies to: write
+              "HaHaHouse" or "Pompeii bathhouse."
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label"
+                    >Built for shared entertainment among strangers visiting
+                    today</span
+                  >
+                </div>
+                <div class="match-row">
+                  <span class="match-label"
+                    >Built for a private family and their invited guests, in
+                    the ancient past</span
+                  >
+                </div>
+                <div class="match-row">
+                  <span class="match-label"
+                    >Uses humor as its main tool for a good experience</span
+                  >
+                </div>
+                <div class="match-row">
+                  <span class="match-label"
+                    >Uses temperature changes as its main tool for a good
+                    experience</span
+                  >
+                </div>
+              </div>
             </div>
           </li>
         </ol>
@@ -643,13 +631,6 @@
         would show a visitor around them.
       </p>
 
-      <p class="instr">
-        Record yourself using Microsoft Teams Speaking Progress. You may
-        re-record as many times as you want before you submit. You may also
-        do this task live in class instead of recording; ask your
-        teacher.
-      </p>
-
       <div class="task-block">
         <p class="instr-line">
           <span class="exercise-label">Speaking Task</span>
@@ -660,22 +641,24 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Describe two rooms in your home. Say one thing about each room
-              using "It is ___."
+              Describe each of your 2 rooms. Say one thing about each room
+              using "It is ___." (2 sentences total.)
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
               Then say "First I would show you ___. Then I would show you
-              ___."
+              ___." (Fill in both blanks.)
             </div>
           </li>
         </ol>
-        <div class="wordbank">
-          <strong>Submit by:</strong> [teacher-set date], using Teams
-          Speaking Progress.
-        </div>
+        <p class="task-instr">Before you submit, check:</p>
+        <ul class="checklist">
+          <li>Both rooms described using the fixed frame</li>
+          <li>Clear, correctly ordered sequence using "First...then..."</li>
+          <li>Clear, understandable pronunciation of the target words</li>
+        </ul>
       </div>
 
       <div class="task-block">
@@ -688,22 +671,25 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Describe two rooms using the frame "It is ___ and ___." for
-              each room. Use the model card if you need it.
+              Describe each of your 2 rooms using the frame "It is ___ and
+              ___." (2 filled frames total.) Use the model card if you need
+              it.
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
               Then describe the order you would show a visitor around, using
-              at least two order words (first, then, after that).
+              at least 2 order words (first, then, after that).
             </div>
           </li>
         </ol>
-        <div class="wordbank">
-          <strong>Submit by:</strong> [teacher-set date], using Teams
-          Speaking Progress.
-        </div>
+        <p class="task-instr">Before you submit, check:</p>
+        <ul class="checklist">
+          <li>Both rooms clearly described in the two-slot frame</li>
+          <li>At least 2 sequence words used, in a clear order</li>
+          <li>Ideas flow as connected sentences, not isolated words</li>
+        </ul>
       </div>
 
       <div class="task-block">
@@ -716,23 +702,30 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Describe two rooms in your home (or two places you know well)
-              in your own words, including one comparison between them and a
-              short reason for the comparison.
+              Describe at least 2 features of each room/place, in your own
+              words (4 features total).
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Then explain, using your own order words, the order you would
-              show a visitor around both places.
+              Include 1 comparison between the two, with a stated reason.
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Explain the order you would show a visitor around, using at
+              least 2 of your own order words (not the fixed frame).
             </div>
           </li>
         </ol>
-        <div class="wordbank">
-          <strong>Submit by:</strong> [teacher-set date], using Teams
-          Speaking Progress.
-        </div>
+        <p class="task-instr">Before you submit, check:</p>
+        <ul class="checklist">
+          <li>Clear comparison with a specific stated reason</li>
+          <li>Varied sequence connectors used accurately, not the fixed frame</li>
+          <li>Mostly your own original language, not a memorized frame</li>
+        </ul>
       </div>
 
       <div class="task-block">
@@ -745,30 +738,40 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Give an extended, organized description comparing two places
-              you know well.
+              Describe at least 3 features of each place you know well (6
+              features total), organized (for example, by size, use, or
+              atmosphere).
             </div>
           </li>
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Include a clear order for how a visitor would move through both
-              places.
+              Include at least 1 comparison between the two places with clear
+              reasoning.
             </div>
           </li>
           <li>
             <span class="num">3.</span>
             <div class="qbody">
-              Use at least one word that shows your opinion of one place over
+              Explain a visitor's route using at least 3 varied order words
+              (don't repeat the same one).
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Use at least 1 word that shows your opinion of one place over
               the other without saying that opinion directly (for example,
               "cozy" vs. "cramped").
             </div>
           </li>
         </ol>
-        <div class="wordbank">
-          <strong>Submit by:</strong> [teacher-set date], using Teams
-          Speaking Progress.
-        </div>
+        <p class="task-instr">Before you submit, check:</p>
+        <ul class="checklist">
+          <li>Clearly organized comparison, sustained across both places</li>
+          <li>Evaluative word used, without stating the opinion directly</li>
+          <li>Sequence language and comparison language work together smoothly</li>
+        </ul>
       </div>
     </div>
   </body>

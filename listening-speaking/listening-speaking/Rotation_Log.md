@@ -82,3 +82,10 @@ covering all four of the Set's listening strategies (Main Ideas/Gist, Recognize 
 Predict from Context). Part B (Speaking) is a Teams Speaking Progress solo recording (Intermediate's default
 mechanism), emphasizing Making Comparisons and Sequencing Language, with the same-task live-delivery option
 noted. See `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`.
+
+**Intermediate Set 1 assessment's Part A fully regenerated again (2026-09-07),** against
+`Generate_Assessment_Prompt_v1.md`'s redesigned Part A: a second real clip added ("Researchers Uncover a
+Bathhouse Complex in Ancient Pompeii," VOA Learning English), vocabulary folded into the graded items instead of
+a pre-teach list, the notes-taking organizer dropped, and every item rewritten as multiple choice/fill-in-the-
+blank/matching. HaHaHouse stays Clip 1; Part B (Speaking) unchanged. See `Changelog.md` for the full reasoning
+and `Index.md` for current file status.

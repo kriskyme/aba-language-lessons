@@ -17,7 +17,7 @@ of that (see Part B for how it's actually used at each band):
 | Cadence   | Every Set (every 4 lessons / 8 real class days)           | Every Set (every 4 lessons / 8 real class days)                                                                                                                                                                                                                                                                                     |
 | Mechanism | In-class, individual, same-period, new unseen source      | Band-dependent - see Part B: Beginner/Intermediate default to a scored Teams recording (with the same task available as a teacher-approved live delivery for a willing student); Advanced/Proficient default to a live presentation, with a Teams-recording version of the same task always also produced as a standing swap option |
 | Scope     | The Set just completed only                               | The Set just completed only                                                                                                                                                                                                                                                                                                         |
-| Basis     | A new source, never one of the Set's own 4 taught sources | A new prompt, not tied to any one source                                                                                                                                                                                                                                                                                            |
+| Basis     | 2-3 new sources, never one of the Set's own 4 taught sources | A new prompt, not tied to any one source                                                                                                                                                                                                                                                                                            |
 
 ---
 
@@ -31,17 +31,22 @@ Levels, listening strategies, and vocabulary themes were actually taught - this 
 was actually taught, not just what the Module Lesson-Plan originally planned, in case a generated lesson
 deviated from its plan row per that prompt's own self-check).
 
-**A new source is required, exactly like a lesson's own source (Section 0.3 sourcing rules, reused wholesale):
-never fabricated, always found and verified via search, cited in full, with a real transcript/captions
-confirmed before any item is built on it.** Do not reuse any of the Set's taught sources, and do not reuse a
-source already used in an earlier Set's assessment for this Module/Band. The new source must match the same
-Module verb (Describing, Narrating, etc.) and the same band-lower-Level calibration (Section 0.2's runtime/
-pace/register table) that governed the Set's own sources, so that performance on the assessment reflects
-transfer of the taught skills, not a harder or easier task than the Set actually prepared students for.
+**2-3 new sources are required, each shorter than a single-source assessment would need, exactly like a lesson's
+own source (Section 0.3 sourcing rules, reused wholesale): never fabricated, always found and verified via
+search, cited in full, with a real transcript/captions confirmed before any item is built on it.** Do not reuse
+any of the Set's taught sources, and do not reuse a source already used in an earlier Set's assessment for this
+Module/Band. Every clip must match the same Module verb (Describing, Narrating, etc.) and the same
+band-lower-Level calibration (Section 0.2's runtime/pace/register table) that governed the Set's own sources, so
+that performance on the assessment reflects transfer of the taught skills, not a harder or easier task than the
+Set actually prepared students for. **This new-source requirement is about the listening clips only** - it is
+what tests transfer of the comprehension skill to unfamiliar material. It does not apply to vocabulary (A.1),
+which deliberately goes the other direction and draws on words already taught in the Set. All clips are heard by
+the whole class regardless of a student's assigned task Level (one shared playback sequence, not one clip per
+Level); a given task Level's items may draw on any or all of the clips.
 
 ### A.1 What the assessment checks
 
-Two things, kept separate in the item design:
+Three things, kept separate in the item design:
 
 1. **The Module's Listening can-do at each task Level**, quoted verbatim from `learningobjectives.csv` the same
    way the Lesson prompt's Section 0.1 pulls it - the same objective each lesson's Day 1 was already built to
@@ -52,55 +57,85 @@ Two things, kept separate in the item design:
    Context Before Confirming, the assessment should include at least one item per strategy, not just a generic
    comprehension check). Pull the actual strategies from the Set's lesson files or its Rotation Log
    entry rather than re-guessing from the Module Lesson-Plan alone.
-   Do not test vocabulary items from the Set's own lessons directly (a student who missed one lesson would be
-   penalized for absence, not for a comprehension gap), but do test the same _kind_ of vocabulary-in-context
-   skill using words drawn from the new source's own transcript, glossed the same way a lesson's Phase 1 would.
+3. **Vocabulary already taught in the Set**, tested directly through the graded items - there is no separate
+   pre-teach or review step (that would defeat the point of testing retention). Fold 3-5 words pooled across all
+   4 of the Set's lessons (not limited to one) into one or more items - e.g. a matching item (word to its taught
+   definition) or a fill-in-the-blank item using a pooled word in a new sentence - using each word's real taught
+   definition from that lesson's own Words to Know list. Pooling across all 4 lessons, rather than any single
+   one, is what keeps this a comprehension/retention measure instead of an absence penalty: a student who missed
+   one lesson only misses a fraction of the tested pool, not all of it.
 
-### A.2 Structure (single class period, matching a lesson's Day 1 in length and shape)
+**Item format:** every task Level's items are multiple choice, fill-in-the-blank, or matching only - no
+open-ended short-answer or extended-response items at any Level, so the whole assessment stays objectively
+gradable.
+
+**Designing objective items for the higher Levels.** Several Levels' CSV can-dos call for summarizing,
+explaining cause-and-effect, distinguishing stated from implied opinion, or critically assessing how framing
+differs across sources - verbs that ask a student to produce a judgment, not just recall a fact. Forcing these
+into MC/fill-in-the-blank/matching without care would test recognition instead of the actual skill. Engineer the
+item instead: a multiple-choice item where every option is a plausible-sounding paraphrase/summary and only one
+is actually accurate to the source (not one obviously-right answer against three absurd distractors); a matching
+item that pairs a quote/phrase to the evaluative stance or framing choice it signals (not to a dictionary
+definition); a fill-in-the-blank that completes a cause-and-effect or comparison statement using the source's own
+language. The self-check (A.4) verifies this was actually done, not simplified away.
+
+**Respectful Tiers still applies.** The lowest task Level's item(s) must still be a genuine (if scaffolded)
+interpretive act, never fact-retrieval only, even inside an objective format - the same standard the Lesson
+prompt's Beginner Level 1 already meets with "circle the picture that matches the word" (a word-to-picture
+matching item tied to meaning, not passive recall). Design the lowest Level's item(s) the same way.
+
+### A.2 Structure (single class period, shorter than a lesson's Day 1 since there is no pre-teach or notes step)
 
 ```
-LISTENING ASSESSMENT (approx. 45-55 MIN)  |--Setup & Vocab (10)--|--Play & Notes (10-15)--|--Tiered Items (20-25)--|--Wrap (5)--|
+LISTENING ASSESSMENT (approx. 35-45 MIN)  |--Setup (5)--|--Clip 1 + Items--|--Clip 2 (+3) + Items--|--Wrap (5)--|
 ```
 
-- **Setup & Vocabulary (10 min):** present the new source's citation block. Pre-teach 3-5 target words/phrases
-  from its real transcript (fewer than a lesson's 4-6, since this is a shorter single-purpose period). No
-  Background Notes needed unless the source names something genuinely opaque - keep this section lean.
-- **Play & Notes (10-15 min):** play the source once (twice only if the band/Level table's runtime is short
-  enough that two plays still fit the period - state which in the generated assessment). Students take notes on
-  a simple organizer matched to the Module (same organizer type the Set's lessons used), individually, not as a
-  shared board-dependent moment - this is an individual assessment, so there is no board synthesis step here,
-  unlike a lesson's Phase 4.
-- **Tiered Items (20-25 min):** one item set per task Level in the band (3 for Beginner, 4 for Intermediate/
-  Advanced/Proficient), each set testing that Level's exact CSV Listening can-do plus at least one item per
-  strategy taught in the Set (A.1). Apply the same balanced-duration principle as the Lesson prompt's fourth
-  addendum: lower Levels get more, shorter items; higher Levels get fewer, deeper items, so time-on-task is
-  roughly even across Levels. Students work at their own assigned task Level; there is no live differentiated
+- **Setup (5 min):** present all clips' citation blocks up front. No vocabulary pre-teach or review here (A.1) -
+  keep this section lean. No Background Notes needed unless a clip names something genuinely opaque.
+- **Clips & Items (approx. 25-35 min total, repeated per clip):** play one clip (once, twice only if the
+  band/Level table's runtime is short enough that two plays still fit the period - state which in the generated
+  assessment), then immediately administer the item(s) that draw on it, before moving to the next clip. There is
+  no separate notes-taking/organizer step - a free-form notes phase isn't itself gradable, so items are answered
+  right after the relevant clip plays instead of from notes taken earlier. Across all clips, cover one item set
+  per task Level in the band (3 for Beginner, 4 for Intermediate/Advanced/Proficient), each set testing that
+  Level's exact CSV Listening can-do plus at least one item per strategy taught in the Set (A.1), in the
+  MC/fill-in-the-blank/matching format (A.1). Apply the same balanced-duration principle as the Lesson prompt's
+  fourth addendum: lower Levels get more, shorter items; higher Levels get fewer, deeper items, so time-on-task
+  is roughly even across Levels. Students work at their own assigned task Level; there is no live differentiated
   discussion step, since this is individual seatwork, not a class activity.
 - **Wrap (5 min):** collect. No transfer-check performance step here (unlike a lesson's Phase 5) - the whole
   period already is the transfer check.
 
 ### A.3 Scoring
 
-Provide a simple point-value key per item (not a full rubric - most items are short-answer, multiple-choice, or
-fill-in-the-frame, mirroring the lesson's own differentiated task formats) plus one holistic note per task Level
-describing what a passing performance looks like in plain language (e.g., "Level 3: correctly identifies the
-described object from the two-slot frame and completes both slots using words actually heard in the source").
-Do not assign letter grades or numeric percentages in the generated document itself - that conversion is a
-teacher/gradebook decision outside this prompt's scope.
+Provide a simple point-value key per item (not a full rubric - every item is multiple choice, fill-in-the-blank,
+or matching, per A.1's item-format rule) plus one holistic note per task Level describing what a passing
+performance looks like in plain language (e.g., "Level 3: correctly identifies the described object from the
+two-slot frame and completes both slots using words actually heard in the source"). Do not assign letter grades
+or numeric percentages in the generated document itself - that conversion is a teacher/gradebook decision outside
+this prompt's scope.
 
 ### A.4 Self-check (apply before finalizing)
 
-1. Is the source real, verified, cited in full, distinct from all 4 of the Set's own taught sources and from
+1. Are all 2-3 clips real, verified, cited in full, distinct from all 4 of the Set's own taught sources and from
    every prior Set's assessment source for this Module/Band?
-2. Does the source match the Module's verb and the band's lower-Level runtime/pace/register ceiling (Section
+2. Does every clip match the Module's verb and the band's lower-Level runtime/pace/register ceiling (Section
    0.2 of the Lesson prompt)?
 3. Does every task Level's item set trace to that Level's verbatim CSV Listening can-do?
 4. Does the item set cover every listening strategy actually taught in this Set's 4 lessons, at least once each?
 5. Is time-on-task roughly balanced across task Levels (more/shorter items low, fewer/deeper items high)?
 6. Does the lowest task Level get a genuine (if scaffolded) interpretive item, not fact-retrieval only -
    Respectful Tiers applied to an assessment context?
-7. No em-dashes anywhere. Citation block first. Timestamp ranges used for any segment reference, never
-   paragraph letters.
+7. Is vocabulary tested only through graded items (matching/fill-in-the-blank), with no separate pre-teach or
+   review step anywhere in the document, using words pooled across all 4 of the Set's lessons rather than any
+   single one, and none pulled from the new clips?
+8. Is every item at every task Level multiple choice, fill-in-the-blank, or matching - none open-ended?
+9. At Levels whose can-do calls for summarizing, explaining cause-and-effect, or critically assessing/comparing,
+   is the item actually engineered to require that judgment (plausible near-miss options/matches), not simplified
+   into pure recall?
+10. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
+11. No em-dashes anywhere. Citation block first for every clip. Timestamp ranges used for any segment reference,
+    never paragraph letters.
 
 ---
 
@@ -201,6 +236,13 @@ For each task Level in the band, write one self-contained prompt with:
   version's as closely as the format allows** (same topic, same emphasized skills, same task Level requirements)
   so the two are genuinely interchangeable for scoring purposes, not two different assessments that happen to
   share a rubric.
+- **Concrete, countable content requirements, not just a target length.** A target length alone (B.3's previous
+  bullet) leaves a task open-ended - a student can't tell how much content is actually expected to fill 90-120
+  seconds versus 30-45. Every task Level's prompt must also state specific, countable elements to include (e.g.
+  "describe at least 2 features of each place," "use at least 2 different sequence connectors," "include one
+  comparison with a stated reason"), scaled by task Level the same balanced-duration way item counts scale in
+  Part A - fewer/simpler required elements at the lowest Level, more/deeper ones at the highest - so the target
+  length is filled by clearly required content, not an open floor.
 
 ### B.4 Scoring rubric
 
@@ -210,7 +252,11 @@ speaking skills the task is emphasizing (per B.3). Use a simple 3-point scale pe
 Progress's own review interface for the recorded format, and just as quickly markable on a clipboard for a live
 presentation. At Advanced/Proficient, use the same rubric for both the live and Teams-recording versions of a
 Set's assessment (per B.1/B.3) - one rubric per task Level, not two. Do not invent a program-wide letter-grade
-conversion here; that is a teacher/admin decision outside this prompt's scope, same as A.3.
+conversion here; that is a teacher/admin decision outside this prompt's scope, same as A.3. **Per current program
+direction, the student-facing packet derives a short self-check checklist from this rubric's Meets column** (one
+item per criterion, phrased directly to the student, e.g. "Both rooms described using the fixed frame") - see
+`Generate_Assessment_Student_Packet_Prompt_v1.md` Section 2.7. The rubric itself, with its Not yet/Developing/
+Meets columns, stays teacher-only - the checklist is a translation of it, not the rubric itself reprinted.
 
 ### B.5 Self-check (apply before finalizing)
 
@@ -230,7 +276,9 @@ conversion here; that is a teacher/admin decision outside this prompt's scope, s
    Respectful Tiers applied to whichever format this band uses?
 9. For a live presentation, is the actual class-time budget (minutes per student/group times roster size) noted
    explicitly, distinct from a normal single-period plan?
-10. No em-dashes anywhere.
+10. Does every task Level's prompt specify concrete, countable content requirements (not just a target length),
+    scaled by task Level the same way item counts scale in Part A?
+11. No em-dashes anywhere.
 
 ---
 
@@ -239,10 +287,10 @@ conversion here; that is a teacher/admin decision outside this prompt's scope, s
 Same constraints as the Lesson Generation Prompt: no em-dashes anywhere; citation block first for any real
 source (Part A only - Part B's prompts are invented, so no citation block applies there); timestamp ranges, not
 paragraph letters, for any segment reference. Task Levels are shown as the same star system the Student Print
-Formatting Prompt already uses if a student-facing version of either part is produced - this prompt generates
-the teacher-facing assessment and key/rubric only; a student-facing print version is a separate step, the same
-relationship the Lesson prompt has with the Student Print Formatting Prompt, and is not yet built for
-assessments (flag as pending work if requested).
+Formatting Prompt already uses. This prompt generates the teacher-facing assessment (including the full answer
+key and rubric); the student-facing print version is a separate step, run by
+`Generate_Assessment_Student_Packet_Prompt_v1.md` - which strips Part A's answer keys/point values/pass notes as
+teacher-only, but carries Part B's rubric over to the student directly (B.4).
 
 ## Open items for this v1
 

@@ -1,13 +1,15 @@
-# Listening/Speaking Student Print Formatting Prompt (v1.3)
+# Listening/Speaking Student Print Formatting Prompt (v1.8)
 
-Companion to the Listening/Speaking Lesson Generation Prompt (v1.1). Takes one completed lesson (all days) and
+Companion to the Listening/Speaking Lesson Generation Prompt (v1.7). Takes one completed lesson (all days) and
 produces a single, print-ready, black-and-white student handout: one self-contained HTML document, with every
 piece of teacher-facing pedagogical language translated into plain instructions. Mirrors Passage Reading's
 Student Print Formatting Prompt (v1.4) closely - same translation principle, same base stylesheet, same
 star-rating system for task Levels - adapted for a lesson type where the "text" is a real audio/video source the
-class plays together, not a printed passage.
+class plays together, not a printed passage. When the lesson carries a TOEFL Track Tier, this prompt also
+produces a second, separate, **teacher-only** file (see 2.10b) - two output files from this one prompt run, not
+one.
 
-**Current version: v1.3.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.8.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson already exists in full. Do not use it to generate lesson content. This
@@ -17,9 +19,13 @@ produces the **student version only**.
 
 Required: the completed lesson (all days), supplied in full - the citation block, target vocabulary, Listening
 Skill Spotlight and Speaking Skill Spotlight, the differentiated Days 2-4 listening tasks and Days 5-8 speaking
-tasks, Background Notes, the oral output protocol's discussion prompts, and both Closing Transfer Checks. Pull
-all content directly from the completed lesson; do not invent new vocabulary or tasks, and do not drop a task
-Level present in the source lesson's band.
+tasks, Background Notes, the oral output protocol's discussion prompts, both Closing Transfer Checks, and (when
+present) all four TOEFL Track Tier touchpoint kinds from Lesson Generation Prompt Section 0.6: the A framing
+connections (teacher-only, not rendered), the B in-class touchpoints (note-organizer tag column, extra transfer-
+check question, reframed oral-output prompt), the C Listening capstone, and the D Speaking capstone (an in-class
+untimed rehearsal inside the main packet, plus a separate take-home homework file - see 2.10a/2.10b). Pull all
+content directly from the completed lesson; do not invent new vocabulary or tasks, and do not drop a task Level
+present in the source lesson's band.
 
 ## SECTION 1: TRANSLATING TEACHER LANGUAGE TO STUDENT LANGUAGE
 
@@ -35,6 +41,9 @@ None of the left column may appear in the student-facing document.
 | Board-dependent moment                                             | Not shown to students at all - teacher-only classroom-management instruction.                                                                                                                                                                                                                                          |
 | Differentiated participation / Foundation Support                  | Handled through the star system and task choice, never labeled or called out as a separate tier.                                                                                                                                                                                                                       |
 | Timestamp/segment markers ([Segment N: ...])                       | These ARE shown to students, in plain form (see 2.3) - unlike a paragraph letter, a segment cue is a real navigational aid a student needs to find their place in a real recording during replay.                                                                                                                      |
+| TOEFL Track Tier (Lesson Generation Prompt Section 0.6) - A framing connections            | Never rendered - teacher-only narration, does not appear anywhere in the student packet. |
+| TOEFL Track Tier - B touchpoints                 | Each rendered as a plainly labeled "TOEFL Track" addition at its own location, inside the existing structure it extends (see 2.6a, 2.8a, 2.11a), never narrated as test prep jargon. |
+| TOEFL Track Tier - C/D capstones                 | Each rendered as its own sibling `Task D (TOEFL)` block, styled exactly like the regular lettered task blocks (see 2.7a/2.10a) - never a "TOEFL Track option" callout nested inside the regular task. D's real sentences/questions are never printed in the main student packet at all - only its untimed in-class rehearsal content; the real timed items exist only in the separate `_TOEFL_Homework.html` file (2.10b), a teacher-only recording script/scoring guide never cross-referenced from or shown alongside the main packet. |
 
 ## SECTION 2: DOCUMENT STRUCTURE
 
@@ -74,7 +83,8 @@ Same as Passage Reading 2.4, with this modality's own label: the document's open
 `.masthead-meta` block, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B - two stacked
 `.masthead-tag` lines, the first reading exactly `Listening & Speaking`, the second combining this
 lesson's Band and its version code as one string (`<Band> S<Set>.<Lesson>.<Iteration>` per
-`shared/Program_Conventions.md` §G). Beyond that one block: no Name/Date field, no subject/module kicker,
+`shared/Program_Conventions.md` §G, or `<Band> S<Set>T.<Lesson>.<Iteration>` for a TOEFL Track Tier variant of a
+Set - see Section 2.7a/2.10a below). Beyond that one block: no Name/Date field, no subject/module kicker,
 no subtitle line, no footer note.
 
 ### 2.4a Every question gets a number (added 2026-09-03, after user review)
@@ -124,6 +134,12 @@ way. Also: **do not add "(and watch again)" / "(and listen again)"** to this ins
 that students can replay the source, and spelling it out is redundant. "While you watch, fill in..." or "While
 you listen, fill in..." is sufficient on its own.
 
+### 2.6a TOEFL Track Tier note-organizer column (when present)
+
+When the source lesson includes Section 0.6B's note-organizer touchpoint, add one extra column to this same
+organizer table, headed something plain like "TOEFL Question Type" - do not build a second, separate organizer.
+Leave the column blank for fill-in, matching the rest of the table's fillable cells.
+
 ### 2.7 Star-rated listening tasks
 
 Merge the source lesson's Day 1, Phase 4 differentiated items (main ideas, details, and critical thinking, all
@@ -171,6 +187,21 @@ longer than what the source lesson itself quotes. Ask the comparison question af
 later Discuss It prompt also references the comparison, point back to this task by name ("the two descriptions
 from Task D") rather than re-citing the sources again.
 
+### 2.7a TOEFL Track Tier capstone, Listening half (when present)
+
+When the source lesson's highest task Level carries a TOEFL Track Tier Listening capstone (Lesson Generation
+Prompt Section 0.6C, redesigned v1.5 to run on the same shared source everyone already heard - no separate
+passage), render it as its own sibling `.task-block` immediately after the regular highest-Level task block,
+styled exactly like the lettered task blocks (`.instr-line` with an `.exercise-label` and the same `.stars`
+rating as the task it sits beside) - headed **`Task D (TOEFL)`** (or whatever letter the regular task uses; this
+band always has 4 Levels, so the highest is always D), not a `.section-label` "option" line nested inside the
+regular task's own block. **No extended explanatory paragraph** - since these questions are answered from the
+same listening everyone in the room already did, nothing needs re-explaining. Use only the one top-of-task
+instruction line Section 2.7 already requires for a multiple-choice item set (e.g. "Circle the best answer for
+each question below."), then the numbered items with their answer choices via `.mc-list`/`.mc-letter`
+(Section 3). No "heard, not read" restriction applies here - there is no separate passage to protect from
+print, only the questions/answer choices, which are always fine to print.
+
 ### 2.8 Show What You Noticed (Listening close)
 
 Translate the Listening Closing Transfer Check into a plain paired activity built around the source lesson's
@@ -188,6 +219,14 @@ read it, which is a stronger deterrent than position and instruction alone. Upda
 the text is upside-down on purpose and tell students not to turn the page around until they've answered (e.g.
 "This is printed upside-down on purpose. Don't turn the page around until you've said and written your answer
 above.").
+
+### 2.8a TOEFL Track Tier extra transfer-check question (when present)
+
+When the source lesson includes Section 0.6B's Phase 5 touchpoint, add one additional numbered question (via
+`.qitem`, per 2.4a) directly after the regular Show What You Noticed response space, labeled with a plain
+"(TOEFL)" tag rather than a question-type name. It answers from the same script everyone just heard - do
+not print a second script or a second "don't read ahead" block; the upside-down script from 2.8 already covers
+it.
 
 ### 2.9 Learn the Phrase (Speaking Skill Spotlight)
 
@@ -215,6 +254,50 @@ separate section). The multiple-choice formatting, picture-placeholder, and word
 apply here too - a fixed-frame speaking item with picture cues (e.g. ordering step-pictures) needs the same real
 placeholder-box treatment, not words standing in for the images.
 
+### 2.10a TOEFL Track Tier capstone, Speaking half - in-class rehearsal (when present)
+
+Per Section 0.6D, the in-class portion is an untimed rehearsal, not the scored version. Render it the same way
+as 2.7a: its own sibling `.task-block` immediately after the regular highest-Level task block, headed
+**`Task D (TOEFL)`** with the same star rating, not a `.section-label` "option" line nested inside the regular
+task's own block. Print a short scenario line (context only, e.g. what situation the practice sentences/
+questions are set in - never anything implying a stopwatch or "the real thing"), then one explicit
+instruction stating the partner roles up front, before either practice list: e.g. "Take turns with a
+partner: one person reads, the other listens and repeats or answers. Switch roles halfway through." Then
+the same-shape practice sentences (say "Reader: read each line once. Listener: repeat it back.") and
+practice questions (say "Reader: ask each question. Listener: answer in a sentence or two.") the lesson
+provides for this rehearsal - fine to print, since this is untimed rehearsal content, not the scored
+take-home items. **No `.time-list`, no response-time windows here** - showing a timer on untimed practice
+misrepresents it. **No reference to the take-home file** - the homework document (2.10b) is a wholly
+separate deliverable the teacher hands out on its own, the same way the standalone transcript file is
+never cross-referenced from the student packet; nothing here needs to point to it.
+
+### 2.10b TOEFL Track Tier capstone, Speaking half - teacher-only recording script & scoring guide (when present)
+
+Per Section 0.6D and the Lesson Generation Prompt's "Three artifacts" note, D's real timed content is never
+a page inside the main student packet - it is its own **separate, self-contained HTML file**, generated
+alongside the main packet (same pass, immediately after it), named `<TopicSlug>_<Level>_L<n>_TOEFL_Homework.html`
+in the same `Lesson_<n>_<Slug>/` folder (same naming root as the main packet, `_TOEFL_Homework` suffix
+instead of `_Packet`). Reuse the same base stylesheet and this family's own delta classes (Section 3) so
+it looks and prints consistently with every other document this family produces - its own simple masthead
+(same `.masthead-meta` two-tag convention as the main packet, same Band/version code) and print button, not
+a stripped-down fragment.
+
+**This file is teacher-only (changed v1.8) - never shown to or printed for a student.** Per Section 0.6D,
+the teacher records (or otherwise produces) real audio of each item from this script, posts it to the
+class's Teams, and students listen once and record their own spoken response there (the same "Teams
+Speaking Progress recording" mechanism `Generate_Assessment_Prompt_v1.md` Part B already uses) - so this
+file's job is to be the teacher's own recording script and scoring rubric, not a page to hand to anyone
+else. Print the real 7 Listen and Repeat sentences and 4 Take an Interview questions exactly once, set
+inside a `.reader-copy` box headed via `.reader-warn` with a plain teacher-only label, e.g. "**Teacher use
+only - recording script and scoring guide. Do not print or share with students.**" Include: the scenario
+line for each half, the 7 sentences and 4 questions themselves, a `.time-list` (Section 3) showing each
+item's real response-time window (8/10/12 seconds for Listen and Repeat, 45 seconds for Take an Interview)
+- matched to how long each recorded prompt should pause before the student's response, if the teacher is
+recording a single continuous track - and the real TOEFL Scoring Guides beneath each half for scoring
+student submissions. Brief instructions at the top: record (or produce) one audio playback per item
+matching its response-time window, post it to Teams, have students record their response there by an
+assigned date, then score each submission using the guide below.
+
 ### 2.11 Discuss It
 
 Same as Passage Reading 2.9: the oral output protocol's 2-3 rotated prompts, unquoted, regular weight, plus
@@ -222,6 +305,13 @@ star-coded sentence stems. Fold any outer-circle/tracking task into one of the p
 using `.qitem` (added 2026-09-03, after user review), not a plain div with an inline "N." prefix** - the prompts
 are questions like any other in the packet and should look like one: bold number, same font size and spacing as
 every other numbered question (2.4a), not a separately-sized, separately-styled block.
+
+### 2.11a TOEFL Track Tier reframed protocol turn (when present)
+
+When the source lesson includes Section 0.6B's Phase 4 touchpoint, render the reframed turn as one more prompt
+in the same Discuss It list, tagged with a plain "(TOEFL)" label rather than singled out into a separate
+box - it runs on the same shared protocol pacing as every other prompt here, so it belongs in the same list, not
+a `.task-block`-style callout.
 
 ### 2.12 Wrap It Up (Speaking close)
 
@@ -340,6 +430,56 @@ on top of the shared base stylesheet, following the same rule-formatting convent
   margin-bottom: 9px;
   font-size: 14.5px;
 }
+
+.mc-list {
+  margin: 8px 0 4px 30px;
+  padding-left: 0;
+  list-style: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+.mc-list li {
+  margin-bottom: 6px;
+}
+.mc-letter {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.time-list {
+  margin: 8px 0 4px;
+  padding-left: 0;
+  list-style: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+.time-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule-light);
+  padding: 7px 2px;
+}
+.time-list li:last-child {
+  border-bottom: none;
+}
+.time-list .time-window {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.reader-copy {
+  border: 2px dashed var(--ink);
+  padding: 14px 16px;
+  margin: 20px 0;
+  page-break-before: always;
+}
+.reader-copy .reader-warn {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
 ```
 
 Added 2026-09-03, after user review: `.upside-down` (2.8's Closing Transfer Check script), `.task-instr` (the
@@ -349,21 +489,30 @@ revised 2026-09-03 (second pass): label on its own line, followed by a full-widt
 below it, rather than a compact side-by-side "label: short blank" row - matches the same full-width-answer-line
 standard used everywhere else in the packet, and gives enough room for longer matched phrases. `.qitem` added
 2026-09-03 (third pass): a standalone numbered question outside any `<ol class="qlist">`, for Before You
-Watch/Listen and Show What You Noticed prompts - see 2.4a.
+Watch/Listen and Show What You Noticed prompts - see 2.4a. **`.mc-list`/`.mc-letter` and `.time-list` added
+2026-09-07 (v1.4):** the TOEFL Track Tier alternate's answer choices (2.7a) and response-time windows (2.10a) -
+a lettered-option list and a compact time-window list respectively, styled consistently with this family's
+existing sans-serif small-text conventions. **`.reader-copy`/`.reader-warn` added 2026-09-07 (v1.5):** the
+TOEFL Track Tier's take-home Partner/Family Reader Copy page (2.10b) - a heavily-bordered, page-break-forced box
+with an all-caps warning line, visually distinct enough that a student or parent immediately recognizes it as a
+different kind of page from the rest of the packet.
 
 ## SECTION 4: WORKFLOW
 
 **Generation timing (per Lesson Generation Prompt v1, third addendum, 2026-09-03):** run this prompt
 immediately after the .md lesson is complete, in the same session/request - not as a separately-requested later
 step. A lesson request produces both files together: the .md first, then this prompt run against that finished
-.md to produce the .html. Deliver the .html for review before treating it as final.
+.md to produce the .html. Deliver the .html for review before treating it as final. **When the lesson carries a
+TOEFL Track Tier (added v1.7):** this same run also produces the separate `_TOEFL_Homework.html` file (2.10b) -
+three artifacts total for that lesson (.md, main packet .html, homework .html), all generated together.
 
-**The .md is the single source of truth; this prompt's output is always a regeneration, never a standalone
+**The .md is the single source of truth; this prompt's output(s) are always a regeneration, never a standalone
 edited artifact.** If a review round asks for a change that affects what students actually read as a task,
 instruction, or vocabulary item, do not patch the .html directly - apply the change to the source .md first (the
-Lesson Generation Prompt's output), then re-run this prompt against the updated .md to produce a fresh .html.
-Hand-editing the .html for a content change leaves the .md silently out of sync with what's actually being
-taught, and the two documents will drift apart over later regenerations.
+Lesson Generation Prompt's output), then re-run this prompt against the updated .md to produce a fresh .html (or
+pair of .html files, when a TOEFL Track Tier is present). Hand-editing the .html for a content change leaves the
+.md silently out of sync with what's actually being taught, and the documents will drift apart over later
+regenerations.
 
 The only edits that may be applied directly to the .html without touching the .md are pure formatting/translation-
 layer fixes that don't change lesson content - a styling issue, a missed Section 1 translation, spacing/layout -
@@ -399,8 +548,23 @@ followed by regeneration; if no, it's safe to apply here directly.
   response space?
 - Are Background Notes translated into Good to Know boxes, informational only?
 - Does the opening masthead carry a `.masthead-meta` block with two stacked tags - "Listening & Speaking,"
-  then this lesson's Band and its `S<Set>.<Lesson>.<Iteration>` version code combined as one string? Beyond
-  that block, are there no
-  Name/Date fields, no subject/module kicker line, no subtitle lines, and no footer note?
+  then this lesson's Band and its `S<Set>.<Lesson>.<Iteration>` (or `S<Set>T.<Lesson>.<Iteration>` for a TOEFL
+  Track Tier variant) version code combined as one string? Beyond that block, are there no Name/Date fields, no
+  subject/module kicker line, no subtitle lines, and no footer note?
+- **If the lesson carries a TOEFL Track Tier:** are the A framing connections absent from the packet entirely
+  (teacher-only)? Do the B touchpoints appear at their own locations - the note-organizer's extra column
+  (2.6a), the extra transfer-check question (2.8a), the reframed Discuss It prompt (2.11a) - each labeled
+  "(TOEFL)," none singled out as its own callout box where it should sit inside an existing list/table? Do
+  both the C Listening capstone and D's in-class rehearsal render as their own sibling `Task D (TOEFL)` block (2.7a/
+  2.10a), styled exactly like the regular lettered tasks (`exercise-label` + stars), with no extended
+  explanatory paragraph and never nested inside the regular task's own block as an "option" callout? Does C's
+  block hold only its questions/answer choices (via `.mc-list`) - no separate passage, since it's answered from
+  the same shared listening everyone already heard? Does D's in-class block show only untimed practice content
+  (no `.time-list`, no "no clock needed" language, and an explicit up-front reader/listener instruction), with
+  no reference anywhere to a take-home page - and does the real timed content (sentences/questions, scoring
+  guides, `.time-list`) exist only in the separate `_TOEFL_Homework.html` file (2.10b), inside its own
+  `.reader-copy` box, labeled clearly as teacher-only (recording script and scoring guide, describing the
+  record-audio/post-to-Teams/student-records-response mechanism, never a "reading partner" instruction),
+  never inside the main packet?
 - Is the document black-and-white, em-dash-free, single self-contained HTML file, reusing
   `shared/Student_Packet_Style_Guide.md`'s base stylesheet plus only the classes documented in Section 3 above?
