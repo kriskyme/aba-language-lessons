@@ -1,27 +1,24 @@
-# Academic Writing Assessment Student Print Formatting Prompt (v2)
+# Academic Writing Assessment Student Print Formatting Prompt (v3)
 
-Companion to `Generate_Assessment_Prompt_v2.md`. Takes one completed Set's assessment (Part A Grammar &
-Mechanics Check, Part B Writing Task) and produces a single, print-ready, black-and-white student handout: one
-self-contained HTML document, with every piece of teacher-facing language, and everything a student should never
-see (Part A's answer keys and point values; Part B's actual rubric), removed or translated. **The one
-exception:** a short self-check checklist derived from Part B's rubric Meets column appears on each Writing Task
-card (Section 2.7) - not the rubric itself. Mirrors Listening/Speaking's
-`Generate_Assessment_Student_Packet_Prompt_v1.md` closely - same translation principle, same one-exception
-rubric-to-checklist rule - adapted for a written assessment's shape, and reuses `shared/Student_Packet_Style_Guide.md`'s
-shared base stylesheet, the same one every current-convention Writing lesson packet uses
-(`Generate_Student_Packet_Prompt_v2.2.md`), rather than inventing a new class family.
+Companion to `Generate_Assessment_Prompt_v3.md`. Takes one completed Set's (Beginner) or Module Pair's
+(Intermediate/Advanced/Proficient) assessment (Part A Grammar & Mechanics Check, Part B Writing Task) and
+produces a single, print-ready, black-and-white student handout: one self-contained HTML document, with every
+piece of teacher-facing language, and everything a student should never see (Part A's answer keys and point
+values; Part B's actual rubric), removed or translated. **The one exception:** a short self-check checklist
+derived from Part B's rubric Meets column appears on each Writing Task card (Section 2.7) - not the rubric
+itself. Mirrors Listening/Speaking's `Generate_Assessment_Student_Packet_Prompt_v1.md` closely - same translation
+principle, same one-exception rubric-to-checklist rule - adapted for a written assessment's shape, and reuses
+`shared/Student_Packet_Style_Guide.md`'s shared base stylesheet, the same one every current-convention Writing
+lesson packet uses (`Generate_Student_Packet_Prompt_v2.5.md`), rather than inventing a new class family.
 
 Use this prompt only after an Assessment `.md` already exists in full (both Part A and Part B). Do not use it to
 generate assessment content, invent new items, or omit a task Level present in the Band. This produces the
 **student version only**.
 
-**Current version: v2.** For version history, see `Changelog.md`. (v2 rescopes this prompt from "one completed
-lesson" to "one completed Set," matching `Generate_Assessment_Prompt_v2.md`'s own rescoping - see
-`shared/Program_Conventions.md` §C. It also corrects Section 3's CSS-reuse note, which had pointed to this
-modality's old pre-2026-09-08 Georgia-serif class family (`.task`/`.callout`/`table.rulebox`) - that family was
-retired when this modality's lesson packets were rebuilt against the shared base stylesheet; this prompt was
-never actually run, so nothing needed retrofitting, only the reference itself needed correcting. Neither this
-prompt nor its companion has been run against a real Set yet.)
+**Current version: v3.** For version history, see `Changelog.md`. (v3 follows `Generate_Assessment_Prompt_v3.md`'s
+own cadence move to once-per-Module-Pair for Intermediate/Advanced/Proficient - both Modules' Grammar Check items
+and the Writing Task's requirements/checklist may now reflect two Modules' worth of taught content, not one.
+Beginner is unaffected. Neither this prompt nor its companion has been run against a real Set or Pair yet.)
 
 ## SECTION 0: SCOPE AND INPUTS
 
@@ -79,7 +76,7 @@ shows the assigned Level.
 
 Any place a student produces a specific, referenceable response gets a number, using the shared `.task-block`/
 `.exercise-label` numbering pattern already established in this modality's current-convention lesson packets
-(`Generate_Student_Packet_Prompt_v2.2.md`). Fill-in-the-blank items use `.ans-line-sm`; original-sentence items use
+(`Generate_Student_Packet_Prompt_v2.5.md`). Fill-in-the-blank items use `.ans-line-sm`; original-sentence items use
 `.ans-line-sm` or `.ans-line` depending on expected length; a paragraph-editing item uses `.spotlight-box` plus a
 matched number of blank `.ans-line`s for corrections, the same pattern this modality's lesson packets already use
 for an editing-a-paragraph task.
@@ -119,7 +116,7 @@ decorative rules.
 
 Single self-contained HTML file, black-and-white only, no em-dashes, print-safe page breaks. **Reuse
 `shared/Student_Packet_Style_Guide.md`'s base stylesheet** - the same one this modality's current-convention
-lesson packets use (`Generate_Student_Packet_Prompt_v2.2.md`: `--ink`/`--paper` tokens, `.sheet`, `.masthead`,
+lesson packets use (`Generate_Student_Packet_Prompt_v2.5.md`: `--ink`/`--paper` tokens, `.sheet`, `.masthead`,
 `.spotlight-box`/`.spotlight-label`, `.task-block`/`.exercise-label`, `.rule-table`, `.wordbank`,
 `.ans-line`/`.ans-line-sm`, `.print-btn`), rather than inventing a parallel system. **`.checklist` is this
 family's one new delta class** (2.6): a plain list (no borders, no table shape) with a checkbox glyph

@@ -19,7 +19,7 @@ genuine difference from a Reading/Listening-Speaking Set, whose 4 lessons each g
 | 1 | Advanced 1 | 1 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | Two apartments (Apartment A: quiet/smaller/pricier; Apartment B: bigger/cheaper/louder), for a prospective roommate (Sam, whose stated concern is quiet) | 1.1.1.0 |
 | 2 | Advanced 2 | 2 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Grammar Focus B, Essay Focus A/B, Mentor Ladder, prewriting | (same Scenario, continued) | 1.1.2.0 |
 | 3 | Advanced 3 | 3 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | 1.1.3.0 |
-| 4 | Advanced 4 | 4 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Peer editing, revision, publishing, Closing Transfer Check | (same Scenario, continued) | 1.1.4.0 |
+| 4 | Advanced 4 | 4 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08 | Hard self-revision, draft completion, hand-off (not published), Closing Transfer Check | (same Scenario, continued) | 1.1.4.1 |
 
 **Grammar Focus (A/B):** Focus A: tense control + hedging/evaluative language (seems, tends to, a bit, at least,
 worth it) / Focus B: complex sentences with a concession subordinator (although, even though); Level 4 warm-up
@@ -46,6 +46,13 @@ above), per `shared/Program_Conventions.md` §C's corrected Set-size convention 
 Unit1/Unit2 packet pair and the intermediate Intro+Unit1-8 packet set (built 2026-09-08, same day) are both
 superseded; each of the 4 lessons above now has its own current-convention packet (one file, two masthead
 sections — `Generate_Student_Packet_Prompt_v2.2.md`). See `Index.md`'s "Sets" section.
+
+**2026-09-08 addendum: retrofitted as Part 1 of Module Pair 1-2.** Per `shared/Program_Conventions.md` §C's
+Module Pair addendum (Intermediate/Advanced/Proficient pair two consecutive Modules into one essay), this Set's
+Lesson 4 (`1.1.4.0` → `1.1.4.1`) no longer ends in a published, finished piece — it now ends in a complete,
+self-revised draft handed off to Module 2's Set. **Part 2 of this pair, Module 2's Set 1, has not yet been
+planned or generated** — see `writing/academic-writing/Changelog.md`'s dated entry and `Index.md`'s Pending
+work.
 
 ---
 

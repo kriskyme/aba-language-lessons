@@ -9,7 +9,7 @@ before generation, and none of its elements are new decisions. See `Rotation_Log
 
 ## Task Levels for this plan (Advanced band)
 
-Per `Generate_Lesson_Prompt_v4.md` Section 0.1's Task Levels by Band table, Advanced's task Levels are
+Per `Generate_Lesson_Prompt_v5.md` Section 0.1's Task Levels by Band table, Advanced's task Levels are
 **4, 5, 6, 7** (extension-down: 4; native: 5, 6; extension-up: 7) — spanning both the Paragraph Composition
 (4-5) and Essay Composition (6-7) regimes, the one Band (with Proficient) that reaches Essay Composition.
 
@@ -103,3 +103,14 @@ those rows, not a replacement for them.
 Everything in the Plan section above (Scenario, Grammar Focus A/B, Essay Focus A/B, Mentor Ladder direction) is
 unchanged and applies to the whole Set, not just one lesson within it; only the "Band Lesson #" framing above is
 now stale (superseded by the four global lesson numbers 1-4 in `Rotation_Log_Advanced.md`).
+
+**Addendum (2026-09-08, second): this Set is now Part 1 of Module Pair 1-2.** Per
+`shared/Program_Conventions.md` §C's Module Pair addendum, Advanced now pairs Modules 1-2 into one essay spanning
+both Modules' Sets. Lesson 4's original "ends in a published, finished piece" framing (both above and in the
+Set 1 rows this document cross-references) is superseded: Lesson 4 (`1.1.4.0` → `1.1.4.1`) now ends in a
+complete, self-revised draft handed off to Module 2's Set, which will apply its own (different) Grammar/Essay
+Focus during revision and carry the piece through peer editing to publishing. **Module 2 has not yet been
+planned or generated.** Once it is, its plan will live at
+`lessons/advanced/ModulePair_1-2/ModulePair_1-2_Advanced_Lesson_Plan.md`, superseding this document and Module
+2's own future `Module2_Advanced_Lesson_Plan.md` as the single plan for the whole pair — see
+`writing/academic-writing/Index.md`'s "Module Pairs" section and Pending work.

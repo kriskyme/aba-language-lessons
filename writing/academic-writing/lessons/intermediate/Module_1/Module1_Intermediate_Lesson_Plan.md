@@ -10,7 +10,7 @@ lesson's full revision history; this plan does not duplicate it.
 
 ## Task Levels for this plan (Intermediate band)
 
-Per `Generate_Lesson_Prompt_v4.md` Section 0.1's Task Levels by Band table, Intermediate's task Levels are
+Per `Generate_Lesson_Prompt_v5.md` Section 0.1's Task Levels by Band table, Intermediate's task Levels are
 **2, 3, 4, 5** (extension-down: 2; native: 3, 4; extension-up: 5) — entirely inside the Guided Frame Composition
 (1-3) and Paragraph Composition (4-5) regimes; this Band never reaches Essay Composition (6-8).
 
@@ -92,3 +92,14 @@ lessons (Intermediate 1-4), reorganized from the single 8-day document into 4 se
 entry. Everything in the Plan section above (Scenario, Grammar Focus A/B, Mentor Ladder direction) is unchanged
 and applies to the whole Set, not just one lesson within it; only the "Band Lesson #" framing above is now stale
 (superseded by the four global lesson numbers 1-4 in `Rotation_Log_Intermediate.md`).
+
+**Addendum (2026-09-08, second): this Set is now Part 1 of Module Pair 1-2.** Per
+`shared/Program_Conventions.md` §C's Module Pair addendum, Intermediate now pairs Modules 1-2 into one essay
+spanning both Modules' Sets. Lesson 4's original "ends in a published, finished piece" framing (both above and
+in the Set 1 rows this document cross-references) is superseded: Lesson 4 (`1.1.4.0` → `1.1.4.1`) now ends in a
+complete, self-revised draft handed off to Module 2's Set, which will apply its own (different) Grammar Focus
+during revision and carry the piece through peer editing to publishing. **Module 2 has not yet been planned or
+generated.** Once it is, its plan will live at
+`lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md`, superseding this document and
+Module 2's own future `Module2_Intermediate_Lesson_Plan.md` as the single plan for the whole pair — see
+`writing/academic-writing/Index.md`'s "Module Pairs" section and Pending work.

@@ -1,17 +1,21 @@
-# Academic Writing Student Print Formatting Prompt (v2.4)
+# Academic Writing Student Print Formatting Prompt (v2.5)
 
-Companion to the Academic Writing Lesson Generation Prompt (v4). Takes one completed Academic Writing lesson (a
-2-day cycle, one of 4 in a Set) and produces one print-ready, black-and-white student handout for it: a single
-self-contained HTML document covering both of that lesson's days. Every piece of teacher-facing pedagogical
-language is translated into plain instructions a student (or a parent glancing at the page) can act on without
-decoding jargon like "Focus A," "the Leveled Mentor Ladder," "task Level," or "board-dependent moment."
+Companion to the Academic Writing Lesson Generation Prompt (v5). Takes one completed Academic Writing lesson (a
+2-day cycle, one lesson within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces
+one print-ready, black-and-white student handout for it: a single self-contained HTML document covering both of
+that lesson's days. Every piece of teacher-facing pedagogical language is translated into plain instructions a
+student (or a parent glancing at the page) can act on without decoding jargon like "Focus A," "the Leveled Mentor
+Ladder," "task Level," or "board-dependent moment."
 
-**Current version: v2.3.** For the full dated version history and the reasoning behind each change, see
-`Changelog.md`. (v2 adopts Passage Reading's one-file, two-masthead-section packet shape - see
-`shared/Program_Conventions.md` §C and `Changelog.md`'s 2026-09-08 entry, matching the same day this lesson type's
-generation prompt was restructured from one 8-day document into 4 separate 2-day lessons per Set. The "Lesson
-Introduction Page" concept from v1.2-v1.6 is retired: a 2-day lesson is short enough not to need a roadmap page,
-the same reason Reading's own packets have never had one.)
+**Current version: v2.5.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`. (v2.5 updates Section 2.8's closing-activity gate for the Module Pair mechanic
+(`Generate_Lesson_Prompt_v5.md`'s "THE MODULE PAIR"): the translation layer must now check whether a given
+Lesson 4 is a Pair's hand-off (Module N, not yet finished) or a true finale (Beginner's Lesson 4, or
+Intermediate/Advanced/Proficient's Lesson 8) before defaulting to "finished, published piece" framing anywhere in
+the packet - a Lesson 4 packet for a Pair must not say the piece is done. v2 adopted Passage Reading's one-file,
+two-masthead-section packet shape - see `shared/Program_Conventions.md` §C and `Changelog.md`'s 2026-09-08 entry.
+The "Lesson Introduction Page" concept from v1.2-v1.6 is retired: a 2-day lesson is short enough not to need a
+roadmap page, the same reason Reading's own packets have never had one.)
 
 **One file per lesson, two masthead sections, matching Reading exactly:** each of a Set's 4 lessons gets its own
 single HTML packet covering both of that lesson's days, laid out as two masthead sections in one document -
@@ -41,8 +45,9 @@ attempt to serve both audiences from one output.
 
 ### 0.1 Required inputs before generating
 
-- Which lesson is being formatted: its Set position (1-4) and global Lesson # (`Generate_Lesson_Prompt_v4.md`'s
-  "The Four-Lesson Set" table).
+- Which lesson is being formatted: its Set position (1-4), its Pair position (1-8, for
+  Intermediate/Advanced/Proficient) if applicable, and its global Lesson # (`Generate_Lesson_Prompt_v5.md`'s "THE
+  MODULE PAIR" table).
 - The source lesson's content for both of its days in full: the grammar mini-lesson(s) with their rule and
   examples, the controlled-practice activities, the Leveled Mentor Ladder (on the day it appears), the prewriting
   materials, the drafting task and its Section 0.2 target for each task Level, the self-edit checklist, the Peer
@@ -223,15 +228,28 @@ ending, rather than reproducing the entire essay. A later lesson that wants to p
 worked examples (rather than reprint them) may do so with a brief plain-language pointer (e.g. "look back at the
 examples from earlier this week") instead of reproducing the set again.
 
-### 2.8 Closing activity (Lesson 4's Day 2 / Unit 4B only)
+### 2.8 Closing activity (each Set's Lesson 4/Day 2 - check hand-off vs. finale first, new in v2.5)
 
-Only the Set's fourth lesson, Day 2 (Unit `4B` - the final source lesson day of the whole Set) includes a closing
-section. Translate the source lesson's Closing Transfer Check into a plain closing instruction (section heading:
-"Wrap It Up" or equivalent) that has the student apply the exact named objective to something new, stated as
-directly as possible (what to pick, what to do with it), without describing it as a check, an assessment, or
-referencing "what you practiced this week." Do not add stage directions like "say it out loud" or "your teacher
-may call on a few pairs to share" unless the source lesson's mechanism specifically requires a public share step
-the page must instruct the student to perform; default to omitting narration of what the teacher will do next.
+Every Set's fourth lesson, Day 2 (Unit `4B` - the final source lesson day of that Set) includes a closing section
+with a Closing Transfer Check. **Before writing this section, check which kind of Lesson 4 this is:**
+
+- **Beginner's Lesson 4, or Intermediate/Advanced/Proficient's Lesson 8 (Pair position 8): a true finale.** The
+  piece is genuinely finished and published. Translate the source lesson's Closing Transfer Check into a plain
+  closing instruction (section heading: "Wrap It Up" or equivalent) that has the student apply the exact named
+  objective to something new, stated as directly as possible, without describing it as a check, an assessment, or
+  referencing "what you practiced this week." For Pair position 8, this also includes the separate short task
+  exercising Module N+1's own skill (`Generate_Lesson_Prompt_v5.md` Section 0.8) - present it as a second short
+  "Wrap It Up" prompt, not labeled as covering "a different Module."
+- **Intermediate/Advanced/Proficient's Lesson 4 (Pair position 4): a hand-off, not a finale.** The piece is a
+  complete, self-revised draft, not yet published - **never use "finished," "published," "share your piece," or
+  any language implying the piece is done anywhere in this packet.** Translate the source lesson's hand-off note
+  and Closing Transfer Check into a plain closing instruction, but frame the hand-off plainly to the student (e.g.
+  "You'll keep working on this piece soon" or similar plain continuation language, matched to the source lesson's
+  own hand-off framing), never "you're done."
+
+Do not add stage directions like "say it out loud" or "your teacher may call on a few pairs to share" unless the
+source lesson's mechanism specifically requires a public share step the page must instruct the student to
+perform; default to omitting narration of what the teacher will do next.
 
 ### 2.9 Trade and Check (Peer Editing) and Check Your Own Work (self-edit)
 
@@ -353,8 +371,10 @@ inventing new decorative structure.
 - If this lesson's Leveled Mentor Ladder content is included, are the worked examples shown in ascending star
   order with no "Mentor," "Level," or "ladder" language anywhere near them, and only where it adds something the
   lesson's own tasks don't already model?
-- Is the closing activity ("Wrap It Up") present only on the Set's Lesson 4, Unit 4B, and does it connect back to
-  the same objective stated at the top?
+- Is the closing activity ("Wrap It Up") present only on that Set's Lesson 4, Unit 4B, and does it connect back to
+  the same objective stated at the top? For Intermediate/Advanced/Proficient's Pair position 4, does the packet
+  correctly frame it as a hand-off (never "finished" or "published"), reserving finale/publish language for Pair
+  position 8 only (2.8)?
 - Are the self-edit and peer-editing sections presented as "Check Your Own Work" and "Trade and Check," with
   no Section-number references and no jargon like "self-revision evidence"?
 - Are callout boxes reserved for genuine spotlights ("Grammar," any essay-structure teaching box, and "See How

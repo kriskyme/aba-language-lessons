@@ -19,7 +19,7 @@ Reading/Listening-Speaking Set, whose 4 lessons each get an independent anchor t
 | 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | My phone case (was: my water bottle) | 1.1.1.0 |
 | 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus B, Mentor Ladder carried forward, prewriting | (same Scenario, continued) | 1.1.2.0 |
 | 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | 1.1.3.0 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Peer editing, revision, publishing, Closing Transfer Check | (same Scenario, continued) | 1.1.4.0 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08 | Self-revision, draft completion, hand-off (not published), Closing Transfer Check | (same Scenario, continued) | 1.1.4.1 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -41,6 +41,13 @@ of the 4 lessons above now has its own current-convention packet (one file, two 
 `Generate_Student_Packet_Prompt_v2.2.md`), and the v3.3 reason-connector update is now reflected in the packets for
 the first time (it was previously markdown-only, since student copies of the old packets were already
 distributed). See `Index.md`'s "Sets" section.
+
+**2026-09-08 addendum: retrofitted as Part 1 of Module Pair 1-2.** Per `shared/Program_Conventions.md` §C's
+Module Pair addendum (Intermediate/Advanced/Proficient pair two consecutive Modules into one essay), this Set's
+Lesson 4 (`1.1.4.0` → `1.1.4.1`) no longer ends in a published, finished piece — it now ends in a complete,
+self-revised draft handed off to Module 2's Set. **Part 2 of this pair, Module 2's Set 1, has not yet been
+planned or generated** — see `writing/academic-writing/Changelog.md`'s dated entry and `Index.md`'s Pending
+work.
 
 ---
 

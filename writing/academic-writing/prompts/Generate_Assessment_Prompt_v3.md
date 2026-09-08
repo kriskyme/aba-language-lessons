@@ -1,49 +1,56 @@
-# Academic Writing Assessment Generation Prompt (v2)
+# Academic Writing Assessment Generation Prompt (v3)
 
-Companion to `Generate_Lesson_Prompt_v4.md` and `Generate_Module_Lesson_Plan_Prompt_v2.md`. Generates the
-assessment layer that sits on top of one completed **Set** (all 4 lessons, the Scenario carried from grammar
-input through a finished, published piece), the same once-per-Set cadence Reading and Listening/Speaking use for
-their own Set-scoped assessments: not a lesson, and not new teaching, but a way to check whether the Set's
-grammar content and writing skill actually transferred.
+Companion to `Generate_Lesson_Prompt_v5.md` and `Generate_Module_Lesson_Plan_Prompt_v3.md`. Generates the
+assessment layer that sits on top of one completed **Beginner Set** (4 lessons) or one completed
+**Intermediate/Advanced/Proficient Module Pair** (8 lessons across two Modules - the Scenario carried from
+grammar input through a finished, published piece): not a lesson, and not new teaching, but a way to check
+whether the arc's grammar content and writing skill actually transferred. For Beginner this is the same
+once-per-Set cadence Reading and Listening/Speaking use for their own Set-scoped assessments; for
+Intermediate/Advanced/Proficient the cadence moves to once per **Module Pair**, since the piece itself only
+reaches a finished, gradable state at Pair position 8 (`Generate_Lesson_Prompt_v5.md`'s "THE MODULE PAIR").
 
-**Why two parts, not one.** A completed Set leaves behind two genuinely different things to check: whether
-specific grammar forms (Focus A/B) were learned, and whether the student can actually produce the kind of
-writing the Set's task Level calls for. The first is objectively gradable in a few minutes; the second is not
-gradable by a key at all - it needs a human reader applying a rubric, the same underlying problem
-Listening/Speaking's Assessment prompt solves by splitting Listening (objectively gradable) from Speaking
-(rubric-scored). Writing's split follows the same logic:
+**Why two parts, not one.** A completed arc leaves behind two genuinely different things to check: whether
+specific grammar forms (Focus A/B - both Modules' worth, for a Pair) were learned, and whether the student can
+actually produce the kind of writing the arc's task Level calls for. The first is objectively gradable in a few
+minutes; the second is not gradable by a key at all - it needs a human reader applying a rubric, the same
+underlying problem Listening/Speaking's Assessment prompt solves by splitting Listening (objectively gradable)
+from Speaking (rubric-scored). Writing's split follows the same logic:
 
 |           | Part A: Grammar & Mechanics Check                          | Part B: Writing Task                                                                                          |
 | --------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| Cadence   | Every Set                                                     | Every Set                                                                                                         |
+| Cadence   | Every Set (Beginner) / every Module Pair (Intermediate/Advanced/Proficient) | Same as Part A                                                                                     |
 | Mechanism | In-class, individual, objectively gradable items             | In-class or take-home written piece, rubric-scored (Not yet / Developing / Meets)                                 |
-| Scope     | The Set just completed only (Focus A/B and Essay Focus A/B from across its 4 lessons) | The Set just completed only                                                                                       |
-| Basis     | New example sentences using Focus A/B, never any lesson's own printed items | A new Scenario (same Module verb, same Band calibration), never the Set's own Scenario the student already drafted, revised, and published about |
+| Scope     | The Set/Pair just completed only (Focus A/B and Essay Focus A/B from across all its lessons - both Modules' Focus A/B, for a Pair) | The Set/Pair just completed only |
+| Basis     | New example sentences using Focus A/B, never any lesson's own printed items | A new Scenario (same Module verb as the piece's own genre, same Band calibration), never the arc's own Scenario the student already drafted, revised, and published about |
 
 **No separate study guide document.** Reading's Assessment prompt produces a required per-task-Level study guide
 because its assessment can span up to 4 lessons cumulatively (a whole Set) with 4 independent anchor texts - there
-is real material to consolidate before a test that wide. A Writing Set's 4 lessons share one Scenario, not 4
-independent topics (`shared/Program_Conventions.md` §C), so there is less to separately consolidate; this prompt
-follows Listening/Speaking's simpler precedent instead: Part B's rubric-derived self-check checklist (B.4, carried
-into the student packet by `Generate_Assessment_Student_Packet_Prompt_v2.md`) is the only review aid, not a
-standalone document.
+is real material to consolidate before a test that wide. A Writing Set's (or Pair's) lessons share one Scenario,
+not independent topics (`shared/Program_Conventions.md` §C), so there is less to separately consolidate; this
+prompt follows Listening/Speaking's simpler precedent instead: Part B's rubric-derived self-check checklist (B.4,
+carried into the student packet by `Generate_Assessment_Student_Packet_Prompt_v3.md`) is the only review aid, not
+a standalone document.
 
-**Current version: v2.** For version history, see `Changelog.md`. (v2 rescopes this prompt from "one completed
-lesson" to "one completed Set" (all 4 lessons), correcting a mismatch left over from when a Writing Set was
-modeled as 1 lesson - see `shared/Program_Conventions.md` §C and `Changelog.md`'s 2026-09-08 entry. Neither this
-prompt nor its student-packet companion has been run against a real Set yet, so this is a low-risk scope
-correction, not a content redesign.)
+**Current version: v3.** For version history, see `Changelog.md`. (v3 moves the Intermediate/Advanced/Proficient
+cadence from once-per-Set to once-per-**Module Pair** (8 lessons), matching
+`Generate_Lesson_Prompt_v5.md`'s Module Pair mechanic - the piece only reaches a finished, gradable state at Pair
+position 8, so assessing at the old once-per-Set cadence would assess an intentionally unfinished, unpublished
+draft. Beginner keeps v2's once-per-Set cadence unchanged. Part A now covers both Modules' Focus A/B where a Pair
+applies; Part B's rubric likewise. Neither this prompt nor its student-packet companion has been run against a
+real Set or Pair yet.)
 
 ---
 
-## PART A: GRAMMAR & MECHANICS CHECK (every Set)
+## PART A: GRAMMAR & MECHANICS CHECK (every Set for Beginner; every Module Pair for Intermediate/Advanced/Proficient)
 
 ### A.0 Scope and inputs
 
-Run this after a Set (all 4 lessons) is complete. Required inputs: the Module, the Band, and the completed Set's content (to
-confirm which Focus A/B content, which confusable pair, and which task Levels were actually taught - this
-assessment must trace to what was actually taught, not just what the Module Lesson-Plan originally planned, in
-case any of the Set's 4 generated lessons deviated from its plan per that prompt's own self-check).
+Run this after a Beginner Set (all 4 lessons) or an Intermediate/Advanced/Proficient Module Pair (all 8 lessons
+across both Modules) is complete - never at Pair position 4, before Module N+1's lessons exist. Required inputs:
+the Module(s), the Band, and the completed Set's/Pair's content (to confirm which Focus A/B content - both
+Modules', for a Pair - which confusable pair(s), and which task Levels were actually taught - this assessment
+must trace to what was actually taught, not just what the Module Lesson-Plan originally planned, in case any
+generated lesson deviated from its plan per that prompt's own self-check).
 
 **New example sentences are required for every item - never reuse a sentence from any of the Set's own controlled-
 practice activities or editing paragraphs verbatim.** This is the Writing equivalent of Reading/L-S's "new
@@ -56,10 +63,12 @@ new is the specific sentence content of each item.
 
 Three things, kept separate in the item design:
 
-1. **Focus A's target grammar form(s)**, and **Focus B's**, both as actually taught across this Set's 4 lessons (not the full
-   Grammar Focus Bank - only the rows this specific Set used).
-2. **The confusable pair(s) taught in this Set** (e.g. it's/its, your/you're), tested directly through graded
-   items.
+1. **Focus A's target grammar form(s)**, and **Focus B's**, as actually taught across the arc's lessons - Module
+   N's Focus A/B alone for Beginner's Set; **both** Module N's and Module N+1's Focus A/B for an
+   Intermediate/Advanced/Proficient Pair (not the full Grammar Focus Bank - only the rows this specific Set/Pair
+   used).
+2. **The confusable pair(s) taught in this Set/Pair** (e.g. it's/its, your/you're), tested directly through
+   graded items.
 3. **Where the Band reaches Essay Composition (Advanced, Proficient): Essay Focus A/B's structural vocabulary**
    (direct vs. indirect thesis, hook types, topic sentence vs. supporting sentence), tested through
    identification items (e.g. "is this thesis direct or indirect?"), not through writing an essay - essay
@@ -81,7 +90,7 @@ GRAMMAR & MECHANICS CHECK (approx. 20-30 MIN)  |--Setup (2)--|--Items, by task L
 ```
 
 Single sitting, shorter than a full class period since there is no pre-teach step. Item counts scale by task
-Level the same balanced-duration principle `Generate_Lesson_Prompt_v4.md` Section 0.4b uses for controlled
+Level the same balanced-duration principle `Generate_Lesson_Prompt_v5.md` Section 0.4b uses for controlled
 practice: 6-8 items for the lowest task Level(s) in the Band, fewer but more demanding items (a combine-the-
 sentences or identify-and-fix task) for the highest.
 
@@ -110,33 +119,34 @@ document itself - that conversion is a teacher/gradebook decision outside this p
 
 ---
 
-## PART B: WRITING TASK (every Set)
+## PART B: WRITING TASK (every Set for Beginner; every Module Pair for Intermediate/Advanced/Proficient)
 
 ### B.0 Scope, cadence, and inputs
 
-Run this after the same Set Part A was just generated for - both parts run on the same per-Set cadence.
-Required inputs: the Module, the Band, and the completed Set's content (to confirm the task Levels, required
+Run this after the same Set/Pair Part A was just generated for - both parts run on the same cadence. Required
+inputs: the Module(s), the Band, and the completed Set's/Pair's content (to confirm the task Levels, required
 features, and real-world writing form actually taught).
 
-**A new Scenario is required - never the Set's own Scenario the student already drafted, revised, and
+**A new Scenario is required - never the Set's/Pair's own Scenario the student already drafted, revised, and
 published against.** This mirrors Listening/Speaking's Part B: the assessed prompt is invented fresh, grounded
-in the same Module verb and the same Band-lower-Level calibration the Set's own Scenario used, so the task
-checks whether the taught skill transfers to a new situation rather than whether the student can reproduce (or
-lightly edit) a piece they already have on paper. Match the new Scenario's shape to the Set's own: if the
-Set's Scenario named a specific reader and concern (required for a Band reaching Level 6+, per Lesson prompt
-Section 0.2), the assessment's new Scenario must too.
+in the piece's own Module verb (Module N's, for a Pair - the genre never switched to Module N+1's) and the same
+Band-lower-Level calibration the original Scenario used, so the task checks whether the taught skill transfers to
+a new situation rather than whether the student can reproduce (or lightly edit) a piece they already have on
+paper. Match the new Scenario's shape to the original: if the original Scenario named a specific reader and
+concern (required for a Band reaching Level 6+, per Lesson prompt Section 0.2), the assessment's new Scenario
+must too.
 
 ### B.1 Structure by task Level
 
 For each task Level in the Band, write one self-contained task with:
 
-- **A writing task grounded in the Module's own verb**, scoped to that task Level's verbatim CSV Description,
-  drawing on the Focus A/B grammar and, where applicable, Essay Focus A/B structural content actually taught in
-  this Set (state in the task itself which grammar/structural elements this Level's task is emphasizing, so
-  scoring can target them specifically).
+- **A writing task grounded in the piece's own Module verb** (Module N's, for a Pair), scoped to that task
+  Level's verbatim CSV Description, drawing on the Focus A/B grammar - both Modules', for a Pair - and, where
+  applicable, Essay Focus A/B structural content actually taught (state in the task itself which
+  grammar/structural elements this Level's task is emphasizing, so scoring can target them specifically).
 - **A new Scenario** (per B.0), concrete enough that a student is not left guessing what to write about - the
   same standard the Lesson prompt's own Scenario always meets.
-- **A target length**, matching that task Level's own output-ceiling range from `Generate_Lesson_Prompt_v4.md`
+- **A target length**, matching that task Level's own output-ceiling range from `Generate_Lesson_Prompt_v5.md`
   Section 0.2 (the same range the Set's Mentor Text/Mentor Essay and drafting task used), so the assessment
   stays comparable to what was actually taught and practiced - not a shortened or padded version of that range.
 - **Concrete, countable content requirements, not just a target length** (e.g. "include one comparison and one
@@ -163,7 +173,7 @@ Essay Focus A/B structure (hook, thesis, topic-sentence-led body paragraphs, con
 scale per criterion (Not yet / Developing / Meets), matching Listening/Speaking's Speaking rubric, rather than a
 numeric score out of 100. Do not invent a program-wide letter-grade conversion here - a teacher/admin decision
 outside this prompt's scope. **Per program convention, the student-facing packet derives a short self-check
-checklist from this rubric's Meets column** - see `Generate_Assessment_Student_Packet_Prompt_v2.md` Section 2.7.
+checklist from this rubric's Meets column** - see `Generate_Assessment_Student_Packet_Prompt_v3.md` Section 2.7.
 The rubric itself, with its Not yet/Developing/Meets columns, stays teacher-only.
 
 ### B.3 Self-check (apply before finalizing)
@@ -189,15 +199,15 @@ The rubric itself, with its Not yet/Developing/Meets columns, stays teacher-only
 ## Style & Formatting Constraints (both parts)
 
 Same constraints as the Lesson Generation Prompt: no em-dashes anywhere; task Levels shown as the star system
-`Generate_Student_Packet_Prompt_v2.2.md` already uses. This prompt generates the teacher-facing assessment
+`Generate_Student_Packet_Prompt_v2.5.md` already uses. This prompt generates the teacher-facing assessment
 (including Part A's full answer key and Part B's rubric); the student-facing print version is a separate step,
-run by `Generate_Assessment_Student_Packet_Prompt_v2.md`, which strips Part A's answer keys/point values/pass
+run by `Generate_Assessment_Student_Packet_Prompt_v3.md`, which strips Part A's answer keys/point values/pass
 notes as teacher-only, but carries Part B's rubric over to the student only as a self-check checklist (B.2).
 
 ## Open items for this v1
 
-- Not yet run against a real completed Set. Treat every number above (item counts, sitting length, essay-
-  regime time budget) as a reasoned starting point, the same way the Lesson prompt's v1 was, and expect addenda
-  once a real assessment has actually been generated and given.
+- Not yet run against a real completed Set or Module Pair. Treat every number above (item counts, sitting length,
+  essay-regime time budget) as a reasoned starting point, the same way the Lesson prompt's v1 was, and expect
+  addenda once a real assessment has actually been generated and given.
 - Scoring-to-gradebook conversion (how Part A's point key or Part B's Not yet/Developing/Meets becomes a
   report-card mark) is intentionally out of scope - a program-level policy decision, not a generation-time one.

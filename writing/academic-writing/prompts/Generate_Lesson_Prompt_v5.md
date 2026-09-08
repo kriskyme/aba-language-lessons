@@ -1,17 +1,20 @@
-# Academic Writing Lesson Generation Prompt (v4.1)
+# Academic Writing Lesson Generation Prompt (v5)
 
 **Lesson type:** this prompt generates one **Academic Writing Lesson**, the Writing-modality counterpart to the
-existing Passage Reading Lesson. Passage Reading and Academic Writing now share the same lesson shape: a fixed
-**2-day cycle**, 4 lessons per Set. What's genuinely different is what those 4 lessons share: a Reading Set's 4
-lessons each get an independent anchor text, while an Academic Writing Set's 4 lessons share **one** Scenario
-carried from grammar input through a finished, published piece, differentiated into band-scoped task Levels that
-each produce their own written output, calibrated against the Writing-modality rows of `learningobjectives.csv`.
-See "The Four-Lesson Set" section below for exactly how that arc is fixed across the 4 lesson positions. It was
-written by working backward from the sample textbook unit the user supplied (`Writing Content Sample`, two full
-grammar-in-context chapters from an academic ESL writing textbook: one on the simple present, articles, and
-simple/compound sentences; one on the simple past, adverbs of manner, and complex sentences with time clauses,
-each chapter ending in a guided paragraph and peer edit) and forward from the existing Passage Reading Lesson
-Generation Prompt v2.5.
+existing Passage Reading Lesson. Passage Reading and Academic Writing share the same lesson shape: a fixed
+**2-day cycle**. What's genuinely different is what a Writing Set's lessons share, and - for Intermediate,
+Advanced, and Proficient - how far that sharing now extends: a Reading Set's 4 lessons each get an independent
+anchor text, while an Academic Writing Set's 4 lessons share **one** Scenario carried from grammar input toward a
+finished piece, differentiated into band-scoped task Levels that each produce their own written output,
+calibrated against the Writing-modality rows of `learningobjectives.csv`. For Intermediate/Advanced/Proficient,
+that one Scenario now spans **two** consecutive Sets (a **Module Pair** - see `shared/Program_Conventions.md` §C
+and "THE MODULE PAIR" section below): 8 lessons, not 4, with each of the pair's two Modules teaching its own
+Grammar/Essay Focus and contributing it to the same shared piece. Beginner is exempt and keeps the single-Set,
+4-lesson arc. It was written by working backward from the sample textbook unit the user supplied (`Writing
+Content Sample`, two full grammar-in-context chapters from an academic ESL writing textbook: one on the simple
+present, articles, and simple/compound sentences; one on the simple past, adverbs of manner, and complex
+sentences with time clauses, each chapter ending in a guided paragraph and peer edit) and forward from the
+existing Passage Reading Lesson Generation Prompt v2.5.
 
 **Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
 generating. §E's CBI/TBLT framework applies here with the Scenario as the content vehicle: writing practice
@@ -24,13 +27,14 @@ generated lesson calibrated against real objectives and real output-length targe
 difficulty curve.
 
 **Relationship to Passage Reading:** this prompt shares the Band table, the Level 1-8 scale,
-`learningobjectives.csv`, and now the 2-day/4-lessons-per-Set lesson shape with Passage Reading, and borrows
-several proven mechanisms (Skill Spotlight, Closing Transfer Check, board-dependent moments, Respectful Tiers, no
-em-dashes). It still deliberately diverges from Reading in one structural way, explained in Section 0.1 and "The
-Four-Lesson Set" below: instead of one shared anchor text with per-Level tasks built on top of it, each task
-Level gets its own short **Mentor Text**, and the 4 lessons in a Set share one Scenario/piece of writing rather
-than 4 independent topics, because in Writing (unlike Reading) the actual form of a Level's output changes, not
-just the depth of engagement with a shared text.
+`learningobjectives.csv`, and the 2-day-lesson shape with Passage Reading, and borrows several proven mechanisms
+(Skill Spotlight, Closing Transfer Check, board-dependent moments, Respectful Tiers, no em-dashes). It still
+deliberately diverges from Reading in one structural way, explained in Section 0.1 and "THE MODULE PAIR" below:
+instead of one shared anchor text with per-Level tasks built on top of it, each task Level gets its own short
+**Mentor Text**, and a Writing Set's lessons share one Scenario/piece of writing rather than independent topics,
+because in Writing (unlike Reading) the actual form of a Level's output changes, not just the depth of engagement
+with a shared text. For Intermediate/Advanced/Proficient, that one piece of writing is no longer finished within
+a single Set - see "THE MODULE PAIR" below.
 
 **Provisional status:** unlike Reading's Section 0.2, whose word-count ceilings are anchored to a real corpus
 (British Council LearnEnglish, Cambridge exam specs), the output-length targets in Section 0.2 below are a
@@ -41,40 +45,49 @@ separate rounds of coming in short. Splitting the old 8-day-in-one-document mode
 does not raise these ceilings; the CSV still governs the size of the student product, and the Set's 8
 instructional days buy depth of instruction and revision time, not a bigger target.
 
-**Current version: v4.** For the full dated version history and the reasoning behind each change, see
-`Changelog.md`. (v4 restructures the lesson from one 8-day document into 4 separate 2-day lesson documents per
-Set, matching Reading's/Listening-Speaking's lesson shape - see `shared/Program_Conventions.md` §C and
-`Changelog.md`'s 2026-09-08 entry. The pedagogical content of Section 0 is unchanged from v3.6; only the
-generation unit and the day-numbering/labeling below changed.)
+**Current version: v5.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`. (v5 introduces the **Module Pair** for Intermediate/Advanced/Proficient - see
+`shared/Program_Conventions.md` §C and this modality's own `Changelog.md`'s dated entry: one Scenario/piece now
+spans two consecutive Sets, 8 lessons, with each Module contributing its own Grammar/Essay Focus. Beginner is
+unaffected and keeps v4.1's single-Set, 4-lesson arc exactly. Section 0's pedagogical content is otherwise
+unchanged from v4.1 except where this file marks a v5 addition explicitly.)
 
-**Relationship to the Module Lesson-Plan prompt:** `Generate_Module_Lesson_Plan_Prompt_v2.md` plans a Set's
-Scenario, Grammar Focus A/B pairing (and Essay Focus A/B direction, where applicable), and Leveled Mentor Ladder
-direction before this prompt writes any lesson content, the same upstream relationship Reading's and
-Listening/Speaking's own Module Lesson-Plan prompts have to their Lesson prompts. If an approved plan exists for
-this Set, take its Scenario, Focus A/B pairing, and Mentor Ladder direction as given rather than re-deriving them
-from Section 0.9 below for every one of the 4 lessons; this prompt's job then is to write the one lesson's worth
-of content the plan calls for at that Set position. Running this prompt without an approved plan remains valid
-for a Set's Lesson 1 - Section 0.9 below still applies in full when there is no plan to defer to - but Lessons
-2-4 should always continue what Lesson 1 (and any lesson before them in the same Set) already established, never
-re-derive the Scenario/Focus from scratch.
+**Relationship to the Module Lesson-Plan prompt:** `Generate_Module_Lesson_Plan_Prompt_v3.md` plans - for
+Beginner, one Set's Scenario/Focus/Mentor-Ladder direction, exactly as before; for Intermediate/Advanced/
+Proficient, a full **Module Pair's** Scenario, genre/real-world-writing-form (fixed once, by the pair's first
+Module), each Module's own Grammar Focus A/B pairing (and Essay Focus A/B direction, where applicable), and
+Leveled Mentor Ladder direction for both Modules - before this prompt writes any lesson content, the same
+upstream relationship Reading's and Listening/Speaking's own Module Lesson-Plan prompts have to their Lesson
+prompts. If an approved plan exists, take its Scenario, each Module's Focus A/B pairing, and Mentor Ladder
+direction as given rather than re-deriving them from Section 0.9 below for every lesson; this prompt's job then
+is to write the one lesson's worth of content the plan calls for at that position. Running this prompt without an
+approved plan remains valid for a pair's Lesson 1 (Pair position 1) - Section 0.9 below still applies in full
+when there is no plan to defer to - but every later position should always continue what came before it in the
+same pair, never re-derive the Scenario/genre from scratch. Pair position 5 (Module N+1's Lesson 1) is a partial
+exception: it does not re-derive the Scenario or genre, but it does introduce Module N+1's own, different Focus
+A/B - see "THE MODULE PAIR" below.
 
 **Lesson header metadata:** directly under the generated document's H1, include a metadata line stating
 `**Band:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` - the version code per `shared/Program_Conventions.md`
-§G. `<Lesson>` is this lesson's global number (continuing across Sets, per §G), not its 1-4 position within the
-Set; a Set's four lessons get four consecutive global numbers and four separate version codes (e.g. `1.1.1.0`
-through `1.1.4.0`), not one shared code. Iteration `0` on first generation.
+§G. `<Module>` and `<Lesson>` are always scoped to the Module the lesson actually belongs to (§C/§G) - Module
+Pairing does not change this: Module N+1's Lesson 1 is version `<N+1>.1.1.0`, not a continuation of Module N's
+own numbering. `<Lesson>` is this lesson's global number within its own Module (continuing across that Module's
+Sets, per §G), not its 1-4 position within the Set. Iteration `0` on first generation.
 
 ---
 
 **A note on "Day N" references throughout Section 0 below:** the pedagogical design in Section 0 (the grammar
 bank, the essay-focus bank, board-dependent-moment placements, checklist timing, and so on) still refers to days
 by their original global 1-8 numbering from the pre-v4, one-document-per-Set model, since that numbering is
-woven through this section's own internal cross-references and its `Changelog.md` history. Translate using "The
-Four-Lesson Set" table above: **Day 1 = Lesson 1's Day 1; Day 2 = Lesson 1's Day 2; Day 3 = Lesson 2's Day 1;
+woven through this section's own internal cross-references and its `Changelog.md` history. Translate using "THE
+MODULE PAIR" table below: **Day 1 = Lesson 1's Day 1; Day 2 = Lesson 1's Day 2; Day 3 = Lesson 2's Day 1;
 Day 4 = Lesson 2's Day 2; Day 5 = Lesson 3's Day 1; Day 6 = Lesson 3's Day 2; Day 7 = Lesson 4's Day 1; Day 8 =
 Lesson 4's Day 2.** A range like "Days 1-4" means Lessons 1-2; "Days 5-6" means Lesson 3; "Days 1-8" or "the
-8-day cycle" means the whole 4-lesson Set. The "TWO-DAY LESSON CYCLE" section above and every `### Lesson N, Day
-M` heading below already use the new scheme directly - only Section 0's prose still uses the old numbering.
+8-day cycle" means one Module's own 4-lesson Set - for Intermediate/Advanced/Proficient this old numbering never
+extends past Lesson 4 (Pair position 4); it does not continue into Pair positions 5-8, which are Module N+1's own
+fresh Days 1-8 (see "LESSONS 5-8" below for what's different there). The "TWO-DAY LESSON CYCLE" section and every
+`### Lesson N, Day M` heading below already use the new scheme directly - only Section 0's prose still uses the
+old numbering.
 
 ## SECTION 0: BAND AND OBJECTIVE CALIBRATION (READ AND APPLY BEFORE WRITING ANY LESSON)
 
@@ -319,18 +332,24 @@ Content Sample`'s conclusion guidance). Approximately 300-450 words total across
    needs one moment of genuine authorial choice (which word fits the picture, not a single correct answer read off
    the board).
 8. Module-alignment check: do the Mentor Texts and drafting tasks actually exercise the Module's verb
-   (describe/narrate/explain/instruct/evaluate/argue/transact/socialize), not a neighboring Module's skill?
+   (describe/narrate/explain/instruct/evaluate/argue/transact/socialize), not a neighboring Module's skill? For
+   Lessons 5-8 of a Module Pair (Module N+1's Set), the shared essay itself still exercises Module N's verb only
+   (the genre doesn't change mid-pair - see "THE MODULE PAIR"); confirm Module N+1's own verb instead gets
+   genuine, separate coverage via Lesson 8's Closing Transfer Check addition (0.8).
 9. Editing/peer-editing check (0.6): does the self-edit checklist name this lesson's specific grammar focuses and
    required feature (not a generic "check your spelling" list), and does the Peer Editing exchange scaffold per
    task Level?
 10. Self-revision check: is there an actual mechanism producing visible revision evidence (0.4a) at Levels 7-8
     (required) and, ideally, Level 5 (recommended), not just an instruction to "revise your work" with nothing
-    collected to show it happened?
+    collected to show it happened? For Intermediate/Advanced/Proficient, is the hard requirement present at
+    **both** Lesson 4/Pair position 4 and Lesson 8/Pair position 8 (0.6), not just once?
 11. Board-dependent moment check (0.7): does each of the 8 days include at least one genuine board-dependent
     moment, not a restatement of material already printed on a handout?
 12. Skill Spotlight / Closing Transfer Check (0.8): does Day 1 name the transferable skill in plain language, and
     does Day 8 close with every student producing one new instance of that exact skill out loud or on paper, with
-    a few students sharing, rather than a self-report confidence check?
+    a few students sharing, rather than a self-report confidence check? For Intermediate/Advanced/Proficient, does
+    Lesson 5 add a second Skill Spotlight for Module N+1's own skill, and does Lesson 8's Closing Transfer Check
+    cover both Modules' combined skill plus the separate Module N+1 CSV-verb task?
 13. Rotation check (0.9): different grammar focuses, different Scenario topic, and different real-world writing
     form than the immediately preceding cycle for the same class, checked against the Rotation Log.
 14. No em-dashes anywhere in generated content (style constraint, shared with Reading).
@@ -381,6 +400,13 @@ versions, by adding entries rather than replacing them):
 | 6        | Register-shifting cohesive devices (however, in fact, on the other hand, given that)                                                                                 | Complex sentences with a time, causal, or concessive subordinate clause, chosen to fit the register shift            | Required feature is a register/approach shift for a named reader; the shift often lands at a clause boundary   |
 | 7        | Sophisticated cohesion (this suggests, what's more, admittedly); explicit self-revision language                                                                     | Concession/counter structures ("while X is true, Y matters more"); varied subordination across the piece             | Required feature is embedded implication plus visible self-revision                                            |
 | 8        | Multi-audience calibration devices (formal/informal register markers used deliberately)                                                                              | Deliberate sentence-length and structure variation as a rhetorical tool between the two audience-calibrated sections | Required feature is calibrating tone for two distinct named audiences within one document                      |
+
+**Alternate rows for a Module Pair's second Module (pending, new in v5):** the bank above gives exactly one Focus
+A/B per native Level. For Intermediate/Advanced/Proficient, Module N+1 needs a genuinely different Focus A/B than
+Module N at the same native row (Section 0.9's within-pair non-repetition rule) - this bank does not yet have an
+authored "Alternate" column for that purpose (tracked in `Index.md`'s Pending work). Until it does, choose Module
+N+1's Focus A/B by hand from adjacent grammar content appropriate to its own Module's writing purpose, checked
+for genuine distinctness, rather than reusing Module N's row.
 
 **Reason-connector richness (new in v3.3):** do not teach Level 4's "because" as a single isolated word with no
 alternatives. Teach it alongside at least since, as, and given that, each with its own example, even though
@@ -641,7 +667,8 @@ per lesson:
   self-check ("does your word match the picture? read your sentence to a partner, does it make sense?"), scaffolded
   down to the Level, not a written checklist these students cannot yet produce independently.
 
-**Peer Editing (Day 7):** exchange work with a partner and use a short Peer Editing Form with 2-3 questions tied
+**Peer Editing (Day 7 for Beginner's Set; Lesson 8/Day 1 for Intermediate/Advanced/Proficient's Module Pair - see
+"THE MODULE PAIR" above):** exchange work with a partner and use a short Peer Editing Form with 2-3 questions tied
 specifically to this lesson's grammar focuses and required feature (not a generic "did you like it?"), plus one
 specific compliment and one specific suggestion, following the sample's Activity 26 pattern. Differentiate
 participation the same way Reading differentiates Phase 3 (0.8, Part B, in the Reading prompt): a Level 1-3
@@ -649,7 +676,16 @@ student's "peer edit" can be an oral partner check (read your sentence aloud, do
 word?) rather than a written comment exchange. For essay-regime Levels (6-8), add questions that check the essay's
 structure specifically: can your partner identify the hook, the thesis, and each body paragraph's topic sentence
 without your help; for Level 7-8, what do they think the embedded implication or the two audiences' distinct
-concerns are, checked against what the writer actually intended.
+concerns are, checked against what the writer actually intended. **For Intermediate/Advanced/Proficient, the Peer
+Editing Form at Lesson 8 covers both Modules' focuses and required features** - it is not generated or run at
+Lesson 4/Pair position 4, since the piece is not yet complete with both Modules' tools applied.
+
+**Self-revision timing for Intermediate/Advanced/Proficient (Module Pair).** The hard Level 7-8 self-revision
+requirement (0.4a) applies **twice**, not once: at Pair position 4 (Lesson 4), revising with Module N's own
+tools before hand-off, and again at Pair position 8 (Lesson 8), revising with Module N+1's tools before
+publishing. This is intentionally more total revision practice than Beginner's single-Set model, since the piece
+now has two distinct rounds of new grammar/essay tools to apply. Levels 4-6 are encouraged to do the same at both
+points if time allows.
 
 ### 0.7 Board-dependent moments
 
@@ -679,21 +715,42 @@ describing something by comparing it to something else and giving a real reason 
 covering what Levels 6-8 are additionally building toward that day (structuring that comparison, or that
 explanation, as a full essay), so the spotlight names both tracks rather than only the paragraph-regime one.
 
-**Day 8, closing the lesson:** every student applies the exact spotlighted skill to something new (not their main
-Scenario piece), produces it out loud or on a small card, and a few students are cold-called to share. Do not
-close with a self-report ("thumbs up if you feel confident") for the same reason Reading's v2.3 replaced that
-mechanism: a visible whole-class confidence vote converges on "yes" regardless of whether the skill transferred.
+**Day 8, closing the lesson (Beginner's only closing; Intermediate/Advanced/Proficient's Lesson 4/Pair position 4
+closing - see below for their Lesson 8/Pair position 8):** every student applies the exact spotlighted skill to
+something new (not their main Scenario piece), produces it out loud or on a small card, and a few students are
+cold-called to share. Do not close with a self-report ("thumbs up if you feel confident") for the same reason
+Reading's v2.3 replaced that mechanism: a visible whole-class confidence vote converges on "yes" regardless of
+whether the skill transferred.
+
+**Intermediate/Advanced/Proficient only: a second Skill Spotlight and Closing Transfer Check, at Lesson 5 and
+Lesson 8 (Pair positions 5 and 8).** Lesson 5's Skill Spotlight (Day 1, during Module N+1's Focus A mini-lesson)
+names Module N+1's own transferable skill, alongside a one-line reminder of Module N's skill the existing draft
+already demonstrates. Lesson 8's Closing Transfer Check (Day 2) covers **both** Modules' combined skill in one
+instance, the same "something new, out loud or on paper" mechanism as above, **plus** one short, separate task
+exercising Module N+1's own CSV verb on a small new prompt, not the shared essay - since the shared essay's genre
+stayed Module N's throughout (see "THE MODULE PAIR" above), this second task is what gives Module N+1's own
+learning objective genuine coverage. Both parts are produced out loud or on paper and checked by cold-calling, not
+self-report.
 
 ### 0.9 Rotation
 
-**Applies in full only when generating a Set's Lesson 1 without an approved Module Lesson-Plan** (see "Relationship
-to the Module Lesson-Plan prompt" above). Do not repeat the same grammar focus pair, the same Scenario topic, or
-the same real-world writing form (see the Module-to-form mapping below) in two consecutive Sets for the same
-class, and avoid clustering the same grammar focus across nearby Modules even when they are not strictly
-consecutive (e.g. teaching comparatives as Focus A for both a Describing Set and an Evaluating Set generated back
-to back), since both draw from the same shared grammar range and can overlap without the topic itself repeating.
-Lessons 2-4 of a Set never re-run this check - they continue Lesson 1's own Scenario/Focus, already checked once
-for the whole Set.
+**Applies in full only when generating Pair position 1 (a new Module Pair's first lesson) without an approved
+Module Lesson-Plan** (see "Relationship to the Module Lesson-Plan prompt" above; for Beginner, "Pair position 1"
+is simply Lesson 1 of its own Set). Do not repeat the same grammar focus pair, the same Scenario topic, or the
+same real-world writing form (see the Module-to-form mapping below) in two consecutive Module Pairs (or Sets, for
+Beginner) for the same class, and avoid clustering the same grammar focus across nearby Modules even when they
+are not strictly consecutive (e.g. teaching comparatives as Focus A for both a Describing pair and an Evaluating
+pair generated back to back), since both draw from the same shared grammar range and can overlap without the
+topic itself repeating. Positions 2-4 never re-run this check - they continue position 1's own Scenario/Focus,
+already checked once for the whole pair.
+
+**Within-pair non-repetition (Intermediate/Advanced/Proficient only, new in v5):** Module N+1's own Focus A/B
+(introduced at Pair position 5) must not repeat Module N's own Focus A/B from positions 1-2 of the same pair -
+this is a stronger, same-pair check than the cross-Set/cross-Band adjacency check above, since both Focus
+choices sit inside one plan and one Rotation Log entry. If both Modules' native Levels happen to map to the same
+Grammar/Essay Focus Bank row (Section 0.4/0.4c), select Module N+1's row from that Bank's Alternate column once
+authored (see "THE MODULE PAIR" above); until then, choose Module N+1's Focus A/B by hand so it is genuinely
+distinct in content, not just relabeled.
 
 **Before generating a Set's Lesson 1 (or any lesson without an approved plan):** read `Rotation_Log.md` (overview)
 and every existing `Rotation_Log_<Band>.md` in full - the check below spans every Band, not just the one being
@@ -729,26 +786,72 @@ than forcing a bad-fit essay type onto it:
 
 ---
 
-## THE FOUR-LESSON SET: A FIXED ARC, ONE SCENARIO CARRIED THROUGHOUT
+## THE MODULE PAIR: FOR BEGINNER, A FIXED 4-LESSON ARC; FOR EVERY OTHER BAND, A FIXED 8-LESSON ARC ACROSS TWO MODULES
 
-**Unlike Reading, whose 4 lessons in a Set each get an independent anchor text and topic, Academic
-Writing's 4 lessons in a Set share one Scenario, carried from grammar input through a finished,
-published piece.** This is a fixed pedagogical arc, not an open per-lesson choice: which position
-in the Set a lesson occupies (1 through 4) determines its content role directly. This prompt
-generates **one 2-day lesson per run** (75 min/day, 150 min total) - run it four times per Set, once
-per position, against the same approved Module Lesson-Plan (`Generate_Module_Lesson_Plan_Prompt_v2.md`).
+**Beginner** keeps the original model unchanged: 4 lessons in one Set share one Scenario, carried from grammar
+input through a finished, published piece. This prompt generates **one 2-day lesson per run** (75 min/day, 150
+min total) - run it four times per Set, once per position, against the same approved Module Lesson-Plan
+(`Generate_Module_Lesson_Plan_Prompt_v3.md`).
 
 | Set position | Content role | (Was, under the old 8-day-in-one-doc model) |
 | --- | --- | --- |
 | **Lesson 1** | Grammar Focus A: input, modeling, and deeper practice | Days 1-2 |
-| **Lesson 2** | Grammar Focus B, Essay Focus A/B (where applicable), Mentor Ladder, prewriting | Days 3-4 |
+| **Lesson 2** | Grammar Focus B, Mentor Ladder, prewriting | Days 3-4 |
 | **Lesson 3** | Drafting, parts 1 and 2, and self-edit | Days 5-6 |
 | **Lesson 4** | Peer editing, revision, publishing, and the Closing Transfer Check | Days 7-8 |
 
-Lessons 3 and 4 do not re-derive the Scenario, Grammar Focus A/B, Essay Focus A/B, or Mentor Ladder
-from Section 0.9 - they continue the same lesson content Lessons 1-2 already established for this
-Set. Every request to this prompt names the Set (and therefore the approved plan/prior lessons to
-continue from) and which of the four positions is being generated.
+**Intermediate, Advanced, and Proficient** pair two consecutive Modules - odd with the next even (1-2, 3-4, 5-6,
+7-8) - so that **one Scenario/essay spans both Modules' Sets**: 8 lessons total, not 4, with each Module
+contributing its own, different Grammar Focus A/B (and Essay Focus A/B, where applicable) to the same shared
+piece (`shared/Program_Conventions.md` §C's Module Pair addendum). This does not change what a Set is: each
+Module still keeps its own ordinary 4-lesson Set, its own folder, and its own version codes (§G) - Module Pairing
+is a continuity layer above Set, not a redefinition of it. **Pair position** (1-8) is the lesson's place in the
+full arc; **Set position** (1-4, restarting at each Module) is unchanged and still names which of a Module's own
+4 lessons this is:
+
+| Pair position | Module | Set position | Content role |
+| --- | --- | --- | --- |
+| 1 | N (first) | 1 of 4 | Module N's Grammar Focus A: input, modeling, deeper practice |
+| 2 | N | 2 of 4 | Module N's Grammar Focus B, Essay Focus A/B (where applicable), Mentor Ladder, prewriting |
+| 3 | N | 3 of 4 | Drafting, parts 1-2 (a complete opening-through-conclusion draft) |
+| 4 | N | 4 of 4 | **Hard self-revision** (Module N's own focus/feature), draft completion, hand-off - not published |
+| 5 | N+1 (second) | 1 of 4 | Re-engagement (re-read own draft, short Scenario/purpose/reader recap - no fresh hook) + Module N+1's own, different Grammar Focus A: input, modeling |
+| 6 | N+1 | 2 of 4 | Module N+1's Grammar Focus B, Essay Focus A/B (where applicable); Mentor Ladder second look (before/after); revision-planning against the existing draft (replaces prewriting-for-a-new-piece) |
+| 7 | N+1 | 3 of 4 | Revision and expansion drafting, parts 1-2: apply Module N+1's focus directly into the existing draft; merged self-edit checklist covering both Modules' focuses |
+| 8 | N+1 | 4 of 4 | Peer editing (covers both Modules' focuses), **hard self-revision** (Module N+1's tools), publishing, and a Closing Transfer Check exercising both Modules' skills |
+
+Key rules:
+
+- **Genre/Scenario/essay-type is fixed once, by Module N's own Module-to-real-world-form mapping (Section 0.9),
+  and inherited unchanged by Module N+1.** You cannot switch, say, a comparison essay into a reaction essay
+  mid-piece just because Module N+1's own mapping would normally point elsewhere; the shared piece stays one
+  genre throughout.
+- **Pair position 5 does not re-derive the Scenario or genre** from Section 0.9 - it re-reads Module N's existing
+  draft and gives a short recap (purpose, reader, what's already written), not a fresh hook. It does introduce
+  Module N+1's own Grammar Focus A as genuinely new content.
+- **Module N+1's own CSV learning objective (its own writing-purpose verb) is not exercised by the shared essay**,
+  since the genre stays Module N's throughout. Pair position 8's Closing Transfer Check resolves this: alongside
+  the skill-transfer instance built from both Modules' Grammar/Essay Focus, add one short, separate task
+  exercising Module N+1's own verb (e.g. narrating, if paired with a Describing Module 1) on a small new prompt -
+  not the shared essay. See Section 0.8.
+- **Hard self-revision sits at both Pair position 4 and Pair position 8** (not only at the end): position 4
+  revises with Module N's own tools before hand-off; position 8 revises again with Module N+1's tools before
+  publishing. This is more total revision practice than the single-Set model had, a deliberate choice - see
+  `Changelog.md`.
+- **Peer editing and publishing move entirely to Pair position 8.** Position 4 completes and self-revises the
+  draft but does not publish it and does not run a Peer Editing exchange - sharing a piece as "finished" before
+  Module N+1's tools have been applied to it would misrepresent it. See Section 0.6.
+- Every Grammar/Essay Focus Bank (Section 0.4/0.4c) currently gives exactly one Focus A/B row per native Level.
+  Module N and Module N+1 need genuinely *different* content at the same native row; until each Bank has an
+  **Alternate** column authored for this purpose (tracked as pending work in `Index.md`), select Module N+1's
+  Focus A/B by hand, checked against the within-pair non-repetition rule in Section 0.9, rather than reusing
+  Module N's own row.
+- Positions 3 and 4 do not re-derive the Scenario, Grammar Focus A/B, Essay Focus A/B, or Mentor Ladder direction
+  from Section 0.9 - they continue Lesson 1-2's content. Positions 6, 7, and 8 likewise continue what position 5
+  established for Module N+1, on top of what positions 1-4 already built.
+
+Every request to this prompt names the Module (and, for Intermediate/Advanced/Proficient, which of the pair's two
+Modules and which pair position) being generated.
 
 ## TWO-DAY LESSON CYCLE: STRUCTURE AND DETAILED FLOW
 
@@ -794,18 +897,88 @@ DAY 2: DRAFTING, PART 2 AND SELF-EDIT (75 MIN)
 |-- Phase 3: Share-out / final line check (20 min)
 ```
 
-**LESSON 4 (150 MIN TOTAL) - PEER EDITING, REVISION, AND PUBLISHING**
+**LESSON 4 (150 MIN TOTAL) - SELF-REVISION AND DRAFT HAND-OFF**
+
+**Beginner (single-Set model): this is the Set's final lesson - see the two-line note at the end of this block.**
+**Intermediate/Advanced/Proficient (Module Pair): this is Pair position 4, the end of Module N's Set - the piece
+is not yet finished. Peer editing and publishing happen later, at Pair position 8.**
+
+```
+DAY 1: SELF-REVISION AND DRAFT COMPLETION (75 MIN)
+|-- Phase 1: Self-edit checklist pass, Module N's own focus/feature (25 min)
+|-- Phase 2: Self-revision time, incl. self-revision evidence (35 min)
+|-- Phase 3: Quick revision share (15 min)
+
+DAY 2: DRAFT HAND-OFF AND CLOSING TRANSFER CHECK (75 MIN)
+|-- Phase 1: Final polish / proofread pass, complete the draft to full length (20 min)
+|-- Phase 2: Hand-off note: what this Module contributed, what carries forward (30 min)
+|-- Phase 3: Closing Transfer Check (25 min)
+```
+
+**Beginner only:** Day 2 Phase 2 is "Publish/share" (a short gallery walk, read-aloud, or class posting) instead
+of a hand-off note - Beginner is not part of a Module Pair, so its Set 1 piece is genuinely finished here. See
+"THE MODULE PAIR" above.
+
+**LESSONS 5-8 (INTERMEDIATE/ADVANCED/PROFICIENT ONLY) - MODULE N+1'S SET: REVISION, EXPANSION, AND PUBLISHING**
+
+Not generated for Beginner. These four lessons are Module N+1's own ordinary 4-lesson Set (its own folder, its
+own version codes), continuing the same Scenario/genre Module N established, now teaching Module N+1's own,
+different Grammar/Essay Focus and applying it to the existing draft rather than starting a new one.
+
+**LESSON 5 (150 MIN TOTAL) - RE-ENGAGEMENT AND MODULE N+1'S GRAMMAR FOCUS A**
+
+```
+DAY 1: RE-ENGAGEMENT AND GRAMMAR FOCUS A - INPUT AND MODELING (75 MIN)
+|-- Phase 1: Re-read own Module N draft; short recap (purpose, reader, what's already written) - no fresh hook (15 min)
+|-- Phase 2: Module N+1's Focus A mini-lesson: rule + examples (30 min)
+|-- Phase 3: Controlled practice A, part 1 (30 min)
+
+DAY 2: GRAMMAR FOCUS A - DEEPER PRACTICE AND THE MENTOR LADDER, SECOND LOOK (75 MIN)
+|-- Phase 1: Editing-a-paragraph on Module N+1's Focus A, stated error count (20 min)
+|-- Phase 2: Frame warm-up (Levels 1-3, where present) / original sentences with Module N+1's Focus A (Levels 4+) (25 min)
+|-- Phase 3: Mentor Ladder second look: same ladder as Lesson 1-2, now asking what Module N+1's focus would add to each Level's model (30 min)
+```
+
+**LESSON 6 (150 MIN TOTAL) - GRAMMAR FOCUS B AND REVISION-PLANNING**
+
+```
+DAY 1: GRAMMAR FOCUS B - SENTENCE VARIETY (75 MIN)
+|-- Phase 1: Module N+1's Focus B mini-lesson: rule + examples (20 min)
+|-- Phase 2: Controlled practice B: identifying/combining sentences (30 min)
+|-- Phase 3: Confusable-pair drill + mixed A/B editing paragraph (25 min)
+
+DAY 2: REVISION-PLANNING AGAINST THE EXISTING DRAFT (75 MIN)
+|-- Phase 1: Frame practice round 2 (Levels 1-3) / required-feature warm-up (Levels 4+) (25 min)
+|-- Phase 2: Annotate own Module N draft for where Module N+1's focus will be added or expanded - replaces prewriting for a new piece (30 min)
+|-- Phase 3: Revision-plan share and board synthesis (20 min)
+```
+
+**LESSON 7 (150 MIN TOTAL) - REVISION AND EXPANSION DRAFTING**
+
+```
+DAY 1: REVISION AND EXPANSION DRAFTING, PART 1 (75 MIN)
+|-- Phase 1: Mentor Ladder and revision-plan re-look (10 min)
+|-- Phase 2: Apply Module N+1's focus into the existing draft: opening and body (50 min)
+|-- Phase 3: Mid-revision share-out (15 min)
+
+DAY 2: REVISION AND EXPANSION DRAFTING, PART 2 AND MERGED SELF-EDIT (75 MIN)
+|-- Phase 1: Complete the revision/expansion pass (30 min)
+|-- Phase 2: Merged self-edit checklist pass, covering both Modules' focuses (25 min)
+|-- Phase 3: Share-out / final line check (20 min)
+```
+
+**LESSON 8 (150 MIN TOTAL) - PEER EDITING, REVISION, PUBLISHING, AND CLOSING TRANSFER CHECK**
 
 ```
 DAY 1: PEER EDITING AND REVISION (75 MIN)
-|-- Phase 1: Peer Editing exchange (25 min)
-|-- Phase 2: Revision time, incl. self-revision evidence (35 min)
+|-- Phase 1: Peer Editing exchange, covering both Modules' focuses (25 min)
+|-- Phase 2: Hard self-revision time (Module N+1's tools), incl. self-revision evidence (35 min)
 |-- Phase 3: Quick revision share (15 min)
 
 DAY 2: PUBLISHING AND CLOSING TRANSFER CHECK (75 MIN)
 |-- Phase 1: Final polish / proofread pass (20 min)
 |-- Phase 2: Publish/share (30 min)
-|-- Phase 3: Closing Transfer Check (25 min)
+|-- Phase 3: Closing Transfer Check: both Modules' combined skill, plus a short separate task exercising Module N+1's own CSV verb (25 min)
 ```
 
 ### Essay-regime dual-track guidance (new in v3)
@@ -933,28 +1106,141 @@ _Phase 1: Complete the draft (30 min)_
 - Board-dependent moment (0.7): return to and add to Day 5's "strong sentence" board with newly completed
   lines.
 
-### Lesson 4, Day 1: Peer Editing and Revision
+### Lesson 4, Day 1: Self-Revision and Draft Completion
 
-_Phase 1: Peer Editing exchange (25 min)_
+_Phase 1: Self-edit checklist pass, Module N's own focus/feature (25 min)_
 
-- Partner exchange using the lesson's Peer Editing Form (0.6), differentiated by task Level as described there.
-  _Phase 2: Revision time, including self-revision evidence (35 min)_
-- Students revise based on their own checklist pass and their partner's feedback. Levels 7-8 must produce one of
-  the concrete self-revision artifacts from 0.4a; this is not optional at those Levels. Levels 4-6, especially Level
-  5, are encouraged to do the same if time allows.
+- Students run their own draft against the checklist appropriate to their regime (0.6), naming Module N's
+  Grammar Focus A/B and required feature specifically.
+  _Phase 2: Self-revision time, including self-revision evidence (35 min)_
+- Students revise based on their own checklist pass. **No Peer Editing exchange here** - for
+  Intermediate/Advanced/Proficient, that happens once at Pair position 8, after Module N+1's tools are also
+  available; Beginner has no Pair position 8, so see the note below. Levels 7-8 must produce one of the concrete
+  self-revision artifacts from 0.4a; this is not optional at those Levels. Levels 4-6, especially Level 5, are
+  encouraged to do the same if time allows.
   _Phase 3: Quick revision share (15 min)_
 - Board-dependent moment (0.7): a before/after board built from two or three volunteered revision examples.
 
-### Lesson 4, Day 2: Publishing and Closing Transfer Check
+### Lesson 4, Day 2: Draft Hand-off (or Publishing) and Closing Transfer Check
+
+_Phase 1: Final polish / proofread pass, complete the draft to full length (20 min)_
+
+- A last quiet read-through against the self-edit checklist, focused on anything Day 7's revision changed.
+  _Phase 2 (Intermediate/Advanced/Proficient): Hand-off note (30 min)_
+- Students write a short note (a sentence or two, differentiated by regime) naming what this Module's focus added
+  to the piece and that it now moves to Module N+1's Set for revision, expansion, peer editing, and publishing -
+  not a finished piece yet. **Do not publish or share the piece here.**
+  _Phase 2 (Beginner only): Publish/share (30 min)_
+- A short gallery walk, read-aloud, or class posting, appropriate to time and class size - Beginner's Set 1 piece
+  is genuinely finished at this position; see "THE MODULE PAIR" above.
+  _Phase 3: Closing Transfer Check (25 min)_
+- Closing Transfer Check (0.8): every student applies the spotlighted skill (Module N's, at this position) once
+  more to something new, out loud or on a card; a few are cold-called to share.
+- Board-dependent moment (0.7): capture Closing Transfer Check instances live on the board as students share.
+
+### Lesson 5, Day 1: Re-engagement and Grammar Focus A, Input and Modeling
+
+_Phase 1: Re-engagement (15 min)_
+
+- Students re-read their own Module N draft. Give a short recap of the Scenario's purpose and named reader and
+  what the piece already accomplishes - not a fresh hook; this is a continuation, not a new lesson topic.
+- Skill Spotlight (0.8): name Module N+1's transferable skill in plain language, alongside a one-line reminder of
+  Module N's skill the piece already demonstrates.
+  _Phase 2: Module N+1's Focus A mini-lesson: rule and examples (30 min)_
+- Present Module N+1's own Focus A (0.4, selected per "THE MODULE PAIR" above - genuinely different from Module
+  N's Focus A) with a rule statement and 2-3 examples.
+  _Phase 3: Controlled practice A, part 1 (30 min)_
+- 1-2 controlled-practice activities from the bank in 0.4, matched to Module N+1's Focus A.
+- Board-dependent moment (0.7): co-construct one fresh example live.
+
+### Lesson 5, Day 2: Grammar Focus A, Deeper Practice and the Mentor Ladder Second Look
+
+_Phase 1: Editing a paragraph on Module N+1's Focus A (20 min)_
+
+- A short paragraph with a stated, verified number of Module N+1's Focus A errors to find and correct.
+  _Phase 2: Frame warm-up / original sentences with Module N+1's Focus A (25 min)_
+- Levels 1-3 (where present): guided practice completing frames on the Scenario picture.
+- Levels 4+: write original sentences using Module N+1's Focus A correctly, one per target item.
+  _Phase 3: Leveled Mentor Ladder, second look (30 min)_
+- Return to the same Leveled Mentor Ladder built in Lesson 1-2. For each task Level, ask what Module N+1's own
+  focus would add to that Level's already-complete model - a before/after framing, not a new ladder.
+- Board-dependent moment (0.7): co-construct a live "what Module N+1 adds at each Level" board.
+
+### Lesson 6, Day 1: Grammar Focus B, Sentence Variety
+
+_Phase 1: Focus B mini-lesson: rule and examples (20 min)_
+
+- Present Module N+1's own Focus B (0.4) the same way Lesson 5 presented Focus A: a rule, then examples, tied
+  explicitly to how it pairs with Module N+1's Focus A.
+  _Phase 2: Controlled practice B (30 min)_
+- Identifying sentence types, and/or combining short sentences using Module N+1's Focus B structure.
+  _Phase 3: Confusable-pair drill and mixed editing (25 min)_
+- A forced-choice confusable pair relevant to Module N+1's focus.
+- A short paragraph mixing Module N+1's Focus A and Focus B errors, stated and verified error count, to find and
+  correct.
+- Board-dependent moment (0.7): co-construct one fresh example live using Module N+1's Focus B.
+
+### Lesson 6, Day 2: Revision-Planning Against the Existing Draft
+
+_Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
+
+- Levels 1-3 (where present): a second guided frame-practice round.
+- Levels 4+: a short guided warm-up targeting Module N+1's required feature, applied to a sentence pulled from
+  their own existing draft rather than a fresh example.
+  _Phase 2: Annotate the existing draft for revision (30 min)_
+- Students mark up their own Module N draft: where will Module N+1's focus be added, expanded, or strengthened?
+  This replaces prewriting for a new piece - there is no new piece.
+  _Phase 3: Revision-plan share and board synthesis (20 min)_
+- A few students share one planned revision.
+- Board-dependent moment (0.7): synthesize revision-plan ideas into a shared board.
+
+### Lesson 7, Day 1: Revision and Expansion Drafting, Part 1
+
+_Phase 1: Mentor Ladder and revision-plan re-look (10 min)_
+
+- Each student re-reads their own revision plan and the Mentor Ladder's second-look notes.
+  _Phase 2: Apply Module N+1's focus into the existing draft, opening and body (50 min)_
+- Students revise and expand their existing draft's opening and body using Module N+1's focus, rather than
+  drafting from a blank page.
+  _Phase 3: Mid-revision share-out (15 min)_
+- A few students share one revised or newly added sentence.
+- Board-dependent moment (0.7): a running "strong revision" board.
+
+### Lesson 7, Day 2: Revision and Expansion Drafting, Part 2 and Merged Self-Edit
+
+_Phase 1: Complete the revision/expansion pass (30 min)_
+
+- Students finish applying Module N+1's focus across the whole piece.
+  _Phase 2: Merged self-edit checklist pass (25 min)_
+- Students run their draft against a checklist covering **both** Modules' focuses and required features (0.6).
+  _Phase 3: Share-out / final line check (20 min)_
+- A quick read-aloud or partner check.
+- Board-dependent moment (0.7): add newly revised lines to the running "strong revision" board.
+
+### Lesson 8, Day 1: Peer Editing and Revision
+
+_Phase 1: Peer Editing exchange (25 min)_
+
+- Partner exchange using the Peer Editing Form (0.6), now covering both Modules' focuses and required features.
+  _Phase 2: Hard self-revision time, including self-revision evidence (35 min)_
+- Students revise based on their own checklist pass and their partner's feedback, using Module N+1's tools.
+  Levels 7-8 must produce a concrete self-revision artifact (0.4a); this is not optional at those Levels.
+  _Phase 3: Quick revision share (15 min)_
+- Board-dependent moment (0.7): a before/after board built from two or three volunteered revision examples.
+
+### Lesson 8, Day 2: Publishing and Closing Transfer Check
 
 _Phase 1: Final polish / proofread pass (20 min)_
 
-- A last quiet read-through against the self-edit checklist, focused on anything the Day 7 revision changed.
+- A last quiet read-through against the merged self-edit checklist.
   _Phase 2: Publish/share (30 min)_
-- A short gallery walk, read-aloud, or class posting, appropriate to time and class size.
+- A short gallery walk, read-aloud, or class posting - the piece is genuinely finished now.
   _Phase 3: Closing Transfer Check (25 min)_
-- Closing Transfer Check (0.8): every student applies the spotlighted skill once more to something new, out loud
-  or on a card; a few are cold-called to share.
+- Closing Transfer Check (0.8): every student applies both Modules' combined skill to something new, out loud or
+  on a card. Additionally, each student completes one short, separate task exercising Module N+1's own CSV verb
+  (e.g. narrating, if paired with a Describing Module) on a small new prompt, not the shared essay - this is what
+  gives Module N+1's own learning objective genuine coverage (see "THE MODULE PAIR" above). A few students are
+  cold-called to share both.
 - Board-dependent moment (0.7): capture Closing Transfer Check instances live on the board as students share.
 
 ### Style and Formatting Constraints

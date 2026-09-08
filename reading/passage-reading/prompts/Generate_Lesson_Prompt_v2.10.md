@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v2.9, Band-Calibrated)
+# Passage Reading Lesson Generation Prompt (v2.10, Band-Calibrated)
 
 **Lesson type:** this prompt generates a **Passage Reading Lesson** - a fixed 2-day cycle built around one shared
 anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is renamed from "Reading
@@ -14,7 +14,7 @@ paragraph lettering with contextual footnotes). v2.5 replaces the fixed two-leve
 differentiation model with a band-scoped set of same-modality Reading tasks, sized and pinned per band, and
 drops "Level" as a separate request input.
 
-**Current version: v2.8.** For the full dated version history and the reasoning behind each change, see
+**Current version: v2.10.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 **Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
@@ -285,6 +285,11 @@ level:
     prompts, rotated through rather than one static prompt for the full window? If Fishbowl is the chosen
     protocol, does every outer-circle student have an explicit, active task (a word/method list, a tally, or a
     one-line reaction) rather than passive listening?
+19. **(New in v2.10)** Check Section 0.8, Part A's Closing Transfer Check Variety: is the concrete object,
+    person, or scenario used in this lesson's Closing Transfer Check different from the one used in every other
+    lesson already generated in this Set? A repeated or near-identical object/scenario (e.g. "something in this
+    room" reused verbatim, or with only the compared item swapped, across multiple lessons) fails this check
+    even when the skill and sentence pattern are correctly matched to the Module.
 
 If a text or task set fails any check, rewrite it before proceeding. Do not proceed to build comprehension
 questions on top of a miscalibrated text, and do not finalize a matrix where the lowest task Level is fact-retrieval
@@ -462,7 +467,7 @@ doubt, since the tiered-matrix synthesis is the strongest natural fit across eve
 
 Self-check: see Section 0.3, item 12.
 
-### 0.8 Skill Spotlight, closing transfer check, and differentiated participation (new in v2.2, Part A corrected in v2.3, Part B reworded in v2.5)
+### 0.8 Skill Spotlight, closing transfer check, and differentiated participation (new in v2.2, Part A corrected in v2.3, Part B reworded in v2.5, Part A's closing example reworded and Closing Transfer Check Variety added in v2.10)
 
 This section is new in v2.2. It was added after feedback that generated lessons, while full of vocabulary practice,
 reading practice, and speaking practice, gave students no clear moment of feeling they had learned something,
@@ -485,14 +490,29 @@ named aloud to students, so a lesson can easily read as "we read about a topic a
   directly to the Module's verb from Section 0.1 so it stays honest about what the lesson actually trains.
 - **Closing Transfer Check (Day 2, Phase 3, end of Group Synthesis):** close the lesson by having every student
   apply the exact skill named in the Skill Spotlight to something new, not the anchor text, and produce it out
-  loud rather than rate themselves against it. In pairs, every student generates one instance of the skill (for
-  Describing: "in one sentence, describe something in this room by comparing it to something else"; for
-  Explaining: "in one sentence, explain why something in this room happens the way it does"; for Evaluating: "in
-  one sentence, give your verdict on something and one reason"; for Arguing: "in one sentence, state a position
-  on something and one reason"; adapt similarly for the remaining Modules using their Section 0.1 verb). The
-  teacher then cold-calls two or three pairs to share aloud. This stays oral-only (consistent with the Oral Focus
-  constraint) and inside the existing 5-minute synthesis window, and nothing is collected or graded, so it does
-  not become a new task or artifact.
+  loud rather than rate themselves against it. In pairs, every student generates one instance of the skill, built
+  around a concrete object, person, or scenario chosen fresh for this specific lesson - never a copy of the
+  illustrative pattern below, and never the same object/scenario (or a trivial variant of it, e.g. only swapping
+  the noun in "something in this room") used in an earlier lesson of the same Set. Check the other lessons
+  already drafted in this Set before finalizing (see Closing Transfer Check Variety, under "Lesson Variety &
+  Structural Rotation Rule" below).
+
+  **(Reworded in v2.10) The sentence patterns below are illustrative ONLY** - they show the grammatical shape
+  the instance must take, not a script to reuse verbatim. `[pick a fresh object/scenario]` marks where a real,
+  concrete, lesson-specific choice goes:
+  - Describing: "in one sentence, describe `[pick a fresh object/scenario]` by comparing it to something else"
+  - Explaining: "in one sentence, explain why `[pick a fresh object/scenario]` happens the way it does"
+  - Evaluating: "in one sentence, give your verdict on `[pick a fresh object/scenario]` and one reason"
+  - Arguing: "in one sentence, state a position on `[pick a fresh object/scenario]` and one reason"
+  - (adapt similarly for the remaining Modules using their Section 0.1 verb)
+
+  Choose the bracketed object/scenario at generation time, appropriate to the classroom and band (an object
+  visible in the room, a piece of clothing someone is wearing, a sound from outside, a classroom routine, and so
+  on) - do not default to "something in this room" lesson after lesson. That specific phrasing was followed
+  near-verbatim across all four already-generated Advanced Module 1 Set 1 lessons and recurred again one band
+  down (see `Changelog.md`), which is the failure this rewording fixes. The teacher then cold-calls two or three
+  pairs to share aloud. This stays oral-only (consistent with the Oral Focus constraint) and inside the existing
+  5-minute synthesis window, and nothing is collected or graded, so it does not become a new task or artifact.
 
 Corrected in v2.3: do not close with a self-report (a thumbs-up/sideways/down, a show of hands, or any "can you
 do this now?" question answered by the student rating their own confidence). A visible, whole-class confidence
@@ -532,7 +552,7 @@ rather than any spoken turn. Pair this student with a peer buddy for the paired-
 support to be added on top of the lowest task Level, not a replacement for it: most classrooms will not need it
 every cycle, but the lesson should say explicitly where it plugs in for the cycles that do.
 
-Self-check: see Section 0.3, items 13 and 14.
+Self-check: see Section 0.3, items 13, 14, and 19.
 
 ### 0.9 Paragraph lettering and contextual footnotes (new in v2.4)
 
@@ -818,8 +838,9 @@ lowest task Level's own floor.
   than the same on-demand live turn as the higher task Levels. Where a Foundation Support student is present,
   give them a non-verbal or minimally-verbal role in the same protocol.
 - Closing Transfer Check (see Section 0.8, Part A): end Group Synthesis by having every student produce, in
-  pairs and out loud, one new instance of the Day 1 Skill Spotlight's skill applied to something other than the
-  anchor text, then cold-call two or three pairs to share. Do not close with a self-report (thumbs-up/sideways/
+  pairs and out loud, one new instance of the Day 1 Skill Spotlight's skill applied to a fresh, lesson-specific
+  object or scenario not reused from an earlier lesson in this Set (Closing Transfer Check Variety, Section 0.8/
+  below), then cold-call two or three pairs to share. Do not close with a self-report (thumbs-up/sideways/
   down or a show of hands) - see Section 0.8 for why. Keep this inside the existing synthesis window; nothing is
   collected or graded.
 
@@ -849,6 +870,12 @@ lowest task Level's own floor.
   or Phase 3 synthesis) carries the required board-dependent moment across cycles rather than anchoring it to
   the same phase every time, so the board's role in the lesson stays visibly load-bearing rather than becoming
   its own template.
+- **Closing Transfer Check Variety (new in v2.10):** the concrete object, person, or scenario used in the
+  Closing Transfer Check (Section 0.8, Part A) must differ across every lesson in the same Set. Check it against
+  the other lessons already generated in this Set before finalizing - all 4 lessons of a Set are typically
+  drafted/reviewed together (see `Index.md`'s "Generate lessons two at a time" workflow step), so this is
+  checkable directly without needing the Rotation Log. Do not reuse the same illustrative object/scenario, or a
+  trivial variant of it, from an earlier lesson in the Set.
 
 **Band Calibration is Non-Negotiable:** Structural richness (timelines, debate protocols, tiered matrices) must
 never be used to compensate for or disguise a miscalibrated anchor text. A well-developed, correctly-sized Level

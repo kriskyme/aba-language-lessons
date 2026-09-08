@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v1.10)
+# Passage Reading Student Print Formatting Prompt (v1.12)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated). Takes one completed 2-day
 lesson cycle and produces a single, print-ready, black-and-white student handout: one self-contained HTML
@@ -6,7 +6,7 @@ document covering both days, with every piece of teacher-facing pedagogical lang
 instructions a student (or a parent glancing at the page) can act on without decoding jargon like "close reading
 with annotation," "Fishbowl," or "Task Level."
 
-**Current version: v1.9.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.12.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson's Day 1 and Day 2 already exist. Do not use it to generate lesson content, and
@@ -183,7 +183,10 @@ the small groups' prompts rather than dropping it, so the work it was meant to p
 
 List prompts left-aligned, in plain regular weight (not centered, not bold, not italicized, no added quotation
 marks). Provide star-coded sentence-starter phrases below the prompts, keyed to the source lesson's
-differentiated stems, using the same star system as 2.6.
+differentiated stems, using the same star system as 2.6. List only the stems themselves, one per star level - do
+not add a coaching note under any stem (e.g. "practice it quietly with a partner first," a tally/tracking task to
+do while waiting to speak, advice on when to use the line). The stem alone is sufficient; a delivery script for how
+or when to say it is teacher-led classroom facilitation, not something the page should narrate.
 
 ### 2.10 Annotation key: a standing default, not tied to one reading strategy
 
@@ -227,14 +230,18 @@ reserved for content that is genuinely a spotlight moment: the idiom/slang Phras
 worked-model box in 2.7. Do not put a full border around ordinary content like a vocabulary list or a plain
 instruction paragraph - those render as plain text or a simple unbordered list.
 
-**Idioms to Know: table when there's a list, spotlight box when there's one.** A single idiom (the "Phrase
-Spotlight" case) keeps the `.spotlight-box` treatment above. When the lesson glosses 2 or more idioms with no
-single spotlight idiom, render them as a table using the shared `.idiom-list`/`.irow` classes (phrase, then
-gloss, one row per idiom) - the same two-column treatment "Words to Know" already gets from `.vocab-list`/
-`.vrow` - instead of stacked plain `.idiom-item` paragraphs. Number each row's phrase ("1. in the middle of
-nowhere," "2. keep my feet on the ground," ...), restarting at 1, matching the plain "N. " prefix "Words to
-Know" already uses inside its own `.word` spans. Both idiom classes and the vocabulary classes are defined in
-`shared/Student_Packet_Style_Guide.md`.
+**Idioms to Know always renders as a "Phrase Spotlight" box, regardless of count.** Every idiom/slang gloss - one
+or several - keeps the `.spotlight-box` treatment above, with each entry as its own unnumbered `.idiom-item`
+paragraph (`<span class="idiom-phrase">phrase</span>: gloss.`). Do not switch to a table or number the entries
+even when the lesson glosses 2 or more; unlike "Words to Know," this section is never meant to visually match
+`.vocab-list`/`.vrow`.
+
+**Tag transparent chunks as "Slang."** Section 0.4 of the Lesson Generation Prompt already classifies each
+idiom/slang candidate as a transparent (functional) chunk or an opaque (figurative) idiom, and that
+classification is recorded in the lesson doc's "Idioms" item. Carry it into the packet: append
+`<span class="idiom-tag">Slang</span>` right after `.idiom-phrase` for a transparent chunk; add nothing for an
+opaque idiom, which stays the unlabeled default (the section is already titled "Phrase Spotlight"). Both idiom
+classes and `.idiom-tag` are defined in `shared/Student_Packet_Style_Guide.md`.
 
 **One documented exception:** a word bank (the small inline list of word-choice options accompanying a
 fill-in-the-blank or star-rated task) gets a light dashed rule above and below it, distinguishing it from

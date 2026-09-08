@@ -1,16 +1,17 @@
-# Academic Writing Homework Generation Prompt (v2)
+# Academic Writing Homework Generation Prompt (v3)
 
-Companion to `Generate_Lesson_Prompt_v4.md`. Generates one homework assignment from a single completed (or
-partially completed) Academic Writing lesson - one of a Set's 4 lessons. Use this prompt only after at least Day
-1 of a lesson already exists. Do not use this prompt to generate lesson content, and do not use the Lesson prompt
-to generate homework: the input is always the lesson content generated so far, supplied in full, not a topic or
-Band on its own. If no lesson content is provided, stop and ask for it before generating anything.
+Companion to `Generate_Lesson_Prompt_v5.md`. Generates one homework assignment from a single completed (or
+partially completed) Academic Writing lesson - one lesson within a Beginner Set (4 lessons) or an
+Intermediate/Advanced/Proficient Module Pair (8 lessons - see `Generate_Lesson_Prompt_v5.md`'s "THE MODULE PAIR").
+Use this prompt only after at least Day 1 of a lesson already exists. Do not use this prompt to generate lesson
+content, and do not use the Lesson prompt to generate homework: the input is always the lesson content generated
+so far, supplied in full, not a topic or Band on its own. If no lesson content is provided, stop and ask for it
+before generating anything.
 
-**Current version: v2.** For version history, see `Changelog.md`. (v2 rewords the four timing checkpoints below
-from "Day 2/4/6/8" to "after Lesson 1/2/3/4," matching `Generate_Lesson_Prompt_v4.md`'s restructure from one
-8-day document into 4 separate 2-day lessons per Set - see `shared/Program_Conventions.md` §C. The checkpoints
-themselves, and everything else in this prompt, are unchanged in substance; only the day-numbering they're
-expressed in changed.)
+**Current version: v3.** For version history, see `Changelog.md`. (v3 extends the timing checkpoints below from
+four to eight for Intermediate/Advanced/Proficient, matching `Generate_Lesson_Prompt_v5.md`'s Module Pair - see
+`shared/Program_Conventions.md` §C. Beginner keeps the original four checkpoints, "after Lesson 1/2/3/4," from v2
+unchanged. See 0.2 below for the full eight-checkpoint content-availability table.)
 
 ## SECTION 0: SCOPE AND INPUTS
 
@@ -18,21 +19,22 @@ expressed in changed.)
 
 - The source lesson's content generated so far, in full: the Scenario, the Grammar Focus A/B (and Essay Focus
   A/B, where the Band reaches Essay Composition) content already taught, the Leveled Mentor Ladder, the Skill
-  Spotlight (Lesson 1, Day 1 Phase 1 of the Lesson prompt), Module, and Band. Pull all of this directly from the
+  Spotlight (Lesson 1, Day 1 Phase 1 of the Lesson prompt - or Lesson 5, Day 1 Phase 1 for
+  Intermediate/Advanced/Proficient positions 5-8), Module(s), and Band. Pull all of this directly from the
   completed lesson content; do not invent a new grammar point, Scenario detail, or skill focus.
-- Timing: which lesson (of the Set's 4) has been reached when homework is assigned (see 0.2 - a Writing Set's
-  4-lesson arc needs a finer-grained gate than a single Reading lesson's Day-1-vs-full-lesson choice). Default to
-  **after Lesson 2**, due before Lesson 3's drafting begins. If the request specifies a different point, follow
-  it and state the assumption in the packet header.
-- Task-Level information: which task Level (per `Generate_Lesson_Prompt_v4.md` Section 0.1's Task Levels by
+- Timing: which lesson has been reached when homework is assigned - Beginner: which of the Set's 4 lessons (see
+  0.2); Intermediate/Advanced/Proficient: which of the Module Pair's 8 lessons (see 0.2's extended table). Default
+  to **after Lesson 2** (Beginner) or **after Lesson 6** (Intermediate/Advanced/Proficient - the Pair-position
+  equivalent midpoint, per 0.2), due before the next drafting/revision lesson begins. If the request specifies a
+  different point, follow it and state the assumption in the packet header.
+- Task-Level information: which task Level (per `Generate_Lesson_Prompt_v5.md` Section 0.1's Task Levels by
   Band table) each student or group is working at, or below-the-lowest-task-Level Foundation Support (Section
   0.5 of the Lesson prompt). Build each task Level's homework from what that task Level is actually doing in
   class, not a generic assumption.
 
 ### 0.2 Timing determines what content is available to draw from
 
-A Writing Set's 4-lesson arc passes through more distinct content states than a single Reading lesson, so timing
-is gated at four checkpoints, one per lesson, rather than a single before/after split:
+**Beginner (4-lesson Set), unchanged from v2:**
 
 - **After Lesson 1** (Grammar Focus A taught, Leveled Mentor Ladder seen, frame-regime rounds done): only Focus A
   content and the Mentor Ladder are available. Focus B, the confusable pair, and any prewriting have not
@@ -48,14 +50,34 @@ is gated at four checkpoints, one per lesson, rather than a single before/after 
 - **After Lesson 4** (full Set complete, published, Closing Transfer Check done): Part 2 may extend the student's
   own in-class Closing Transfer Check response, the same way Reading's alternate timing works.
 
-If timing is not specified, default to after Lesson 2 and note the assumption in the header either way.
+**Intermediate/Advanced/Proficient (8-lesson Module Pair), new in v3:** the same content-availability logic
+extends across both Modules. Positions 1-4 read exactly like Beginner's checkpoints above (substitute "Pair
+position" for "Lesson"), with one difference at position 4: the draft is complete and self-revised but **not
+published** - do not draw on a "finished, published piece" framing at this checkpoint, only a completed draft
+handed off to Module N+1.
+
+- **After Pair position 4** (Module N's Set complete: draft finished, self-revised, handed off - not published):
+  Part 2 may extend the student's own in-class hand-off note or draft, but must not imply the piece is finished.
+- **After Pair position 5** (re-engagement done, Module N+1's Focus A taught): only Module N+1's Focus A content
+  is newly available, on top of everything from positions 1-4.
+- **After Pair position 6 (default for this Band):** Module N+1's Focus A and Focus B (and Essay Focus A/B,
+  where applicable) have both been taught, and the revision-plan is done. Revision/expansion drafting has not
+  started. Same consolidate-before-deeper-work rationale as Beginner's own default checkpoint.
+- **After Pair position 7** (revision/expansion draft complete, merged self-edit done): the student's own
+  in-progress revised draft exists, now reflecting both Modules' focuses.
+- **After Pair position 8** (Module Pair complete, published, Closing Transfer Check and Module N+1's own
+  CSV-verb task both done): Part 2 may extend either the Closing Transfer Check response or the separate
+  CSV-verb task, the student's choice.
+
+If timing is not specified, default to after Lesson 2 (Beginner) or after Pair position 6
+(Intermediate/Advanced/Proficient) and note the assumption in the header either way.
 
 ## SECTION 1: STRUCTURE
 
 ### 1.0 Target length: 15-20 minutes, one sitting
 
 Homework is light, individual reinforcement, not a scaled-down version of the cumulative assessment (see
-`Generate_Assessment_Prompt_v2.md`). Size the whole assignment, across both parts and all task Levels, to run in
+`Generate_Assessment_Prompt_v3.md`). Size the whole assignment, across both parts and all task Levels, to run in
 roughly 15-20 minutes for a student working at their own task Level.
 
 ### 1.1 Two parts, one section per task Level, design keyed to that Level's own regime
@@ -66,7 +88,7 @@ actually present in the lesson's Band, not a fixed set of named tiers.
 
 **Unlike Reading, where a homework section's design is chosen purely by the task Level's position (lowest/
 highest/in-between) in the Band's own range, Writing's per-Level design is keyed to that Level's own composition
-regime** (`Generate_Lesson_Prompt_v4.md` Section 0.1: Guided Frame Composition, Levels 1-3; Paragraph
+regime** (`Generate_Lesson_Prompt_v5.md` Section 0.1: Guided Frame Composition, Levels 1-3; Paragraph
 Composition, Levels 4-5; Essay Composition, Levels 6-8). Position alone is not a reliable guide here, because the
 frame/paragraph and paragraph/essay regime boundaries do not move smoothly with position the way Reading's single
 task range does - a Band's lowest task Level can be frame-regime (Intermediate's Level 2) while its highest is
@@ -122,7 +144,7 @@ Level, feel they only ever practiced isolated words or sentences?
 
 ### 1.3 Grading is light-touch, not the assessment's rubric
 
-Homework is checked for genuine attempt and correct use, not scored against `Generate_Assessment_Prompt_v2.md`'s
+Homework is checked for genuine attempt and correct use, not scored against `Generate_Assessment_Prompt_v3.md`'s
 rubric. Provide a short completion checklist per task Level instead, 2-3 plain criteria such as "used the target
 grammar item correctly," "sentence/paragraph is about a new object, not the one from class," "attempted
 independently." Homework across the cycle stays low-stakes; the end-of-lesson assessment carries the graded

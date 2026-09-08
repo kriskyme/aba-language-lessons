@@ -7,14 +7,16 @@ Set in that Band is generated, mirroring how `Set_<N>/` folders are created lazi
 `shared/Program_Conventions.md` §D.
 
 **Current files:**
-- [`Rotation_Log_Intermediate.md`](Rotation_Log_Intermediate.md) - Set 1 ("my phone case", Lessons 1-4)
-- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Set 1 ("Two apartments... for Sam", Lessons 1-4)
+- [`Rotation_Log_Intermediate.md`](Rotation_Log_Intermediate.md) - Module 1, Set 1 ("my phone case", Lessons 1-4; Part 1 of Module Pair 1-2, Module 2 pending)
+- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Module 1, Set 1 ("Two apartments... for Sam", Lessons 1-4; Part 1 of Module Pair 1-2, Module 2 pending)
 
-Maintained by `Generate_Module_Lesson_Plan_Prompt_v2.md` (Section 0) and `Generate_Lesson_Prompt_v4.md` (Section
-0.9): read every existing Band file in full before planning a new Set, appended to (never overwritten) once each
-lesson is generated and approved. As of 2026-09-08, each Band file is nested `## Module N` → `### Set S` → one
-row per lesson, matching Reading's and Listening/Speaking's per-Band files (see "History" below for why it
-wasn't always this way).
+Maintained by `Generate_Module_Lesson_Plan_Prompt_v3.md` (Section 0) and `Generate_Lesson_Prompt_v5.md` (Section
+0.9): read every existing Band file in full before planning a new Set or Module Pair, appended to (never
+overwritten) once each lesson is generated and approved. As of 2026-09-08, each Band file is nested `## Module N`
+→ `### Set S` → one row per lesson, matching Reading's and Listening/Speaking's per-Band files (see "History"
+below for why it wasn't always this way). For Intermediate/Advanced/Proficient, a Module Pair's 8 lessons split
+across the pair's two Modules' own `## Module N` / `## Module N+1` sections in the same Band file, cross-referenced
+as Part 1/Part 2 of the same Pair - see "Module Pair non-repetition" below.
 
 ## History: why this log used to be flat, and what changed 2026-09-08
 
@@ -39,12 +41,19 @@ full account.
 
 ## What to check before generating a lesson
 
-Compare the new Set's intended grammar focus, Scenario topic, and real-world writing form against at least the
-last logged Set **across every Band** (by date, not just the target Band's own file), and scan further back for
-a grammar focus that has recurred more than once in the last 3-4 Sets overall (see
-`Generate_Lesson_Prompt_v4.md` Section 0.9's note on grammar clustering across nearby Modules, not just literal
-topic repeats). This check runs once per Set, at Module Lesson-Plan time - Lessons 2-4 of an already-planned Set
-never re-run it (they continue Lesson 1's own Scenario/Focus).
+Compare the new Set's/Pair's intended grammar focus, Scenario topic, and real-world writing form against at least
+the last logged Set/Pair **across every Band** (by date, not just the target Band's own file), and scan further
+back for a grammar focus that has recurred more than once in the last 3-4 Sets/Pairs overall (see
+`Generate_Lesson_Prompt_v5.md` Section 0.9's note on grammar clustering across nearby Modules, not just literal
+topic repeats). This check runs once per Set/Pair, at Module Lesson-Plan time - later positions within an
+already-planned Set/Pair never re-run it (they continue the arc's own Scenario/Focus).
+
+## Module Pair non-repetition (Intermediate/Advanced/Proficient only, new 2026-09-08)
+
+Within one Module Pair, Module N+1's own Grammar/Essay Focus A/B must not repeat Module N's own Focus A/B chosen
+earlier in the same plan - a same-plan check, stronger than the cross-Set/cross-Band adjacency check above, since
+both choices are decided together in one `Generate_Module_Lesson_Plan_Prompt_v3.md` pass. See
+`Generate_Lesson_Prompt_v5.md` Section 0.9 and `shared/Program_Conventions.md` §C's Module Pair addendum.
 
 ## Lesson version numbers (introduced 2026-09-07, corrected 2026-09-08)
 

@@ -249,9 +249,17 @@ board only fills in once every task Level in every group has reported.
 
 ### Phase 3: Structured Oral Output Debate & Synthesis (30 min)
 
-**Protocol: Fishbowl.** Arrange 5-6 chairs in an inner circle; remaining students form an outer circle as observers.
-Prompt for the inner circle: **"Is the Sagrada Família more impressive as a feat of engineering or as a work of
-art?"** Students rotate into and out of the inner circle every 5-6 minutes so multiple task Levels get a turn inside.
+**Protocol: Fishbowl.** Arrange 5-6 chairs in an inner circle; remaining students form an outer circle. Students
+rotate into and out of the inner circle every 5-6 minutes so multiple task Levels get a turn inside. Rotate through
+three prompts as the circle turns over, roughly one per rotation:
+1. "Is the Sagrada Família more impressive as a feat of engineering or as a work of art?"
+2. "Which facade, the Nativity Facade or the Passion Facade, does a better job of matching its mood to its subject?"
+3. "Should the Sagrada Família ever be declared finished, or does it work better as a project that never quite ends?"
+
+**Outer-circle task (Section 0.10):** every outer-circle student keeps a running tally sheet marking which side
+(or, for prompts 2-3, which position) each inner-circle speaker argues for, plus one target vocabulary word they
+hear used well. This is the default active task for the whole outer circle, separate from the Level 4 and
+Foundation Support roles below, which layer additional support on top of it for those specific students.
 
 **Sentence stems by task Level (register capped at each Level's own ceiling):**
 - Level 4: "I think it's more ___ because the text says ___."
@@ -275,10 +283,11 @@ during the K-W-L-style board check from Day 1, they can point to the paragraph l
 than reading it aloud. Pair this student with a peer buddy throughout Phase 2's matrix work as well.
 
 **Closing Transfer Check (5 min, ends Phase 3):** In pairs, every student produces one new instance of the Day
-1 Skill Spotlight skill, applied to something in the room, not the basilica. Sentence frame: "This [object in the
-room] has [feature], which is different from [something familiar] because [reason]," or for Levels 5-7: "Notice
-how I just used the word ___ to show I think this is [good/interesting], without saying it directly." Say it out
-loud to a partner. The teacher cold-calls 2-3 pairs to share aloud. Nothing is collected or graded.
+1 Skill Spotlight skill, applied to a piece of clothing someone in the room is wearing, not the basilica. Sentence
+frame: "This [clothing item] has [feature], which is different from [something familiar] because [reason]," or for
+Levels 5-7: "Notice how I just used the word ___ to show I think this is [good/interesting], without saying it
+directly." Say it out loud to a partner. The teacher cold-calls 2-3 pairs to share aloud. Nothing is collected or
+graded.
 
 ---
 

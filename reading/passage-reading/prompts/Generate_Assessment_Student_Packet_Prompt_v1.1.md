@@ -10,7 +10,7 @@ Prompt (v1.7) closely - same translation principle, same star-rating system, sam
 stylesheet - adapted for an assessment's shape (four self-contained Task-Level sections, no taught
 Unit A/B split) rather than a taught lesson's. Also mirrors Listening/Speaking's
 `Generate_Assessment_Student_Packet_Prompt_v1.md` and Writing's
-`Generate_Assessment_Student_Packet_Prompt_v2.md`, this program's two existing assessment-packet
+`Generate_Assessment_Student_Packet_Prompt_v3.md`, this program's two existing assessment-packet
 prompts.
 
 Use this prompt only after an Assessment `.md` already exists in full (every Task Level present in

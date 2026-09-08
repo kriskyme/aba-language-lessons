@@ -85,8 +85,7 @@ friend needed a quiet place to work from home, which would you tell them about, 
 answers.
 
 **Skill Spotlight (7 min):** "This week, everyone is practicing comparing two places and giving real reasons for
-the comparison, in a way that lets a reader sense how you feel about each option, not just what the facts are.
-Some of you will also practice building that comparison into a full essay."
+the comparison, in a way that lets a reader sense how you feel about each option, not just what the facts are."
 
 ### Phase 2: Focus A mini-lesson (30 min)
 

@@ -1,4 +1,4 @@
-# Program Conventions (v1.6)
+# Program Conventions (v1.7)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -110,6 +110,19 @@ publishing in Lesson 4 — one piece of writing taken from introduction to finis
 product), rather than each lesson getting its own independent anchor text the way a Reading Set's 4
 lessons do. See `writing/academic-writing/Index.md`'s "Sets" section for how this plays out in that
 lesson type's own prompt family.
+
+**Module Pair (added 2026-09-08, Academic Writing only):** for the Intermediate, Advanced, and
+Proficient bands, Academic Writing further pairs two consecutive Modules - odd with the next even
+(1-2, 3-4, 5-6, 7-8) - so that one Scenario/essay spans both Modules' Sets (8 lessons total, not 4),
+with each Module teaching its own Grammar/Essay Focus and contributing it to the same shared piece
+rather than each Module producing an independent essay. Beginner is exempt and keeps the
+single-Module model described above (its task Levels are single-word Guided Frame Composition, which
+the draft-carrying/revision-focus model doesn't fit). This does not change what a Set is, and does
+not merge or restart Set numbering across the two Modules paired together - each Module still keeps
+its own ordinary Set, its own folder nesting (§D), and its own version codes (§G) exactly as
+described in this section. See `writing/academic-writing/Index.md`'s "Module Pairs" section for the
+mechanics (the 8-lesson content-role table, the wrapping Module-Pair Lesson-Plan doc, and how the two
+Modules' Focus choices stay distinct).
 
 A Module/Band can hold more than one Set over time — a fresh rotation of lessons for a semester
 where the module is retaught, without discarding or conflating it with what was taught before.

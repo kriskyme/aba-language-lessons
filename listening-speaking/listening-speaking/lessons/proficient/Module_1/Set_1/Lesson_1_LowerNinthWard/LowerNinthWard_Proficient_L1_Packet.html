@@ -210,26 +210,27 @@
   flex-shrink: 0;
       }
 
-      .idiom-list {
-        margin: 10px 0 6px;
+      .idiom-item {
+        margin-bottom: 10px;
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 14px;
       }
-      .idiom-list .irow {
-        display: flex;
-        gap: 10px;
-        padding: 6px 0;
-        border-bottom: 1px solid var(--rule-light);
+      .idiom-item:last-child {
+        margin-bottom: 0;
       }
-      .idiom-list .irow:last-child {
-        border-bottom: none;
-      }
-      .idiom-list .irow .idiom-phrase {
-        width: 180px;
-        flex-shrink: 0;
+      .idiom-phrase {
         font-family: Georgia, serif;
         font-weight: 700;
         font-style: italic;
+      }
+      .idiom-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-left: 6px;
       }
 
       .qlist {
@@ -502,14 +503,11 @@
         </div>
       </div>
 
-      <p class="section-label">Idioms to Know</p>
-      <div class="idiom-list">
-        <div class="irow">
-          <span class="idiom-phrase">1. mixed blessing</span
-          ><span
-            >something that has both good and bad results at the same time,
-            so it's hard to call it simply good or bad</span
-          >
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">mixed blessing</span>: something that has both good and bad results at the
+          same time, so it's hard to call it simply good or bad.
         </div>
       </div>
 

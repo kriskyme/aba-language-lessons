@@ -202,28 +202,25 @@
   flex-shrink: 0;
       }
 
-      .idiom-list {
-        margin: 10px 0 6px;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 14px;
+      .idiom-item {
+        margin-bottom: 10px;
       }
-      .idiom-list .irow {
-        display: flex;
-        gap: 10px;
-        padding: 6px 0;
-        border-bottom: 1px solid var(--rule-light);
-      }
-      .idiom-list .irow:last-child {
-        border-bottom: none;
-      }
-      .idiom-list .irow .idiom-phrase {
-        width: 180px;
-        flex-shrink: 0;
+      .idiom-item:last-child {
+        margin-bottom: 0;
       }
       .idiom-phrase {
         font-family: Georgia, serif;
         font-weight: 700;
         font-style: italic;
+      }
+      .idiom-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-left: 6px;
       }
 
       .annot-key {
@@ -465,14 +462,6 @@
         width: 52px;
         letter-spacing: 1px;
       }
-      .stems .tip {
-        display: block;
-        font-style: italic;
-        font-size: 12.5px;
-        color: var(--ink-soft);
-        margin: 2px 0 9px 62px;
-      }
-
       .wrapup {
         margin: 16px 0;
         font-family: system-ui, -apple-system, sans-serif;
@@ -541,10 +530,16 @@
         <div class="vrow"><span class="word">6. vigil</span><span>a period of staying alert and watchful, especially at night</span></div>
       </div>
 
-      <p class="section-label">Idioms to Know</p>
-      <div class="idiom-list">
-        <div class="irow"><span class="idiom-phrase">kept watch</span><span>stayed alert and paid close attention, especially to keep something safe</span></div>
-        <div class="irow"><span class="idiom-phrase">in the dead of night</span><span>in the middle of the night, when everything is dark and quiet</span></div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">kept watch</span><span class="idiom-tag">Slang</span>: stayed alert and paid close attention, especially to
+          keep something safe.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">in the dead of night</span>: in the middle of the night, when everything
+          is dark and quiet.
+        </div>
       </div>
 
       <div class="section-title">Read &amp; Mark It Up</div>
@@ -909,9 +904,6 @@
         <p class="instr" style="font-weight: 700; margin-bottom: 6px">Starter phrases:</p>
         <ul class="stems">
           <li><span class="stars">★</span> "One task the keeper used to do is ___, because the text says ___."</li>
-          <li class="tip">If you have this line, practice it quietly with a partner first. While your group talks,
-          keep a tally of how many times "alone" or "machine" comes up as a reason for how the job changed, then
-          use your line when there's a good pause.</li>
           <li><span class="stars">★★</span> "The keeper's word choice, like ___, shows her feelings because ___."</li>
           <li><span class="stars">★★★</span> "The keeper states a fact when she says ___, but shifts to a more
           personal reflection when she says ___."</li>

@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.10)
+# Student Packet Style Guide (v1.11)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -264,24 +264,14 @@ p {
   font-weight: 700;
   font-style: italic;
 }
-
-.idiom-list {
-  margin: 10px 0 6px;
+.idiom-tag {
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 14px;
-}
-.idiom-list .irow {
-  display: flex;
-  gap: 10px;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--rule-light);
-}
-.idiom-list .irow:last-child {
-  border-bottom: none;
-}
-.idiom-list .irow .idiom-phrase {
-  width: 180px;
-  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-left: 6px;
 }
 
 .annot-key {
