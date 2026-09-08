@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v3.0)
+# Passage Reading Lesson Generation Prompt (v3.1)
 
 **Lesson type:** a **Passage Reading Lesson** is a fixed 2-day cycle (two 75-minute periods) built around one
 shared anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is distinct from
@@ -12,7 +12,7 @@ framing (Conventions §E) applies here with reading as the content vehicle: the 
 real-world ideas and build critical thinking, with language acquisition happening through meaningful
 communication.
 
-**Current version: v3.0.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.1.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** every request names at minimum a Module and a Band (e.g. "Advanced band, Module 6: Arguing"); a
 topic is optional. A specific Level is never part of the request - the band determines every task Level
@@ -241,7 +241,7 @@ the feature that defines it.
 
 | Band | Genre bank |
 |---|---|
-| Beginner (1-2) | Picture-supported label sets and short notices (signs, simple ads); short personal notes, texts, or postcards; simple 2-4 line dialogues; very short how-to lists (3-5 steps) |
+| Beginner (1-2) | Label sets with their images embedded in the packet (Quality Standards §D8) and short notices (signs, simple ads); short personal notes, texts, or postcards; simple 2-4 line dialogues; very short how-to lists (3-5 steps) |
 | Intermediate (3-4) | Short narrative or personal-story articles; simple news briefs; how-to guides; short Q&A interview transcripts; email/message exchanges; short field-journal or diary entries; text-message/chat threads; product listings |
 | Advanced (5-6) | Feature-style newspaper or magazine articles; short stories with a clear arc; opinion/editorial pieces (single stance); interview or profile pieces; travel/field-journal narrative; product or place reviews; short policy or issue explainers; social media post threads; advice-column letters with response |
 | Proficient (7-8) | Full newspaper feature or investigative articles; literary short-story excerpts; op-eds with rhetorical complexity; formal debate transcripts or point-counterpoint pieces; academic-style explainer or research-summary excerpts; satire or irony-dependent pieces (Level 8 only); podcast transcript excerpts; historical primary-source-style documents |
@@ -302,10 +302,11 @@ The rules (Quality Standards §D1-D3, §B) are shared. Reading-specific placemen
   pair-share immediately before their turn (their small group's round, or their first rotation into the circle),
   or a listening/tracking role for the stretch before their turn (the same tally or word-list task an
   outer-circle student already has under 0.10) with one fully prepared sentence to contribute at a natural pause.
-- **Foundation Support** in this cycle: matching a picture or printed word to a target term, pointing to the
-  paragraph that answers a Fact Finder, a two-choice circle instead of an open completion, a peer buddy for the
-  paired-reading and matrix steps, and in Phase 3 a physical role (moving to a side of the room, holding up a
-  prepared word or picture card) rather than a spoken turn.
+- **Foundation Support** in this cycle (Quality Standards §D8: nothing the teacher must make): matching a printed
+  word in the packet to a target term, pointing to the paragraph that answers a Fact Finder, a two-choice circle
+  instead of an open completion, a peer buddy for the paired-reading and matrix steps, and in Phase 3 a physical
+  role (moving to a side of the room, holding up a word the student wrote on their own paper) rather than a
+  spoken turn.
 
 ### 0.9 Paragraph lettering and contextual footnotes
 

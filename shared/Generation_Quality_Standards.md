@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.0)
+# Generation Quality Standards (v1.2)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -55,8 +55,9 @@ line contributed at a natural pause.
 
 **Foundation Support (below the lowest task Level):** for a student functioning below the band's own floor,
 do not reuse the lowest Level's tasks at a slower pace. Provide non-verbal or minimally-verbal response
-modes (picture-to-word matching, pointing, a two-choice circle, tracing with a meaning check, teacher-scribed
-dictation) and, in oral work, a physical or card-holding role rather than a spoken turn. This is support
+modes (matching a printed word in the packet to a real object, pointing, a two-choice circle, tracing with a
+meaning check, teacher-scribed dictation) and, in oral work, a physical role (moving, pointing, holding up a
+word the student wrote) rather than a spoken turn; never a card set the teacher has to make (D8). This is support
 added on top of the lowest task Level, not a replacement for it; the lesson says where it plugs in. An
 assessment for a lesson that used Foundation Support gives those students a lighter check in the same
 response mode, scored as a completion checklist, not a percentage. If no lesson in scope used it, none is
@@ -137,6 +138,27 @@ Rules shared by every 2-day lesson cycle in the program:
 7. **Oral output is scaffolded for everyone.** Any live discussion protocol supplies 2-3 distinct rotated
    prompts (never one static prompt for the whole window), explicit sentence stems per task Level inside
    each Level's own ceiling, and an explicit active task for every student not currently speaking.
+8. **Self-contained: no teacher-prepared media.** A lesson, homework, or assessment never depends on the
+   teacher preparing, bringing, printing, finding, or showing anything before class beyond the lesson's own
+   two files (the Markdown and the packet) and, for Listening/Speaking, the cited real source. No props to
+   bring, no picture cards to make, no photo to find, no "your teacher will show you." Where an objective
+   calls for a picture or object prompt (CSV Levels 1-3), satisfy it in this order: (1) the student's own
+   belonging (their own phone, bag, shoe); (2) an object visible in the room; (3) only when neither can
+   carry the task (a Beginner label set of unrelated nouns, a "prompted by two pictures" objective), a real
+   image embedded in the packet at generation time as a data-URI `<img>`, saved as an asset per Conventions
+   §H. A hook that compares two things uses two students' belongings or two things in the room. Foundation
+   Support uses printed words from the packet, the student's own drawing, and pointing at real objects.
+   Never print a placeholder ("[TEACHER: insert photo]", an empty picture box) and never write "the picture
+   your teacher shows you."
+
+**D9. Self-contained across lessons.** A lesson's tasks require nothing a student produced in an earlier
+lesson except the one piece a Set carries forward (a Writing draft from position 3 on; Reading and
+Listening/Speaking carry nothing). Whatever a day's tasks need (the object, a word bank, a quick plan, a model
+of the form) is reprinted or rebuilt in that lesson's own packet, in that lesson's own minutes. No task says
+"last time," "your planning notes," or "the example from earlier this week"; an earlier lesson's prewriting or
+warm-up is rehearsal, never an input. Where a lesson offers a choice of object, the choices are printed as a
+short list the student circles. The test: a student who was absent, or lost the earlier packet, can start every
+task in this one.
 
 ## E. Style constraints for generated Markdown
 
@@ -149,6 +171,13 @@ Rules shared by every 2-day lesson cycle in the program:
    **Version:** <Module>.<Set>.<Lesson>.<Version>` per `Program_Conventions.md` §G.
 5. **Plain, instruction-first prose.** Clear instructions over decorative language; each task Level's
    vocabulary and grammar stay inside the same ceiling the source lesson used for that Level.
+6. **Concrete prompts at Beginner and Intermediate.** Every student-facing prompt is a concrete action on the
+   object, text, or clip with a visible product: circle, point, underline, write three words, copy the
+   sentence, finish "Next time I will add ___." Never a question about the student's own process, plan, or
+   feelings about the task, and never "what does the model do that yours needs to do." A self-check is a list
+   of yes/no items each answered by a mark on the page. Teacher-facing staging questions belong in the
+   Markdown as facilitation cues (E2) and are never printed. Advanced and Proficient may ask one bounded
+   reflection question tied to a named sentence of the student's own.
 
 ## F. Shared self-check (apply before finalizing any lesson, homework, or assessment)
 
@@ -176,7 +205,14 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 16. No strategy, hook, protocol, or genre repeated from the immediately preceding lesson? (D6)
 17. Oral protocol has 2-3 rotated prompts, per-Level stems, and a task for every non-speaker? (D7)
 18. No em-dashes; pacing diagram per day; metadata line present with the correct version code? (E)
+19. Self-contained: no prop, picture, card, or photo the teacher must prepare or show; every picture or object
+    prompt met by the student's own belonging, an object in the room, or an image embedded in the packet, and
+    no placeholder anywhere? (D8)
+20. Self-contained across lessons: no task needs anything a student made in an earlier lesson except the
+    carried piece; every plan, bank, model, and object choice rebuilt or reprinted here? (D9)
+21. Concrete prompts: at Beginner and Intermediate, every student-facing prompt is an action with a visible
+    product, no process or reflection question, and the self-check is yes/no items with marks? (E6)
 
 ## Changelog
 
-**Current version: v1.0.** See `Changelog.md` in this folder.
+**Current version: v1.2.** See `Changelog.md` in this folder.

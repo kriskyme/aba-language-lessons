@@ -1,4 +1,4 @@
-# Academic Writing Assessment Generation Prompt (v4)
+# Academic Writing Assessment Generation Prompt (v4.1)
 
 Companion to the Academic Writing Lesson Generation Prompt and Module Lesson-Plan Prompt. Generates the assessment
 layer on top of one completed **Beginner Set** (4 lessons) or one completed **Intermediate/Advanced/Proficient
@@ -10,7 +10,7 @@ alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item qua
 requires the centerpiece, plausible distractors and padded banks, time-balanced, counted, complete, traceable)
 govern every item here and are not restated. This prompt states only what is specific to a Writing assessment.
 
-**Current version: v4.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
+**Current version: v4.1.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
 counts, sitting length, essay time budget) are reasoned starting points; neither this prompt nor its packet
 companion has yet been run against a real Set or Pair.
 
@@ -55,7 +55,7 @@ be new is each item's sentence content.
 
 **Item format:** fill-in-the-blank, choose-the-form, identify-sentence-type, or combine-the-sentences only; no
 open-ended writing in Part A. Banks and choice sets padded per Quality Standards §C4. Respectful Tiers (§B): a
-frame-regime Level's item is "which word fits the frame and the picture," a genuine choice, never a foregone
+frame-regime Level's item is "which word fits the frame and the object in front of you," a genuine choice, never a foregone
 answer copied off a model.
 
 ### A.2 Structure
@@ -111,7 +111,8 @@ One self-contained task per Level with:
   and one stated reason," "your thesis must be indirect," "shift register at least once to address [the named
   reader]'s concern").
 
-By regime: frame-regime Levels (1-3) get a fresh picture or object prompt in the same frame structure, in the
+By regime: frame-regime Levels (1-3) get a fresh object prompt (a different belonging of their own, or a room
+object; an embedded image only per Quality Standards §D8) in the same frame structure, in the
 same sitting as Part A; paragraph-regime Levels (4-5) write a single paragraph in the same sitting or immediately
 after; essay-regime Levels (6-8) write a full essay at the Level's 0.2 length, which may need its own dedicated
 sitting, stated explicitly in the document.

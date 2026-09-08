@@ -1,4 +1,4 @@
-# Passage Reading Homework Generation Prompt (v2)
+# Passage Reading Homework Generation Prompt (v2.1)
 
 Companion to the Passage Reading Lesson Generation Prompt. Generates one homework assignment from a single
 completed 2-day lesson, for the general (non-TOEFL) track: one section per task Level in the band, each keyed to
@@ -8,7 +8,7 @@ that Level's position (lowest, in between, highest) plus Foundation Support wher
 alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item quality) govern every item and are not
 restated. This prompt states only what is specific to Reading homework.
 
-**Current version: v2.** History: `Changelog.md`.
+**Current version: v2.1.** History: `Changelog.md`.
 
 **Input:** the completed lesson, Day 1 and Day 2 in full (anchor text with paragraph lettering, Phase 1
 vocabulary and idiom list, Skill Spotlight, Module, Band), supplied directly. If none is provided, stop and ask.
@@ -59,8 +59,8 @@ recognizing.
 - **In between:** independent original sentences, one per word, no starter.
 - **Highest:** combine 2-3 words into one connected short paragraph (3-5 sentences) on a topic of the student's
   choice.
-- **Foundation Support:** point-and-name with a caregiver from 2-3 picture cards, match a word to a picture, or
-  draw one target word, matching the in-class response mode.
+- **Foundation Support:** point-and-name real objects at home with a caregiver, match a printed word from the
+  packet to an object at home, or draw one target word; nothing to prepare (Quality Standards §D8).
 
 **Part 2: Skill Practice.** Restate the Skill Spotlight in the exact plain language Day 1 used; never a
 paraphrase or a broader skill. Ask the student to apply it to something in their own life or surroundings, new

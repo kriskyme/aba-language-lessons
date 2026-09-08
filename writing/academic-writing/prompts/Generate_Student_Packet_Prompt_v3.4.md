@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.0)
+# Academic Writing Student Print Formatting Prompt (v3.4)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -11,14 +11,15 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.0.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
 controlled-practice activities, the Leveled Mentor Ladder on the day it appears, prewriting materials, the
 drafting task and each Level's 0.2 target, the self-edit checklist, the Peer Editing Form where the lesson runs
 it, the Closing Transfer Check where the lesson has one, the Skill Spotlight's objective wording (even for a later
-lesson), and the Set's shared Scenario material this lesson's days actually use. Pull everything from the lesson;
+lesson), and the Set's shared Scenario material this lesson's days actually use (the Word Bank for the practice
+object, the Draft Word Bank for the draft object, whichever each day uses). Pull everything from the lesson;
 invent nothing; drop no task Level. Student version only.
 
 **What this prompt does not change:** content, task Levels, and structure are fixed by the source lesson. This is
@@ -32,7 +33,7 @@ Style Guide §E's rows apply. Add these:
 | Teacher-facing term | Student-facing translation |
 |---|---|
 | Focus A / Focus B (Grammar Focus); Essay Focus A/B | No labels. Each grammar mini-lesson gets a plain topic name in its heading ("Grammar: Comparing Things"); essay-structure content gets its own plain-titled box ("How an Essay Is Built," "Writing Your Thesis"). |
-| Scenario | Not named. Present the topic and stimulus (the picture, the prompt) directly, no framing about why it was chosen. |
+| Scenario | Not named. Present the topic and stimulus (the student's own object, the prompt, an embedded image where the lesson uses one per Quality Standards §D8) directly, no framing about why it was chosen. Never "the picture your teacher shows you" and never an empty picture box. |
 | Frame-regime / composition-regime / essay-regime | Never appears; the star rating and the task's own instruction carry the difference. |
 | Leveled Mentor Ladder / Mentor Text / Mentor Essay | Worked examples labeled only by star count ("★★★ Example"), never "Mentor," "Level," "ladder," or "set" (2.6). |
 | Required feature | Stated as a plain instruction inside the task ("Include one comparison and one reason"). |
@@ -53,8 +54,11 @@ carries the modality label `Writing` and the lesson's Band plus its version code
 number (Style Guide §B). File name `{Topic}_{Band}_L{N}_Packet.html` in the lesson's folder (Conventions §D).
 
 **Self-containment across a shared Scenario:** every lesson's packet stands alone. Reprint whatever shared
-Scenario reference material (a Word Bank, a comparison table, a picture) either of this lesson's days actually
-needs, so a teacher printing only Lesson 3 does not need Lesson 1's packet in hand.
+Scenario reference material (a Word Bank, a comparison table, an embedded image) either of this lesson's days actually
+needs, so a teacher printing only Lesson 3 does not need Lesson 1's packet in hand. Lessons 3 and later reprint the
+Draft Word Bank, not the practice object's Word Bank; Lesson 2 prints both, each directly before the first task
+that uses it. The file's `{Topic}` and every Unit heading name the object that lesson writes about (the practice
+object for Lessons 1-2, the draft object from Lesson 3 on).
 
 ### 2.2 Objective statement, under both mastheads
 
@@ -114,18 +118,30 @@ No stage directions about what the teacher will do next (Style Guide §E).
 
 ### 2.8 Trade and Check and Check Your Own Work
 
-Translate the self-edit checklist into a plain "Check Your Own Work" list: short, direct items pulled from the
-lesson's checklist, phrased as things to look for. Translate the Peer Editing Form, where this lesson runs it,
-into "Trade and Check": partner instructions, the form's specific questions, then space for one compliment and
-one suggestion. Where the lesson gives frame-regime Levels an oral equivalent, print that as its own short
-instruction line rather than omitting those Levels. An unlettered checklist item genuinely shared by two adjacent
-tiers may carry both star tags (Style Guide §F).
+Translate the self-edit checklist into "Check Your Own Work": under the section title, one plain line for
+anything every Level does (the cross-out rule, "mark it as each line says"), then one lettered Task per star
+level, each with exactly one star tag and its own complete list of short, direct items phrased as things to
+look for, repeating the items the Levels share (Style Guide §F). Frame-regime Levels' oral check is its own
+one-star Task, not omitted. Never a star on a list item, never two stars on one line. Translate the Peer
+Editing Form, where this lesson runs it, into "Trade and Check": partner instructions, the form's specific
+questions, then space for one compliment and one suggestion. No "Finished early?" or other speed-gated
+add-on anywhere in the packet; a heavier tier from the lesson is its own starred Task or is dropped.
 
 ### 2.9 Answer and writing space
 
 Style Guide §I item 11, sized to the task Level's own 0.2 target for a drafting task: `.blank` for a mid-sentence
 blank inside a `.fillblank` list, `.ans-line-sm` for a one-word or short-phrase answer on its own line below the
 item, several `.ans-line` rows for a paragraph or essay draft.
+
+### 2.10 Opening of a drafting-day packet
+
+A drafting lesson's Day 1 unit opens with the Draft Word Bank, then a section titled "Get Ready to Write"
+holding one unstarred Task: the printed list of draft-object choices to circle ("Pick one of these things to
+write about and circle it: my jacket, my hoodie, my sweater, my shirt"), "Put it on your desk" with the
+borrow-a-classmate's fallback, and the quick-plan action with its answer line ("Look at it. Write three words
+from the Word Bank that fit it"). No questions, no "last time," no "your planning notes," no "the example from
+earlier this week," and no re-look at Mentor Ladder examples (Quality Standards §D9, §E6; Style Guide §E).
+Later in the same unit, a task that needs a list or plan builds it inside the task with its own lines.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 

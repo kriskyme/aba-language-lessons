@@ -107,6 +107,11 @@ Each lesson type's actual cycle differs by design:
   all 4 lessons in a Set share **one** Scenario carried from grammar input
   (Lessons 1-2) through drafting (Lesson 3) to a finished, published piece
   (Lesson 4), rather than each lesson getting its own independent anchor text.
+  The Scenario names two of the student's own belongings: a **practice
+  object** for Lessons 1-2's grammar work and Mentor Ladder, and a **draft
+  object** introduced at Lesson 2 Day 2's prewriting that Lessons 3-4 (and a
+  Module Pair's second Module) write about, so the draft transfers the
+  grammar to a fresh object (`shared/Program_Conventions.md` §C).
   (Corrected 2026-09-08 from an original 8-day/1-lesson-per-Set model — see
   `shared/Program_Conventions.md` §C.)
 
@@ -202,6 +207,17 @@ noted in Known Issues.
   without losing the reasoning behind past changes.
 
 ## Known issues / pending consolidation work
+
+- **Self-contained rule backlog (added 2026-09-08).** `shared/Generation_Quality_Standards.md` §D8 now forbids
+  any dependency on teacher-prepared media (props, picture cards, photos to find, "your teacher will show
+  you," empty picture boxes in a packet). Fifteen already-generated lessons and one assessment packet across
+  all three modalities predate the rule and still carry such a dependency; each modality's `Index.md` Pending
+  work lists them. Fix each by embedding a real image or redesigning around the student's own object when it
+  is next touched; do not generate new content with the old pattern. The same file's §D9 (no dependence on a
+  student's work from an earlier lesson except the carried draft) and §E6 (concrete prompts, no reflection
+  questions, at Beginner/Intermediate) have one known violation, Writing Advanced Lesson 3's "Look back at your
+  planning from Lesson 2," logged in Academic Writing's `Index.md`, which also logs that Set's Lesson 4 packet
+  for the Style Guide v2.4 rule that a self-check is one lettered Task per star, never a combined-star list.
 
 - **Resolved 2026-09-08**: `writing/academic-writing/lessons/`'s two
   documented lessons (Intermediate 1 "my phone case," Advanced 1 "Two

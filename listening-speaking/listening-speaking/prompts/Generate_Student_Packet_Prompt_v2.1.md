@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.0)
+# Listening/Speaking Student Print Formatting Prompt (v2.1)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -12,7 +12,7 @@ regeneration of the Markdown (§G), this modality's delta classes (§H.1), and t
 This prompt states only what is specific to a Listening/Speaking packet. A TOEFL Track Tier variant's rendering
 is in `Generate_TOEFL_Track_Tier_Prompt_*.md` Section 2, applied on top of this prompt.
 
-**Current version: v2.0.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.1.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** the completed lesson in full: the citation block, target vocabulary, both Skill Spotlights, the
 differentiated Day 1 listening tasks and Day 2 speaking tasks, Background Notes, the note-taking organizer, the
@@ -96,7 +96,7 @@ whole instruction.
 Merge the lesson's Day 1 Phase 4 differentiated items into one combined star-rated Task per Level (A = ★ through
 D = ★★★★), sequential questions, each Level's own items. Style Guide §F governs stars, the share instruction,
 lettering, multiple-choice layout (options inline, one `.task-instr` line at the top of the block), picture items
-(real `.pic-options` placeholders), and word-bank placement. Two Listening/Speaking specifics:
+(`.pic-options` with the real images embedded, never empty boxes), and word-bank placement. Two Listening/Speaking specifics:
 
 - **Fixed-frame items need a complete, self-contained instruction.** Where the lowest task Level is a fixed-frame
   extraction ("It is ___ and ___."), state inline what the student listens for and what goes in the blanks (with
@@ -126,8 +126,8 @@ separate list below it. Invent no modeled language beyond what the lesson quotes
 
 Same merge and star principle as 2.7, applied to the Day 2 Phase 2 production tasks, with any pronunciation
 marking exercise folded in as a short bonus line under the relevant task. The same multiple-choice,
-picture-placeholder, and placement rules apply; a fixed-frame speaking item with picture cues needs real
-placeholder boxes. A standalone frame/"starter" box, where a speak-it-aloud step justifies one, renders before any
+embedded-image, and placement rules apply; a fixed-frame speaking item with picture cues embeds its images, or
+is rewritten around the student's own object (Quality Standards §D8). A standalone frame/"starter" box, where a speak-it-aloud step justifies one, renders before any
 instruction that refers to it.
 
 ### 2.11 Discuss It
@@ -172,8 +172,8 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    the link"; watch/listen wording matched to the real media type throughout; no second source component named
    that the citebox never introduced (2.3)?
 4. Fillable Listening Notes organizer before the star-rated listening tasks (2.6)?
-5. Fixed-frame items with a complete inline instruction; multi-source Level 7 task in a labeled compare layout
-   within fair use (2.7)?
+5. Fixed-frame items with a complete inline instruction; picture items with embedded images and no empty box;
+   multi-source Level 7 task in a labeled compare layout within fair use (2.7)?
 6. Show What You Noticed: response space first, then the script upside-down under "Check What You Heard" with the
    don't-turn-the-page instruction (2.8)?
 7. Unit _B opens with Learn the Phrase carrying the real modeled language and its frames in one box (2.9)?

@@ -1,4 +1,4 @@
-# Academic Writing Module Lesson-Plan Generation Prompt (v4)
+# Academic Writing Module Lesson-Plan Generation Prompt (v4.2)
 
 Companion to the Academic Writing Lesson Generation Prompt. Plans a full **Set** (Beginner: 4 lessons, one
 Module) or a full **Module Pair** (Intermediate/Advanced/Proficient: two consecutive Modules' Sets, 8 lessons;
@@ -11,7 +11,7 @@ Focus A/B collision or a gap in Module N+1's CSV coverage before 8 lessons are w
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets and Module Pair, §C; Rotation Log
 mechanics and adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v4.** History: `Changelog.md`.
+**Current version: v4.2.** History: `Changelog.md`.
 
 ## 0. Rotation Log
 
@@ -54,11 +54,16 @@ own template.
    - **Lesson-position table:** Beginner's 4-row Set-position table, or the Pair's 8-row table (Pair position,
      Module, Set position, global Lesson #, content role), from the Lesson prompt's "THE MODULE PAIR" section,
      filled with this Pair's Module numbers and Lesson #s.
-   - **Scenario,** one line: the shared writing situation, stimulus, and Module-aligned purpose (Lesson prompt
-     0.1a). A Scenario asserts nothing as fact, so it needs no real-world-verifiability rule or fabricated-quote
-     guardrail; it must be concrete and writable at every task Level in the band (from a single-word frame to a
-     full essay where the band reaches that high), sustain the full arc, and be flagged per Section 0 if it
-     echoes the preceding Set/Pair or another Band's most recent.
+   - **Scenario,** two or three lines: the shared writing situation and Module-aligned purpose, the **practice
+     object** (Lessons 1-2's grammar work and the Mentor Ladder), and the **draft object** (introduced at Lesson
+     2 Day 2 prewriting; what Lessons 3-4 and a Pair's second Module write about), both the student's own
+     belongings (Lesson prompt 0.1a; Conventions §C). State the draft object as a short list of three or four
+     like objects the student picks from (jacket, hoodie, sweater, shirt), so every drafting lesson can print
+     the list and no student is without one (Quality Standards §D9). A Scenario asserts nothing as fact, so it needs no
+     real-world-verifiability rule or fabricated-quote guardrail; each object must be concrete and writable at
+     every task Level in the band (from a single-word frame to a full essay where the band reaches that high),
+     the draft object must sustain the full arc, and both are flagged per Section 0 if they echo the preceding
+     Set/Pair or another Band's most recent.
    - **Genre / real-world writing form,** from the Lesson prompt's 0.9 mapping using **Module N's row only** (the
      Levels 1-5 form and the Levels 6-8 essay type where mapped); for a Pair, state that Module N+1 inherits it
      unchanged. Checked per Section 0.
@@ -81,7 +86,8 @@ own template.
      Ladder and drafting task satisfy, mapped explicitly.
 
 4. After the plan, report a short self-check: every task Level with its own quoted Writing row, exactly the
-   band's Level count; the Scenario writable at every Level and sustaining the full arc; Focus A/B anchored at
+   band's Level count; both Scenario objects writable at every Level and the draft object sustaining the full
+   arc; Focus A/B anchored at
    the native Paragraph Composition row and Essay Focus at Level 6's row; (Pair) Module N+1's Focus genuinely
    distinct, the genre inherited unchanged, and a concrete separate Module N+1 verb task named; the Focus pair
    and writing form not repeating the preceding Set/Pair, cross-Band echoes flagged; each Module's Lesson #s

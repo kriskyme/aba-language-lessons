@@ -1,4 +1,4 @@
-# Listening/Speaking Assessment Student Print Formatting Prompt (v2)
+# Listening/Speaking Assessment Student Print Formatting Prompt (v2.1)
 
 Companion to the Listening/Speaking Assessment Generation Prompt. Takes one completed Set assessment (Part A
 Listening, Part B Speaking) and produces a single, print-ready, black-and-white student handout with every
@@ -11,7 +11,7 @@ stylesheet, §E translations, §F task rules, §G regeneration, §H.1 this modal
 `.checklist`, §I shared packet self-check). This prompt states only what is specific to a Listening/Speaking
 assessment packet.
 
-**Current version: v2.** History: `Changelog.md`.
+**Current version: v2.1.** History: `Changelog.md`.
 
 **Input:** the completed Assessment `.md` in full: Part A's citation block per clip and segment labels, every task
 Level's items (vocabulary is inside each Level's item set, not a separate list), and Part B's per-Level speaking
@@ -63,7 +63,7 @@ list or a `.notes-table`; their absence is correct.
 
 Each Level's items as plain numbered questions (`.qlist`), in source order. Every item is multiple choice,
 fill-in-the-blank, or matching; no open-ended line to size. Style Guide §F governs layout: options inline with
-one top-of-page `.task-instr` line, real placeholders for picture items, banks before their items, matching via
+one top-of-page `.task-instr` line, embedded images for picture items (never an empty box), banks before their items, matching via
 `.match-list`/`.match-row`. A predict-then-confirm item stays one numbered item with both circles in one
 instruction. Never print an item's answer, point value, or strategy.
 

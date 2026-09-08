@@ -28,12 +28,19 @@ Quoted verbatim from `learningobjectives.csv` (Module 1: Describing, Writing mod
 **Band Lesson #:** Intermediate 1 (matches the existing `Rotation_Log_Intermediate.md` row; this document does
 not renumber or re-log it).
 
-**Scenario:** Every student describes a phone case — a real, familiar object nearly every student owns or can
-picture clearly, chosen (over the lesson's original water-bottle Scenario) for offering more natural angles for
+**Scenario:** describing a familiar belonging by comparing it to something else and giving a real reason, on
+two of the student's own objects (Conventions §C; Quality Standards §D8; updated 2026-09-08). **Practice object,
+Lessons 1-2 through Lesson 2 Day 1 and the Mentor Ladder: a phone case** — a real, familiar object nearly every
+student owns, chosen (over the lesson's original water-bottle Scenario) for offering natural angles for
 comparison (color, thickness, durability, grip, price) and implied attitude (how worn it is, why it's never
-replaced). Level 2-3 students work from one provided picture; Level 4-5 students describe their own actual case.
-Writable at every task Level in the Band: a single word into a frame at Level 2-3, up through an extended,
-detail-driven paragraph at Level 5 — no essay-regime Level to stretch toward.
+replaced). **Draft object, from Lesson 2 Day 2's prewriting through Lesson 3's draft, Lesson 4's revision, and
+Module 2: one of a printed list the student circles, my jacket, my hoodie, my sweater, my shirt** — whatever
+they are wearing or have with them (a classmate's, on the back of a chair, as the fallback), chosen so the draft transfers the taught grammar to
+an object the student did not drill on, with its own angles for comparison (warmth, weight, fit, material, age)
+and implied attitude (a faded cuff, a broken zipper still worn, which pocket holds what). Every student, Levels
+2-5 alike, works from the real object in front of them; no picture is provided or shown.
+Both objects writable at every task Level in the Band: a single word into a frame at Level 2-3, up through an
+extended, detail-driven paragraph at Level 5 — no essay-regime Level to stretch toward.
 
 **Grammar Focus A/B pairing:** Focus A (comparative adjectives, -er/more, plus "because" and its richer
 alternatives since/as/given that) is Section 0.4's Level 4 row — Intermediate's own **native** Paragraph
@@ -65,8 +72,10 @@ the generated lesson maps directly to its own row, not a generic simplification 
 - **Task-Level grounding:** every task Level (2, 3, 4, 5) has its own quoted Writing CSV Description above,
   distinct from the others — confirmed against the generated lesson's own "Objectives pulled" table.
 - **Scenario writability:** a phone case is concrete enough for a Level 2 single-word frame and detailed enough
-  (wear, stickers, history) to sustain a Level 5 extended paragraph with an implied attitude — confirmed; no
-  essay-regime Level to stretch toward, so no upper-bound writability concern applies.
+  (wear, stickers, history) to sustain a Level 5 extended paragraph with an implied attitude — confirmed, and the
+  same holds for the draft object (a jacket: one sounded-out word like "gray" or "warm" at Level 2; fit, material,
+  wear, and where it has been at Level 5). No essay-regime Level to stretch toward, so no upper-bound writability
+  concern applies; the draft object, not the practice object, must sustain the full 8-lesson arc.
 - **Grammar Focus A/B anchoring:** Focus A/B is anchored at Level 4, Intermediate's own native Paragraph
   Composition row — correct per Section 0.4's row-selection rule (no extension-down/native mismatch exists here,
   unlike Advanced's Band, which needed a v3.1 correction).
@@ -96,10 +105,24 @@ and applies to the whole Set, not just one lesson within it; only the "Band Less
 **Addendum (2026-09-08, second): this Set is now Part 1 of Module Pair 1-2.** Per
 `shared/Program_Conventions.md` §C's Module Pair addendum, Intermediate now pairs Modules 1-2 into one essay
 spanning both Modules' Sets. Lesson 4's original "ends in a published, finished piece" framing (both above and
-in the Set 1 rows this document cross-references) is superseded: Lesson 4 (`1.1.4.0` → `1.1.4.1`) now ends in a
+in the Set 1 rows this document cross-references) is superseded: Lesson 4 (`1.1.4.0` → `1.1.4.1`; regenerated against v6 the same day as `1.1.4.2`) now ends in a
 complete, self-revised draft handed off to Module 2's Set, which will apply its own (different) Grammar Focus
 during revision and carry the piece through peer editing to publishing. **Module 2 has not yet been planned or
 generated.** Once it is, its plan will live at
 `lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md`, superseding this document and
 Module 2's own future `Module2_Intermediate_Lesson_Plan.md` as the single plan for the whole pair — see
 `writing/academic-writing/Index.md`'s "Module Pairs" section and Pending work.
+
+**Addendum (2026-09-08, third): practice object and draft object.** Per `shared/Program_Conventions.md` §C (v1.9),
+the Scenario now names two objects. Lessons 1-2's grammar work and the Mentor Ladder stay on the phone case; from
+Lesson 2 Day 2's prewriting on, every student writes about their own jacket, hoodie, or sweater, and that is the
+draft Module 2 inherits. Lesson 2 was patched (`1.1.2.1` -> `1.1.2.2`) and Lessons 3-4 regenerated on the jacket
+(`1.1.3.2` -> `1.1.3.3`, `1.1.4.2` -> `1.1.4.3`), their folders renamed `Lesson_3_MyJacket/` and
+`Lesson_4_MyJacket/`. The Scenario paragraph above is rewritten to match; Grammar Focus A/B, Mentor Ladder
+direction, and the Task-Level basis are unchanged.
+
+**Addendum (2026-09-08, fourth): self-contained across lessons; concrete prompts.** Per Quality Standards §D9/§E6
+(v1.2), the draft object is stated as a printed list of four like choices (jacket, hoodie, sweater, shirt) so each
+drafting lesson prints it, Lesson 3 builds its plan inside its own packet instead of reading Lesson 2's notes or
+Lesson 1's ladder, and no printed prompt at this band asks a reflection question. Lessons 2-4 revised (`1.1.2.3`,
+`1.1.3.4`, `1.1.4.4`).

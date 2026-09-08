@@ -1,4 +1,4 @@
-# Academic Writing Homework Generation Prompt (v4)
+# Academic Writing Homework Generation Prompt (v4.1)
 
 Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
 completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
@@ -8,7 +8,7 @@ Module Pair (8 lessons): one section per task Level in the band, each keyed to t
 alongside it. Quality Standards §A-§C govern every item and are not restated. This prompt states only what is
 specific to Writing homework.
 
-**Current version: v4.** History: `Changelog.md`.
+**Current version: v4.1.** History: `Changelog.md`.
 
 **Input:** the lesson content generated so far, in full (the Scenario, the Grammar Focus A/B and Essay Focus A/B
 content taught so far, the Leveled Mentor Ladder, the Skill Spotlight, Module(s), Band). If none is provided,
@@ -62,8 +62,8 @@ frame-regime; Advanced's highest is essay-regime).
 - **Paragraph-regime Levels (4-5):** independent original sentences using the target Focus A/B items, no frame.
 - **Essay-regime Levels (6-8):** combine 2-3 target items (Focus A/B and any taught Essay Focus cohesive device)
   into one connected short paragraph, never a full essay; a full essay belongs to Lesson 3 in class.
-- **Foundation Support:** point-and-name from 2-3 picture cards, match a word to a picture, or draw one target
-  word, matching the in-class response mode.
+- **Foundation Support:** point-and-name real objects at home with a caregiver, match a printed Word Bank word to
+  an object at home, or draw one target word; nothing the teacher or caregiver must prepare (Quality Standards §D8).
 Two Levels sharing a regime each get their own section with their own content.
 
 **Part 1: Grammar Focus in Production.** 2-3 items from Focus A taught so far (plus Focus B once the timing
@@ -74,7 +74,7 @@ pre-written sentence.
 a new instance of the Scenario's underlying task, never the Scenario's own object already covered in class: a
 student who described "my phone case" in class describes a different object at home with the same
 comparison-plus-reason skill.
-- **Frame-regime:** one or two more rounds of the lesson's frame on a new object or picture.
+- **Frame-regime:** one or two more rounds of the lesson's frame on a new object of the student's own at home.
 - **Paragraph-regime:** 2-4 sentences on a new object, including the Level's own required feature (Lesson prompt
   0.2).
 - **Essay-regime:** one paragraph applying Focus A/B and, where already taught by this checkpoint, one structural

@@ -1,4 +1,4 @@
-# Passage Reading Assessment Generation Prompt (v5.0)
+# Passage Reading Assessment Generation Prompt (v5.1)
 
 Companion to the Passage Reading Lesson Generation Prompt. Generates a differentiated reading assessment from
 already-completed lessons: one section per task Level in the band (Conventions §B), plus a Foundation Support
@@ -11,7 +11,7 @@ alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item qua
 requires the centerpiece, plausible distractors and padded banks, time-balanced, counted, complete, traceable)
 govern every item here and are not restated. This prompt states only what is specific to a Reading assessment.
 
-**Current version: v5.0.** For the dated version history and reasoning, see `Changelog.md`.
+**Current version: v5.1.** For the dated version history and reasoning, see `Changelog.md`.
 
 **Scope:** assessments only. It does not generate lessons and does not invent anchor texts, vocabulary, or idioms;
 it draws from the specific lessons it is given. If no completed lessons are provided, stop and ask.
@@ -143,9 +143,9 @@ asked for, and rebuild it against that lesson's new passage, inside every lesson
 ### 1.3 Foundation Support check
 
 If a source lesson used a Foundation Support layer, generate a lighter check for those students in the response
-mode the lesson used (Quality Standards §B): picture-to-picture or picture-to-word matching, point-and-name, or a
+mode the lesson used (Quality Standards §B, §D8): printed-word-to-object matching, point-and-name, or a
 teacher-observed checklist. Draw items from the lowest task Level's target vocabulary and, for a reading-response
-item, that lesson's new passage (at Beginner, a new picture-supported label set built the same way), at the
+item, that lesson's new passage (at Beginner, a new label set with its images embedded in the packet), at the
 reduced item count the lesson's own Foundation Support boxes used. Score as a completion checklist (demonstrated /
 not yet), not a percentage. If no lesson in scope used one, skip this section; do not invent it.
 

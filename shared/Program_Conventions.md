@@ -1,4 +1,4 @@
-# Program Conventions (v1.8)
+# Program Conventions (v1.9)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -108,12 +108,18 @@ Listening-Speaking that survives this correction: a Writing Set's 4 lessons shar
 carried across the whole Set (grammar input in Lessons 1-2, drafting in Lesson 3, revision and
 publishing in Lesson 4 - one piece of writing taken from introduction to finished, published
 product), rather than each lesson getting its own independent anchor text the way a Reading Set's 4
-lessons do. See `writing/academic-writing/Index.md`'s "Sets" section for how this plays out in that
+lessons do. A Scenario is one writing situation and Module-aligned purpose built on **two** of the
+student's own belongings (Quality Standards §D8): a **practice object**, which carries grammar input,
+controlled practice, the frame rounds, and the Mentor Ladder from Lesson 1 through Lesson 2 Day 1,
+and a **draft object**, introduced at Lesson 2 Day 2's prewriting and the only object every later
+position writes about (Lesson 3's draft, Lesson 4's revision, and for a Module Pair the whole second
+Module). The draft is the student's first transfer of the taught grammar to something they did not
+drill on; the ladder stays on the practice object because it models form, not content. See `writing/academic-writing/Index.md`'s "Sets" section for how this plays out in that
 lesson type's own prompt family.
 
 **Module Pair (added 2026-09-08, Academic Writing only):** for the Intermediate, Advanced, and
 Proficient bands, Academic Writing further pairs two consecutive Modules - odd with the next even
-(1-2, 3-4, 5-6, 7-8) - so that one Scenario/essay spans both Modules' Sets (8 lessons total, not 4),
+(1-2, 3-4, 5-6, 7-8) - so that one Scenario/essay, on the draft object, spans both Modules' Sets (8 lessons total, not 4),
 with each Module teaching its own Grammar/Essay Focus and contributing it to the same shared piece
 rather than each Module producing an independent essay. Beginner is exempt and keeps the
 single-Module model described above (its task Levels are single-word Guided Frame Composition, which

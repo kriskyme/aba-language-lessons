@@ -179,25 +179,6 @@
         letter-spacing: .03em;
       }
 
-      .rule-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 10px 0 20px;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13.5px;
-      }
-      .rule-table th,
-      .rule-table td {
-        border: 1px solid var(--rule);
-        padding: 8px 10px;
-        text-align: left;
-        vertical-align: top;
-      }
-      .rule-table th {
-        font-weight: 700;
-        background: #f2f2f2;
-      }
-
       .qlist {
         margin: 0;
         padding-left: 0;
@@ -246,21 +227,6 @@
         margin: 14px 0 8px;
       }
 
-      .fillblank {
-        margin: 0;
-        padding-left: 0;
-        list-style: none;
-      }
-      .fillblank li {
-        margin-bottom: 9px;
-        font-size: 14.5px;
-      }
-      .fillblank .num {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-weight: 700;
-        margin-right: 8px;
-      }
-
       .task-block {
         margin: 18px 0 22px;
         page-break-inside: avoid;
@@ -302,39 +268,44 @@
         font-size: 14px;
       }
 
-      .discuss-block {
-        margin: 16px 0;
-      }
-
       .wrapup {
         margin: 16px 0;
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 14px;
       }
 
-      .roadmap {
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .fillblank {
         margin: 0;
         padding-left: 0;
         list-style: none;
       }
-      .roadmap li {
-        display: flex;
-        gap: 12px;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--rule-light);
+      .fillblank li {
+        margin-bottom: 9px;
         font-size: 14.5px;
       }
-      .roadmap li:last-child {
-        border-bottom: none;
-      }
-      .roadmap .unit-num {
+      .fillblank .num {
         font-family: system-ui, -apple-system, sans-serif;
         font-weight: 700;
-        font-size: 12.5px;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        flex-shrink: 0;
-        width: 66px;
+        margin-right: 8px;
       }
 
       @media print {
@@ -351,7 +322,6 @@
         .spotlight-box,
         .task-block,
         .rule-table,
-        .discuss-block,
         .wrapup {
           page-break-inside: avoid;
           break-inside: avoid;
@@ -368,86 +338,174 @@
         <h1>Unit 2A: Describing My Phone Case</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Writing</span>
-          <span class="masthead-tag">Intermediate 1.1.2.0</span>
+          <span class="masthead-tag">Intermediate 1.1.2.3</span>
         </div>
       </div>
-      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to something else and
-      giving a real reason for the comparison. Some of you will also describe it in a way that lets
-      your reader guess how you feel about it, without ever saying the feeling out loud.</p>
+      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to
+      something else and giving a real reason for the comparison. Some of you will also describe it in a way
+      that lets your reader guess how you feel about it, without ever saying the feeling out loud.</p>
 
-      <div class="section-title">Grammar</div>
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> blue &middot; black &middot; pink &middot; clear &middot; patterned &middot; striped<br />
+        <strong>Material/texture:</strong> soft &middot; hard &middot; smooth &middot; rubbery<br />
+        <strong>Size/thickness:</strong> thin &middot; thick &middot; big &middot; small<br />
+        <strong>Condition:</strong> new &middot; scratched &middot; worn &middot; shiny &middot; cracked<br />
+        <strong>Quality:</strong> sturdy &middot; cheap &middot; light &middot; heavy
+      </div>
+      <p class="instr">Use your own phone case for every task in this unit. If you do not have one with you,
+      ask a classmate to hold theirs up for you.</p>
+
+      <div class="section-title">Grammar: Joining Two Sentences</div>
       <div class="spotlight-box">
-        <p>A simple sentence has one subject-verb combination (or more than one subject and/or verb,
-        still one sentence). A compound sentence joins two simple sentences with a comma and a
-        connector: and, but, or so.</p>
+        <p>A <strong>simple sentence</strong> has one subject-verb combination. It can still have two subjects
+        ("My brother and I have the same case") or two verbs ("I picked it up and put it in my bag") and stay
+        simple, because there is only one complete sentence inside it.</p>
+        <p>A <strong>compound sentence</strong> joins two complete sentences with a comma and a connector: and,
+        but, or so.</p>
         <table class="rule-table">
-          <tr><th>Connector</th><th>Meaning</th><th>Example</th></tr>
+          <tr><th>Connector</th><th>Job</th><th>Example</th></tr>
           <tr><td>and</td><td>adds information</td><td>My case is blue, and it is thin.</td></tr>
-          <tr><td>but</td><td>adds contrast</td><td>My case is thin, but it is heavy.</td></tr>
+          <tr><td>but</td><td>adds a contrast</td><td>My case is thin, but it is heavy.</td></tr>
           <tr><td>so</td><td>gives a result</td><td>My case cracked, so I bought a new one.</td></tr>
         </table>
-        <p class="instr">Yesterday you learned to compare two things and give a reason. Today you'll
-        join that comparison to its reason, or its result, in one sentence.</p>
-        <p class="model-step">The two-word frame "It is ___ and ___." already uses "and" to join
-        two words, not two full sentences &mdash; the same joining job "and" does in a compound
-        sentence.</p>
+        <p class="model-step">The comma goes before the connector, and only when a complete sentence follows it.
+        "My case is blue and thin" takes no comma, because "thin" is not a sentence.</p>
+        <p class="model-step">You already know how to compare two things and give a reason. Now you can join the
+        comparison to its reason or its result in one sentence: "This case is thicker than my old one, so it
+        never cracks."</p>
+        <p class="model-step">The frame "It is ___ and ___." uses "and" the same way, joining two words instead
+        of two sentences, so it needs no comma.</p>
       </div>
 
+      <div class="section-title">Grammar: One More Step, Although</div>
+      <div class="spotlight-box">
+        <p>"But" puts the two halves side by side as equals. "Although" (or "even though") pushes one half into
+        the background and makes the other half the point.</p>
+        <table class="rule-table">
+          <tr><th>Shape</th><th>Example</th><th>What it does</th></tr>
+          <tr><td>but</td><td>This case is heavy, but I like it.</td><td>Two equal facts.</td></tr>
+          <tr><td>although, clause second</td><td>I like this case although it is heavy.</td><td>The weight is admitted, then set aside. No comma.</td></tr>
+          <tr><td>Although, clause first</td><td>Although it is heavy, I like this case.</td><td>Same, with a comma after the first part.</td></tr>
+        </table>
+      </div>
+
+      <div class="section-title">Try It</div>
+
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task A.</span> Label each sentence simple
-        (S) or compound (CD), and add the missing comma where needed.</p>
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Write S next to each simple sentence
+        and CD next to each compound sentence. If a compound sentence is missing its comma, add it.</p>
         <ol class="fillblank">
-          <li><span class="num">1.</span>My case is blue and thin.</li>
-          <li><span class="num">2.</span>My case is blue and my sister's case is red.</li>
-          <li><span class="num">3.</span>I like this case but I want a different color.</li>
-          <li><span class="num">4.</span>I picked it up and put it in my bag.</li>
-          <li><span class="num">5.</span>It cracked so I bought a new one.</li>
-          <li><span class="num">6.</span>I use it at home and I use it at work.</li>
-          <li><span class="num">7.</span>I like this case but my sister likes hers better.</li>
-          <li><span class="num">8.</span>It's thin and it's easy to carry.</li>
+          <li><span class="num">1.</span>My case is blue and thin. <span class="blank"></span></li>
+          <li><span class="num">2.</span>My case is blue and my sister's case is red. <span class="blank"></span></li>
+          <li><span class="num">3.</span>I like this case but I want a different color. <span class="blank"></span></li>
+          <li><span class="num">4.</span>I picked it up and put it in my bag. <span class="blank"></span></li>
+          <li><span class="num">5.</span>It cracked so I bought a new one. <span class="blank"></span></li>
+          <li><span class="num">6.</span>My brother and I have the same case. <span class="blank"></span></li>
+          <li><span class="num">7.</span>I use it at home, and I use it at work. <span class="blank"></span></li>
+          <li><span class="num">8.</span>It is thin but it is not cheap. <span class="blank"></span></li>
+        </ol>
+      </div>
+
+      <p class="instr">When you finish your task, read your sentences to a partner who worked at a different
+      star level.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span>
+        Each pair below describes a phone case. Circle the pairs that say two different things about a case.
+        Cross out the pairs that say the same thing twice.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>blue and thin</li>
+          <li><span class="num">2.</span>scratched and worn</li>
+          <li><span class="num">3.</span>soft and rubbery</li>
+          <li><span class="num">4.</span>hard and shiny</li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Combine each pair of sentences into one compound sentence, choosing and, but, or so.</p>
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;</span>
+        Look at your own phone case. Complete the frame three times, each time with a word from a different
+        group of the Word Bank (a color, then a thickness, then a condition). Read each finished sentence to a
+        partner.</p>
         <ol class="fillblank">
-          <li><span class="num">1.</span>I bring my phone case with me every day. It protects my phone from drops.</li>
-          <li><span class="num">2.</span>I chose this color. It doesn't show fingerprints as easily.</li>
-          <li><span class="num">3.</span>My old case cracked. I bought a new one.</li>
-          <li><span class="num">4.</span>This case is more expensive. It lasts much longer.</li>
-          <li><span class="num">5.</span>I clean it every morning. I wipe it again at night.</li>
-          <li><span class="num">6.</span>My sister wanted a bright case. I wanted a plain one.</li>
+          <li><span class="num">1.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span>.</li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
-        Combine each pair of sentences into one compound sentence, choosing and, but, or so.</p>
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;</span>
+        Each pair below describes a phone case. Circle the pairs that say two different things about a case.
+        Cross out the pairs that say the same thing twice. Then write the two pairs you circled into frames on
+        the lines.</p>
         <ol class="fillblank">
-          <li><span class="num">1.</span>I bring my phone case with me every day. It protects my phone from drops.</li>
-          <li><span class="num">2.</span>I chose this color. It doesn't show fingerprints as easily.</li>
-          <li><span class="num">3.</span>My old case cracked. I bought a new one.</li>
-          <li><span class="num">4.</span>This case is more expensive. It lasts much longer.</li>
-          <li><span class="num">5.</span>I clean it every morning. I wipe it again at night.</li>
-          <li><span class="num">6.</span>My sister wanted a bright case. I wanted a plain one.</li>
+          <li><span class="num">1.</span>blue and thin</li>
+          <li><span class="num">2.</span>scratched and worn</li>
+          <li><span class="num">3.</span>soft and rubbery</li>
+          <li><span class="num">4.</span>hard and shiny</li>
         </ol>
-      </div>
-
-      <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;</span>
-        Complete the two-word frame twice more on the phone case picture, pulling both words from the
-        Word Bank. Say each completed sentence aloud.</p>
         <span class="ans-line-sm"></span>
         <span class="ans-line-sm"></span>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;</span>
-        Complete the two-word frame twice more on the phone case picture, pulling both words from the
-        Word Bank. Say each completed sentence aloud.</p>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
+        Look at your own phone case. Complete the frame three times. Each time, choose two words from two
+        different groups of the Word Bank, so the sentence says two different things about the case. Then write
+        one sentence about your case with a verb that ends in -s ("It looks new."). Read each sentence to a
+        partner.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">4.</span>It <span class="blank"></span>.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Combine each pair of sentences into one compound sentence with and, but, or so. Choose the connector
+        that fits the meaning, and put the comma in the right place.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>My phone slips out of my hand a lot. I bought a rubbery case.<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>The clear case shows the phone's real color. It gets scratched easily.<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>My old case cracked in the first month. I did not buy that brand again.<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>This case is more expensive than my last one. It has lasted twice as long.<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>I clean the case every morning. I wipe it again at night.<span class="ans-line-sm"></span></li>
+          <li><span class="num">6.</span>My sister wanted a bright case. I wanted a plain one.<span class="ans-line-sm"></span></li>
+          <li><span class="num">7.</span>The thick case protects the phone well. It has a grip on the back.<span class="ans-line-sm"></span></li>
+          <li><span class="num">8.</span>My case is light. I forget it is there.<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Combine each pair of sentences into one compound sentence with and, but, or so. Choose the connector
+        that fits the meaning, and put the comma in the right place.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>My phone slips out of my hand a lot. I bought a rubbery case.<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>The clear case shows the phone's real color. It gets scratched easily.<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>My old case cracked in the first month. I did not buy that brand again.<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>This case is more expensive than my last one. It has lasted twice as long.<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>I clean the case every morning. I wipe it again at night.<span class="ans-line-sm"></span></li>
+          <li><span class="num">6.</span>My sister wanted a bright case. I wanted a plain one.<span class="ans-line-sm"></span></li>
+          <li><span class="num">7.</span>The thick case protects the phone well. It has a grip on the back.<span class="ans-line-sm"></span></li>
+          <li><span class="num">8.</span>My case is light. I forget it is there.<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Take your "but" sentences from items 2, 4, and 6 above and rewrite each one with "although" or "even
+        though." Write at least one with the although-part first (comma after it) and at least one with it second
+        (no comma). Then answer question 4.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>In your rewrite of item 4, which half did you push into the background? Does the sentence now sound more sure or less sure about the case?<span class="ans-line-sm"></span><span class="ans-line-sm"></span></li>
+        </ol>
       </div>
 
       <div class="section-title">A Word That's Easy to Mix Up</div>
@@ -458,27 +516,48 @@
           <tr><td>it's</td><td>it is / it has</td><td>It's blue. It's been my case for two years.</td></tr>
           <tr><td>its</td><td>belonging to it (no apostrophe)</td><td>Its corner is cracked.</td></tr>
         </table>
+        <p class="model-step">Test: if "it is" or "it has" fits in the gap, write "it's." If not, write "its."</p>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task F.</span> Choose it's or its.</p>
+        <p class="instr-line"><span class="exercise-label">Task I.</span> Write it's or its in each gap. Items 7
+        and 8 have two gaps each.</p>
         <ol class="fillblank">
           <li><span class="num">1.</span><span class="blank"></span> my favorite phone case.</li>
           <li><span class="num">2.</span><span class="blank"></span> corner is a little worn.</li>
           <li><span class="num">3.</span><span class="blank"></span> been dropped more times than I can count.</li>
           <li><span class="num">4.</span>I like <span class="blank"></span> color the best.</li>
           <li><span class="num">5.</span><span class="blank"></span> heavier than it looks.</li>
-          <li><span class="num">6.</span>My case lost <span class="blank"></span> shine after a year.</li>
+          <li><span class="num">6.</span>The case lost <span class="blank"></span> shine after a year.</li>
+          <li><span class="num">7.</span><span class="blank"></span> grip is the reason <span class="blank"></span> never slipped out of my hand.</li>
+          <li><span class="num">8.</span>I know <span class="blank"></span> not new, but <span class="blank"></span> corners still look sharp.</li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Find and fix the mistakes in the paragraph below. There are 8 mistakes to find.</p>
+        <p class="instr-line"><span class="exercise-label">Task J.</span> <span class="stars">&#9733;</span>
+        Hold up your case and read your three sentences from Task C to a new partner. Your partner answers out
+        loud: "Does the word match the case?" Fix any sentence your partner could not say yes to, then swap
+        roles.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;</span>
+        Hold up your case and read your sentences from Task E to a new partner. Your partner answers out loud:
+        "Does each word match the case?" and "Did I hear two different things?" Fix any sentence your partner
+        could not say yes to, then swap roles.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task L.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Find and fix the mistakes in the paragraph below. There are 8 mistakes: some are word forms, some are
+        missing or misplaced commas, and one is it's/its. Two sentences have no mistakes at all.</p>
         <div class="spotlight-box">
-          <p>My phone case is more good than my old one, it hold my phone better. I like it because it
-          are light so I bring it everywhere. Its heavier than my old case but that don't bother me.
-          My sister's case are smaller, and she think it easyer to carry.</p>
+          <p>My new phone case is more thick than my old one, and it feels a lot sturdier. I picked it because
+          my old one break too easily. Its heavier than the old case but I don't mind the weight. The color is
+          darker than my sister's case, its corners are rounder too. My sister says her case is more pretty than
+          mine so she will never trade. I think mine is safer since it is rubbery, and it bounce when it falls.
+          Given that I drop my phone almost every day, a soft case is the better choice for me.</p>
         </div>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
@@ -487,13 +566,19 @@
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
-        Find and fix the mistakes in the paragraph below. There are 8 mistakes to find.</p>
+        <p class="instr-line"><span class="exercise-label">Task M.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Find and fix the mistakes in the paragraph below. There are 8 mistakes: some are word forms, some are
+        missing or misplaced commas, and one is it's/its. Two sentences have no mistakes at all. When you have
+        fixed them, mark one place where "although" could replace "but," and write that sentence on the last
+        line.</p>
         <div class="spotlight-box">
-          <p>My phone case is more good than my old one, it hold my phone better. I like it because it
-          are light so I bring it everywhere. Its heavier than my old case but that don't bother me.
-          My sister's case are smaller, and she think it easyer to carry.</p>
+          <p>My new phone case is more thick than my old one, and it feels a lot sturdier. I picked it because
+          my old one break too easily. Its heavier than the old case but I don't mind the weight. The color is
+          darker than my sister's case, its corners are rounder too. My sister says her case is more pretty than
+          mine so she will never trade. I think mine is safer since it is rubbery, and it bounce when it falls.
+          Given that I drop my phone almost every day, a soft case is the better choice for me.</p>
         </div>
+        <span class="ans-line"></span>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
@@ -503,74 +588,135 @@
       <div class="masthead masthead-later">
         <h1>Unit 2B: Describing My Phone Case</h1>
       </div>
-      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to something else and
-      giving a real reason for the comparison. Some of you will also describe it in a way that lets
-      your reader guess how you feel about it, without ever saying the feeling out loud.</p>
+      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to
+      something else and giving a real reason for the comparison. Some of you will also describe it in a way
+      that lets your reader guess how you feel about it, without ever saying the feeling out loud.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> blue &middot; black &middot; pink &middot; clear &middot; patterned &middot; striped<br />
+        <strong>Material/texture:</strong> soft &middot; hard &middot; smooth &middot; rubbery<br />
+        <strong>Size/thickness:</strong> thin &middot; thick &middot; big &middot; small<br />
+        <strong>Condition:</strong> new &middot; scratched &middot; worn &middot; shiny &middot; cracked<br />
+        <strong>Quality:</strong> sturdy &middot; cheap &middot; light &middot; heavy
+      </div>
+      <p class="instr">Use your own phone case for every task in this unit. If you do not have one with you,
+      ask a classmate to hold theirs up for you.</p>
+
+      <div class="section-title">Warm Up</div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span>
-        Complete the frame three more times on your own phone case, each time choosing a different
-        pair of observations from the Word Bank.</p>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
+        Complete the frame three times about your own phone case, each time with a word from a different group
+        of the Word Bank. Say the word to a partner before you write it.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span>.</li>
+        </ol>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span>
-        Complete the frame three more times on your own phone case, each time choosing a different
-        pair of observations from the Word Bank.</p>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
+        Complete the frame three times about your own phone case. Each time, choose two words from two different
+        groups of the Word Bank, so the sentence says two different things about the case. Then write one
+        sentence about your case with a verb that ends in -s ("It holds a lot." / "It looks worn.").</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">4.</span>It <span class="blank"></span>.</li>
+        </ol>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Write two comparison sentences and two because-sentences (not yet combined) about your own
-        phone case. Then join one comparison-reason pair into a compound sentence.</p>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
+        Write two comparison sentences about your phone case (compare it with an old case, a friend's case, or
+        a classmate's case). Then write two reason sentences, each with a different reason word (because, since, as,
+        given that). Finally, join one comparison to one reason in a single compound sentence with "so" or
+        "and."</p>
+        <p class="starter">My case is thicker than my old one, so it never cracks.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Comparison:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>Comparison:<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>Reason:<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>Reason:<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>Joined:<span class="ans-line-sm"></span></li>
+        </ol>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
-        Write two sentences, each containing a concrete, specific detail about your phone case (not a
-        feeling word). Trade with a partner and ask them: "What does this detail make you think I
-        feel about my case?"</p>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
+        Write two sentences about your phone case. Each one must contain one concrete, specific detail and no
+        feeling word (no love, hate, like, favorite). One of the two should use a softening word (a bit, a
+        little, seems, at least) or an "although" clause. Then trade with a partner and ask, for each sentence:
+        "What does this detail make you think I feel about my case?" Write your partner's guess under each
+        sentence. If the guess is wrong, note which detail you will replace.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+        </ol>
       </div>
 
       <div class="section-title">Plan Your Piece</div>
+      <p class="instr">Your piece will be about a new object: your own jacket, hoodie, or sweater, whatever you
+      are wearing or have with you today. If you have none, borrow a classmate's from the back of their chair
+      and put it on your desk. Then plan your own piece below.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> black &middot; gray &middot; green &middot; red &middot; plain &middot; printed<br />
+        <strong>Material:</strong> cotton &middot; fleece &middot; denim &middot; wool &middot; leather &middot; nylon<br />
+        <strong>Size/fit:</strong> big &middot; small &middot; long &middot; loose &middot; tight &middot; baggy<br />
+        <strong>Condition:</strong> new &middot; faded &middot; worn &middot; torn &middot; stained &middot; clean<br />
+        <strong>Feel/quality:</strong> warm &middot; light &middot; heavy &middot; soft &middot; thick &middot; sturdy
+      </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span>
-        Circle 2-3 words on the Word Bank you plan to use (color, size, one more describing word).</p>
+        Write three words from the Word Bank above that fit your own jacket, one from each of three different
+        groups. Circle the one word you like best, and tell a partner why that word and not the other two.</p>
+        <span class="ans-line-sm"></span>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span>
-        Circle 2-3 words on the Word Bank you plan to use (color, size, one more describing word).</p>
+        Write three words from the Word Bank above that fit your own jacket, one from each of three different
+        groups. Circle the two you would put in "It is ___ and ___." The pair must say two different things about
+        the jacket. Say the sentence aloud to a partner.</p>
+        <span class="ans-line-sm"></span>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Make a two-column note: "What I'm comparing my case to" and "My real reason." Then write one
-        planned compound sentence joining the two.</p>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
+        Fill in the two columns about your jacket (compare it with an old one, a sibling's, a friend's, or one
+        in a store). Then write one planned sentence joining the two with and, but, or so, like Task C's, and one
+        extra detail about the jacket that is not the comparison (the pockets, the zipper, how long you have had
+        it).</p>
+        <table class="rule-table">
+          <tr><th>What I'm comparing my jacket to</th><th>My real reason</th></tr>
+          <tr><td style="height: 60px;"></td><td></td></tr>
+        </table>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Planned sentence:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>Extra detail:<span class="ans-line-sm"></span></li>
+        </ol>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
-        List 3-4 concrete, specific details about your own phone case (not feeling words). Circle the
-        one detail you think most clearly hints at how you feel.</p>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
-        <span class="ans-line"></span>
+        List four or five concrete details about your own jacket, in an order that makes sense: what it looks
+        like, then what it has been through, then when you wear it. Circle the one detail that most clearly
+        hints at how you feel. Then complete the last line. Read your list to a partner without the last line. Can
+        they guess it?</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span><span class="ans-line-sm"></span></li>
+        </ol>
+        <p class="instr">What I want the reader to guess: <span class="blank" style="min-width: 320px;"></span></p>
       </div>
     </div>
   </body>

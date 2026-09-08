@@ -312,30 +312,6 @@
         font-size: 14px;
       }
 
-      .roadmap {
-        margin: 0;
-        padding-left: 0;
-        list-style: none;
-      }
-      .roadmap li {
-        display: flex;
-        gap: 12px;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--rule-light);
-        font-size: 14.5px;
-      }
-      .roadmap li:last-child {
-        border-bottom: none;
-      }
-      .roadmap .unit-num {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-weight: 700;
-        font-size: 12.5px;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        flex-shrink: 0;
-        width: 66px;
-      }
 
       @media print {
         body {
@@ -368,20 +344,20 @@
         <h1>Unit 1A: Describing My Phone Case</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Writing</span>
-          <span class="masthead-tag">Intermediate 1.1.1.0</span>
+          <span class="masthead-tag">Intermediate 1.1.1.2</span>
         </div>
       </div>
-      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to something else and
-      giving a real reason for the comparison. Some of you will also describe it in a way that lets
+      <p class="objective"><strong>Objective:</strong> describe your phone case by comparing it to something
+      else and giving a real reason for the comparison. Some of you will also describe it in a way that lets
       your reader guess how you feel about it, without ever saying the feeling out loud.</p>
 
       <div class="section-title">Word Bank</div>
-      <div class="spotlight-box">
-        <p class="model-step"><strong>Color/pattern:</strong> blue, black, pink, clear, patterned, striped</p>
-        <p class="model-step"><strong>Material/texture:</strong> soft, hard, smooth, rubbery</p>
-        <p class="model-step"><strong>Size/thickness:</strong> thin, thick, big, small</p>
-        <p class="model-step"><strong>Condition:</strong> new, scratched, worn, shiny, cracked</p>
-        <p class="model-step"><strong>Quality:</strong> sturdy, cheap, light, heavy</p>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> blue &middot; black &middot; pink &middot; clear &middot; patterned &middot; striped<br />
+        <strong>Material/texture:</strong> soft &middot; hard &middot; smooth &middot; rubbery<br />
+        <strong>Size/thickness:</strong> thin &middot; thick &middot; big &middot; small<br />
+        <strong>Condition:</strong> new &middot; scratched &middot; worn &middot; shiny &middot; cracked<br />
+        <strong>Quality:</strong> sturdy &middot; cheap &middot; light &middot; heavy
       </div>
 
       <div class="section-title">Grammar</div>
@@ -389,10 +365,12 @@
         <p class="spotlight-label">Comparing Two Things</p>
         <table class="rule-table">
           <tr><th>Rule</th><th>Example</th></tr>
-          <tr><td>Short adjectives (1 syllable): add -er</td><td>thin &rarr; thinner</td></tr>
+          <tr><td>Short adjectives (1 syllable): add -er</td><td>thin &rarr; thinner, hard &rarr; harder</td></tr>
+          <tr><td>One syllable, ending in one vowel + one consonant: double the consonant, add -er</td><td>big &rarr; bigger, thin &rarr; thinner</td></tr>
           <tr><td>Adjectives ending in -y: change y to i, add -er</td><td>shiny &rarr; shinier, heavy &rarr; heavier</td></tr>
-          <tr><td>Longer adjectives (2+ syllables): use "more"</td><td>durable &rarr; more durable, colorful &rarr; more colorful</td></tr>
-          <tr><td>Irregular forms</td><td>good &rarr; better, bad &rarr; worse, far &rarr; farther, little &rarr; less</td></tr>
+          <tr><td>Two-syllable adjectives not ending in -y: use "more"</td><td>modern &rarr; more modern</td></tr>
+          <tr><td>Longer adjectives (3+ syllables): use "more"</td><td>durable &rarr; more durable, expensive &rarr; more expensive</td></tr>
+          <tr><td>Irregular forms</td><td>good &rarr; better, bad &rarr; worse, little &rarr; less</td></tr>
         </table>
         <p class="subgroup-label">Giving a Reason</p>
         <table class="rule-table">
@@ -402,85 +380,103 @@
           <tr><td>as</td><td>I take it everywhere, as it's light.</td></tr>
           <tr><td>given that</td><td>Given that I carry my phone all day, a light case matters most.</td></tr>
         </table>
-        <p class="model-step">Use the frame "It is ___." with a word from the Word Bank.</p>
-        <p class="model-step">When you use a full sentence instead of "It is ___," remember the verb still
-        needs its own -s: it hold<strong>s</strong> up well. / it look<strong>s</strong> nice.</p>
+        <p class="model-step">"Since" and "given that" can start the sentence. Put a comma after that opening
+        part: <em>Since it's light, I take it everywhere.</em></p>
+        <p class="model-step">Use the frame "It is ___." with a word from the Word Bank. For "It is ___ and
+        ___.", pick two words that say two different things (blue and thin, not thin and slim).</p>
+        <p class="model-step">When you write a full sentence instead of "It is ___," the verb needs its own -s:
+        it hold<strong>s</strong> up well. / it look<strong>s</strong> new.</p>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task A.</span> Fill in the blank with the
-        correct comparative form.</p>
+        comparative form of the word in brackets.</p>
         <ol class="fillblank">
           <li><span class="num">1.</span>My old case was thin, but my new one is much <span class="blank"></span> (thick).</li>
           <li><span class="num">2.</span>My old one was plain, but this one is <span class="blank"></span> (colorful).</li>
           <li><span class="num">3.</span>My old one cracked easily, but this one is <span class="blank"></span> (durable) than my old one ever was.</li>
           <li><span class="num">4.</span>This case is <span class="blank"></span> (heavy) than my last one.</li>
           <li><span class="num">5.</span>My friend's case is <span class="blank"></span> (expensive) than mine.</li>
-          <li><span class="num">6.</span>A leather case is usually <span class="blank"></span> (durable) than a plastic one.</li>
+          <li><span class="num">6.</span>A leather case is usually <span class="blank"></span> (soft) than a plastic one.</li>
           <li><span class="num">7.</span>This case's grip is <span class="blank"></span> (tight) than my old one's.</li>
           <li><span class="num">8.</span>My new case is <span class="blank"></span> (good) than my old one in every way.</li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task B.</span> Choose the correct
-        comparative form.</p>
+        <p class="instr-line"><span class="exercise-label">Task B.</span> Circle the correct form in each
+        sentence.</p>
         <ol class="fillblank">
-          <li><span class="num">1.</span>My case is (bigger / more bigger) than my sister's.</li>
-          <li><span class="num">2.</span>This case is (more colorful / colorfuller) than my old one.</li>
-          <li><span class="num">3.</span>My old case was (worse / more bad) than this one.</li>
-          <li><span class="num">4.</span>This case is (gooder / better) at protecting my phone.</li>
-          <li><span class="num">5.</span>A silicone case is (more heavy / heavier) than a plastic one.</li>
-          <li><span class="num">6.</span>This design is (more modern / moderner) than my old case's design.</li>
+          <li><span class="num">1.</span>My case is (bigger / biger) than my sister's.</li>
+          <li><span class="num">2.</span>This design is (moderner / more modern) than my old case's.</li>
+          <li><span class="num">3.</span>A silicone case is (heavier / heavyer) than a plastic one.</li>
+          <li><span class="num">4.</span>My old case was (worse / badder) than this one.</li>
+          <li><span class="num">5.</span>This case feels (more smooth / smoother) than the last one.</li>
+          <li><span class="num">6.</span>The clear case is (shinyer / shinier) than the black one.</li>
+          <li><span class="num">7.</span>My phone is (safer / more safe) in a thick case.</li>
+          <li><span class="num">8.</span>A thin case is (more simple / simpler) to slide into a pocket.</li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Label each sentence as a comparison (C), a because-reason (B), or both (CB).</p>
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;</span>
+        Look at your own phone case. Complete "It is ___." three times, using a word from a
+        different part of the Word Bank each time (a color, then a size, then a condition). Read each sentence
+        to a partner.</p>
+        <span class="ans-line-sm"></span>
+        <span class="ans-line-sm"></span>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;</span>
+        Look at your own phone case. Complete "It is ___ and ___." three times. Each time, choose two
+        words from two different parts of the Word Bank, so the two words say two different things. Read each
+        sentence to a partner.</p>
+        <span class="ans-line-sm"></span>
+        <span class="ans-line-sm"></span>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Label each sentence C (a comparison), R (a reason), or CR (both). Then underline the reason word.</p>
         <ol class="fillblank">
-          <li><span class="num">1.</span>My case is bigger than my sister's.</li>
-          <li><span class="num">2.</span>I like this color because it doesn't show fingerprints.</li>
-          <li><span class="num">3.</span>I chose the bigger case because I drop my phone a lot.</li>
-          <li><span class="num">4.</span>This case is stronger than my old one.</li>
-          <li><span class="num">5.</span>I bought this case because the store had a sale.</li>
-          <li><span class="num">6.</span>My case is more durable than my old one because it never cracks.</li>
-          <li><span class="num">7.</span>I picked this color because it matches my bag.</li>
-          <li><span class="num">8.</span>This case is heavier than a plastic one.</li>
+          <li><span class="num">1.</span>My case is bigger than my sister's. <span class="blank"></span></li>
+          <li><span class="num">2.</span>I like this color since it doesn't show fingerprints. <span class="blank"></span></li>
+          <li><span class="num">3.</span>I chose the thicker case because I drop my phone a lot. <span class="blank"></span></li>
+          <li><span class="num">4.</span>Given that I ride my bike to work, a sturdy case matters. <span class="blank"></span></li>
+          <li><span class="num">5.</span>This case is heavier than a plastic one, as it has a metal ring on the back. <span class="blank"></span></li>
+          <li><span class="num">6.</span>My case is more worn than my brother's. <span class="blank"></span></li>
+          <li><span class="num">7.</span>I picked the clear one because I wanted to see the phone's color. <span class="blank"></span></li>
+          <li><span class="num">8.</span>A rubbery case is safer than a hard one because it bounces instead of cracking. <span class="blank"></span></li>
         </ol>
       </div>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;</span>
-        Using your own phone case, complete "It is ___." three times, using a different
-        word from the Word Bank each time (color, then size, then condition).</p>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
-      </div>
-
-      <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;</span>
-        Using your own phone case, complete "It is ___ and ___." twice, choosing a new
-        pair of words from the Word Bank each time.</p>
-        <span class="ans-line-sm"></span>
-        <span class="ans-line-sm"></span>
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Do Task E. Then rewrite sentences 2, 4, and 5, each with a different reason word from the Grammar box
+        (because, since, as, or given that), keeping the same meaning. If the new word can start the sentence,
+        move the reason to the front and add the comma.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
       </div>
 
       <div class="masthead masthead-later">
         <h1>Unit 1B: Describing My Phone Case</h1>
       </div>
-      <p class="objective"><strong>Objective:</strong> You will describe your phone case by comparing it to something else and
-      giving a real reason for the comparison. Some of you will also describe it in a way that lets
+      <p class="objective"><strong>Objective:</strong> describe your phone case by comparing it to something
+      else and giving a real reason for the comparison. Some of you will also describe it in a way that lets
       your reader guess how you feel about it, without ever saying the feeling out loud.</p>
 
       <div class="task-block">
-        <p class="instr-line"><span class="exercise-label">Task A.</span> Find and fix the mistakes in
-        the paragraph below. There are 8 mistakes to find.</p>
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Find and fix the mistakes in the
+        paragraph below. There are 8 mistakes. Two of the sentences have no mistakes at all.</p>
         <div class="spotlight-box">
-          <p>My phone case is more good than my old one. It hold my phone better, and it don't crack.
-          I like it because it are light. It is easyer to carry than my old case. My sister's case is
-          more small than mine, but she don't mind. Her case are older than mine too.</p>
+          <p>My phone case is more good than my old one. It hold my phone better, and it don't crack. I like it
+          because it are light. It is easyer to carry than my old case, since it is thiner. My sister's case is
+          more small than mine, but she doesn't mind. Her case is more shiny than mine, and it is older too.</p>
         </div>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
@@ -490,29 +486,75 @@
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span>
-        Pick a belonging of your own (a bag, a watch, a wallet, a pair of shoes). Complete "It is
-        ___." twice more, each time choosing a genuinely different observation from the Word Bank
-        (color, size, material, condition).</p>
+        Pick a belonging of your own (a bag, a watch, a wallet, a pair of shoes). Complete "It is ___." three
+        times, each time with a word from a different part of the Word Bank.</p>
+        <span class="ans-line-sm"></span>
         <span class="ans-line-sm"></span>
         <span class="ans-line-sm"></span>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span>
-        Pick a belonging of your own (a bag, a watch, a wallet, a pair of shoes). Complete "It is
-        ___ and ___." twice more, each time choosing a genuinely different observation from the
-        Word Bank (color, size, material, condition).</p>
+        Pick a belonging of your own. Complete "It is ___ and ___." three times, each time with two words
+        from two different parts of the Word Bank. Then write one full sentence about it using a verb with -s
+        (It looks new. / It holds a lot.).</p>
         <span class="ans-line-sm"></span>
         <span class="ans-line-sm"></span>
+        <span class="ans-line-sm"></span>
+        <span class="ans-line"></span>
       </div>
 
       <div class="task-block">
         <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
-        Write one original sentence using each word: bigger, more colorful, because, more durable,
-        heavier, easier.</p>
+        Write one sentence of your own using each word, about your phone case or another belonging: bigger,
+        more colorful, because, more durable, heavier, easier. At least two of your sentences must have both a
+        comparison and a reason.</p>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
         <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Write three sentences. Each one needs a comparison, a reason word (since, as, or given that), and one of
+        these softening words: a bit, a little, seems, at least. Then pick one of your three sentences and write
+        it again without the softening word. In one line, say which version sounds more sure of itself.</p>
+        <div class="starter">This case seems a bit heavier than my old one, since it has a metal ring on the back.</div>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="section-title">See How It's Done</div>
+      <p class="instr">You won't write your own full description until later in this unit. These examples show
+      what you're working toward. Read all of them, then find the one that matches your stars and the one just
+      above it.</p>
+      <div class="spotlight-box">
+        <p class="model-step"><strong>&#9733; Example</strong> Maria looked at her own phone case.
+        "It is ___." Maria wrote: <em>It is blue.</em></p>
+        <p class="model-step"><strong>&#9733;&#9733; Example</strong> Maria looked at her case again.
+        "It is ___ and ___." Maria wrote: <em>It is blue and thin.</em></p>
+        <p class="model-step"><strong>&#9733;&#9733;&#9733; Example</strong> This is my phone case. It is blue
+        and thin, thinner than my old one, because I wanted something that fits easily in my pocket. It has a
+        strong grip, so it never slips out of my hand. I chose the case with the best reviews online, and I
+        clean it once a week. It is more expensive than my old case, but that does not bother me.</p>
+        <p class="model-step"><strong>&#9733;&#9733;&#9733;&#9733; Example</strong> My phone case travels
+        everywhere with me. It is a deep blue, and one corner has gone soft and rounded from years of dropping
+        it on hardwood floors. The stickers cover almost the whole back now. One is from a hiking trail up
+        north, one is from a coffee shop that closed years ago, and one my daughter picked out herself. I wipe
+        the case down two or three times a day, more out of habit than anything else. A newer, sleeker case
+        would probably protect my phone a bit better. I have never once thought about switching it out.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> Find the example that matches your
+        stars and the one just above it. Tell a partner one thing the example above yours does that yours does
+        not.</p>
       </div>
 
     </div>

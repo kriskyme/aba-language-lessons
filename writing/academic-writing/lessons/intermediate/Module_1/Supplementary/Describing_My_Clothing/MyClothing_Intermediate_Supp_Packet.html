@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Describing My Clothing: Supplement</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+      .idiom-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-left: 6px;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit A: Describing My Clothing</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing</span>
+          <span class="masthead-tag">Intermediate Module 1 Supplement</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> You will describe one piece of your own clothing, any piece
+      you choose, by comparing it to something else and giving a real reason for the comparison. Some of you will
+      also describe it in a way that lets your reader guess how you feel about it, without ever saying the feeling
+      out loud.</p>
+
+      <div class="section-title">Choose Your Item</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Circle one piece of clothing you are
+        wearing or have with you today, or write your own on the line: <strong>shirt &middot; T-shirt &middot; jacket
+        &middot; hoodie &middot; sweater &middot; jeans &middot; pants &middot; skirt &middot; dress &middot; shoes
+        &middot; sneakers &middot; boots &middot; hat &middot; cap &middot; scarf &middot; socks &middot; belt</strong>.
+        Put it where you can see it, or look down at it. You will write about this one item for the whole unit.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>My item: <span class="blank" style="min-width: 220px;"></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> black &middot; white &middot; gray &middot; blue &middot; red &middot; plain &middot; striped &middot; printed<br />
+        <strong>Material:</strong> cotton &middot; denim &middot; wool &middot; leather &middot; nylon &middot; fleece &middot; silk &middot; rubber<br />
+        <strong>Size/fit:</strong> big &middot; small &middot; long &middot; short &middot; loose &middot; tight &middot; baggy<br />
+        <strong>Condition:</strong> new &middot; faded &middot; worn &middot; torn &middot; stained &middot; clean &middot; scuffed<br />
+        <strong>Feel/quality:</strong> warm &middot; light &middot; heavy &middot; soft &middot; thick &middot; sturdy &middot; comfortable<br />
+        <strong>Parts:</strong> sleeve &middot; collar &middot; button &middot; zipper &middot; pocket &middot; hood &middot; laces &middot; sole &middot; heel &middot; brim &middot; hem &middot; strap
+      </div>
+      <p class="instr">Use these words if you need them. You may also use your own. Not every group fits every
+      item: shoes have soles and laces, a hat has a brim, a shirt has a collar. Use the parts your item really has.</p>
+
+      <div class="section-title">Quick Review: Comparing and Giving a Reason</div>
+      <div class="spotlight-box">
+        <p>To compare your item with another one, add <strong>-er</strong> to a short word (thicker, lighter, older)
+        or put <strong>more</strong> in front of a long word (more comfortable, more expensive). Then say what you
+        are comparing it to with <strong>than</strong>.</p>
+        <table class="rule-table">
+          <tr><th>Reason word</th><th>Example</th></tr>
+          <tr><td>because</td><td>These boots are heavier than my sneakers because the soles are thick.</td></tr>
+          <tr><td>since</td><td>My scarf is longer than my sister's since I like to wrap it twice.</td></tr>
+          <tr><td>as</td><td>This shirt is looser than my others, as I bought it one size up.</td></tr>
+          <tr><td>given that</td><td>Given that I walk to work, a lighter shoe is the better choice for me.</td></tr>
+        </table>
+        <p class="model-step">A real reason tells the reader something true about you or the item. "Because I like
+        it" is not a reason yet; "because the pockets are deep enough for my keys" is.</p>
+      </div>
+
+      <div class="section-title">Quick Review: Joining Two Sentences</div>
+      <div class="spotlight-box">
+        <p>Join two complete sentences with a comma and <strong>and</strong> (adds), <strong>but</strong>
+        (contrasts), or <strong>so</strong> (gives a result): "My jeans are faded, but they still fit." The comma
+        goes before the connector, and only when a complete sentence follows it. "My jeans are faded and soft"
+        takes no comma, because "soft" is not a sentence.</p>
+        <table class="rule-table">
+          <tr><th>Shape</th><th>Example</th><th>Comma?</th></tr>
+          <tr><td>although, clause second</td><td>I wear this cap every day although the brim is bent.</td><td>No comma.</td></tr>
+          <tr><td>Although, clause first</td><td>Although the brim is bent, I wear this cap every day.</td><td>Comma after the first part.</td></tr>
+        </table>
+        <p class="model-step">"But" puts two facts side by side as equals. "Although" or "even though" pushes one
+        fact into the background and makes the other one the point.</p>
+      </div>
+
+      <div class="section-title">Try It</div>
+      <p class="instr">Do the tasks with your number of stars. When you finish, read your sentences to a partner
+      who worked with a different number of stars.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span>
+        Look at your item. Complete the frame three times, each time with a word from a different group of the
+        Word Bank (a color, then a size or a material, then a condition). Say the word out loud before you write
+        it. Read each finished sentence to a partner.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span>.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span>
+        Look at your item. Complete the frame three times. Each time, choose two words from two different groups
+        of the Word Bank, so the sentence says two different things about the item (blue and soft, not big and
+        long). Then write one sentence about what your item does, with a verb that ends in -s ("It fits well." /
+        "It keeps me warm." / "It looks new."). Read each sentence to a partner.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">4.</span>It <span class="blank"></span>.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Write two comparison sentences about your item (compare it with an old one, a friend's, a classmate's, or
+        one in a store). Then write two reason sentences, each with a different reason word (because, since, as,
+        given that). Finally, join one comparison to one reason in a single sentence with "so" or "and," with the
+        comma in the right place.</p>
+        <p class="starter">These sneakers are lighter than my old pair, so my feet do not hurt after work.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Comparison:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>Comparison:<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>Reason:<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>Reason:<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>Joined:<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Write two sentences about your item. Each one must contain one concrete, specific detail and no feeling
+        word (no love, hate, like, favorite). One of the two should use a softening word (a bit, a little, seems,
+        at least) or an "although" clause. Then trade with a partner and ask, for each sentence: "What does this
+        detail make you think I feel about my item?" Write your partner's guess under each sentence. If the guess
+        is wrong, note which detail you will replace.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Find and fix the mistakes in the paragraph below. There are 8 mistakes: some are word forms, some are
+        missing commas, and two are it's/its. The first two sentences have no mistakes at all.</p>
+        <div class="spotlight-box">
+          <p>My white sneakers are more comfortable than my old pair, and they feel much lighter. I chose them
+          because my old pair hurt my feet after a long walk. Its the third pair I have owned from this brand but I
+          will not buy another. The laces is thinner than the old ones, and they come untied more easy. My brother
+          says his sneakers are more cheap than mine so he will never pay this much. I think mine are safer since
+          the sole grip the floor, and they do not slip when it rains. Given that I walk to work every day, a light
+          shoe is the better choice for me, and its worth the price.</p>
+        </div>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Find and fix the mistakes in the paragraph below. There are 8 mistakes: some are word forms, some are
+        missing commas, and two are it's/its. The first two sentences have no mistakes at all. When you have fixed
+        them, mark one place where "although" could replace "but," and write that sentence on the last line.</p>
+        <div class="spotlight-box">
+          <p>My white sneakers are more comfortable than my old pair, and they feel much lighter. I chose them
+          because my old pair hurt my feet after a long walk. Its the third pair I have owned from this brand but I
+          will not buy another. The laces is thinner than the old ones, and they come untied more easy. My brother
+          says his sneakers are more cheap than mine so he will never pay this much. I think mine are safer since
+          the sole grip the floor, and they do not slip when it rains. Given that I walk to work every day, a light
+          shoe is the better choice for me, and its worth the price.</p>
+        </div>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="section-title">Plan Your Piece</div>
+      <p class="instr">Next time you will write about your item. Plan it now. Keep looking at the real thing while
+      you plan.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;</span>
+        Write three words from the Word Bank that fit your item, one from each of three different groups. Circle
+        the one word you like best, and tell a partner why that word and not the other two.</p>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;</span>
+        Write three words from the Word Bank that fit your item, one from each of three different groups. Circle
+        the two you would put in "It is ___ and ___." The pair must say two different things about the item. Say
+        the sentence aloud to a partner.</p>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Fill in the two columns about your item (compare it with an old one, a sibling's, a friend's, or one in a
+        store). Then write one planned sentence joining the two with and, but, or so, like Task D's, and one extra
+        detail about the item that is not the comparison (a part from the Word Bank: the pocket, the laces, the
+        collar, how long you have had it).</p>
+        <table class="rule-table">
+          <tr><th>What I'm comparing my item to</th><th>My real reason</th></tr>
+          <tr><td style="height: 60px;"></td><td></td></tr>
+        </table>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Planned sentence:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>Extra detail:<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        List four or five concrete details about your item, in an order that makes sense: what it looks like, then
+        what it has been through, then when you wear it. Circle the one detail that most clearly hints at how you
+        feel. Then complete the last line. Read your list to a partner without the last line. Can they guess it?</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span><span class="ans-line-sm"></span></li>
+        </ol>
+        <p class="instr">What I want the reader to guess: <span class="blank" style="min-width: 320px;"></span></p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit B: Describing My Clothing</h1>
+      </div>
+      <p class="objective"><strong>Objective:</strong> You will describe one piece of your own clothing, any piece
+      you choose, by comparing it to something else and giving a real reason for the comparison. Some of you will
+      also describe it in a way that lets your reader guess how you feel about it, without ever saying the feeling
+      out loud.</p>
+      <p class="instr">Bring out the same item you chose last time and put it where you can see it. If you do not
+      have it today, choose a new item you are wearing and write its name here: <span class="blank" style="min-width: 220px;"></span></p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color/pattern:</strong> black &middot; white &middot; gray &middot; blue &middot; red &middot; plain &middot; striped &middot; printed<br />
+        <strong>Material:</strong> cotton &middot; denim &middot; wool &middot; leather &middot; nylon &middot; fleece &middot; silk &middot; rubber<br />
+        <strong>Size/fit:</strong> big &middot; small &middot; long &middot; short &middot; loose &middot; tight &middot; baggy<br />
+        <strong>Condition:</strong> new &middot; faded &middot; worn &middot; torn &middot; stained &middot; clean &middot; scuffed<br />
+        <strong>Feel/quality:</strong> warm &middot; light &middot; heavy &middot; soft &middot; thick &middot; sturdy &middot; comfortable<br />
+        <strong>Parts:</strong> sleeve &middot; collar &middot; button &middot; zipper &middot; pocket &middot; hood &middot; laces &middot; sole &middot; heel &middot; brim &middot; hem &middot; strap
+      </div>
+      <p class="instr">Use these words if you need them. You may also use your own.</p>
+
+      <div class="section-title">Write It</div>
+      <p class="instr">Use your plan from last time. Write about your item. When you finish, be ready to read one
+      line aloud to someone who worked with a different number of stars.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Pick
+        two words from the Word Bank that could go in the blank. Say which one fits your item better and why. Then
+        sound out that word and write it in the blank.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>My two words: <span class="blank"></span> or <span class="blank"></span></li>
+          <li><span class="num">2.</span>It is <span class="blank"></span>.</li>
+        </ol>
+        <p class="instr">Now draw your item in the box and label two or three parts of it with words from the Parts
+        group (sleeve, pocket, laces, brim). Say each word out loud as you write it.</p>
+        <div class="image-placeholder">Draw your item here and label two or three parts.</div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span>
+        Pick two words from the Word Bank that could go in the first blank. Say which one fits your item better and
+        why. Then sound out both words for the sentence and write them. The two words must describe two different
+        things (color and size, not size and size). Then add one sentence about what the item does, with a verb
+        that ends in -s (It keeps me warm. It fits well. It looks new.).</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>My two words for the first blank: <span class="blank"></span> or <span class="blank"></span></li>
+          <li><span class="num">2.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+          <li><span class="num">3.</span>It <span class="blank"></span> <span class="blank"></span>.</li>
+        </ol>
+        <p class="instr">Now draw your item in the box and label two or three parts of it with words from the Parts
+        group. Say each word out loud as you write it.</p>
+        <div class="image-placeholder">Draw your item here and label two or three parts.</div>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Write one paragraph describing your item. Follow these steps, one sentence each. Aim for 3-6 sentences and
+        about 40-90 words.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Say what the item is.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Compare it to another one (an old one, a sibling's, a friend's, one in a store) using -er or more.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Give the reason using because, since, as, or given that.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Join two of your ideas into one sentence with and, but, or so, with a comma before the connector.</span></li>
+          <li><span class="num">5.</span><span class="qbody">End with one more real detail (a part of it, its weight, how it looks after a year).</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <ol class="qlist">
+          <li><span class="num">6.</span><span class="qbody">My count: <span class="blank"></span> sentences / <span class="blank"></span> words</span></li>
+        </ol>
+        <p class="instr">Finished early? Add a second reason using a different reason word from the one you already
+        used. Stay inside 6 sentences.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Write one paragraph describing your item, using the details you listed and ordered last time. Put your
+        circled detail where it carries the most weight, usually near the end. Aim for 6-9 sentences and about
+        90-150 words. No sentence may say the feeling itself ("I love these boots" does not count; a specific
+        detail does).</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">My count: <span class="blank"></span> sentences / <span class="blank"></span> words</span></li>
+        </ol>
+        <p class="instr">Finished early? Rewrite one of your "but" sentences as an "although" sentence. Cross out
+        the old version with one line so both stay on the page.</p>
+      </div>
+
+      <div class="section-title">Check Your Own Work</div>
+      <p class="instr"><span class="stars">&#9733;</span> <span class="stars">&#9733;&#9733;</span> Read your sentence
+      to a partner. Does your word match your item? Point to the part of the item your word describes. Two stars:
+      are your two words about two different things? Does the sentence make sense out loud?</p>
+      <p class="instr"><span class="stars">&#9733;&#9733;&#9733;</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+      Mark each item on your own paragraph as you find it: circle the comparing word, underline the reason word,
+      and put a box around the comma in your joined sentence.</p>
+      <ol class="qlist">
+        <li><span class="num">1.</span><span class="qbody">Every sentence has a subject and a verb, and verbs after "it" or "she" end in -s where needed (it fits, it keeps).</span></li>
+        <li><span class="num">2.</span><span class="qbody">I used at least one comparing form (-er or more) correctly, and it compares my item to something specific.</span></li>
+        <li><span class="num">3.</span><span class="qbody">I gave one clear reason using because, since, as, or given that.</span></li>
+        <li><span class="num">4.</span><span class="qbody">I used at least one sentence joined with and, but, or so, with the comma before the connector.</span></li>
+        <li><span class="num">5.</span><span class="qbody"><span class="stars">&#9733;&#9733;&#9733;</span> I have one comparison and one reason that is stated directly. I can point to both.</span></li>
+        <li><span class="num">6.</span><span class="qbody"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> I have one detail that shows how I feel about the item, and there is no feeling word (love, like, hate, favorite) anywhere in that sentence.</span></li>
+        <li><span class="num">7.</span><span class="qbody">"It's" (it is) and "its" (belonging to it) are used correctly everywhere they appear.</span></li>
+        <li><span class="num">8.</span><span class="qbody">Punctuation and capital letters are correct, including a capital letter after every period.</span></li>
+        <li><span class="num">9.</span><span class="qbody">My sentence count and word count are inside my range.</span></li>
+      </ol>
+      <p class="instr">Anything you change now: cross out the old version with a single line, do not erase it, and
+      write the new version next to it or above it, so both stay on the page.</p>
+
+      <div class="section-title">Share a Line</div>
+      <div class="discuss-block">
+        <p class="instr">Read only the last line of your piece to a partner. Your partner answers one question.
+        Write their answer in one word in the margin.</p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span><span>Partner: which part of the item does the word describe? Point to it.</span></li>
+          <li><span class="stars">&#9733;&#9733;</span><span>Partner: which part of the item does each word describe? Point to both.</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;</span><span>Partner: does the last sentence add a new detail, or repeat something already said?</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>Partner: what do you think the writer feels about this item, and which sentence told you?</span></li>
+        </ul>
+      </div>
+
+      <div class="section-title">One More Object</div>
+      <p class="instr">Now do the same thing with something you did not plan for: your bag or backpack. If you have
+      none, use the chair you are sitting on. Say your sentence to a partner first, then write it.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span> Look
+        at your bag. Say one word for it, then write it.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span>.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span>
+        Look at your bag. Say two words for it that describe two different things, then write them.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is <span class="blank"></span> and <span class="blank"></span>.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Compare your bag to your partner's bag in one sentence with -er or more, and give the reason with a reason
+        word.</p>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Write one sentence about your bag with one concrete detail and no feeling word. Your partner says what they
+        think you feel about it.</p>
+        <span class="ans-line"></span>
+        <p class="wrapup">Keep your piece.</p>
+      </div>
+    </div>
+  </body>
+</html>

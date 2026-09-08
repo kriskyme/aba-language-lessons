@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.0)
+# Student Packet Style Guide (v2.4)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -302,6 +302,7 @@ p {
 }
 
 .image-placeholder {
+  /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
   border: 2px dashed var(--ink);
   padding: 44px 20px;
   text-align: center;
@@ -480,6 +481,10 @@ p {
 .task-block .instr-line .stars {
   margin-right: 8px;
 }
+/* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+   A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+   A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+   Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
 .wordbank {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 13px;
@@ -606,7 +611,7 @@ Head fragment showing the doctype/meta conventions together:
 ## D. Extending this stylesheet
 
 A modality may add new CSS classes only for structural elements genuinely not covered by the base
-stylesheet above (a citation box, a fillable table, a picture placeholder grid - whatever that
+stylesheet above (a citation box, a fillable table, a picture grid - whatever that
 modality's document structure needs that no existing class already provides). Those classes live in
 §H of this file, under the modality's own heading, following the same rule formatting (§C) - not
 inline in the modality's packet prompt, so one paste covers every modality and a fix to a delta
@@ -633,6 +638,7 @@ these.
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
 | Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
 | Section numbers, prompt names, version narrative | Never appear. |
+| A previous lesson's notes, planning, examples, or board ("last time," "your planning notes," "the example from earlier this week") | Never referenced; whatever this day's tasks need is reprinted or rebuilt in this packet (Quality Standards §D9). Only the piece a Set carries forward may be "the piece you wrote last time." |
 
 If a source lesson uses a term not listed here or in the modality's own rows, apply the same principle:
 state the plain action the student takes, never the pedagogical name for it.
@@ -660,8 +666,16 @@ first), repeating the instruction text and splitting any tier-specific clause al
 single-star blocks in a row each get their own advancing letter; never reuse "Task A" for each tier.
 Reletter subsequent Tasks so the sequence stays continuous. Do not reorder a day's pedagogical sequence
 to force one global ascending run; only the letters change. Task lettering restarts at A in each masthead
-section. Unlettered content (a self-check list, a sentence-stem list) may combine two star tags on one
-item where both tiers genuinely share it.
+section. A self-check list ("Check Your Own Work") is a lettered Task like any other: one Task per star
+level that has a list, each carrying exactly one star tag and repeating the items the levels share; never a
+star tag on an individual list item, never two star tags on one line, and never one list with "three
+stars: ..." notes inside it. An instruction shared by every level (the cross-out rule, "mark it as each
+line says") sits as a plain line under the section title, before the Tasks. Sentence-stem lists keep
+their one-star-per-stem form (below).
+
+**No conditional extra work.** A packet never prints "Finished early?", "If you have time," "If you
+finish," or any add-on gated on speed. A heavier tier is its own lettered, starred Task in the sequence or
+is left out; the teacher decides live who moves on.
 
 **Ascending order within a Task.** Where a Task contains more than one star-rated block, blocks appear
 in ascending star order regardless of the source's order.
@@ -689,12 +703,23 @@ question are not numbered.
 
 **Placement.** A word bank, sentence frame, starter box, or model sits immediately before the item(s) it
 serves, inside that item's block if it serves only one, never after the last item that needs it.
+
+**Word banks.** One markup form in every modality. A bank is a `.wordbank` div containing plain inline
+text: a single-list bank is one line, `<strong>Word bank:</strong>` then the items separated by
+` &middot; `; a bank with categories is one `<strong>Category:</strong>` line per category, items
+separated by ` &middot; `, lines joined by `<br />`. Nothing inside the div is wrapped in `<p>`,
+`.model-step`, or any other class, and items are never comma-separated. A bank serving one task sits
+inside that task block with no heading; a bank serving several tasks or a whole unit sits under a
+`.section-title` reading exactly "Word Bank" (not "Your Word Bank," not a topic name), directly before
+the first task that uses it, with any instruction about the bank after the div, not before it.
 Fixed-frame items state their full instruction inline; a standalone frame box is reserved for a task with
 a genuine speak-it-aloud step, and it renders before any instruction that refers back to it.
 
 **Multiple choice.** Options fold into the question as an inline parenthetical list, one instruction line
-at the top of the task block, no repeated verb per item and no option-per-line layout. Genuinely
-picture-based items get real labeled placeholder boxes, not words standing in for images.
+at the top of the task block, no repeated verb per item and no option-per-line layout. A genuinely
+picture-based item embeds its real images (`.pic-options`, an `<img>` inside each `.pic-box`, the caption in
+`.pic-label`); a packet never ships an empty picture box or a "[TEACHER: insert ...]" note. If no image can be
+embedded, the item is rewritten around the student's own object or one in the room (Quality Standards §D8).
 
 ## G. The Markdown document is the source of truth; the packet is always a regeneration
 
@@ -726,7 +751,7 @@ added to a packet only when generating that modality's packet.
 
 `.citebox` (What You'll Watch citation), `.notes-table` (Listening Notes organizer), `.upside-down`
 (closing script printed inverted), `.task-instr` (single top-of-task instruction line), `.pic-options`/
-`.pic-option` (picture-placeholder items), `.match-list`/`.match-row` (matching items, one pair per line,
+`.pic-option` (picture items with embedded images), `.match-list`/`.match-row` (matching items, one pair per line,
 label above a full-width `.ans-line`), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
 (lettered answer choices), `.time-list` (response-time windows), `.reader-copy`/`.reader-warn`
 (teacher-only page in a separate file).
@@ -787,6 +812,7 @@ label above a full-width `.ans-line`), `.qitem` (standalone numbered question), 
   width: 110px;
 }
 .pic-option .pic-box {
+  /* holds an embedded <img>; never printed empty for the teacher to fill */
   border: 2px dashed var(--ink);
   height: 70px;
   display: flex;
@@ -976,14 +1002,18 @@ Run this list first, then the modality's own list.
 5. Opening masthead only carries the two-tag `.masthead-meta` stack (modality label; Band plus
    `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field, kicker, subtitle, or footer?
 6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
-   instruction before the task list; one star per lettered Task; letters continuous; ascending order
-   within a Task; no star inside any teaching callout? (§F)
+   instruction before the task list; one star per lettered Task, self-check lists included, with no
+   star on a list item or two stars on a line; letters continuous; ascending order within a Task; no star
+   inside any teaching callout; no "Finished early?" or other speed-gated add-on? (§F)
 7. Every teaching callout before the tasks that depend on it? (§F)
 8. Every standalone question numbered; every bank, frame, starter, or model placed before the items it
-   serves; multiple choice inline with one top instruction line; picture items with real placeholders? (§F)
+   serves; multiple choice inline with one top instruction line; picture items with embedded images and no
+   empty placeholder or "[TEACHER: insert ...]" note anywhere? (§F)
 9. Stems listed alone, no coaching notes? (§F)
-10. Callout boxes reserved for genuine spotlights; word banks using only the light dashed-rule exception;
-    no other ordinary content bordered?
+10. Callout boxes reserved for genuine spotlights; word banks using only the light dashed-rule exception
+    and the one §F markup form (bold label, `&middot;` separators, `<br />` between category lines, a
+    "Word Bank" section title only when the bank serves more than one task); no other ordinary content
+    bordered?
 11. Answer space sized to the expected answer (`.blank` inside a sentence; `.ans-line-sm`/`.ans-line`
     standalone below a prompt, never mid-sentence), none where no written response is needed?
 12. Every decorative, non-load-bearing horizontal rule removed?
@@ -992,8 +1022,11 @@ Run this list first, then the modality's own list.
     §C markup conventions followed?
 14. Produced by regenerating from the current Markdown, not by hand-editing a previous HTML for a
     content change? (§G)
+15. No reference to an earlier lesson's notes, planning, examples, or board, other than the carried piece;
+    at Beginner and Intermediate no reflection question, only actions with a visible product? (§E; Quality
+    Standards §D9, §E6)
 
 ## Changelog
 
-**Current version: v2.0.** For the full dated version history and the reasoning behind each
+**Current version: v2.4.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

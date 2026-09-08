@@ -1,9 +1,10 @@
-# Academic Writing Lesson Generation Prompt (v6)
+# Academic Writing Lesson Generation Prompt (v6.3)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
 against the Writing rows of `learningobjectives.csv`. What a Writing Set's lessons share is not an anchor text
-but one **Scenario**, carried from grammar input toward a finished piece; each task Level gets its own short
+but one **Scenario**, carried from grammar input on a practice object to a finished piece on a draft object
+(0.1a); each task Level gets its own short
 **Mentor Text** or **Mentor Essay** because the form of a Level's output changes, not just its depth. For
 Intermediate, Advanced, and Proficient, one Scenario spans a **Module Pair** (two consecutive Sets, 8 lessons),
 each Module contributing its own Grammar/Essay Focus to the same piece (Conventions §C; "THE MODULE PAIR"
@@ -16,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.3.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -70,12 +71,25 @@ Design deliberately for whichever boundary a band spans (0.1a, and the dual-trac
 section); never let a spanning band collapse into two disconnected tracks that share a topic. No band spans both
 boundaries.
 
-**0.1a The shared element is the Scenario.** One real-world writing situation, stimulus (a picture set, a short
-prompt, a situation description), and Module-aligned purpose for writing, identical across every task Level.
+**0.1a The shared element is the Scenario.** One real-world writing situation, stimulus (the student's own belonging or an object in the room; a picture
+only per Quality Standards §D8), and Module-aligned purpose for writing, identical across every task Level.
 Both grammar focuses, the Mentor Ladder, the prewriting stimulus, the drafting task, and the editing checklist are
-all built on it. Every task Level in one lesson describes the same routine, person, or object.
+all built on it. Within any one activity, every task Level describes the same routine, person, or object.
 
-**0.1b Leveled Mentor Ladder.** One short worked model per task Level, all on the same Scenario, each modeling
+**Two objects, one Scenario (Conventions §C).** The Scenario names a **practice object** and a **draft object**,
+both the student's own belongings (a place or person where the Module's form calls for one), fixed once by the
+plan. The draft object may be one of a short printed list of like objects (three or four: jacket, hoodie,
+sweater, shirt) that the student circles at the start of each drafting lesson, so no student is stuck without
+one. The practice object carries grammar input, controlled practice, the frame rounds, and the Mentor Ladder from
+Lesson 1 through Lesson 2 Day 1. Lesson 2 Day 2's prewriting introduces the draft object together with a **Draft
+Word Bank** (the Set's Word Bank groups, refilled with words that fit the draft object; printed in Lesson 2's Day 2
+unit and reprinted in every later lesson), and every later position writes about the draft object only: Lesson 3's
+draft, Lesson 4's revision and hand-off, a Pair's Lessons 5-8. The draft is the student's first transfer of the
+taught grammar to an object they did not drill on; the ladder stays on the practice object because it models
+form, not content. Never draft about the practice object, and never change the draft object after Lesson 2 Day
+2. The Closing Transfer Check's object (0.8) is a third, separate object, unused elsewhere in the Set.
+
+**0.1b Leveled Mentor Ladder.** One short worked model per task Level, all on the practice object, each modeling
 exactly that Level's output form and required feature (0.2): a **Mentor Text** at Levels 1-5 (a word, a frame, or
 a paragraph), a **Mentor Essay** at Levels 6-8 (a complete essay, not a longer paragraph). Beginner has 3 Mentor
 Texts; Intermediate 4 Mentor Texts; Advanced and Proficient 4 models mixing Texts and Essays. Present them
@@ -105,13 +119,13 @@ Level or vice versa.
 - Output: one word, sounded out and spelled from known letter-sound patterns, into a single provided frame ("big
   ___"), prompted by a picture.
 - Grammar: none beyond the memorized frame. Vocabulary: concrete, high-frequency, phonics-decodable (CVC).
-- Required feature: the word comes from the student sounding it out against a picture prompt, not from copying a
-  printed list. This "genuine choice inside a constrained task" is Respectful Tiers at this Level (0.5).
+- Required feature: the word comes from the student sounding it out against the real object in front of them
+  (or an embedded picture, per Quality Standards §D8), not from copying a printed list. This "genuine choice inside a constrained task" is Respectful Tiers at this Level (0.5).
 
 **Level 2 (A2) - Guided Frame Composition**
 - Output: one word spelled into a one-slot fixed frame that forms a complete sentence ("It is ___.").
 - Grammar: the frame's single fixed structure. Vocabulary: concrete, high-frequency.
-- Required feature: genuine picture-prompted choice inside a full-sentence frame.
+- Required feature: genuine object-prompted choice inside a full-sentence frame.
 
 **Level 3 (B1) - Guided Frame Composition**
 - Output: two words spelled into a two-slot frame ("It is ___ and ___." or a two-sentence sequence).
@@ -203,6 +217,14 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
     essay, positioned next to it, without raising Level 5's own output past one paragraph?
 14. **Paired tier (0.4c):** each single-audience activity was considered for a lighter or heavier adjacent tier,
     added only where it closes a real gap, drawing only on grammar already taught by that point?
+15. **Practice object vs draft object (0.1a):** positions 1-2 through Lesson 2 Day 1 and the Mentor Ladder use the
+    practice object; Lesson 2 Day 2's prewriting introduces the draft object and its Draft Word Bank; every later
+    position writes about the draft object only, with the Draft Word Bank reprinted; the Closing Transfer Check
+    uses a third object?
+16. **Self-contained across lessons; concrete prompts (Quality Standards §D9, §E6):** nothing this lesson asks
+    for depends on Lesson 2's prewriting or Lesson 1's ladder being in hand (the carried draft excepted); the
+    drafting lesson's plan is rebuilt in its own packet; at Beginner and Intermediate no printed question asks
+    the student about their own plan, process, or what a model does?
 
 If any check fails, rewrite before proceeding. Do not build the drafting and editing lessons on a Mentor Ladder
 that fails its own ceilings.
@@ -290,7 +312,7 @@ add up to 75 in the timing column. Minimums for every generated lesson:
   confusable-pair drill: at least 6. An editing paragraph: at least 6-8 sentences with 6-8 verified errors.
 - **Activities per grammar/practice day** (Lessons 1-2, both days): at least 3 distinct activities from the 0.4
   bank, not the same one or two types reused.
-- **Frame-regime parity:** Levels 1-3 get more picture-based rounds, not one, so they have as much printed material
+- **Frame-regime parity:** Levels 1-3 get more rounds on their own and classmates' belongings, not one, so they have as much printed material
   as their composition-regime classmates.
 - **Essay-regime parity:** Levels 6-8's Essay Focus track gets the same standard in its own shapes: a full short
   model essay (not a paragraph) for essay analysis, at least 2 candidate hooks per hook activity, both a general
@@ -349,13 +371,14 @@ that carry Essay Focus A/B):
 ### 0.5 Respectful Tiers for writing
 
 Quality Standards §B applies. What it concretely means here: for Levels 1-3, the one word they supply is a genuine
-choice (which word fits the picture), not a foregone answer copyable off the board (0.2's required-feature rows).
+choice (which word fits their own object), not a foregone answer copyable off the board (0.2's required-feature rows).
 For Levels 4+, the lower Level's required feature (a comparison at Level 4) is a real accomplishment inside its own
 scaffolding: a genuinely interesting comparison with real stakes, not a trivial one. If the lowest Level's student
 would feel they did the easy part while everyone else did the real writing, strengthen that Level's task (a better
-picture prompt, a more interesting two-slot choice, a comparison that matters).
+object to describe, a more interesting two-slot choice, a comparison that matters).
 
-**Foundation Support** in this cycle: picture-to-word matching (select, don't spell), tracing a pre-written word
+**Foundation Support** in this cycle (Quality Standards §D8: nothing the teacher must make): matching a printed Word
+Bank word to the student's own object (select, don't spell), tracing a pre-written word
 with a meaning-check question, or teacher-scribed dictation where the student says the word and the teacher writes
 it, checking afterward that the student can point to which word is which. Alongside the lowest task Level, not in
 place of it.
@@ -378,8 +401,8 @@ specific to the lesson's two focuses and required feature, in the sample's own p
 - The conclusion restates the thesis and introduces no new information.
 - (Level 8) Both audience sections are present and genuinely distinct in register and approach.
 
-**Frame-regime Levels (1-3):** replace the written checklist with a short oral or picture-matching self-check ("does
-your word match the picture? read your sentence to a partner, does it make sense?").
+**Frame-regime Levels (1-3):** replace the written checklist with a short oral self-check ("does your word
+match your object? read your sentence to a partner, does it make sense?").
 
 **Peer Editing:** exchange work with a partner using a short Peer Editing Form with 2-3 questions tied to this
 lesson's focuses and required feature, plus one specific compliment and one specific suggestion. A Level 1-3
@@ -434,7 +457,8 @@ The rules (Quality Standards §D1-D3) are shared. Writing-specific placement:
 not repeat the same grammar focus pair, Scenario topic, or real-world writing form (table below) as the
 immediately preceding Set or Pair for the same class, and avoid clustering the same grammar focus across nearby
 Modules even when not consecutive (comparatives as Focus A for a Describing pair and an Evaluating pair back to
-back). Positions 2-4 continue position 1's Scenario and Focus without re-running the check.
+back). The check covers both the practice object and the draft object. Positions 2-4 continue position 1's
+Scenario and Focus without re-running the check.
 
 **Within-pair non-repetition (Intermediate/Advanced/Proficient):** Module N+1's Focus A/B (Pair position 5) must
 not repeat Module N's from positions 1-2 of the same pair; a same-plan check, stronger than adjacency. If both
@@ -466,9 +490,9 @@ than forcing a bad-fit essay type:
 ## THE MODULE PAIR: A FIXED 4-LESSON ARC (BEGINNER) OR 8-LESSON ARC ACROSS TWO MODULES (ALL OTHER BANDS)
 
 This prompt generates **one 2-day lesson per run**; run it once per position against the same approved plan.
-Beginner's 4 lessons in one Set share one Scenario from grammar input through a finished, published piece.
-Intermediate, Advanced, and Proficient pair two consecutive Modules (1-2, 3-4, 5-6, 7-8) so one Scenario/essay
-spans both Modules' Sets, 8 lessons, each Module contributing its own, different Grammar/Essay Focus (Conventions
+Beginner's 4 lessons in one Set share one Scenario from grammar input (practice object) through a finished,
+published piece (draft object, 0.1a). Intermediate, Advanced, and Proficient pair two consecutive Modules (1-2,
+3-4, 5-6, 7-8) so one Scenario/essay, on the draft object, spans both Modules' Sets, 8 lessons, each Module contributing its own, different Grammar/Essay Focus (Conventions
 §C). Each Module still keeps its own ordinary 4-lesson Set, folder, and version codes; **Pair position** (1-8) is
 the lesson's place in the arc, **Set position** (1-4, restarting per Module) is which of the Module's own lessons
 it is.
@@ -476,8 +500,8 @@ it is.
 | Pair position | Module | Set position | Content role |
 |---|---|---|---|
 | 1 | N | 1 | Grammar Focus A: input, modeling, deeper practice; Mentor Ladder |
-| 2 | N | 2 | Grammar Focus B, Essay Focus A/B (where applicable), prewriting |
-| 3 | N | 3 | Drafting, parts 1-2 (a complete opening-through-conclusion draft), self-edit |
+| 2 | N | 2 | Grammar Focus B, Essay Focus A/B (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
+| 3 | N | 3 | Drafting on the draft object, parts 1-2 (a complete opening-through-conclusion draft), self-edit |
 | 4 | N | 4 | **Hard self-revision** (Module N's tools), draft completion, hand-off (not published). **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
 | 5 | N+1 | 1 | Re-engagement (re-read own draft; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Mentor Ladder second look |
 | 6 | N+1 | 2 | Module N+1's Grammar Focus B, Essay Focus A/B (where applicable); revision-planning against the existing draft (replaces prewriting) |
@@ -485,8 +509,8 @@ it is.
 | 8 | N+1 | 4 | Peer editing (both Modules), **hard self-revision** (Module N+1's tools), publishing, Closing Transfer Check for both skills plus Module N+1's verb |
 
 Key rules:
-- **Genre, Scenario, and essay type are fixed once by Module N's mapping (0.9) and inherited unchanged by Module
-  N+1.** The shared piece stays one genre throughout.
+- **Genre, Scenario (practice object and draft object), and essay type are fixed once by Module N's mapping (0.9)
+  and inherited unchanged by Module N+1.** The shared piece stays one genre and one draft object throughout.
 - **Position 5 does not re-derive the Scenario or genre;** it re-reads Module N's draft and gives a short recap
   (purpose, reader, what is already written), then introduces Module N+1's Focus A as genuinely new content.
 - **Module N+1's own CSV verb is covered by Lesson 8's separate Closing Transfer Check task (0.8),** not by the
@@ -523,7 +547,8 @@ regime higher:
 ### Lesson 1, Day 1: Grammar Focus A, Input and Modeling
 
 _Phase 1: Hook, Skill Spotlight (15 min)_
-- A short hook tied to the Scenario (a picture, a real situation, a short prompt), pitched near the band's lower
+- A short hook tied to the Scenario (two students' belongings held up and compared, a real situation, a short
+  prompt; never a prop the teacher brings, Quality Standards §D8), pitched near the band's lower
   task Level. Skill Spotlight (0.8).
 
 _Phase 2: Focus A mini-lesson: rule and examples (30 min)_
@@ -539,7 +564,7 @@ _Phase 1: Editing a paragraph on Focus A (20 min)_
 - A short paragraph with a stated, verified number of Focus A errors.
 
 _Phase 2: Frame warm-up / original sentences with Focus A (25 min)_
-- Levels 1-3 (where present): guided frame completion on the Scenario picture. Levels 4+: original sentences using
+- Levels 1-3 (where present): guided frame completion on the student's own object. Levels 4+: original sentences using
   Focus A, one per target item.
 
 _Phase 3: Leveled Mentor Ladder walkthrough (30 min)_
@@ -567,19 +592,29 @@ _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
   one sentence with a specific detail a partner tests for the implied attitude).
 
 _Phase 2: Prewriting for the Scenario, differentiated by task Level (30 min)_
-- All Levels generate ideas about the same Scenario by whatever means fits: labeling a picture (1-3), an idea list
-  or organizer (4-6), a developed outline naming the intended implication, register shift, or self-revision target
-  (7-8).
+- Introduce the draft object (0.1a): students take out their own, and the Draft Word Bank is presented, the same
+  groups as the Set's Word Bank refilled for this object. All Levels generate ideas about the draft object by
+  whatever means fits: labeling their own object or a drawing of it (1-3), an idea list or organizer (4-6), a
+  developed outline naming the intended implication, register shift, or self-revision target (7-8). This
+  prewriting is rehearsal: nothing in Lesson 3 depends on it (Quality Standards §D9), so no task here says
+  "next time" or "for your draft.
 
 _Phase 3: Prewriting share and board synthesis (20 min)_
 - A few students from each Level share one idea or detail.
 
 ### Lesson 3, Day 1: Drafting, Part 1
 
-_Phase 1: Mentor Ladder and prewriting re-look (10 min)_
+_Phase 1: Quick plan (10 min)_
+- Students pick the draft object from the printed list, circle it, and put the real thing on the desk. Then a
+  minimal plan built inside this packet, with no reference to Lesson 2's products or Lesson 1's ladder (Quality
+  Standards §D9): Levels 1-3 write three Draft Word Bank words that fit the object; Levels 4-6 name one thing to
+  compare it to and one real reason, or list ideas; Levels 7-8 outline. The Draft Word Bank is reprinted before
+  it. At Beginner and Intermediate the packet carries no questions here, only these actions (§E6); the
+  teacher's circulation check (does each plan already carry its Level's required feature?) stays in the
+  Markdown.
 
 _Phase 2: Independent/guided drafting, opening and body (50 min)_
-- Frame-regime Levels complete their frame(s) for the actual Scenario (not the practice frames), the teacher
+- Frame-regime Levels complete their frame(s) on the draft object (not the practice frames), the teacher
   circulating to hear each student sound out their word. Composition-regime Levels draft the opening and body
   toward 0.2's targets; the draft need not be finished today. Circulation checks the required feature is present
   in progress, not only at the end.
@@ -611,9 +646,12 @@ _Phase 3: Quick revision share (15 min)_
 _Phase 1: Final polish / proofread pass, complete the draft to full length (20 min)_
 
 _Phase 2 (Module Pair): Hand-off note (30 min)_
-- A short note (a sentence or two, differentiated by regime) naming what this Module's focus added and that the
-  piece now moves to Module N+1's Set for revision, expansion, peer editing, and publishing. **Do not publish or
-  share the piece here.**
+- A short note, differentiated by regime, recording what this Module's focus added and that the piece now moves
+  to Module N+1's Set for revision, expansion, peer editing, and publishing. At Levels 1-5 the note is concrete
+  actions (Quality Standards §E6): mark each taught feature on the draft (circle the comparative, box the reason
+  word, star the compound sentence) and finish a printed stem ("Next time I will add ___"); Level 5 also copies
+  its implied-attitude sentence and finishes "I want my reader to guess ___" so the intention travels with the
+  draft. Levels 6-8 may write the note as prose. **Do not publish or share the piece here.**
 
 _Phase 2 (Beginner): Publish/share (30 min)_
 - A short gallery walk, read-aloud, or class posting; the piece is genuinely finished.
@@ -623,7 +661,7 @@ _Phase 3: Closing Transfer Check (25 min)_ (0.8; Module N's skill at this positi
 ### Lessons 5-8 (Module Pair only): Module N+1's Set
 
 Not generated for Beginner. Lessons 5-8 run Lessons 1-4's structure (same phases, same minutes) with Module N+1's
-own Focus A/B and these substitutions, applied to the existing draft rather than a new piece:
+own Focus A/B and these substitutions, applied to the existing draft on the draft object rather than a new piece:
 
 - **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N draft; a short recap of
   the Scenario's purpose and named reader and what the piece already accomplishes; Module N+1's Skill Spotlight
