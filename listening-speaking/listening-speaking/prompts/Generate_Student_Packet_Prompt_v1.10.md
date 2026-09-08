@@ -1,6 +1,6 @@
-# Listening/Speaking Student Print Formatting Prompt (v1.9)
+# Listening/Speaking Student Print Formatting Prompt (v1.10)
 
-Companion to the Listening/Speaking Lesson Generation Prompt (v1.7). Takes one completed lesson (all days) and
+Companion to the Listening/Speaking Lesson Generation Prompt (v1.10). Takes one completed lesson (all days) and
 produces a single, print-ready, black-and-white student handout: one self-contained HTML document, with every
 piece of teacher-facing pedagogical language translated into plain instructions. Mirrors Passage Reading's
 Student Print Formatting Prompt (v1.4) closely - same translation principle, same base stylesheet, same
@@ -9,7 +9,7 @@ class plays together, not a printed passage. When the lesson carries a TOEFL Tra
 produces a second, separate, **teacher-only** file (see 2.10b) - two output files from this one prompt run, not
 one.
 
-**Current version: v1.8.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.10.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson already exists in full. Do not use it to generate lesson content. This
@@ -254,6 +254,11 @@ separate section). The multiple-choice formatting, picture-placeholder, and word
 apply here too - a fixed-frame speaking item with picture cues (e.g. ordering step-pictures) needs the same real
 placeholder-box treatment, not words standing in for the images.
 
+**Starter/frame box placement (added 2026-09-08).** Where 2.7's standalone frame/"starter" box applies (a task
+with a genuine speak-it-aloud step), it must render before any task instruction that refers back to it (e.g.
+"practice saying both frames above") - never after. Same reasoning as the word-bank-placement rule in 2.7: a
+student reaching the instruction before the thing it points to has already lost the benefit.
+
 ### 2.10a TOEFL Track Tier capstone, Speaking half - in-class rehearsal (when present)
 
 Per Section 0.6D, the in-class portion is an untimed rehearsal, not the scored version. Render it the same way
@@ -317,6 +322,13 @@ a `.task-block`-style callout.
 
 Translate the Speaking Closing Transfer Check into a plain paired closing activity, same style as Passage
 Reading 2.8.
+
+**Closing-loop headings stay jargon-free (added 2026-09-08).** If Phase 5 revisits a named Phase 1 hook
+organizer/protocol to close the loop (e.g. a K-W-L Walk's chart), render that closing step's heading and
+instruction in plain student-facing language ("Finish the Chart") rather than naming the teacher-planning
+protocol/organizer type ("K-W-L") - a heading doesn't need to name the activity type for students to recognize
+which chart is meant. This applies to headings and similar titles only; it doesn't change 2.4a's existing rule
+for referencing a fillable organizer by name inline.
 
 ### 2.13 Callout boxes, answer space, redundant rules
 

@@ -71,6 +71,8 @@
       .masthead + .masthead,
       .masthead.masthead-later {
         margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
       }
       .masthead-meta {
         display: flex;
@@ -204,7 +206,8 @@
         font-style: italic;
         font-weight: 700;
         white-space: nowrap;
-        min-width: 130px;
+        width: 165px;
+        flex-shrink: 0;
       }
 
       .idiom-item {
@@ -513,7 +516,7 @@
         <h1>Unit 4A: Great-Grandmother Learns English</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Listening &amp; Speaking</span>
-          <span class="masthead-tag">Intermediate 1.1.4.0</span>
+          <span class="masthead-tag">Intermediate 1.1.4.1</span>
         </div>
       </div>
 
@@ -749,26 +752,6 @@
           <li>
             <span class="num">2.</span>
             <div class="qbody">
-              Match each time period to what it meant for English in Japan.
-              <div class="wordbank">
-                <strong>Word bank:</strong> banned as the "enemy language"
-                &middot; welcomed and taught to children
-              </div>
-              <div class="match-list">
-                <div class="match-row">
-                  <span class="match-label">World War Two</span
-                  ><span class="ans-line"></span>
-                </div>
-                <div class="match-row">
-                  <span class="match-label">Today</span
-                  ><span class="ans-line"></span>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <span class="num">3.</span>
-            <div class="qbody">
               List two features of how the family is learning together, one
               comparison to a more typical way an older adult might try to learn
               a language, and the reason Takamizawa gives for wanting to learn
@@ -903,6 +886,9 @@
           <span class="stars">&#9733;</span>
         </p>
         <p class="task-instr">Complete each sentence below.</p>
+        <div class="starter">
+          "What does ___ mean?" &middot; "Could you say that again?"
+        </div>
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
@@ -920,9 +906,6 @@
             </div>
           </li>
         </ol>
-        <div class="starter">
-          "What does ___ mean?" &middot; "Could you say that again?"
-        </div>
       </div>
 
       <div class="task-block">
@@ -1080,7 +1063,7 @@
       </div>
 
       <p class="section-label" style="margin-top: 20px">
-        Finish the K-W-L Chart
+        Finish the Chart
       </p>
       <p class="instr">
         Go back to the "What I Learned" column at the start of this packet and

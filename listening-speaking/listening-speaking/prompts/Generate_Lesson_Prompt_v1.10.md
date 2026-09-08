@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v1.9)
+# Listening/Speaking Lesson Generation Prompt (v1.10)
 
 **Lesson type:** this prompt generates a **Listening/Speaking Lesson** - a fixed 2-day cycle (Day 1 Listening,
 Day 2 Speaking) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -12,7 +12,7 @@ This is a first draft (v1), written the same way the Passage Reading prompt star
 refinement once real lessons are generated against it and something doesn't fit a real classroom. Treat every
 number below (runtimes, day count, phase minutes) as a reasoned starting point, not a fixed constant.
 
-**Current version: v1.7.** Section 0's calibration and the day-by-day structure below reflect several corrections
+**Current version: v1.10.** Section 0's calibration and the day-by-day structure below reflect several corrections
 made after reviewing real generated lessons; see `Changelog.md` for the history. Operational rules those
 corrections put in place, still in force:
 
@@ -298,6 +298,11 @@ _Phase 1: Hook, Good to Know & Vocabulary (20 min)_
   already applies for print; write it this way from the start rather than writing three separate un-merged
   passes and merging them later). The lowest task Level gets more, shorter items; the highest gets fewer, deeper
   items, per the balanced-duration rule above.
+- **Item distinctness (added 2026-09-08).** Within one task Level's merged item set, no item may test the same
+  fact or contrast another item in that same set already tests, just under a different question format (e.g. a
+  trivial matching item duplicating a comparison a free-response item in the same Level already requires). A
+  Level's item count is calibrated for balanced time-on-task, not padded with a redundant easy item - if two
+  items would test the same thing, cut one or fold it into the item that already covers it.
 - **Board-dependent moment:** students who worked on different task Levels briefly compare and report into the
   shared notes organizer from Phase 2, so the completed picture exists only once multiple Levels have
   contributed.
@@ -600,12 +605,15 @@ exactly what it contains and how it's labeled.
     Levels more (but shorter) items and higher task Levels fewer (but deeper) items, so estimated time-on-task
     is roughly balanced across all task Levels rather than the lowest Level finishing in a fraction of the
     highest Level's time?
-17. Does a standalone `<Slug>_Transcript.md` file exist in the same `Lesson_<N>_<Slug>/` folder as the lesson
+17. Item-distinctness check: within each task Level's merged item set (Day 1 Phase 4 and Day 2 Phase 2), does
+    every item test something the Level's other items don't already cover - no item merely restates an
+    existing item's fact/contrast under a different question format?
+18. Does a standalone `<Slug>_Transcript.md` file exist in the same `Lesson_<N>_<Slug>/` folder as the lesson
     `.md` and packet `.html` (Section 0.3, item 7), carrying the same citation block as the lesson `.md`? If the
     full real transcript could not be retrieved, does the file honestly state what's missing and how the
     included content was verified, rather than silently passing off a partial fetch as complete or padding the
     gap with invented dialogue? Is the transcript file entirely absent from the student packet?
-18. If a TOEFL Track Tier was generated (Section 0.6): are all four touchpoint kinds present - (A) a
+19. If a TOEFL Track Tier was generated (Section 0.6): are all four touchpoint kinds present - (A) a
     one-sentence TOEFL Connection note in Day 1 Phases 1 & 3 and Day 2 Phases 1 & 3; (B) the Phase 2 note-
     organizer tag column, the Phase 5 extra question, and the Day 2 Phase 4 reframed protocol turn; (C) the
     Day 1 Phase 4 capstone Listening alternate, built against the same real source everyone already heard in

@@ -52,7 +52,7 @@
   }
   .masthead h1{font-size:26px; margin-bottom:6px;}
   .masthead + .masthead,
-  .masthead.masthead-later{margin-top:60px;}
+  .masthead.masthead-later{margin-top:60px;page-break-before:always;break-before:page;}
 
   .objective{
     font-family:system-ui,-apple-system,sans-serif;
@@ -146,7 +146,8 @@
     font-style:italic;
     font-weight:700;
     white-space:nowrap;
-    min-width:130px;
+    width:165px;
+    flex-shrink:0;
   }
 
   .idiom-item{margin-bottom:10px;}

@@ -108,6 +108,16 @@ pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line
 deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of Set 1's other lessons. With
 this, all four Set 1 Intermediate lessons are now synced to the current shared spec.
 
+**Version bumped to `1.1.4.1`, content revised (2026-09-08):** per user review, four fixes applied to this
+lesson's `.md` and packet: the `.vocab-list .word` column width (realigned to 130px above, which was itself too
+narrow for "great-grandmother") corrected again, this time in the shared style guide's own canonical value
+(165px, fixed `width` instead of `min-width`) rather than as another local override; Task C's redundant 2-item
+matching question (duplicating a free-response item already in the same Level) removed; Task A's starter/frame
+box moved to render before the instruction that references it; the closing "Finish the K-W-L Chart" heading
+renamed to "Finish the Chart." All four generalized into `Generate_Lesson_Prompt_v1.10.md`/
+`Generate_Student_Packet_Prompt_v1.10.md` and `shared/Student_Packet_Style_Guide.md` - see `Changelog.md` and
+`shared/Changelog.md`.
+
 **Set 1 assessment generated (2026-09-06), regenerated (2026-09-07), updated (2026-09-08) - not previously
 logged here, added now for completeness (see `Changelog.md`/`Index.md` for the fuller history):** Part A
 (Listening) uses 2 real, verified sources distinct from all 4 taught lessons - "Visitors Laugh Away Troubles at

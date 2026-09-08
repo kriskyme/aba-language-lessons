@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.9)
+# Student Packet Style Guide (v1.10)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -112,6 +112,8 @@ h3 {
 .masthead + .masthead,
 .masthead.masthead-later {
   margin-top: 60px;
+  page-break-before: always;
+  break-before: page;
 }
 .masthead-meta {
   display: flex;
@@ -245,7 +247,8 @@ p {
   font-style: italic;
   font-weight: 700;
   white-space: nowrap;
-  min-width: 130px;
+  width: 165px;
+  flex-shrink: 0;
 }
 
 .idiom-item {

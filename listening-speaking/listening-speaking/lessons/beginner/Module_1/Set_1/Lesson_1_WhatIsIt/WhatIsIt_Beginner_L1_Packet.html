@@ -71,6 +71,8 @@
       .masthead + .masthead,
       .masthead.masthead-later {
         margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
       }
       .masthead-meta {
         display: flex;
@@ -204,7 +206,8 @@
         font-style: italic;
         font-weight: 700;
         white-space: nowrap;
-        min-width: 130px;
+  width: 165px;
+  flex-shrink: 0;
       }
 
       .image-placeholder {
