@@ -1,14 +1,14 @@
-# Program Conventions (v1.7)
+# Program Conventions (v1.8)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
 shape, the CBI/TBLT pedagogical framework, and Rotation Log mechanics. Each lesson type's own
-`Index.md`, `Changelog.md`, and prompts should not carry a copy of this content — point here
+`Index.md`, `Changelog.md`, and prompts should not carry a copy of this content - point here
 (paste this file alongside the lesson-type prompt when generating) and add only what's genuinely
 specific to that lesson type.
 
 This exists because, before it did, these facts were independently restated (and drifting slightly
-in wording) across `CLAUDE.md` and all three lesson types' docs and prompts — most visibly the
+in wording) across `CLAUDE.md` and all three lesson types' docs and prompts - most visibly the
 Task-Levels-by-Band table, which every lesson-generation prompt already admitted in prose it was
 "reusing wholesale" from Reading rather than deriving independently. See `Changelog.md` for what
 changed when this file was extracted.
@@ -33,7 +33,7 @@ differs by task Level (see §B).
 
 ## B. Task Levels by Band
 
-Each band has a fixed set of task Levels — one differentiated task per Level:
+Each band has a fixed set of task Levels - one differentiated task per Level:
 
 | Band | Task Levels | Count |
 |---|---|---|
@@ -47,7 +47,7 @@ neighboring band has a Level to lend, the set extends one Level below and one Le
 native Levels, with two deliberate exceptions:
 
 - **Beginner does not extend below** (Level 1 is the floor of the whole scale) and extends only
-  one Level above, to Level 3 — producing 3 task Levels instead of 4.
+  one Level above, to Level 3 - producing 3 task Levels instead of 4.
 - **Proficient does not extend above** (Level 8 is the ceiling of the whole scale), so instead of
   stopping at 3 task Levels the way Beginner does, it extends two Levels below instead of one,
   borrowing both of the Advanced band's Levels (5 and 6) to keep 4 task Levels.
@@ -55,7 +55,7 @@ native Levels, with two deliberate exceptions:
 This asymmetry is deliberate, not an oversight: pushing a Beginner-band student's task up into
 Intermediate-scoped material is a real stretch risk for a still-developing learner, so that reach
 is capped at one Level. Pushing an Advanced-band student's task up into Proficient-scoped material
-is a much smaller risk — a step into "harder," not a foundational-literacy stretch — so Proficient
+is a much smaller risk - a step into "harder," not a foundational-literacy stretch - so Proficient
 is allowed to borrow both of Advanced's Levels rather than just one.
 
 **Band-distance invariant:** every task Level in the table above is at most one band away from the
@@ -66,7 +66,7 @@ between their assigned task and the shared centerpiece, never two.
 
 Reading's task differentiates *depth of engagement with a shared text*; Writing's task Level
 instead changes the *shape of the required output* (a spelled word in a frame at Level 1-3 versus
-an independently authored multi-paragraph piece at Level 7-8) — the table and its underlying
+an independently authored multi-paragraph piece at Level 7-8) - the table and its underlying
 band-distance logic are identical, but each lesson type's own prompt documents what a "task" means
 concretely for that modality.
 
@@ -78,13 +78,13 @@ star count lands on a different band-relative position per band:
 
 | Band | ★ | ★★ | ★★★ | ★★★★ |
 |---|---|---|---|---|
-| Beginner | native lower (1) | native upper (2) | 1 band above (3) | *(none — only 3 stars)* |
+| Beginner | native lower (1) | native upper (2) | 1 band above (3) | *(none - only 3 stars)* |
 | Intermediate | 1 band below (2) | native lower (3) | native upper (4) | 1 band above (5) |
 | Advanced | 1 band below (4) | native lower (5) | native upper (6) | 1 band above (7) |
 | Proficient | 1 band below (5) | 1 band below (6) | native lower (7) | native upper (8) |
 
 Don't over-generalize "★★/★★★ = the band's own two native Levels, ★ = one band below, ★★★★ = one
-band above" from the Intermediate/Advanced rows to all four bands — it breaks at both ends of the
+band above" from the Intermediate/Advanced rows to all four bands - it breaks at both ends of the
 scale. Beginner has no ★★★★ at all (only 3 stars, since it can't extend below Level 1, per the
 asymmetry above). Proficient's ★ *and* ★★ are both "1 band below" (it borrows two Levels down from
 Advanced instead of one, since it can't extend above Level 8), so its native Levels are ★★★/★★★★,
@@ -93,20 +93,20 @@ not ★★/★★★.
 ## C. What a Set is
 
 A **Set** is however many lessons together cover one Module's planned instructional time (8 class
-days) for a Band — not a fixed lesson count, but derived from how many days each lesson type's
+days) for a Band - not a fixed lesson count, but derived from how many days each lesson type's
 lesson runs. Reading, Listening/Speaking, and Academic Writing all use a 2-day lesson, so a Set is
 4 lessons for each of them; a shorter or longer lesson would change that count, since the invariant
 is the 8 days, not the number "4."
 
 **Corrected 2026-09-08 (Academic Writing):** Academic Writing's lesson was originally modeled as a
-single 8-day cycle, making a Writing Set "1 lesson" — the same kind of sizing miscount the whole
+single 8-day cycle, making a Writing Set "1 lesson" - the same kind of sizing miscount the whole
 program's Set concept itself was corrected from once before (see the note below this section). In
 practice, each lesson actually taught took 2 days, the same as Reading and Listening/Speaking; the
 8-day span was really 4 separate lessons back to back, not one long one. A Writing Set is now 4
 lessons, like every other lesson type. The one genuine, permanent difference from Reading/
 Listening-Speaking that survives this correction: a Writing Set's 4 lessons share **one** Scenario
 carried across the whole Set (grammar input in Lessons 1-2, drafting in Lesson 3, revision and
-publishing in Lesson 4 — one piece of writing taken from introduction to finished, published
+publishing in Lesson 4 - one piece of writing taken from introduction to finished, published
 product), rather than each lesson getting its own independent anchor text the way a Reading Set's 4
 lessons do. See `writing/academic-writing/Index.md`'s "Sets" section for how this plays out in that
 lesson type's own prompt family.
@@ -124,14 +124,14 @@ described in this section. See `writing/academic-writing/Index.md`'s "Module Pai
 mechanics (the 8-lesson content-role table, the wrapping Module-Pair Lesson-Plan doc, and how the two
 Modules' Focus choices stay distinct).
 
-A Module/Band can hold more than one Set over time — a fresh rotation of lessons for a semester
+A Module/Band can hold more than one Set over time - a fresh rotation of lessons for a semester
 where the module is retaught, without discarding or conflating it with what was taught before.
 **Set numbering is scoped to one Module/Band, not shared across Modules:** a Band's Module 2 starts
-its own Set 1 again, the same as Module 1 did — it does not continue Module 1's Set count. This is
+its own Set 1 again, the same as Module 1 did - it does not continue Module 1's Set count. This is
 why Sets nest inside a `Module_<N>/` folder (see §D) rather than sitting directly under the Band
 folder: without that level, two different Modules' Set 1 would collide on the same folder name.
 **Lesson numbering is global within a Module/Band, continuing across Sets rather than restarting:**
-Set 1 is Lessons 1-4, Set 2 (if planned) is Lessons 5-8, Set 3 is Lessons 9-12, and so on — so
+Set 1 is Lessons 1-4, Set 2 (if planned) is Lessons 5-8, Set 3 is Lessons 9-12, and so on - so
 "Lesson 7" unambiguously means Set 2's third lesson without needing to also state which Set. When
 planning a new Set, numbering starts at the next integer after the highest lesson number already
 planned for that Module/Band, across every Set. A Set is not tied to a semester in the plan itself;
@@ -139,7 +139,7 @@ note an actual teaching term against a Set only once it's been assigned to one, 
 annotation, not a planning input.
 
 For the history of how this figure was originally miscounted as 8 lessons/16 days per module and
-corrected, see `CLAUDE.md`'s Sets bullet or Reading's `Changelog.md` (2026-09-01 entry) — not
+corrected, see `CLAUDE.md`'s Sets bullet or Reading's `Changelog.md` (2026-09-01 entry) - not
 restated here.
 
 ## D. Set/Lesson folder-nesting convention
@@ -186,18 +186,45 @@ principle itself.
 
 A **Rotation Log** is a single running record, separate from any one lesson's or Set's plan, of
 what every already-generated lesson actually used (genre/format, strategy, hook, protocol,
-vocabulary or grammar focus, topic) — one row per lesson. It is the only thing that lets a new
+vocabulary or grammar focus, topic) - one row per lesson. It is the only thing that lets a new
 lesson or Set avoid repeating what came immediately before it; without it, each generation run only
 ever sees its own lesson(s) and cross-Set/cross-Module repetition is invisible until a teacher
 notices it in the classroom. Read it in full before planning or generating; append to it (never
 overwrite) once a lesson or Set is approved.
 
-A lesson type nests its Rotation Log by Set within Module/Band once it has a Module Lesson-Plan
-prompt driving Set-aware planning (Reading, Listening/Speaking); one generated one at a time
-against a bare Module/Band request instead stays a flat chronological table (Academic Writing,
-today). As of the per-Band split (see each lesson type's own `Rotation_Log.md`), a lesson type's
-"Rotation Log" is an overview file plus one file per Band that has entries — see that overview for
-the current file list and the rule for when a new Band's file gets created.
+A lesson type's Rotation Log is an overview `Rotation_Log.md` plus one `Rotation_Log_<Band>.md` per
+Band that has entries, nested `## Module N` / `### Set S` inside each Band file. A Band's file is
+created lazily on that Band's first Set, from the append-template at the bottom of any existing Band
+file. Each lesson type's own Module Lesson-Plan prompt defines only the column list its rows carry
+(genre/strategy/hook/protocol for Reading, format/strategy/skill/hook/protocol for Listening/Speaking,
+Focus A/B/Scenario/writing form for Academic Writing); the mechanics below are the same for all.
+
+**Read before planning; append after approval.** Read `Rotation_Log.md` and the target Band's file in
+full before planning any Set. If the Band's file does not exist, this is that Band's first Set: create
+it and skip the cross-Set and cross-Module checks. After a plan is reviewed and approved (never a
+draft still being revised), append its rows under that Module/Band's existing `## Module N` section,
+or a new one, as a new `### Set S (planned <date>)` subsection using the Band file's own template.
+Lesson numbers continue the Module/Band's global numbering (§C); note the highest number already
+used and start at the next integer.
+
+**Cross-Set rule (same Module/Band, a new Set after one already logged):** the new Set's first lesson
+must not repeat the most recent existing Set's final lesson in any rotated column (genre or format,
+strategy or skill, hook, protocol, Focus pair, writing form, as applicable) - the same adjacency
+logic the within-Set rule applies between consecutive lessons, carried across the Set boundary.
+Vocabulary theme and topic: flag (do not block) an obvious repeat from the most recent existing Set.
+
+**Cross-Module rule (a new Module/Band's first Set), and Academic Writing's cross-Band rule:**
+adjacency only. The new first lesson must not repeat the immediately preceding Module's (or, for
+Writing, any other Band's) most recently logged Set's final lesson in the rotated columns. Vocabulary
+theme, topic, and Scenario: flag an obvious repeat from the immediately preceding Module or Set;
+older repeats are lower-risk and are noted, not blocked.
+
+Why the lighter touch across Sets and Modules: within a Set every lesson is visible in one planning
+pass, so a hard no-repeat rule is enforceable. Across Sets and Modules only the log's history is
+visible, the rotation banks are finite (four or five options each), and a full-history block would
+eventually make later Sets impossible to plan. Adjacency plus a recency flag catches the repetition a
+student would actually notice (two Sets in a row opening the same way) without over-constraining a
+program that will run many Sets across many Modules.
 
 ## G. Lesson version numbers
 

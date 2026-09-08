@@ -1,0 +1,115 @@
+# Academic Writing Homework Generation Prompt (v4)
+
+Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
+completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
+Module Pair (8 lessons): one section per task Level in the band, each keyed to that Level's composition regime.
+
+**Paste bundle:** run this prompt with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`
+alongside it. Quality Standards §A-§C govern every item and are not restated. This prompt states only what is
+specific to Writing homework.
+
+**Current version: v4.** History: `Changelog.md`.
+
+**Input:** the lesson content generated so far, in full (the Scenario, the Grammar Focus A/B and Essay Focus A/B
+content taught so far, the Leveled Mentor Ladder, the Skill Spotlight, Module(s), Band). If none is provided,
+stop and ask. Never generate lesson content from this prompt.
+
+## SECTION 0: SCOPE AND INPUTS
+
+### 0.1 Required inputs
+
+- The lesson content as above; invent no grammar point, Scenario detail, or skill.
+- **Timing:** which lesson has been reached (Beginner: Lesson 1-4; others: Pair position 1-8). Default: after
+  Lesson 2 (Beginner) or after Pair position 6, due before the next drafting or revision lesson. State the
+  assumption in the header.
+- **Task-Level information:** which Level each student is working at, or Foundation Support.
+
+### 0.2 Timing determines what content is available
+
+Beginner (or Pair positions 1-4, with one difference at 4):
+- **After Lesson 1:** Focus A and the Mentor Ladder only. No Focus B, confusable pair, or prewriting.
+- **After Lesson 2 (default):** Focus A and B (and Essay Focus A/B where taught) and the prewriting. Drafting has
+  not started; homework primes Lesson 3 without asking the student to draft the Scenario piece at home.
+- **After Lesson 3:** the student's in-progress draft and self-edit pass exist; Part 2 may apply the checklist to
+  a fresh instance.
+- **After Lesson 4:** Beginner: the piece is published; Part 2 may extend the Closing Transfer Check response. Pair
+  position 4: the draft is complete and self-revised but **not published**; Part 2 may extend the hand-off note or
+  draft, never implying the piece is finished.
+
+Pair positions 5-8 extend the same logic with Module N+1's content:
+- **After 5:** Module N+1's Focus A newly available, on top of positions 1-4.
+- **After 6 (default):** Module N+1's Focus A and B (and Essay Focus where applicable) and the revision plan.
+- **After 7:** the revised, expanded draft reflecting both Modules' focuses.
+- **After 8:** the piece is published; Part 2 may extend either the Closing Transfer Check response or the separate
+  Module N+1 verb task.
+
+## SECTION 1: STRUCTURE
+
+### 1.0 Target length: 15-20 minutes, one sitting
+
+Light, individual reinforcement across both parts and all Levels, sized to 15-20 minutes at the student's own
+Level, including at essay-regime Levels.
+
+### 1.1 Two parts, one section per task Level, design keyed to regime
+
+One Part 1 / Part 2 section per task Level, each grounded in its own CSV objective. Unlike Reading, the design
+template is keyed to the Level's **composition regime** (Lesson prompt 0.1), not its position, because the
+frame/paragraph and paragraph/essay boundaries do not move with position (Intermediate's lowest Level is
+frame-regime; Advanced's highest is essay-regime).
+
+- **Frame-regime Levels (1-3):** the most scaffolded design: a word bank plus the lesson's own frame(s) verbatim.
+  Credit any reasonable, genuinely chosen word.
+- **Paragraph-regime Levels (4-5):** independent original sentences using the target Focus A/B items, no frame.
+- **Essay-regime Levels (6-8):** combine 2-3 target items (Focus A/B and any taught Essay Focus cohesive device)
+  into one connected short paragraph, never a full essay; a full essay belongs to Lesson 3 in class.
+- **Foundation Support:** point-and-name from 2-3 picture cards, match a word to a picture, or draw one target
+  word, matching the in-class response mode.
+Two Levels sharing a regime each get their own section with their own content.
+
+**Part 1: Grammar Focus in Production.** 2-3 items from Focus A taught so far (plus Focus B once the timing
+checkpoint allows), a working subset. Require original sentences or a completed frame, not recognition of a
+pre-written sentence.
+
+**Part 2: Skill Practice.** Restate the Skill Spotlight in the exact plain language the lesson used. Apply it to
+a new instance of the Scenario's underlying task, never the Scenario's own object already covered in class: a
+student who described "my phone case" in class describes a different object at home with the same
+comparison-plus-reason skill.
+- **Frame-regime:** one or two more rounds of the lesson's frame on a new object or picture.
+- **Paragraph-regime:** 2-4 sentences on a new object, including the Level's own required feature (Lesson prompt
+  0.2).
+- **Essay-regime:** one paragraph applying Focus A/B and, where already taught by this checkpoint, one structural
+  element (a hook, a topic sentence), on a new instance of the Scenario's situation.
+- **After Lesson 3 or later checkpoints:** at every Level, extend the student's own draft or Closing Transfer Check
+  skill to a second, different instance rather than a first attempt.
+
+### 1.2 Grading is light-touch
+
+Checked for genuine attempt and correct use, not scored against the assessment's rubric. A short completion
+checklist per Level, 2-3 plain criteria ("used the target grammar item correctly," "about a new object, not the
+one from class," "attempted independently").
+
+### 1.3 Respectful Tiers
+
+Quality Standards §B: the lowest Level's Part 2 is a genuine, simplified skill-application item, never grammar
+practice alone.
+
+## SECTION 2: FORMAT
+
+One document per assignment: a header naming the source lesson (Module(s), Band, Scenario), the checkpoint
+reached, and estimated completion time; Part 1 before Part 2; sections lowest Level first through highest, then
+Foundation Support if applicable; the Skill Spotlight restated verbatim above Part 2; a completion checklist per
+Level. No answer key. Style per Quality Standards §E; each Level's vocabulary and grammar inside the same ceiling
+the lesson used.
+
+## SECTION 3: SELF-CHECK BEFORE FINALIZING
+
+Run `shared/Generation_Quality_Standards.md` §F first. Then:
+
+1. Every Part 1 item traces to Focus A (and, where the checkpoint allows, Focus B) actually taught so far?
+2. Part 2 uses the exact Skill Spotlight wording and a genuinely new object or situation?
+3. Timing respected: no content the student has not reached (Focus B, prewriting, a draft, the Closing Transfer
+   Check), and no "finished/published" framing at Pair position 4?
+4. Each Level's design keyed to its regime, not its position; Foundation Support version generated where the
+   lesson has the layer?
+5. Grading a completion checklist, not the rubric (1.2)?
+6. Whole assignment about 15-20 minutes, essay-regime Levels writing a paragraph, not an essay (1.0)?

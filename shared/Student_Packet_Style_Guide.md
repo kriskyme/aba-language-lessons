@@ -1,16 +1,14 @@
-# Student Packet Style Guide (v1.12)
+# Student Packet Style Guide (v2.0)
 
-Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
-Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
-carry its own copy of this content - it should point here (paste this file alongside the modality
-prompt when generating) and add only what's genuinely specific to that modality: new CSS classes
-for structural elements this file's base stylesheet doesn't cover (see "Extending this stylesheet"
-below).
-
-This exists because, before it did, the only complete copy of this material lived inside Passage
-Reading's own packet prompt, and the other modalities either cross-referenced it by prose (fragile:
-no mechanical link, so a change there had no way to reach the modalities pointing at it) or lacked
-it entirely. See `Changelog.md` for what changed when it was extracted.
+Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
+prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
+a modality extends the stylesheet (§D) and the per-modality delta classes themselves (§H), the
+teacher-to-student translations every packet applies (§E), star-rating and lettered-Task rules (§F),
+the rule that a packet is always a regeneration of its Markdown source (§G), and the shared packet
+self-check (§I). Paste this file alongside the modality's packet prompt when generating. A modality's
+own packet prompt does not restate anything here and never cites another modality's prompt for a
+rule - it points to the section here and adds only what is specific to its own document structure.
+See `Changelog.md` for history.
 
 ## A. Universal format constraints
 
@@ -144,7 +142,7 @@ h3 {
 ```
 
 The paragraph always opens with a bold `Objective:` label before the can-do sentence itself
-(`<p class="objective"><strong>Objective:</strong> describe...</p>`) — every modality's packets
+(`<p class="objective"><strong>Objective:</strong> describe...</p>`) - every modality's packets
 follow this, so a generation prompt that produces an unlabeled `.objective` paragraph is
 producing wrong output, not a stylistic variant.
 
@@ -563,16 +561,9 @@ a `<div class="masthead-meta">` alongside the `h1`, holding exactly two stacked
    `Program_Conventions.md` §G - the lesson number in it is the global one from
    `Program_Conventions.md` §C, not restarted per Set.
 
-This is a distinct, newly-defined element for a specific purpose (a quick visual identifier for
-whoever is handling the printed packet, and at-a-glance proof of which revision they're holding),
-not a revival of `.kicker` or `.sub`: those belonged to a masthead subtitle line no current lesson
-type's Section 2 uses, and a fresh document should still not define or carry them forward. This
-lifts the original v1.1 rule ("no Level/Band" on the tag) now that Band and version are load-bearing
-information for telling two packets of the same lesson apart, not decorative kicker text.
-
-Going-forward convention only: a packet already generated before this two-line block existed is
-not retroactively updated - it keeps whatever masthead it already has (a bare title, a single
-modality-only tag, or nothing) until it is next regenerated or revised anyway.
+Nothing else sits on that stack (no "Class" or "Packet" suffix), and nowhere else in the document
+is there a Name/Date field, a subject/module kicker line, a subtitle line under any heading, or a
+footer note. Do not define or carry forward `.kicker`/`.sub`.
 
 ## C. HTML markup conventions
 
@@ -599,7 +590,7 @@ packets converge on one look in view-source regardless of which prompt or sessio
 - **Quoted CSS values** (a font name with a space in it, `content: ""`) use double quotes, matching
   the double quotes already used for every HTML attribute.
 
-Example skeleton showing the doctype/head conventions together (body/style contents omitted):
+Head fragment showing the doctype/meta conventions together:
 
 ```html
 <!doctype html>
@@ -608,29 +599,401 @@ Example skeleton showing the doctype/head conventions together (body/style conte
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lesson Title: Student Packet</title>
-    <style>
-      :root {
-        --ink: #000000;
-        ...
-      }
-    </style>
+    <style>...</style>
   </head>
-  <body>
-    ...
-  </body>
-</html>
 ```
 
 ## D. Extending this stylesheet
 
-A modality's own packet prompt may add new CSS classes only for structural elements genuinely not
-covered by the base stylesheet above (a citation box, a fillable table, a picture placeholder grid -
-whatever that modality's document structure needs that no existing class already provides). Follow
-the same rule formatting (§C) when writing new classes. Never restyle an existing base class's
-fonts, colors, or spacing - if an existing class's look needs to change, that change belongs in this
-shared file (updating it for every modality at once), not as a modality-local override.
+A modality may add new CSS classes only for structural elements genuinely not covered by the base
+stylesheet above (a citation box, a fillable table, a picture placeholder grid - whatever that
+modality's document structure needs that no existing class already provides). Those classes live in
+§H of this file, under the modality's own heading, following the same rule formatting (§C) - not
+inline in the modality's packet prompt, so one paste covers every modality and a fix to a delta
+class lands once. Never restyle an existing base class's fonts, colors, or spacing - if an existing
+class's look needs to change, that change belongs in §B (updating it for every modality at once),
+not as a modality-local override.
+
+## E. Universal teacher-to-student translations
+
+Every packet passes this translation before anything else: no term in the left column appears in the
+student-facing document. Replace each with the plain-language instruction that tells the student what
+to do, silently, without narrating the pedagogy behind it. A modality's packet prompt adds only its own
+medium-specific rows (a reading strategy, a segment cue, a grammar focus label); it does not repeat
+these.
+
+| Teacher-facing term | Student-facing translation |
+|---|---|
+| Task Level / Level (numeric); tier, regime, or Level names of any kind | A star rating (★ to ★★★★, more stars = more challenging), with no numeric Level and no tier name ("Foundation," "Extension," "beginner," "warm-up," etc.). See §F. |
+| Skill Spotlight | A plain can-do objective statement near the start of the packet, phrased as something the student can picture doing, not narrated as "today we are practicing X." |
+| Closing Transfer Check | A plain closing-activity instruction stating what to pick and what to do with it, never named as a check and never referencing assessment or evidence language, and with no stage directions about what the teacher will do next. |
+| Fishbowl / Town Hall / Concentric Circles / Jigsaw / discussion carousel | A plain small-group discussion instruction: get into a group, here are your questions, take turns talking. Do not name the protocol. Render as simultaneous small groups (a static page cannot run a live rotation) and fold any outer-circle or tracking task into a group's own task rather than dropping it. |
+| Activation hooks by name (K-W-L Walk, Mystery Quote, Stand Up/Move, Four Corners, etc.) | The plain instruction the activity produces (a warm-up question, a prompt to discuss), never the activity's name - in headings included. |
+| Internal item labels (STOP & CHECK, Fact Finder, Cause & Effect set, controlled-practice type names) | Ordinary numbered or lettered questions with no internal label carried into student view. |
+| Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
+| Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
+| Section numbers, prompt names, version narrative | Never appear. |
+
+If a source lesson uses a term not listed here or in the modality's own rows, apply the same principle:
+state the plain action the student takes, never the pedagogical name for it.
+
+## F. Star ratings and lettered Tasks
+
+**Stars.** Where the source lesson assigns different task Levels, represent difficulty with a star
+rating: the lowest task Level in the band gets ★, and each step up the band's Task Levels row adds one
+star, to ★★★★ for the highest (`Program_Conventions.md` §B has the per-band mapping). Show only filled
+stars, never a filled-vs-empty display out of a fixed total. Do not label the tiers and do not frame the
+choice as "choose your own adventure" or "pick your challenge"; state only the section heading and let
+the star count speak for itself. Which star a student works at is decided live by the teacher, not
+narrated on the page. Where two star levels' work differs in kind (a blank frame versus a blank writing
+space), present each star's actual instruction as written; do not paper over the difference with
+identical wording.
+
+**Share instruction first.** Before a star-rated task set begins, the instruction to share with a
+different-star group once finished sits BEFORE the task list, not after, so a student who reads only
+their own task does not miss it. No framing language like "everyone teaches everyone something."
+
+**One star rating per lettered Task; letters advance and never repeat.** Label exercises "Task A,"
+"Task B," ... (never "Exercise" or "Activity"). A lettered Task carries exactly one star tag. Where the
+source puts two task Levels under one shared activity, split it into two consecutive letters (lower star
+first), repeating the instruction text and splitting any tier-specific clause along with it. Several
+single-star blocks in a row each get their own advancing letter; never reuse "Task A" for each tier.
+Reletter subsequent Tasks so the sequence stays continuous. Do not reorder a day's pedagogical sequence
+to force one global ascending run; only the letters change. Task lettering restarts at A in each masthead
+section. Unlettered content (a self-check list, a sentence-stem list) may combine two star tags on one
+item where both tiers genuinely share it.
+
+**Ascending order within a Task.** Where a Task contains more than one star-rated block, blocks appear
+in ascending star order regardless of the source's order.
+
+**Task label line.** The label sits inline with its instruction ("Task A. Answer using the text...") or,
+where the instruction would crowd the star, alone on its own line followed by the instruction. Never a
+bordered badge, and never a generic placeholder like "Complete the activity for your level."
+
+**No star tag inside a teaching callout, title or body.** A grammar box, strategy box, worked model, or
+any whole-class teaching content is delivered to the whole room; a star anywhere in it misrepresents
+part of it as skippable. State any Level-varying content as plain sentences inside the callout; stars
+belong only on the practice tasks that follow. Every teaching callout appears before every task that
+depends on the concept it teaches; if the source lesson's own order would place it after, flag the
+source (its Quality Standards §D5 sequencing rule), do not silently reorder.
+
+**Sentence stems.** List star-coded stems one per star level, the stem alone. No coaching note under a
+stem ("practice it quietly with a partner first," a tally task to do while waiting, advice on when to
+use the line) - delivery is teacher-led facilitation, not page content.
+
+**Every standalone question gets a number.** Any prompt with a referenceable response (a written answer,
+a guess, a prediction), inside or outside a star-rated task, is numbered with the same `.num`/`.qbody`
+pattern; a lone prompt outside a `<ol class="qlist">` uses `.qitem`. Multiple response lines under one
+prompt are one question. Fillable organizers are referenced by name, not numbered; options inside one
+question are not numbered.
+
+**Placement.** A word bank, sentence frame, starter box, or model sits immediately before the item(s) it
+serves, inside that item's block if it serves only one, never after the last item that needs it.
+Fixed-frame items state their full instruction inline; a standalone frame box is reserved for a task with
+a genuine speak-it-aloud step, and it renders before any instruction that refers back to it.
+
+**Multiple choice.** Options fold into the question as an inline parenthetical list, one instruction line
+at the top of the task block, no repeated verb per item and no option-per-line layout. Genuinely
+picture-based items get real labeled placeholder boxes, not words standing in for images.
+
+## G. The Markdown document is the source of truth; the packet is always a regeneration
+
+Run the packet prompt immediately after the lesson, homework, or assessment Markdown is complete, in
+the same session, so the pair is produced together. The Markdown is the single source of truth. If a
+review round asks for a change that affects what students actually read as a task, instruction, or
+vocabulary item, do not patch the HTML directly: apply the change to the source Markdown first, then
+re-run the packet prompt against it. Hand-editing the HTML for a content change leaves the Markdown
+silently out of sync with what is actually taught, and the two drift further on every later
+regeneration.
+
+The only edits applied directly to the HTML without touching the Markdown are pure formatting or
+translation-layer fixes that change no lesson content: a styling issue, a missed §E translation,
+spacing or layout. The test: would a teacher reading the Markdown need to know this changed? If yes,
+edit the Markdown and regenerate; if no, fix the HTML directly.
+
+Deliver the HTML for visual review before treating it as final; apply feedback as scoped edits rather
+than a full regeneration per round. Where a source lesson has a structural element no rule covers, apply
+§E's principle (plain instruction over jargon) and this file's defaults (no color, no unnecessary rules,
+callouts reserved for genuine spotlights, answer space matched to expected length), and reuse an existing
+base class before adding a new one.
+
+## H. Modality delta classes
+
+Classes a modality's document structure needs that §B does not provide (§D). Each modality's block is
+added to a packet only when generating that modality's packet.
+
+### H.1 Listening/Speaking
+
+`.citebox` (What You'll Watch citation), `.notes-table` (Listening Notes organizer), `.upside-down`
+(closing script printed inverted), `.task-instr` (single top-of-task instruction line), `.pic-options`/
+`.pic-option` (picture-placeholder items), `.match-list`/`.match-row` (matching items, one pair per line,
+label above a full-width `.ans-line`), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
+(lettered answer choices), `.time-list` (response-time windows), `.reader-copy`/`.reader-warn`
+(teacher-only page in a separate file).
+
+```css
+.citebox {
+  border: 1px solid var(--ink);
+  padding: 12px 16px;
+  margin: 10px 0 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+}
+.citebox strong {
+  font-weight: 700;
+}
+
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+}
+.notes-table th,
+.notes-table td {
+  border: 1px solid var(--rule);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.notes-table th {
+  font-weight: 700;
+  background: #f2f2f2;
+}
+.notes-table td {
+  height: 38px;
+}
+
+.upside-down {
+  transform: rotate(180deg);
+}
+
+.task-instr {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+
+.pic-options {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 8px 0 4px 4px;
+}
+.pic-option {
+  width: 110px;
+}
+.pic-option .pic-box {
+  border: 2px dashed var(--ink);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  padding: 6px;
+}
+.pic-option .pic-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12.5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.match-list {
+  margin: 8px 0 4px 4px;
+}
+.match-row {
+  margin-bottom: 14px;
+}
+.match-row .match-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.qitem {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 9px;
+  font-size: 14.5px;
+}
+
+.mc-list {
+  margin: 8px 0 4px 30px;
+  padding-left: 0;
+  list-style: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+.mc-list li {
+  margin-bottom: 6px;
+}
+.mc-letter {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.time-list {
+  margin: 8px 0 4px;
+  padding-left: 0;
+  list-style: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+.time-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule-light);
+  padding: 7px 2px;
+}
+.time-list li:last-child {
+  border-bottom: none;
+}
+.time-list .time-window {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.reader-copy {
+  border: 2px dashed var(--ink);
+  padding: 14px 16px;
+  margin: 20px 0;
+  page-break-before: always;
+}
+.reader-copy .reader-warn {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+```
+
+### H.2 Passage Reading
+
+None. The base stylesheet is the whole of what a Passage Reading packet needs.
+
+### H.3 Academic Writing
+
+`.rule-table` (grammar-rule and comparison tables; same visual pattern as `.notes-table`),
+`.fillblank` (a fill-in-the-blank list whose items carry mid-sentence `.blank` spans), `.model-step`
+(one worked line inside a Grammar or essay-structure callout). Add `.rule-table` to the packet's
+`@media print` page-break-avoid list.
+
+```css
+.rule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+}
+.rule-table th,
+.rule-table td {
+  border: 1px solid var(--rule);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.rule-table th {
+  font-weight: 700;
+  background: #f2f2f2;
+}
+
+.fillblank {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.fillblank li {
+  margin-bottom: 9px;
+  font-size: 14.5px;
+}
+.fillblank .num {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.model-step {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.model-step:last-child {
+  margin-bottom: 0;
+}
+.model-step strong {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+}
+```
+
+### H.4 Assessment packets (all modalities)
+
+`.checklist`: a plain self-check list (no borders, no table shape) with a checkbox glyph before each item, used
+on a Speaking Task or Writing Task card to render the rubric's Meets column as student-facing checks.
+
+```css
+.checklist {
+  margin: 10px 0 4px;
+  padding-left: 0;
+  list-style: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+}
+.checklist li {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.checklist li::before {
+  content: "\2610";
+  flex-shrink: 0;
+}
+```
+
+An assessment packet also gives each task Level's section `page-break-before: always` (except the first) so one
+Level's pages print cleanly on their own, and carries no `.masthead-meta` stack, since one assessment spans every
+Level in a band and has no single lesson version code.
+
+## I. Shared packet self-check
+
+Run this list first, then the modality's own list.
+
+1. No §E left-column term, section number, or version narrative anywhere in student-facing text?
+2. One combined document covering every task Level in the band, not per-Level handouts?
+3. Objective stated as a plain can-do statement near the top of each masthead section, before any task
+   content, and the closing activity connecting back to it?
+4. Sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the heading text, task
+   lettering restarting in each?
+5. Opening masthead only carries the two-tag `.masthead-meta` stack (modality label; Band plus
+   `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field, kicker, subtitle, or footer?
+6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
+   instruction before the task list; one star per lettered Task; letters continuous; ascending order
+   within a Task; no star inside any teaching callout? (§F)
+7. Every teaching callout before the tasks that depend on it? (§F)
+8. Every standalone question numbered; every bank, frame, starter, or model placed before the items it
+   serves; multiple choice inline with one top instruction line; picture items with real placeholders? (§F)
+9. Stems listed alone, no coaching notes? (§F)
+10. Callout boxes reserved for genuine spotlights; word banks using only the light dashed-rule exception;
+    no other ordinary content bordered?
+11. Answer space sized to the expected answer (`.blank` inside a sentence; `.ans-line-sm`/`.ans-line`
+    standalone below a prompt, never mid-sentence), none where no written response is needed?
+12. Every decorative, non-load-bearing horizontal rule removed?
+13. Black-and-white only; no em-dashes; single self-contained HTML file with no external dependencies
+    besides the print trigger; base stylesheet reused unmodified plus only that modality's §H classes;
+    §C markup conventions followed?
+14. Produced by regenerating from the current Markdown, not by hand-editing a previous HTML for a
+    content change? (§G)
 
 ## Changelog
 
-**Current version: v1.12.** For the full dated version history and the reasoning behind each
+**Current version: v2.0.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

@@ -1,0 +1,182 @@
+# Generation Quality Standards (v1.0)
+
+Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
+plus the one output self-check every generation run applies before its own modality-specific check.
+Paste this file alongside `Program_Conventions.md` and the lesson type's own prompt whenever running a
+Lesson, Homework, Assessment, or Module Lesson-Plan prompt.
+
+**Test for what belongs here:** if a rule stays true when "text" is swapped for "clip" or "scenario," it is
+program-wide and lives in this file. A modality's own prompt states only what is true of its medium (a
+word-count ceiling, a sourcing rule, a composition regime) and its concrete example of a rule below. No
+prompt restates a rule from this file, and no prompt cites another modality's prompt for one - it points
+here. A quality bug found while reviewing one modality's output is fixed here first if it passes the test
+above, logged once in `shared/Changelog.md`, and only then reflected in a modality's own Changelog as a
+one-line pointer.
+
+Terms: "centerpiece" means the shared band-calibrated input every task Level works from - Reading's
+anchor text, Listening/Speaking's real source clip, Writing's Scenario and Mentor Ladder. "Item" means any
+discrete question, blank, match, or prompt a student answers.
+
+## A. Task Levels
+
+1. **Exactly the band's task Levels, no more, no fewer:** 3 for Beginner, 4 for Intermediate, Advanced,
+   and Proficient, per `Program_Conventions.md` §B. One differentiated task per Level.
+2. **Each task cites its own CSV row.** Every task Level's objective is pulled verbatim from that Level's
+   row in `learningobjectives.csv` for the modality in question, never an invented difficulty curve or a
+   paraphrase of a neighboring Level.
+3. **Calibrated to its own Level's ceiling, never the Level beyond.** A borrowed Level (one lent from a
+   neighboring band, see §B's band-distance invariant) still gets its full own-Level bar: an
+   Intermediate-band lesson's Level 5 task reaches exactly the Level 5 ceiling, not Level 6's, and is not
+   quietly simplified for being the band's "easy" or "hard" outlier either.
+4. **Module verb alignment.** Every task, item, and prompt exercises the Module's own verb (Describing,
+   Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing), not a neighboring
+   Module's. A Describing lesson whose questions are mostly cause-and-effect has drifted into Explaining and
+   is rewritten around genuine descriptive tasks. An assessment does not reproduce a source lesson's drift;
+   it flags it back to the lesson.
+
+## B. Respectful Tiers and Foundation Support
+
+**Respectful Tiers (standing check on every differentiated task set, lesson or assessment):** every task
+Level reaches the same essential understanding of the centerpiece and is equally engaging. None is "the
+interesting one." The lowest task Level is never limited to rote fact-copying, scanning, or a single
+copyable answer while only the higher Levels interpret, evaluate, or produce. It gets its own genuine,
+simpler, more scaffolded interpretive or evaluative moment (an opinion with a word bank, a two-slot choice
+with real stakes, a comparison worth making) and, on any production day, a genuine production role.
+
+The test, applied before finalizing: would a student at the lowest task Level, having done only their own
+Level's work, feel they did "the easy busywork" while everyone else did "the real thinking" or "the real
+talking"? If yes, strengthen that Level's task rather than leave the imbalance in place.
+
+**Differentiated participation in live oral work:** an easier sentence stem inside the same live, public
+speaking turn is not differentiation - the demand of real-time public speech is roughly constant across a
+stem's difficulty. The lowest task Level gets a different participation mode within the same protocol:
+a rehearsed pair-share immediately before their turn, or a listening/tracking role with one fully prepared
+line contributed at a natural pause.
+
+**Foundation Support (below the lowest task Level):** for a student functioning below the band's own floor,
+do not reuse the lowest Level's tasks at a slower pace. Provide non-verbal or minimally-verbal response
+modes (picture-to-word matching, pointing, a two-choice circle, tracing with a meaning check, teacher-scribed
+dictation) and, in oral work, a physical or card-holding role rather than a spoken turn. This is support
+added on top of the lowest task Level, not a replacement for it; the lesson says where it plugs in. An
+assessment for a lesson that used Foundation Support gives those students a lighter check in the same
+response mode, scored as a completion checklist, not a percentage. If no lesson in scope used it, none is
+invented.
+
+## C. Item quality
+
+Every item set, at every task Level, in every lesson, homework, or assessment:
+
+1. **Distinct.** No item tests what another item in the same Level's set already tests under a different
+   format (a matching item that duplicates a comparison a free-response item already requires, a
+   fill-in-the-blank restating a fact a multiple-choice item already checked). An item count is calibrated
+   for balanced time-on-task (item 5), never padded with a redundant easy item. If two items would test the
+   same thing, cut one or fold it into the other.
+2. **Not trivially easy for the band.** Every item requires its Level's own ceiling. Where a Level's can-do
+   calls for inference, summary, evaluation, or comparison, the item is engineered so an objective format
+   still requires that judgment: multiple-choice options are all plausible-sounding paraphrases with only one
+   accurate to the source, matching pairs a phrase to the stance or framing it signals (not a dictionary
+   definition), a blank completes a cause-and-effect or comparison statement in the source's own language.
+   Nothing at any Level is answerable by surface scan, by elimination, by general knowledge, or by one
+   obviously-right option against absurd alternatives.
+3. **Requires the centerpiece.** Every item is answerable only with the text, clip, or scenario in front of
+   the student, never from memory of the lesson or of the original story. In an assessment, that means the
+   assessment's own new passage or clip, printed or played in full, not the taught one. Reasoning items cite
+   specific evidence (a paragraph letter, a quoted phrase, a segment).
+4. **Plausible distractors and padded banks.** Every word bank or matching list carries 1-2 extra
+   already-taught words beyond what its blanks or matches need, scaled to bank size (a 3-word bank gets +1, a
+   5-word bank gets +2), each a genuine near-miss drawn from the same taught pool, never a new word, and
+   never the correct answer to anything else in that item - so the last blank cannot be finished by
+   elimination.
+5. **Time-balanced across Levels.** Lower task Levels get more, individually shorter items; higher task Levels
+   get fewer, individually deeper items, sized against rough per-item time (30-60 seconds for a circle or
+   point item, up to 3-5 minutes for an extended composition or analysis item), so estimated time-on-task is
+   roughly even across every task Level. The lowest Level must not finish in a fraction of the highest
+   Level's time. Estimate the running total before finalizing; if a Level runs over its target, cut items
+   rather than note the overage.
+6. **Counted, not estimated.** Every word count, sentence count, paragraph count, and item count a ceiling
+   or minimum governs is verified by an actual count, never eyeballed. A count at or near a range's floor is
+   a warning sign, not an acceptable minimum.
+7. **Complete inline.** Every item's instruction is stated fully in the item itself, never left as a bare
+   template sentence. Any word bank, model, sentence frame, or starter box a student needs sits immediately
+   before the item(s) it serves, never after and never bundled at the end of the task.
+8. **Traceable.** Every item is traceable to one task Level's CSV objective and, in an assessment, to a
+   specific source lesson, so a lesson can be dropped from scope without editing any other lesson's items.
+
+## D. Lesson shape
+
+Rules shared by every 2-day lesson cycle in the program:
+
+1. **Skill Spotlight (Day 1, at or right after the activation hook).** State the lesson's actual transferable
+   skill in one or two plain, student-facing sentences, separate from the topic and tied to the Module's
+   verb: "today we're practicing describing a place by comparing it to somewhere familiar," not "today we're
+   reading about Ciudad Perdida." The Spotlight and the Closing Transfer Check name exactly the same skill.
+2. **Closing Transfer Check (end of Day 2).** Every student applies the spotlighted skill to something new
+   (not the centerpiece), produces it out loud or on a small card, and the teacher cold-calls two or three
+   pairs to share. Evidence is a demonstration, never a declaration: no thumbs-up/sideways/down, no show
+   of hands, no "who feels confident?" A visible whole-class confidence vote converges on "yes" regardless
+   of whether the skill transferred. Nothing is collected or graded. Where the closing input is a new text,
+   clip, or prompt, it is written into the lesson, never left for the teacher to improvise.
+3. **Closing Transfer Check variety.** The concrete object, person, or scenario used in the Closing Transfer
+   Check differs across every lesson in the same Set, checked against the Set's other lessons before
+   finalizing. Any illustrative pattern in a prompt shows the grammatical shape only; do not reuse its
+   example object, or a trivial variant of it, lesson after lesson.
+4. **One board-dependent moment per day.** Each day includes at least one activity for which the shared
+   board is structurally necessary, with at least one of these properties: co-constructed live from student
+   responses in real time; synthesizes distributed input scattered across students or task Levels into one
+   visible whole no single handout contains; or persists from Day 1 and is deliberately built on in Day 2.
+   Writing up target words or copying a prompt already printed on a handout is transcription, not a
+   board-dependent moment. Vary which slot carries it across lessons.
+5. **Teaching precedes the practice that depends on it.** Trace every practice activity back to the
+   teaching content it assumes (a grammar table, a strategy explanation, a worked distinction) and confirm
+   that content appears earlier in the lesson's own sequence, not later and not only modeled inside an
+   example text. Both pieces being present somewhere is not enough; the bug is order. Move the teaching
+   earlier, not the practice later.
+6. **No adjacent repeats.** A lesson's strategy, hook, oral-output protocol, and genre or format each differ
+   from the immediately preceding lesson in the Set, and a Set's first lesson from the previous Set's last
+   (see `Program_Conventions.md` §F). Adjacency is the rule; full-history non-repetition is not required.
+7. **Oral output is scaffolded for everyone.** Any live discussion protocol supplies 2-3 distinct rotated
+   prompts (never one static prompt for the whole window), explicit sentence stems per task Level inside
+   each Level's own ceiling, and an explicit active task for every student not currently speaking.
+
+## E. Style constraints for generated Markdown
+
+1. **No em-dashes** anywhere in generated content. Use hyphens, colons, or parentheses.
+2. **Teacher-facing vs student-facing.** The Markdown lesson, homework, or assessment document is the
+   teacher's document: answer keys, timing, rationale, and facilitation cues belong there. The student
+   packet is a regeneration of it (see `Student_Packet_Style_Guide.md` §G) and never the other way around.
+3. **Pacing diagram.** Each day opens with an ASCII timeline of its phases and minute allocations.
+4. **Metadata line.** The document opens with `**Module:** ... | **Band:** ... | **Task Levels:** ... |
+   **Version:** <Module>.<Set>.<Lesson>.<Version>` per `Program_Conventions.md` §G.
+5. **Plain, instruction-first prose.** Clear instructions over decorative language; each task Level's
+   vocabulary and grammar stay inside the same ceiling the source lesson used for that Level.
+
+## F. Shared self-check (apply before finalizing any lesson, homework, or assessment)
+
+Run this list first, then the modality's own list. If any item fails, revise before finalizing.
+
+1. Exactly the band's task Levels, each citing its own CSV row verbatim? (A)
+2. Every task at its own Level's ceiling, borrowed Levels included, not simplified and not escalated? (A)
+3. Every task and item exercising the Module's own verb, not a neighbor's? (A)
+4. Respectful Tiers: does the lowest task Level get genuine interpretive or evaluative work, and on a
+   production day a genuine production role? (B)
+5. Live oral work: does the lowest task Level get a different participation mode, not just an easier stem,
+   and is Foundation Support described where it plugs in? (B)
+6. No item duplicates another item in its Level's set under a different format? (C1)
+7. No item answerable by scan, elimination, general knowledge, or one obviously-right option; judgment
+   Levels engineered to require the judgment? (C2)
+8. Every item answerable only with the centerpiece in front of the student, never from memory? (C3)
+9. Every word bank or matching list padded with 1-2 near-miss taught words? (C4)
+10. Time-on-task roughly balanced across task Levels, estimated per item, over-length Levels cut? (C5)
+11. Every governed count actually counted, none at or near a floor? (C6)
+12. Every instruction complete inline; every bank, frame, or model placed before the items it serves? (C7)
+13. Skill Spotlight on Day 1 and a matching Closing Transfer Check on Day 2 that demonstrates, never
+    self-reports, on an object or scenario not used elsewhere in this Set? (D1-D3)
+14. A genuine board-dependent moment each day? (D4)
+15. Every practice activity preceded by the teaching it depends on? (D5)
+16. No strategy, hook, protocol, or genre repeated from the immediately preceding lesson? (D6)
+17. Oral protocol has 2-3 rotated prompts, per-Level stems, and a task for every non-speaker? (D7)
+18. No em-dashes; pacing diagram per day; metadata line present with the correct version code? (E)
+
+## Changelog
+
+**Current version: v1.0.** See `Changelog.md` in this folder.

@@ -59,9 +59,10 @@ that don't belong to any single modality:
 
 ```
 shared/
-├── Program_Conventions.md        # cross-modality facts: taxonomy, Sets, Rotation Log mechanics
-├── Student_Packet_Style_Guide.md # base CSS/HTML shell every HTML student packet reuses
-└── Changelog.md                  # version history for shared/Program_Conventions.md
+├── Program_Conventions.md          # cross-modality facts: taxonomy, Sets, Rotation Log mechanics
+├── Generation_Quality_Standards.md # modality-neutral pedagogical/item-quality rules + shared self-check
+├── Student_Packet_Style_Guide.md   # everything about printed output: CSS, translations, star/Task rules, packet self-check
+└── Changelog.md                    # version history for the three files above
 ```
 
 Every lesson type's prompts and `Index.md` point here for this content rather
@@ -140,20 +141,39 @@ noted in Known Issues.
   nested shape; Academic Writing adopted it for real 2026-09-08, once its own
   8-day/1-lesson-per-Set sizing was corrected to match Reading and
   Listening/Speaking's 2-day/4-lessons-per-Set model (see
-  `shared/Program_Conventions.md` §C). Neither the Lesson, Assessment, nor Module Lesson-Plan
-  generation prompts currently specify an output location themselves, so
-  this note is the convention to follow when saving newly generated content
-  in any of the three modalities.
+  `shared/Program_Conventions.md` §C). As of the 2026-09-08 shared-layer restructure, every
+  Lesson, Assessment, and Module Lesson-Plan prompt points to
+  `shared/Program_Conventions.md` §D for where its output saves.
 - **Cross-modality conventions live in one shared file, not restated per
   lesson type.** Facts that are true program-wide (the Level/Band taxonomy,
   what a Set is, the Set/Lesson folder-nesting shape, the CBI/TBLT
   framework, Rotation Log mechanics) belong in
-  [`shared/Program_Conventions.md`](shared/Program_Conventions.md),
-  following the same pattern already established for print styling
-  (`shared/Student_Packet_Style_Guide.md`). A lesson type's own `Index.md`,
-  `Changelog.md`, and prompts should point there rather than restate it —
-  this applies to Novel Reading and any future lesson type too, from the
-  start rather than as a later cleanup.
+  [`shared/Program_Conventions.md`](shared/Program_Conventions.md);
+  modality-neutral pedagogical and item-quality rules plus the shared
+  output self-check belong in
+  [`shared/Generation_Quality_Standards.md`](shared/Generation_Quality_Standards.md);
+  everything about printed output (CSS, teacher-to-student translations,
+  star and lettered-Task rules, the packet-is-a-regeneration rule, the
+  shared packet self-check) belongs in
+  `shared/Student_Packet_Style_Guide.md`. A lesson type's own `Index.md`,
+  `Changelog.md`, and prompts point there rather than restate it — this
+  applies to Novel Reading and any future lesson type too, from the start
+  rather than as a later cleanup.
+- **Fix modality-neutral bugs in `shared/` first.** Before editing a
+  modality's prompt to fix a quality problem, ask whether the rule stays
+  true when "text" is swapped for "clip" or "scenario." If yes, it goes in
+  `Generation_Quality_Standards.md` or the Style Guide, is logged once in
+  `shared/Changelog.md`, and each modality's own `Changelog.md` gets at most
+  a one-line pointer to that entry, not a restated copy. This is what stops
+  a fix landing in one modality and the same bug resurfacing in another.
+- **No prose cross-references between modalities.** A prompt may point at a
+  `shared/` section, never at another modality's prompt ("same as Passage
+  Reading 2.12"). Such a pointer has no mechanical link, so a change on one
+  side never reaches the other.
+- **Prompt bodies carry no version stamps.** No `(new in v2.2)`,
+  `(corrected in v1.5)`, dated parentheticals, or "this was the failure in
+  Lesson 2" narration inside a prompt's rules. Rationale and history live in
+  `Changelog.md`; the prompt states only the current rule.
 - **Rotation Log splits by Band.** `Rotation_Log.md` is a short overview
   (purpose, any note that applies across every Band, links to each Band's
   file) rather than one growing file with every Band nested inside it. Each
@@ -193,13 +213,12 @@ noted in Known Issues.
   Current-convention (v1.6, Lesson Introduction Page + Units 1-8) packets
   still need to be built for both — tracked in
   `writing/academic-writing/Index.md`'s Pending work.
-- Passage Reading's `Index.md` and `Rotation_Log.md`
-  (`reading/passage-reading/`) reference filenames that don't match what's
-  actually on disk, e.g. doc says `Passage Reading Lesson Generation Prompt
-  v2.7 BandCalibrated.md` / `Module 1 Lesson 1 - A Grandmother's Kitchen.md`,
-  but the real files are `Lesson_Generation_Prompt_v2.7_CURRENT.md` /
-  `Lesson1_Kitchen.md`. Needs reconciling (fix the docs to match reality, not
-  the other way around).
+- **Resolved 2026-09-08**: every filename cited in all three lesson types'
+  `Index.md` files (and this file) was checked against disk in the
+  shared-layer restructure pass; no mismatches remain. Passage Reading's
+  `Index.md` had cited `Generate_Student_Packet_Prompt_v1.11.md` for a file
+  that was already `_v1.12.md`; that and the older mismatches noted here
+  before are fixed.
 - **Resolved 2026-09-08**: Academic Writing now has a full prompt family
   matching Reading's and Listening/Speaking's (Module Lesson-Plan, Homework,
   Assessment, plus an Assessment Student Packet prompt — split from day one
