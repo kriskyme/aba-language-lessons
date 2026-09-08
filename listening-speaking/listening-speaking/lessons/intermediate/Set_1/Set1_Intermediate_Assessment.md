@@ -91,22 +91,24 @@ assessment would need. Both are heard by the whole class regardless of assigned 
 
 | Strategy | Where it appears below |
 | -------- | ----------------------- |
-| Listen for Main Ideas/Gist | Level 2 item 2, Level 3 item 2, Level 5 item 1 |
-| Recognize Examples | Level 2 item 4, Level 4 item 2 |
+| Listen for Main Ideas/Gist | Level 2 item 2, Level 2 item 5, Level 3 item 2, Level 4 item 2, Level 5 item 1 |
+| Recognize Examples | Level 2 item 4, Level 4 item 3 |
 | Listen for Sequence Markers | Level 2 item 3, Level 3 item 3 |
-| Predict from Context Before Confirming | Level 3 item 4, Level 4 item 3 |
+| Predict from Context Before Confirming | Level 3 item 4, Level 4 item 4 |
 
 **Vocabulary is tested through the graded items themselves, not a separate pre-teach or review step.** All target
 words are drawn from vocabulary already taught across Set 1's own 4 lessons, pooled rather than limited to a
 single lesson (Lesson 1 New Bakery x2, Lesson 2 Porto Food Tour, Lesson 3 Backpack, Lesson 4 Great-Grandmother),
 so a student who missed one lesson is only missing a fraction of the tested pool. Each item set's own item 1 is
 the vocabulary item, scaled by task Level (matching at Levels 2-3, fill-in-the-blank at Levels 4-5). None of the
-words come from either of this assessment's new clips.
+words come from either of this assessment's new clips. Each of these three items' word bank/matching list
+includes 1-2 extra already-taught words beyond what's needed (Level 2: **bakery**; Level 3: **sardine**,
+**waterproof**; Level 4: **variety**), so the last blank or match can't be completed by elimination alone.
 
 ### A.2 Structure
 
 ```
-LISTENING ASSESSMENT (approx. 40 MIN)  |--Setup (5)--|--Clip 1 + Items (15)--|--Clip 2 + Items (15)--|--Wrap (5)--|
+LISTENING ASSESSMENT (approx. 45 MIN)  |--Setup (5)--|--Clip 1 + Items (17)--|--Clip 2 + Items (18)--|--Wrap (5)--|
 ```
 
 **Setup (5 min)**
@@ -114,16 +116,17 @@ LISTENING ASSESSMENT (approx. 40 MIN)  |--Setup (5)--|--Clip 1 + Items (15)--|--
 - Present both clips' citation blocks above. No vocabulary pre-teach or review here - vocabulary is tested
   through the items themselves (below).
 
-**Clip 1 + Items (15 min)**
+**Clip 1 + Items (17 min)**
 
 - Play Clip 1 once (its 4:26 runtime does not comfortably allow a second full play inside this period).
 - Students immediately answer the items below that draw on Clip 1, at their own assigned task Level. No separate
   notes-taking step - items are answered right after the clip plays.
 
-- **Level 2:**
-  1. **(Vocabulary)** Match the word to its meaning: **ingredient** / **variety** / **capacity** -> "how much
-     something can hold" / "many different types of something" / "one of the things used to make a food"
-     [Answers: ingredient -> one of the things..., variety -> many different types..., capacity -> how much...]
+- **Level 2 (5 items):**
+  1. **(Vocabulary)** Match the word to its meaning: **ingredient** / **variety** / **capacity** / **bakery**
+     -> "how much something can hold" / "many different types of something" / "one of the things used to make a
+     food" [Answers: ingredient -> one of the things..., variety -> many different types..., capacity -> how
+     much... - bakery has no matching definition shown]
   2. **(Main Ideas/Gist)** Circle the picture that answers: "What is HaHaHouse?" (a museum / a hospital / a
      school) [Answer: a museum]
   3. **(Sequence Markers)** Fill in the blanks: "First, visitors walk into a cloud of \_\_\_. Then, they climb
@@ -133,8 +136,9 @@ LISTENING ASSESSMENT (approx. 40 MIN)  |--Setup (5)--|--Clip 1 + Items (15)--|--
      down]. Do you think visitors feel happy at HaHaHouse? Circle: yes / no. Which word tells you? Circle:
      (fun / boring) [Answer: yes, fun - genuine interpretive step, Respectful Tiers]
 - **Level 3:**
-  1. **(Vocabulary)** Match all 5 words to their meanings: **ingredient**, **organic**, **variety**, **capacity**,
-     **challenge** -> their taught definitions (A.1), shuffled.
+  1. **(Vocabulary)** Match all 5 words to their meanings, plus 2 extra words with no matching definition shown:
+     **ingredient**, **organic**, **variety**, **capacity**, **challenge**, **sardine**, **waterproof** -> the
+     5 taught definitions (A.1), shuffled [sardine and waterproof have no matching definition shown]
   2. **(Main Ideas/Gist)** Choose the best sentence: "It is \_\_\_ and \_\_\_." (a) a museum, boring (b) a
      museum, interactive (c) a hospital, quiet [Answer: b]
   3. **(Sequence Markers)** Put these steps in order (1-3): climb into the washing machine / walk through the
@@ -142,23 +146,32 @@ LISTENING ASSESSMENT (approx. 40 MIN)  |--Setup (5)--|--Clip 1 + Items (15)--|--
   4. **(Predict from Context Before Confirming)** Before hearing the rest of Segment 4, circle your prediction:
      why did Aleksandar like the Bed of Nails? (a) it tickled him (b) it hurt him (c) it scared him. After
      hearing it, circle what the recording actually says. [Answer: a, both circles]
-- **Level 4:**
-  1. **(Vocabulary)** Fill in the blank using a word bank (ingredient, capacity, challenge): "Learning a new
-     language can be a real \_\_\_ at first." / "This backpack has a large \_\_\_, so it can hold many things."
-     / "Flour is the main \_\_\_ in bread." [Answers: challenge, capacity, ingredient]
-  2. **(Recognize Examples)** Match each example to the kind of humor it represents: rubber chickens singing ->
+- **Level 4 (4 items):**
+  1. **(Vocabulary)** Fill in the blank using a word bank (ingredient, capacity, challenge, variety): "Learning a
+     new language can be a real \_\_\_ at first." / "This backpack has a large \_\_\_, so it can hold many
+     things." / "Flour is the main \_\_\_ in bread." [Answers: challenge, capacity, ingredient - variety is not
+     the answer to any blank]
+  2. **(Main Ideas/Gist)** Andrea Golubic got the idea for HaHaHouse during the COVID-19 pandemic, when many
+     people felt isolated and sad. What inspired her mission to heal people with laughter? (a) a pandemic
+     experience of isolation, plus a childhood photo of herself joking around (b) a university course on comedy
+     (c) a friend's suggestion [Answer: a]
+  3. **(Recognize Examples)** Match each example to the kind of humor it represents: rubber chickens singing ->
      (silly/slapstick humor / informational humor); the "serious history of humor" told through theatre and film
      -> (silly/slapstick humor / informational humor) [Answers: silly/slapstick, informational]
 
-**Clip 2 + Items (15 min)**
+**Clip 2 + Items (18 min)**
 
 - Play Clip 2 once (its 3:17 runtime comfortably allows a second play if a teacher judges the class needs it -
   state this option, but one play is the default).
 - Students immediately answer the items below that draw on Clip 2 (or, at Level 5, on both clips), at their own
   assigned task Level. No separate notes-taking step.
 
+- **Level 2 (continued):**
+  5. **(Main Ideas/Gist)** What did researchers find in Pompeii? Circle the picture: (a museum / **a bathhouse**
+     / a school) [Answer: a bathhouse]. Which room is mentioned in the recording? Circle: (**a warm room called
+     the caldarium** / a swimming pool / a kitchen) [Answer: a warm room called the caldarium]
 - **Level 4 (continued):**
-  3. **(Predict from Context Before Confirming)** Before hearing why the bathhouse had both a hot room and a
+  4. **(Predict from Context Before Confirming)** Before hearing why the bathhouse had both a hot room and a
      cold tub, circle your prediction: why might Pompeii's wealthy families want both? (a) to save money (b) to
      enjoy different temperatures as part of their bathing routine (c) to clean their clothes. After hearing it,
      circle what the recording actually says. [Answer: b, both circles]
@@ -191,19 +204,22 @@ Point values (not letter grades or percentages); every item is multiple choice, 
 
 | Level | Points per item | Total |
 | ----- | ---------------- | ----- |
-| 2 | Item 1: 3 (one per match); Items 2-3: 1 each; Item 4: 2 (one per match) plus 1 for the interpretive yes/no | 8 |
+| 2 | Item 1: 3 (one per match); Items 2-3: 1 each; Item 4: 2 (one per match) plus 1 for the interpretive yes/no; Item 5: 2 (picture MC plus detail) | 10 |
 | 3 | Item 1: 5 (one per match); Items 2-3: 1 each; Item 4: 2 (predict + confirm) | 9 |
-| 4 | Item 1: 3 (one per blank); Item 2: 2 (one per match); Item 3: 2 (predict + confirm) | 7 |
+| 4 | Item 1: 3 (one per blank); Item 2: 2; Item 3: 2 (one per match); Item 4: 2 (predict + confirm) | 9 |
 | 5 | Item 1: 2 (one per blank); Items 2-3: 1 each; Item 4: 4 (one per match) | 8 |
 
 **Holistic pass note per Level:**
 
 - **Level 2:** correctly identifies HaHaHouse as a museum, completes the sequence frame in order, matches at
-  least one example to its zone, and offers the correct yes/no plus the word that signals it.
-- **Level 3:** correctly matches all 5 vocabulary words, completes the two-slot frame, sequences all three
-  arrival steps, and predicts plausibly before confirming the Bed of Nails detail.
-- **Level 4:** correctly completes all three vocabulary blanks, matches both examples to their humor type, and
-  predicts plausibly before confirming the bathhouse's hot/cold purpose.
+  least one example to its zone, offers the correct yes/no plus the word that signals it, and correctly
+  identifies the Pompeii bathhouse and its caldarium detail.
+- **Level 3:** correctly matches all 5 vocabulary words (without being misled by the 2 extra unmatched words),
+  completes the two-slot frame, sequences all three arrival steps, and predicts plausibly before confirming the
+  Bed of Nails detail.
+- **Level 4:** correctly completes all three vocabulary blanks, identifies what inspired Golubic's mission to
+  heal people with laughter, matches both examples to their humor type, and predicts plausibly before confirming
+  the bathhouse's hot/cold purpose.
 - **Level 5:** correctly completes both precision vocabulary blanks, identifies the accurate cross-clip summary
   and the accurate evaluative-language reading, and matches all four framing descriptions to the correct clip.
 
@@ -217,22 +233,27 @@ Point values (not letter grades or percentages); every item is multiple choice, 
    lessons; Clip 2's runtime (3:17) sits inside the target with no overshoot. Pass.
 3. Every task Level's item set traces to that Level's verbatim CSV Listening can-do (table in A.1). Pass.
 4. All four strategies taught in Set 1 are covered at least once each (table in A.1). Pass.
-5. Time-on-task is roughly balanced across Levels (item/point counts 8, 9, 7, 8 - no Level is disproportionately
+5. Time-on-task is roughly balanced across Levels (item/point counts 10, 9, 9, 8 - no Level is disproportionately
    longer or shorter). Pass.
 6. Level 2 gets a genuine interpretive item (item 4's yes/no plus the word that signals it), not fact-retrieval
    only - Respectful Tiers applied to an MC/matching format. Pass.
 7. Vocabulary is tested only through graded items (matching at Levels 2-3, fill-in-the-blank at Levels 4-5), with
    no separate pre-teach or review step anywhere in the document; words are pooled across all 4 of the Set's
    lessons rather than any single one, and none are pulled from either clip. Pass.
-8. Is every item at every task Level multiple choice, fill-in-the-blank, or matching? Yes - none open-ended.
+8. Does each word bank or matching list include 1-2 extra pooled words beyond what's needed (scaled to bank
+   size), none of them the correct answer to anything else in that item? Yes - Level 2 item 1 adds **bakery**
+   (+1, 3-word bank); Level 3 item 1 adds **sardine** and **waterproof** (+2, 5-word bank); Level 4 item 1 adds
+   **variety** (+1, 3-word bank), already pooled elsewhere in this same assessment but not the answer to any of
+   these three blanks. Pass.
+9. Is every item at every task Level multiple choice, fill-in-the-blank, or matching? Yes - none open-ended.
    Pass.
-9. At Level 5, whose can-do calls for summarizing and identifying evaluative language, are the items engineered
-   to require that judgment rather than simplified into recall? Yes - item 2's summary options are all
-   plausible-sounding, only one accurate; item 4's matching pairs a description to the clip it actually applies
-   to, not to a dictionary definition. Pass.
-10. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
+10. At Level 5, whose can-do calls for summarizing and identifying evaluative language, are the items engineered
+    to require that judgment rather than simplified into recall? Yes - item 2's summary options are all
+    plausible-sounding, only one accurate; item 4's matching pairs a description to the clip it actually applies
+    to, not to a dictionary definition. Pass.
+11. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
     Yes. Pass.
-11. No em-dashes used. Citation blocks first for both clips. Segment labels used in place of timestamps,
+12. No em-dashes used. Citation blocks first for both clips. Segment labels used in place of timestamps,
     consistent with this Set's own established workaround (flagged, not silently substituted).
 
 ---

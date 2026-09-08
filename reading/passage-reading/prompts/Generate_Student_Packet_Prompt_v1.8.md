@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v1.7)
+# Passage Reading Student Print Formatting Prompt (v1.8)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated). Takes one completed 2-day
 lesson cycle and produces a single, print-ready, black-and-white student handout: one self-contained HTML
@@ -6,7 +6,7 @@ document covering both days, with every piece of teacher-facing pedagogical lang
 instructions a student (or a parent glancing at the page) can act on without decoding jargon like "close reading
 with annotation," "Fishbowl," or "Task Level."
 
-**Current version: v1.7.** For the full dated version history and the reasoning behind each change, see
+**Current version: v1.8.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`.
 
 Use this prompt only after a lesson's Day 1 and Day 2 already exist. Do not use it to generate lesson content, and
@@ -241,14 +241,17 @@ fill-in-the-blank or star-rated task) gets a light dashed rule above and below i
 surrounding prose without promoting it to a full bordered box. This is not a callout box and does not signal a
 spotlight moment; it is a lighter, workbook-style convention reserved specifically for word banks, and should not
 be extended to other ordinary content (a plain vocabulary list still renders with no border or rule at all).
+Position a word bank immediately before the question(s) or sentence frame it actually supplies words for, not
+after - a student reading top to bottom should see the options before being asked to use them.
 
 ### 2.13 Answer space
 
 Add blank writing lines wherever a question demands a written answer, sized to the expected answer length: a
-single short inline line (e.g. `.ans-line-sm`, roughly 300px, inline after the question) for a brief fact or short
-phrase; two or more full-width lines (e.g. `.ans-line`, roughly 20-24px tall each) for a 2-3 sentence answer or a
-requested quote. Do not add answer space to questions with no written-response component (e.g. a fill-in-the-
-blank item that is itself the answer space, or a purely discuss-aloud prompt).
+single short block-level line (e.g. `.ans-line-sm`, roughly 300px, beginning on its own line directly below the
+question - never packed onto the same line as the question text) for a brief fact or short phrase; two or more
+full-width lines (e.g. `.ans-line`, roughly 20-24px tall each) for a 2-3 sentence answer or a requested quote. Do
+not add answer space to questions with no written-response component (e.g. a fill-in-the-blank item that is
+itself the answer space, or a purely discuss-aloud prompt).
 
 ### 2.14 Redundant rules and dividers
 

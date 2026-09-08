@@ -1,22 +1,55 @@
 # Academic Writing Rotation Log — Intermediate Band
 
-Flat, chronological table for this Band. See `Rotation_Log.md` for why this log isn't nested by Set (no Writing
-Module Lesson-Plan prompt exists yet), the cross-Band check to run before generating, and the two
-numbering-columns note.
+Nested by Module and Set, one row per lesson, matching Reading's and Listening/Speaking's own Rotation Log shape
+now that Academic Writing uses the same 2-day-lesson/4-lessons-per-Set model (`shared/Program_Conventions.md`
+§C, corrected 2026-09-08 from an original 8-day/1-lesson-per-Set model). See `Rotation_Log.md` for the
+cross-Band check to run before planning a new Set.
 
-| #   | Band Lesson #  | Date                                                                                      | Module        | Band         | Grammar Focus (A / B)                                                                                                                                                                                                                                                                            | Scenario / Topic                     | Real-World Writing Form | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --- | -------------- | ----------------------------------------------------------------------------------------- | ------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Intermediate 1 | 2026-08-30, regenerated 2026-08-31 (four times), updated 2026-09-01 (v3.3, markdown only) | 1: Describing | Intermediate | Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging language + concession subordinator (although); frame warm-up: simple present "is" (Levels 2-3) | My phone case (was: my water bottle) | Descriptive paragraph   | Originally generated under v1's 4-day, single-focus cycle; regenerated in place under v2's 8-day, two-focus cycle with the same Module and Band. Both judgment calls the v1 version flagged (Focus row selection; whether Level 5 gets self-revision) are resolved directly in v2's Section 0.4/0.4a rather than re-flagged here. A second regeneration applied Section 0.4b's new content-volume minimums to Days 1-4. A third regeneration swapped the Scenario object from a water bottle to a phone case (user feedback: the water bottle topic was flat) and added a teacher-provided Word Bank for Levels 2-3's describing words. A fourth regeneration synced the lesson to v3's terminology (Levels 4-5 relabeled Paragraph Composition, matching v3's Section 0.2 renaming) with no content change, since Intermediate's task Levels (2-5) never reach v3's new Essay Composition regime (Levels 6-8) - see this lesson's own Self-check item 17. Updated an eighth time under v3.3 to add since/as/given that alongside because (the same fix made for Lesson 2/Advanced, applied back here since Intermediate anchors this same Level 4 row as its own native centerpiece) - markdown only, not regenerated into the print packets, since student copies of both units were already distributed before this fix. Treated as one lesson throughout, not multiple rotation entries; the next new lesson should still check its grammar focuses and topic against this row. Print packets rebuilt 2026-09-03 under the v1.2 Unit convention (one Unit per lesson day, not per 2-day segment): a Lesson Introduction Page plus Units 1-8 now exist for this lesson, replacing the earlier 4-file, 2-day-per-Unit set. |
+## Module 1: Describing
+
+### Set 1 (planned/generated 2026-08-30 through 2026-09-01 as a single 8-day lesson under the pre-2026-09-08
+convention; reorganized into 4 separate 2-day lessons 2026-09-08 with no content change — see each lesson's own
+Markdown doc for the "reorganized from" note)
+
+All 4 lessons below share one Scenario and Grammar Focus A/B pairing — the one genuine difference from a
+Reading/Listening-Speaking Set, whose 4 lessons each get an independent anchor text.
+
+| # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | My phone case (was: my water bottle) | S1.1.0 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus B, Mentor Ladder carried forward, prewriting | (same Scenario, continued) | S1.2.0 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | S1.3.0 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Peer editing, revision, publishing, Closing Transfer Check | (same Scenario, continued) | S1.4.0 |
+
+**Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
+(richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
+language + concession subordinator (although); frame warm-up: simple present "is" (Levels 2-3).
+
+**Real-world writing form:** Descriptive paragraph.
+
+**Notes (carried forward from this Set's pre-reorganization history):** Originally generated under v1's 4-day,
+single-focus cycle; regenerated in place under v2's 8-day, two-focus cycle with the same Module and Band. A
+second regeneration applied Section 0.4b's content-volume minimums. A third regeneration swapped the Scenario
+object from a water bottle to a phone case (user feedback: the water bottle topic was flat) and added a
+teacher-provided Word Bank. A fourth regeneration synced the lesson to v3's terminology (Levels 4-5 relabeled
+Paragraph Composition) with no content change. Updated an eighth time under v3.3 to add since/as/given that
+alongside because. Treated as one lesson throughout its 8-day life, not multiple rotation entries. **2026-09-08:
+reorganized from a single 8-day document into 4 separate 2-day lessons** (Lessons 1-4 above), per
+`shared/Program_Conventions.md` §C's corrected Set-size convention — the pre-v1.2 reconstructed Unit1/Unit2
+packet pair and the intermediate Intro+Unit1-8 packet set (built 2026-09-08, same day) are both superseded; each
+of the 4 lessons above now has its own current-convention packet (one file, two masthead sections —
+`Generate_Student_Packet_Prompt_v2.2.md`), and the v3.3 reason-connector update is now reflected in the packets for
+the first time (it was previously markdown-only, since student copies of the old packets were already
+distributed). See `Index.md`'s "Sets" section.
 
 ---
 
-**Format for the next entry** (append below the table's last row, do not overwrite anything above):
+**Format for the next entry** (append below the table's last row within the relevant Set subsection, or start a
+new `### Set N` subsection for a new Set — do not overwrite anything above):
 
 ```
-| N | Intermediate <Band Lesson #> | <date> | <Module #: Name> | Intermediate | Focus A: <core form> / Focus B: <sentence variety> | <Scenario/topic> | <real-world writing form> | S<Band Lesson #>.<Band Lesson #>.0 | <notes: judgment calls, repeats flagged, anything worth carrying forward> |
+| N | Intermediate <global lesson #> | <Set position> of 4 | <date> | <content role> | <Scenario/topic, or "(same Scenario, continued)"> | S<Set>.<global lesson #>.<iteration> |
 ```
 
-(`Version` is new as of 2026-09-07 - `shared/Program_Conventions.md` §G - and only applies from the next entry
-onward; the row above predates it and is not retrofitted. Since a Writing Set is currently 1 lesson
-(`Index.md`'s "Sets (aspirational)" section), the version's Set and Lesson segments are both this row's own
-`Band Lesson #`. Bump the Iteration digit in place whenever a lesson is substantively revised after generation.)
+Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way
+this Set's entry does — they apply to all 4 rows, not repeated per row.

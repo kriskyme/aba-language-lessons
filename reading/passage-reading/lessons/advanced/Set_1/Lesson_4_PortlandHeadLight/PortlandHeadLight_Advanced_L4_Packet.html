@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keeping the Light: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        min-width: 130px;
+      }
+
+      .idiom-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-list .irow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .idiom-list .irow:last-child {
+        border-bottom: none;
+      }
+      .idiom-list .irow .idiom-phrase {
+        width: 180px;
+        flex-shrink: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .stage-direction {
+        font-style: italic;
+        color: var(--ink-soft);
+      }
+      .speaker {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-right: 4px;
+      }
+      .footref {
+        font-weight: 700;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qlist .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        max-width: 320px;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .discuss-block .prompt {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        margin: 10px 0 16px;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+      .stems .tip {
+        display: block;
+        font-style: italic;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        margin: 2px 0 9px 62px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">Print this packet</button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 4A: Keeping the Light</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Reading</span>
+          <span class="masthead-tag">Advanced S1.4.0</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> describe a job by comparing how it used to be done to how it's done now, and
+        give a clear reason for the comparison, and identify the words a writer uses to reveal their feelings
+        without stating them directly.
+      </p>
+
+      <div class="section-title">Before You Read</div>
+
+      <p class="instr">
+        Your teacher will post a statement on the wall. Move to the corner of the room that matches how you feel
+        about it, and count up how many students picked each corner. You'll check your reasons against the text
+        after you read.
+      </p>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow"><span class="word">1. beacon</span><span>a light used to guide or warn ships</span></div>
+        <div class="vrow"><span class="word">2. foghorn</span><span>a loud horn that warns ships when fog blocks a lighthouse's light</span></div>
+        <div class="vrow"><span class="word">3. keeper</span><span>the person responsible for operating and maintaining a lighthouse</span></div>
+        <div class="vrow"><span class="word">4. shoal</span><span>a shallow, rocky area of water that is dangerous for ships</span></div>
+        <div class="vrow"><span class="word">5. isolated</span><span>far away from other people, alone for long periods</span></div>
+        <div class="vrow"><span class="word">6. vigil</span><span>a period of staying alert and watchful, especially at night</span></div>
+      </div>
+
+      <p class="section-label">Idioms to Know</p>
+      <div class="idiom-list">
+        <div class="irow"><span class="idiom-phrase">kept watch</span><span>stayed alert and paid close attention, especially to keep something safe</span></div>
+        <div class="irow"><span class="idiom-phrase">in the dead of night</span><span>in the middle of the night, when everything is dark and quiet</span></div>
+      </div>
+
+      <div class="section-title">Read &amp; Mark It Up</div>
+
+      <p class="instr">
+        Read the interview below with a partner. One of you reads the Interviewer's lines, the other reads the
+        Keeper's lines. Read it through once quietly on your own first, then practice reading it aloud together
+        with expression before a few pairs perform it for the class. As you read, mark it up using the guide
+        beside it.
+      </p>
+
+      <div class="article">
+        <div class="headline">Keeping the Light: An Evening with Portland Head Light's Keeper</div>
+
+        <div class="annot-key">
+          <div class="annot-key-title">Mark It Up</div>
+          <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+          <div class="k-row"><span class="k-mark">( circle )</span> a connector word: however, even so, since, because</div>
+          <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+          <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+          <div class="k-row"><span class="k-mark">!</span> next to a word that feels like the writer's opinion</div>
+        </div>
+
+        <p><span class="para-letter">[A]</span> <span class="stage-direction">(The interviewer stands on the rocky
+        point at Cape Elizabeth, Maine, as the tower's lamp begins to glow against the darkening sky.)</span></p>
+
+        <p><span class="speaker">Interviewer:</span> Before the light was automated, what did a typical evening
+        look like for the keeper on duty?</p>
+
+        <p><span class="speaker">Keeper:</span> <span class="stage-direction">(She glances up at the tower.)</span>
+        Most evenings began the same way. An hour before sunset, I climbed the tower stairs to trim the wick and
+        polish the lens, since even a little soot could dim the beacon enough to matter to a ship ten miles out.</p>
+
+        <div class="clearfloat"></div>
+
+        <p><span class="para-letter">[B]</span> <span class="speaker">Interviewer:</span> That sounds like a lot
+        of responsibility for one evening.</p>
+
+        <p><span class="speaker">Keeper:</span> It never really ended, either. Once the lamp was lit, I <span
+        class="idiom-mark">kept watch</span> through the night, checking the flame every few hours, since a keeper
+        who fell asleep put every ship near the shoal in danger. On foggy nights, I also sounded the foghorn
+        myself, every few seconds, sometimes for a full day at a stretch.</p>
+
+        <p><span class="para-letter">[C]</span> <span class="speaker">Interviewer:</span> Did being isolated out
+        here ever bother you?</p>
+
+        <p><span class="speaker">Keeper:</span> <span class="stage-direction">(She pauses, choosing her words
+        carefully.)</span> People ask that a lot, and the honest answer is both yes and no. The nearest town was
+        close enough to see, but the job still meant long stretches alone, especially in the <span
+        class="idiom-mark">dead of night</span>, when the only company was the horn and the waves against the
+        rocks. Still, the light needed a nightly vigil, and I liked being the person who kept it burning.</p>
+
+        <p><span class="para-letter">[D]</span> <span class="speaker">Interviewer:</span> Portland Head Light has
+        stood here since the 1790s.<span class="footref">¹</span> What do you think has stayed the same, now that
+        a machine runs the light?</p>
+
+        <p><span class="speaker">Keeper:</span> The purpose hasn't changed. A ship far out on the water still
+        needs a fixed point of light to steer by. What changed is who provides it: a sensor now turns the lamp on
+        and off, and a machine sounds the horn when the fog rolls in, faster than I ever could by hand.</p>
+
+        <p><span class="para-letter">[E]</span> <span class="speaker">Interviewer:</span> Do you think something
+        was lost when the keeper's job here ended?</p>
+
+        <p><span class="speaker">Keeper:</span> I think so, though I understand why the change made sense. A
+        machine doesn't get tired and never misses a night by accident, but it also doesn't notice the small
+        things a person notices: a strange color in the water, or a boat drifting somewhere it shouldn't be. The
+        light still shines reliably, but nobody stands at the top of the tower anymore, watching the water the way
+        a keeper once did.</p>
+
+        <p><span class="para-letter">[F]</span> <span class="speaker">Interviewer:</span> If you could say one
+        thing to someone visiting the tower today, what would it be?</p>
+
+        <p><span class="speaker">Keeper:</span> <span class="stage-direction">(She looks out toward the
+        water.)</span> I'd tell them to notice how steady the light looks from shore, then imagine someone
+        climbing those stairs every evening to keep it that way. The light isn't just a machine now, and it wasn't
+        just a job before either. For over two hundred years, someone or something has kept a promise to every
+        ship passing this point: you will not be alone out there in the dark.</p>
+
+        <div class="footnotes">
+          <div>¹ Portland Head Light was commissioned by George Washington in 1791, making it the oldest
+          lighthouse in Maine; it is now automated and sits inside Fort Williams Park in Cape Elizabeth.</div>
+        </div>
+      </div>
+
+      <div class="section-title">Check Your Understanding</div>
+
+      <p class="instr instr-inline">
+        <span class="exercise-label">Task A.</span> Answer using the text. Write the paragraph letter that gives
+        you each answer, then write your answer on the lines.
+      </p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">
+            What two tasks does the keeper do an hour before sunset? (Paragraph <span class="blank"></span>)
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <div class="qbody">
+            What does the keeper do herself on foggy nights? (Paragraph <span class="blank"></span>)
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <div class="qbody">
+            What does a sensor do now instead of the keeper? (Paragraph <span class="blank"></span>)
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <div class="qbody">
+            What are two things a machine does not notice, according to the keeper? (Paragraph <span class="blank"></span>)
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">5.</span>
+          <div class="qbody">
+            Why did even a little soot on the lens matter to the keeper? Quote the reason.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">6.</span>
+          <div class="qbody">
+            Why does the keeper say a keeper who fell asleep put ships in danger?
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">7.</span>
+          <div class="qbody">
+            What effect did automation have on the keeper's job?
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </li>
+      </ol>
+
+      <p class="instr instr-inline">
+        <span class="exercise-label">Task B.</span> Fill in each blank with one of your words to know.
+      </p>
+      <div class="wordbank"><strong>Word bank:</strong> beacon &middot; foghorn &middot; keeper &middot; shoal &middot; isolated &middot; vigil</div>
+      <ol class="fillblank">
+        <li><span class="num">1.</span> A ship far from shore needs to see the ______ to know where the rocks
+        are.</li>
+        <li><span class="num">2.</span> On a foggy night, the ______ warns ships that cannot see the light.</li>
+        <li><span class="num">3.</span> Working at the lighthouse could feel ______, since the nearest town was
+        still a walk away.</li>
+        <li><span class="num">4.</span> Every night, the keeper kept a ______, checking the flame again and
+        again.</li>
+      </ol>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Focus on the Objective</div>
+        <p class="model-step">
+          <strong>Feature and comparison.</strong> In Paragraph [D], the keeper says "the purpose hasn't changed,"
+          but "what changed is who provides it." The feature is the light itself. The comparison is between the
+          keeper's old routine and the sensor's new one. The reason follows right after: the machine works
+          "faster" than a hand-lit lamp ever could.
+        </p>
+        <p class="model-step">
+          <strong>Evaluative language.</strong> In Paragraph [E], the keeper says a machine "doesn't notice the
+          small things a person notices." She never says "I think the change is a loss," but pointing out exactly
+          what the machine misses is doing that work. It's a judgment, not a fact you could check with a ruler.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 4B: Keeping the Light</h1>
+      </div>
+
+      <div class="section-title">Warm-Up</div>
+      <p class="instr">
+        Find the 6 words to know from before in the following short piece. Then tell a partner, in one sentence,
+        what the bridge keeper and the lighthouse keeper from Day 1 have in common.
+      </p>
+
+      <div class="refresher refresher-noline">
+        <div class="headline">The Bridge Keeper Who Works Alone at Night</div>
+        <p>
+          On the river just outside town, a small drawbridge rises to let tall boats pass underneath. Few people
+          know that a keeper still operates it by hand every night, alone in a narrow control room above the
+          water. The job can feel isolated, since barely any boats pass after midnight, but the keeper still keeps
+          a steady vigil, checking the warning beacon on each tower every hour to make sure it hasn't gone dark.
+          When fog rolls in off the river, an old foghorn built into the bridge sounds every few seconds, warning
+          boats away from the shallow shoal near the eastern piling. The keeper says the hardest part isn't
+          staying awake, it's staying ready, since a boat can appear on the radio with almost no warning. Still,
+          after ten years on the job, the keeper says there's something satisfying about being the one person a
+          captain can count on at three in the morning.
+        </p>
+      </div>
+
+      <div class="section-title">Investigate the Text</div>
+
+      <p class="instr">
+        Pick one task below. When you're done, find a small group with people who worked on a different task than
+        you, and take turns sharing what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">★</span><br />Use
+        Paragraphs [A]-[B] only.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">Name one task the keeper does before sunset.<span class="ans-line-sm"></span></div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">The text compares the keeper's old job to something that runs it today. What does
+            that comparison point to?<span class="ans-line-sm"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">What reason does the keeper give for climbing the tower stairs every
+            evening?<span class="ans-line-sm"></span></div>
+          </li>
+        </ol>
+        <div class="wordbank"><strong>Word bank:</strong> soot &middot; beacon &middot; sensor &middot; ship</div>
+        <div class="starter">"One task the keeper does is ___. The text compares the keeper's job to ___ because
+        ___."</div>
+        <ol class="qlist" start="4">
+          <li><span class="num">4.</span> Which part of the keeper's evening job sounds more difficult to you,
+          climbing the stairs or staying awake all night? Circle one and finish the sentence: "I think ___ sounds
+          more difficult because the text describes it as ___."</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">★★</span></p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2 to 3 sentences, summarize how the interview is organized. (Does it move from the keeper's
+              evening routine, to the isolation of the job, to what has changed, to a closing reflection, or some
+              other way?)
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one word or phrase in Paragraph [E] that clearly signals the keeper's attitude toward the job
+              ending, even though she never says "I miss it" directly. Explain what that word suggests.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">★★★</span></p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              List two facts stated directly in Paragraph [D] (no opinion words).
+              <span class="ans-line-sm"></span>
+              <span class="ans-line-sm"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">List one clearly evaluative phrase from Paragraph [E] that shows judgment rather
+            than fact.<span class="ans-line-sm"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find the spot in Paragraph [E] where the keeper's tone shifts from a confident, understanding claim
+              ("I think so, though I understand why the change made sense") to a more personal complaint about
+              what the machine misses. Quote both halves of the shift.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">★★★★</span><br />Read
+        the second text below, then compare it to the interview.</p>
+
+        <div class="refresher refresher-noline" style="margin: 12px 0">
+          <div class="headline" style="font-size: 15px">Welcome to Portland Head Light</div>
+          <p style="font-size: 13.5px">
+            Built in 1791 on the orders of President George Washington, Portland Head Light is the oldest
+            lighthouse in Maine and one of the most photographed lighthouses in the country. Its automated beacon
+            still guides ships safely into Casco Bay today, operated without a resident keeper. Visitors can
+            explore the surrounding grounds at Fort Williams Park year-round, free of charge, and tour the
+            keeper's former quarters, now home to a small museum of maritime history. The tower's dramatic
+            setting, framed by rocky cliffs and crashing waves, has drawn painters, photographers, and tourists
+            for generations. Whether you visit at sunrise or sunset, Portland Head Light offers one of the most
+            memorable views on the entire Maine coastline. Plan your visit today and discover why this landmark
+            remains a must-see destination.
+          </p>
+        </div>
+
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              List one detail the interview includes that the visitor placard leaves out, and one detail the
+              placard includes that the interview leaves out.
+              <span class="ans-line-sm"></span>
+              <span class="ans-line-sm"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Both texts describe the same lighthouse but create a different impression. In 2 to 3 sentences,
+              describe that difference.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              The placard wants visitors to come. Where in the text can you see that goal shaping how it describes
+              the lighthouse, even though it never says "come visit us" directly?
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+
+      <div class="discuss-block">
+        <p class="instr">
+          Get into a small group. Your group will work through three questions, one at a time, moving to the next
+          when your teacher signals. Take turns discussing each one out loud, using a starter phrase from the
+          list.
+        </p>
+
+        <div class="prompt">1. Describe the keeper's job. How does it compare to what happens at the lighthouse
+        today? Use one specific detail from the text to support your description.</div>
+        <div class="prompt">2. Describe how the keeper talks about isolation and the nightly vigil. What specific
+        words does she use, and what impression do those words create?</div>
+        <div class="prompt">3. Describe what has changed and what has stayed the same about keeping ships safe.
+        What is one reason the keeper gives for why the change happened?</div>
+
+        <p class="instr" style="font-weight: 700; margin-bottom: 6px">Starter phrases:</p>
+        <ul class="stems">
+          <li><span class="stars">★</span> "One task the keeper used to do is ___, because the text says ___."</li>
+          <li class="tip">If you have this line, practice it quietly with a partner first. While your group talks,
+          keep a tally of how many times "alone" or "machine" comes up as a reason for how the job changed, then
+          use your line when there's a good pause.</li>
+          <li><span class="stars">★★</span> "The keeper's word choice, like ___, shows her feelings because ___."</li>
+          <li><span class="stars">★★★</span> "The keeper states a fact when she says ___, but shifts to a more
+          personal reflection when she says ___."</li>
+          <li><span class="stars">★★★★</span> "Comparing the two texts, I noticed the [visitor placard/interview]
+          frames this as ___, which serves the unstated interest of ___."</li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <p class="instr">
+          With a partner, pick one thing in the room. Describe it by comparing it to something else, and use one
+          word that shows how you feel about it without stating it directly.
+        </p>
+        <ul class="stems">
+          <li><span class="stars">★★</span> "I would describe this ___ by comparing it to ___, because ___."</li>
+          <li><span class="stars">★★★★</span> "Notice how I just used the word ___ to show how I feel about this,
+          without saying it directly."</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

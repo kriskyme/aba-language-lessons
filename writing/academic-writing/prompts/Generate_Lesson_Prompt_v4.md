@@ -1,14 +1,17 @@
-# Academic Writing Lesson Generation Prompt (v3.5)
+# Academic Writing Lesson Generation Prompt (v4)
 
-**Lesson type:** this prompt generates an **Academic Writing Lesson**, the Writing-modality counterpart to the
-existing Passage Reading Lesson. Where Passage Reading is a fixed 2-day cycle built around one shared anchor
-text, Academic Writing is a fixed **8-day cycle** built around one shared writing scenario, differentiated into
-band-scoped task Levels that each produce their own written output, calibrated against the Writing-modality rows
-of `learningobjectives.csv`. It was written by working backward from the sample textbook unit the user supplied
-(`Writing Content Sample`, two full grammar-in-context chapters from an academic ESL writing textbook: one on
-the simple present, articles, and simple/compound sentences; one on the simple past, adverbs of manner, and
-complex sentences with time clauses, each chapter ending in a guided paragraph and peer edit) and forward from
-the existing Passage Reading Lesson Generation Prompt v2.5.
+**Lesson type:** this prompt generates one **Academic Writing Lesson**, the Writing-modality counterpart to the
+existing Passage Reading Lesson. Passage Reading and Academic Writing now share the same lesson shape: a fixed
+**2-day cycle**, 4 lessons per Set. What's genuinely different is what those 4 lessons share: a Reading Set's 4
+lessons each get an independent anchor text, while an Academic Writing Set's 4 lessons share **one** Scenario
+carried from grammar input through a finished, published piece, differentiated into band-scoped task Levels that
+each produce their own written output, calibrated against the Writing-modality rows of `learningobjectives.csv`.
+See "The Four-Lesson Set" section below for exactly how that arc is fixed across the 4 lesson positions. It was
+written by working backward from the sample textbook unit the user supplied (`Writing Content Sample`, two full
+grammar-in-context chapters from an academic ESL writing textbook: one on the simple present, articles, and
+simple/compound sentences; one on the simple past, adverbs of manner, and complex sentences with time clauses,
+each chapter ending in a guided paragraph and peer edit) and forward from the existing Passage Reading Lesson
+Generation Prompt v2.5.
 
 **Moved to a shared, cross-modality doc:** paste `shared/Program_Conventions.md` alongside this prompt when
 generating. §E's CBI/TBLT framework applies here with the Scenario as the content vehicle: writing practice
@@ -20,31 +23,58 @@ peer-editing exchange at the end. Section 0 below exists for the same reason it 
 generated lesson calibrated against real objectives and real output-length targets instead of an invented
 difficulty curve.
 
-**Relationship to Passage Reading:** this prompt shares the Band table, the Level 1-8 scale, and
-`learningobjectives.csv` with Passage Reading, and borrows several proven mechanisms (Skill Spotlight, Closing
-Transfer Check, board-dependent moments, Respectful Tiers, no em-dashes). It deliberately diverges from Reading
-in two structural ways, both explained in Section 0.1: the lesson runs 8 days instead of 2, and instead of one
-shared anchor text with per-Level tasks built on top of it, each task Level gets its own short **Mentor Text**
-because in Writing (unlike Reading) the actual form of a Level's output changes, not just the depth of engagement
-with a shared text.
+**Relationship to Passage Reading:** this prompt shares the Band table, the Level 1-8 scale,
+`learningobjectives.csv`, and now the 2-day/4-lessons-per-Set lesson shape with Passage Reading, and borrows
+several proven mechanisms (Skill Spotlight, Closing Transfer Check, board-dependent moments, Respectful Tiers, no
+em-dashes). It still deliberately diverges from Reading in one structural way, explained in Section 0.1 and "The
+Four-Lesson Set" below: instead of one shared anchor text with per-Level tasks built on top of it, each task
+Level gets its own short **Mentor Text**, and the 4 lessons in a Set share one Scenario/piece of writing rather
+than 4 independent topics, because in Writing (unlike Reading) the actual form of a Level's output changes, not
+just the depth of engagement with a shared text.
 
 **Provisional status:** unlike Reading's Section 0.2, whose word-count ceilings are anchored to a real corpus
 (British Council LearnEnglish, Cambridge exam specs), the output-length targets in Section 0.2 below are a
 first-pass estimate built from the CSV's own worked examples and general ESL paragraph-writing norms, not a
 verified external corpus. Treat them as a starting point to recalibrate once real generated lessons and real
 student output exist to check them against, the same way Reading's Level 3 ceiling was corrected after two
-separate rounds of coming in short. The move to 8 days does not raise these ceilings; the CSV still governs the
-size of the student product, and extra days buy depth of instruction and revision time, not a bigger target.
+separate rounds of coming in short. Splitting the old 8-day-in-one-document model into 4 separate 2-day lessons
+does not raise these ceilings; the CSV still governs the size of the student product, and the Set's 8
+instructional days buy depth of instruction and revision time, not a bigger target.
 
-**Current version: v3.5.** For the full dated version history and the reasoning behind each change, see
-`Changelog.md`.
+**Current version: v4.** For the full dated version history and the reasoning behind each change, see
+`Changelog.md`. (v4 restructures the lesson from one 8-day document into 4 separate 2-day lesson documents per
+Set, matching Reading's/Listening-Speaking's lesson shape - see `shared/Program_Conventions.md` §C and
+`Changelog.md`'s 2026-09-08 entry. The pedagogical content of Section 0 is unchanged from v3.6; only the
+generation unit and the day-numbering/labeling below changed.)
 
-**Lesson header metadata (added v3.5):** directly under the generated document's H1, include a metadata line
-stating `**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per
-`shared/Program_Conventions.md` §G (today's Writing Set is 1 lesson, per `Index.md`'s aspirational Sets note;
-iteration `0` on first generation).
+**Relationship to the Module Lesson-Plan prompt:** `Generate_Module_Lesson_Plan_Prompt_v2.md` plans a Set's
+Scenario, Grammar Focus A/B pairing (and Essay Focus A/B direction, where applicable), and Leveled Mentor Ladder
+direction before this prompt writes any lesson content, the same upstream relationship Reading's and
+Listening/Speaking's own Module Lesson-Plan prompts have to their Lesson prompts. If an approved plan exists for
+this Set, take its Scenario, Focus A/B pairing, and Mentor Ladder direction as given rather than re-deriving them
+from Section 0.9 below for every one of the 4 lessons; this prompt's job then is to write the one lesson's worth
+of content the plan calls for at that Set position. Running this prompt without an approved plan remains valid
+for a Set's Lesson 1 - Section 0.9 below still applies in full when there is no plan to defer to - but Lessons
+2-4 should always continue what Lesson 1 (and any lesson before them in the same Set) already established, never
+re-derive the Scenario/Focus from scratch.
+
+**Lesson header metadata:** directly under the generated document's H1, include a metadata line stating
+`**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per `shared/Program_Conventions.md`
+§G. `<Lesson>` is this lesson's global number (continuing across Sets, per §G), not its 1-4 position within the
+Set; a Set's four lessons get four consecutive global numbers and four separate version codes (e.g. `S1.1.0`
+through `S1.4.0`), not one shared code. Iteration `0` on first generation.
 
 ---
+
+**A note on "Day N" references throughout Section 0 below:** the pedagogical design in Section 0 (the grammar
+bank, the essay-focus bank, board-dependent-moment placements, checklist timing, and so on) still refers to days
+by their original global 1-8 numbering from the pre-v4, one-document-per-Set model, since that numbering is
+woven through this section's own internal cross-references and its `Changelog.md` history. Translate using "The
+Four-Lesson Set" table above: **Day 1 = Lesson 1's Day 1; Day 2 = Lesson 1's Day 2; Day 3 = Lesson 2's Day 1;
+Day 4 = Lesson 2's Day 2; Day 5 = Lesson 3's Day 1; Day 6 = Lesson 3's Day 2; Day 7 = Lesson 4's Day 1; Day 8 =
+Lesson 4's Day 2.** A range like "Days 1-4" means Lessons 1-2; "Days 5-6" means Lesson 3; "Days 1-8" or "the
+8-day cycle" means the whole 4-lesson Set. The "TWO-DAY LESSON CYCLE" section above and every `### Lesson N, Day
+M` heading below already use the new scheme directly - only Section 0's prose still uses the old numbering.
 
 ## SECTION 0: BAND AND OBJECTIVE CALIBRATION (READ AND APPLY BEFORE WRITING ANY LESSON)
 
@@ -91,7 +121,7 @@ Sample` for the structural source), not a single longer paragraph. The required 
 
 Intermediate is the one band that holds the frame/paragraph boundary; Advanced and Proficient are the two bands
 that hold the paragraph/essay boundary. Design for whichever boundary a given band spans deliberately (see 0.1a
-below and the dual-track guidance in the 8-Day Cycle section); do not let a spanning band collapse into two
+below and the dual-track guidance in the Two-Day Lesson Cycle section); do not let a spanning band collapse into two
 disconnected tracks that happen to share a topic. No band currently spans both boundaries at once (none reaches
 low enough to include Level 3 and high enough to include Level 6 in the same lesson), so a generated lesson never
 needs to hold all three regimes together.
@@ -656,23 +686,27 @@ mechanism: a visible whole-class confidence vote converges on "yes" regardless o
 
 ### 0.9 Rotation
 
-Do not repeat the same grammar focus pair, the same Scenario topic, or the same real-world writing form (see the
-Module-to-form mapping below) in two consecutive 8-day cycles for the same class, and avoid clustering the same
-grammar focus across nearby Modules even when they are not strictly consecutive (e.g. teaching comparatives as
-Focus A for both a Describing lesson and an Evaluating lesson generated back to back), since both draw from the
-same shared grammar range and can overlap without the topic itself repeating.
+**Applies in full only when generating a Set's Lesson 1 without an approved Module Lesson-Plan** (see "Relationship
+to the Module Lesson-Plan prompt" above). Do not repeat the same grammar focus pair, the same Scenario topic, or
+the same real-world writing form (see the Module-to-form mapping below) in two consecutive Sets for the same
+class, and avoid clustering the same grammar focus across nearby Modules even when they are not strictly
+consecutive (e.g. teaching comparatives as Focus A for both a Describing Set and an Evaluating Set generated back
+to back), since both draw from the same shared grammar range and can overlap without the topic itself repeating.
+Lessons 2-4 of a Set never re-run this check - they continue Lesson 1's own Scenario/Focus, already checked once
+for the whole Set.
 
-**Before generating a lesson:** read `Rotation_Log.md` (overview) and every existing `Rotation_Log_<Band>.md` in
-full - the check below spans every Band, not just the one being generated for, so a single Band's file is not
-enough on its own. Check the grammar focus pair, Scenario topic, and real-world writing form against at least
-the immediately preceding logged lesson across all Bands (by date), and scan the fuller set of logs for a
-grammar focus that has recurred more than once in the last 3-4 entries overall. Flag any repeat before
-finalizing the lesson rather than after.
+**Before generating a Set's Lesson 1 (or any lesson without an approved plan):** read `Rotation_Log.md` (overview)
+and every existing `Rotation_Log_<Band>.md` in full - the check below spans every Band, not just the one being
+generated for, so a single Band's file is not enough on its own. Check the grammar focus pair, Scenario topic,
+and real-world writing form against at least the immediately preceding logged Set across all Bands (by date), and
+scan the fuller set of logs for a grammar focus that has recurred more than once in the last 3-4 Sets overall.
+Flag any repeat before finalizing the lesson rather than after.
 
-**After a lesson is generated and approved:** append one row to that lesson's own Band's `Rotation_Log_<Band>.md`
-(creating it from the template at the bottom of any existing `Rotation_Log_<Band>.md` if this is that Band's
-first lesson) per its own format instructions. This is the mechanism the log depends on; a lesson that is
-generated but never logged breaks the rotation check for every lesson generated after it.
+**After each lesson is generated and approved:** append one row to that lesson's own Band's `Rotation_Log_<Band>.md`,
+nested under that Set's own subsection (creating the Set subsection, using the template at the bottom of any
+existing `Rotation_Log_<Band>.md`, if this is that Set's first approved lesson) per its own format instructions.
+This is the mechanism the log depends on; a lesson that is generated but never logged breaks the rotation check
+for every Set generated after it.
 
 **Module-to-real-world-form mapping** (the Writing equivalent of Reading's genre bank in its 0.6; match
 formatting convention to the form, not generic paragraph formatting for everything). The rightmost column is new
@@ -695,9 +729,30 @@ than forcing a bad-fit essay type onto it:
 
 ---
 
-## 8-DAY WRITING CYCLE: STRUCTURE AND DETAILED FLOW
+## THE FOUR-LESSON SET: A FIXED ARC, ONE SCENARIO CARRIED THROUGHOUT
 
-**8-DAY CYCLE OVERVIEW (600 MIN TOTAL, 75 MIN/DAY)**
+**Unlike Reading, whose 4 lessons in a Set each get an independent anchor text and topic, Academic
+Writing's 4 lessons in a Set share one Scenario, carried from grammar input through a finished,
+published piece.** This is a fixed pedagogical arc, not an open per-lesson choice: which position
+in the Set a lesson occupies (1 through 4) determines its content role directly. This prompt
+generates **one 2-day lesson per run** (75 min/day, 150 min total) - run it four times per Set, once
+per position, against the same approved Module Lesson-Plan (`Generate_Module_Lesson_Plan_Prompt_v2.md`).
+
+| Set position | Content role | (Was, under the old 8-day-in-one-doc model) |
+| --- | --- | --- |
+| **Lesson 1** | Grammar Focus A: input, modeling, and deeper practice | Days 1-2 |
+| **Lesson 2** | Grammar Focus B, Essay Focus A/B (where applicable), Mentor Ladder, prewriting | Days 3-4 |
+| **Lesson 3** | Drafting, parts 1 and 2, and self-edit | Days 5-6 |
+| **Lesson 4** | Peer editing, revision, publishing, and the Closing Transfer Check | Days 7-8 |
+
+Lessons 3 and 4 do not re-derive the Scenario, Grammar Focus A/B, Essay Focus A/B, or Mentor Ladder
+from Section 0.9 - they continue the same lesson content Lessons 1-2 already established for this
+Set. Every request to this prompt names the Set (and therefore the approved plan/prior lessons to
+continue from) and which of the four positions is being generated.
+
+## TWO-DAY LESSON CYCLE: STRUCTURE AND DETAILED FLOW
+
+**LESSON 1 (150 MIN TOTAL, 75 MIN/DAY) - GRAMMAR FOCUS A**
 
 ```
 DAY 1: GRAMMAR FOCUS A - INPUT AND MODELING (75 MIN)
@@ -705,37 +760,49 @@ DAY 1: GRAMMAR FOCUS A - INPUT AND MODELING (75 MIN)
 |-- Phase 2: Focus A mini-lesson: rule + examples (30 min)
 |-- Phase 3: Controlled practice A, part 1 (30 min)
 
-DAY 2: GRAMMAR FOCUS A - DEEPER PRACTICE AND THE MENTOR SET (75 MIN)
+DAY 2: GRAMMAR FOCUS A - DEEPER PRACTICE AND THE MENTOR LADDER (75 MIN)
 |-- Phase 1: Editing-a-paragraph on Focus A, stated error count (20 min)
 |-- Phase 2: Frame warm-up (Levels 1-3) / original sentences with Focus A (Levels 4+) (25 min)
 |-- Phase 3: Leveled Mentor Ladder walkthrough (30 min)
+```
 
-DAY 3: GRAMMAR FOCUS B - SENTENCE VARIETY (75 MIN)
+**LESSON 2 (150 MIN TOTAL) - GRAMMAR FOCUS B AND PREWRITING**
+
+```
+DAY 1: GRAMMAR FOCUS B - SENTENCE VARIETY (75 MIN)
 |-- Phase 1: Focus B mini-lesson: rule + examples (20 min)
 |-- Phase 2: Controlled practice B: identifying/combining sentences (30 min)
 |-- Phase 3: Confusable-pair drill + mixed A/B editing paragraph (25 min)
 
-DAY 4: TASK-LADDER PRACTICE AND PREWRITING (75 MIN)
+DAY 2: TASK-LADDER PRACTICE AND PREWRITING (75 MIN)
 |-- Phase 1: Frame practice round 2 (Levels 1-3) / required-feature warm-up (Levels 4+) (25 min)
 |-- Phase 2: Prewriting for the Scenario, differentiated by task Level (30 min)
 |-- Phase 3: Prewriting share and board synthesis (20 min)
+```
 
-DAY 5: DRAFTING, PART 1 (75 MIN)
+**LESSON 3 (150 MIN TOTAL) - DRAFTING**
+
+```
+DAY 1: DRAFTING, PART 1 (75 MIN)
 |-- Phase 1: Mentor Ladder and prewriting re-look (10 min)
 |-- Phase 2: Independent/guided drafting: opening and body (50 min)
 |-- Phase 3: Mid-draft share-out (15 min)
 
-DAY 6: DRAFTING, PART 2 AND SELF-EDIT (75 MIN)
+DAY 2: DRAFTING, PART 2 AND SELF-EDIT (75 MIN)
 |-- Phase 1: Complete the draft (30 min)
 |-- Phase 2: Self-edit checklist pass (25 min)
 |-- Phase 3: Share-out / final line check (20 min)
+```
 
-DAY 7: PEER EDITING AND REVISION (75 MIN)
+**LESSON 4 (150 MIN TOTAL) - PEER EDITING, REVISION, AND PUBLISHING**
+
+```
+DAY 1: PEER EDITING AND REVISION (75 MIN)
 |-- Phase 1: Peer Editing exchange (25 min)
 |-- Phase 2: Revision time, incl. self-revision evidence (35 min)
 |-- Phase 3: Quick revision share (15 min)
 
-DAY 8: PUBLISHING AND CLOSING TRANSFER CHECK (75 MIN)
+DAY 2: PUBLISHING AND CLOSING TRANSFER CHECK (75 MIN)
 |-- Phase 1: Final polish / proofread pass (20 min)
 |-- Phase 2: Publish/share (30 min)
 |-- Phase 3: Closing Transfer Check (25 min)
@@ -743,35 +810,36 @@ DAY 8: PUBLISHING AND CLOSING TRANSFER CHECK (75 MIN)
 
 ### Essay-regime dual-track guidance (new in v3)
 
-The day-by-day flow below is written for a Paragraph Composition band (Beginner/Intermediate's composition
-Levels, or a lesson where no task Level reaches 6). For Advanced and Proficient, which both include Levels 6-8,
-run two tracks in parallel through Days 1-4, the same structural move v2 already makes for frame-regime Levels
-inside Intermediate, now one regime higher:
+The flow above is written for a Paragraph Composition band (Beginner/Intermediate's composition
+Levels, or a lesson where no task Level reaches 6). For Advanced and Proficient, which both include
+Levels 6-8, run two tracks in parallel through Lessons 1-2, the same structural move v2 already
+makes for frame-regime Levels inside Intermediate, now one regime higher:
 
 - **Levels 4-5 (where present in the band):** follow the flow below exactly, with Grammar Focus A/B (0.4) as
   their centerpiece.
-- **Levels 6-8:** spend the same four days on Essay Focus A/B (0.4c) as their centerpiece instead: Day 1-2 covers
-  essay structure, hook types, and direct-thesis construction (Level 6's row) plus the Level 7 (and, in a
-  Proficient lesson, Level 8) extension; Day 3 covers topic sentences, outlining, and cohesion (Essay Focus B);
-  Day 4 is required-feature warm-up and prewriting, now producing an actual essay outline rather than a paragraph
-  plan. Grammar Focus A/B is not dropped for these Levels, it runs as a lighter sentence-craft component inside
-  the same days (their essay still needs correctly formed comparative sentences and compound sentences), mirroring
-  how Levels 1-3 get a light Grammar Focus A/B fold-in inside a Paragraph Composition band's Day 1-2.
-- **Mentor Ladder walkthrough (Day 2, Phase 3) and prewriting share (Day 4, Phase 3)** already present every task
-  Level together in one place (0.1b); keep doing this. Levels 6-8's Mentor Essays sit at the top of the same
-  ascending ladder Levels 4-5's Mentor Texts sit in, so the jump from paragraph to essay is visible material, not
-  a note explaining it.
-- **Days 5-6 (drafting):** an essay is more to draft than a paragraph in the same two days. Levels 6-8 draft the
-  introduction and first body paragraph on Day 5, and the remaining body paragraph(s) and conclusion on Day 6,
+- **Levels 6-8:** spend the same two lessons (four days) on Essay Focus A/B (0.4c) as their centerpiece instead:
+  Lesson 1 covers essay structure, hook types, and direct-thesis construction (Level 6's row) plus the Level 7
+  (and, in a Proficient lesson, Level 8) extension; Lesson 2 Day 1 covers topic sentences, outlining, and
+  cohesion (Essay Focus B); Lesson 2 Day 2 is required-feature warm-up and prewriting, now producing an actual
+  essay outline rather than a paragraph plan. Grammar Focus A/B is not dropped for these Levels, it runs as a
+  lighter sentence-craft component inside the same days (their essay still needs correctly formed comparative
+  sentences and compound sentences), mirroring how Levels 1-3 get a light Grammar Focus A/B fold-in inside a
+  Paragraph Composition band's Lesson 1.
+- **Mentor Ladder walkthrough (Lesson 1, Day 2, Phase 3) and prewriting share (Lesson 2, Day 2, Phase 3)** already
+  present every task Level together in one place (0.1b); keep doing this. Levels 6-8's Mentor Essays sit at the
+  top of the same ascending ladder Levels 4-5's Mentor Texts sit in, so the jump from paragraph to essay is
+  visible material, not a note explaining it.
+- **Lesson 3 (drafting):** an essay is more to draft than a paragraph in the same two days. Levels 6-8 draft the
+  introduction and first body paragraph on Day 1, and the remaining body paragraph(s) and conclusion on Day 2,
   the same two-day split Levels 4-5 already use for opening/body then completion, just distributed across more
   material. Flag this pacing as provisional the same way 0.2's word counts are: it has not yet been checked
-  against a real class's actual drafting speed, and may need a dedicated outlining day added later if it proves
-  too tight.
-- **Days 7-8 (peer edit, revision, publishing, closing):** use the essay-specific checklist and Peer Editing
+  against a real class's actual drafting speed, and may need a dedicated outlining lesson added later if it
+  proves too tight.
+- **Lesson 4 (peer edit, revision, publishing, closing):** use the essay-specific checklist and Peer Editing
   additions in 0.6, and the essay-regime item in each day's board-dependent moment where relevant (0.7 is
   otherwise unchanged in structure).
 
-### Day 1: Grammar Focus A, Input and Modeling
+### Lesson 1, Day 1: Grammar Focus A, Input and Modeling
 
 _Phase 1: Hook, Skill Spotlight (15 min)_
 
@@ -789,7 +857,7 @@ _Phase 1: Hook, Skill Spotlight (15 min)_
   Focus A.
 - Board-dependent moment (0.7): co-construct one fresh example live.
 
-### Day 2: Grammar Focus A, Deeper Practice and the Mentor Ladder
+### Lesson 1, Day 2: Grammar Focus A, Deeper Practice and the Mentor Ladder
 
 _Phase 1: Editing a paragraph on Focus A (20 min)_
 
@@ -804,7 +872,7 @@ _Phase 1: Editing a paragraph on Focus A (20 min)_
 - Board-dependent moment (0.7): co-construct a live "what changes at each Level" board from student
   observations of the ladder.
 
-### Day 3: Grammar Focus B, Sentence Variety
+### Lesson 2, Day 1: Grammar Focus B, Sentence Variety
 
 _Phase 1: Focus B mini-lesson: rule and examples (20 min)_
 
@@ -820,7 +888,7 @@ _Phase 1: Focus B mini-lesson: rule and examples (20 min)_
 - A short paragraph mixing Focus A and Focus B errors, stated and verified error count, to find and correct.
 - Board-dependent moment (0.7): co-construct one fresh example live using Focus B.
 
-### Day 4: Task-Ladder Practice and Prewriting
+### Lesson 2, Day 2: Task-Ladder Practice and Prewriting
 
 _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
 
@@ -837,7 +905,7 @@ _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
 - A few students from each task Level share one idea or detail.
 - Board-dependent moment (0.7): synthesize ideas from every task Level into a shared idea board.
 
-### Day 5: Drafting, Part 1
+### Lesson 3, Day 1: Drafting, Part 1
 
 _Phase 1: Mentor Ladder and prewriting re-look (10 min)_
 
@@ -853,7 +921,7 @@ _Phase 1: Mentor Ladder and prewriting re-look (10 min)_
 - A few students share one sentence from their draft so far.
 - Board-dependent moment (0.7): a running "strong sentence" board, populated from the share-out.
 
-### Day 6: Drafting, Part 2 and Self-Edit
+### Lesson 3, Day 2: Drafting, Part 2 and Self-Edit
 
 _Phase 1: Complete the draft (30 min)_
 
@@ -865,7 +933,7 @@ _Phase 1: Complete the draft (30 min)_
 - Board-dependent moment (0.7): return to and add to Day 5's "strong sentence" board with newly completed
   lines.
 
-### Day 7: Peer Editing and Revision
+### Lesson 4, Day 1: Peer Editing and Revision
 
 _Phase 1: Peer Editing exchange (25 min)_
 
@@ -877,7 +945,7 @@ _Phase 1: Peer Editing exchange (25 min)_
   _Phase 3: Quick revision share (15 min)_
 - Board-dependent moment (0.7): a before/after board built from two or three volunteered revision examples.
 
-### Day 8: Publishing and Closing Transfer Check
+### Lesson 4, Day 2: Publishing and Closing Transfer Check
 
 _Phase 1: Final polish / proofread pass (20 min)_
 
@@ -891,7 +959,7 @@ _Phase 1: Final polish / proofread pass (20 min)_
 
 ### Style and Formatting Constraints
 
-- **Pacing diagrams:** include a visual ASCII timeline at the start of each of the 8 days, matching the format
+- **Pacing diagrams:** include a visual ASCII timeline for the lesson's Day 1 and Day 2, matching the format
   above.
 - **No em-dashes:** never use em-dashes anywhere in generated content; use hyphens, colons, or parentheses.
 - **Leveled Mentor Ladder clearly labeled:** label every Mentor Text with its task Level number, visible at a glance,

@@ -94,11 +94,22 @@ not ★★/★★★.
 
 A **Set** is however many lessons together cover one Module's planned instructional time (8 class
 days) for a Band — not a fixed lesson count, but derived from how many days each lesson type's
-lesson runs. Reading and Listening/Speaking both use a 2-day lesson, so a Set is 4 lessons for each
-of them today; a shorter or longer lesson would change that count, since the invariant is the 8
-days, not the number "4." Academic Writing's lesson is already a full 8-day cycle on its own, so a
-Writing Set is currently **1 lesson** — Writing has no Module Lesson-Plan prompt yet to drive
-Set-aware planning (see that lesson type's own `Index.md`), but the same definition applies.
+lesson runs. Reading, Listening/Speaking, and Academic Writing all use a 2-day lesson, so a Set is
+4 lessons for each of them; a shorter or longer lesson would change that count, since the invariant
+is the 8 days, not the number "4."
+
+**Corrected 2026-09-08 (Academic Writing):** Academic Writing's lesson was originally modeled as a
+single 8-day cycle, making a Writing Set "1 lesson" — the same kind of sizing miscount the whole
+program's Set concept itself was corrected from once before (see the note below this section). In
+practice, each lesson actually taught took 2 days, the same as Reading and Listening/Speaking; the
+8-day span was really 4 separate lessons back to back, not one long one. A Writing Set is now 4
+lessons, like every other lesson type. The one genuine, permanent difference from Reading/
+Listening-Speaking that survives this correction: a Writing Set's 4 lessons share **one** Scenario
+carried across the whole Set (grammar input in Lessons 1-2, drafting in Lesson 3, revision and
+publishing in Lesson 4 — one piece of writing taken from introduction to finished, published
+product), rather than each lesson getting its own independent anchor text the way a Reading Set's 4
+lessons do. See `writing/academic-writing/Index.md`'s "Sets" section for how this plays out in that
+lesson type's own prompt family.
 
 A Module/Band can hold more than one Set over time — a fresh rotation of lessons for a semester
 where the module is retaught, without discarding or conflating it with what was taught before.

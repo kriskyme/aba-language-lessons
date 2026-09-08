@@ -63,7 +63,12 @@ Three things, kept separate in the item design:
    definition) or a fill-in-the-blank item using a pooled word in a new sentence - using each word's real taught
    definition from that lesson's own Words to Know list. Pooling across all 4 lessons, rather than any single
    one, is what keeps this a comprehension/retention measure instead of an absence penalty: a student who missed
-   one lesson only misses a fraction of the tested pool, not all of it.
+   one lesson only misses a fraction of the tested pool, not all of it. **Every word bank or matching list must
+   include 1-2 extra words beyond what the item's blanks/matches actually require**, scaled to bank size (a
+   3-word bank gets +1 extra, a 5-word bank gets +2), so a student can't complete the last blank or match by
+   elimination alone. Draw each extra word from the same pool of already-taught Set vocabulary (never a new
+   word), and never let it be the correct answer to anything else in that same item - a genuine near-miss, not a
+   random addition.
 
 **Item format:** every task Level's items are multiple choice, fill-in-the-blank, or matching only - no
 open-ended short-answer or extended-response items at any Level, so the whole assessment stays objectively
@@ -129,12 +134,14 @@ this prompt's scope.
 7. Is vocabulary tested only through graded items (matching/fill-in-the-blank), with no separate pre-teach or
    review step anywhere in the document, using words pooled across all 4 of the Set's lessons rather than any
    single one, and none pulled from the new clips?
-8. Is every item at every task Level multiple choice, fill-in-the-blank, or matching - none open-ended?
-9. At Levels whose can-do calls for summarizing, explaining cause-and-effect, or critically assessing/comparing,
-   is the item actually engineered to require that judgment (plausible near-miss options/matches), not simplified
-   into pure recall?
-10. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
-11. No em-dashes anywhere. Citation block first for every clip. Timestamp ranges used for any segment reference,
+8. Does every word bank or matching list include 1-2 extra pooled words beyond what's actually needed (scaled to
+   bank size), each a genuine already-taught word that isn't the correct answer to anything else in that item?
+9. Is every item at every task Level multiple choice, fill-in-the-blank, or matching - none open-ended?
+10. At Levels whose can-do calls for summarizing, explaining cause-and-effect, or critically assessing/comparing,
+    is the item actually engineered to require that judgment (plausible near-miss options/matches), not simplified
+    into pure recall?
+11. Is there no separate notes-taking/organizer step - are items answered right after their relevant clip plays?
+12. No em-dashes anywhere. Citation block first for every clip. Timestamp ranges used for any segment reference,
     never paragraph letters.
 
 ---

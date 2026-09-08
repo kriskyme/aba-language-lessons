@@ -98,11 +98,16 @@ Each lesson type's actual cycle differs by design:
   lesson (Day 1 Listening / Day 2 Speaking), built around one real, sourced
   audio/video clip (URL, speaker, platform, runtime, glossary pulled from the
   source's own captions) — no printed passage.
-- **Academic Writing** (`writing/academic-writing/`) — 8-day lesson built
-  around a shared "Scenario" plus a **Leveled Mentor Ladder** (one exemplar
-  per task Level) instead of a single shared anchor text, with a Focus A/Focus B
-  grammar pairing structure. No module concept yet — lessons are generated
-  one at a time against a flat rotation log.
+- **Academic Writing** (`writing/academic-writing/`) — 2-day lesson (matching
+  Reading and Listening/Speaking), 4 lessons per Set, built around a shared
+  "Scenario" plus a **Leveled Mentor Ladder** (one exemplar per task Level)
+  instead of a single shared anchor text, with a Focus A/Focus B grammar
+  pairing structure. The one place a Writing Set still differs from Reading's:
+  all 4 lessons in a Set share **one** Scenario carried from grammar input
+  (Lessons 1-2) through drafting (Lesson 3) to a finished, published piece
+  (Lesson 4), rather than each lesson getting its own independent anchor text.
+  (Corrected 2026-09-08 from an original 8-day/1-lesson-per-Set model — see
+  `shared/Program_Conventions.md` §C.)
 
 ## Canonical conventions (apply going forward)
 
@@ -132,10 +137,10 @@ noted in Known Issues.
   adopted the convention first (2026-09-03, after correcting an early
   miscount that had inflated its module size); Reading followed for parity
   (2026-09-06), physically migrating its already-generated lessons into the
-  nested shape; Academic Writing's `Index.md` documents the same shape
-  aspirationally for when it gets a Module Lesson-Plan prompt of its own —
-  since its lesson is already an 8-day cycle, a Writing Set is currently 1
-  lesson, not 4. Neither the Lesson, Assessment, nor Module Lesson-Plan
+  nested shape; Academic Writing adopted it for real 2026-09-08, once its own
+  8-day/1-lesson-per-Set sizing was corrected to match Reading and
+  Listening/Speaking's 2-day/4-lessons-per-Set model (see
+  `shared/Program_Conventions.md` §C). Neither the Lesson, Assessment, nor Module Lesson-Plan
   generation prompts currently specify an output location themselves, so
   this note is the convention to follow when saving newly generated content
   in any of the three modalities.
@@ -178,11 +183,16 @@ noted in Known Issues.
 
 ## Known issues / pending consolidation work
 
-- `writing/academic-writing/lessons/` is **empty**, but
-  `writing/academic-writing/Rotation_Log.md` describes two fully generated,
-  multiply-revised lessons (Intermediate 1 "my phone case," Advanced 1 "Two
-  apartments... for Sam") as current/synced. That content appears to have
-  never been saved into this repo and needs to be regenerated or recovered.
+- **Resolved 2026-09-08**: `writing/academic-writing/lessons/`'s two
+  documented lessons (Intermediate 1 "my phone case," Advanced 1 "Two
+  apartments... for Sam") were recovered and are now organized under the
+  canonical `Set_1/Lesson_1_<Slug>/` structure
+  (`lessons/intermediate/Set_1/Lesson_1_MyPhoneCase/`,
+  `lessons/advanced/Set_1/Lesson_1_TwoApartments/`), each holding its
+  Markdown doc plus a reconstructed pre-v1.2 Unit 1/Unit 2 print-packet pair.
+  Current-convention (v1.6, Lesson Introduction Page + Units 1-8) packets
+  still need to be built for both — tracked in
+  `writing/academic-writing/Index.md`'s Pending work.
 - Passage Reading's `Index.md` and `Rotation_Log.md`
   (`reading/passage-reading/`) reference filenames that don't match what's
   actually on disk, e.g. doc says `Passage Reading Lesson Generation Prompt
@@ -190,9 +200,14 @@ noted in Known Issues.
   but the real files are `Lesson_Generation_Prompt_v2.7_CURRENT.md` /
   `Lesson1_Kitchen.md`. Needs reconciling (fix the docs to match reality, not
   the other way around).
-- Academic Writing has no Module-Lesson-Plan, Homework, or Assessment prompt
-  yet (only a Lesson Generation prompt and a Student Print Formatting
-  prompt) — flagged as pending in its own `Index.md`.
+- **Resolved 2026-09-08**: Academic Writing now has a full prompt family
+  matching Reading's and Listening/Speaking's (Module Lesson-Plan, Homework,
+  Assessment, plus an Assessment Student Packet prompt — split from day one
+  rather than retrofitted later, since Reading itself has flagged that split
+  as still-pending work). TOEFL-track prompts/content remain out of scope for
+  Writing, to be handled separately. None of the four new prompts has been
+  run against a real lesson yet — see
+  `writing/academic-writing/Index.md`'s Pending work.
 
 ## Working notes for future sessions
 

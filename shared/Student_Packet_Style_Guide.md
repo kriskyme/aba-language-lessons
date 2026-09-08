@@ -139,6 +139,14 @@ h3 {
 .objective strong {
   font-weight: 700;
 }
+```
+
+The paragraph always opens with a bold `Objective:` label before the can-do sentence itself
+(`<p class="objective"><strong>Objective:</strong> describe...</p>`) — every modality's packets
+follow this, so a generation prompt that produces an unlabeled `.objective` paragraph is
+producing wrong output, not a stylistic variant.
+
+```css
 
 .section-title {
   font-family: system-ui, -apple-system, sans-serif;
@@ -400,7 +408,7 @@ p {
   margin-top: 4px;
 }
 .ans-line-sm {
-  display: inline-block;
+  display: block;
   border-bottom: 1px solid var(--ink-soft);
   width: 100%;
   max-width: 320px;
@@ -625,5 +633,5 @@ shared file (updating it for every modality at once), not as a modality-local ov
 
 ## Changelog
 
-**Current version: v1.6.** For the full dated version history and the reasoning behind each
+**Current version: v1.7.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

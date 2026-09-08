@@ -108,6 +108,28 @@ pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line
 deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of Set 1's other lessons. With
 this, all four Set 1 Intermediate lessons are now synced to the current shared spec.
 
+**Set 1 assessment generated (2026-09-06), regenerated (2026-09-07), updated (2026-09-08) - not previously
+logged here, added now for completeness (see `Changelog.md`/`Index.md` for the fuller history):** Part A
+(Listening) uses 2 real, verified sources distinct from all 4 taught lessons - "Visitors Laugh Away Troubles at
+the HaHaHouse Museum" (VOA Learning English, Andrea Golubic's laughter museum in Zagreb) and "Researchers
+Uncover a Bathhouse Complex in Ancient Pompeii" (VOA Learning English) - with tiered items covering all four of
+the Set's listening strategies and vocabulary (ingredient, organic, variety, capacity, challenge) pooled across
+the Set's 4 lessons and tested only through graded items. Part B (Speaking) is a Teams Speaking Progress solo
+recording (Intermediate's default mechanism), emphasizing Making Comparisons and Sequencing Language. **Updated
+same day (2026-09-08), per user direction:** Level 2 Item 1's matching bank gains `bakery` (Lesson 1, New
+Bakery) as an unmatched distractor; Level 3 Item 1's gains `sardine` (Lesson 2, Porto Food Tour) and
+`waterproof` (Lesson 3, Backpack); Level 4 Item 1's fill-in-blank bank gains `variety` (already pooled elsewhere
+in this same assessment) as a near-miss for the capacity blank - none the answer to anything else in their own
+item, per `Generate_Assessment_Prompt_v1.md`'s new A.1 distractor-word rule (see `Changelog.md`). Part A also
+grew from a flat "approx. 40 MIN" to "approx. 45 MIN," lengthened with one genuine new item per clip block: a
+new Level 4 Main Ideas/Gist item on Clip 1's Segment 2, Andrea Golubic's pandemic-era "mission to heal people
+with laughter" and the childhood photo that inspired it; and a new Level 2 Main Ideas/Gist-plus-detail item on
+Clip 2, the Pompeii bathhouse discovery and its caldarium/cold-water-tub rooms. Both new items' content was
+verified against each clip's real transcript (fetched fresh) before wording was finalized. New point totals:
+Level 2 10 (was 8), Level 3 9, Level 4 9 (was 7), Level 5 8 - still balanced per A.4 self-check item 5. See
+`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md` and `Set1_Intermediate_Assessment_Packet.html`.
+Still not yet given to a real class.
+
 ---
 
 **Format for the next Set's entry** (append below this line, do not overwrite anything above):

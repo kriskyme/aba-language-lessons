@@ -5,7 +5,7 @@ for cross-Band notes and mechanics that aren't repeated here.
 
 ## Module 1: Describing
 
-### Set 1 (planned 2026-08-30; corrected to 4 lessons 2026-09-01) - 2 of 4 lessons generated
+### Set 1 (planned 2026-08-30; corrected to 4 lessons 2026-09-01) - COMPLETE (4 of 4 lessons generated)
 
 **Correction, 2026-09-01:** this Set's plan was approved 2026-08-30 as an 8-lesson plan, under the same
 early miscount corrected in `Rotation_Log.md` (a module is 4 lessons / 8 instructional days,
@@ -14,8 +14,8 @@ Rotation Log - it had not; this is that log entry, added retroactively on recove
 (Lesson 5: a stargazing guide's account of a clear night at Aoraki Mackenzie, New Zealand; Lesson 6: a review of
 a Shinkansen bullet-train journey in Japan; Lesson 7: an account of Paris's Plan Vélo bike-lane expansion;
 Lesson 8: a rider's account of the Iron Gwazi roller coaster at Busch Gardens Tampa) were planned but never
-generated as lesson content, and are removed below as out of scope under the corrected 4-lesson model. Only
-Lesson 1 (La Sagrada Família) has been generated so far; Lessons 2-4 are approved plan only.
+generated as lesson content, and are removed below as out of scope under the corrected 4-lesson model. All 4
+lessons of this Set have now been generated.
 
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic |
 |---|---|---|---|---|---|---|
@@ -26,8 +26,11 @@ Lesson 1 (La Sagrada Família) has been generated so far; Lessons 2-4 are approv
 
 Note: Lesson 1 uses Fishbowl and Lesson 4 uses Concentric Circles. Per the Lesson Generation Prompt's v2.7
 correction (Section 0.10), both are fully valid at this program's class size once scaffolded with an explicit
-outer-circle task (Fishbowl) and 2-3 rotated discussion prompts (both) - required at generation time for
-Lessons 2-4, which have not yet been generated.
+outer-circle task (Fishbowl) and 2-3 rotated discussion prompts (both) - required at generation time. Lessons 2
+(Jigsaw), 3 (Town Hall), and 4 (Concentric Circles) have all been generated against this requirement; Lesson 1's
+Fishbowl remains unpatched (see `Index.md`'s Pending work). Lesson 4 was generated against
+`Generate_Lesson_Prompt_v2.8.md`, carrying version `S1.4.0`, formatted as a Reader's Theater interview script
+rather than continuous prose - the first script-style genre used in this Set.
 
 ---
 

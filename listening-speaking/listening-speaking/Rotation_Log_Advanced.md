@@ -169,6 +169,52 @@ stylesheet in the same pass (masthead-meta stack, idiom-table conversion, vocab-
 missing `.refresher` CSS) - the same sync Lesson 1 got, a deliberate exception to §G's going-forward-only
 rule, not a reopening of Set 1's other lessons.
 
+**Set 1 assessment regenerated (2026-09-08), replacing the retired-shape version above:**
+`Generate_Assessment_Prompt_v1.md` was redesigned four times in place on 2026-09-07, after this Set's original
+assessment (logged above) had already been generated against an earlier draft - that version used one source, a
+pre-taught vocabulary list, a "Play & Notes" free-form organizer step, and several open-ended items, none of
+which the current design allows. Per user direction, the assessment was fully regenerated rather than patched.
+
+Part A now uses 2 real sources: the original "Artists with disabilities let their creativity soar at this Utah
+studio" (PBS News Weekend, Ali Rogin; Jump the Moon art studio, Logan, Utah, 5:32) is kept as Clip 1, and a
+newly sourced, verified second clip, "The women lighthouse keepers who saved countless lives from coast to
+coast" (PBS News Weekend, John Yang, published 2025-03-29, 7:46; Point Pinos Lighthouse, Pacific Grove,
+California, and other U.S. sites), is added as Clip 2 - distinct from all 4 taught sources and from Clip 1.
+Every item at every task Level (4-7) is now multiple choice, fill-in-the-blank, or matching; the 5-word
+pre-teach list is gone, replaced by 4 words (phenomenon, preservation, dwindle, trade) pooled one from each of
+the Set's 4 taught lessons and tested only through graded items; the free-form notes-organizer step is gone.
+Level 7 keeps its two-source comparative-framing item, still built on the Jump the Moon PBS piece plus the Utah
+Division of Arts & Museums profile page used in the original version. Part B keeps its live-presentation
+mechanism, topic, and rubric structure from the original version, with each Level's prompt rewritten to state
+concrete, countable content requirements (feature counts, hedging-phrase counts, self-repair/idiom counts)
+instead of only a target length, matching the granularity `Set1_Intermediate_Assessment.md` already established
+(that document served as this regeneration's structural model).
+
+The student-facing packet (`Set1_Advanced_Assessment_Packet.html`) was regenerated in the same pass against
+`Generate_Assessment_Student_Packet_Prompt_v1.md`: the old Words to Know list and Listening Notes table are
+gone; each task Level's page now shows only that Level's own MC/fill-in/matching items (`.match-list` for
+matching, inline parenthetical options for multiple choice); each Speaking Task card shows a `.checklist`
+self-check list derived from that Level's rubric Meets column, with no rubric table and - per Section 2.7 - no
+submission-mechanism info (platform name, present/submit-by date) printed anywhere on the card. See
+`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Not yet given
+to a real class.
+
+**Set 1 assessment updated same day (2026-09-08), per user direction, on top of the regeneration above:** two
+changes to Part A (Listening). **(1)** Level 4 Item 1's vocabulary word bank gains one extra already-taught
+distractor word, `viable` (Lesson 3, Saving the Key Deer) - not the answer to any of that item's three blanks,
+a plausible near-miss for "dwindle" (both relate to population survival). **(2)** Part A grew from a flat
+"approx. 40 MIN" to "approx. 45 MIN," lengthened with one genuine new item per clip block rather than just
+relabeled: a new Level 6 Recognize Examples item (Fact vs. Evaluative comment) on Clip 1's Segment 4, Alex and
+Lori Jenson's cow-drawing moment ("It gets him off of his device"; "is kind of cool"); and a new Level 5 Stated
+vs. Implied Opinion item on Clip 2's Segment 2, Emily Fish's logbook entries ("hazy fog, clear showers") as the
+detail that signals her real dedication to her lighthouse duties despite being "the socialite keeper." Both new
+items' content was verified against each clip's real transcript (fetched fresh, not inferred from the existing
+segment-label summaries) before wording was finalized. New point totals: Level 4 11, Level 5 9 (was 7), Level 6
+8 (was 6), Level 7 8 - still balanced per A.4 self-check item 5. `Generate_Assessment_Prompt_v1.md` A.1/A.4
+gained the underlying distractor-word rule this pass applies (see `Changelog.md`). See
+`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Still not yet
+given to a real class.
+
 ---
 
 **Format for the next Set's entry** (append below this line, do not overwrite anything above):

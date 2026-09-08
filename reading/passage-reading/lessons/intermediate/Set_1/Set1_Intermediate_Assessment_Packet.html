@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 1 Set 1 Assessment: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+      .level-head {
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        margin: 0 0 14px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--ink);
+      }
+      .level-head::after {
+        display: none;
+      }
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article p {
+        font-size: 15px;
+        margin-bottom: 12px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qlist .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        max-width: 320px;
+        height: 18px;
+        margin-top: 2px;
+      }
+      .level-page {
+        page-break-before: always;
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .article p,
+        .fillblank li,
+        .qlist li {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">Print this packet</button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Module 1 Set 1 Assessment</h1>
+      </div>
+
+      <!-- ===================== TASK LEVEL: ONE STAR ===================== -->
+      <div>
+        <div class="section-title level-head">Module 1 Set 1 Assessment - &#9733;</div>
+        <p class="objective"><strong>Objective:</strong> read a short sentence about a familiar object and understand its one key describing word, using context or pictures as support.</p>
+
+        <div class="section-title">Words &amp; Phrases</div>
+
+        <div class="subgroup-label">A Grandmother's Kitchen</div>
+        <div class="wordbank"><strong>Word bank:</strong> aroma &middot; warmth &middot; herbs &middot; "in no time" &middot; decision</div>
+        <p class="instr">Match each meaning below to the word or phrase from the word bank that fits it best.</p>
+        <ol class="fillblank">
+          <li><span class="num">a.</span> a pleasant smell <span class="ans-line-sm"></span></li>
+          <li><span class="num">b.</span> a comfortable heat <span class="ans-line-sm"></span></li>
+          <li><span class="num">c.</span> plants used to add flavor or scent <span class="ans-line-sm"></span></li>
+          <li><span class="num">d.</span> happening very quickly <span class="ans-line-sm"></span></li>
+        </ol>
+
+        <div class="subgroup-label">Riverside Walking Trail Reopens</div>
+        <div class="wordbank"><strong>Word bank:</strong> bench &middot; blossom &middot; lawn &middot; mistake</div>
+        <p class="instr">Choose the correct word for each blank.</p>
+        <ol class="fillblank">
+          <li><span class="num">a.</span> A flower that grows on a tree in spring is called a <span class="blank"></span>.</li>
+          <li><span class="num">b.</span> A place to sit outside is called a <span class="blank"></span>.</li>
+          <li><span class="num">c.</span> An area of short grass is called a <span class="blank"></span>.</li>
+        </ol>
+
+        <div class="subgroup-label">How to Choose Winter Boots That Feel Comfortable</div>
+        <div class="wordbank"><strong>Word bank:</strong> comfortable &middot; snug &middot; arch &middot; machine</div>
+        <p class="instr">Choose the correct word for each blank.</p>
+        <ol class="fillblank">
+          <li><span class="num">a.</span> The curved part of the bottom of your foot is called the <span class="blank"></span>.</li>
+          <li><span class="num">b.</span> A shoe that fits tightly but not too tightly at the heel fits <span class="blank"></span>.</li>
+          <li><span class="num">c.</span> A shoe that feels good to wear all day is <span class="blank"></span>.</li>
+        </ol>
+
+        <div class="subgroup-label">A New Mural at the Bus Station</div>
+        <div class="wordbank"><strong>Word bank:</strong> mural &middot; bright &middot; gallery &middot; holiday</div>
+        <p class="instr">Choose the correct word for each blank.</p>
+        <ol class="fillblank">
+          <li><span class="num">a.</span> A large painting on a wall is called a <span class="blank"></span>.</li>
+          <li><span class="num">b.</span> A room where people go to look at art is called a <span class="blank"></span>.</li>
+          <li><span class="num">c.</span> A color that stands out and is easy to notice is <span class="blank"></span>.</li>
+        </ol>
+
+        <div class="section-title">Reading Comprehension</div>
+
+        <div class="article">
+          <div class="headline">A Mountain Tea House</div>
+          <p><span class="para-letter">[A]</span> High in the hills, an old tea house welcomes tired travelers after a long walk. The house is built of dark wood, with a small stone chimney on its roof. Inside, an elderly woman named Mrs. Tan boils water over a wood-fired stove instead of a modern gas burner.</p>
+          <p><span class="para-letter">[B]</span> The aroma of dried herbs fills the room as soon as visitors step inside. Mrs. Tan keeps her herbs in small clay pots along the back wall, adding a pinch of ginger or chrysanthemum to the hot water depending on the season.</p>
+          <p><span class="para-letter">[C]</span> Mrs. Tan says the wood-fired stove gives the tea a deeper flavor that a gas burner cannot copy. A gas burner heats water faster, she admits, but the tea tastes thin when made that way. The slow heat from the wood fire lets the herbs release their full flavor.</p>
+          <p><span class="para-letter">[D]</span> The tea house has no fixed prices; travelers pay what they can. Wooden stools line the walls, and the wood-fired stove keeps the small room full of warmth, even when snow covers the mountain path outside.</p>
+          <p><span class="para-letter">[E]</span> For Mrs. Tan, this tea house is not simply a place to serve tea. It is a traditional stop where every traveler is treated like family, made the same slow way her own grandmother once made it.</p>
+        </div>
+        <ol class="qlist" start="5">
+          <li><span class="num">5.</span><div class="qbody">Where does Mrs. Tan keep her herbs? (Point to Paragraph B.)<span class="ans-line-sm"></span></div></li>
+          <li><span class="num">6.</span><div class="qbody">Circle the word that best shows how Mrs. Tan feels about her tea house: <strong>busy</strong> &nbsp;/&nbsp; <strong>proud</strong>. Use Paragraph E as a clue.</div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">Riverside Walking Trail Reopens</div>
+          <p><span class="para-letter">[A]</span> A walking trail along Miller's Creek reopened to the public this spring after months of repair work. The trail follows the river for nearly a mile, past a row of old maple trees. City workers finished the project last week, and joggers returned within days.</p>
+          <p><span class="para-letter">[B]</span> The renovated trail now has a smooth stone path instead of the old dirt track. Several wooden benches sit along the water, and a small grassy lawn opens up near the halfway point.</p>
+          <p><span class="para-letter">[C]</span> Before the repair, the dirt path turned to mud after every rain, and there were no benches at all. Runners often had to step around puddles. The new stone path stays dry, and the benches give tired walkers a place to rest.</p>
+          <p><span class="para-letter">[D]</span> In April, the maple trees begin to show small red blossoms, and many visitors walk the trail just to see them. A local jogger named Dana Reyes said the new benches make the trail feel far more welcoming than before. "Now people actually stop and enjoy the view," she said.</p>
+          <p><span class="para-letter">[E]</span> City officials plan to add a second lawn area next year. Many visitors say they now walk the trail almost every week, whether or not they are exercising.</p>
+        </div>
+        <ol class="qlist" start="7">
+          <li><span class="num">7.</span><div class="qbody">What color are the blossoms on the maple trees? (Point to Paragraph D.)<span class="ans-line-sm"></span></div></li>
+          <li><span class="num">8.</span><div class="qbody">Circle the word that best shows how the trail feels now: <strong>welcoming</strong> &nbsp;/&nbsp; <strong>empty</strong>. Use Paragraph D as a clue.</div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">How to Choose Winter Boots That Feel Comfortable</div>
+          <p><span class="para-letter">[A]</span> Winter boots should feel comfortable from the very first day, but many shoppers pick the wrong pair. A podiatrist and boot-shop staff often repeat the same advice, and most shoppers never hear it.</p>
+          <p><span class="para-letter">[B]</span> First, know your arch type. A flat arch needs more support, while a high arch needs more cushioning. Checking an old pair of boots for uneven wear can also show your arch type.</p>
+          <p><span class="para-letter">[C]</span> Second, try boots on with the same socks you plan to wear in winter. A boot that fits well with thin socks may feel too tight once thick wool socks are added.</p>
+          <p><span class="para-letter">[D]</span> Third, check the fit at the heel and the toes together. A good winter boot should feel snug at the heel but leave room to wiggle your toes, since tight toes lose warmth faster in the cold. A boot that pinches in the store will still pinch on a cold walk.</p>
+          <p><span class="para-letter">[E]</span> Finally, do not expect a tight boot to loosen with time. If a boot feels wrong on the first try, it will likely still feel wrong after a season of wear. Comfort, more than style, should decide which pair goes home with you.</p>
+        </div>
+        <ol class="qlist" start="9">
+          <li><span class="num">9.</span><div class="qbody">What should you check first about your own foot? (Point to Paragraph B.)<span class="ans-line-sm"></span></div></li>
+          <li><span class="num">10.</span><div class="qbody">Circle the word that best shows what a good winter boot should feel like: <strong>snug</strong> &nbsp;/&nbsp; <strong>loose</strong>. Use Paragraph D as a clue.</div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">A New Mural at the Bus Station</div>
+          <p><span class="para-letter">[A]</span> A large new mural now covers the wall of the downtown bus station, and commuters are already stopping to look. The artist, a local painter, finished the piece last weekend using spray paint and a small ladder borrowed from the city.</p>
+          <p><span class="para-letter">[B]</span> The mural shows tall, bright shapes meant to look like buildings, painted in orange, yellow, and green. Before the mural, the wall was plain gray concrete covered in old, faded posters. City workers say the new art gives the station a friendlier feel.</p>
+          <p><span class="para-letter">[C]</span> The artist said she chose bright colors on purpose, since a gray wall in a busy neighborhood can feel cold and forgotten. She wanted people waiting for the bus to notice something new every day.</p>
+          <p><span class="para-letter">[D]</span> Unlike a painting hung inside a gallery, this mural cannot be bought or moved. Anyone walking through the neighborhood can see it for free, at any hour.</p>
+          <p><span class="para-letter">[E]</span> City officials say they hope to add more murals to other bus stations next year. Local residents say the new shapes and colors already make the wait for the bus feel less boring.</p>
+        </div>
+        <ol class="qlist" start="11">
+          <li><span class="num">11.</span><div class="qbody">What tool did the artist use to paint the mural? (Point to Paragraph A.)<span class="ans-line-sm"></span></div></li>
+          <li><span class="num">12.</span><div class="qbody">Circle the word that best shows how the mural makes the bus station feel: <strong>friendlier</strong> &nbsp;/&nbsp; <strong>colder</strong>. Use Paragraph B as a clue.</div></li>
+        </ol>
+      </div>
+
+      <!-- ===================== TASK LEVEL: TWO STARS ===================== -->
+      <div class="level-page">
+        <div class="section-title level-head">Module 1 Set 1 Assessment - &#9733;&#9733;</div>
+        <p class="objective"><strong>Objective:</strong> read a sentence with two missing words, figure out both words from context, and match what you find to the right paragraph.</p>
+
+        <div class="section-title">Words &amp; Phrases</div>
+
+        <div class="subgroup-label">A Grandmother's Kitchen</div>
+        <ol class="fillblank">
+          <li><span class="num">13.</span> The tea house was full of <span class="blank"></span> even though it was snowing outside. Which paragraph shows this? <span class="blank"></span></li>
+        </ol>
+
+        <div class="subgroup-label">Riverside Walking Trail Reopens</div>
+        <ol class="fillblank">
+          <li><span class="num">14.</span> The <span class="blank"></span> path stays dry after it rains, unlike the old dirt path. Which paragraph shows this? <span class="blank"></span> Then use the idiom "before long" in a sentence about the trail, showing you know it means "soon."<span class="ans-line"></span></li>
+        </ol>
+
+        <div class="subgroup-label">How to Choose Winter Boots That Feel Comfortable</div>
+        <ol class="fillblank">
+          <li><span class="num">15.</span> A high arch needs more <span class="blank"></span> than a flat arch. Which paragraph shows this? <span class="blank"></span></li>
+        </ol>
+
+        <div class="subgroup-label">A New Mural at the Bus Station</div>
+        <ol class="fillblank">
+          <li><span class="num">16.</span> The artist used <span class="blank"></span> to paint the tall shapes on the wall. Which paragraph shows this? <span class="blank"></span></li>
+        </ol>
+
+        <div class="section-title">Reading Comprehension</div>
+
+        <div class="article">
+          <div class="headline">A Mountain Tea House</div>
+          <p><span class="para-letter">[A]</span> High in the hills, an old tea house welcomes tired travelers after a long walk. The house is built of dark wood, with a small stone chimney on its roof. Inside, an elderly woman named Mrs. Tan boils water over a wood-fired stove instead of a modern gas burner.</p>
+          <p><span class="para-letter">[B]</span> The aroma of dried herbs fills the room as soon as visitors step inside. Mrs. Tan keeps her herbs in small clay pots along the back wall, adding a pinch of ginger or chrysanthemum to the hot water depending on the season.</p>
+          <p><span class="para-letter">[C]</span> Mrs. Tan says the wood-fired stove gives the tea a deeper flavor that a gas burner cannot copy. A gas burner heats water faster, she admits, but the tea tastes thin when made that way. The slow heat from the wood fire lets the herbs release their full flavor.</p>
+          <p><span class="para-letter">[D]</span> The tea house has no fixed prices; travelers pay what they can. Wooden stools line the walls, and the wood-fired stove keeps the small room full of warmth, even when snow covers the mountain path outside.</p>
+          <p><span class="para-letter">[E]</span> For Mrs. Tan, this tea house is not simply a place to serve tea. It is a traditional stop where every traveler is treated like family, made the same slow way her own grandmother once made it.</p>
+        </div>
+        <ol class="qlist" start="17">
+          <li><span class="num">17.</span><div class="qbody">According to Paragraph C, what does Mrs. Tan say happens to the tea's flavor when it is made with a gas burner instead of a wood fire? Give a specific detail from the text.<span class="ans-line"></span></div></li>
+          <li><span class="num">18.</span><div class="qbody">What exact phrase in Paragraph D tells you the tea house stays warm even in bad weather? Quote it.<span class="ans-line-sm"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">Riverside Walking Trail Reopens</div>
+          <p><span class="para-letter">[A]</span> A walking trail along Miller's Creek reopened to the public this spring after months of repair work. The trail follows the river for nearly a mile, past a row of old maple trees. City workers finished the project last week, and joggers returned within days.</p>
+          <p><span class="para-letter">[B]</span> The renovated trail now has a smooth stone path instead of the old dirt track. Several wooden benches sit along the water, and a small grassy lawn opens up near the halfway point.</p>
+          <p><span class="para-letter">[C]</span> Before the repair, the dirt path turned to mud after every rain, and there were no benches at all. Runners often had to step around puddles. The new stone path stays dry, and the benches give tired walkers a place to rest.</p>
+          <p><span class="para-letter">[D]</span> In April, the maple trees begin to show small red blossoms, and many visitors walk the trail just to see them. A local jogger named Dana Reyes said the new benches make the trail feel far more welcoming than before. "Now people actually stop and enjoy the view," she said.</p>
+          <p><span class="para-letter">[E]</span> City officials plan to add a second lawn area next year. Many visitors say they now walk the trail almost every week, whether or not they are exercising.</p>
+        </div>
+        <ol class="qlist" start="19">
+          <li><span class="num">19.</span><div class="qbody">According to Paragraph C, what problem did the old dirt path cause for runners? Give a specific detail.<span class="ans-line"></span></div></li>
+          <li><span class="num">20.</span><div class="qbody">What exact word in Paragraph D describes how Dana Reyes says the trail feels now? Quote it.<span class="ans-line-sm"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">How to Choose Winter Boots That Feel Comfortable</div>
+          <p><span class="para-letter">[A]</span> Winter boots should feel comfortable from the very first day, but many shoppers pick the wrong pair. A podiatrist and boot-shop staff often repeat the same advice, and most shoppers never hear it.</p>
+          <p><span class="para-letter">[B]</span> First, know your arch type. A flat arch needs more support, while a high arch needs more cushioning. Checking an old pair of boots for uneven wear can also show your arch type.</p>
+          <p><span class="para-letter">[C]</span> Second, try boots on with the same socks you plan to wear in winter. A boot that fits well with thin socks may feel too tight once thick wool socks are added.</p>
+          <p><span class="para-letter">[D]</span> Third, check the fit at the heel and the toes together. A good winter boot should feel snug at the heel but leave room to wiggle your toes, since tight toes lose warmth faster in the cold. A boot that pinches in the store will still pinch on a cold walk.</p>
+          <p><span class="para-letter">[E]</span> Finally, do not expect a tight boot to loosen with time. If a boot feels wrong on the first try, it will likely still feel wrong after a season of wear. Comfort, more than style, should decide which pair goes home with you.</p>
+        </div>
+        <ol class="qlist" start="21">
+          <li><span class="num">21.</span><div class="qbody">According to Paragraph C, what problem can happen if you skip trying boots on with the thick socks you plan to actually wear?<span class="ans-line"></span></div></li>
+          <li><span class="num">22.</span><div class="qbody">What exact phrase in Paragraph E tells you a tight boot will not get more comfortable over time? Quote it.<span class="ans-line-sm"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">A New Mural at the Bus Station</div>
+          <p><span class="para-letter">[A]</span> A large new mural now covers the wall of the downtown bus station, and commuters are already stopping to look. The artist, a local painter, finished the piece last weekend using spray paint and a small ladder borrowed from the city.</p>
+          <p><span class="para-letter">[B]</span> The mural shows tall, bright shapes meant to look like buildings, painted in orange, yellow, and green. Before the mural, the wall was plain gray concrete covered in old, faded posters. City workers say the new art gives the station a friendlier feel.</p>
+          <p><span class="para-letter">[C]</span> The artist said she chose bright colors on purpose, since a gray wall in a busy neighborhood can feel cold and forgotten. She wanted people waiting for the bus to notice something new every day.</p>
+          <p><span class="para-letter">[D]</span> Unlike a painting hung inside a gallery, this mural cannot be bought or moved. Anyone walking through the neighborhood can see it for free, at any hour.</p>
+          <p><span class="para-letter">[E]</span> City officials say they hope to add more murals to other bus stations next year. Local residents say the new shapes and colors already make the wait for the bus feel less boring.</p>
+        </div>
+        <ol class="qlist" start="23">
+          <li><span class="num">23.</span><div class="qbody">According to Paragraph C, why did the artist choose bright colors for the mural?<span class="ans-line"></span></div></li>
+          <li><span class="num">24.</span><div class="qbody">What exact phrase in Paragraph D tells you anyone can see the mural without paying? Quote it.<span class="ans-line-sm"></span></div></li>
+        </ol>
+      </div>
+
+      <!-- ===================== TASK LEVEL: THREE STARS ===================== -->
+      <div class="level-page">
+        <div class="section-title level-head">Module 1 Set 1 Assessment - &#9733;&#9733;&#9733;</div>
+        <p class="objective"><strong>Objective:</strong> find a stated feature in a passage, find the one comparison the writer makes about it, and identify the brief reason given for that comparison.</p>
+
+        <div class="section-title">Words &amp; Phrases</div>
+
+        <div class="subgroup-label">A Grandmother's Kitchen</div>
+        <ol class="fillblank">
+          <li><span class="num">25.</span> Mrs. Tan's tea house follows a <span class="blank"></span> way of making tea passed down from her grandmother. (Paragraph: <span class="blank"></span>)</li>
+        </ol>
+
+        <div class="subgroup-label">Riverside Walking Trail Reopens</div>
+        <ol class="fillblank">
+          <li><span class="num">26.</span> The new benches make the trail feel more <span class="blank"></span> than before. (Paragraph: <span class="blank"></span>)</li>
+        </ol>
+
+        <div class="subgroup-label">How to Choose Winter Boots That Feel Comfortable</div>
+        <ol class="fillblank">
+          <li><span class="num">27.</span> A <span class="blank"></span> fit matters more than style, since a boot that feels wrong at first will likely still feel wrong later. (Paragraph: <span class="blank"></span>) Then explain what the idiom "in the end" means and use it in a sentence of your own about choosing boots.<span class="ans-line"></span></li>
+        </ol>
+
+        <div class="subgroup-label">A New Mural at the Bus Station</div>
+        <ol class="fillblank">
+          <li><span class="num">28.</span> The mural gives people in the <span class="blank"></span> something new to notice every day. (Paragraph: <span class="blank"></span>)</li>
+        </ol>
+
+        <div class="section-title">Reading Comprehension</div>
+
+        <div class="article">
+          <div class="headline">A Mountain Tea House</div>
+          <p><span class="para-letter">[A]</span> High in the hills, an old tea house welcomes tired travelers after a long walk. The house is built of dark wood, with a small stone chimney on its roof. Inside, an elderly woman named Mrs. Tan boils water over a wood-fired stove instead of a modern gas burner.</p>
+          <p><span class="para-letter">[B]</span> The aroma of dried herbs fills the room as soon as visitors step inside. Mrs. Tan keeps her herbs in small clay pots along the back wall, adding a pinch of ginger or chrysanthemum to the hot water depending on the season.</p>
+          <p><span class="para-letter">[C]</span> Mrs. Tan says the wood-fired stove gives the tea a deeper flavor that a gas burner cannot copy. A gas burner heats water faster, she admits, but the tea tastes thin when made that way. The slow heat from the wood fire lets the herbs release their full flavor.</p>
+          <p><span class="para-letter">[D]</span> The tea house has no fixed prices; travelers pay what they can. Wooden stools line the walls, and the wood-fired stove keeps the small room full of warmth, even when snow covers the mountain path outside.</p>
+          <p><span class="para-letter">[E]</span> For Mrs. Tan, this tea house is not simply a place to serve tea. It is a traditional stop where every traveler is treated like family, made the same slow way her own grandmother once made it.</p>
+        </div>
+        <ol class="qlist" start="29">
+          <li><span class="num">29.</span><div class="qbody">Find the sentence in Paragraph C that compares the wood-fired stove to a gas burner. What reason does Mrs. Tan give for preferring the wood fire? Write one sentence with your answer.<span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">30.</span><div class="qbody">What is one way the tea house is different from a typical modern caf&eacute;? Use a detail from the passage to support your answer.<span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">Riverside Walking Trail Reopens</div>
+          <p><span class="para-letter">[A]</span> A walking trail along Miller's Creek reopened to the public this spring after months of repair work. The trail follows the river for nearly a mile, past a row of old maple trees. City workers finished the project last week, and joggers returned within days.</p>
+          <p><span class="para-letter">[B]</span> The renovated trail now has a smooth stone path instead of the old dirt track. Several wooden benches sit along the water, and a small grassy lawn opens up near the halfway point.</p>
+          <p><span class="para-letter">[C]</span> Before the repair, the dirt path turned to mud after every rain, and there were no benches at all. Runners often had to step around puddles. The new stone path stays dry, and the benches give tired walkers a place to rest.</p>
+          <p><span class="para-letter">[D]</span> In April, the maple trees begin to show small red blossoms, and many visitors walk the trail just to see them. A local jogger named Dana Reyes said the new benches make the trail feel far more welcoming than before. "Now people actually stop and enjoy the view," she said.</p>
+          <p><span class="para-letter">[E]</span> City officials plan to add a second lawn area next year. Many visitors say they now walk the trail almost every week, whether or not they are exercising.</p>
+        </div>
+        <ol class="qlist" start="31">
+          <li><span class="num">31.</span><div class="qbody">Find the sentence in Paragraph C that compares the new stone path to the old dirt path. What reason does the passage give for why the new path is better? Write one sentence with your answer.<span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">32.</span><div class="qbody">According to Paragraph E, what does the city plan to add to the trail next year? Give a specific detail.<span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">How to Choose Winter Boots That Feel Comfortable</div>
+          <p><span class="para-letter">[A]</span> Winter boots should feel comfortable from the very first day, but many shoppers pick the wrong pair. A podiatrist and boot-shop staff often repeat the same advice, and most shoppers never hear it.</p>
+          <p><span class="para-letter">[B]</span> First, know your arch type. A flat arch needs more support, while a high arch needs more cushioning. Checking an old pair of boots for uneven wear can also show your arch type.</p>
+          <p><span class="para-letter">[C]</span> Second, try boots on with the same socks you plan to wear in winter. A boot that fits well with thin socks may feel too tight once thick wool socks are added.</p>
+          <p><span class="para-letter">[D]</span> Third, check the fit at the heel and the toes together. A good winter boot should feel snug at the heel but leave room to wiggle your toes, since tight toes lose warmth faster in the cold. A boot that pinches in the store will still pinch on a cold walk.</p>
+          <p><span class="para-letter">[E]</span> Finally, do not expect a tight boot to loosen with time. If a boot feels wrong on the first try, it will likely still feel wrong after a season of wear. Comfort, more than style, should decide which pair goes home with you.</p>
+        </div>
+        <ol class="qlist" start="33">
+          <li><span class="num">33.</span><div class="qbody">Find the sentence in Paragraph C that compares trying boots on with thin socks to trying them on with the thick socks you plan to actually wear. What reason does the passage give for testing with the right socks? Write one sentence with your answer.<span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">34.</span><div class="qbody">According to Paragraph D, why does a boot that pinches in the store stay a problem later? Give a specific detail.<span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">A New Mural at the Bus Station</div>
+          <p><span class="para-letter">[A]</span> A large new mural now covers the wall of the downtown bus station, and commuters are already stopping to look. The artist, a local painter, finished the piece last weekend using spray paint and a small ladder borrowed from the city.</p>
+          <p><span class="para-letter">[B]</span> The mural shows tall, bright shapes meant to look like buildings, painted in orange, yellow, and green. Before the mural, the wall was plain gray concrete covered in old, faded posters. City workers say the new art gives the station a friendlier feel.</p>
+          <p><span class="para-letter">[C]</span> The artist said she chose bright colors on purpose, since a gray wall in a busy neighborhood can feel cold and forgotten. She wanted people waiting for the bus to notice something new every day.</p>
+          <p><span class="para-letter">[D]</span> Unlike a painting hung inside a gallery, this mural cannot be bought or moved. Anyone walking through the neighborhood can see it for free, at any hour.</p>
+          <p><span class="para-letter">[E]</span> City officials say they hope to add more murals to other bus stations next year. Local residents say the new shapes and colors already make the wait for the bus feel less boring.</p>
+        </div>
+        <ol class="qlist" start="35">
+          <li><span class="num">35.</span><div class="qbody">Find the sentences in Paragraphs B-C that compare the wall before the mural to the wall after the mural. What reason does the artist give for choosing bright colors? Write one sentence with your answer.<span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">36.</span><div class="qbody">What is one difference between seeing this mural and seeing art in a gallery, according to Paragraph D? Give a specific detail.<span class="ans-line"></span></div></li>
+        </ol>
+      </div>
+
+      <!-- ===================== TASK LEVEL: FOUR STARS ===================== -->
+      <div class="level-page">
+        <div class="section-title level-head">Module 1 Set 1 Assessment - &#9733;&#9733;&#9733;&#9733;</div>
+        <p class="objective"><strong>Objective:</strong> summarize how a writer organizes the details in a passage, and identify at least one word choice that reveals the writer's attitude without stating it directly.</p>
+
+        <div class="section-title">Words &amp; Phrases</div>
+
+        <div class="subgroup-label">A Grandmother's Kitchen</div>
+        <ol class="fillblank">
+          <li><span class="num">37.</span> Which sentence from the tea house passage uses the word "warmth" to suggest comfort and welcome, not just physical heat? Quote the sentence and explain your choice in one sentence.<span class="ans-line"></span><span class="ans-line"></span></li>
+        </ol>
+
+        <div class="subgroup-label">Riverside Walking Trail Reopens</div>
+        <ol class="fillblank">
+          <li><span class="num">38.</span> The passage uses the word "welcoming" to describe the trail. Explain in one sentence what specific details in Paragraph D make the trail feel welcoming, beyond just stating the word.<span class="ans-line"></span></li>
+        </ol>
+
+        <div class="subgroup-label">A New Mural at the Bus Station</div>
+        <ol class="fillblank">
+          <li><span class="num">39.</span> The passage uses the word "bright" more than once. Choose one instance and explain in one sentence what feeling or idea "bright" adds beyond simply describing color. Then explain how the idiom "jump out" relates to why the artist chose bright colors, even though the word does not appear in this new passage.<span class="ans-line"></span><span class="ans-line"></span></li>
+        </ol>
+
+        <div class="section-title">Reading Comprehension</div>
+
+        <div class="article">
+          <div class="headline">A Mountain Tea House</div>
+          <p><span class="para-letter">[A]</span> High in the hills, an old tea house welcomes tired travelers after a long walk. The house is built of dark wood, with a small stone chimney on its roof. Inside, an elderly woman named Mrs. Tan boils water over a wood-fired stove instead of a modern gas burner.</p>
+          <p><span class="para-letter">[B]</span> The aroma of dried herbs fills the room as soon as visitors step inside. Mrs. Tan keeps her herbs in small clay pots along the back wall, adding a pinch of ginger or chrysanthemum to the hot water depending on the season.</p>
+          <p><span class="para-letter">[C]</span> Mrs. Tan says the wood-fired stove gives the tea a deeper flavor that a gas burner cannot copy. A gas burner heats water faster, she admits, but the tea tastes thin when made that way. The slow heat from the wood fire lets the herbs release their full flavor.</p>
+          <p><span class="para-letter">[D]</span> The tea house has no fixed prices; travelers pay what they can. Wooden stools line the walls, and the wood-fired stove keeps the small room full of warmth, even when snow covers the mountain path outside.</p>
+          <p><span class="para-letter">[E]</span> For Mrs. Tan, this tea house is not simply a place to serve tea. It is a traditional stop where every traveler is treated like family, made the same slow way her own grandmother once made it.</p>
+        </div>
+        <ol class="qlist" start="40">
+          <li><span class="num">40.</span><div class="qbody">In 2-3 sentences, summarize how the passage moves from describing the tea house, to Mrs. Tan's cooking method, to why she keeps making tea the traditional way. Then identify one phrase that shows the writer's positive attitude toward the tea house without stating an opinion directly.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">41.</span><div class="qbody">Mrs. Tan says a gas burner heats water faster but the tea tastes thin when made that way. In 2-3 sentences, explain what this comparison reveals about what Mrs. Tan values, using evidence from the passage.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">Riverside Walking Trail Reopens</div>
+          <p><span class="para-letter">[A]</span> A walking trail along Miller's Creek reopened to the public this spring after months of repair work. The trail follows the river for nearly a mile, past a row of old maple trees. City workers finished the project last week, and joggers returned within days.</p>
+          <p><span class="para-letter">[B]</span> The renovated trail now has a smooth stone path instead of the old dirt track. Several wooden benches sit along the water, and a small grassy lawn opens up near the halfway point.</p>
+          <p><span class="para-letter">[C]</span> Before the repair, the dirt path turned to mud after every rain, and there were no benches at all. Runners often had to step around puddles. The new stone path stays dry, and the benches give tired walkers a place to rest.</p>
+          <p><span class="para-letter">[D]</span> In April, the maple trees begin to show small red blossoms, and many visitors walk the trail just to see them. A local jogger named Dana Reyes said the new benches make the trail feel far more welcoming than before. "Now people actually stop and enjoy the view," she said.</p>
+          <p><span class="para-letter">[E]</span> City officials plan to add a second lawn area next year. Many visitors say they now walk the trail almost every week, whether or not they are exercising.</p>
+        </div>
+        <ol class="qlist" start="42">
+          <li><span class="num">42.</span><div class="qbody">In 2-3 sentences, summarize how the passage moves from the trail's reopening, to what was built, to how visitors feel about it now. Then identify one evaluative word or phrase that shows a positive attitude toward the changes.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">43.</span><div class="qbody">In 2-3 sentences, explain why the writer chose to quote Dana Reyes directly instead of just stating that people like the new trail. What does her quote add?<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">How to Choose Winter Boots That Feel Comfortable</div>
+          <p><span class="para-letter">[A]</span> Winter boots should feel comfortable from the very first day, but many shoppers pick the wrong pair. A podiatrist and boot-shop staff often repeat the same advice, and most shoppers never hear it.</p>
+          <p><span class="para-letter">[B]</span> First, know your arch type. A flat arch needs more support, while a high arch needs more cushioning. Checking an old pair of boots for uneven wear can also show your arch type.</p>
+          <p><span class="para-letter">[C]</span> Second, try boots on with the same socks you plan to wear in winter. A boot that fits well with thin socks may feel too tight once thick wool socks are added.</p>
+          <p><span class="para-letter">[D]</span> Third, check the fit at the heel and the toes together. A good winter boot should feel snug at the heel but leave room to wiggle your toes, since tight toes lose warmth faster in the cold. A boot that pinches in the store will still pinch on a cold walk.</p>
+          <p><span class="para-letter">[E]</span> Finally, do not expect a tight boot to loosen with time. If a boot feels wrong on the first try, it will likely still feel wrong after a season of wear. Comfort, more than style, should decide which pair goes home with you.</p>
+        </div>
+        <ol class="qlist" start="44">
+          <li><span class="num">44.</span><div class="qbody">In 2-3 sentences, summarize how the guide is organized (the order of its four pieces of advice) and explain why that order makes sense for someone buying winter boots.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">45.</span><div class="qbody">The guide ends by saying comfort matters more than style. In 2-3 sentences, explain what evidence earlier in the passage supports this final claim.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="article">
+          <div class="headline">A New Mural at the Bus Station</div>
+          <p><span class="para-letter">[A]</span> A large new mural now covers the wall of the downtown bus station, and commuters are already stopping to look. The artist, a local painter, finished the piece last weekend using spray paint and a small ladder borrowed from the city.</p>
+          <p><span class="para-letter">[B]</span> The mural shows tall, bright shapes meant to look like buildings, painted in orange, yellow, and green. Before the mural, the wall was plain gray concrete covered in old, faded posters. City workers say the new art gives the station a friendlier feel.</p>
+          <p><span class="para-letter">[C]</span> The artist said she chose bright colors on purpose, since a gray wall in a busy neighborhood can feel cold and forgotten. She wanted people waiting for the bus to notice something new every day.</p>
+          <p><span class="para-letter">[D]</span> Unlike a painting hung inside a gallery, this mural cannot be bought or moved. Anyone walking through the neighborhood can see it for free, at any hour.</p>
+          <p><span class="para-letter">[E]</span> City officials say they hope to add more murals to other bus stations next year. Local residents say the new shapes and colors already make the wait for the bus feel less boring.</p>
+        </div>
+        <ol class="qlist" start="46">
+          <li><span class="num">46.</span><div class="qbody">In 2-3 sentences, summarize how the passage moves from describing the new mural, to the artist's reason for her color choice, to how the mural affects the neighborhood. Then identify one evaluative word or phrase that shows a positive attitude toward the mural.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+          <li><span class="num">47.</span><div class="qbody">In 2-3 sentences, explain why the artist believes a mural at a bus station reaches people differently than a painting in a gallery, using evidence from Paragraph D.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+        </ol>
+
+        <div class="subgroup-label">Comparing Two Passages</div>
+        <ol class="qlist" start="48">
+          <li><span class="num">48.</span><div class="qbody">Both the Riverside Walking Trail passage and the Bus Station Mural passage describe a public space that changed to feel more welcoming. In 3-4 sentences, compare what changed in each place, and explain which change you think had a bigger effect on how people feel in that space. Support your answer with evidence from both passages.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
