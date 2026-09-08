@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.4)
+# Student Packet Style Guide (v2.5)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -638,6 +638,9 @@ these.
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
 | Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
 | Section numbers, prompt names, version narrative | Never appear. |
+| Object logistics ("put it on your desk," "borrow one if you have none," "hold it up," "take out your...") | Not printed; the teacher manages objects live. The packet prints the choice list and the task, nothing about where the object is. |
+| Word-count targets (the 0.2 ranges in words; "count your words") | Students see a sentence count only ("3-6 sentences"), never a word range and never an instruction to count words; word targets stay in the Markdown for the teacher. |
+| Pacing notes ("It is fine to finish tomorrow," "you have 20 minutes," "finish this first," "if there is time") | Not printed; time is managed in class. |
 | A previous lesson's notes, planning, examples, or board ("last time," "your planning notes," "the example from earlier this week") | Never referenced; whatever this day's tasks need is reprinted or rebuilt in this packet (Quality Standards §D9). Only the piece a Set carries forward may be "the piece you wrote last time." |
 
 If a source lesson uses a term not listed here or in the modality's own rows, apply the same principle:
@@ -1025,8 +1028,10 @@ Run this list first, then the modality's own list.
 15. No reference to an earlier lesson's notes, planning, examples, or board, other than the carried piece;
     at Beginner and Intermediate no reflection question, only actions with a visible product? (§E; Quality
     Standards §D9, §E6)
+16. No object logistics, no word range or "count your words," and no pacing line anywhere in student-facing
+    text? (§E)
 
 ## Changelog
 
-**Current version: v2.4.** For the full dated version history and the reasoning behind each
+**Current version: v2.5.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.3
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.4
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B, task-ladder
 practice, prewriting)
@@ -20,6 +20,10 @@ _Revised 2026-09-08 (1.1.2.2 -> 1.1.2.3) for Quality Standards §D9: Day 2's pre
 to Lesson 3, so no task points forward ("next time," "for Lesson 3") and nothing looks back at Lesson 1's
 ladder._
 
+_Revised 2026-09-08 (1.1.2.3 -> 1.1.2.4): the draft object is the category "my clothing," printed as a list of
+eight choices the student circles (jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat); the packet no
+longer prints desk or borrowing logistics (Style Guide §E)._
+
 ---
 
 ## Objectives pulled (learningobjectives.csv, Modality = Writing, Module 1: Describing)
@@ -36,8 +40,8 @@ ladder._
 **Scenario:** every student describes a phone case. Every Level, 2-3 included, works from the student's own actual
 case on Day 1 and Day 2 Phase 1; a student with no case in hand describes a classmate's or the teacher's case,
 held up where they can see it. The phone case is the Set's **practice object**. Day 2 Phase 2 introduces the
-**draft object**, the student's own jacket, hoodie, or sweater (a classmate's, on the back of a chair, as the
-fallback), and every later position writes about that: the piece carried across all 8 lessons of Module Pair 1-2
+**draft object**, one piece of the student's own clothing chosen from a printed list of eight (jacket, hoodie,
+sweater, shirt, T-shirt, dress, scarf, hat; a classmate's as the teacher-managed fallback), and every later position writes about that: the piece carried across all 8 lessons of Module Pair 1-2
 is about the jacket, not the phone case (Conventions §C). No picture is used in this lesson.
 
 **Word Bank** (posted on the board and reprinted in this lesson's packet; Levels 2-3 draw their words from it,
@@ -278,9 +282,10 @@ replace.
 
 ### Phase 2: Prewriting for the Scenario, differentiated by task Level (30 min)
 
-**The draft object.** The piece every student drafts in Lesson 3 is about their own jacket, hoodie, or sweater:
-whatever outer layer they are wearing or have with them today. A student with none uses a classmate's, taken off
-the back of a chair and put on the desk. Nothing is provided or shown by the teacher. The phone case was the
+**The draft object.** The piece every student drafts in Lesson 3 is about one piece of their own clothing,
+circled from the printed list (my jacket, my hoodie, my sweater, my shirt, my T-shirt, my dress, my scarf, my
+hat). Teacher-managed, not printed: a student with none of them borrows a classmate's for the task. Nothing is
+provided or shown by the teacher. The phone case was the
 practice object; the jacket is the object the taught grammar now transfers to, and it stays the object through
 Lesson 4 and Module 2.
 
@@ -365,7 +370,7 @@ board is this lesson's; Lesson 3 does not depend on it.
 16. Adjacency: Focus B and the confusable drill are new to this Set; the hook slot is not used at position 2
     (the prompt's flow opens Lesson 2 with the mini-lesson).
 17. Oral protocol: no whole-class discussion protocol in this lesson; partner checks have a fixed question each.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.3.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.4.
 19. Self-contained: the phone case and the jacket are the student's own (a classmate's as fallback); no prop,
     picture, or card the teacher prepares.
 20. Self-contained across lessons: no task needs Lesson 1's packet (the ladder look-back is gone); Day 2's

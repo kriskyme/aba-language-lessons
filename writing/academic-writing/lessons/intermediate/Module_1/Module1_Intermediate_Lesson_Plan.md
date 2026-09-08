@@ -34,8 +34,9 @@ Lessons 1-2 through Lesson 2 Day 1 and the Mentor Ladder: a phone case** — a r
 student owns, chosen (over the lesson's original water-bottle Scenario) for offering natural angles for
 comparison (color, thickness, durability, grip, price) and implied attitude (how worn it is, why it's never
 replaced). **Draft object, from Lesson 2 Day 2's prewriting through Lesson 3's draft, Lesson 4's revision, and
-Module 2: one of a printed list the student circles, my jacket, my hoodie, my sweater, my shirt** — whatever
-they are wearing or have with them (a classmate's, on the back of a chair, as the fallback), chosen so the draft transfers the taught grammar to
+Module 2: "my clothing," one piece of the student's own clothing circled from a printed list of eight (my
+jacket, my hoodie, my sweater, my shirt, my T-shirt, my dress, my scarf, my hat)** — whatever they are wearing or
+have with them (a classmate's as the teacher-managed fallback, never printed), chosen so the draft transfers the taught grammar to
 an object the student did not drill on, with its own angles for comparison (warmth, weight, fit, material, age)
 and implied attitude (a faded cuff, a broken zipper still worn, which pocket holds what). Every student, Levels
 2-5 alike, works from the real object in front of them; no picture is provided or shown.
@@ -126,3 +127,8 @@ direction, and the Task-Level basis are unchanged.
 drafting lesson prints it, Lesson 3 builds its plan inside its own packet instead of reading Lesson 2's notes or
 Lesson 1's ladder, and no printed prompt at this band asks a reflection question. Lessons 2-4 revised (`1.1.2.3`,
 `1.1.3.4`, `1.1.4.4`).
+
+**Addendum (2026-09-08, fifth): "My Clothing."** The draft object is now the category, not one item: Lessons 3-4
+are titled "Describing My Clothing" (folders `Lesson_3_MyClothing/`, `Lesson_4_MyClothing/`), the printed list has
+eight choices, and per Style Guide v2.5 the packets print no object logistics, word ranges, or pacing lines
+(students count sentences only). Lessons 2-4 at `1.1.2.4`, `1.1.3.6`, `1.1.4.6`.

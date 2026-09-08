@@ -19,9 +19,9 @@ Lesson 2 Day 2; what Lessons 3-4 and Module 2 write about), per `shared/Program_
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.2 |
-| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my jacket) | 1.1.2.3 |
-| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My jacket (draft object; same Scenario) | 1.1.3.5 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Self-revision, draft completion, hand-off (not published), Closing Transfer Check | My jacket (draft object; same Scenario) | 1.1.4.5 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.4 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.6 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Self-revision, draft completion, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.6 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -119,6 +119,14 @@ want my reader to guess ___"). Module 1 plan gains a fourth addendum.
 the two "Finished early?" add-ons are removed; "Check Your Own Work" is four lettered Tasks, one per star, each
 with its own complete list. Lesson 4 (`1.1.4.4` -> `1.1.4.5`): the same self-check split in Unit 4A (Tasks A-D),
 Fix It Up relettered E-H, and Unit 4B's Last Look split the same way (Tasks A-D, the rest relettered E-L). Markdown checklists are one per Level.
+
+**2026-09-08 addendum: "My Clothing" (Style Guide v2.5).** The draft object is the category: Lessons 3-4 renamed
+`Lesson_3_MyClothing/` and `Lesson_4_MyClothing/` (`Lesson{3,4}_MyClothing.md`,
+`MyClothing_Intermediate_L{3,4}_Packet.html`), headings "Describing My Clothing," the printed list widened to eight
+choices (jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat) in Lessons 2 and 3. Per user direction the
+packets no longer print "put it on your desk / borrow a classmate's," any word range, or "it is fine to finish
+tomorrow"; students count sentences only. Lesson 2 `1.1.2.3` -> `1.1.2.4`, Lesson 3 `1.1.3.5` -> `1.1.3.6`,
+Lesson 4 `1.1.4.5` -> `1.1.4.6`.
 
 ---
 

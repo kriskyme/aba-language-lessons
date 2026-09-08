@@ -1,4 +1,4 @@
-# Academic Writing Module Lesson-Plan Generation Prompt (v4.2)
+# Academic Writing Module Lesson-Plan Generation Prompt (v4.3)
 
 Companion to the Academic Writing Lesson Generation Prompt. Plans a full **Set** (Beginner: 4 lessons, one
 Module) or a full **Module Pair** (Intermediate/Advanced/Proficient: two consecutive Modules' Sets, 8 lessons;
@@ -11,7 +11,7 @@ Focus A/B collision or a gap in Module N+1's CSV coverage before 8 lessons are w
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets and Module Pair, §C; Rotation Log
 mechanics and adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v4.2.** History: `Changelog.md`.
+**Current version: v4.3.** History: `Changelog.md`.
 
 ## 0. Rotation Log
 
@@ -57,9 +57,10 @@ own template.
    - **Scenario,** two or three lines: the shared writing situation and Module-aligned purpose, the **practice
      object** (Lessons 1-2's grammar work and the Mentor Ladder), and the **draft object** (introduced at Lesson
      2 Day 2 prewriting; what Lessons 3-4 and a Pair's second Module write about), both the student's own
-     belongings (Lesson prompt 0.1a; Conventions §C). State the draft object as a short list of three or four
-     like objects the student picks from (jacket, hoodie, sweater, shirt), so every drafting lesson can print
-     the list and no student is without one (Quality Standards §D9). A Scenario asserts nothing as fact, so it needs no
+     belongings (Lesson prompt 0.1a; Conventions §C). State the draft object as a category plus a short printed
+     list of four to eight like things the student picks from (clothing: jacket, hoodie, sweater, shirt,
+     T-shirt, dress, scarf, hat), so every drafting lesson can print the list and no student is without one
+     (Quality Standards §D9); the drafting lessons take the category as their slug and title. A Scenario asserts nothing as fact, so it needs no
      real-world-verifiability rule or fabricated-quote guardrail; each object must be concrete and writable at
      every task Level in the band (from a single-word frame to a full essay where the band reaches that high),
      the draft object must sustain the full arc, and both are flagged per Section 0 if they echo the preceding

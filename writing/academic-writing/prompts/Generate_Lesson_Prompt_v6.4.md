@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.3)
+# Academic Writing Lesson Generation Prompt (v6.4)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.3.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -78,9 +78,10 @@ all built on it. Within any one activity, every task Level describes the same ro
 
 **Two objects, one Scenario (Conventions §C).** The Scenario names a **practice object** and a **draft object**,
 both the student's own belongings (a place or person where the Module's form calls for one), fixed once by the
-plan. The draft object may be one of a short printed list of like objects (three or four: jacket, hoodie,
-sweater, shirt) that the student circles at the start of each drafting lesson, so no student is stuck without
-one. The practice object carries grammar input, controlled practice, the frame rounds, and the Mentor Ladder from
+plan. The draft object may be one of a short printed list of like things, four to eight (clothing: jacket,
+hoodie, sweater, shirt, T-shirt, dress, scarf, hat), that the student circles at the start of each drafting
+lesson, so no student is stuck without one; the lesson and its packet are then titled by the category ("My
+Clothing"), and the Draft Word Bank is built for the category, not one item. The practice object carries grammar input, controlled practice, the frame rounds, and the Mentor Ladder from
 Lesson 1 through Lesson 2 Day 1. Lesson 2 Day 2's prewriting introduces the draft object together with a **Draft
 Word Bank** (the Set's Word Bank groups, refilled with words that fit the draft object; printed in Lesson 2's Day 2
 unit and reprinted in every later lesson), and every later position writes about the draft object only: Lesson 3's
@@ -624,7 +625,8 @@ _Phase 3: Mid-draft share-out (15 min)_
 
 ### Lesson 3, Day 2: Drafting, Part 2 and Self-Edit
 
-_Phase 1: Complete the draft (30 min)_ to the Level's full 0.2 target.
+_Phase 1: Complete the draft (30 min)_ to the Level's full 0.2 target. Students count sentences only; the word
+range is the teacher's circulation check and never reaches the packet (Style Guide §E).
 
 _Phase 2: Self-edit checklist pass (25 min)_ against the regime's checklist (0.6).
 

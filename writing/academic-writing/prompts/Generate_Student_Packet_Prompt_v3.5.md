@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.4)
+# Academic Writing Student Print Formatting Prompt (v3.5)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.5.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
@@ -131,16 +131,20 @@ add-on anywhere in the packet; a heavier tier from the lesson is its own starred
 
 Style Guide §I item 11, sized to the task Level's own 0.2 target for a drafting task: `.blank` for a mid-sentence
 blank inside a `.fillblank` list, `.ans-line-sm` for a one-word or short-phrase answer on its own line below the
-item, several `.ans-line` rows for a paragraph or essay draft.
+item, several `.ans-line` rows for a paragraph or essay draft. A drafting task states its target as a sentence
+count only ("Aim for 3-6 sentences"); the word range and any "finish tomorrow" pacing stay in the Markdown
+(Style Guide §E).
 
 ### 2.10 Opening of a drafting-day packet
 
 A drafting lesson's Day 1 unit opens with the Draft Word Bank, then a section titled "Get Ready to Write"
-holding one unstarred Task: the printed list of draft-object choices to circle ("Pick one of these things to
-write about and circle it: my jacket, my hoodie, my sweater, my shirt"), "Put it on your desk" with the
-borrow-a-classmate's fallback, and the quick-plan action with its answer line ("Look at it. Write three words
-from the Word Bank that fit it"). No questions, no "last time," no "your planning notes," no "the example from
-earlier this week," and no re-look at Mentor Ladder examples (Quality Standards §D9, §E6; Style Guide §E).
+holding one unstarred Task: the printed list of draft-object choices to circle, four to eight like things
+("Pick one of these things to write about and circle it: my jacket, my hoodie, my sweater, my shirt, my
+T-shirt, my dress, my scarf, my hat"), then the quick-plan action with its answer line ("Look at it. Write
+three words from the Word Bank that fit it"). Nothing else: no "put it on your desk" or borrowing fallback
+(the teacher's, Style Guide §E), no questions, no "last time," no "your planning notes," no "the example from
+earlier this week," and no re-look at Mentor Ladder examples (Quality Standards §D9, §E6). The unit heading
+names the generic category ("Describing My Clothing"), not one item from the list.
 Later in the same unit, a task that needs a list or plan builds it inside the task with its own lines.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS

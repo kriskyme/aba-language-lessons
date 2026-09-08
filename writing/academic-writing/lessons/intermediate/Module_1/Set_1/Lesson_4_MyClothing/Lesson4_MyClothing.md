@@ -1,11 +1,11 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.5
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.6
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: hard self-revision with Module 1's
 tools, draft completion, hand-off to Module 2's Set, not published; Closing Transfer Check for Module 1's skill)
 
-### Scenario: "My Jacket" (the draft object, continued from Lessons 2-3; the phone case was the practice object)
+### Scenario: "My Clothing" (the draft object, one piece of the student's own clothing, continued from Lessons 2-3; the phone case was the practice object)
 
 _Regenerated 2026-09-08 against `Generate_Lesson_Prompt_v6.md` with `shared/Generation_Quality_Standards.md`
 (version 1.1.4.1 -> 1.1.4.2). Scenario, Grammar Focus A/B, Mentor Ladder direction, and this position's
@@ -15,11 +15,14 @@ completes and publishes the piece handed off here, has not yet been planned or g
 
 _Regenerated again 2026-09-08 (1.1.4.2 -> 1.1.4.3) against `Generate_Lesson_Prompt_v6.2.md` for the
 practice-object/draft-object split (Conventions §C v1.9): the draft being revised is about the student's own
-jacket, and the Draft Word Bank is reprinted. Structure, timings, tiers, and the pen-and-pencil Closing Transfer
+item, and the Draft Word Bank is reprinted. Structure, timings, tiers, and the pen-and-pencil Closing Transfer
 Check are unchanged; every object-bound line is retargeted._
 
 _Revised 2026-09-08 (1.1.4.3 -> 1.1.4.4) for Quality Standards §E6: the Levels 4-5 hand-off note is now concrete
 marks on the draft plus a printed stem, not a reflective sentence._
+
+_Revised 2026-09-08 (1.1.4.5 -> 1.1.4.6) per Style Guide v2.5: the lesson is "My Clothing"; the packet carries no
+desk or borrowing logistics and no word ranges; students count sentences only._
 
 _Revised 2026-09-08 (1.1.4.4 -> 1.1.4.5) per Style Guide v2.4: the packet's Day 1 self-check is now one lettered
 Task per star (four Tasks), no star on a list item, and Unit 4B's Last Look likewise split into four one-star Tasks; the Markdown's per-Level lists were already separate._
@@ -37,10 +40,11 @@ Task per star (four Tasks), no star on a list item, and Unit 4B's Last Look like
 
 ## What this lesson works from
 
-Every student arrives with a complete Lesson 3 draft about their own jacket, hoodie, or sweater, the Set's
-draft object (Conventions §C): Levels 2-3 a filled frame, Levels 4-5 an original paragraph. The same jacket, or
-the borrowed one, is on the desk again today; a student who wore a different jacket keeps working from the draft
-and borrows something close. The phone case, the practice object of Lessons 1-2, does not appear in this lesson.
+Every student arrives with a complete Lesson 3 draft about one piece of their own clothing (circled from the
+printed list: jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat), the Set's draft object (Conventions
+§C): Levels 2-3 a filled frame, Levels 4-5 an original paragraph. Teacher-managed, not printed: the same item,
+or the borrowed one, should be on the desk again today; a student who does not have it keeps working from the
+draft and borrows something close. Below, "the item" means whichever piece the student circled. The phone case, the practice object of Lessons 1-2, does not appear in this lesson.
 No new grammar is taught this lesson. The checklist and revision work name only what Lessons 1-3 already taught:
 
 - **Focus A (Lesson 1):** comparative adjectives (-er / more, with the spelling rules) and reason clauses with
@@ -87,33 +91,33 @@ both Modules' tools are available.
 
 **Level 4 checklist (written, on the draft):**
 
-1. Circle your comparative word (-er or more). Does it compare your jacket to one other thing?
+1. Circle your comparative word (-er or more). Does it compare your item to one other thing?
 2. Underline your reason clause and put a box around its reason word (because, since, as, or given that). Is it a
    real reason, not the same idea said again?
 3. Put a star next to one compound sentence (and / but / so). Is there a comma before the connector?
 4. Check every "it's" and "its." It's = it is; its = belonging to it.
-5. Count your sentences and words: 3-6 sentences, 40-90 words.
+5. Count your sentences: 3-6 (the word range, 40-90, is the teacher's check, not printed).
 
 **Level 5 checklist (written, on the draft):** items 1-4 above, then:
 
 5. Number your details in the margin in the order they appear. Do they move in one direction (look, then history,
    then habits, for example), or do they jump around?
-6. Draw a wavy line under the one detail that shows how you feel about the jacket. Then scan the whole paragraph
+6. Draw a wavy line under the one detail that shows how you feel about the item. Then scan the whole paragraph
    for a feeling word (love, like, hate, favorite, boring). If one is there, that sentence fails the task; mark
    it for Phase 2.
 7. Put a check next to one hedge (a bit, a little, seems, at least, probably) or one although / even though
    sentence. If there is none, mark where one could go.
-8. Count your sentences and words: 6-9 sentences, 90-150 words.
+8. Count your sentences: 6-9 (the word range, 90-150, is the teacher's check, not printed).
 
 **Levels 2-3 self-check (printed, then read to a partner):**
 
-- Level 2: Look at your jacket. Point to the thing your word describes. Is it there?
+- Level 2: Look at your item. Point to the thing your word describes. Is it there?
   Say the word slowly. Does every sound you hear have a letter on the page?
 - Level 3: Point to the thing your first word describes, then the thing your second word describes. Are they two
   different things (a color and a size, not two words for the same idea)? Say each word slowly and check its
   letters.
 - Both: read the finished sentence to a partner. Your partner points to what the word (or words) describes on
-  your jacket. If they point to the wrong thing, or cannot point, mark that word for Phase 2.
+  your item. If they point to the wrong thing, or cannot point, mark that word for Phase 2.
 
 ### Phase 2: Self-revision time, including self-revision evidence (35 min)
 
@@ -147,16 +151,16 @@ this band's top Level and the Level whose feature (an implied, not stated, attit
 without seeing what changed.
 
 **Levels 2-3 (frame regime):** revise the frame word itself. Each student looks at the Word Bank and asks: is
-there a word that describes my jacket more exactly than the one I chose (faded instead of old; fleece instead
+there a word that describes my item more exactly than the one I chose (faded instead of old; fleece instead
 of soft)? If yes, cross out the old word on the frame (Mechanism 1) and write the new one beside it, then write
 the whole new sentence on the line below the old one, so the two sentences sit side by side. If the first word
-was already the best one, the student writes one new sentence about a different part of the jacket in the same
+was already the best one, the student writes one new sentence about a different part of the item in the same
 frame (Level 2: "It is ___." with a word from a different Word Bank group; Level 3: "It is ___ and ___." with two
 new words from two groups), so every student leaves Phase 2 with a before-and-after pair on the page.
 
 **Foundation Support** (alongside Level 2, not in place of it): a student who cannot yet spell the word from
 sound says the word, the teacher writes it on a card, and the student copies it into the frame and then points
-to the thing on the jacket that the word describes.
+to the thing on the item that the word describes.
 
 **Teacher circulation:** check the required feature is present in progress, not only at the end: a comparison and
 a stated reason on every Level 4 draft, a concrete detail with no feeling word on every Level 5 draft, a
@@ -185,8 +189,9 @@ a real reason; made us guess the feeling instead of telling us). The board stays
 
 A last quiet read-through of the revised draft, focused on anything Day 1 changed: a revised sentence often
 loses its capital letter or final period, and a swapped word can break the -s agreement around it. Students
-then count against their Level's target (Level 4: 3-6 sentences, 40-90 words; Level 5: 6-9 sentences, 90-150
-words; Levels 2-3: every slot filled, one clean final copy of the sentence) and add or cut to land inside it. The
+then count sentences against their Level's target (Level 4: 3-6; Level 5: 6-9; Levels 2-3: every slot filled,
+one clean final copy of the sentence) and add or cut to land inside it; the word ranges (40-90, 90-150) are the
+teacher's circulation check and are not printed (Style Guide §E). The
 draft is complete when the count is inside the range and every checklist mark from Day 1 has been acted on.
 
 ### Phase 2: Hand-off note, not publishing (30 min)
@@ -202,7 +207,7 @@ note on the last line of their draft:
   implied-attitude detail onto the hand-off lines and finishes "I want my reader to guess ___," so the intention
   travels with the draft into Module 2's Peer Editing. Actions and stems, not reflection (Quality Standards §E6).
 - **Levels 2-3:** copy the final frame sentence cleanly onto the hand-off line, circle the word (Level 3: both
-  words) they chose, and draw a small picture of the jacket with an arrow from each circled word to the thing it
+  words) they chose, and draw a small picture of the item with an arrow from each circled word to the thing it
   describes.
 
 The teacher collects nothing for grading; drafts stay in the student's folder for Module 2's Lesson 1
@@ -211,7 +216,7 @@ re-engagement.
 ### Phase 3: Closing Transfer Check (25 min)
 
 Every student applies Module 1's spotlighted skill (describing something by comparing it to something else and
-giving a real reason) to a new object, not the jacket. The object is written in: **the pen or pencil each
+giving a real reason) to a new object, not the item. The object is written in: **the pen or pencil each
 student is holding, compared with their partner's.** In pairs, students put the two pens side by side, then each
 writes on a small card:
 
@@ -229,7 +234,7 @@ Demonstration only: no thumbs, no hands, nothing collected.
 
 **Board-dependent moment, co-constructed live:** capture two or three of the read-aloud instances on the board
 under the Day 1 before/after board, one per Level where possible, so the class sees the same skill on a pen that
-it saw on a jacket.
+it saw on a item.
 
 ---
 
@@ -240,7 +245,7 @@ it saw on a jacket.
 2. Each at its own ceiling: Level 5's checklist and revision stay inside the paragraph regime (6-9 sentences,
    90-150 words); Level 2's stays single-word frame work; Level 4 is not pulled up to Level 5's implied-attitude
    demand.
-3. Module verb: every task describes an object (the jacket, then a pen); the hand-off note names what the
+3. Module verb: every task describes an object (the item, then a pen); the hand-off note names what the
    description gained, not a narrative or an evaluation.
 4. Respectful Tiers: Levels 2-3 make a genuine choice in Phase 2 (a more exact word from the Word Bank, or a new
    observation), produce a before/after pair, and write on a real new object in the Closing Transfer Check; the
@@ -250,7 +255,7 @@ it saw on a jacket.
 6. Item distinctness: not applicable to a revision day (no item sets); the Level 4 and Level 5 checklists differ
    in their Level-specific items (organization, feeling-word scan, hedge) rather than restating one another.
 7. Not trivially easy: the Level 5 feeling-word scan and the partner's guess in Phase 3 both fail a draft that
-   states the feeling; the Level 2-3 partner-points check fails a word that does not match the jacket.
+   states the feeling; the Level 2-3 partner-points check fails a word that does not match the item.
 8. Requires the centerpiece: every check is run on the student's own draft and own object, not from memory.
 9. Padded banks: the Draft Word Bank has 30 words for one- or two-word choices; no matching lists.
 10. Time balance: Levels 2-3 do a two-part self-check plus partner read (Phase 1), a frame revision with a
@@ -262,7 +267,7 @@ it saw on a jacket.
     them.
 13. Skill Spotlight named in Lesson 1 Day 1; the Closing Transfer Check here uses the same skill on a pen, an
     object no other lesson in the Set uses (Lesson 1 used two phone cases and a bag, watch, wallet, or shoes;
-    Lesson 2 used an unnamed object in the room and then introduced the jacket; Lesson 3 drafted on the jacket);
+    Lesson 2 used an unnamed object in the room and then introduced the item; Lesson 3 drafted on the item);
     demonstration, not self-report.
 14. Board moment each day: the before/after board (Day 1), built on again with the pen instances (Day 2).
 15. Teaching precedes practice: no new teaching here; every checklist item names content from Lessons 1-2,
@@ -271,8 +276,8 @@ it saw on a jacket.
     card-based Closing Transfer Check) differs from Lesson 3's (drafting and a closing-line read-aloud).
 17. Oral protocol: no discussion protocol in this lesson; the cold-call has a written card first for every
     Level.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.5.
-19. Self-contained: the jacket and the pen are the students' own; the Foundation Support card is written live by
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.6.
+19. Self-contained: the item and the pen are the students' own; the Foundation Support card is written live by
     the teacher, not prepared; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the only thing needed from earlier is the carried draft; the Draft Word Bank
     and before/after table are printed here.
@@ -305,6 +310,6 @@ it saw on a jacket.
 14. Paired tier: Level 5's eight-item checklist and two-row table are the heavier tier to Level 4's five-item
     checklist and one-row table; Levels 2-3's frame revision is the lighter tier of the same before/after move,
     built only from the Draft Word Bank and the frames.
-15. Practice object vs draft object: every revision task works on the jacket draft; the Draft Word Bank, not
+15. Practice object vs draft object: every revision task works on the item draft; the Draft Word Bank, not
     the practice Word Bank, is reprinted; the Closing Transfer Check's pen is a third object.
 16. Self-contained across lessons; concrete prompts: see shared items 20-21.

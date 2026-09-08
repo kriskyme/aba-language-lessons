@@ -1,10 +1,10 @@
 # Academic Writing Lesson 3
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.5
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.6
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 3 of 8 (Set position 3 of 4: Drafting, parts 1-2, self-edit)
 
-### Scenario: "My Jacket" (the draft object, introduced in Lesson 2 Day 2; the phone case was the practice object)
+### Scenario: "My Clothing" (the draft object, one piece of the student's own clothing from a printed list; the phone case was the practice object)
 
 _Regenerated 2026-09-08 against `Generate_Lesson_Prompt_v6.md` with `shared/Generation_Quality_Standards.md`
 (version 1.1.3.0 -> 1.1.3.1). Scenario, Grammar Focus A/B, Word Bank, and Mentor Ladder are taken as given from
@@ -12,7 +12,7 @@ Lessons 1-2 and the approved `Module1_Intermediate_Lesson_Plan.md`; no new gramm
 changed is the drafting content built on them - see `Changelog.md`._
 
 _Regenerated again 2026-09-08 (1.1.3.2 -> 1.1.3.3) against `Generate_Lesson_Prompt_v6.2.md` for the
-practice-object/draft-object split (Conventions §C v1.9): the draft is now about the student's own jacket, hoodie,
+practice-object/draft-object split (Conventions §C v1.9): the draft is now about the student's own item, hoodie,
 or sweater, the object Lesson 2 Day 2's prewriting introduced, with the Draft Word Bank reprinted. Structure,
 timings, tiers, and checklist shape are unchanged; every object-bound line is retargeted._
 
@@ -21,8 +21,12 @@ Day 1 Phase 1 is now a quick plan built inside this packet (pick one of the prin
 write three Draft Word Bank words), with no dependence on Lesson 2's prewriting or Lesson 1's ladder and no
 printed reflection questions; Level 5 builds its detail list inside its drafting task._
 
+_Revised 2026-09-08 (1.1.3.5 -> 1.1.3.6) per user review and Style Guide v2.5: the lesson is "My Clothing," the
+printed list has eight choices, and the packet carries no desk or borrowing logistics, no word ranges, and no
+"finish tomorrow" pacing; students count sentences only._
+
 _Revised 2026-09-08 (1.1.3.4 -> 1.1.3.5) per user review and Style Guide v2.4: the Levels 2-3 drawing box is
-gone (a second frame round about a different part of the jacket takes its place); the "finished early" add-ons
+gone (a second frame round about a different part of the item takes its place); the "finished early" add-ons
 are gone; the self-edit checklist is one list per Level, printed as one lettered Task per star._
 
 ---
@@ -38,9 +42,10 @@ are gone; the self-edit checklist is one list per Level, printed as one lettered
 
 ## What this lesson carries forward
 
-**Scenario.** Every student describes one of the printed choices, circled at the start of Day 1: my jacket, my
-hoodie, my sweater, my shirt, whatever they are wearing or have with them, Levels 2-5 alike, or a classmate's
-taken off the back of a chair if they have none; no picture is provided or shown (Quality Standards §D8). This is the Set's draft object, introduced in Lesson 2 Day
+**Scenario.** Every student describes one piece of their own clothing, circled from the printed list at the
+start of Day 1 (my jacket, my hoodie, my sweater, my shirt, my T-shirt, my dress, my scarf, my hat), Levels 2-5
+alike. Teacher-managed, not printed: a student with none of them borrows a classmate's for the task; no picture
+is provided or shown (Quality Standards §D8). Below, "the item" means whichever piece the student circled. This is the Set's draft object, introduced in Lesson 2 Day
 2's prewriting; the phone case was the practice object that Lessons 1-2's grammar work and Maria's Mentor Ladder
 used, and it does not come back (Conventions §C). This is the real piece, not
 a practice round: what students write in this lesson is the draft that Lesson 4 self-revises and hands off to
@@ -70,7 +75,7 @@ Levels 2-3 draw their describing words from this list; Levels 4-5 may use it whe
 
 | Task Level | Output form | Length | Required feature (checked by name in the self-edit pass) |
 |---|---|---|---|
-| 2 | One word spelled from sound into "It is ___." | One word | The word is the student's own choice about their own jacket, sounded out, not copied off the board. |
+| 2 | One word spelled from sound into "It is ___." | One word | The word is the student's own choice about their own item, sounded out, not copied off the board. |
 | 3 | Two words spelled from sound into "It is ___ and ___." | Two words | The two words are two genuinely different observations (gray and warm), never two words for the same thing (big and baggy). |
 | 4 | One original paragraph, no frame | 3-6 sentences, 40-90 words | Exactly one comparison and one explicit, directly stated reason using a reason word; at least one compound sentence with its comma. |
 | 5 | One extended original paragraph, no frame | 6-9 sentences, 90-150 words | Details organized in a logical order, plus exactly one detail or word choice that implies a feeling or attitude without any feeling word (love, like, hate, favorite) stated. A light visible-revision pass is recommended on Day 2. |
@@ -88,8 +93,9 @@ Levels 2-3 draw their describing words from this list; Levels 4-5 may use it whe
 
 ### Phase 1: Quick plan (10 min)
 
-Every student picks one of the printed choices in the packet (my jacket, my hoodie, my sweater, my shirt),
-circles it, and puts the real thing on the desk (a classmate's, from the back of a chair, if they have none).
+Every student picks one of the printed choices in the packet (my jacket, my hoodie, my sweater, my shirt, my
+T-shirt, my dress, my scarf, my hat) and circles it. Logistics are the teacher's and are not printed: have the
+real thing on the desk, and lend or borrow for a student who has none of them.
 Then, every Level: look at it and write three Draft Word Bank words that fit it, on the line under the choices.
 That is the whole printed plan (Quality Standards §E6: an action with a visible product, no questions). Level 4
 also names, in the margin, one thing to compare it to (an old one, a sibling's, a friend's, one in a store) and
@@ -97,7 +103,7 @@ one real reason. Level 5 builds its ordered detail list inside its drafting task
 
 **Teacher-facing, not printed:** while circulating, check that each plan already carries its Level's required
 feature: a word that fits (Level 2), two words about two different things (Level 3), a comparison target plus a
-reason (Level 4). If not, point at the object and ask which part the word is about, or what the jacket is warmer
+reason (Level 4). If not, point at the object and ask which part the word is about, or what the item is warmer
 or lighter than.
 
 ### Phase 2: Independent/guided drafting, opening and body (50 min)
@@ -107,32 +113,32 @@ below are what to check while the draft is in progress, not only at the end.
 
 **Levels 2-3 (frame-based), the real frame(s).**
 
-- Level 2 completes "It is ___." for their own jacket, spelling one word from sound. Before the
+- Level 2 completes "It is ___." for their own item, spelling one word from sound. Before the
   word goes on the page, the student says it aloud to the teacher, sound by sound. The teacher listens for the
   sounding-out, not for a perfect spelling.
 - Level 3 completes "It is ___ and ___." the same way, two words, each sounded out. The teacher checks that the
   two words come from two different Word Bank groups, or are otherwise two different observations, before the
   second word is written.
 - **Genuine-choice moment (both Levels).** Each student picks two candidate words from the Word Bank for one
-  slot (for example "gray" and "faded"), says to the teacher or a partner which one fits their jacket better
+  slot (for example "gray" and "faded"), says to the teacher or a partner which one fits their item better
   and why in one phrase ("faded, because the color is washed out"), and writes that one. The word is
   a choice the student makes and can defend, not a foregone answer.
-- **When the frame is complete:** a second round of the same frame about a different part of the jacket (the
+- **When the frame is complete:** a second round of the same frame about a different part of the item (the
   sleeve, the hood, a pocket): the student points to the part, sounds out the word (Level 3: two words about two
   different things), writes it, and reads the line to a partner. This keeps frame-based students producing for
   the block; Day 2's round is different in kind (a word from a different Word Bank group), not a repeat.
 - **Foundation Support (plugs in alongside Level 2, not in place of it):** a student who cannot yet spell from
-  sound chooses the slot word by matching one of three printed Word Bank words in the packet to their own jacket,
+  sound chooses the slot word by matching one of three printed Word Bank words in the packet to their own item,
   then traces it into the frame; or dictates the word to the teacher, who scribes it, then the student points to which written word is
   which when the teacher reads two of them back.
 
 **Level 4 (single paragraph), a five-step drafting path.** Steps, not a frame: each sentence is the student's own.
 
 1. Open by saying what the object is, in one sentence.
-2. Write the comparison sentence from the quick plan: this jacket compared to an old one, a sibling's, a
+2. Write the comparison sentence from the quick plan: this item compared to an old one, a sibling's, a
    friend's, or one in a store, using a comparative form (-er or more).
 3. Write the reason sentence, using because, or since / as / given that, to say why the comparison matters or
-   why this jacket is the one that gets worn.
+   why this item is the one that gets worn.
 4. Join the comparison and the reason (or the reason and a result) into one compound sentence with and, but, or
    so, with the comma before the connector. This can replace steps 2-3's two sentences or be a new sentence.
 5. Close with one more concrete detail (the pockets, the weight, how it looks after a winter).
@@ -143,15 +149,15 @@ of the draft today; Day 2 completes it.
 
 **Level 5 (extended paragraph), list, order, then draft.** Before writing sentences, students list four or five
 concrete details about the object on the short lines in their drafting task, in the order the paragraph will use
-(a good default: what the jacket looks like, then what has happened to it, then when the writer wears it), and
+(a good default: what the item looks like, then what has happened to it, then when the writer wears it), and
 circle the one that most clearly hints at how they feel. Then draft, building the paragraph
 around the circled detail so that it lands where it carries the most weight, usually late in the paragraph.
 Hedges (a bit, seems, at least) and although are available where they fit; they are not required. Remind
-students directly: no sentence may state the feeling ("I love this jacket" fails the task; a specific, well-chosen
+students directly: no sentence may state the feeling ("I love this item" fails the task; a specific, well-chosen
 detail succeeds).
 
 Circulation spot test: read one detail sentence from the draft and ask, "What would a stranger guess you feel
-about the jacket from this sentence alone?" If the student cannot answer, or answers "nothing," the detail is not
+about the item from this sentence alone?" If the student cannot answer, or answers "nothing," the detail is not
 yet doing its work; if the student points to a feeling word instead, it is stated, not implied.
 
 ### Phase 3: Mid-draft share-out (15 min)
@@ -186,11 +192,12 @@ from the share-out. It stays up for Day 2.
 
 Students finish their piece to their own task Level's full target (table above).
 
-- **Levels 4-5:** finish the paragraph, then count the sentences and the words and write both numbers at the
-  bottom of the page ("6 sentences / 84 words"). The count is checked against the target table in Phase 2; a
-  count sitting right at the bottom of the range is a signal to add one more concrete detail, not a pass.
-- **Level 3, once the two-slot frame is complete:** add one sentence in the -s form about the same jacket, chosen
-  from what the jacket does ("It keeps me warm." / "It looks new." / "It fits well."). This uses the third-person -s
+- **Levels 4-5:** finish the paragraph, then count the sentences and write the number at the bottom of the
+  page ("6 sentences"). Students count sentences only; the word range in the targets table is the teacher's
+  circulation check (Style Guide §E). A count sitting right at the bottom of the range is a signal to add one
+  more concrete detail, not a pass.
+- **Level 3, once the two-slot frame is complete:** add one sentence in the -s form about the same item, chosen
+  from what the item does ("It keeps me warm." / "It looks new." / "It fits well."). This uses the third-person -s
   rule taught in Lesson 1 Day 1, and gives Level 3 a second, different kind of line beside the frame.
 - **Level 2, once the one-slot frame is complete:** complete "It is ___." a second time with a word from a
   different Word Bank group than the first (color first, then size or condition), sounded out and read aloud to
@@ -207,29 +214,29 @@ one lettered Task per star (Style Guide §F); the cross-out rule applies to ever
 the lists: anything changed during this pass is crossed out with a single line, not erased, and rewritten next
 to or above it, so both versions stay on the page (Section 0.4a's visible-revision evidence).
 
-**Level 2 (oral):** read your sentence to a partner. Does your word match your real jacket? Point to the part
-of your jacket the word describes. Does the sentence make sense read aloud?
+**Level 2 (oral):** read your sentence to a partner. Does your word match your real item? Point to the part
+of your item the word describes. Does the sentence make sense read aloud?
 
-**Level 3 (oral):** read your sentence to a partner. Point to the part of your jacket each word describes. Are
+**Level 3 (oral):** read your sentence to a partner. Point to the part of your item each word describes. Are
 your two words about two different things? Does the sentence make sense read aloud?
 
 **Level 4 checklist:**
 
 1. Every sentence has a subject and a verb, and third-person singular verbs end in -s where needed (it holds, it
    fits, she likes).
-2. I used at least one comparative form (-er or more) correctly, and it compares my jacket to something specific.
+2. I used at least one comparative form (-er or more) correctly, and it compares my item to something specific.
 3. I gave one explicit reason using a reason word (because, since, as, or given that). Circle the reason word.
 4. I used at least one compound sentence joined with and, but, or so, and the comma sits before the connector.
 5. I have one comparison and one directly stated reason, and I can point to both.
 6. "It's" (it is) and "its" (belonging to it) are used correctly wherever they appear.
 7. Punctuation and capitalization are correct, including a capital letter after every period.
-8. My sentence count and word count are inside my target (3-6 sentences, 40-90 words).
+8. My sentence count is inside my target (3-6 sentences).
 
 **Level 5 checklist:** items 1-4 and 6-7 as above, plus:
 
-5. I have one detail that implies how I feel about the jacket, with no feeling word (love, like, hate,
+5. I have one detail that implies how I feel about the item, with no feeling word (love, like, hate,
    favorite) anywhere in that sentence.
-8. My sentence count and word count are inside my target (6-9 sentences, 90-150 words).
+8. My sentence count is inside my target (6-9 sentences).
 9. I have at least one hedge (a bit, a little, seems, at least) or one although sentence, or I have marked
    where one could go.
 
@@ -238,9 +245,9 @@ your two words about two different things? Does the sentence make sense read alo
 In pairs, each student reads only the last line of their piece to a partner (Levels 2-3: the completed frame;
 Levels 4-5: the closing sentence). The partner answers one question, by Level:
 
-- **Levels 2-3:** "Which part of your jacket does the word describe?" The partner points to it.
+- **Levels 2-3:** "Which part of your item does the word describe?" The partner points to it.
 - **Level 4:** "Does the last sentence add a new detail, or does it repeat something already said?"
-- **Level 5:** "What do you think the writer feels about this jacket, and which sentence told you?"
+- **Level 5:** "What do you think the writer feels about this item, and which sentence told you?"
 
 Writers note the answer in one word in the margin. A mismatch (the partner points to the wrong part, or guesses no
 feeling at all) is the first thing to fix in Lesson 4's revision.
@@ -262,12 +269,12 @@ Set (Pair position 8).
 2. Each at its own ceiling: Level 5 stays a single extended paragraph (no essay-regime expectations); Level 2
    stays one word in one frame; Level 4's Level is not simplified (a reason word and a compound sentence are
    both required, not optional).
-3. Module verb: every task describes the student's own jacket (the Set's draft object; the phone case, the
+3. Module verb: every task describes the student's own item (the Set's draft object; the phone case, the
    practice object, appears only as the shape of Maria's models in Phase 1); the Level 4 path's "reason"
    explains a comparison, not a
    cause-and-effect process; no narrating or evaluating drift.
 4. Respectful Tiers: Levels 2-3 make a defended word choice between two candidates, do a second frame round
-   on a different part of the jacket, and (Level 3) produce an -s sentence; on this production day they have a genuine production role for the full block.
+   on a different part of the item, and (Level 3) produce an -s sentence; on this production day they have a genuine production role for the full block.
 5. Live oral work: the share-out gives Levels 2-3 a prepared single line (their frame) rather than an easier
    stem in a harder turn; Foundation Support is described where it plugs in (Day 1 Phase 2).
 6. Item distinctness: not an item-based lesson; each phase asks for a different thing (draft, count, checklist
@@ -293,8 +300,8 @@ Set (Pair position 8).
     2's (grammar mini-lesson, combining drill, prewriting share).
 17. Oral protocol: the share-out has per-Level lines, a task for every listener, and a rotated second question
     in Day 2's pair check; no static single prompt.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.5.
-19. Self-contained: the jacket is the student's own (a classmate's as fallback); Foundation Support uses
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.6.
+19. Self-contained: the item is the student's own (a classmate's as fallback); Foundation Support uses
     printed Draft Word Bank words; no prop, picture, or card the teacher prepares; no drawing box.
 20. Self-contained across lessons: the object choice, the three-word plan, Level 4's comparison target, and
     Level 5's detail list are all built in this packet; nothing from Lesson 2 or Lesson 1's ladder is needed.
@@ -327,6 +334,6 @@ Set (Pair position 8).
 14. Paired tier: Level 3's -s sentence and Level 2's second frame (Day 2) are lighter production tiers beside
     Levels 4-5's completion; Level 5's own task is the heavier tier to Level 4's; no "finished early" add-ons
     (Style Guide §F).
-15. Practice object vs draft object: every task writes about the jacket (or the circled sibling choice);
+15. Practice object vs draft object: every task writes about the item (or the circled sibling choice);
     Maria's phone-case models are not used; the Draft Word Bank, not the practice Word Bank, is reprinted.
 16. Self-contained across lessons; concrete prompts: see shared items 20-21.
