@@ -65,9 +65,9 @@ task-Level tiered) and a per-Set Speaking assessment (Part B, mechanism split by
 default and formal assessment for Beginner/Intermediate, with a same-task teacher-approved live-delivery option;
 live presentation as the default for Advanced/Proficient, with a same-task Teams-recording alternate always also
 generated). First assessment generated 2026-09-04 against Module 1 Intermediate Set 1 - see
-`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`. Advanced Set 1 was completed 2026-09-07, and its
+`lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Assessment.md`. Advanced Set 1 was completed 2026-09-07, and its
 assessment was generated 2026-09-07 too (see `Rotation_Log_Advanced.md`) - see
-`lessons/advanced/Set_1/Set1_Advanced_Assessment.md`. Both Set 1 assessments are now generated; neither has
+`lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment.md`. Both Set 1 assessments are now generated; neither has
 been field-tested with a real class yet.
 
 **Lesson version numbers introduced (2026-09-07).** Each Band file's lesson table now has a `Version` column
@@ -81,7 +81,7 @@ Andrea Golubic's laughter museum in Zagreb, Croatia), distinct from all 4 taught
 covering all four of the Set's listening strategies (Main Ideas/Gist, Recognize Examples, Sequence Markers,
 Predict from Context). Part B (Speaking) is a Teams Speaking Progress solo recording (Intermediate's default
 mechanism), emphasizing Making Comparisons and Sequencing Language, with the same-task live-delivery option
-noted. See `lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md`.
+noted. See `lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Assessment.md`.
 
 **Intermediate Set 1 assessment's Part A fully regenerated again (2026-09-07),** against
 `Generate_Assessment_Prompt_v1.md`'s redesigned Part A: a second real clip added ("Researchers Uncover a

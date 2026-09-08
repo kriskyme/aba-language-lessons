@@ -15,7 +15,7 @@ this Band.
 | 3 | Long-form interview (person-portrait) | Predict from Context Before Confirming | Turn-Taking/Interrupting Politely | Mystery Quote | Concentric Circles | Character & reputation | A real person profiled by someone who knew them closely, visibly careful around one sensitive aspect of that person's life or reputation | S1.3.0 |
 | 4 | Lecture/docent walkthrough excerpt | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | K-W-L Walk | Jigsaw Expert Panels | Institutional description | A real institution or historic site described in a lecture/docent walkthrough, where institutional framing plays down a known shortcoming | S1.4.0 |
 
-Plan approved and logged: see `lessons/proficient/Module1_Proficient_Lesson_Plan.md` for the full task-Level
+Plan approved and logged: see `lessons/proficient/Module_1/Module1_Proficient_Lesson_Plan.md` for the full task-Level
 CSV grounding, topic-grounding rationale, Level 7 two-source angles, Level 8 withheld-content angles, and
 self-check. Level 7's two-source requirement and Level 8's withheld-content requirement apply to every lesson in
 this Set - see that plan's sourcing flags before generating.
@@ -29,7 +29,7 @@ the primary source (Mayor Mitch Landrieu's insurance-and-wealth explanation), no
 ever generated for this Band - no adjacency check applies (no immediately preceding Proficient lesson to check
 against). Generated against `Generate_Lesson_Prompt_v1.1.md` and `Generate_Student_Packet_Prompt_v1.3.md`, current
 2-day Unit A/B architecture from the start. Version `S1.1.0`, per `Program_Conventions.md` §G. See
-`lessons/proficient/Set_1/Lesson_1_LowerNinthWard/Lesson1_LowerNinthWard.md` and
+`lessons/proficient/Module_1/Set_1/Lesson_1_LowerNinthWard/Lesson1_LowerNinthWard.md` and
 `Lesson_1_LowerNinthWard/LowerNinthWard_Proficient_L1_Packet.html`.
 
 **Open items, flagged (not silently resolved):** (1) the secondary source is a Wikipedia article documenting the

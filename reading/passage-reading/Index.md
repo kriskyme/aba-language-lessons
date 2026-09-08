@@ -28,9 +28,9 @@ currently supports it.
 | `Changelog.md`                                                     | Version history for this prompt family. Not a prompt itself. | N/A (data, not a prompt)           |
 | `Generate_Homework_Prompt_v1.md`                | Generates one homework assignment (vocabulary/idiom production + skill practice) from a single completed 2-day lesson, general track only. Does not reference Phase 3 protocol mechanics.                                                                                                                                                                                                       | Synced to v2.5 (v2.7-compatible, unchanged) |
 | `Generate_TOEFL_Extension_Prompt_v1.md`              | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson. Works from the shared anchor text and Phase 1 vocabulary only.                                                                                                                                                                                                                                                        | Synced to v2.5 (v2.7-compatible, unchanged) |
-| `Generate_Assessment_Prompt_v4.1.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a completed Set of lessons (or an explicitly-scoped checkpoint/multi-Set span). Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. Takes a Set number as input and, for a full-Set assessment, saves alongside that Set's lesson folders as `Set{N}_{Band}_Assessment.md`. | Synced to v2.7 (v4.1)              |
+| `Generate_Assessment_Prompt_v4.2.md`              | Builds a differentiated assessment (one section per task Level, plus study guides) from a completed Set of lessons (or an explicitly-scoped checkpoint/multi-Set span). Every item now carries a Source-lesson tag and a Tests tag citing the specific CSV objective it verifies; Section 1.1 restructured around one new passage per lesson organized into lesson-blocks, with an explicit skip-a-lesson procedure (1.1a) so a lesson's items, passage, and scoring rows can be removed as a self-contained unit. Takes a Set number as input and, for a full-Set assessment, saves alongside that Set's lesson folders as `Set{N}_{Band}_Assessment.md`. v4.2 updates its two `lessons/<band>/Set_<N>/` path mentions to `lessons/<band>/Module_<N>/Set_<N>/`, matching the new Module-level folder (`shared/Program_Conventions.md` §D). | Synced to v2.7 (v4.2)              |
 | `Generate_Student_Packet_Prompt_v1.9.md`           | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing pedagogical term translated to plain instructions. Pulls its 2-3 discussion prompts directly from a source lesson, generalizes the annotation key to every packet, documents the word-bank dashed-rule exception, and reuses the required base stylesheet in `shared/Student_Packet_Style_Guide.md`. Section 2.9's rationale for rendering Fishbowl/Concentric Circles as simultaneous groups reflects a print-medium constraint (a static page can't run a live timed rotation), not a claim that a well-scaffolded live Fishbowl is passive. As of v1.6, a lesson with 2 or more idioms to gloss (no single spotlight idiom) renders "Idioms to Know" as a numbered table (`.idiom-list`/`.irow`), mirroring "Words to Know"'s `.vocab-list` treatment, instead of stacked plain paragraphs. As of v1.7, the opening masthead carries a top-right `.masthead-meta` stack of two tags - "Reading," then Band and version code combined as one string - per `shared/Student_Packet_Style_Guide.md` §B (corrected from a same-day three-line version). As of v1.8, §2.13's `.ans-line-sm` line begins on its own line below its question rather than packing inline (fixed at the shared CSS layer, `shared/Student_Packet_Style_Guide.md` v1.7), and §2.12 requires a word bank sit before the question/sentence frame it supplies words for. As of v1.9, §2.13's `.ans-line-sm` is full-width like `.ans-line` (its `max-width: 320px` cap dropped at the shared CSS layer, `shared/Student_Packet_Style_Guide.md` v1.8), distinguished from `.ans-line` only by its shorter height. Student version only; a teacher-facing formatted version is a possible future companion, not yet started. | Current (v1.9); every packet across all three modalities that embeds `.ans-line-sm` was hand-corrected for the v1.9 width fix in the same pass (see `shared/Changelog.md`), not just this modality's. Existing packets under `lessons/` predate the `.masthead-meta` stack and don't have it yet. `SagradaFamilia_Advanced_L1` and `ForgeAtDawn_Advanced_L2` also predate the v1.6 idiom-table rule and still show their 2-idiom lists as plain paragraphs; not yet swept |
-| `Generate_Assessment_Student_Packet_Prompt_v1.md`  | New (2026-09-08). Takes one completed Assessment `.md` and produces a single, print-ready, black-and-white student handout: four self-contained Task-Level sections (each with `page-break-before: always` for selective printing), source-lesson/Tests tags and the entire Scoring Guide (point values, rubrics) stripped, a per-Level plain objective statement translated from the CSV grounding quote, and no self-check-checklist substitute for rubric-scored items (they print as plain answer-line questions, matching how the Student Print Formatting Prompt already treats extended-response items). No Reading-specific delta CSS - reuses the base stylesheet and classes the lesson packet prompt already established. Mirrors Listening/Speaking's `Generate_Assessment_Student_Packet_Prompt_v1.md` and Writing's `Generate_Assessment_Student_Packet_Prompt_v2.md`, closing the gap noted in Pending work below. | Current (v1); first run produced `Set_1/Set1_Intermediate_Assessment_Packet.html` the same session |
+| `Generate_Assessment_Student_Packet_Prompt_v1.md`  | New (2026-09-08). Takes one completed Assessment `.md` and produces a single, print-ready, black-and-white student handout: four self-contained Task-Level sections (each with `page-break-before: always` for selective printing), source-lesson/Tests tags and the entire Scoring Guide (point values, rubrics) stripped, a per-Level plain objective statement translated from the CSV grounding quote, and no self-check-checklist substitute for rubric-scored items (they print as plain answer-line questions, matching how the Student Print Formatting Prompt already treats extended-response items). No Reading-specific delta CSS - reuses the base stylesheet and classes the lesson packet prompt already established. Mirrors Listening/Speaking's `Generate_Assessment_Student_Packet_Prompt_v1.md` and Writing's `Generate_Assessment_Student_Packet_Prompt_v2.md`, closing the gap noted in Pending work below. | Current (v1); first run produced `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html` the same session |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
 
@@ -41,10 +41,10 @@ the complete Set, not half of an 8-lesson plan:
 
 | File                                                                      | Lesson # | Topic                                                                         | Status                       |
 | -------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ | ----------------------------- |
-| `Set_1/Lesson_1_Kitchen/Lesson1_Kitchen.md`               | 1        | A traditional wood-fired kitchen in a trullo home in Puglia, southern Italy   | Generated, self-check passed |
-| `Set_1/Lesson_2_YoyogiPark/Lesson2_YoyogiPark.md`         | 2        | A newly renovated section of Yoyogi Park in Tokyo                             | Generated, self-check passed |
-| `Set_1/Lesson_3_RunningShoes/Lesson3_RunningShoes.md`     | 3        | What podiatrists and running-shop staff recommend when choosing running shoes | Generated, self-check passed |
-| `Set_1/Lesson_4_WynwoodWalls/Lesson4_WynwoodWalls.md`     | 4        | A street artist describes painting a mural in Wynwood Walls, Miami            | Generated, self-check passed |
+| `Module_1/Set_1/Lesson_1_Kitchen/Lesson1_Kitchen.md`               | 1        | A traditional wood-fired kitchen in a trullo home in Puglia, southern Italy   | Generated, self-check passed |
+| `Module_1/Set_1/Lesson_2_YoyogiPark/Lesson2_YoyogiPark.md`         | 2        | A newly renovated section of Yoyogi Park in Tokyo                             | Generated, self-check passed |
+| `Module_1/Set_1/Lesson_3_RunningShoes/Lesson3_RunningShoes.md`     | 3        | What podiatrists and running-shop staff recommend when choosing running shoes | Generated, self-check passed |
+| `Module_1/Set_1/Lesson_4_WynwoodWalls/Lesson4_WynwoodWalls.md`     | 4        | A street artist describes painting a mural in Wynwood Walls, Miami            | Generated, self-check passed |
 
 **Homework (Step 3), general track, one per lesson, all 4 complete:**
 
@@ -63,11 +63,11 @@ documentation left over from before the Set-folder migration, corrected here):**
 
 | File                                                | Covers                         | Status                                             |
 | ---------------------------------------------------- | ------------------------------- | ----------------------------------------------------- |
-| `Set_1/Set1_Intermediate_Assessment.md`             | Lessons 1-4, all 4 Task Levels | Generated, not yet given to a real class |
-| `Set_1/Set1_Intermediate_StudyGuide_Level2.md`      | Task Level 2                   | Generated                                          |
-| `Set_1/Set1_Intermediate_StudyGuide_Level3.md`      | Task Level 3                   | Generated                                          |
-| `Set_1/Set1_Intermediate_StudyGuide_Level4.md`      | Task Level 4                   | Generated                                          |
-| `Set_1/Set1_Intermediate_StudyGuide_Level5.md`      | Task Level 5                   | Generated                                          |
+| `Module_1/Set_1/Set1_Intermediate_Assessment.md`             | Lessons 1-4, all 4 Task Levels | Generated, not yet given to a real class |
+| `Module_1/Set_1/Set1_Intermediate_StudyGuide_Level2.md`      | Task Level 2                   | Generated                                          |
+| `Module_1/Set_1/Set1_Intermediate_StudyGuide_Level3.md`      | Task Level 3                   | Generated                                          |
+| `Module_1/Set_1/Set1_Intermediate_StudyGuide_Level4.md`      | Task Level 4                   | Generated                                          |
+| `Module_1/Set_1/Set1_Intermediate_StudyGuide_Level5.md`      | Task Level 5                   | Generated                                          |
 
 Every item is tagged with its source lesson and a Tests citation of the specific `learningobjectives.csv` row
 it verifies, per Section 0.3. Unlike the stale table this replaces, passages are not shared/printed once - each
@@ -76,7 +76,7 @@ for quick sorting when printing/distributing selectively"), so all four lesson p
 each of the 4 Task-Level sections. No Foundation Support Check section - no lesson in this Set flagged a
 Foundation Support student.
 
-**Student-facing HTML packet: `Set_1/Set1_Intermediate_Assessment_Packet.html`, generated 2026-09-08** against
+**Student-facing HTML packet: `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html`, generated 2026-09-08** against
 the new `Generate_Assessment_Student_Packet_Prompt_v1.md` (first run of this prompt for Reading - see Pending
 work, now resolved). One combined document, four Task-Level sections (★ through ★★★★), each with
 `page-break-before: always` so a teacher can print one Level's pages alone; all four lesson passages reprinted
@@ -88,13 +88,13 @@ answer, with no self-check-checklist substitute - matching how the lesson packet
 items, rather than Listening/Speaking's Speaking-Task-card checklist treatment.
 
 **Print formatting (Step 6), student version:** Lesson 1's packet (`Unit 1A`/`Unit 1B: A Grandmother's Kitchen`,
-`Set_1/Lesson_1_Kitchen/Kitchen_Intermediate_L1_Packet.html`) exists as a finished HTML file; its settled CSS
+`Module_1/Set_1/Lesson_1_Kitchen/Kitchen_Intermediate_L1_Packet.html`) exists as a finished HTML file; its settled CSS
 is now the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's packet
 (`Unit 2A`/`Unit 2B: New Corner of Yoyogi Park`,
-`Set_1/Lesson_2_YoyogiPark/YoyogiPark_Intermediate_L2_Packet.html`) is current against the print prompt, and its
+`Module_1/Set_1/Lesson_2_YoyogiPark/YoyogiPark_Intermediate_L2_Packet.html`) is current against the print prompt, and its
 three discussion prompts match Lesson 1 and Lesson 2's own source docs. Lesson 3's packet
 (`Unit 3A`/`Unit 3B: How to Choose Running Shoes That Feel Comfortable`,
-`Set_1/Lesson_3_RunningShoes/RunningShoes_Intermediate_L3_Packet.html`) is the first packet generated
+`Module_1/Set_1/Lesson_3_RunningShoes/RunningShoes_Intermediate_L3_Packet.html`) is the first packet generated
 against v1.7, so it's also the first to carry the `.masthead-meta` tag stack (`Reading` /
 `Intermediate S1.3.0`) on its opening masthead. Its source lesson's Town Hall section supplies only
 one discussion prompt (pre-2.9-fallback case), so two additional prompts exploring different angles
@@ -102,7 +102,7 @@ of the same question were authored for the packet per Section 2.9's fallback; a 
 Objective worked-model box was also added between Units 3A/3B per Section 2.7, since Day 1's tasks
 don't yet test the comparison-plus-reason objective against the anchor text. Lesson 4's packet
 (`Unit 4A`/`Unit 4B: Painting Wynwood Walls`,
-`Set_1/Lesson_4_WynwoodWalls/WynwoodWalls_Intermediate_L4_Packet.html`) is also current against
+`Module_1/Set_1/Lesson_4_WynwoodWalls/WynwoodWalls_Intermediate_L4_Packet.html`) is also current against
 v1.7, carrying the `.masthead-meta` tag stack (`Reading` / `Intermediate S1.4.0`) on its opening
 masthead. Its source lesson already supplies 2 discussion prompts (generated against v2.7), pulled
 directly per Section 2.9 with no fallback needed; a Focus on the Objective worked-model box was
@@ -122,7 +122,7 @@ student print packets.
 
 ## Module 1 progress, Advanced Band (Describing, Advanced) - Set 1 COMPLETE
 
-Plan approved and logged to the Rotation Log as Set 1, saved as `Module1_Advanced_Lesson_Plan.md`. This
+Plan approved and logged to the Rotation Log as Set 1, saved as `Module_1/Module1_Advanced_Lesson_Plan.md`. This
 Set needs Lessons 1-4 total, not 1-8 (the original plan's Lessons 5-8 - Aoraki Mackenzie stargazing,
 Shinkansen review, Plan Vélo bike lanes, Iron Gwazi roller coaster - are out of scope and dropped, matching how
 Intermediate's Lessons 5-8 were handled). Lesson 1 was generated via `Generate_Lesson_Prompt_v2.7.md` (then at
@@ -130,10 +130,10 @@ v2.5; since renamed and updated in place). **All 4 lessons of this Set are gener
 
 | File                                                                 | Lesson # | Topic                                                                              | Status                        |
 | ---------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ | ------------------------------ |
-| `Set_1/Lesson_1_SagradaFamilia/Lesson1_SagradaFamilia.md`           | 1        | La Sagrada Família, Antoni Gaudí's still-unfinished basilica in Barcelona, Spain    | Generated, self-check passed  |
-| `Set_1/Lesson_2_ForgeAtDawn/Lesson2_ForgeAtDawn.md`                 | 2        | A day inside a traditional Japanese swordsmith's forge, following the tamahagane steel-forging process | Generated against v2.7, self-check passed (18 items) |
-| `Set_1/Lesson_3_VinylComeback/Lesson3_VinylComeback.md`             | 3        | The real-world resurgence of independent vinyl record shops                       | Generated against v2.8, self-check passed (18 items) |
-| `Set_1/Lesson_4_PortlandHeadLight/Lesson4_PortlandHeadLight.md`     | 4        | A keeper's account of Portland Head Light, Maine                                  | Generated against v2.8, self-check passed (18 items) |
+| `Module_1/Set_1/Lesson_1_SagradaFamilia/Lesson1_SagradaFamilia.md`           | 1        | La Sagrada Família, Antoni Gaudí's still-unfinished basilica in Barcelona, Spain    | Generated, self-check passed  |
+| `Module_1/Set_1/Lesson_2_ForgeAtDawn/Lesson2_ForgeAtDawn.md`                 | 2        | A day inside a traditional Japanese swordsmith's forge, following the tamahagane steel-forging process | Generated against v2.7, self-check passed (18 items) |
+| `Module_1/Set_1/Lesson_3_VinylComeback/Lesson3_VinylComeback.md`             | 3        | The real-world resurgence of independent vinyl record shops                       | Generated against v2.8, self-check passed (18 items) |
+| `Module_1/Set_1/Lesson_4_PortlandHeadLight/Lesson4_PortlandHeadLight.md`     | 4        | A keeper's account of Portland Head Light, Maine                                  | Generated against v2.8, self-check passed (18 items) |
 
 Anchor text calibrated to Level 5 (460 words, 6 paragraphs, B2), with task Levels 4 (extension-down), 5 and 6
 (native), and 7 (extension-up, requiring the second comparison text per the plan's note). Lesson 1 used Fishbowl
@@ -158,9 +158,9 @@ Then/Now T-chart built from group report-backs), rotating the required slot away
 No homework, TOEFL extension, or assessment work has started yet for the Advanced band.
 
 **Print formatting (Step 6), student version:** Lesson 1's student packet (`Unit 1A`/`Unit 1B: The Basilica That
-Refuses to Be Finished`, `Set_1/Lesson_1_SagradaFamilia/SagradaFamilia_Advanced_L1_Packet.html`) exists as an HTML
+Refuses to Be Finished`, `Module_1/Set_1/Lesson_1_SagradaFamilia/SagradaFamilia_Advanced_L1_Packet.html`) exists as an HTML
 file; its CSS is the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's student packet (`Unit 2A`/`Unit 2B: The
-Forge at Dawn`, `Set_1/Lesson_2_ForgeAtDawn/ForgeAtDawn_Advanced_L2_Packet.html`) is current against the
+Forge at Dawn`, `Module_1/Set_1/Lesson_2_ForgeAtDawn/ForgeAtDawn_Advanced_L2_Packet.html`) is current against the
 print prompt. Both use the 5-mark annotation key (Advanced band and up); Lesson 1 has no byline (short-story
 genre), and Lesson 2's Task D (Level 7) embeds the lesson's second comparison text - a museum-placard passage
 promoting swordsmithing demonstrations - inline on the page rather than as a separate handout, per the module
@@ -168,14 +168,14 @@ plan's note for this lesson's extension-up task. Lesson 2's discussion prompts (
 straight from the source lesson. Lesson 2 also carries an L4 differentiated-participation tip line under the
 sentence stems, mirroring the Level 4 tracking task from the lesson's own Phase 3 section; Lesson 1's packet
 does not include this for its own Level 4 stem. Lesson 3's student packet (`Unit 3A`/`Unit 3B: The Vinyl Comeback
-Is Real`, `Set_1/Lesson_3_VinylComeback/VinylComeback_Advanced_L3_Packet.html`) is the first Advanced packet
+Is Real`, `Module_1/Set_1/Lesson_3_VinylComeback/VinylComeback_Advanced_L3_Packet.html`) is the first Advanced packet
 generated against v1.7, so it's the first to carry the masthead `.masthead-meta` two-tag stack ("Reading",
 "Advanced S1.3.0") on its opening masthead; Lessons 1-2 predate that element and don't have it yet (see Pending
 work). It also uses the newer `.idiom-list`/`.irow` table treatment for its two idioms (per v1.6) rather than
 Lesson 2's older stacked-paragraph idiom format, and embeds Task D's second comparison text (an industry-report
 pitch for vinyl-pressing investment) inline, with an L4 differentiated-participation tip line under the sentence
 stems matching its own Phase 3 tracking task. Lesson 4's student packet (`Unit 4A`/`Unit 4B: Keeping the Light`,
-`Set_1/Lesson_4_PortlandHeadLight/PortlandHeadLight_Advanced_L4_Packet.html`) carries the `.masthead-meta` tag
+`Module_1/Set_1/Lesson_4_PortlandHeadLight/PortlandHeadLight_Advanced_L4_Packet.html`) carries the `.masthead-meta` tag
 stack ("Reading", "Advanced S1.4.0") and the 5-mark annotation key. Its Reader's Theater script format is
 translated into plain speaker labels (`.speaker` spans, a new class added for this packet only, since the base
 stylesheet has no prior speaker-label element) and italic stage directions (reusing plain `<em>`-equivalent
@@ -217,7 +217,7 @@ after Day 2 per that prompt's Section 0.2, but state which timing was used.
 Advanced/Proficient-band lesson, as an optional add-on for TOEFL-interested students, replacing Step 3's
 homework for that student on that cycle rather than adding to it.
 
-**Step 5 - Assessment.** Run `Generate_Assessment_Prompt_v4.1.md` once a Set's lessons are complete (per its own
+**Step 5 - Assessment.** Run `Generate_Assessment_Prompt_v4.2.md` once a Set's lessons are complete (per its own
 scope note, from a completed Set's worth of lessons, not a single one) - typically at the end of a Set (all 4
 lessons), after Steps 2-4 have been run across the relevant lessons, not per lesson. Confirm scope (cumulative
 vs per-lesson), the Set number, and which task Level each student/group actually completed before generating;
@@ -254,7 +254,7 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   noted but out of scope until requested.
 - **Resolved 2026-09-08**: Reading now has an Assessment Student Packet prompt
   (`Generate_Assessment_Student_Packet_Prompt_v1.md`), matching Listening/Speaking's and Writing's own. First
-  run produced `Set_1/Set1_Intermediate_Assessment_Packet.html` from the existing
+  run produced `Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html` from the existing
   `Set1_Intermediate_Assessment.md` the same session - see the Module 1 Intermediate section above.
 - **Novel Reading lesson type** - not started. Will need its own lesson-generation prompt, its own Module
   Lesson-Plan-equivalent (or a shared one adapted to variable day-counts), and its own `../novel-reading/`

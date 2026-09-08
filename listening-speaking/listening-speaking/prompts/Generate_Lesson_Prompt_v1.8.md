@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v1.7)
+# Listening/Speaking Lesson Generation Prompt (v1.8)
 
 **Lesson type:** this prompt generates a **Listening/Speaking Lesson** - a fixed 2-day cycle (Day 1 Listening,
 Day 2 Speaking) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -529,8 +529,8 @@ question type with a correct answer) alongside every C and D item. The Phase 2 n
 and the Day 2 Phase 4 reframed protocol turn do not need metadata rows - neither has a correct-answer key.
 
 **Where this lives.** A Set's TOEFL-capable variant is a fork, not an in-place edit of its existing files.
-Its lesson files go in a sibling `Set_<N>_T/` folder (`lessons/<band>/Set_<N>_T/Lesson_<n>_<Slug>/`, the
-same internal shape as `Set_<N>/` per `shared/Program_Conventions.md` §D), and its version code gets a `T`
+Its lesson files go in a sibling `Set_<N>_T/` folder (`lessons/<band>/Module_<N>/Set_<N>_T/Lesson_<n>_<Slug>/`,
+the same internal shape as `Set_<N>/` per `shared/Program_Conventions.md` §D), and its version code gets a `T`
 folded into the Set token: `S<Set>T.<Lesson>.<Iteration>` (e.g. `S1T.1.0`) instead of the base
 `S<Set>.<Lesson>.<Iteration>` (§G). The original `Set_<N>/` files are never edited for this - a class with
 no TOEFL-track students keeps using them exactly as already generated. A substantive revision to an

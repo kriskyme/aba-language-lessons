@@ -1,4 +1,4 @@
-# Program Conventions (v1.2)
+# Program Conventions (v1.4)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -113,6 +113,10 @@ lesson type's own prompt family.
 
 A Module/Band can hold more than one Set over time — a fresh rotation of lessons for a semester
 where the module is retaught, without discarding or conflating it with what was taught before.
+**Set numbering is scoped to one Module/Band, not shared across Modules:** a Band's Module 2 starts
+its own Set 1 again, the same as Module 1 did — it does not continue Module 1's Set count. This is
+why Sets nest inside a `Module_<N>/` folder (see §D) rather than sitting directly under the Band
+folder: without that level, two different Modules' Set 1 would collide on the same folder name.
 **Lesson numbering is global within a Module/Band, continuing across Sets rather than restarting:**
 Set 1 is Lessons 1-4, Set 2 (if planned) is Lessons 5-8, Set 3 is Lessons 9-12, and so on — so
 "Lesson 7" unambiguously means Set 2's third lesson without needing to also state which Set. When
@@ -128,17 +132,20 @@ restated here.
 ## D. Set/Lesson folder-nesting convention
 
 A lesson's files (raw `.md`, student packet `.html`, later homework) travel together:
-`lessons/<band>/Set_<N>/Lesson_<N>_<Slug>/` holds one lesson's files. A Set's own assessment (one
-per Set, not per lesson) sits in `Set_<N>/` itself rather than inside any one lesson's folder. The
-Module/Band Lesson Plan spans every Set generated for that band so far, and sits at the band-folder
-root (`lessons/<band>/`), above the `Set_<N>/` folders:
+`lessons/<band>/Module_<N>/Set_<N>/Lesson_<N>_<Slug>/` holds one lesson's files. A Set's own
+assessment (one per Set, not per lesson) sits in `Set_<N>/` itself rather than inside any one
+lesson's folder. Sets nest inside a `Module_<N>/` folder because Set numbering restarts at 1 for
+each Module (§C) - without that level, two different Modules' Set 1 would collide on the same
+folder name. The Module/Band Lesson Plan spans every Set generated for that Module/Band so far, and
+sits at the `Module_<N>/` root, above that Module's `Set_<N>/` folders:
 
 ```
 lessons/<band>/
-├── Module{N}_{Band}_Lesson_Plan.md
-└── Set_{N}/
-    ├── Set{N}_{Band}_Assessment.md
-    └── Lesson_{n}_{Slug}/{lesson .md, packet .html}
+└── Module_{N}/
+    ├── Module{N}_{Band}_Lesson_Plan.md
+    └── Set_{N}/
+        ├── Set{N}_{Band}_Assessment.md
+        └── Lesson_{n}_{Slug}/{lesson .md, packet .html}
 ```
 
 This nesting is kept even at one lesson per Set (Academic Writing's current case), so no
@@ -147,10 +154,11 @@ per Set.
 
 **Variant-track Set fork (added 2026-09-07, introduced by Listening/Speaking; see §G's matching version-
 code note).** When a lesson type forks a Set into a variant track, its files live in a sibling
-`Set_<N><letter>/` folder next to `Set_<N>/` - `lessons/<band>/Set_<N><letter>/Lesson_<n>_<Slug>/`, same
-internal shape as the base Set. The base `Set_<N>/` files are never edited to build the fork; a fork can
-hold as few as one of the base Set's lessons (generated on request, not automatically for the whole Set).
-Example: Listening/Speaking's `Set_1_T/Lesson_1_LostKitchen/` sits beside `Set_1/Lesson_1_LostKitchen/`.
+`Set_<N><letter>/` folder next to `Set_<N>/`, inside the same `Module_<N>/` -
+`lessons/<band>/Module_<N>/Set_<N><letter>/Lesson_<n>_<Slug>/`, same internal shape as the base Set.
+The base `Set_<N>/` files are never edited to build the fork; a fork can hold as few as one of the
+base Set's lessons (generated on request, not automatically for the whole Set). Example: Listening/
+Speaking's `Module_1/Set_1_T/Lesson_1_LostKitchen/` sits beside `Module_1/Set_1/Lesson_1_LostKitchen/`.
 
 ## E. Pedagogical framework (CBI/TBLT)
 

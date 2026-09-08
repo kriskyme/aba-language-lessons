@@ -32,8 +32,8 @@ Intermediate Set 1's own restructure precedent. Both lessons' student packets we
 match every current Student Print Formatting Prompt convention (Good to Know at the top, citebox at the point of
 watching, compact inline multiple-choice, real picture placeholders, word banks positioned before their items,
 multi-source Task D layout for Level 7, upside-down Closing Transfer Check script) - see
-`lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`
-and `lessons/advanced/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`, and their
+`lessons/advanced/Module_1/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`
+and `lessons/advanced/Module_1/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`, and their
 matching `..._Packet.html` files in each lesson's own folder. This was a deliberate scope decision (per user
 direction 2026-09-04: restructure what exists, don't generate what's missing in the same pass) rather than an
 oversight; Lesson 3 was generated 2026-09-07 the same way Lessons 1-2 were originally, and Lesson 4 was
@@ -50,7 +50,7 @@ own Level 7 lesson items use. Part B (Speaking) is a live solo presentation (Adv
 a same-task, same-rubric Teams-recording version generated as the standing alternate, emphasizing Making
 Comparisons and Hedging an Opinion. Generated against `Generate_Assessment_Prompt_v1.md` and
 `Generate_Assessment_Student_Packet_Prompt_v1.md`. See
-`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. This is the
+`lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. This is the
 first assessment generated against this prompt for the Advanced band - not yet given to a real class.
 
 **Lesson 4 generated (2026-09-07), completing Set 1:** two real sources - primary: Idaho Public Television's
@@ -60,7 +60,7 @@ secondary (Level 7 only, excerpt): Boise Art Scene's "Wil Kirkman, Owner of Rock
 Down" (Morgan McCollum, published 2026-01-06), for a video-profile-framing-vs-own-written-words comparison per
 the plan's suggested angle. Generated fresh against `Generate_Lesson_Prompt_v1.1.md` (current 2-day Unit A/B
 architecture from the start, no restructure needed) and `Generate_Student_Packet_Prompt_v1.3.md`. Version
-`S1.4.0`, per `Program_Conventions.md` §G. See `lessons/advanced/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`
+`S1.4.0`, per `Program_Conventions.md` §G. See `lessons/advanced/Module_1/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`
 and `Lesson_4_GlassBender/GlassBender_Advanced_L4_Packet.html`. Open item flagged (not silently fixed): the
 primary source's page lists a post date (2024-07-11) rather than a confirmed original broadcast date for the
 episode; teacher should confirm against Idaho Public Television's own records if it matters for classroom
@@ -74,13 +74,13 @@ Key Deer); secondary (Level 7 only, excerpt): U.S. Fish & Wildlife Service's off
 "About Us"/"What We Do" pages, for a documentary-framing-vs-official-framing comparison per the plan's suggested
 angle. Generated fresh against `Generate_Lesson_Prompt_v1.1.md` (current 2-day Unit A/B architecture from the
 start, no restructure needed) and `Generate_Student_Packet_Prompt_v1.3.md`. Version `S1.3.0`, per
-`Program_Conventions.md` §G. See `lessons/advanced/Set_1/Lesson_3_KeyDeer/Lesson3_KeyDeer.md` and
+`Program_Conventions.md` §G. See `lessons/advanced/Module_1/Set_1/Lesson_3_KeyDeer/Lesson3_KeyDeer.md` and
 `Lesson_3_KeyDeer/KeyDeer_Advanced_L3_Packet.html`.
 
 **Lesson 1 generated (2026-09-01), restructured (2026-09-04):** two real sources - primary: PBS NewsHour, "It
 was supposed to be a 'quiet little cafe' in Maine. It turned into a culinary phenomenon" (Erin French, The Lost
 Kitchen, Freedom, Maine); secondary (Level 7 only, excerpt): Radio Cherry Bombe podcast interview with Erin
-French. See `lessons/advanced/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
+French. See `lessons/advanced/Module_1/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
 
 **Version added retroactively (2026-09-07):** this lesson is now tagged `S1.1.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G - a deliberate one-lesson exception to that section's
@@ -90,7 +90,7 @@ going-forward-only rule, not a reopening of Set 1's other lessons.
 direction, the standalone TOEFL Practice Extension approach noted here earlier the same day was retired
 in favor of embedding TOEFL practice directly in the lesson (`Generate_Lesson_Prompt_v1.1.md` → `_v1.2.md`
 Section 0.6). Since the alternate only applies to one tier, Lesson 1 was forked into a sibling
-`Set_1_T/Lesson_1_LostKitchen/` folder rather than edited in place - `Set_1/Lesson_1_LostKitchen/`'s own
+`Module_1/Set_1_T/Lesson_1_LostKitchen/` folder rather than edited in place - `Module_1/Set_1/Lesson_1_LostKitchen/`'s own
 files (this row) are untouched. Versioned `S1T.1.0`. Not yet given to a real class.
 
 **TOEFL Track Tier redesigned same day (2026-09-07), `S1T.1.0` → `S1T.1.1`:** real feedback on the
@@ -107,7 +107,7 @@ Take an Interview questions, both grounded in the lesson's real topic/vocabulary
 untimed in-class paired rehearsal plus a take-home "Partner/Family Reader Copy" page carrying the real
 timed sentences/questions and TOEFL scoring guides - since individually-timed mechanics can't run live
 against one student while the rest of a mixed class works a different task. See
-`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html` (student packet,
+`Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html` (student packet,
 no passage/sentence text shown per "heard, not read," except the take-home page itself), versioned
 `S1T.1.1`. Not yet given to a real class.
 
@@ -126,12 +126,12 @@ both capstones (C and D's in-class rehearsal) now render in the student packet a
 `Task D (TOEFL)` block, styled like the regular lettered tasks, instead of a "TOEFL Track option" callout
 nested inside the regular task - and C drops its long explanatory paragraph along with the passage.
 `Generate_Student_Packet_Prompt_v1.5.md` → `_v1.6.md` updated to match. See
-`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html`, versioned
+`Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html`, versioned
 `S1T.1.2`. Not yet given to a real class.
 
 **TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.2` → `S1T.1.3`:** two more user fixes to the
 Speaking capstone (D). First, D's take-home content is moved out of the main student packet entirely,
-into its own separate file, `Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html` -
+into its own separate file, `Module_1/Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html` -
 `Generate_Lesson_Prompt_v1.5.md` → `_v1.6.md` and `Generate_Student_Packet_Prompt_v1.6.md` → `_v1.7.md`
 both updated so a TOEFL Track Tier lesson now produces three files (lesson `.md`, main packet, homework
 file), not two. Task D (TOEFL)'s in-class rehearsal drops its old pointer line to "the take-home page,"
@@ -140,7 +140,7 @@ convention already used for the standalone transcript file. Second, the in-class
 is cleaned up: "no clock needed, just practice the shape of the real thing" is dropped, and the vague
 "take turns with a partner" line is replaced with an explicit, up-front instruction ("one person reads,
 the other listens and repeats or answers - switch roles halfway through"). See
-`Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`, its matching `..._Packet.html`, and the new
+`Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`, its matching `..._Packet.html`, and the new
 `..._TOEFL_Homework.html`, versioned `S1T.1.3`. Not yet given to a real class.
 
 **TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.3` → `S1T.1.4`:** the teacher offered a better
@@ -153,7 +153,7 @@ Intermediate Speaking assessment) instead of asking a family member to read the 
 script and scoring guide the teacher uses to produce Teams audio and later score submissions, never shown
 to or read by a student. Its `.reader-warn` label changes from "For your reading partner only" to
 "Teacher use only - recording script and scoring guide"; content (the sentences, questions, response
-windows, scoring guides) is unchanged. See `Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html`
+windows, scoring guides) is unchanged. See `Module_1/Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html`
 (reframed) and `Lesson1_LostKitchen.md` (Section 0.6D/self-check updated), versioned `S1T.1.4`. Not yet
 given to a real class.
 
@@ -161,7 +161,7 @@ given to a real class.
 Weekend, "What's behind an effort to preserve mid-century modern architecture in Phoenix" (Alison King/Modern
 Phoenix, Robrt Pela, Adam Millsap, Rashad Shabazz, Craig DeMarco, Tyler Sternberg); secondary (Level 7 only,
 excerpt): Modern Phoenix's Beadle Archive page on the White Gates Residence. See
-`lessons/advanced/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`.
+`lessons/advanced/Module_1/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`.
 
 **Version added, packet fully synced (2026-09-07):** this lesson is now tagged `S1.2.0` in its `.md` and
 packet header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared
@@ -196,7 +196,7 @@ gone; each task Level's page now shows only that Level's own MC/fill-in/matching
 matching, inline parenthetical options for multiple choice); each Speaking Task card shows a `.checklist`
 self-check list derived from that Level's rubric Meets column, with no rubric table and - per Section 2.7 - no
 submission-mechanism info (platform name, present/submit-by date) printed anywhere on the card. See
-`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Not yet given
+`lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Not yet given
 to a real class.
 
 **Set 1 assessment updated same day (2026-09-08), per user direction, on top of the regeneration above:** two
@@ -212,7 +212,7 @@ items' content was verified against each clip's real transcript (fetched fresh, 
 segment-label summaries) before wording was finalized. New point totals: Level 4 11, Level 5 9 (was 7), Level 6
 8 (was 6), Level 7 8 - still balanced per A.4 self-check item 5. `Generate_Assessment_Prompt_v1.md` A.1/A.4
 gained the underlying distractor-word rule this pass applies (see `Changelog.md`). See
-`lessons/advanced/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Still not yet
+`lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Still not yet
 given to a real class.
 
 ---

@@ -15,11 +15,11 @@ the first Set ever planned for this Band.
 | 3 | Family-introduction clip | Recognize Examples | Asking for Clarification | Four-Corner Debate | Town Hall | Family members & relationships | A family member introduced by a child or narrator | S1.3.0 |
 | 4 | Colors/shapes labeling clip | Predict from Context Before Confirming | Making Comparisons | Mystery Quote | Concentric Circles | Colors & shapes | Colors and shapes of common items, shown and named | S1.4.0 |
 
-Plan approved and logged: see `lessons/beginner/Module1_Beginner_Lesson_Plan.md` for the full
+Plan approved and logged: see `lessons/beginner/Module_1/Module1_Beginner_Lesson_Plan.md` for the full
 task-Level CSV grounding, topic-grounding rationale, and self-check.
 
 **Lesson 1 generated 2026-09-07:** "Let's Learn English - Level 1 - Lesson 4: What Is It?" (VOA
-Learning English) - see `Set_1/Lesson_1_WhatIsIt/Lesson1_WhatIsIt.md`. Flagged deviations: runtime
+Learning English) - see `Module_1/Set_1/Lesson_1_WhatIsIt/Lesson1_WhatIsIt.md`. Flagged deviations: runtime
 (~5:00 vs. the 30 sec-2 min Level 1 target; kept since this is Section 0.2's own named Level 1
 platform); Speaking Skill (Giving Examples) grounded in the source's own situational pattern rather
 than a directly quoted "for example" exchange. Lessons 2-4 remain planned only.

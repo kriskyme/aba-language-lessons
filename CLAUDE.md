@@ -186,9 +186,9 @@ noted in Known Issues.
 - **Resolved 2026-09-08**: `writing/academic-writing/lessons/`'s two
   documented lessons (Intermediate 1 "my phone case," Advanced 1 "Two
   apartments... for Sam") were recovered and are now organized under the
-  canonical `Set_1/Lesson_1_<Slug>/` structure
-  (`lessons/intermediate/Set_1/Lesson_1_MyPhoneCase/`,
-  `lessons/advanced/Set_1/Lesson_1_TwoApartments/`), each holding its
+  canonical `Module_1/Set_1/Lesson_1_<Slug>/` structure
+  (`lessons/intermediate/Module_1/Set_1/Lesson_1_MyPhoneCase/`,
+  `lessons/advanced/Module_1/Set_1/Lesson_1_TwoApartments/`), each holding its
   Markdown doc plus a reconstructed pre-v1.2 Unit 1/Unit 2 print-packet pair.
   Current-convention (v1.6, Lesson Introduction Page + Units 1-8) packets
   still need to be built for both — tracked in

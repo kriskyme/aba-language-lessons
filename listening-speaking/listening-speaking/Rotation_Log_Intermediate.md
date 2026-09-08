@@ -27,7 +27,7 @@ for cross-Band notes and mechanics that aren't repeated here.
 
 **Lesson 1 generated (2026-09-01):** real source found and confirmed - "New Bakery, Old Baking Method," VOA
 Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.). See
-`lessons/intermediate/Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`. Runtime (4:31) ran slightly past the Level 3 target
+`lessons/intermediate/Module_1/Set_1/Lesson_1_NewBakery/Lesson1_NewBakery.md`. Runtime (4:31) ran slightly past the Level 3 target
 (2-4 min) - noted in that lesson's self-check as an accepted minor deviation, not a rewrite trigger. Real video
 timestamps could not be verified directly; the source's own five headed sections were used as segment labels
 instead - see the Lesson Generation Prompt's addendum note.
@@ -41,7 +41,7 @@ Lessons 3-4 already follow.
 
 **Lesson 2 generated (2026-09-02):** real source found and confirmed - "Porto Food Tour," Rick Steves Classroom
 Europe (guide Andre, Taste Porto Food Tours; narrated by Rick Steves). See
-`lessons/intermediate/Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`. Runtime not stated on the page, estimated rather
+`lessons/intermediate/Module_1/Set_1/Lesson_2_PortoFoodTour/Lesson2_PortoFoodTour.md`. Runtime not stated on the page, estimated rather
 than confirmed - flagged as an open item. Topic direction broadened from "open-air public market" to a covered
 historic market hall plus a short walking food tour past three nearby shops, since that is what the verified
 real source actually shows - flagged, not silently substituted.
@@ -55,7 +55,7 @@ Set 1's other lessons.
 
 **Lesson 3 generated (2026-09-03):** real source found and confirmed - "How to Choose a Backpack," REI Co-op
 Expert Advice (article + embedded companion video "How to Choose Backpacking Packs"). See
-`lessons/intermediate/Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`. Runtime not stated on the page, estimated at
+`lessons/intermediate/Module_1/Set_1/Lesson_3_Backpack/Lesson3_Backpack.md`. Runtime not stated on the page, estimated at
 3-5 minutes based on similar REI videos - flagged as an open item, same as Lesson 2. Register is a larger flagged
 deviation than Lessons 1-2's runtime overshoots: REI's full written guide is not simplified for learners, so
 this lesson draws only from its simpler sections (capacity, basic frame types, core fit advice) and leaves
@@ -87,7 +87,7 @@ reopening of Set 1's other lessons.
 **Lesson 4 generated (2026-09-03):** real source found and confirmed - "Great-Grandmother Proves It Is Never
 Too Late to Learn," VOA Learning English (Setsuko Takamizawa, 91, learning English from her granddaughter
 Natsuko to volunteer at the Tokyo Olympics; reported for Reuters by Jack Tarrant, adapted by John Russell). See
-`lessons/intermediate/Set_1/Lesson_4_GreatGrandmother/Lesson4_GreatGrandmother.md`. Runtime 4:01,
+`lessons/intermediate/Module_1/Set_1/Lesson_4_GreatGrandmother/Lesson4_GreatGrandmother.md`. Runtime 4:01,
 1 second past the Level 3 target - negligible, consistent with the established soft-target treatment. Two
 genuine deviations flagged rather than silently forced: (1) the plan's vocabulary theme is "Personality &
 character traits," but the source's real glossary is family-relationship and general vocabulary; the
@@ -127,7 +127,7 @@ with laughter" and the childhood photo that inspired it; and a new Level 2 Main 
 Clip 2, the Pompeii bathhouse discovery and its caldarium/cold-water-tub rooms. Both new items' content was
 verified against each clip's real transcript (fetched fresh) before wording was finalized. New point totals:
 Level 2 10 (was 8), Level 3 9, Level 4 9 (was 7), Level 5 8 - still balanced per A.4 self-check item 5. See
-`lessons/intermediate/Set_1/Set1_Intermediate_Assessment.md` and `Set1_Intermediate_Assessment_Packet.html`.
+`lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Assessment.md` and `Set1_Intermediate_Assessment_Packet.html`.
 Still not yet given to a real class.
 
 ---

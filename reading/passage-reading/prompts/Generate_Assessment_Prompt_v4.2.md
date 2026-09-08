@@ -1,4 +1,4 @@
-# Passage Reading Assessment Generation Prompt (v4.1)
+# Passage Reading Assessment Generation Prompt (v4.2)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.5, Band-Calibrated). Updated to match v2.5's
 band-scoped task-Level system: every assessed section is keyed to a specific task Level from that band's Task
@@ -34,7 +34,7 @@ input, stop and ask for them before generating anything.
   4 lessons = 8 instructional days): run this prompt once a Set's lessons are all complete, the same cadence
   Listening/Speaking uses. A mid-unit checkpoint or an assessment spanning more than one Set is still supported
   (see the Scope bullet below) but should say explicitly which Set(s) it draws from, since Set number is what
-  ties an assessment to a place in `lessons/<band>/Set_<N>/` and to a Rotation Log entry.
+  ties an assessment to a place in `lessons/<band>/Module_<N>/Set_<N>/` and to a Rotation Log entry.
 - Scope: cumulative or per-lesson. A cumulative assessment covers multiple lessons - typically a full Set, but
   a mid-unit checkpoint spanning fewer lessons, or a review spanning more than one Set, are also valid with
   scope stated explicitly; a per-lesson assessment covers a single 2-day cycle. Ask if this is not specified:
@@ -371,7 +371,7 @@ Assessment (Advanced Band, Levels 4-7).docx" and "... Study Guide - Levels 4-7.d
   covers, plus a list of which lessons are in scope for this assessment (by number and topic) so a reader can
   see the full scope at a glance before reading any section. When the assessment covers exactly one completed
   Set, save it alongside that Set's lesson folders as `Set{N}_{Band}_Assessment.md` (plus its student-facing
-  packet, once that companion prompt exists), per `lessons/<band>/Set_<N>/` - the same convention
+  packet, once that companion prompt exists), per `lessons/<band>/Module_<N>/Set_<N>/` - the same convention
   Listening/Speaking uses. A checkpoint or multi-Set assessment that doesn't map to one Set folder can be named
   and placed by scope instead; state which case applies.
 - A note on whether the assessment is open-book or closed-book. Since Section 2 now prints a new
