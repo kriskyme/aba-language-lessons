@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v2.2)
+# Academic Writing Student Print Formatting Prompt (v2.3)
 
 Companion to the Academic Writing Lesson Generation Prompt (v4). Takes one completed Academic Writing lesson (a
 2-day cycle, one of 4 in a Set) and produces one print-ready, black-and-white student handout for it: a single
@@ -6,7 +6,7 @@ self-contained HTML document covering both of that lesson's days. Every piece of
 language is translated into plain instructions a student (or a parent glancing at the page) can act on without
 decoding jargon like "Focus A," "the Leveled Mentor Ladder," "task Level," or "board-dependent moment."
 
-**Current version: v2.2.** For the full dated version history and the reasoning behind each change, see
+**Current version: v2.3.** For the full dated version history and the reasoning behind each change, see
 `Changelog.md`. (v2 adopts Passage Reading's one-file, two-masthead-section packet shape - see
 `shared/Program_Conventions.md` §C and `Changelog.md`'s 2026-09-08 entry, matching the same day this lesson type's
 generation prompt was restructured from one 8-day document into 4 separate 2-day lessons per Set. The "Lesson
@@ -281,10 +281,12 @@ those render as plain text or a simple unbordered list.
 ### 2.12 Answer and writing space
 
 Add blank writing lines wherever a task demands a written answer, sized to the expected answer length: a single
-short inline line (e.g. `.ans-line-sm`, roughly 300px, inline after the item) for a one-word blank or a short
-phrase; several full-width lines (e.g. `.ans-line`, roughly 20-24px tall each) sized to the task Level's own
-Section 0.2 sentence-count target for a drafting task. Do not add answer space to items with no written-response
-component (a purely discuss-aloud prompt, or a fill-in-the-blank item that is itself the answer space).
+short full-width line (e.g. `.ans-line-sm`, roughly 18px tall, on its own line after the item) for a one-word blank
+or a short phrase; several full-width lines (e.g. `.ans-line`, roughly 20-24px tall each) sized to the task
+Level's own Section 0.2 sentence-count target for a drafting task. Both classes now span the full available width
+- `.ans-line-sm` is shorter, not narrower, than `.ans-line`. Do not add answer space to items with no
+written-response component (a purely discuss-aloud prompt, or a fill-in-the-blank item that is itself the answer
+space).
 
 ### 2.13 Redundant rules and dividers
 

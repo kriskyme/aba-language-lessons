@@ -411,7 +411,6 @@ p {
   display: block;
   border-bottom: 1px solid var(--ink-soft);
   width: 100%;
-  max-width: 320px;
   height: 18px;
   margin-top: 2px;
 }
@@ -633,5 +632,5 @@ shared file (updating it for every modality at once), not as a modality-local ov
 
 ## Changelog
 
-**Current version: v1.7.** For the full dated version history and the reasoning behind each
+**Current version: v1.8.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

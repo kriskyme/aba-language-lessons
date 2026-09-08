@@ -199,30 +199,6 @@
         min-width: 130px;
       }
 
-      .idiom-list {
-        margin: 10px 0 6px;
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 14px;
-      }
-      .idiom-list .irow {
-        display: flex;
-        gap: 10px;
-        padding: 6px 0;
-        border-bottom: 1px solid var(--rule-light);
-      }
-      .idiom-list .irow:last-child {
-        border-bottom: none;
-      }
-      .idiom-list .irow .idiom-phrase {
-        width: 180px;
-        flex-shrink: 0;
-      }
-      .idiom-phrase {
-        font-family: Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-      }
-
       .annot-key {
         float: right;
         width: 190px;
@@ -335,7 +311,6 @@
         display: block;
         border-bottom: 1px solid var(--ink-soft);
         width: 100%;
-        max-width: 320px;
         height: 18px;
         margin-top: 2px;
       }
@@ -511,10 +486,19 @@
       <div class="section-title">Before You Read</div>
 
       <p class="instr">
-        Your teacher will write a quote on the board with no source given. As a class, guess what it might be
-        describing, and your teacher will write your guesses on the board too. You'll check them against the text
-        after you read.
+        Read this quote with no other context: "A generation raised on instant, frictionless access is now paying
+        extra, on purpose, for a little friction back." As a class, guess what it might be describing. You'll
+        check your guesses against the text after you read.
       </p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">
+            Write your guess below.
+            <span class="ans-line"></span>
+          </div>
+        </li>
+      </ol>
 
       <p class="section-label">Words to Know</p>
       <div class="vocab-list">
@@ -527,17 +511,15 @@
       </div>
 
       <p class="section-label">Idioms to Know</p>
-      <div class="idiom-list">
-        <div class="irow"><span class="idiom-phrase">a dying breed</span><span>something or someone that is becoming rare and may disappear soon</span></div>
-        <div class="irow"><span class="idiom-phrase">get hooked on</span><span>to become very interested in something, almost unable to stop</span></div>
+      <div class="vocab-list">
+        <div class="vrow"><span class="word">1. a dying breed</span><span>something or someone that is becoming rare and may disappear soon</span></div>
+        <div class="vrow"><span class="word">2. get hooked on</span><span>to become very interested in something, almost unable to stop</span></div>
       </div>
 
       <div class="section-title">Read &amp; Mark It Up</div>
 
       <p class="instr">
-        Read the editorial below on your own or with a partner. Your teacher will pause at a few points to think
-        out loud about the text; jot down one word or phrase capturing that thinking in the margin. As you read,
-        mark it up using the guide beside it.
+        Read the editorial below on your own or with a partner. As you read, mark it up using the guide beside it.
       </p>
 
       <div class="article">
@@ -876,9 +858,6 @@
         <ul class="stems">
           <li><span class="stars">★</span> "One difference between a record shop and a streaming app is ___,
           because the text says ___."</li>
-          <li class="tip">If you have this line, practice it quietly with a partner first. While your table talks,
-          keep a tally of how many times "sound" or "experience" comes up as a reason for preferring vinyl, then
-          use your line when there's a good pause.</li>
           <li><span class="stars">★★</span> "The writer's word choice, like ___, shows their stance because ___."</li>
           <li><span class="stars">★★★</span> "The writer states a fact when they say ___, but shifts to a more
           careful claim when they say ___."</li>
