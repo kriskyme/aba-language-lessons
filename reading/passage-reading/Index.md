@@ -100,7 +100,12 @@ against v1.7, so it's also the first to carry the `.masthead-meta` tag stack (`R
 one discussion prompt (pre-2.9-fallback case), so two additional prompts exploring different angles
 of the same question were authored for the packet per Section 2.9's fallback; a Focus on the
 Objective worked-model box was also added between Units 3A/3B per Section 2.7, since Day 1's tasks
-don't yet test the comparison-plus-reason objective against the anchor text. Lesson 4's packet
+don't yet test the comparison-plus-reason objective against the anchor text. **2026-09-08:** a raw
+image was added to `Lesson_3_RunningShoes/` and renamed to match the asset-naming convention
+(`shared/Program_Conventions.md` §H): `Lesson3_RunningShoes_Img_Shoe.jpg`, for Day 2 Phase 2's Level
+2 picture-frame item ("Using a picture of a running shoe, complete: 'It is ___.'"). Not yet embedded
+into `Lesson3_RunningShoes.md` or the packet HTML - the packet still relies on a text placeholder for
+that item; see Pending work. Lesson 4's packet
 (`Unit 4A`/`Unit 4B: Painting Wynwood Walls`,
 `Module_1/Set_1/Lesson_4_WynwoodWalls/WynwoodWalls_Intermediate_L4_Packet.html`) is also current against
 v1.7, carrying the `.masthead-meta` tag stack (`Reading` / `Intermediate 1.1.4.0`) on its opening
@@ -260,3 +265,6 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   Lesson-Plan-equivalent (or a shared one adapted to variable day-counts), and its own `../novel-reading/`
   folder (index, prompts, rotation log) rather than being folded into the tables above, since day-count is
   fixed for Passage Reading and variable for Novel Reading.
+- **Embed Lesson 3 RunningShoes's real image into the lesson content** - `Lesson3_RunningShoes_Img_Shoe.jpg`
+  (see the print-formatting note above) is renamed and sitting in the lesson folder but not yet wired into
+  `Lesson3_RunningShoes.md` or `RunningShoes_Intermediate_L3_Packet.html`.

@@ -269,6 +269,14 @@ to a real class.
   boxes (the Mystery Quote reveal and "Check What You Heard") were already using; fixed `.task-block .instr-line`'s
   margin to 10px and restored `.idiom-item`/`.idiom-phrase`'s font properties (unused in this lesson - no idiom in
   the source - but kept in sync for stylesheet consistency); reflowed every multi-line `font-family` declaration.
+  **2026-09-08:** raw media assets added to this lesson's folder and renamed to match the new naming convention
+  (`shared/Program_Conventions.md` §H): `Lesson3_Backpack_Img_Hook.webp` (the Mystery Quote hook's cropped
+  hip-belt photo), `Lesson3_Backpack_Img_ChoiceBackpack.jpg`/`Img_ChoiceBicycle.jpg`/`Img_ChoiceTent.webp` (the
+  three answer-choice images for Day 1 Phase 4's Level 2 "backpack/bicycle/tent" item), and a
+  `Lesson3_Backpack_SourceVideo.webloc`/`.url` link-shortcut pair to the cited YouTube source video. None of
+  these is embedded into `Lesson3_Backpack.md` or the packet HTML yet (the packet still uses a placeholder for
+  the Mystery Quote photo and no images for the Level 2 choice item) - that integration is still pending, see
+  Pending work.
 - Intermediate Lesson 4: `Module_1/Set_1/Lesson_4_GreatGrandmother/GreatGrandmother_Intermediate_L4_Packet.html`. Fully
   synced 2026-09-07, same sweep as Lessons 2-3: added the `.masthead-meta` two-tag stack (`Intermediate 1.1.4.0`,
   Unit 4A masthead only) and its CSS/`.masthead` flex layout; realigned `.vocab-list .word`'s column width to
@@ -404,3 +412,8 @@ is actually wanted, not automatically for every Set.
 - **Give the `Module_1/Set_1_T` Lesson 1 fork to a real class** - like every other assessment/extension artifact in this
   family, it hasn't been field-tested yet; expect the same kind of addenda the Lesson and Assessment prompts
   picked up after their own first real uses.
+- **Embed Lesson 3 Backpack's real images into the lesson content** - `Lesson3_Backpack_Img_Hook.webp` and the
+  three `Img_Choice*` files (see the Intermediate Lesson 3 print-formatting note above) are renamed and sitting
+  in the lesson folder but not yet wired into `Lesson3_Backpack.md` or `Backpack_Intermediate_L3_Packet.html`
+  (the packet still uses a generic "real picture placeholder" for the Mystery Quote hook and no image for the
+  Day 1 Phase 4 Level 2 choice item).

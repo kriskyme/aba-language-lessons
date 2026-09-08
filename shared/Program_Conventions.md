@@ -1,4 +1,4 @@
-# Program Conventions (v1.5)
+# Program Conventions (v1.6)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -232,6 +232,38 @@ exactly, just with a non-purely-numeric `<Set>`. The suffix identifies which var
 to; see §D for where such a fork's files physically live. This is a mechanic a lesson type may use, not
 a requirement on every lesson type - Passage Reading's own TOEFL extension, for instance, is a separate
 companion document rather than a variant-track fork, and needs no such suffix.
+
+## H. Asset (audio/image/source-link) naming convention
+
+A lesson's raw media assets (audio clips, images, source-video link
+shortcuts) live flat in that lesson's own
+`Lesson_<N>_<Slug>/` folder (§D), alongside its `.md` and packet `.html` -
+no separate `media/` subfolder. Naming, added 2026-09-08:
+
+- **Audio:** `Lesson<N>_<Slug>_Audio.<ext>` - a lesson's own recorded/sourced
+  audio clip (e.g. `Lesson1_NewBakery_Audio.mp3`).
+- **Images:** `Lesson<N>_<Slug>_Img_<Purpose>.<ext>`, where `<Purpose>` is a
+  short PascalCase label for what the image is used for in the lesson (e.g.
+  `Lesson3_Backpack_Img_Hook.webp` for a Mystery Quote hook photo,
+  `Lesson3_Backpack_Img_ChoiceBicycle.jpg` for one option image in a
+  multiple-choice item). Normalize `.jpeg` to `.jpg` (same format, filename
+  only); leave other image formats as their source provides them rather than
+  re-encoding.
+- **Source-video link shortcut:** for a lesson whose real source is a video
+  that isn't itself downloaded into the repo, `Lesson<N>_<Slug>_SourceVideo.<ext>`,
+  one file per platform as available (`.webloc` for Mac, `.url` for
+  Windows/cross-platform) - lets the citation link be opened directly from the
+  lesson folder without opening the lesson `.md` to find it. The URL itself
+  stays the source of truth in the lesson `.md`'s citation block (Listening/
+  Speaking's Section 0.3); the link file is a convenience copy, not a
+  replacement for that citation.
+
+Dropping raw assets into a lesson folder does not by itself embed them into
+the lesson `.md` or student packet `.html` - integrating an asset into the
+actual content (e.g. wiring a choice image to its multiple-choice item, or
+swapping a packet's "real picture placeholder" for the real image) is a
+separate step, tracked per lesson type's own `Index.md` Pending work until
+done.
 
 ## Changelog
 
