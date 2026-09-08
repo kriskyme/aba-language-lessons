@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v2.3)
+# Academic Writing Student Print Formatting Prompt (v2.4)
 
 Companion to the Academic Writing Lesson Generation Prompt (v4). Takes one completed Academic Writing lesson (a
 2-day cycle, one of 4 in a Set) and produces one print-ready, black-and-white student handout for it: a single
@@ -140,7 +140,7 @@ than continuing across the A/B boundary.
 Only the file's opening masthead (Unit `{N}A`, Day 1 - never the later `masthead-later` Unit `{N}B` heading)
 carries a `.masthead-meta` block, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B: two stacked
 `.masthead-tag` lines, the first reading exactly `Writing`, the second combining this lesson's Band and its
-version code as one string (`<Band> S<Set>.<Lesson>.<Iteration>` per `shared/Program_Conventions.md` §G - here
+version code as one string (`<Band> <Module>.<Set>.<Lesson>.<Version>` per `shared/Program_Conventions.md` §G - here
 `<Lesson>` is this lesson's own **global** Lesson #, not its 1-4 Set position). Nothing else on that stack: no
 "Class" or "Packet" suffix.
 
@@ -342,7 +342,7 @@ inventing new decorative structure.
   comparison table, picture) either of its two days' activities actually need, rather than assuming an earlier
   lesson's packet is also in hand?
 - Does only the opening masthead (Unit `{N}A`) carry a `.masthead-meta` block with two stacked tags - "Writing,"
-  then this lesson's Band and its `S<Set>.<Lesson>.<Iteration>` version code combined as one string (`<Lesson>`
+  then this lesson's Band and its `<Module>.<Set>.<Lesson>.<Version>` version code combined as one string (`<Lesson>`
   its global number) - with the later `masthead-later` heading (Unit `{N}B`) carrying no meta block, per
   `shared/Student_Packet_Style_Guide.md` §B? Beyond that one block, are there no Name/Date fields, no
   subject/module kicker line, no subtitle lines, and no footer note?

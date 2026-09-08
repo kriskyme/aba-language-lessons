@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v1.6)
+# Student Packet Style Guide (v1.9)
 
 Shared, cross-modality Section 3 ("Format and Style Constraints") for every lesson type's Student
 Packet / Student Print Formatting prompt. Each modality's own packet-generation prompt should not
@@ -558,7 +558,7 @@ a `<div class="masthead-meta">` alongside the `h1`, holding exactly two stacked
 1. That modality's plain class label (`Reading`, `Listening & Speaking`, or `Writing` - see each
    lesson type's own Student Packet prompt §2.4 for which one).
 2. The lesson's Band and its version code, combined as one space-separated string:
-   `<Band> S<Set>.<Lesson>.<Iteration>` (e.g. `Advanced S1.1.0`). Band is plain language
+   `<Band> <Module>.<Set>.<Lesson>.<Version>` (e.g. `Advanced 1.1.1.0`). Band is plain language
    (`Beginner`, `Intermediate`, `Advanced`, or `Proficient`); the version code format is defined in
    `Program_Conventions.md` §G - the lesson number in it is the global one from
    `Program_Conventions.md` §C, not restarted per Set.

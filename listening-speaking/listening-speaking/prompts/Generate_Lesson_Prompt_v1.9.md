@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v1.8)
+# Listening/Speaking Lesson Generation Prompt (v1.9)
 
 **Lesson type:** this prompt generates a **Listening/Speaking Lesson** - a fixed 2-day cycle (Day 1 Listening,
 Day 2 Speaking) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -17,7 +17,7 @@ made after reviewing real generated lessons; see `Changelog.md` for the history.
 corrections put in place, still in force:
 
 - **Lesson header metadata (added v1.1):** directly under the generated document's H1, include a metadata line
-  stating `**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per
+  stating `**Band:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` - the version code per
   `shared/Program_Conventions.md` §G (global lesson number, iteration `0` on first generation).
 - **Optional TOEFL Track Tier (added v1.2, redesigned v1.4, corrected v1.5-v1.7):** an Advanced/Proficient-only,
   opt-in-per-Set mechanism that threads TOEFL-relevant skill practice across most of both days (a
@@ -531,11 +531,11 @@ and the Day 2 Phase 4 reframed protocol turn do not need metadata rows - neither
 **Where this lives.** A Set's TOEFL-capable variant is a fork, not an in-place edit of its existing files.
 Its lesson files go in a sibling `Set_<N>_T/` folder (`lessons/<band>/Module_<N>/Set_<N>_T/Lesson_<n>_<Slug>/`,
 the same internal shape as `Set_<N>/` per `shared/Program_Conventions.md` §D), and its version code gets a `T`
-folded into the Set token: `S<Set>T.<Lesson>.<Iteration>` (e.g. `S1T.1.0`) instead of the base
-`S<Set>.<Lesson>.<Iteration>` (§G). The original `Set_<N>/` files are never edited for this - a class with
+folded into the Set token: `<Module>.<Set>T.<Lesson>.<Version>` (e.g. `1.1T.1.0`) instead of the base
+`<Module>.<Set>.<Lesson>.<Version>` (§G). The original `Set_<N>/` files are never edited for this - a class with
 no TOEFL-track students keeps using them exactly as already generated. A substantive revision to an
 already-generated TOEFL Track Tier lesson bumps its iteration the same way any other lesson revision does
-(`S1T.1.1`, `S1T.1.2`, ..., per §G).
+(`1.1T.1.1`, `1.1T.1.2`, ..., per §G).
 
 **Three artifacts, not two (added v1.6).** A TOEFL Track Tier variant's `Lesson_<n>_<Slug>/` folder holds
 three files, not the usual two: the lesson `.md`, the main student packet `.html`, and D's take-home
@@ -621,7 +621,7 @@ exactly what it contains and how it's labeled.
     (TOEFL)` block (same `exercise-label`/star styling as the regular lettered tasks, no extended
     explanatory paragraph), not a nested "option" callout; does the file set sit in a sibling `Set_<N>_T/`
     folder with three files (lesson `.md`, main packet `.html`, and the separate `_TOEFL_Homework.html`);
-    and does the version code follow `S<Set>T.<Lesson>.<Iteration>`, iteration bumped on a substantive
+    and does the version code follow `<Module>.<Set>T.<Lesson>.<Version>`, iteration bumped on a substantive
     revision?
     If a lesson fails any check, revise it before finalizing. Do not build Day 3-8 tasks on a source that failed the
     Section 0.1-0.3 checks in step 1-3 above.

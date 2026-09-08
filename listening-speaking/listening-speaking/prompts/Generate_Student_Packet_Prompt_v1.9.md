@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v1.8)
+# Listening/Speaking Student Print Formatting Prompt (v1.9)
 
 Companion to the Listening/Speaking Lesson Generation Prompt (v1.7). Takes one completed lesson (all days) and
 produces a single, print-ready, black-and-white student handout: one self-contained HTML document, with every
@@ -82,8 +82,8 @@ told what they're about to watch several activities before they actually watch i
 Same as Passage Reading 2.4, with this modality's own label: the document's opening masthead carries a
 `.masthead-meta` block, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B - two stacked
 `.masthead-tag` lines, the first reading exactly `Listening & Speaking`, the second combining this
-lesson's Band and its version code as one string (`<Band> S<Set>.<Lesson>.<Iteration>` per
-`shared/Program_Conventions.md` §G, or `<Band> S<Set>T.<Lesson>.<Iteration>` for a TOEFL Track Tier variant of a
+lesson's Band and its version code as one string (`<Band> <Module>.<Set>.<Lesson>.<Version>` per
+`shared/Program_Conventions.md` §G, or `<Band> <Module>.<Set>T.<Lesson>.<Version>` for a TOEFL Track Tier variant of a
 Set - see Section 2.7a/2.10a below). Beyond that one block: no Name/Date field, no subject/module kicker,
 no subtitle line, no footer note.
 
@@ -548,7 +548,7 @@ followed by regeneration; if no, it's safe to apply here directly.
   response space?
 - Are Background Notes translated into Good to Know boxes, informational only?
 - Does the opening masthead carry a `.masthead-meta` block with two stacked tags - "Listening & Speaking,"
-  then this lesson's Band and its `S<Set>.<Lesson>.<Iteration>` (or `S<Set>T.<Lesson>.<Iteration>` for a TOEFL
+  then this lesson's Band and its `<Module>.<Set>.<Lesson>.<Version>` (or `<Module>.<Set>T.<Lesson>.<Version>` for a TOEFL
   Track Tier variant) version code combined as one string? Beyond that block, are there no Name/Date fields, no
   subject/module kicker line, no subtitle lines, and no footer note?
 - **If the lesson carries a TOEFL Track Tier:** are the A framing connections absent from the packet entirely

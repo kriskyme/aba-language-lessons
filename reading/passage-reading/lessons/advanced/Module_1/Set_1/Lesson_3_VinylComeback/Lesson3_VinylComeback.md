@@ -6,7 +6,7 @@
 **Phase 1 Hook:** Mystery Quote | **Phase 3 Protocol:** Town Hall Role-Play
 **Vocabulary Theme:** Music & analog sound (turntable, groove, warmth, crackle, pressing, needle)
 **Topic:** The real-world resurgence of independent vinyl record shops
-**Version:** S1.3.0
+**Version:** 1.1.3.0
 
 Generated per `Generate_Lesson_Prompt_v2.8.md`, following the approved
 `Module1_Advanced_Lesson_Plan.md`, Lesson 3 row.

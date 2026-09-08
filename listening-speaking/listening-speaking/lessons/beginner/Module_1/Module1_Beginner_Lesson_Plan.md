@@ -41,10 +41,10 @@ either.
 
 | #   | Topic Direction                                                                    | Content Format                                    | Listening Strategy                     | Speaking Skill              | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                | Version |
 | --- | ----------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------- | ---------------------------- | ------------------- | ------------------- | --------------------------------- | ------- |
-| 1   | A single familiar everyday object, shown and named (e.g. a fruit, a clothing item)  | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist              | Giving Examples phrases      | Visual Inquiry      | Fishbowl            | Common everyday objects           | S1.1.0  |
-| 2   | A simple daily routine shown step by step (e.g. a morning routine)                  | Simple routine clip                                | Listen for Sequence Markers             | Sequencing Language          | K-W-L Walk          | Jigsaw               | Daily routine actions             | S1.2.0  |
-| 3   | A family member introduced by a child or narrator                                   | Family-introduction clip                           | Recognize Examples                      | Asking for Clarification     | Four-Corner Debate  | Town Hall           | Family members & relationships    | S1.3.0  |
-| 4   | Colors and shapes of common items, shown and named                                  | Colors/shapes labeling clip                        | Predict from Context Before Confirming  | Making Comparisons           | Mystery Quote       | Concentric Circles  | Colors & shapes                   | S1.4.0  |
+| 1   | A single familiar everyday object, shown and named (e.g. a fruit, a clothing item)  | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist              | Giving Examples phrases      | Visual Inquiry      | Fishbowl            | Common everyday objects           | 1.1.1.0  |
+| 2   | A simple daily routine shown step by step (e.g. a morning routine)                  | Simple routine clip                                | Listen for Sequence Markers             | Sequencing Language          | K-W-L Walk          | Jigsaw               | Daily routine actions             | 1.1.2.0  |
+| 3   | A family member introduced by a child or narrator                                   | Family-introduction clip                           | Recognize Examples                      | Asking for Clarification     | Four-Corner Debate  | Town Hall           | Family members & relationships    | 1.1.3.0  |
+| 4   | Colors and shapes of common items, shown and named                                  | Colors/shapes labeling clip                        | Predict from Context Before Confirming  | Making Comparisons           | Mystery Quote       | Concentric Circles  | Colors & shapes                   | 1.1.4.0  |
 
 **Phase 3 scaffolding note:** per the same lesson the Intermediate plan already learned from,
 Fishbowl (Lesson 1) and Concentric Circles (Lesson 4) are valid at a realistic class size (8-12
@@ -90,8 +90,8 @@ fresh by this plan's approval). **Set 1 status: planned; Lesson 1 generation in 
 ### Set 1 (planned 2026-09-07)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist | Giving Examples phrases | Visual Inquiry | Fishbowl | Common everyday objects | A single familiar everyday object, shown and named | S1.1.0 |
-| 2 | Simple routine clip | Listen for Sequence Markers | Sequencing Language | K-W-L Walk | Jigsaw | Daily routine actions | A simple daily routine shown step by step | S1.2.0 |
-| 3 | Family-introduction clip | Recognize Examples | Asking for Clarification | Four-Corner Debate | Town Hall | Family members & relationships | A family member introduced by a child or narrator | S1.3.0 |
-| 4 | Colors/shapes labeling clip | Predict from Context Before Confirming | Making Comparisons | Mystery Quote | Concentric Circles | Colors & shapes | Colors and shapes of common items, shown and named | S1.4.0 |
+| 1 | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist | Giving Examples phrases | Visual Inquiry | Fishbowl | Common everyday objects | A single familiar everyday object, shown and named | 1.1.1.0 |
+| 2 | Simple routine clip | Listen for Sequence Markers | Sequencing Language | K-W-L Walk | Jigsaw | Daily routine actions | A simple daily routine shown step by step | 1.1.2.0 |
+| 3 | Family-introduction clip | Recognize Examples | Asking for Clarification | Four-Corner Debate | Town Hall | Family members & relationships | A family member introduced by a child or narrator | 1.1.3.0 |
+| 4 | Colors/shapes labeling clip | Predict from Context Before Confirming | Making Comparisons | Mystery Quote | Concentric Circles | Colors & shapes | Colors and shapes of common items, shown and named | 1.1.4.0 |
 ```

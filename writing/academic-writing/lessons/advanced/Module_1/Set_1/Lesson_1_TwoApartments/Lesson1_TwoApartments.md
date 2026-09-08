@@ -2,7 +2,7 @@
 
 ### Advanced Band, Module 1: Describing
 
-**Set:** 1 | **Set position:** 1 of 4 (Grammar Focus A: input, modeling, deeper practice) | **Version:** S1.1.0
+**Set:** 1 | **Set position:** 1 of 4 (Grammar Focus A: input, modeling, deeper practice) | **Version:** 1.1.1.0
 
 ### Scenario: "Two Apartments, for a Prospective Roommate"
 

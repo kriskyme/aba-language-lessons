@@ -48,9 +48,9 @@ never re-run it (they continue Lesson 1's own Scenario/Focus).
 
 ## Lesson version numbers (introduced 2026-09-07, corrected 2026-09-08)
 
-Each Band file's "Format for the next entry" template has a `Version` column (`S<Set>.<Lesson>.<Iteration>` - see
+Each Band file's "Format for the next entry" template has a `Version` column (`<Module>.<Set>.<Lesson>.<Version>` - see
 `shared/Program_Conventions.md` §G). `<Lesson>` is each lesson's own **global** number (continuing across Sets),
-not its 1-4 position within its Set - so a Set's four lessons get four different version codes (e.g. `S1.1.0`
-through `S1.4.0`), never one shared code. This was corrected 2026-09-08 alongside the Set-size fix above; the
+not its 1-4 position within its Set - so a Set's four lessons get four different version codes (e.g. `1.1.1.0`
+through `1.1.4.0`), never one shared code. This was corrected 2026-09-08 alongside the Set-size fix above; the
 2026-09-07 introduction of this column had assumed a Writing Set was still 1 lesson, so Set and Lesson were the
 same number - that assumption is now retired along with the 8-day model.

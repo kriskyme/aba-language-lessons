@@ -16,10 +16,10 @@ Reading/Listening-Speaking Set, whose 4 lessons each get an independent anchor t
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | My phone case (was: my water bottle) | S1.1.0 |
-| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus B, Mentor Ladder carried forward, prewriting | (same Scenario, continued) | S1.2.0 |
-| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | S1.3.0 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Peer editing, revision, publishing, Closing Transfer Check | (same Scenario, continued) | S1.4.0 |
+| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | My phone case (was: my water bottle) | 1.1.1.0 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Grammar Focus B, Mentor Ladder carried forward, prewriting | (same Scenario, continued) | 1.1.2.0 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | 1.1.3.0 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08 | Peer editing, revision, publishing, Closing Transfer Check | (same Scenario, continued) | 1.1.4.0 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -48,7 +48,7 @@ distributed). See `Index.md`'s "Sets" section.
 new `### Set N` subsection for a new Set — do not overwrite anything above):
 
 ```
-| N | Intermediate <global lesson #> | <Set position> of 4 | <date> | <content role> | <Scenario/topic, or "(same Scenario, continued)"> | S<Set>.<global lesson #>.<iteration> |
+| N | Intermediate <global lesson #> | <Set position> of 4 | <date> | <content role> | <Scenario/topic, or "(same Scenario, continued)"> | <Module>.<Set>.<global lesson #>.<Version> |
 ```
 
 Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way

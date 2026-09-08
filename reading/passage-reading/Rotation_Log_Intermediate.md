@@ -34,10 +34,10 @@ lesson's own doc for the full patch note.
 ### Set S (planned <date>)
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic | Version |
 |---|---|---|---|---|---|---|---|
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
 ```
 
 (Lesson # continues the global numbering for this Band across every Set already planned - do not restart at 1

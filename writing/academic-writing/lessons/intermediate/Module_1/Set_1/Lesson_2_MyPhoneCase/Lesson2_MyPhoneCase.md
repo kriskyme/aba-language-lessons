@@ -2,7 +2,7 @@
 
 ### Intermediate Band, Module 1: Describing
 
-**Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B, Mentor Ladder carried forward, prewriting) | **Version:** S1.2.0
+**Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B, Mentor Ladder carried forward, prewriting) | **Version:** 1.1.2.0
 
 ### Scenario: "My Phone Case" (continued from Lesson 1)
 

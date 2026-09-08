@@ -1,6 +1,6 @@
 # Listening/Speaking Module 1, Lesson 1 (Advanced) - The Lost Kitchen - TOEFL Track Tier variant
 
-**Module:** 1, Describing | **Band:** Advanced | **Version:** S1T.1.4
+**Module:** 1, Describing | **Band:** Advanced | **Version:** 1.1T.1.4
 
 **TOEFL Track Tier variant (added 2026-09-07, revised four times same day per
 `Generate_Lesson_Prompt_v1.7.md` Section 0.6):** this is a fork of
@@ -18,23 +18,23 @@ file for a class with none. **This lesson's `Lesson_1_LostKitchen/` folder holds
 `.md`, the main `LostKitchen_Advanced_L1_Packet.html`, and the teacher-only homework `.html`), not the
 usual two.
 
-**Iteration note (S1T.1.0 -> S1T.1.1 -> S1T.1.2 -> S1T.1.3 -> S1T.1.4):** the first TOEFL Track Tier pass
-(S1T.1.0) added the Listening/Speaking capstone tasks below (C/D) as the only TOEFL content, isolated to
+**Iteration note (1.1T.1.0 -> 1.1T.1.1 -> 1.1T.1.2 -> 1.1T.1.3 -> 1.1T.1.4):** the first TOEFL Track Tier pass
+(1.1T.1.0) added the Listening/Speaking capstone tasks below (C/D) as the only TOEFL content, isolated to
 Day 1 Phase 4 and Day 2 Phase 2. Feedback was that this read as disconnected from the rest of the lesson -
-so `S1T.1.1` added the A framing connections and B in-class touchpoints throughout both days, and split
+so `1.1T.1.1` added the A framing connections and B in-class touchpoints throughout both days, and split
 the D capstone into an untimed in-class rehearsal plus take-home timed practice, since the real timed
 Speaking mechanics can't run live against one student while the rest of a mixed class works a different
-task. `S1T.1.2` fixed a real flaw `S1T.1.1` still had in C: it required a teacher/partner to read a
+task. `1.1T.1.2` fixed a real flaw `1.1T.1.1` still had in C: it required a teacher/partner to read a
 freshly-authored passage aloud *separately, just for TOEFL-track students*, while everyone else worked
 independently - the same shared-classroom-timing problem D already solved, just not yet applied to C. C
 was rewritten to answer from the exact same PBS segment every student already watched together in Phase 2
-- no separate passage, no separate reading, no pulling anyone aside. `S1T.1.3` moved D's take-home
+- no separate passage, no separate reading, no pulling anyone aside. `1.1T.1.3` moved D's take-home
 content out of the main student packet entirely, into the separate homework file named above (it used to
 be a trailing page inside the same packet `.html`, with the in-class rehearsal box pointing to "the end of
 this packet" - that pointer line was dropped, since the homework file is a wholly separate document a
 teacher hands out on its own), and cleaned up the in-class rehearsal's instructions: dropped "no clock
 needed, just practice the shape of the real thing" and replaced the vague "take turns with a partner" line
-with an explicit reader/listener instruction stated up front. `S1T.1.4` redelivers D's homework as a
+with an explicit reader/listener instruction stated up front. `1.1T.1.4` redelivers D's homework as a
 teacher-recorded Teams assignment: the teacher records real audio of the 7 sentences/4 questions from the
 homework file's script, posts it to Teams, and students listen once and record their own spoken response
 there (the same "Teams Speaking Progress recording" mechanism this program's Assessment prompt already
@@ -481,4 +481,4 @@ Context sentences (paraphrased from the source, not quoted verbatim):
     their own `Task D (TOEFL)` block, styled like the regular lettered tasks, not a nested "option" callout;
     D's in-class box makes no reference to the take-home file and states its partner reader/listener roles
     up front. File set sits in `Set_1_T/` with three files (this `.md`, the main packet, and the
-    teacher-only homework file), versioned `S1T.1.4` (bumped from `S1T.1.3` for this correction).
+    teacher-only homework file), versioned `1.1T.1.4` (bumped from `1.1T.1.3` for this correction).

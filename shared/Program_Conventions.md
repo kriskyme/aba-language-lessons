@@ -1,4 +1,4 @@
-# Program Conventions (v1.4)
+# Program Conventions (v1.5)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -189,38 +189,46 @@ the current file list and the rule for when a new Band's file gets created.
 ## G. Lesson version numbers
 
 Every individual Lesson document and its student packet carries a version code,
-`S<Set>.<Lesson>.<Iteration>`, distinct from the "vX.Y" numbers used elsewhere in this repo (those
-version the *generation prompt files* themselves, e.g. `Generate_Lesson_Prompt_v2.7.md`, tracked in
-each lesson type's own `Changelog.md` - a separate axis from an individual lesson's own content
-version).
+`<Module>.<Set>.<Lesson>.<Version>` - four dot-separated numbers, no letter prefix (corrected
+2026-09-08 from an earlier `S<Set>.<Lesson>.<Iteration>` shape; see `Changelog.md`) - distinct from
+the "vX.Y" numbers used elsewhere in this repo (those version the *generation prompt files*
+themselves, e.g. `Generate_Lesson_Prompt_v2.7.md`, tracked in each lesson type's own `Changelog.md`
+- a separate axis from an individual lesson's own content version).
 
-- `<Set>` is the Set the lesson belongs to (see §C).
+- `<Module>` is the Module the lesson belongs to (see §A).
+- `<Set>` is the Set the lesson belongs to (see §C), scoped to that Module (§C - Set numbering
+  restarts at 1 for each new Module, so `<Module>` is what keeps two different Modules' Set 1 from
+  colliding in a version code).
 - `<Lesson>` is that lesson's **global** lesson number (§C's continuing numbering across Sets - Set
   2's first lesson is Lesson 5, not Lesson 1), not its position within the Set. This keeps the
   version consistent with the one lesson-numbering scheme the program already uses everywhere else.
-- `<Iteration>` starts at `0` when a lesson is first generated and saved, and increments by 1 each
+- `<Version>` starts at `0` when a lesson is first generated and saved, and increments by 1 each
   time that specific lesson's content is substantively revised afterward (e.g. after it's been
   taught and a revision pass changes it) - tracked **per lesson**, not per Set, so two lessons in
-  the same Set can sit at different iterations if only one of them was revised.
+  the same Set can sit at different `<Version>` numbers if only one of them was revised.
 
-Example: Set 1's four lessons start at `S1.1.0`, `S1.2.0`, `S1.3.0`, `S1.4.0`; if Lesson 2 is later
-revised after being taught, it becomes `S1.2.1` while its Set-mates stay at their original iteration.
+Example: Module 1 Set 1's four lessons start at `1.1.1.0`, `1.1.2.0`, `1.1.3.0`, `1.1.4.0`; if Lesson
+2 is later revised after being taught, it becomes `1.1.2.1` while its Set-mates stay at their
+original `<Version>`.
 
 Applies to individual Lesson docs/packets only - not Module Lesson-Plans or Assessments. A lesson
 type's own Rotation Log (§F) is the source of truth for a lesson's current version (see each
 `Rotation_Log_<Band>.md`'s lesson table); the Markdown lesson doc and its HTML student packet each
 restate it (see `Student_Packet_Style_Guide.md` §B for the packet masthead's version line).
 
-This is a going-forward convention: a Set planned before this section existed doesn't get a version
-retrofitted onto it, and its Rotation Log table is not restructured to add one.
+The `<Module>.<Set>.<Lesson>.<Version>` shape itself is retroactive as of 2026-09-08 (unlike most
+conventions in this file, which apply going-forward only): every already-assigned version code across
+all three modalities was rewritten from the old `S<Set>.<Lesson>.<Iteration>` shape to this one in the
+same pass, since every lesson generated so far is Module 1 and the substitution was unambiguous
+(`S<Set>...` → `1.<Set>...`). See `Changelog.md`.
 
 **Optional variant-track Set token (added 2026-09-07, introduced by Listening/Speaking).** A lesson type
 may fork a Set into a variant track that adds something to every lesson in it without changing their
 core content - Listening/Speaking's TOEFL Track Tier (its own Lesson Generation Prompt Section 0.6) is
 the first example: one tier of each lesson in the fork gains an added, optional alternate task. Such a
 fork's `<Set>` token carries a single uppercase letter suffixed onto the Set number (e.g. `1T`), giving
-version codes like `S1T.1.0` - still fitting this section's `S<Set>.<Lesson>.<Iteration>` shape exactly,
-just with a non-purely-numeric `<Set>`. The suffix identifies which variant track a lesson doc belongs
+version codes like `1.1T.1.0` - still fitting this section's `<Module>.<Set>.<Lesson>.<Version>` shape
+exactly, just with a non-purely-numeric `<Set>`. The suffix identifies which variant track a lesson doc belongs
 to; see §D for where such a fork's files physically live. This is a mechanic a lesson type may use, not
 a requirement on every lesson type - Passage Reading's own TOEFL extension, for instance, is a separate
 companion document rather than a variant-track fork, and needs no such suffix.

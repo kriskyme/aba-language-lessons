@@ -2,7 +2,7 @@
 
 ### Advanced Band, Module 1: Describing
 
-**Set:** 1 | **Set position:** 4 of 4 (Peer editing, revision, publishing, Closing Transfer Check) | **Version:** S1.4.0
+**Set:** 1 | **Set position:** 4 of 4 (Peer editing, revision, publishing, Closing Transfer Check) | **Version:** 1.1.4.0
 
 ### Scenario: "Two Apartments, for a Prospective Roommate" (continued from Lessons 1-3)
 

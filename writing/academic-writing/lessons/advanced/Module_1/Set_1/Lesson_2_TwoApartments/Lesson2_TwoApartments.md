@@ -2,7 +2,7 @@
 
 ### Advanced Band, Module 1: Describing
 
-**Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B, Essay Focus A/B, Mentor Ladder, prewriting) | **Version:** S1.2.0
+**Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B, Essay Focus A/B, Mentor Ladder, prewriting) | **Version:** 1.1.2.0
 
 ### Scenario: "Two Apartments, for a Prospective Roommate" (continued from Lesson 1)
 

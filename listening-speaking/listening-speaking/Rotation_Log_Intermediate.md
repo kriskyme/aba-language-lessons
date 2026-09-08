@@ -32,7 +32,7 @@ Learning English (Jonathan Bethony, Seylou Bakery, Washington D.C.). See
 timestamps could not be verified directly; the source's own five headed sections were used as segment labels
 instead - see the Lesson Generation Prompt's addendum note.
 
-**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.1.0` in its `.md` and packet
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `1.1.1.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G, and its packet's masthead was brought up to the current `.masthead-meta`
 two-tag stack in the same pass, matching the retrofit Advanced's Lesson 1 (LostKitchen) already got - a
 deliberate one-lesson exception to §G's going-forward-only rule, not a reopening of Set 1's other lessons. Task
@@ -46,7 +46,7 @@ than confirmed - flagged as an open item. Topic direction broadened from "open-a
 historic market hall plus a short walking food tour past three nearby shops, since that is what the verified
 real source actually shows - flagged, not silently substituted.
 
-**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.2.0` in its `.md` and packet
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `1.1.2.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
 pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
 one-line `font-family` formatting; its one idiom, "in spite of," also moved out of a spotlight-box into a plain
@@ -78,7 +78,7 @@ rotate(180deg)`) as a physical deterrent against reading ahead, and the "Unit 1A
 to "Unit 3A/3B" - both applied directly to the .html only, since neither changes what the lesson actually asks
 students to do.
 
-**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.3.0` in its `.md` and packet
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `1.1.3.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
 pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
 one-line `font-family` formatting) - a deliberate one-lesson exception to §G's going-forward-only rule, not a
@@ -101,7 +101,7 @@ picture placeholders, word banks positioned right before their items, balanced t
 the upside-down treatment extended to this lesson's own predict-from-context pause point in the Closing
 Transfer Check).
 
-**Version added, packet synced (2026-09-07):** this lesson is now tagged `S1.4.0` in its `.md` and packet
+**Version added, packet synced (2026-09-07):** this lesson is now tagged `1.1.4.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared spec in the same
 pass (`.masthead-meta` two-tag stack, `.refresher` CSS, `.task-block .instr-line`/`.idiom-item` CSS drift,
 `.vocab-list .word` column width realigned to 130px (was 150px), one-line `font-family` formatting) - a
@@ -138,10 +138,10 @@ Still not yet given to a real class.
 ### Set S (planned <date>)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
 |---|---|---|---|---|---|---|---|---|
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
 ```
 
 (Lesson # continues the global numbering for this Band across every Set already planned - do not restart at 1

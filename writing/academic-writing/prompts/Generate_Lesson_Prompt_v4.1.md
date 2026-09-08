@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v4)
+# Academic Writing Lesson Generation Prompt (v4.1)
 
 **Lesson type:** this prompt generates one **Academic Writing Lesson**, the Writing-modality counterpart to the
 existing Passage Reading Lesson. Passage Reading and Academic Writing now share the same lesson shape: a fixed
@@ -59,10 +59,10 @@ for a Set's Lesson 1 - Section 0.9 below still applies in full when there is no 
 re-derive the Scenario/Focus from scratch.
 
 **Lesson header metadata:** directly under the generated document's H1, include a metadata line stating
-`**Band:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` - the version code per `shared/Program_Conventions.md`
+`**Band:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` - the version code per `shared/Program_Conventions.md`
 §G. `<Lesson>` is this lesson's global number (continuing across Sets, per §G), not its 1-4 position within the
-Set; a Set's four lessons get four consecutive global numbers and four separate version codes (e.g. `S1.1.0`
-through `S1.4.0`), not one shared code. Iteration `0` on first generation.
+Set; a Set's four lessons get four consecutive global numbers and four separate version codes (e.g. `1.1.1.0`
+through `1.1.4.0`), not one shared code. Iteration `0` on first generation.
 
 ---
 

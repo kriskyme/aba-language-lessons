@@ -1,4 +1,4 @@
-# Passage Reading Assessment Student Print Formatting Prompt (v1)
+# Passage Reading Assessment Student Print Formatting Prompt (v1.1)
 
 Companion to the Assessment Generation Prompt (v4.1). Takes one completed Set assessment (four
 Task-Level sections, each with its own Vocabulary & Idiom Mastery and Reading Comprehension
@@ -78,7 +78,7 @@ printouts, the same print-safe pattern the lesson packet's Section 3 already est
 Carry the assessment's plain title ("Module {M} Set {N} Assessment") as an `<h1>` inside a
 `.masthead` div at the very top of the document, once - not repeated per Task Level. Do not add a
 `.masthead-meta` tag stack here: unlike a single lesson (which has one Band and one
-`S<Set>.<Lesson>.<Iteration>` version code), one assessment document spans every Task Level in a
+`<Module>.<Set>.<Lesson>.<Version>` version code), one assessment document spans every Task Level in a
 Band at once, so there is no single per-lesson version code to display: This deliberately matches
 Listening/Speaking's and Writing's existing assessment-packet prompts, neither of which carries a
 `.masthead-meta` stack either.

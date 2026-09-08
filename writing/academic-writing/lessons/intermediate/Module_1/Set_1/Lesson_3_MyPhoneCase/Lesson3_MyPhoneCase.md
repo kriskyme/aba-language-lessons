@@ -2,7 +2,7 @@
 
 ### Intermediate Band, Module 1: Describing
 
-**Set:** 1 | **Set position:** 3 of 4 (Drafting, parts 1-2, self-edit) | **Version:** S1.3.0
+**Set:** 1 | **Set position:** 3 of 4 (Drafting, parts 1-2, self-edit) | **Version:** 1.1.3.0
 
 ### Scenario: "My Phone Case" (continued from Lessons 1-2)
 

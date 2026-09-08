@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated)
+# Passage Reading Lesson Generation Prompt (v2.9, Band-Calibrated)
 
 **Lesson type:** this prompt generates a **Passage Reading Lesson** - a fixed 2-day cycle built around one shared
 anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is renamed from "Reading
@@ -23,7 +23,7 @@ tool to explore real-world ideas and build critical thinking, allowing language 
 through meaningful communication.
 
 **Lesson header metadata (added v2.8):** directly under the generated document's H1, include a metadata line
-stating `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** S<Set>.<Lesson>.<Iteration>` -
+stating `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` -
 the version code per `Program_Conventions.md` §G (global lesson number, iteration `0` on first generation).
 
 This version carries mandatory text-complexity calibration (Section 0) on top of the existing 2-day structure.

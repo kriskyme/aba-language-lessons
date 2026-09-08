@@ -60,7 +60,7 @@ secondary (Level 7 only, excerpt): Boise Art Scene's "Wil Kirkman, Owner of Rock
 Down" (Morgan McCollum, published 2026-01-06), for a video-profile-framing-vs-own-written-words comparison per
 the plan's suggested angle. Generated fresh against `Generate_Lesson_Prompt_v1.1.md` (current 2-day Unit A/B
 architecture from the start, no restructure needed) and `Generate_Student_Packet_Prompt_v1.3.md`. Version
-`S1.4.0`, per `Program_Conventions.md` §G. See `lessons/advanced/Module_1/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`
+`1.1.4.0`, per `Program_Conventions.md` §G. See `lessons/advanced/Module_1/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`
 and `Lesson_4_GlassBender/GlassBender_Advanced_L4_Packet.html`. Open item flagged (not silently fixed): the
 primary source's page lists a post date (2024-07-11) rather than a confirmed original broadcast date for the
 episode; teacher should confirm against Idaho Public Television's own records if it matters for classroom
@@ -73,7 +73,7 @@ Hosokawa/National Key Deer Refuge, Chris Bergh/The Nature Conservancy, Connie Ri
 Key Deer); secondary (Level 7 only, excerpt): U.S. Fish & Wildlife Service's official National Key Deer Refuge
 "About Us"/"What We Do" pages, for a documentary-framing-vs-official-framing comparison per the plan's suggested
 angle. Generated fresh against `Generate_Lesson_Prompt_v1.1.md` (current 2-day Unit A/B architecture from the
-start, no restructure needed) and `Generate_Student_Packet_Prompt_v1.3.md`. Version `S1.3.0`, per
+start, no restructure needed) and `Generate_Student_Packet_Prompt_v1.3.md`. Version `1.1.3.0`, per
 `Program_Conventions.md` §G. See `lessons/advanced/Module_1/Set_1/Lesson_3_KeyDeer/Lesson3_KeyDeer.md` and
 `Lesson_3_KeyDeer/KeyDeer_Advanced_L3_Packet.html`.
 
@@ -82,7 +82,7 @@ was supposed to be a 'quiet little cafe' in Maine. It turned into a culinary phe
 Kitchen, Freedom, Maine); secondary (Level 7 only, excerpt): Radio Cherry Bombe podcast interview with Erin
 French. See `lessons/advanced/Module_1/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
 
-**Version added retroactively (2026-09-07):** this lesson is now tagged `S1.1.0` in its `.md` and packet
+**Version added retroactively (2026-09-07):** this lesson is now tagged `1.1.1.0` in its `.md` and packet
 header, per `Program_Conventions.md` §G - a deliberate one-lesson exception to that section's
 going-forward-only rule, not a reopening of Set 1's other lessons.
 
@@ -91,10 +91,10 @@ direction, the standalone TOEFL Practice Extension approach noted here earlier t
 in favor of embedding TOEFL practice directly in the lesson (`Generate_Lesson_Prompt_v1.1.md` → `_v1.2.md`
 Section 0.6). Since the alternate only applies to one tier, Lesson 1 was forked into a sibling
 `Module_1/Set_1_T/Lesson_1_LostKitchen/` folder rather than edited in place - `Module_1/Set_1/Lesson_1_LostKitchen/`'s own
-files (this row) are untouched. Versioned `S1T.1.0`. Not yet given to a real class.
+files (this row) are untouched. Versioned `1.1T.1.0`. Not yet given to a real class.
 
-**TOEFL Track Tier redesigned same day (2026-09-07), `S1T.1.0` → `S1T.1.1`:** real feedback on the
-`S1T.1.0` pass above was that its single alternate task (isolated to Day 1 Phase 4 and Day 2 Phase 2)
+**TOEFL Track Tier redesigned same day (2026-09-07), `1.1T.1.0` → `1.1T.1.1`:** real feedback on the
+`1.1T.1.0` pass above was that its single alternate task (isolated to Day 1 Phase 4 and Day 2 Phase 2)
 read as disconnected from the rest of the lesson. `Generate_Lesson_Prompt_v1.2.md` → `_v1.4.md` Section
 0.6 was redesigned to thread TOEFL-relevant skill practice through most of both days instead: a
 one-sentence "TOEFL Connection" note in Day 1 Phases 1 & 3 and Day 2 Phases 1 & 3 (teacher narration
@@ -109,9 +109,9 @@ timed sentences/questions and TOEFL scoring guides - since individually-timed me
 against one student while the rest of a mixed class works a different task. See
 `Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html` (student packet,
 no passage/sentence text shown per "heard, not read," except the take-home page itself), versioned
-`S1T.1.1`. Not yet given to a real class.
+`1.1T.1.1`. Not yet given to a real class.
 
-**TOEFL Track Tier corrected same day (2026-09-07), `S1T.1.1` → `S1T.1.2`:** review of the `S1T.1.1` pass
+**TOEFL Track Tier corrected same day (2026-09-07), `1.1T.1.1` → `1.1T.1.2`:** review of the `1.1T.1.1` pass
 above surfaced a real flaw in the Listening capstone (C) plus a labeling request. C's invented Academic
 Talk passage needed a teacher or partner to read it aloud *separately, just for TOEFL-track students*
 while the rest of the class worked independently - the same shared-classroom-timing problem D already
@@ -127,9 +127,9 @@ both capstones (C and D's in-class rehearsal) now render in the student packet a
 nested inside the regular task - and C drops its long explanatory paragraph along with the passage.
 `Generate_Student_Packet_Prompt_v1.5.md` → `_v1.6.md` updated to match. See
 `Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md` and its matching `..._Packet.html`, versioned
-`S1T.1.2`. Not yet given to a real class.
+`1.1T.1.2`. Not yet given to a real class.
 
-**TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.2` → `S1T.1.3`:** two more user fixes to the
+**TOEFL Track Tier follow-up same day (2026-09-07), `1.1T.1.2` → `1.1T.1.3`:** two more user fixes to the
 Speaking capstone (D). First, D's take-home content is moved out of the main student packet entirely,
 into its own separate file, `Module_1/Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html` -
 `Generate_Lesson_Prompt_v1.5.md` → `_v1.6.md` and `Generate_Student_Packet_Prompt_v1.6.md` → `_v1.7.md`
@@ -141,9 +141,9 @@ is cleaned up: "no clock needed, just practice the shape of the real thing" is d
 "take turns with a partner" line is replaced with an explicit, up-front instruction ("one person reads,
 the other listens and repeats or answers - switch roles halfway through"). See
 `Module_1/Set_1_T/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`, its matching `..._Packet.html`, and the new
-`..._TOEFL_Homework.html`, versioned `S1T.1.3`. Not yet given to a real class.
+`..._TOEFL_Homework.html`, versioned `1.1T.1.3`. Not yet given to a real class.
 
-**TOEFL Track Tier follow-up same day (2026-09-07), `S1T.1.3` → `S1T.1.4`:** the teacher offered a better
+**TOEFL Track Tier follow-up same day (2026-09-07), `1.1T.1.3` → `1.1T.1.4`:** the teacher offered a better
 real delivery mechanism for D's homework - record real audio of the sentences/questions, post it to the
 class's Teams, and have students listen once and record their spoken response there, reusing this
 program's own established "Teams Speaking Progress recording" mechanism (already used for Beginner/
@@ -154,7 +154,7 @@ script and scoring guide the teacher uses to produce Teams audio and later score
 to or read by a student. Its `.reader-warn` label changes from "For your reading partner only" to
 "Teacher use only - recording script and scoring guide"; content (the sentences, questions, response
 windows, scoring guides) is unchanged. See `Module_1/Set_1_T/Lesson_1_LostKitchen/LostKitchen_Advanced_L1_TOEFL_Homework.html`
-(reframed) and `Lesson1_LostKitchen.md` (Section 0.6D/self-check updated), versioned `S1T.1.4`. Not yet
+(reframed) and `Lesson1_LostKitchen.md` (Section 0.6D/self-check updated), versioned `1.1T.1.4`. Not yet
 given to a real class.
 
 **Lesson 2 generated (2026-09-02), restructured (2026-09-04):** two real sources - primary: PBS NewsHour
@@ -163,7 +163,7 @@ Phoenix, Robrt Pela, Adam Millsap, Rashad Shabazz, Craig DeMarco, Tyler Sternber
 excerpt): Modern Phoenix's Beadle Archive page on the White Gates Residence. See
 `lessons/advanced/Module_1/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`.
 
-**Version added, packet fully synced (2026-09-07):** this lesson is now tagged `S1.2.0` in its `.md` and
+**Version added, packet fully synced (2026-09-07):** this lesson is now tagged `1.1.2.0` in its `.md` and
 packet header, per `Program_Conventions.md` §G, and its packet was brought up to the current shared
 stylesheet in the same pass (masthead-meta stack, idiom-table conversion, vocab-list/task-block CSS drift,
 missing `.refresher` CSS) - the same sync Lesson 1 got, a deliberate exception to §G's going-forward-only
@@ -223,10 +223,10 @@ given to a real class.
 ### Set S (planned <date>)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
 |---|---|---|---|---|---|---|---|---|
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
 ```
 
 (Lesson # continues the global numbering for this Band across every Set already planned - do not restart at 1

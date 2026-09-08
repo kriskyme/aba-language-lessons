@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v1.9)
+# Passage Reading Student Print Formatting Prompt (v1.10)
 
 Companion to the Passage Reading Lesson Generation Prompt (v2.8, Band-Calibrated). Takes one completed 2-day
 lesson cycle and produces a single, print-ready, black-and-white student handout: one self-contained HTML
@@ -98,8 +98,8 @@ lettering independently of the first; do not carry letters across the boundary.
 The document's opening masthead (the very first one - never the Unit 1B masthead) carries a
 `.masthead-meta` block, alongside the `h1`, per `shared/Student_Packet_Style_Guide.md` §B: two
 stacked `.masthead-tag` lines - the first reading exactly `Reading`, the second combining this
-lesson's Band and its version code as one string, `<Band> S<Set>.<Lesson>.<Iteration>`
-(e.g. `Advanced S1.1.0`) per `shared/Program_Conventions.md` §G. Nothing else on that stack - no
+lesson's Band and its version code as one string, `<Band> <Module>.<Set>.<Lesson>.<Version>`
+(e.g. `Advanced 1.1.1.0`) per `shared/Program_Conventions.md` §G. Nothing else on that stack - no
 "Class" or "Packet" suffix.
 
 Beyond that one block, do not include: a Name/Date field, a subject/module kicker line under the title
@@ -298,7 +298,7 @@ adding a new one.
 - Are the two sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the section heading text
   itself rather than a separate divider?
 - Does the opening masthead carry a `.masthead-meta` block with two stacked tags - "Reading," then this
-  lesson's Band and its `S<Set>.<Lesson>.<Iteration>` version code combined as one string - and only there
+  lesson's Band and its `<Module>.<Set>.<Lesson>.<Version>` version code combined as one string - and only there
   - never on the Unit 1B
   masthead? Beyond that block, are there no Name/Date fields, no subject/module kicker line, no subtitle
   lines, and no footer note?

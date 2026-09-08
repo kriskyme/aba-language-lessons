@@ -38,6 +38,6 @@ the LAST lesson row of the most recently logged Set in that Band's file for the 
 set of vocabulary themes and topics in that file for the recency flag.
 
 **Lesson version numbers introduced (2026-09-07).** Each Band file's lesson table now has a `Version` column
-(`S<Set>.<Lesson>.<Iteration>` - see `shared/Program_Conventions.md` §G) in its "Format for the next Set's
+(`<Module>.<Set>.<Lesson>.<Version>` - see `shared/Program_Conventions.md` §G) in its "Format for the next Set's
 entry" template. This is going-forward only: Set 1 in both Bands above predates it and is not retrofitted with
 a version.

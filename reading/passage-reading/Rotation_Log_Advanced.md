@@ -29,7 +29,7 @@ correction (Section 0.10), both are fully valid at this program's class size onc
 outer-circle task (Fishbowl) and 2-3 rotated discussion prompts (both) - required at generation time. Lessons 2
 (Jigsaw), 3 (Town Hall), and 4 (Concentric Circles) have all been generated against this requirement; Lesson 1's
 Fishbowl remains unpatched (see `Index.md`'s Pending work). Lesson 4 was generated against
-`Generate_Lesson_Prompt_v2.8.md`, carrying version `S1.4.0`, formatted as a Reader's Theater interview script
+`Generate_Lesson_Prompt_v2.8.md`, carrying version `1.1.4.0`, formatted as a Reader's Theater interview script
 rather than continuous prose - the first script-style genre used in this Set.
 
 ---
@@ -40,10 +40,10 @@ rather than continuous prose - the first script-style genre used in this Set.
 ### Set S (planned <date>)
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic | Version |
 |---|---|---|---|---|---|---|---|
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
-| ... | ... | ... | ... | ... | ... | ... | S<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
+| ... | ... | ... | ... | ... | ... | ... | <Module>.<Set>.<Lesson>.0 |
 ```
 
 (Lesson # continues the global numbering for this Band across every Set already planned - do not restart at 1

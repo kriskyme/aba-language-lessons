@@ -6,7 +6,7 @@
 **Phase 1 Hook:** Four-Corner Debate | **Phase 3 Protocol:** Concentric Circles
 **Vocabulary Theme:** Coastal-lighthouse life (beacon, keeper, foghorn, shoal, isolated, vigil)
 **Topic:** A keeper's account of Portland Head Light, Maine
-**Version:** S1.4.0
+**Version:** 1.1.4.0
 
 Generated per `Generate_Lesson_Prompt_v2.8.md`, following the approved
 `Module1_Advanced_Lesson_Plan.md`, Lesson 4 row.
