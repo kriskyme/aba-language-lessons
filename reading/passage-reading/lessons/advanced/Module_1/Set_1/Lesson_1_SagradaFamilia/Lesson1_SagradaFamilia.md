@@ -1,6 +1,6 @@
 # Module 1 (Describing) - Advanced Band - Lesson 1: La Sagrada Família
 
-**Module:** 1 (Describing) | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
+**Module:** 1, Describing | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
 **Task Levels this lesson:** 4 (extension-down), 5 and 6 (native), 7 (extension-up)
 **Genre:** Feature-style newspaper/magazine article | **Reading Strategy:** Close Reading with Annotation
 **Phase 1 Hook:** Visual Inquiry | **Phase 3 Protocol:** Fishbowl

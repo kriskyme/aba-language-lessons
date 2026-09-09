@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.19)
+# Student Packet Style Guide (v2.23)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -101,14 +101,14 @@ h3 {
 .masthead {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 16px;
   text-align: left;
   margin-bottom: 20px;
 }
 .masthead h1 {
   font-size: 26px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 .masthead + .masthead,
 .masthead.masthead-later {
@@ -121,7 +121,7 @@ h3 {
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
-  margin-top: 4px;
+  margin-top: 0;
 }
 .masthead-tag {
   font-family: system-ui, -apple-system, sans-serif;
@@ -562,12 +562,16 @@ p {
 ```
 
 The document's opening masthead (only - never a later `.masthead.masthead-later` heading) includes
-a `<div class="masthead-meta">` alongside the `h1`, holding exactly two stacked
+a `<div class="masthead-meta">` alongside the `h1`, holding exactly three stacked
 `<span class="masthead-tag">` lines, in this order:
 
 1. That modality's plain class label (`Reading`, `Listening & Speaking`, or `Writing` - see each
    lesson type's own Student Packet prompt §2.4 for which one).
-2. The lesson's Band and its version code, combined as one space-separated string:
+2. The lesson's Module name, plain and on its own (`Describing`, `Narrating`, ...), spelled exactly
+   as `Program_Conventions.md` §A names it. The name, never the number: the version code on the
+   next line already carries the number, and the name is what stays readable if Modules are ever
+   reordered. No `Module` prefix.
+3. The lesson's Band and its version code, combined as one space-separated string:
    `<Band> <Module>.<Set>.<Lesson>.<Version>` (e.g. `Advanced 1.1.1.0`). Band is plain language
    (`Beginner`, `Intermediate`, `Advanced`, or `Proficient`); the version code format is defined in
    `Program_Conventions.md` §G - the lesson number in it is the global one from
@@ -756,7 +760,12 @@ either prints them as the inline list or reads "Say which, and why" over its ans
 one" (Quality Standards §C10). This is the one
 stem parenthetical that may carry source content; every other parenthetical in a stem is limited by
 Quality Standards §C9 (format, a choice menu with no correct option, or an untested gloss), and a
-two-source compare layout prints each source's own content, never its tone or the contrast asked for. A genuinely
+two-source compare layout prints each source's own content, never its tone or the contrast asked for, and
+prints enough of it to compare from: at least three short verbatim excerpts per source on the same two or more
+subjects (Quality Standards §C9). Two layouts are allowed, chosen per lesson: one `.match-row` per source with
+its excerpts under the source label, or, when both sources speak to the same subjects, one `.match-row` per
+subject with the subject as the `.match-label` and each source's excerpt on its own `.match-src` line opening
+with the source's short name in bold. A genuinely
 picture-based item embeds its real images (`.pic-options`, an `<img>` inside each `.pic-box`, the caption in
 `.pic-label`); a packet never ships an empty picture box or a "[TEACHER: insert ...]" note. If no image can be
 embedded, the item is rewritten around the student's own object or one in the room (Quality Standards §D8).
@@ -802,9 +811,12 @@ added to a packet only when generating that modality's packet.
 ### H.1 Listening/Speaking
 
 `.citebox` (What You'll Watch citation), `.notes-table` (Listening Notes organizer), `.upside-down`
-(closing script printed inverted), `.task-instr` (single top-of-task instruction line), `.pic-options`/
+(closing script printed inverted), `.stop-flag`/`.stop-badge` (the Listening close's "Don't read ahead"
+instruction in a heavy-bordered callout with a black octagonal STOP badge at its left; the badge is a drawn
+shape with white text, never an emoji or image, so it prints identically everywhere), `.task-instr` (single top-of-task instruction line), `.pic-options`/
 `.pic-option` (picture items with embedded images), `.match-list`/`.match-row` (matching items, one pair per line,
-label above a full-width `.ans-line`), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
+label above a full-width `.ans-line`; in a two-source compare layout, `.match-src` for each source's excerpt line
+under a subject label), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
 (lettered answer choices), `.time-list` (response-time windows), `.reader-copy`/`.reader-warn`
 (teacher-only page in a separate file).
 
@@ -844,6 +856,37 @@ label above a full-width `.ans-line`), `.qitem` (standalone numbered question), 
 
 .upside-down {
   transform: rotate(180deg);
+}
+
+.stop-flag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 2px solid var(--ink);
+  padding: 10px 14px;
+  margin: 12px 0 14px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.stop-badge {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  background: var(--ink);
+  color: var(--paper);
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.stop-flag .instr {
+  margin: 0;
 }
 
 .task-instr {
@@ -892,6 +935,10 @@ label above a full-width `.ans-line`), `.qitem` (standalone numbered question), 
   display: block;
   font-weight: 700;
   margin-bottom: 3px;
+}
+.match-row .match-src {
+  display: block;
+  margin: 0 0 5px 12px;
 }
 
 .qitem {
@@ -1052,8 +1099,9 @@ Run this list first, then the modality's own list.
    Standards §D1)
 4. Sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the heading text, task
    lettering restarting in each?
-5. Opening masthead only carries the two-tag `.masthead-meta` stack (modality label; Band plus
-   `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field, kicker, subtitle, or footer?
+5. Opening masthead only carries the three-tag `.masthead-meta` stack (modality label; Module name,
+   never its number; Band plus `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field,
+   kicker, subtitle, or footer?
 6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
    instruction before the task list; one star per lettered Task, self-check lists included, with no
    star on a list item or two stars on a line; letters continuous; ascending order within a Task; no star
@@ -1094,9 +1142,13 @@ Run this list first, then the modality's own list.
     `Image_Credits.md`, and no placeholder or teacher note anywhere? (§A.1, §F; Quality Standards §D8;
     Conventions §D, §I)
 19. No `Answer note:` line or other exemplar answer printed, and no stem parenthetical or compare-layout
-    text that states what its item asks the student to find? (§E, §F; Quality Standards §C9)
+    text that states what its item asks the student to find; every two-source compare layout holding at least
+    three verbatim excerpts per source on shared subjects, in one of the two §C layouts? (§E, §F; Quality
+    Standards §C9)
+20. In a Listening/Speaking packet, the "Don't read ahead" instruction printed inside a `.stop-flag` callout
+    with its `.stop-badge`, ahead of the response space, and the badge used nowhere else on the page? (§H.1)
 
 ## Changelog
 
-**Current version: v2.19.** For the full dated version history and the reasoning behind each
+**Current version: v2.23.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

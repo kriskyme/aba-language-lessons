@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.4)
+# Listening/Speaking Student Print Formatting Prompt (v2.5)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -120,7 +120,10 @@ lettering, multiple-choice layout (options inline, one `.task-instr` line at the
 
 Translate the Listening Closing Transfer Check into a plain paired activity around the lesson's read-aloud
 script: tell students their teacher will read a short paragraph aloud, they should not read it themselves yet,
-and after saying the main idea to a partner (with a numbered response space) they may read it to check. Print
+and after saying the main idea to a partner (with a numbered response space) they may read it to check. The
+"Don't read ahead" instruction is the first thing in the block and sits inside a `.stop-flag` callout with a
+`.stop-badge` reading STOP at its left (`<div class="stop-flag"><div class="stop-badge" aria-hidden="true">STOP</div>
+<p class="instr">...</p></div>`), ahead of the response space; the badge appears nowhere else in the packet. Print
 the script in a `.refresher.refresher-noline.upside-down` block positioned AFTER the response space under its own
 "Check What You Heard" label, with an explicit instruction that it is printed upside-down on purpose and not to
 turn the page around until they have said and written their answer. No self-report framing; never named a check.
@@ -160,7 +163,7 @@ get the dashed-rule exception only; answer space matched to expected length; no 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
 Style Guide §A-§D, plus this modality's delta classes in §H.1 (`.citebox`, `.notes-table`, `.upside-down`,
-`.task-instr`, `.pic-options`/`.pic-option`, `.match-list`/`.match-row`, `.qitem`, `.mc-list`/`.mc-letter`,
+`.stop-flag`/`.stop-badge`, `.task-instr`, `.pic-options`/`.pic-option`, `.match-list`/`.match-row`, `.qitem`, `.mc-list`/`.mc-letter`,
 `.time-list`, `.reader-copy`/`.reader-warn`). Add `.refresher` and `.notes-table` to the packet's `@media print`
 page-break-avoid list.
 
@@ -185,8 +188,8 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    multi-source Level 7 task in a labeled compare layout within fair use, at least three verbatim excerpts per
    source on shared subjects in one of the two allowed layouts, each part holding source content and
    not the contrast; every `Answer note:` line stripped and no stem parenthetical stating the answer (2.7)?
-6. Show What You Noticed: response space first, then the script upside-down under "Check What You Heard" with the
-   don't-turn-the-page instruction (2.8)?
+6. Show What You Noticed: "Don't read ahead" in a `.stop-flag` callout with its STOP badge, then the response
+   space, then the script upside-down under "Check What You Heard" with the don't-turn-the-page instruction (2.8)?
 7. Unit _B opens with Learn the Phrase carrying the real modeled language and its frames in one box (2.9)?
 8. Discuss It prompts numbered via `.qitem`, unquoted, outer-circle task folded in (2.11)?
 9. Closing-loop heading in plain language, no organizer or protocol name (2.12)?

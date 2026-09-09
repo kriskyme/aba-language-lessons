@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2 (Module 2)
 
-**Module:** 2: Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.0
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.0
 
 **Set:** 1 of Module 2 (Part 2 of Module Pair 1-2) | **Pair position:** 6 of 8 (Set position 2 of 4: Module
 2's Grammar Focus B; Day 2 plans Module 2's part against the kept paragraph, in place of prewriting)

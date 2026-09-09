@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.13
+**Module:** 1, Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.13
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 3 of 8 (Set position 3 of 4: Drafting, then self-edit and improve)
 

@@ -59,14 +59,14 @@
       .masthead {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 16px;
         text-align: left;
         margin-bottom: 20px;
       }
       .masthead h1 {
         font-size: 26px;
-        margin-bottom: 6px;
+        margin-bottom: 0;
       }
       .masthead + .masthead,
       .masthead.masthead-later {
@@ -79,7 +79,7 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 4px;
-        margin-top: 4px;
+        margin-top: 0;
       }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
@@ -439,6 +439,37 @@
         transform: rotate(180deg);
       }
 
+      .stop-flag {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 2px solid var(--ink);
+        padding: 10px 14px;
+        margin: 12px 0 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .stop-badge {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        background: var(--ink);
+        color: var(--paper);
+        clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .stop-flag .instr {
+        margin: 0;
+      }
+
       @media print {
         body {
           background: #fff;
@@ -474,6 +505,7 @@
         <h1>Unit 1A: What Is It?</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Listening &amp; Speaking</span>
+          <span class="masthead-tag">Describing</span>
           <span class="masthead-tag">Beginner 1.1.1.0</span>
         </div>
       </div>
@@ -794,10 +826,13 @@
 
       <div class="section-title">Show What You Noticed</div>
       <div class="wrapup">
-        <p class="instr">
-          <strong>Don't read ahead.</strong> Your teacher will read a short
-          paragraph out loud. Listen for the words you know.
-        </p>
+        <div class="stop-flag">
+          <div class="stop-badge" aria-hidden="true">STOP</div>
+          <p class="instr">
+            <strong>Don't read ahead.</strong> Your teacher will read a short
+            paragraph out loud. Listen for the words you know.
+          </p>
+        </div>
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">

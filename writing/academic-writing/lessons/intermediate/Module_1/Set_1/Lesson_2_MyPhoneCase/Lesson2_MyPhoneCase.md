@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.8
+**Module:** 1, Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.8
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B, task-ladder
 practice, prewriting)

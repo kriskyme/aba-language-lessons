@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3
 
-**Module:** 1: Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.3.2
+**Module:** 1, Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.3.2
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 3 of 8 (Set position 3 of 4: Drafting Module 1's part on the
 draft object on Day 1: one paragraph at Levels 4-5, the body paragraphs under a working thesis at Levels 6-7;

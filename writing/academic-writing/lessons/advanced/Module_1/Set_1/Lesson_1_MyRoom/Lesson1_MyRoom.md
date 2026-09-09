@@ -1,6 +1,6 @@
 # Academic Writing Lesson 1
 
-**Module:** 1: Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.1.2
+**Module:** 1, Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.1.2
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 1 of 8 (Set position 1 of 4: Grammar Focus A input, modeling,
 deeper practice; Essay Focus B and the working thesis for Levels 6-7; the Leveled Mentor Ladder)

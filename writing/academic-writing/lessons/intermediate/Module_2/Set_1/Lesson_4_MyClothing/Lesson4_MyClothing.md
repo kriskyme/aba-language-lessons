@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4 (Module 2)
 
-**Module:** 2: Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.4.0
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.4.0
 
 **Set:** 1 of Module 2 (Part 2 of Module Pair 1-2) | **Pair position:** 8 of 8 (Set position 4 of 4: assemble
 the whole piece, Peer Editing on both Modules' features, revise for effect with Module 2's tools, publish;

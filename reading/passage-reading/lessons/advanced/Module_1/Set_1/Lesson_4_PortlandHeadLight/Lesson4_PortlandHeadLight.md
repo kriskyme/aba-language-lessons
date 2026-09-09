@@ -1,6 +1,6 @@
 # Module 1 (Describing) - Advanced Band - Lesson 4: Keeping the Light
 
-**Module:** 1 (Describing) | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
+**Module:** 1, Describing | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
 **Task Levels this lesson:** 4 (extension-down), 5 and 6 (native), 7 (extension-up)
 **Genre:** Interview-profile piece | **Reading Strategy:** Reader's Theater
 **Phase 1 Hook:** Four-Corner Debate | **Phase 3 Protocol:** Concentric Circles

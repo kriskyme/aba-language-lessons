@@ -47,12 +47,32 @@
 
   h1,h2,h3{font-family:'Iowan Old Style',Georgia,serif; margin:0; color:var(--ink);}
   .masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:16px;
     text-align:left;
     margin-bottom:20px;
   }
-  .masthead h1{font-size:26px; margin-bottom:6px;}
+  .masthead h1{font-size:26px; margin-bottom:0;}
   .masthead + .masthead,
   .masthead.masthead-later{margin-top:60px;page-break-before:always;break-before:page;}
+  .masthead-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:4px;
+    margin-top:0;
+  }
+  .masthead-tag{
+    font-family:system-ui,-apple-system,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    white-space:nowrap;
+  }
 
   .objective{
     font-family:system-ui,-apple-system,sans-serif;
@@ -372,6 +392,11 @@
 
   <div class="masthead">
     <h1>Unit 2A: New Corner of Yoyogi Park</h1>
+    <div class="masthead-meta">
+      <span class="masthead-tag">Reading</span>
+      <span class="masthead-tag">Describing</span>
+      <span class="masthead-tag">Intermediate</span>
+    </div>
   </div>
 
   <p class="objective"><strong>Objective:</strong> describe a place by comparing how it looks now to how it

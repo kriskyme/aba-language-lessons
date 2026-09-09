@@ -59,14 +59,14 @@
       .masthead {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 16px;
         text-align: left;
         margin-bottom: 20px;
       }
       .masthead h1 {
         font-size: 26px;
-        margin-bottom: 6px;
+        margin-bottom: 0;
       }
       .masthead + .masthead,
       .masthead.masthead-later {
@@ -79,7 +79,7 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 4px;
-        margin-top: 4px;
+        margin-top: 0;
       }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
@@ -325,6 +325,10 @@
         font-weight: 700;
         margin-bottom: 3px;
       }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
 
       .refresher {
         padding: 16px 0;
@@ -451,6 +455,37 @@
         transform: rotate(180deg);
       }
 
+      .stop-flag {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 2px solid var(--ink);
+        padding: 10px 14px;
+        margin: 12px 0 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .stop-badge {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        background: var(--ink);
+        color: var(--paper);
+        clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .stop-flag .instr {
+        margin: 0;
+      }
+
       @media print {
         body {
           background: #fff;
@@ -486,7 +521,8 @@
         <h1>Unit 1A: The Lost Kitchen</h1>
         <div class="masthead-meta">
           <span class="masthead-tag">Listening &amp; Speaking</span>
-          <span class="masthead-tag">Advanced 1.1.1.1</span>
+          <span class="masthead-tag">Describing</span>
+          <span class="masthead-tag">Advanced 1.1.1.2</span>
         </div>
       </div>
 
@@ -701,25 +737,69 @@
           <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
         </p>
         <p class="task-instr">
-          This task compares two real sources: the PBS video, and Erin French's
-          own words from a podcast interview.
+          This task compares two real sources. Each row below gives their own
+          words on one subject: the PBS reporter, Jeffrey Brown, and Erin
+          French speaking on the Cherry Bombe podcast.
         </p>
         <div class="match-list">
           <div class="match-row">
-            <span class="match-label">The TV Reporter's Version (PBS)</span>
-            <span
-              >The segment shows the restaurant in the restored mill, tells
-              French's background, including the difficult years before it
-              opened, and covers her present-day work in the town.</span
+            <span class="match-label">The place</span>
+            <span class="match-src"
+              ><strong>PBS:</strong> "This is The Lost Kitchen, a 48-seat
+              restaurant in a restored 1834 grist mill in the tiny town of
+              Freedom, Maine, population around 700..." and "It is in the
+              middle of nowhere, but rather than a little cafe, The Lost
+              Kitchen is a big-time culinary phenomenon..."</span
+            >
+            <span class="match-src"
+              ><strong>Erin French:</strong> "The Lost Kitchen is my
+              restaurant here in Freedom, Maine in the middle of nowhere in an
+              old 1800s grist mill. We seat about 40 plus people a night to do
+              one dinner service..."</span
             >
           </div>
           <div class="match-row">
-            <span class="match-label"
-              >In Her Own Words (Cherry Bombe podcast)</span
+            <span class="match-label">The people who run it</span>
+            <span class="match-src"
+              ><strong>PBS:</strong> "This is a proudly women-run business, a
+              small group of friends, with everyone doing more than one
+              job."</span
             >
-            <span
-              >French on her restaurant, in her own words: "40 plus people,"
-              "run by all women," "driven by what the produce is."</span
+            <span class="match-src"
+              ><strong>Erin French:</strong> "And it's run by all women out
+              here, all my best friends, we got the little engine that it
+              could."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">Getting a table</span>
+            <span class="match-src"
+              ><strong>PBS:</strong> "Some 20,000 people around the U.S. and
+              25 other countries apply each year by postcard, some quite
+              fanciful, to have their names drawn for a coveted table."</span
+            >
+            <span class="match-src"
+              ><strong>Erin French:</strong> "So, we take postcards for
+              reservations... there was no system that was going to be more
+              fair or slow things down because we really wanted to just slow
+              things down."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">The story of her success</span>
+            <span class="match-src"
+              ><strong>PBS:</strong> "She later suffered through a toxic first
+              marriage and depression that led to alcohol and prescription
+              drug addiction." and "Reinvention came through food, first
+              driving around an old airstream to do pop-up dinners in barns,
+              orchards and farms, then in the restored old mill back in the
+              town she'd first so wanted to leave."</span
+            >
+            <span class="match-src"
+              ><strong>Erin French:</strong> "I think I've just been trying
+              to maintain what I've grown and appreciate what I have. And I'm
+              not looking to grow things to be bigger. I'm not looking to open
+              more restaurants."</span
             >
           </div>
         </div>
@@ -746,10 +826,13 @@
 
       <div class="section-title">Show What You Heard</div>
       <div class="wrapup">
-        <p class="instr">
-          <strong>Don't read ahead.</strong> Your teacher will read a short
-          paragraph out loud once.
-        </p>
+        <div class="stop-flag">
+          <div class="stop-badge" aria-hidden="true">STOP</div>
+          <p class="instr">
+            <strong>Don't read ahead.</strong> Your teacher will read a short
+            paragraph out loud once.
+          </p>
+        </div>
         <div class="qitem">
           <span class="num">1.</span>
           <div class="qbody">

@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.11)
+# Generation Quality Standards (v1.13)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -110,7 +110,14 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    story')" after "find one evaluative word," no "(from a measured tone to a regretful one)" after "locate one
    tonal shift," no "(a 'quiet little cafe')" after "what she originally planned." In a two-source comparison
    item, the material printed for each source is that source's own words or a neutral paraphrase of what it
-   says, never a characterization of its tone or a statement of the contrast the question asks for. A
+   says, never a characterization of its tone or a statement of the contrast the question asks for. That
+   printed material is also enough to compare from: at least three short verbatim excerpts per source
+   (ellipses at cuts, each excerpt within the lesson's fair-use ceiling), covering the same two or more
+   subjects in both sources so the student compares like with like. A one-sentence summary of what a source
+   covers, or a list of two-word fragments, is not enough; a student cannot rewind the clip or open the second
+   source mid-task, so the page carries the comparison's evidence. Layout is the packet's choice: one block per
+   source, or one row per shared subject holding both sources' excerpts when the sources line up subject by
+   subject. A
    parenthetical in a stem is limited to a format instruction ("2-3 sentences," "circle one" when options are printed, C10), a choice menu
    in which no option is the answer, or a gloss of a word the item does not test. A frame model at a
    fixed-form Level ("It is ___." shown once as "It is soft.") models the form, not the answer, and is not
@@ -225,8 +232,10 @@ type's own prompt states the bank in its own terms and assigns a shape to each s
    parenthetical (C9), so the packet regeneration has a labeled line to strip rather than a sentence to
    copy. An assessment keeps its separate answer-key section as its own prompt specifies.
 3. **Pacing diagram.** Each day opens with an ASCII timeline of its phases and minute allocations.
-4. **Metadata line.** The document opens with `**Module:** ... | **Band:** ... | **Task Levels:** ... |
-   **Version:** <Module>.<Set>.<Lesson>.<Version>` per `Program_Conventions.md` §G.
+4. **Metadata line.** The document opens with `**Module:** <N>, <Name> | **Band:** ... | **Task Levels:** ... |
+   **Version:** <Module>.<Set>.<Lesson>.<Version>` per `Program_Conventions.md` §G. The Module field is
+   the number, a comma, and the name as `Program_Conventions.md` §A spells it (`1, Describing`) - one
+   shape, so the name matches the packet masthead's Module tag (`Student_Packet_Style_Guide.md` §B).
 5. **Plain, instruction-first prose.** Clear instructions over decorative language; each task Level's
    vocabulary and grammar stay inside the same ceiling the source lesson used for that Level.
 6. **Concrete prompts at Beginner and Intermediate.** Every student-facing prompt is a concrete action on the
@@ -278,10 +287,11 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     lesson, the form shown once as a model, every other item in a rotated shape, and homework holding one
     production plus other shapes? (D10)
 23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find,
-    and every exemplar answer sits on an `Answer note:` line under its item? (C9, E2)
+    and every exemplar answer sits on an `Answer note:` line under its item? In a two-source item, at least
+    three verbatim excerpts per source on the same two or more subjects, never a one-line summary? (C9, E2)
 24. Every "circle," "underline," "match," or "point to" instruction has printed options or targets on the
     page, and every choice posed only in a stem's wording is answered in writing or given a printed menu? (C10)
 
 ## Changelog
 
-**Current version: v1.11.** See `Changelog.md` in this folder.
+**Current version: v1.13.** See `Changelog.md` in this folder.

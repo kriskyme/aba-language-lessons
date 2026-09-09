@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.4.3
+**Module:** 1, Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.4.3
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise Module 1's part for effect
 with Module 1's tools, final copy of that part kept for Module 2's Set, not published, no hand-off note; Closing

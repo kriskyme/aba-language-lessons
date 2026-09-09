@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.15
+**Module:** 1, Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.15
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise for effect with Module 1's tools,
 final copy kept for Module 2's Set, not published, no hand-off note; Closing Transfer Check for Module 1's skill)

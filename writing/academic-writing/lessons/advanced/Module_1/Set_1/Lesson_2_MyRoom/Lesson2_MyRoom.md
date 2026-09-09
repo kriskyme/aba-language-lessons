@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1: Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.2.2
+**Module:** 1, Describing | **Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Version:** 1.1.2.2
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B and Essay Focus B;
 Day 2's required-feature warm-up and prewriting, which introduce the draft object and its Draft Word Bank)

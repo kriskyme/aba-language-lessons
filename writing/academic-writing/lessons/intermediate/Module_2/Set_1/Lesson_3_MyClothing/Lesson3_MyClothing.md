@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3 (Module 2)
 
-**Module:** 2: Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.3.0
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.3.0
 
 **Set:** 1 of Module 2 (Part 2 of Module Pair 1-2) | **Pair position:** 7 of 8 (Set position 3 of 4: drafting
 Module 2's part, the second paragraph, complete on Day 1; Day 2 the merged self-edit checklist over both parts)

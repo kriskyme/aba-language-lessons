@@ -215,6 +215,17 @@ gained the underlying distractor-word rule this pass applies (see `Changelog.md`
 `lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment.md` and `Set1_Advanced_Assessment_Packet.html`. Still not yet
 given to a real class.
 
+**Lesson 1 Task D rebuilt (2026-09-09), `1.1.1.1` -> `1.1.1.2` and `Set_1_T` `1.1T.1.5` -> `1.1T.1.6`:** per user
+review ("the two examples just seem too sparse, not enough meat"), the Level 7 two-source compare rows, which
+the same day's stem sweep had reduced to a one-sentence summary of the PBS segment and three two-word Cherry
+Bombe fragments, are rebuilt as four subject-paired rows of verbatim excerpts (the place, the people who run
+it, getting a table, the story of her success), each row holding Jeffrey Brown's narration and Erin French's
+podcast answer, re-fetched from both sources for exact wording. Quality Standards §C9 now carries the
+underlying enough-to-compare floor and the two allowed layouts (see `shared/Changelog.md`);
+`Generate_Student_Packet_Prompt_v2.3.md` -> `_v2.4.md`. Lessons 2-4's Task D rows are logged in `Index.md`
+Pending work. Same content in the base `.md`/packet and the `Set_1_T` fork's; the fork's teacher-only homework
+file is unchanged. Not yet given to a real class.
+
 ---
 
 **Format for the next Set's entry** (append below this line, do not overwrite anything above):

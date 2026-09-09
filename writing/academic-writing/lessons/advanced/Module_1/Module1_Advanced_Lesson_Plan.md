@@ -1,6 +1,6 @@
 # Academic Writing Module Lesson Plan: Module 1 (Describing), Advanced Band, Set 1
 
-**Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Module:** 1: Describing | **Set:** 1 (Part 1 of Module Pair
+**Band:** Advanced | **Task Levels:** 4, 5, 6, 7 | **Module:** 1, Describing | **Set:** 1 (Part 1 of Module Pair
 1-2) | **Plan version:** 2.1 (regenerated 2026-09-08 against `Generate_Module_Lesson_Plan_Prompt_v4.5.md`,
 `shared/Program_Conventions.md` v1.10, and `shared/Generation_Quality_Standards.md` v1.6)
 
