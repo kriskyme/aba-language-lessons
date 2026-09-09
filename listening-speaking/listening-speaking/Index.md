@@ -44,7 +44,7 @@ out of scoping this against that sample:
 
 | File                                                                 | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Sync status                                                                                                                                                                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Generate_Lesson_Prompt_v2.1.md` | Generates one lesson (a 2-day cycle: Day 1 Listening, Day 2 Speaking): sources a real audio/video text, builds tiered listening and speaking tasks around it, and produces three artifacts in order (transcript file, lesson `.md`, packet `.html`). Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; states only what is true of a real-source lesson (Section 0.2 runtime/pace/register ceilings, 0.3 sourcing and fair-use rules and the transcript file, 0.4 rotation banks, the two-day phase structure) and points to the shared files for everything modality-neutral. Section 0.5's self-check is the shared Quality Standards §F list plus 13 Listening/Speaking-only items. The TOEFL Track Tier (formerly Section 0.6) now lives in its own companion prompt, next row. | Current (v2.1); nine real lessons generated against v1.1-v1.10 (Beginner 1, Intermediate 1-4, Advanced 1-4), all on the 2-day cycle; the transcript-file requirement is going-forward only so far - see Pending work |
+| `Generate_Lesson_Prompt_v2.3.md` | Generates one lesson (a 2-day cycle: Day 1 Listening, Day 2 Speaking): sources a real audio/video text, builds tiered listening and speaking tasks around it, and produces three artifacts in order (transcript file, lesson `.md`, packet `.html`). Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; states only what is true of a real-source lesson (Section 0.2 runtime/pace/register ceilings, 0.3 sourcing and fair-use rules and the transcript file, 0.4 rotation banks, the two-day phase structure) and points to the shared files for everything modality-neutral. Section 0.5's self-check is the shared Quality Standards §F list plus 13 Listening/Speaking-only items. The TOEFL Track Tier (formerly Section 0.6) now lives in its own companion prompt, next row. | Current (v2.2, 2026-09-09: exemplar answers go on an `Answer note:` line under the task, never in the task sentence - see `Changelog.md`); nine real lessons generated against v1.1-v1.10 (Beginner 1, Intermediate 1-4, Advanced 1-4), all on the 2-day cycle; the transcript-file requirement is going-forward only so far - see Pending work |
 | `Generate_TOEFL_Track_Tier_Prompt_v1.md` | Generates a TOEFL-capable variant of an already-generated Advanced/Proficient Set, forked into a sibling `Set_<N>_T/` folder (never editing the base files): four touchpoint kinds threaded through both days - (A) teacher-only "TOEFL Connection" framing in Phases 1 and 3 of each day, (B) three in-class touchpoints on the class's shared pacing (organizer column, extra transfer-check question, reframed protocol turn), (C) a Listening capstone answered from the same shared source, (D) a Speaking capstone split into an untimed in-class rehearsal plus a teacher-recorded Teams homework whose script and scoring guides live in a separate teacher-only `_TOEFL_Homework.html` file. Section 1 is the lesson side, Section 2 the packet rendering (the former 2.6a/2.7a/2.8a/2.10a/2.10b/2.11a of the Student Packet prompt), Section 3 the self-check. Extracted 2026-09-08 from the Lesson prompt's Section 0.6 and the packet prompt's TOEFL sub-sections, mirroring how Passage Reading keeps its TOEFL extension as a separate companion. | Current (v1); one fork generated under the old embedded mechanism (Advanced Set 1 Lesson 1, `Module_1/Set_1_T/`, `1.1T.1.4`), content unchanged by the extraction |
 | `Generate_Module_Lesson_Plan_Prompt_v2.1.md` | Plans **one Set** (4 lessons: topic directions, content-format/strategy/skill/hook/protocol rotation, vocabulary themes, task-Level-to-objective mapping with both CSV halves named) before any lesson is generated. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; Rotation Log mechanics and adjacency rules point to Conventions §F; the 2026-09-03 8-lesson correction narrative and the "same as Passage Reading" cross-references are gone. Listening/Speaking objectives only. | Current (v2.1) |
 | `Rotation_Log.md`                                                     | Overview only as of the per-Band split: purpose, the cross-Band historical notes (day-count correction, Sets/Assessment-prompt introductions), and links to each Band's own log.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | N/A (data, not a prompt) |
@@ -53,8 +53,8 @@ out of scoping this against that sample:
 | `Rotation_Log_Proficient.md`                                          | Same, for the Proficient Band. Created 2026-09-07 - the first Band file created purely from a plan, before any lesson in the Band had been generated; Lesson 1 generated the same day.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 (Lesson 1 of 4 generated) |
 | `Rotation_Log_Beginner.md`                                            | Same, for the Beginner Band. Created 2026-09-07.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 (Lesson 1 generated) |
 | `Changelog.md`                                                        | Version history for this prompt family. Not a prompt itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | N/A (data, not a prompt)                                                                                                                                                                                            |
-| `Generate_Student_Packet_Prompt_v2.2.md` | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) in two parts (Unit _A Listening / Unit _B Speaking). Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Listening/Speaking packet (the citebox and its placement and media-type wording, Good to Know boxes front-loaded, the Listening Notes organizer, fixed-frame and multi-source task rules, the upside-down Check What You Heard script, Learn the Phrase, `.qitem`-numbered Discuss It, jargon-free closing headings) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, the delta CSS (now §H.1 there, moved out of this prompt), and the shared packet self-check. TOEFL Track Tier rendering moved to `Generate_TOEFL_Track_Tier_Prompt_v1.md` Section 2. Section 5 is Style Guide §I plus 10 Listening/Speaking items. | Current (v2.0); every packet under `lessons/` was generated against v1.3-v1.10 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`) |
-| `Generate_Assessment_Prompt_v2.md` | Generates a Set's Listening (Part A) and Speaking (Part B) assessments. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Listening/Speaking-specific (2-3 new real clips sourced like a lesson's, vocabulary pooled across the Set and tested only inside items, objective-only formats, the single-period structure, Part B's mechanism-by-band table and countable content requirements, the 3-point rubric) and points to Quality Standards §C for item quality, which now carries the distractor, padded-bank, and time-balance rules this prompt introduced program-wide. Self-checks are Quality Standards §F plus 8 Part A and 6 Part B items. | Current (v2); two assessments generated under v1 (Intermediate and Advanced Set 1) |
+| `Generate_Student_Packet_Prompt_v2.3.md` | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) in two parts (Unit _A Listening / Unit _B Speaking). Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Listening/Speaking packet (the citebox and its placement and media-type wording, Good to Know boxes front-loaded, the Listening Notes organizer, fixed-frame and multi-source task rules, the upside-down Check What You Heard script, Learn the Phrase, `.qitem`-numbered Discuss It, jargon-free closing headings) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, the delta CSS (now §H.1 there, moved out of this prompt), and the shared packet self-check. TOEFL Track Tier rendering moved to `Generate_TOEFL_Track_Tier_Prompt_v1.md` Section 2. Section 5 is Style Guide §I plus 10 Listening/Speaking items. | Current (v2.3, 2026-09-09: Answer notes stripped, stems carried without answer-stating parentheticals, compare layout holds source content not the contrast - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.10 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`) |
+| `Generate_Assessment_Prompt_v2.1.md` | Generates a Set's Listening (Part A) and Speaking (Part B) assessments. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Listening/Speaking-specific (2-3 new real clips sourced like a lesson's, vocabulary pooled across the Set and tested only inside items, objective-only formats, the single-period structure, Part B's mechanism-by-band table and countable content requirements, the 3-point rubric) and points to Quality Standards §C for item quality, which now carries the distractor, padded-bank, and time-balance rules this prompt introduced program-wide. Self-checks are Quality Standards §F plus 8 Part A and 6 Part B items. | Current (v2); two assessments generated under v1 (Intermediate and Advanced Set 1) |
 | `Generate_Assessment_Student_Packet_Prompt_v2.1.md` | Takes a completed Assessment and produces the student handout: Listening Test pages per Level with a citebox per clip, Speaking Task cards with the rubric's Meets column as a `.checklist` (now Style Guide §H.4), no answer keys, rubric tables, or submission information. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 items. | Current (v2); two packets generated under v1 |
 | `learningobjectives.csv` (project file, shared with Passage Reading) | Source of truth for every Learning Objective, including the Listening/Speaking modality rows this family pulls from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | N/A (data)                                                                                                                                                                                                          |
 
@@ -111,6 +111,10 @@ picture placeholders, word banks positioned before their items, universal questi
 lines, the `.match-row`/`.qitem`/`.num` consistency fixes) - see that prompt's own changelog for the complete
 list. Not yet reviewed against a printed page.
 
+**Set 1's image register:** `lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Image_Credits.md` - every image
+embedded in the four lessons' packets (19 today), one table per lesson with asset file, where used, Commons title,
+author, license, and source URL (`shared/Program_Conventions.md` §D/§I). Packets print no credit.
+
 **Set 1's Listening/Speaking Assessment:** `lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Assessment.md`.
 Part A (Listening) uses **2 new, verified real clips** (the current prompt's multi-clip design): "Visitors Laugh
 Away Troubles at the HaHaHouse Museum" (VOA Learning English, a real laughter museum in Zagreb, Croatia) and
@@ -148,10 +152,10 @@ rhetorical framing) - flagged per lesson with a suggested angle in the plan. **S
 
 | File                                                                                                    | Lesson # | Real source(s)                                                                                                                                                                         | Status                                                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Module_1/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`             | 1        | Primary: PBS NewsHour feature on Erin French/The Lost Kitchen (Freedom, Maine). Secondary (Level 7 excerpt only): Radio Cherry Bombe podcast interview with Erin French.               | Current, per the Lesson prompt's fifth-addendum mapping table. No task, quote, vocabulary item, or differentiated activity was cut, only reorganized |
-| `Module_1/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`     | 2        | Primary: PBS NewsHour Weekend feature on Phoenix mid-century modern preservation. Secondary (Level 7 excerpt only): Modern Phoenix's Beadle Archive page on the White Gates Residence. | Current, same treatment as Lesson 1                                                                                                                    |
-| `Module_1/Set_1/Lesson_3_KeyDeer/Lesson3_KeyDeer.md`                     | 3        | Primary: PBS News Weekend "Saving Species" feature on the Key deer and the National Key Deer Refuge (Florida Keys). Secondary (Level 7 excerpt only): U.S. Fish & Wildlife Service's official National Key Deer Refuge pages. | Current - generated fresh against v1.1, current 2-day architecture from the start, no restructure needed |
-| `Module_1/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`             | 4        | Primary: Idaho Public Television's *createid* series, "Glass Bender: Wil Kirkman" (Rocket Neon, Boise). Secondary (Level 7 excerpt only): Boise Art Scene's written interview with Wil Kirkman. | Current - generated fresh against v1.1, current 2-day architecture from the start, no restructure needed. Completes Set 1. |
+| `Module_1/Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`             | 1        | Primary: PBS NewsHour feature on Erin French/The Lost Kitchen (Freedom, Maine). Secondary (Level 7 excerpt only): Radio Cherry Bombe podcast interview with Erin French.               | Current, per the Lesson prompt's fifth-addendum mapping table. No task, quote, vocabulary item, or differentiated activity was cut, only reorganized Stem sweep 2026-09-09 (Quality Standards §C9): Day 1 Phase 4 parentheticals moved to `Answer note:` lines, version bumped, packet Tasks B-D made to match. |
+| `Module_1/Set_1/Lesson_2_LivingTextbooks/Lesson2_LivingTextbooks.md`     | 2        | Primary: PBS NewsHour Weekend feature on Phoenix mid-century modern preservation. Secondary (Level 7 excerpt only): Modern Phoenix's Beadle Archive page on the White Gates Residence. | Current, same treatment as Lesson 1 Stem sweep 2026-09-09 (Quality Standards §C9): Day 1 Phase 4 parentheticals moved to `Answer note:` lines, version bumped, packet Tasks B-D made to match. |
+| `Module_1/Set_1/Lesson_3_KeyDeer/Lesson3_KeyDeer.md`                     | 3        | Primary: PBS News Weekend "Saving Species" feature on the Key deer and the National Key Deer Refuge (Florida Keys). Secondary (Level 7 excerpt only): U.S. Fish & Wildlife Service's official National Key Deer Refuge pages. | Current - generated fresh against v1.1, current 2-day architecture from the start, no restructure needed Stem sweep 2026-09-09 (Quality Standards §C9): Day 1 Phase 4 parentheticals moved to `Answer note:` lines, version bumped, packet Tasks B-D made to match. |
+| `Module_1/Set_1/Lesson_4_GlassBender/Lesson4_GlassBender.md`             | 4        | Primary: Idaho Public Television's *createid* series, "Glass Bender: Wil Kirkman" (Rocket Neon, Boise). Secondary (Level 7 excerpt only): Boise Art Scene's written interview with Wil Kirkman. | Current - generated fresh against v1.1, current 2-day architecture from the start, no restructure needed. Completes Set 1. Stem sweep 2026-09-09 (Quality Standards §C9): Day 1 Phase 4 parentheticals moved to `Answer note:` lines, version bumped, packet Tasks B-D made to match. |
 
 All four lessons above follow the current Day 1 (Unit A)/Day 2 (Unit B) architecture, and their student packets
 match the current Student Print Formatting Prompt conventions (Good to Know at the top, citebox at the point of
@@ -239,7 +243,11 @@ to a real class.
 
 **Print formatting (student version), all current:**
 
-- Intermediate Lesson 1: `Module_1/Set_1/Lesson_1_NewBakery/NewBakery_Intermediate_L1_Packet.html`.
+- Intermediate Lesson 1: `Module_1/Set_1/Lesson_1_NewBakery/NewBakery_Intermediate_L1_Packet.html`. **2026-09-09:**
+  all seven of its images (two hook photos, three choice pictures, the hand-mill/factory-machine pair) are now
+  embedded, cited Wikimedia Commons files per `shared/Program_Conventions.md` §I (`Lesson1_NewBakery_Img_*.jpg`);
+  the hand-supplied raw files that had been sitting in the folder were removed. Credits live in
+  `Module_1/Set_1/Set1_Intermediate_Image_Credits.md`, not in the packet captions (Style Guide v2.17, same day).
   Two parts (Unit 1A Listening / Unit 1B Speaking), each with its own star-rated choose-your-task block merging
   that half's differentiated day content into one block per Level, a plain citation box in place of a printed
   passage, and a fillable Listening Notes comparison table. Hand-corrected 2026-09-06: added the
@@ -253,7 +261,10 @@ to a real class.
   two-tag stack (`Listening & Speaking` / `Intermediate 1.1.1.0`, Unit 1A masthead only, matching
   LostKitchen's retrofit); Task A item 3's word bank moved from a trailing block after the whole
   list to inline with its item, matching Task B item 2.
-- Intermediate Lesson 2: `Module_1/Set_1/Lesson_2_PortoFoodTour/PortoFoodTour_Intermediate_L2_Packet.html`. Same
+- Intermediate Lesson 2: `Module_1/Set_1/Lesson_2_PortoFoodTour/PortoFoodTour_Intermediate_L2_Packet.html`.
+  **2026-09-09:** its five images (three choice pictures, sardines, the old grocery store) are embedded, cited
+  Commons files (`Lesson2_PortoFoodTour_Img_*.jpg`); the grocery photo is A Pérola do Bolhão itself, the 1896 shop the
+  video visits; credits in `Set1_Intermediate_Image_Credits.md`. Same
   two-part structure; the Four-Corner Debate hook was translated into a plain "which sounds
   most like you" print activity rather than the live corner-moving version, and the Jigsaw protocol collapsed
   into three simultaneous small-group discussion prompts, per Section 1's translation rules. Fully synced
@@ -271,14 +282,18 @@ to a real class.
   margin to 10px and restored `.idiom-item`/`.idiom-phrase`'s font properties (unused in this lesson - no idiom in
   the source - but kept in sync for stylesheet consistency); reflowed every multi-line `font-family` declaration.
   **2026-09-08:** raw media assets added to this lesson's folder and renamed to match the new naming convention
-  (`shared/Program_Conventions.md` §H): `Lesson3_Backpack_Img_Hook.webp` (the Mystery Quote hook's cropped
-  hip-belt photo), `Lesson3_Backpack_Img_ChoiceBackpack.jpg`/`Img_ChoiceBicycle.jpg`/`Img_ChoiceTent.webp` (the
+  (`shared/Program_Conventions.md` §H): `Lesson3_Backpack_Img_Hook.jpg` (the Mystery Quote hook's cropped
+  hip-belt photo), `Lesson3_Backpack_Img_ChoiceBackpack.jpg`/`Img_ChoiceBicycle.jpg`/`Img_ChoiceTent.jpg` (the
   three answer-choice images for Day 1 Phase 4's Level 2 "backpack/bicycle/tent" item), and a
   `Lesson3_Backpack_SourceVideo.webloc`/`.url` link-shortcut pair to the cited YouTube source video. None of
   these is embedded into `Lesson3_Backpack.md` or the packet HTML yet (the packet still uses a placeholder for
   the Mystery Quote photo and no images for the Level 2 choice item) - that integration is still pending, see
   Pending work.
-- Intermediate Lesson 4: `Module_1/Set_1/Lesson_4_GreatGrandmother/GreatGrandmother_Intermediate_L4_Packet.html`. Fully
+- Intermediate Lesson 4: `Module_1/Set_1/Lesson_4_GreatGrandmother/GreatGrandmother_Intermediate_L4_Packet.html`.
+  **2026-09-09:** its three choice pictures (Day 1 Phase 4's Level 2 "great-grandmother/teacher/soccer team" item)
+  are now embedded, cited Wikimedia Commons files per `shared/Program_Conventions.md` §I
+  (`Lesson4_GreatGrandmother_Img_Choice*.jpg`; credits in `Set1_Intermediate_Image_Credits.md`) - the last empty
+  `.pic-box` in Intermediate Set 1's four lessons. Fully
   synced 2026-09-07, same sweep as Lessons 2-3: added the `.masthead-meta` two-tag stack (`Intermediate 1.1.4.0`,
   Unit 4A masthead only) and its CSS/`.masthead` flex layout; realigned `.vocab-list .word`'s column width to
   the shared 130px (was locally widened to 150px), the same drift LostKitchen had; added the missing
@@ -353,7 +368,7 @@ C compare-pair layout for Level 7, upside-down Closing Transfer Check script). I
 per the retired idiom-table rule (see `Changelog.md`). Not yet reviewed against a printed page, same as every
 other packet in this family.
 
-Next step for this Band: run `Generate_Lesson_Prompt_v2.1.md` for Lesson 2 against the approved plan, one lesson
+Next step for this Band: run `Generate_Lesson_Prompt_v2.3.md` for Lesson 2 against the approved plan, one lesson
 at a time, per the Generation workflow below.
 
 ## Generation workflow (current)
@@ -364,15 +379,15 @@ target Module and Band. It reads the Rotation Log first (`Rotation_Log.md` plus 
 default), and runs its self-check. Review and approve the plan before
 generating any lesson content. Once approved, append its Rotation Log entry to that Band's `Rotation_Log_<Band>.md`.
 
-**Step 2 - Generate lessons.** Run `Generate_Lesson_Prompt_v2.1.md` (pasted with
-`shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`) against the approved plan. Because each lesson now requires finding and verifying a real source (not just writing to a word-count
+**Step 2 - Generate lessons.** Run `Generate_Lesson_Prompt_v2.3.md` (pasted with
+`shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`) against the approved plan. Any image a lesson needs is fetched and cited in this same step (`shared/Program_Conventions.md` §I). Because each lesson now requires finding and verifying a real source (not just writing to a word-count
 ceiling), generate **one lesson at a time** for this family rather than Passage Reading's two-at-a-time pacing,
 at least until the sourcing step has proven reliable enough to batch. As of v1.3, generate three artifacts per
 lesson, in order: the source's `<Slug>_Transcript.md` (full real transcript, verbatim, teacher-only), then the
 lesson `.md`, then its student packet `.html`. Check each lesson's self-check (runtime/citation/task-Level/
 transcript-file checks) before moving to the next.
 
-**Step 3 - Assess.** Once a Set (4 lessons) is complete, run `Generate_Assessment_Prompt_v2.md` for that Set - both Part A (Listening) and Part B (Speaking) run every Set, not staggered. Part B's
+**Step 3 - Assess.** Once a Set (4 lessons) is complete, run `Generate_Assessment_Prompt_v2.1.md` for that Set - both Part A (Listening) and Part B (Speaking) run every Set, not staggered. Part B's
 mechanism depends on the Band: Beginner/Intermediate produce a scored Teams Speaking Progress recording task
 (the formal assessment itself); Advanced/Proficient produce a live presentation task plus a same-task
 Teams-recording alternate for standing use (e.g. an absence). See that prompt's own scope notes (Section B.0-B.1).
@@ -393,6 +408,23 @@ is actually wanted, not automatically for every Set.
 
 ## Pending work
 
+- **Stem-answer backlog (Quality Standards §C9, 2026-09-09):** Proficient
+  `Module_1/Set_1/Lesson_1_LowerNinthWard/` still prints the segment's organization and the tonal shift inside
+  the Task stems' parentheses (packet Unit A Tasks; matching `.md` Phase 4 lines). Move each to an `Answer note:`
+  line and strip the packet stem when the lesson is next touched. Intermediate Set 1's Unit B stems that offer
+  "(for example, calling something 'impressive' or 'unusual')" are option menus, not answers, unless the quoted
+  word is from the clip - check each when its packet is next regenerated.
+- **Resolved 2026-09-09 (Conventions §I):** Backpack's four hand-supplied images were replaced with cited Wikimedia
+  Commons files (the hook is a hip-belt crop of the same CC0 backpack photo used as the "a backpack" choice; the
+  bicycle and tent are CC BY-SA 4.0 / CC0), with `Image:` citation lines in the `.md` and credits in
+  `Set1_Intermediate_Image_Credits.md`. The two former `.webp` assets are now `.jpg`.
+- **Resolved 2026-09-09 (Conventions §I):** GreatGrandmother's three empty choice boxes (a great-grandmother / a
+  teacher / a soccer team) now hold cited Wikimedia Commons photos (CC BY-SA 3.0 / CC BY 4.0 / CC BY 2.0), with
+  `Image:` citation lines in the `.md` and credits in `Set1_Intermediate_Image_Credits.md`.
+- **Resolved 2026-09-09 (Conventions v1.13 / Style Guide v2.17):** photo credits moved out of the four Intermediate
+  Set 1 packets into one Set-level register, `Module_1/Set_1/Set1_Intermediate_Image_Credits.md` (19 images, one
+  table per lesson); the packets' credit clauses were stripped and the credit-only captions under the four
+  `.pic-options` grids removed - see `shared/Changelog.md`.
 - **Objective as a student can-do (Style Guide v2.10, 2026-09-08):** every existing packet's objective opens with
   a bare verb ("Objective: describe...", "Objective: listen for..."), the form the Style Guide retired in favor
   of "I can" plus the skill in the student's voice. Rewrite each as "I can ..." when its packet is next
@@ -401,9 +433,8 @@ is actually wanted, not automatically for every Set.
 - **Self-contained rule backlog (Quality Standards §D8, 2026-09-08):** these packets still carry empty `.pic-box`
   grids, "[TEACHER: insert photo ...]" notes, or a "hold up real objects" hook, to be replaced by embedded images
   or a real-object redesign when each is next touched: `WhatIsIt_Beginner_L1_Packet.html` (18 empty boxes plus
-  the real-objects hook in its `.md`), `NewBakery_Intermediate_L1_Packet.html` (two photo notes),
-  `PortoFoodTour_Intermediate_L2_Packet.html` (photo note plus three boxes), `LivingTextbooks_Advanced_L2_Packet.html`
-  (one box), `GreatGrandmother_Intermediate_L4_Packet.html` (three boxes), `Backpack_Intermediate_L3_Packet.html`
+  the real-objects hook in its `.md`), `LivingTextbooks_Advanced_L2_Packet.html`
+  (one box), `Backpack_Intermediate_L3_Packet.html`
   (three remaining boxes; its hook and choice images are already embedded), and
   `Set1_Intermediate_Assessment_Packet.html` (three boxes on a graded item).
 
@@ -418,7 +449,7 @@ is actually wanted, not automatically for every Set.
   `lessons/<band>/` root). Proficient Lesson 1 (`Lower Ninth Ward`) was generated before v1.3 too and
   belongs on this list once confirmed.
 - **Generate Proficient Module 1 Set 1's remaining lessons (2-4)** - Lesson 1 is generated; Lessons 2-4 are still
-  planned only. Run `Generate_Lesson_Prompt_v2.1.md` one lesson at a time, per the Generation workflow below,
+  planned only. Run `Generate_Lesson_Prompt_v2.3.md` one lesson at a time, per the Generation workflow below,
   applying the same Level 7 two-source pattern and Level 8 withheld-content source each time.
 - **Give both Set 1 assessments to a real class** - Intermediate Set 1's and Advanced Set 1's assessments are
   both generated but neither has been field-tested. Once given, expect addenda the same way the Lesson prompt
@@ -426,7 +457,7 @@ is actually wanted, not automatically for every Set.
 - **Homework Generation Prompt** - not started. Will need its own rules given a homework assignment can't
   hand a student the full copyrighted transcript the way Passage Reading homework reuses the anchor text.
 - **Generate any future Set's assessment** - once Set 2 (either Band) is generated, run
-  `Generate_Assessment_Prompt_v2.md` and `Generate_Assessment_Student_Packet_Prompt_v2.1.md` against it, the same
+  `Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.1.md` against it, the same
   way both were just run for Advanced Set 1.
 - **Part 2 + Presentation Project Extension** - not started. Planned to mirror the content sample's second
   (video) source, cross-source synthesis, and group-presentation assignment, as an optional add-on after a core
@@ -438,7 +469,7 @@ is actually wanted, not automatically for every Set.
 - **Give the `Module_1/Set_1_T` Lesson 1 fork to a real class** - like every other assessment/extension artifact in this
   family, it hasn't been field-tested yet; expect the same kind of addenda the Lesson and Assessment prompts
   picked up after their own first real uses.
-- **Embed Lesson 3 Backpack's real images into the lesson content** - `Lesson3_Backpack_Img_Hook.webp` and the
+- **Embed Lesson 3 Backpack's real images into the lesson content** - `Lesson3_Backpack_Img_Hook.jpg` and the
   three `Img_Choice*` files (see the Intermediate Lesson 3 print-formatting note above) are renamed and sitting
   in the lesson folder but not yet wired into `Lesson3_Backpack.md` or `Backpack_Intermediate_L3_Packet.html`
   (the packet still uses a generic "real picture placeholder" for the Mystery Quote hook and no image for the

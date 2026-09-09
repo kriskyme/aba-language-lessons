@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v2.1)
+# Listening/Speaking Lesson Generation Prompt (v2.3)
 
 **Lesson type:** a **Listening/Speaking Lesson** is a fixed 2-day cycle (Day 1 Listening, Day 2 Speaking; two
 75-minute periods) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -13,7 +13,7 @@ rule, plus the shared self-check) alongside it. This prompt states only what is 
 listening/speaking lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with
 the real source as the content vehicle.
 
-**Current version: v2.1.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.3.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Advanced band, Module 2: Narrating"); a topic direction is
 optional. Without a Module/Band pair, do not search for a source. Live web search is required to find and confirm
@@ -24,7 +24,7 @@ so every task is built against confirmed real text; (2) the teacher-facing lesso
 directly under its H1: `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:**
 <Module>.<Set>.<Lesson>.<Version>` (Conventions §G); (3) the student packet `.html`, by running the Student Packet
 prompt against the finished `.md` (Style Guide §G). All three save to the same `Lesson_<N>_<Slug>/` folder
-(Conventions §D).
+(Conventions §D). Any image the lesson embeds is fetched, cited in the `.md`, and added as a row to the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §I); the packet prints no credit.
 
 **Scope:** the core lesson only. A TOEFL-capable variant of a Set is generated afterward by
 `Generate_TOEFL_Track_Tier_Prompt_*.md` against the finished base lessons, into a sibling `Set_<N>_T/` fork; a
@@ -213,6 +213,8 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the real sourc
     name, or the frame) is produced at most once per day, every other Level 1-2 item takes a different 0.6
     shape, no shape twice in this lesson or in the same slot as the previous lesson, and the frame is printed
     once per day?
+15. **Answer notes:** every exemplar answer on an `Answer note:` line under its Level's task, and no task
+    sentence or parenthetical stating what the item asks for (Quality Standards §F item 23)?
 
 If any check fails, revise before finalizing; do not build any task on a source that failed items 1-3.
 
@@ -281,7 +283,9 @@ _Phase 4: Differentiated Listening Task, Choose One Level (20 min)_
 - One merged, star-rated task per task Level: what main-idea, detail, and critical-thinking items would cover,
   written as a single sequential item set per Level from the start (the same merge the packet prompt applies).
   A Level 1-2 set produces its form once and fills the rest with 0.6 shapes, never the same point-or-name item
-  repeated.
+  repeated. The exemplar answer for any item (the segment's organization, the evaluative word, the two facts,
+  the tonal shift, the unstated interest) goes on an `**Answer note:**` line under that Level's task, never in
+  the task sentence or its parenthetical (Quality Standards §C9, §E2).
 - **Board-dependent moment** (Quality Standards §D4): students from different task Levels compare and report
   into the shared Phase 2 organizer, so the complete picture exists only once several Levels have contributed.
 - **Respectful Tiers** (Quality Standards §B): the lowest task Level's task includes a genuine, simplified

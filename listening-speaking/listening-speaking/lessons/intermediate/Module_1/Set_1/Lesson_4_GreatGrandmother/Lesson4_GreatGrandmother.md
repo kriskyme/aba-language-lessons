@@ -143,6 +143,9 @@ to Lesson 1.
     new word every \_\_\_." (day / month / year). "What does Takamizawa say at the end of the story? (a) 'It's
     good to live long' (b) 'I am tired' (c) 'I want to stop' [Answer: a] - also ask "Do you think she is happy
     about her life? Circle: yes / no."
+    Image: `Lesson4_GreatGrandmother_Img_ChoiceGreatGrandmother.jpg` - "A sales lady at Takayama market, Japan" by Chillmichal, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:A_sales_lady_at_Takayama_market,_Japan.JPG.
+    Image: `Lesson4_GreatGrandmother_Img_ChoiceTeacher.jpg` - "A public high school teacher in a classroom in the United States 08" by Harrison Keely, CC BY 4.0, https://commons.wikimedia.org/wiki/File:A_public_high_school_teacher_in_a_classroom_in_the_United_States_08.jpg.
+    Image: `Lesson4_GreatGrandmother_Img_ChoiceSoccerTeam.jpg` - "FC Cincinnati starters group photo (29125666664) (cropped)" by Hayden Schiff, CC BY 2.0, https://commons.wikimedia.org/wiki/File:FC_Cincinnati_starters_group_photo_(29125666664)_(cropped).jpg.
   - **Level 3 (4 items):** Choose the best sentence: "It is **_ and _**." (a) a young student, nervous (b) an
     old woman, determined (c) a teacher, strict [Answer: b]. Circle: who teaches Takamizawa new English words?
     (her granddaughter / her doctor / her neighbor). Complete: "Takamizawa wants to be a **_ at the _**." (word

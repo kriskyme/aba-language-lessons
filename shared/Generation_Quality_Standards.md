@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.7)
+# Generation Quality Standards (v1.10)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -104,6 +104,18 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    before the item(s) it serves, never after and never bundled at the end of the task.
 8. **Traceable.** Every item is traceable to one task Level's CSV objective and, in an assessment, to a
    specific source lesson, so a lesson can be dropped from scope without editing any other lesson's items.
+9. **Never contains its own answer.** A question stem, its parenthetical, and any material printed before it
+   in the same task never state, list, or quote what the item asks the student to find: no "(the scene, then
+   her background, then her philosophy)" after "summarize how the segment is organized," no "(like 'success
+   story')" after "find one evaluative word," no "(from a measured tone to a regretful one)" after "locate one
+   tonal shift," no "(a 'quiet little cafe')" after "what she originally planned." In a two-source comparison
+   item, the material printed for each source is that source's own words or a neutral paraphrase of what it
+   says, never a characterization of its tone or a statement of the contrast the question asks for. A
+   parenthetical in a stem is limited to a format instruction ("2-3 sentences," "circle one"), a choice menu
+   in which no option is the answer, or a gloss of a word the item does not test. A frame model at a
+   fixed-form Level ("It is ___." shown once as "It is soft.") models the form, not the answer, and is not
+   covered by this rule. The teacher's exemplar answer belongs on an `Answer note:` line (E2), never in the
+   stem.
 
 ## D. Lesson shape
 
@@ -154,8 +166,11 @@ Rules shared by every 2-day lesson cycle in the program:
    belonging (their own phone, bag, shoe); (2) an object visible in the room; (3) only when neither can
    carry the task (a Beginner label set of unrelated nouns, a "prompted by two pictures" objective), a real
    image embedded in the packet at generation time as a data-URI `<img>`, saved as an asset per Conventions
-   §H and named in the lesson `.md` at the point of use (`Lesson<N>_<Slug>_Img_<Purpose>.<ext>`), so the packet
-   step knows what to embed and the Index can track a missing file. A hook that compares two things uses two students' belongings or two things in the room. Foundation
+   §H and named in the lesson or assessment `.md` at the point of use (`Lesson<N>_<Slug>_Img_<Purpose>.<ext>`;
+   `Set<N>_<Band>_Assessment_Img_<Purpose>.<ext>` for an assessment), so the packet step knows what to embed
+   and the Index can track a missing file; the image is sourced and cited per Conventions §I in the same pass,
+   recorded as a row in the Set's `Set<N>_<Band>_Image_Credits.md`, and never left for the teacher or a
+   reviewer to find. The packet caption carries no credit (Style Guide §F); the register does. A hook that compares two things uses two students' belongings or two things in the room. Foundation
    Support uses printed words from the packet and the student's own drawing.
    Never print a placeholder ("[TEACHER: insert photo]", an empty picture box) and never write "the picture
    your teacher shows you." **The object is a subject, not a prop:** no task requires the belonging to be
@@ -200,6 +215,10 @@ type's own prompt states the bank in its own terms and assigns a shape to each s
 2. **Teacher-facing vs student-facing.** The Markdown lesson, homework, or assessment document is the
    teacher's document: answer keys, timing, rationale, and facilitation cues belong there. The student
    packet is a regeneration of it (see `Student_Packet_Style_Guide.md` §G) and never the other way around.
+   Inside a lesson or homework document, an exemplar or expected answer for an item sits on its own line
+   directly under that item, labeled `**Answer note:**`, never inside the item's own sentence or
+   parenthetical (C9), so the packet regeneration has a labeled line to strip rather than a sentence to
+   copy. An assessment keeps its separate answer-key section as its own prompt specifies.
 3. **Pacing diagram.** Each day opens with an ASCII timeline of its phases and minute allocations.
 4. **Metadata line.** The document opens with `**Module:** ... | **Band:** ... | **Task Levels:** ... |
    **Version:** <Module>.<Set>.<Lesson>.<Version>` per `Program_Conventions.md` §G.
@@ -242,7 +261,8 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 18. No em-dashes; pacing diagram per day; metadata line present with the correct version code? (E)
 19. Self-contained: no prop, picture, card, or photo the teacher must prepare or show; every picture or object
     prompt met by the student's own belonging, an object in the room, or an image embedded in the packet and
-    named by asset file in the `.md`; no placeholder anywhere; and no task that needs the belonging physically present (no "look at it," "point
+    named, sourced, and cited by asset file in the `.md` with a row in the Set's `Image_Credits.md`
+    (Conventions §I), and no credit text in the packet; no placeholder anywhere; and no task that needs the belonging physically present (no "look at it," "point
     to," "hold it up")? (D8)
 20. Self-contained across lessons: no task needs anything a student made in an earlier lesson except the
     carried piece; every plan, bank, model, and object choice rebuilt or reprinted here? (D9)
@@ -252,7 +272,9 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     "several words" task), no activity shape met twice in one lesson or in the same slot as the previous
     lesson, the form shown once as a model, every other item in a rotated shape, and homework holding one
     production plus other shapes? (D10)
+23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find,
+    and every exemplar answer sits on an `Answer note:` line under its item? (C9, E2)
 
 ## Changelog
 
-**Current version: v1.7.** See `Changelog.md` in this folder.
+**Current version: v1.10.** See `Changelog.md` in this folder.

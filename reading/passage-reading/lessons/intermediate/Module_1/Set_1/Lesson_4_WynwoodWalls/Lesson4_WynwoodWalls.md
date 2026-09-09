@@ -143,9 +143,10 @@ Mixed-ability groups of 4, one student per task Level. Each completes their own 
 **Level 2 (extension-down)** - grounding: Level 2 Reading objective ("Can read one short sentence using the
 fixed frame ('It is ___.') describing a familiar object, decoding the open-slot word... with visual support.")
 - Task: Using the lesson's picture of the bird mural (`Lesson4_WynwoodWalls_Img_BirdMural.jpg`, embedded in the
-  student packet), complete: "It is ___." (e.g., "It is bright.")
+  student packet), complete: "It is ___." (e.g., "It is orange.")
 - Respectful Tiers add-on: circle the word that best shows how the mural makes the street feel - *alive* /
   *empty* - using the picture and Paragraph C as a clue.
+Image: `Lesson4_WynwoodWalls_Img_BirdMural.jpg` - "Parrots on a Wall - panoramio" by agracier, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Parrots_on_a_Wall_-_panoramio.jpg.
 
 **Level 3 (native, anchor Level)** - grounding: Level 3 Reading objective ("...two-slot frame... decoding both
 open-slot words... to identify the matching image.")

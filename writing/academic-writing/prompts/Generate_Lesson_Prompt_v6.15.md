@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.13)
+# Academic Writing Lesson Generation Prompt (v6.15)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.13.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.15.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -31,7 +31,7 @@ genre (position 5 introduces Module N+1's own Focus A/B but not a new Scenario).
 `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` (Conventions
 §G). `<Module>` and `<Lesson>` are scoped to the Module the lesson belongs to: Module N+1's Lesson 1 is
 `<N+1>.1.1.0`, not a continuation of Module N's numbering. Its student packet is generated separately by the
-Student Packet prompt immediately after (Style Guide §G).
+Student Packet prompt immediately after (Style Guide §G). Any image the lesson embeds is fetched, cited in the `.md`, and added as a row to the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §I); the packet prints no credit.
 
 **Provisional numbers:** 0.2's output-length targets are a first-pass estimate from the CSV's worked examples and
 ESL paragraph-writing norms, not a verified corpus; recalibrate once real student output exists.
@@ -243,6 +243,8 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
     ("three times" only in Lesson 1 Day 1's guided round), every other frame-regime task in a different shape
     from the 0.4d bank, no shape met twice here or in the same slot as the previous lesson, and the frame
     stated once per day?
+18. **Answer notes:** every activity's key on `Answer note:` lines under the activity, with no item or
+    parenthetical stating what it asks for (Quality Standards §F item 23)?
 
 If any check fails, rewrite before proceeding. Do not build the drafting and editing lessons on a Mentor Ladder
 that fails its own ceilings.
@@ -598,7 +600,9 @@ Key rules:
 
 Each lesson is two 75-minute days of three phases; the phase names and minute allocations below are the pacing
 diagram the generated lesson opens each day with (Quality Standards §E3). Board-dependent moments per 0.7; item
-counts per 0.4b; every item per Quality Standards §C.
+counts per 0.4b; every item per Quality Standards §C. The key for a fill-in, classify, choose-the-form, combine,
+or editing-paragraph activity sits on `**Answer note:**` lines under the activity (§E2), never inside an item or
+its parenthetical (§C9); the Mentor Ladder is a model of the form (0.1b), not an answer, and is unaffected.
 
 ### Essay-regime dual-track guidance (Advanced, Proficient)
 

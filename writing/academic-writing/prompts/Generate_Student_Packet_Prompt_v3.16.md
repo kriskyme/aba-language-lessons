@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.15)
+# Academic Writing Student Print Formatting Prompt (v3.16)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -94,7 +94,9 @@ Markdown gives one star the same complete-the-frame task twice in a section, rep
 Standards §D10 rather than printing it twice. Any Task with
 more than one action or question is a one-sentence lead line then a numbered list, one action or question per
 step, blanks and answer lines inside the step that needs them; never a paragraph of chained instructions
-(Style Guide §F, instructions as steps).
+(Style Guide §F, instructions as steps). Carry each item's stem only: every `**Answer note:**` line and an
+editing paragraph's error list stay in the `.md` (Style Guide §E), and no stem keeps a parenthetical that states
+what the item asks for (Quality Standards §C9).
 
 ### 2.5 Grammar box translation
 
@@ -217,3 +219,4 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
 10. `.rule-table` in the print page-break list; only §H.3 classes added (Section 3)?
 11. Frame printed once per masthead section; later ★/★★ Tasks show only the blank line, leads never re-quote
     the frame, and no star has the same complete-the-frame Task twice (2.4; Style Guide §F, §I item 17)?
+12. Every `Answer note:` and error key stripped; no stem parenthetical stating the answer (2.4)?

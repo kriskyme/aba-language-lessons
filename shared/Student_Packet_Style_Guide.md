@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.14)
+# Student Packet Style Guide (v2.18)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -653,6 +653,7 @@ these.
 | Word-count targets (the 0.2 ranges in words; "count your words") | Students see a sentence count only ("3-6 sentences"), never a word range and never an instruction to count words; word targets stay in the Markdown for the teacher. |
 | Pacing notes ("It is fine to finish tomorrow," "you have 20 minutes," "finish this first," "if there is time") and wrap-up lines ("Keep your piece," "You'll keep working on it soon") | Not printed; time is managed in class. The one continuation line allowed is the Pair position 4 hand-off note itself, never a closing line elsewhere. |
 | A previous lesson's notes, planning, examples, or board ("last time," "your planning notes," "the example from earlier this week") | Never referenced; whatever this day's tasks need is reprinted or rebuilt in this packet (Quality Standards §D9). Only the piece a Set carries forward may be "the piece you wrote last time." |
+| `**Answer note:**` lines and any other exemplar or expected answer in the Markdown | Not printed. Only the item's stem is carried into the packet, and the stem itself keeps no parenthetical that states what the item asks for (Quality Standards §C9). |
 
 If a source lesson uses a term not listed here or in the modality's own rows, apply the same principle:
 state the plain action the student takes, never the pedagogical name for it.
@@ -749,7 +750,10 @@ packet's frame-regime Tasks also follow Quality Standards §D10: a section that 
 complete-the-frame Task twice for one star is a source-document error to report, not a layout to reproduce.
 
 **Multiple choice.** Options fold into the question as an inline parenthetical list, one instruction line
-at the top of the task block, no repeated verb per item and no option-per-line layout. A genuinely
+at the top of the task block, no repeated verb per item and no option-per-line layout. This is the one
+stem parenthetical that may carry source content; every other parenthetical in a stem is limited by
+Quality Standards §C9 (format, a choice menu with no correct option, or an untested gloss), and a
+two-source compare layout prints each source's own content, never its tone or the contrast asked for. A genuinely
 picture-based item embeds its real images (`.pic-options`, an `<img>` inside each `.pic-box`, the caption in
 `.pic-label`); a packet never ships an empty picture box or a "[TEACHER: insert ...]" note. If no image can be
 embedded, the item is rewritten around the student's own object or one in the room (Quality Standards §D8).
@@ -758,8 +762,11 @@ embedded, the item is rewritten around the student's own object or one in the ro
 alt="...">` immediately followed by its `.image-caption`. The source file lives in the lesson folder under its
 Program Conventions §H name (`Lesson<N>_<Slug>_Img_<Purpose>.<ext>`) and the lesson `.md` names it at the point of
 use; the packet embeds a downscaled copy (at most about 800px on the long side, roughly 100 KB), leaving the
-source file unchanged. `.image-placeholder` is only ever a box the student draws in, never a box waiting for a
-photo.
+source file unchanged. The caption is descriptive only ("The bird mural."); it never carries an author,
+license, or "Wikimedia Commons" credit. Credits live in the Set's `Set<N>_<Band>_Image_Credits.md` (Program
+Conventions §D, §I), built from the `.md`'s citation. A `.pic-options` grid gets no `.image-caption` at all -
+its `.pic-label`s are the captions. `.image-placeholder` is only ever a box the student draws in, never a box
+waiting for a photo.
 
 ## G. The Markdown document is the source of truth; the packet is always a regeneration
 
@@ -855,16 +862,15 @@ label above a full-width `.ans-line`), `.qitem` (standalone numbered question), 
 }
 .pic-option .pic-box {
   /* holds an embedded <img>; never printed empty for the teacher to fill */
-  border: 2px dashed var(--ink);
+  border: 1px solid var(--ink);
   height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 10.5px;
-  color: var(--ink-soft);
-  padding: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+.pic-option .pic-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .pic-option .pic-label {
   font-family: system-ui, -apple-system, sans-serif;
@@ -1079,10 +1085,14 @@ Run this list first, then the modality's own list.
     no lead re-quoting it, and no star given the same complete-the-frame Task twice in one section? (§F;
     Quality Standards §D10)
 18. Every embedded image a base64 data-URI `<img class="photo">` (or a `.pic-box` `<img>`) with its rule
-    present in `<style>`, a caption, a §H-named asset file in the lesson folder that the `.md` names, and no
-    placeholder or teacher note anywhere? (§A.1, §F; Quality Standards §D8)
+    present in `<style>`, a descriptive caption with no credit text (and none under a `.pic-options` grid), a
+    §H-named asset file in the lesson folder that the `.md` names and cites, a row in the Set's
+    `Image_Credits.md`, and no placeholder or teacher note anywhere? (§A.1, §F; Quality Standards §D8;
+    Conventions §D, §I)
+19. No `Answer note:` line or other exemplar answer printed, and no stem parenthetical or compare-layout
+    text that states what its item asks the student to find? (§E, §F; Quality Standards §C9)
 
 ## Changelog
 
-**Current version: v2.14.** For the full dated version history and the reasoning behind each
+**Current version: v2.18.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

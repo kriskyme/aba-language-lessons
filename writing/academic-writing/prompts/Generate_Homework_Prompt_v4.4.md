@@ -1,4 +1,4 @@
-# Academic Writing Homework Generation Prompt (v4.3)
+# Academic Writing Homework Generation Prompt (v4.4)
 
 Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
 completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
@@ -103,8 +103,9 @@ practice alone.
 One document per assignment: a header naming the source lesson (Module(s), Band, Scenario), the checkpoint
 reached, and estimated completion time; Part 1 before Part 2; sections lowest Level first through highest, then
 Foundation Support if applicable; the Skill Spotlight restated verbatim above Part 2; a completion checklist per
-Level. No answer key. Style per Quality Standards §E; each Level's vocabulary and grammar inside the same ceiling
-the lesson used.
+Level. No answer key; if the teacher needs an exemplar for an item, it sits on an `**Answer note:**` line under
+that item (Quality Standards §E2), never in the item itself (§C9), and the student copy carries none. Style per
+Quality Standards §E; each Level's vocabulary and grammar inside the same ceiling the lesson used.
 
 ## SECTION 3: SELF-CHECK BEFORE FINALIZING
 
@@ -118,3 +119,4 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then:
    lesson has the layer?
 5. Grading a completion checklist, not the rubric (1.2)?
 6. Whole assignment about 15-20 minutes, essay-regime Levels writing a paragraph, not an essay (1.0)?
+7. No item states its own answer; any exemplar on an `Answer note:` line only (Quality Standards §C9)?

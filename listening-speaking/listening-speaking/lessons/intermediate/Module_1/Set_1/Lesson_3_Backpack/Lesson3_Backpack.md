@@ -120,6 +120,7 @@ instead of eight.
   spoken clue, still without naming the object: "Whatever this belongs to, most of its weight is supposed to
   rest right here, not on your shoulders." Take final guesses, then reveal the full photo: it's the hip belt of
   a backpack.
+  Image: `Lesson3_Backpack_Img_Hook.jpg` - "Plecak Hiker 50 L HiMountain (cropped to the hip belt)" by WrS.tm.pl, CC0, https://commons.wikimedia.org/wiki/File:Plecak_Hiker_50_L_HiMountain.jpg.
 - **Listening Skill Spotlight:** "Today we're practicing listening for sequence markers - noticing words like
   'first,' 'once,' and 'then' that tell us the order steps happen in." (This is what today's Listening Closing
   Transfer Check will ask students to reproduce.)
@@ -155,6 +156,9 @@ instead of eight.
     holding a \_\_\_." (water bottle / shoes / a phone). According to the guide, where should most of a backpack's
     weight go? (a) shoulders (b) hips (c) feet [Answer: b] - also ask "Do you think most people get this right
     without any help? Circle: yes / no."
+    Image: `Lesson3_Backpack_Img_ChoiceBackpack.jpg` - "Plecak Hiker 50 L HiMountain" by WrS.tm.pl, CC0, https://commons.wikimedia.org/wiki/File:Plecak_Hiker_50_L_HiMountain.jpg.
+    Image: `Lesson3_Backpack_Img_ChoiceBicycle.jpg` - "Dutch bicycle" by Petar Milošević, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Dutch_bicycle.jpg.
+    Image: `Lesson3_Backpack_Img_ChoiceTent.jpg` - "Camping tent on tarp" by Eden Aviv, CC0, https://commons.wikimedia.org/wiki/File:Camping_tent_on_tarp.jpg.
   - **Level 3 (4 items):** Choose the best sentence: "It is **_ and _**." (a) a big bag, colorful (b) a bag,
     adjustable (c) a small bag, cheap [Answer: b]. Circle the correct capacity range for a weekend trip: 30-50
     liters / 70+ liters [Answer: 30-50 liters]. Complete: "An external frame pack is **_ and _**." (word bank:

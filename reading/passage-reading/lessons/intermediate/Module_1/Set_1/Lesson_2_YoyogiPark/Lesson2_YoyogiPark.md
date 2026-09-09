@@ -157,6 +157,7 @@ fixed frame ('It is ___.') describing a familiar object, decoding the open-slot 
   student packet), complete: "It is ___." (e.g., "It is new.")
 - Respectful Tiers add-on: circle the word that best shows how the park feels now - *welcoming* / *empty* -
   using the picture and Paragraph D as a clue.
+Image: `Lesson2_YoyogiPark_Img_Park.jpg` - "A path within Yoyogi park, Tokyo, Japan1" by Joli Rumi, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:A_path_within_Yoyogi_park,_Tokyo,_Japan1.jpg.
 
 **Level 3 (native, anchor Level)** - grounding: Level 3 Reading objective ("...two-slot frame... decoding both
 open-slot words... to identify the matching image.")

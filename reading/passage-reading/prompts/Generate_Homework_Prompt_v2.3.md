@@ -1,4 +1,4 @@
-# Passage Reading Homework Generation Prompt (v2.2)
+# Passage Reading Homework Generation Prompt (v2.3)
 
 Companion to the Passage Reading Lesson Generation Prompt. Generates one homework assignment from a single
 completed 2-day lesson, for the general (non-TOEFL) track: one section per task Level in the band, each keyed to
@@ -97,8 +97,10 @@ Never both for one student in one cycle.
 One document per assignment: a header naming the source lesson (Module, Band, topic), the timing (after Day 1 or
 Day 2), and estimated completion time; Part 1 before Part 2; sections lowest Level first through highest, then
 Foundation Support if applicable; the Skill Spotlight restated verbatim directly above Part 2; a completion
-checklist per Level. No answer key. Style per Quality Standards §E; each Level's vocabulary and grammar inside the
-same ceiling the lesson used for that Level.
+checklist per Level. No answer key; if the teacher needs an exemplar for an item, it sits on an `**Answer note:**`
+line under that item (Quality Standards §E2), never in the item itself (§C9), and the student copy carries none.
+Style per Quality Standards §E; each Level's vocabulary and grammar inside the same ceiling the lesson used for
+that Level.
 
 ## SECTION 3: SELF-CHECK BEFORE FINALIZING
 
@@ -112,3 +114,4 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then:
 5. Grading a completion checklist, not a percentage system (1.2)?
 6. Whole assignment about 15-20 minutes (1.0)?
 7. General track confirmed; TOEFL-track students routed to the extension prompt (1.4)?
+8. No item states its own answer; any exemplar on an `Answer note:` line only (Quality Standards §C9)?

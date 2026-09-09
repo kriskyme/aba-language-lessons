@@ -1,4 +1,4 @@
-# Academic Writing Assessment Generation Prompt (v4.1)
+# Academic Writing Assessment Generation Prompt (v4.2)
 
 Companion to the Academic Writing Lesson Generation Prompt and Module Lesson-Plan Prompt. Generates the assessment
 layer on top of one completed **Beginner Set** (4 lessons) or one completed **Intermediate/Advanced/Proficient
@@ -10,7 +10,7 @@ alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item qua
 requires the centerpiece, plausible distractors and padded banks, time-balanced, counted, complete, traceable)
 govern every item here and are not restated. This prompt states only what is specific to a Writing assessment.
 
-**Current version: v4.1.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
+**Current version: v4.2.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
 counts, sitting length, essay time budget) are reasoned starting points; neither this prompt nor its packet
 companion has yet been run against a real Set or Pair.
 
@@ -145,5 +145,5 @@ Run Quality Standards §F first. Then:
 
 Quality Standards §E. Task Levels shown with the packet's star system. This prompt produces the teacher-facing
 document (Part A's answer key, Part B's rubric); the student-facing version is a separate step,
-`Generate_Assessment_Student_Packet_Prompt_*.md`. The scoring-to-gradebook conversion is a program-level policy
+`Generate_Assessment_Student_Packet_Prompt_*.md`. Any image the assessment embeds is fetched, saved as `Set<N>_<Band>_Assessment_Img_<Purpose>.jpg` beside it, cited in the `.md`, and added under the `## Assessment` heading of the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §H, §I); the packet prints no credit. The scoring-to-gradebook conversion is a program-level policy
 decision outside this prompt.

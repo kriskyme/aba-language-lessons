@@ -139,9 +139,11 @@ Mixed-ability groups of 4, one student per task Level. Each completes their own 
 
 **Level 2 (extension-down)** - grounding: Level 2 Reading objective ("Can read one short sentence using the
 fixed frame ('It is ___.') describing a familiar object, decoding the open-slot word... with visual support.")
-- Task: Using a picture of a running shoe, complete: "It is ___." (e.g., "It is soft.")
+- Task: Using the lesson's picture of running shoes (`Lesson3_RunningShoes_Img_Shoe.jpg`, embedded in the student
+  packet), complete: "It is ___." (e.g., "It is soft.")
 - Respectful Tiers add-on: circle the word that best shows how a well-fitted shoe should feel - *comfortable* /
   *painful* - using the picture and Paragraph D as a clue.
+Image: `Lesson3_RunningShoes_Img_Shoe.jpg` - "Running shoes" by Tiia Monto, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Running_shoes.jpg.
 
 **Level 3 (native, anchor Level)** - grounding: Level 3 Reading objective ("...two-slot frame... decoding both
 open-slot words... to identify the matching image.")

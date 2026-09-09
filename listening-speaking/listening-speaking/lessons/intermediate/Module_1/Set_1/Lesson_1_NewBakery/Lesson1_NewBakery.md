@@ -101,8 +101,11 @@ the source page rather than defaulting to "watch."
 
 **Phase 1: Hook, Good to Know & Vocabulary (20 min)**
 
-- Visual Inquiry: show a photo of whole wheat grains/berries next to a photo of white flour. Ask: "What do you
-  see? Where does bread actually come from?"
+- Visual Inquiry: show the lesson's two photos, whole wheat grains next to white flour (`Lesson1_NewBakery_Img_HookWheat.jpg`,
+  `Lesson1_NewBakery_Img_HookFlour.jpg`, embedded in the student packet). Ask: "What do you see? Where does bread
+  actually come from?"
+  Image: `Lesson1_NewBakery_Img_HookWheat.jpg` - "Triticum aestivum naked wheat kernels" by Peer Schilperoord, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Triticum_aestivum_naked_wheat_kernels.jpg.
+  Image: `Lesson1_NewBakery_Img_HookFlour.jpg` - "All-Purpose Flour (4107895947)" by Veganbaking.net, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:All-Purpose_Flour_(4107895947).jpg.
 - **Listening Skill Spotlight:** "Today we're practicing listening for the main idea - figuring out a speaker's
   biggest point even when they give us a lot of detail." (This is what today's Listening Closing Transfer Check
   will ask students to reproduce.)
@@ -127,11 +130,15 @@ the source page rather than defaulting to "watch."
   **Phase 4: Differentiated Listening Task, Choose One Level (20 min)**
 - Each student picks one task Level and completes it (item counts calibrated for balanced time-on-task, per the
   Lesson Generation Prompt's fourth addendum):
-  - **Level 2 (5 items):** Circle the picture that answers: "What does Seylou make?" (bread / cars / shoes).
+  - **Level 2 (5 items):** Circle the picture that answers: "What does Seylou make?" (bread / cars / shoes;
+    `Lesson1_NewBakery_Img_ChoiceBread.jpg`, `Img_ChoiceCar.jpg`, `Img_ChoiceShoes.jpg`, embedded in the packet).
     Circle: "Seylou is a **_." (bakery / factory / farm). Complete: "It is _** and **_." using two words from a
     bank (organic, local, imported, plastic). Circle: "Seylou uses _** grain." (organic / plastic / old).
     According to the text, why do people keep coming back to Seylou? (a) the taste (b) the price (c) the
     location [Answer: a] - also ask "Do you think Bethony is happy about this? Circle: yes / no."
+    Image: `Lesson1_NewBakery_Img_ChoiceBread.jpg` - "Loaves of Bread (Unsplash)" by Clark Young, CC0, https://commons.wikimedia.org/wiki/File:Loaves_of_Bread_(Unsplash).jpg.
+    Image: `Lesson1_NewBakery_Img_ChoiceCar.jpg` - "Volkswagen Golf VIII IMG 4023" by Alexander Migl, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Volkswagen_Golf_VIII_IMG_4023.jpg.
+    Image: `Lesson1_NewBakery_Img_ChoiceShoes.jpg` - "Converse Jack Purcell sneakers on white canvas" by Mizael Contreras, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Converse_Jack_Purcell_sneakers_on_white_canvas.jpg.
   - **Level 3 (4 items):** Choose the best sentence: "It is **_ and _**." (a) a bakery, small (b) a bakery,
     local (c) a factory, large [Answer: b]. Complete: "Seylou's grain comes from **_ and _**" (word bank: local
     farmers, organic growers, a factory, far away). Circle: "Bethony traveled to **_ to study drumming."
@@ -188,9 +195,12 @@ the source page rather than defaulting to "watch."
   _**, this one \_\_\_."
   **Phase 2: Differentiated Speaking Practice, Choose One Level (20 min)**
 - Each student picks one task Level (item counts calibrated for balanced time-on-task):
-  - **Level 2 (4 items):** Shown two pictures (a mill vs. a factory machine), complete: "It is **_, not _**."
+  - **Level 2 (4 items):** Shown two pictures (a hand mill vs. a factory machine; `Lesson1_NewBakery_Img_HandMill.jpg`,
+    `Lesson1_NewBakery_Img_FactoryMachine.jpg`, embedded in the packet), complete: "It is **_, not _**."
     (small / big). Complete: "It is **_, not _**." (organic / plastic). Complete: "Seylou is **_, not _**."
     (local / far away). Practice saying one of your completed frames to a partner.
+    Image: `Lesson1_NewBakery_Img_HandMill.jpg` - "Basalt quern" by Davidbena, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Basalt_quern.jpg.
+    Image: `Lesson1_NewBakery_Img_FactoryMachine.jpg` - "Roll Stand in Roller Mill with miller" by Roberta Strickler, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Roll_Stand_in_Roller_Mill_with_miller.jpg.
   - **Level 3 (3 items):** Two-slot frame with a model card: "**_ is different from _**." using bakery
     vocabulary. Second frame: "Unlike most **_, this one _**." Put your two sentences together and read them
     aloud to a partner as one connected comparison.

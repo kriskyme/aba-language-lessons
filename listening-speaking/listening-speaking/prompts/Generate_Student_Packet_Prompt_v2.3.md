@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.2)
+# Listening/Speaking Student Print Formatting Prompt (v2.3)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -94,7 +94,9 @@ whole instruction.
 ### 2.7 Star-rated listening tasks
 
 Merge the lesson's Day 1 Phase 4 differentiated items into one combined star-rated Task per Level (A = ★ through
-D = ★★★★), sequential questions, each Level's own items. Style Guide §F governs stars, the share instruction,
+D = ★★★★), sequential questions, each Level's own items. Carry each item's stem only: every `**Answer note:**`
+line under an item stays in the `.md` (Style Guide §E), and no stem keeps a parenthetical that states what the
+item asks the student to find (Quality Standards §C9). Style Guide §F governs stars, the share instruction,
 lettering, multiple-choice layout (options inline, one `.task-instr` line at the top of the block), picture items
 (`.pic-options` with the real images embedded, never empty boxes), and word-bank placement. Two Listening/Speaking specifics:
 
@@ -104,7 +106,9 @@ lettering, multiple-choice layout (options inline, one `.task-instr` line at the
   frame/"starter" box (2.10) for a task with a genuine speak-it-aloud step.
 - **Multi-source tasks (Level 7, when the top task compares two real sources):** present both sources' material
   inside that task block in a labeled two-part "compare" layout (a plain source label above each short excerpt),
-  each excerpt within the lesson's fair-use ceiling, the comparison question after both. A later Discuss It
+  each excerpt within the lesson's fair-use ceiling, the comparison question after both. Each part holds that
+  source's own words or a neutral paraphrase of what it says, never a description of its tone or framing and
+  never a statement of the contrast the question asks for (Quality Standards §C9). A later Discuss It
   prompt that references the comparison points back to this Task by name rather than re-citing the sources.
 
 ### 2.8 Show What You Noticed (Listening close)
@@ -173,7 +177,8 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    that the citebox never introduced (2.3)?
 4. Fillable Listening Notes organizer before the star-rated listening tasks (2.6)?
 5. Fixed-frame items with a complete inline instruction; picture items with embedded images and no empty box;
-   multi-source Level 7 task in a labeled compare layout within fair use (2.7)?
+   multi-source Level 7 task in a labeled compare layout within fair use, each part holding source content and
+   not the contrast; every `Answer note:` line stripped and no stem parenthetical stating the answer (2.7)?
 6. Show What You Noticed: response space first, then the script upside-down under "Check What You Heard" with the
    don't-turn-the-page instruction (2.8)?
 7. Unit _B opens with Learn the Phrase carrying the real modeled language and its frames in one box (2.9)?

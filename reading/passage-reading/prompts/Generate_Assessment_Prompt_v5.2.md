@@ -1,4 +1,4 @@
-# Passage Reading Assessment Generation Prompt (v5.1)
+# Passage Reading Assessment Generation Prompt (v5.2)
 
 Companion to the Passage Reading Lesson Generation Prompt. Generates a differentiated reading assessment from
 already-completed lessons: one section per task Level in the band (Conventions §B), plus a Foundation Support
@@ -11,7 +11,7 @@ alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item qua
 requires the centerpiece, plausible distractors and padded banks, time-balanced, counted, complete, traceable)
 govern every item here and are not restated. This prompt states only what is specific to a Reading assessment.
 
-**Current version: v5.1.** For the dated version history and reasoning, see `Changelog.md`.
+**Current version: v5.2.** For the dated version history and reasoning, see `Changelog.md`.
 
 **Scope:** assessments only. It does not generate lessons and does not invent anchor texts, vocabulary, or idioms;
 it draws from the specific lessons it is given. If no completed lessons are provided, stop and ask.
@@ -178,7 +178,7 @@ obvious.
 - A name / task-Level-assigned / date header block naming Module, Band, and Set number, and listing the lessons
   in scope. For exactly one completed Set, save as `Set{N}_{Band}_Assessment.md` in that Set's folder
   (Conventions §D), with its student packet alongside; a checkpoint or multi-Set assessment is named and placed
-  by scope, stated explicitly.
+  by scope, stated explicitly. Any image the assessment embeds is fetched, saved as `Set<N>_<Band>_Assessment_Img_<Purpose>.jpg` beside it, cited in the `.md`, and added under the `## Assessment` heading of the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §H, §I); the packet prints no credit.
 - An open-book / closed-book note (typically "open-book: new passages printed below").
 - Section 1 before Section 2, every task Level in sequence lowest to highest, one lesson-block per lesson within
   each Level.

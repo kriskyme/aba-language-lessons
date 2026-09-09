@@ -1,4 +1,4 @@
-# Listening/Speaking Assessment Generation Prompt (v2)
+# Listening/Speaking Assessment Generation Prompt (v2.1)
 
 Companion to the Listening/Speaking Lesson Generation Prompt and Module Lesson-Plan Prompt. Generates the
 assessment layer that sits on top of a taught Set: a way to check whether students can transfer what the Set
@@ -10,7 +10,7 @@ requires the centerpiece, plausible distractors and padded banks, time-balanced,
 govern every item here and are not restated. This prompt states only what is specific to a Listening/Speaking
 assessment.
 
-**Current version: v2.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (period
+**Current version: v2.1.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (period
 length, clip runtimes, item counts, presentation time budget) are reasoned starting points; expect revision as
 more real assessments are given.
 
@@ -175,5 +175,5 @@ Run Quality Standards §F first. Then:
 
 Quality Standards §E. Citation block first for every real clip (Part A); timestamp ranges for segment references;
 task Levels shown with the packet's star system. This prompt produces the teacher-facing document (answer key,
-rubric); the student-facing version is a separate step, `Generate_Assessment_Student_Packet_Prompt_*.md`. The
+rubric); the student-facing version is a separate step, `Generate_Assessment_Student_Packet_Prompt_*.md`. Any image the assessment embeds is fetched, saved as `Set<N>_<Band>_Assessment_Img_<Purpose>.jpg` beside it, cited in the `.md`, and added under the `## Assessment` heading of the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §H, §I); the packet prints no credit. The
 scoring-to-gradebook conversion is a program-level policy decision outside this prompt.

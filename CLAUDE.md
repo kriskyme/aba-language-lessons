@@ -211,8 +211,8 @@ noted in Known Issues.
 
 - **Self-contained rule backlog (added 2026-09-08).** `shared/Generation_Quality_Standards.md` §D8 now forbids
   any dependency on teacher-prepared media (props, picture cards, photos to find, "your teacher will show
-  you," empty picture boxes in a packet). Twelve already-generated lessons and one assessment packet across
-  all three modalities predate the rule and still carry such a dependency (Reading Intermediate Set 1 Lessons 1, 2, 4 resolved 2026-09-09); each modality's `Index.md` Pending
+  you," empty picture boxes in a packet). Ten already-generated lessons and one assessment packet across
+  all three modalities predate the rule and still carry such a dependency (Reading Intermediate Set 1 Lessons 1, 2, 4 and Listening/Speaking NewBakery and PortoFoodTour resolved 2026-09-09); each modality's `Index.md` Pending
   work lists them. Fix each by embedding a real image or redesigning around the student's own object when it
   is next touched; do not generate new content with the old pattern. The same file's §D9 (no dependence on a
   student's work from an earlier lesson except the carried draft) and §E6 (concrete prompts, no reflection

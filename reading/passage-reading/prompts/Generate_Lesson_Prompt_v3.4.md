@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v3.2)
+# Passage Reading Lesson Generation Prompt (v3.4)
 
 **Lesson type:** a **Passage Reading Lesson** is a fixed 2-day cycle (two 75-minute periods) built around one
 shared anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is distinct from
@@ -12,7 +12,7 @@ framing (Conventions §E) applies here with reading as the content vehicle: the 
 real-world ideas and build critical thinking, with language acquisition happening through meaningful
 communication.
 
-**Current version: v3.2.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** every request names at minimum a Module and a Band (e.g. "Advanced band, Module 6: Arguing"); a
 topic is optional. A specific Level is never part of the request - the band determines every task Level
@@ -21,7 +21,7 @@ topic is optional. A specific Level is never part of the request - the band dete
 **Output:** one Markdown lesson document. Directly under its H1, a metadata line:
 `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` (Conventions
 §G; `<Version>` is `0` on first generation). Save per Conventions §D. Its student packet is generated separately
-by the Student Packet prompt, immediately after, from this document (Style Guide §G).
+by the Student Packet prompt, immediately after, from this document (Style Guide §G). Any image the lesson embeds is fetched, cited in the `.md`, and added as a row to the Set's `Set<N>_<Band>_Image_Credits.md` in this same pass (Conventions §I); the packet prints no credit.
 
 **Scope:** this prompt generates lessons only. Assessments come from `Generate_Assessment_Prompt_*.md`,
 homework from `Generate_Homework_Prompt_*.md`, and a Set is planned first with
@@ -189,6 +189,9 @@ anchor text and the Reading-specific rules in this prompt:
 12. **Fixed-output Levels (0.11; Quality Standards §D10):** where Level 1 or 2 is a task Level, its form is
     produced at most once per day, every other Level 1-2 item takes a different 0.11 shape, no shape twice in
     this lesson or in the same slot as the previous lesson, and the frame or label set is printed once per day?
+13. **Answer notes:** every expected answer (stops, Fact Finder, Cause & Effect, matrix cells) on an `Answer
+    note:` line under its item, with no stem, bracket, or parenthetical stating what the item asks for (Quality
+    Standards §F item 23)?
 
 If any check fails, revise before finalizing; do not build Day 2 tasks on an anchor text that failed items 1-5.
 
@@ -405,7 +408,9 @@ supports to it:
 
 **Whole-class and modeling**
 - **Teacher Read-Aloud with Interactive Stops:** pre-written pause points embedded in the text (`[STOP & CHECK 1:
-  Ask "Why did..."]`) with comprehension or vocabulary checks.
+  Ask "Why did..."]`) with comprehension or vocabulary checks. The bracket carries the question only; the
+  expected answer goes on an `**Answer note:**` line under the stop, never inside the bracket (Quality
+  Standards §C9, §E2).
 - **Choral Reading:** clear section breaks, rhythm markers, staggered chorus/solo cues.
 - **Echo Reading:** short expressive phrases separated by echo markers (`/` or `[ECHO]`).
 - **Think-Aloud Modeling:** embedded teacher think-aloud prompts (`[THINK-ALOUD: model wondering what this word
@@ -474,7 +479,8 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 *Phase 3: Day 1 Literal Comprehension & Vocab Context Check (25 min)*
 - A rapid factual check pitched at the lesson's task Levels: a Fact Finder set for the lowest task Level, a Cause
   & Effect set for the band's native Level(s). Every item follows Quality Standards §C; a Level 1-2 Fact Finder
-  set uses one 0.11 shape, not the same match item repeated.
+  set uses one 0.11 shape, not the same match item repeated. Each set's expected answers sit on `**Answer
+  note:**` lines under their items, never in the item sentence or its parenthetical (§C9, §E2).
 - A vocabulary context-completion exercise using Phase 1's target terms.
 
 **DAY 2: DEEP ANALYSIS, EVALUATION & PRODUCTION (75 MIN)**
@@ -491,7 +497,8 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 - Each student completes their own Level's cell as rehearsal prep, then shares orally to combine knowledge (a
   Level 1-2 cell is one 0.11 shape, the form produced here only if it was not produced on Day 1).
 - Every task stays at its own Level's ceiling (0.2); no unstated-premise or rhetorical-manipulation detection
-  below Level 7.
+  below Level 7. A cell's expected content goes on an `**Answer note:**` line under the cell prompt, never
+  in the prompt (Quality Standards §C9).
 - Preferred slot for the board-dependent moment (0.7): the shared organizer built live as groups report.
 
 *Phase 3: Structured Oral Output Debate & Synthesis (30 min)*

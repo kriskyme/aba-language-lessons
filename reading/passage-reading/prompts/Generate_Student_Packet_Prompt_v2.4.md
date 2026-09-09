@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v2.2)
+# Passage Reading Student Print Formatting Prompt (v2.4)
 
 Companion to the Passage Reading Lesson Generation Prompt. Takes one completed 2-day lesson and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document covering both days, with
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), delta classes (§H), and the shared packet self-check (§I). This prompt states
 only what is specific to a Passage Reading packet.
 
-**Current version: v2.0.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** an already-completed 2-day lesson, supplied in full (both days): the anchor text with its paragraph
 lettering and footnotes, the Phase 1 target vocabulary and idiom list with each idiom's transparent/opaque
@@ -58,7 +58,9 @@ A consistent section-title style for each named block: Before You Read, Read & M
 Understanding, Warm-Up, Investigate the Text, Discuss It, Wrap It Up (or the equivalent set). Where Day 1's
 comprehension items would split into two near-identical blocks (a Fact Finder set and a Cause & Effect set on the
 same content), merge them into one Task with sequential numbered questions; a vocabulary-in-context exercise stays
-its own Task.
+its own Task. Carry each item's stem only: every `**Answer note:**` line stays in the `.md` (Style Guide §E), a
+`[STOP & CHECK]` prints as its question alone, and no stem keeps a parenthetical that states what the item asks
+for (Quality Standards §C9).
 
 ### 2.4 Worked model before independent application
 
@@ -66,7 +68,8 @@ If the objective is first tested only in Unit 1B's independent tasks (nothing be
 the differentiated task set demonstrates the skill on the anchor text), insert a short worked-model callout after
 Unit 1A's core comprehension task and before Unit 1B. Use real sentences from the anchor text to walk through the
 reasoning the objective requires, under a plain heading such as "Focus on the Objective." State each example
-directly; no framing sentences like "here's how this works."
+directly; no framing sentences like "here's how this works." Work the model on sentences no printed task then
+asks about, so it never pre-answers an item (Quality Standards §C9).
 
 ### 2.5 Closing activity
 
@@ -124,7 +127,8 @@ only where it aids readability.
 ### 2.11 Photos
 
 A Visual Inquiry hook photo, and the Level 1-2 picture task's picture, embed the lesson's own named `_Img_` asset
-per Style Guide §F ("Embedded photos"): one `<img class="photo">` data URI with its `.image-caption`, sized per §F.
+per Style Guide §F ("Embedded photos"): one `<img class="photo">` data URI with its `.image-caption` (descriptive only, never a credit; credits live in the
+Set's `Image_Credits.md`), sized per §F.
 If the lesson `.md` calls for a picture but names no asset file, stop and report it as a source-document gap
 rather than printing a placeholder or a teacher note.
 
@@ -155,3 +159,5 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    objective exists (2.9)?
 9. Refresher text as a plain bordered block, not a callout (2.10)?
 10. Every hook or task photo embedded from the lesson's named asset, none placeholdered (2.11)?
+11. Every `Answer note:` stripped, stops printed as questions only, no stem parenthetical stating the answer, and
+    the worked model on sentences no task asks about (2.3, 2.4)?

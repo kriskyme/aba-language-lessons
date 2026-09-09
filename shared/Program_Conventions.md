@@ -1,4 +1,4 @@
-# Program Conventions (v1.11)
+# Program Conventions (v1.14)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -170,8 +170,15 @@ lessons/<band>/
     ├── Module{N}_{Band}_Lesson_Plan.md
     └── Set_{N}/
         ├── Set{N}_{Band}_Assessment.md
+        ├── Set{N}_{Band}_Image_Credits.md
         └── Lesson_{n}_{Slug}/{lesson .md, packet .html}
 ```
+
+`Set{N}_{Band}_Image_Credits.md` is the Set's one image register: one table per lesson, plus one
+under a final `## Assessment` heading if the Set's assessment embeds images, listing
+every embedded image's asset file, where it is used, Commons file title, author, license, and
+file-page URL (§I). It is created lazily, on the Set's first image, and is the only place a
+photo credit is printed - packets carry none (Style Guide §F).
 
 This nesting is kept even at one lesson per Set (Academic Writing's current case), so no
 special-casing is needed later if a shorter lesson cycle ever makes room for more than one lesson
@@ -298,9 +305,11 @@ no separate `media/` subfolder. Naming, added 2026-09-08:
   short PascalCase label for what the image is used for in the lesson (e.g.
   `Lesson3_Backpack_Img_Hook.webp` for a Mystery Quote hook photo,
   `Lesson3_Backpack_Img_ChoiceBicycle.jpg` for one option image in a
-  multiple-choice item). Normalize `.jpeg` to `.jpg` (same format, filename
-  only); leave other image formats as their source provides them rather than
-  re-encoding.
+  multiple-choice item). An assessment's images use
+  `Set<N>_<Band>_Assessment_Img_<Purpose>.<ext>` and sit flat in `Set_<N>/`
+  beside the assessment `.md`. Normalize `.jpeg` to `.jpg` (same format,
+  filename only); leave other image formats as their source provides them
+  rather than re-encoding.
 - **Source-video link shortcut:** for a lesson whose real source is a video
   that isn't itself downloaded into the repo, `Lesson<N>_<Slug>_SourceVideo.<ext>`,
   one file per platform as available (`.webloc` for Mac, `.url` for
@@ -316,7 +325,55 @@ actual content (e.g. wiring a choice image to its multiple-choice item, or
 swapping a packet's "real picture placeholder" for the real image) is a
 separate step, tracked per lesson type's own `Index.md` Pending work until
 done. The embed itself follows `Student_Packet_Style_Guide.md` §F's
-"Embedded photos" rule (markup, sizing, caption, asset naming).
+"Embedded photos" rule (markup, sizing, caption, asset naming). Finding the
+image in the first place is the generation step's job, not the reviewer's -
+see §I.
+
+## I. Image sourcing at generation time
+
+A lesson or assessment that needs a picture (a Visual Inquiry hook, a Level
+1-2 picture task, a picture-choice item, a Beginner label set; Quality
+Standards §D8) fetches that picture in the same pass that writes its `.md`,
+the moment the need is decided.
+Nobody hunts for images afterward.
+
+- **Source: Wikimedia Commons only.** It is one API whose every result
+  carries license metadata, which is what makes classroom use safe without
+  a per-image judgment call. Accept `Public domain`, `CC0`, `CC BY`, and
+  `CC BY-SA` (any version); reject anything else. No stock-photo sites, no
+  search-engine image results, no images of unknown provenance.
+- **How.** Search, then download the 800px rendition:
+
+  ```
+  curl -s -A "aba-language-lessons/1.0" \
+    "https://commons.wikimedia.org/w/api.php?action=query&generator=search\
+  &gsrsearch=<query>&gsrnamespace=6&gsrlimit=8&prop=imageinfo\
+  &iiprop=url|extmetadata&iiurlwidth=800\
+  &iiextmetadatafilter=LicenseShortName|Artist|Credit&format=json"
+  ```
+
+  Read each result's `LicenseShortName`, `Artist`, and `thumburl`. Pick a
+  file whose subject matches what the task actually says (a pink bird is
+  not "orange and blue"; if no result fits, change the task's wording to
+  the picture, not the other way round, since the text is being written in
+  this same pass). Save the `thumburl` file to the lesson folder as
+  `Lesson<N>_<Slug>_Img_<Purpose>.jpg`, or to the Set folder as
+  `Set<N>_<Band>_Assessment_Img_<Purpose>.jpg` for an assessment (§H;
+  normalize `.jpeg`/`.JPG` to `.jpg`).
+- **Cite it in the lesson or assessment `.md`** at the point of use, the way
+  Listening/Speaking cites its clip: asset filename, Commons file title,
+  author, license, and the Commons file-page URL. In the same pass, append
+  the same record as a row to the Set's `Set<N>_<Band>_Image_Credits.md`
+  (§D; create it on the Set's first image), under a heading for that
+  lesson (an assessment's rows under a final `## Assessment` heading), with
+  columns: asset file, where used, Commons file title, author, license,
+  source URL. That document is where credits live; the packet's
+  caption is descriptive only and carries no credit (Style Guide §F).
+- **Fallback when the generating tool cannot fetch** (a chat tool without
+  web access): the `.md` still names the asset file and records the exact
+  search query it would have used; the lesson is logged in its lesson
+  type's `Index.md` Pending work as "image to fetch"; and the packet is not
+  generated until the image exists, since a placeholder is never printed.
 
 ## Changelog
 

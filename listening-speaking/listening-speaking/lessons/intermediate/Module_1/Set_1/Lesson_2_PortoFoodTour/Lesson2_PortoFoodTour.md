@@ -128,11 +128,15 @@ items at Levels 4-5.
 - Each student picks one task Level (item counts calibrated for balanced time-on-task, per the Lesson
   Generation Prompt's fourth addendum):
   - **Level 2 (5 items):** Circle the picture that answers: "What kind of tour is this?" (food tour / bike tour
-    / museum tour). Complete: "Andre shows us **_." (sardines / cars / shoes). Circle: "Andre is a real
+    / museum tour; `Lesson2_PortoFoodTour_Img_ChoiceFoodTour.jpg`, `Img_ChoiceBikeTour.jpg`, `Img_ChoiceMuseumTour.jpg`,
+    embedded in the packet). Complete: "Andre shows us **_." (sardines / cars / shoes). Circle: "Andre is a real
     _**." (tour guide / chef / taxi driver). Circle: "The tour takes visitors to the old \_\_\_." (market / museum
     / hospital). According to the video, when did the grocery store open? (a) 1896 (b) 1996 (c) 2018 [Answer: a]
     - also ask "Do you think that's a long time or a short time for one store to stay open? Circle: long /
       short."
+    Image: `Lesson2_PortoFoodTour_Img_ChoiceFoodTour.jpg` - "Portugal food (54788113979)" by Dale Cruse, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Portugal_food_(54788113979).jpg.
+    Image: `Lesson2_PortoFoodTour_Img_ChoiceBikeTour.jpg` - "Bethesda green bike tour jeh" by Jim.henderson, CC0, https://commons.wikimedia.org/wiki/File:Bethesda_green_bike_tour_jeh.jpg.
+    Image: `Lesson2_PortoFoodTour_Img_ChoiceMuseumTour.jpg` - "Benton Museum of Art tour group" by Sdkb, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Benton_Museum_of_Art_tour_group.jpg.
   - **Level 3 (4 items):** Choose the best sentence: "It is **_ and _**." (a) a bus tour, long / (b) a food
     tour, local / (c) a museum tour, quiet [Answer: b]. Complete: "The grocery store is **_ and _**." (word
     bank: old, new / small, big / historic, modern) [Answer: historic, old]. Circle: "The market survives in
@@ -187,9 +191,12 @@ items at Levels 4-5.
 - Teach giving-examples frames: "For example, **_." / "Like _**, for instance." / "Take \_\_\_, for example."
   **Phase 2: Differentiated Speaking Practice, Choose One Level (20 min)**
 - Each student picks one task Level (item counts calibrated for balanced time-on-task):
-  - **Level 2 (4 items):** Shown a picture of sardines, complete: "For example, **_." (sardines). Shown a
-    picture of the old grocery store, complete: "For example, _**." (the grocery store). Complete: "Like \_\_\_,
-    for instance." (any tour stop). Practice saying one of your completed frames to a partner.
+  - **Level 2 (4 items):** Shown a picture of sardines (`Lesson2_PortoFoodTour_Img_Sardines.jpg`, embedded in the
+    packet), complete: "For example, **_." (sardines). Shown a picture of the old grocery store, A Pérola do Bolhão
+    (`Lesson2_PortoFoodTour_Img_GroceryStore.jpg`), complete: "For example, _**." (the grocery store). Complete:
+    "Like \_\_\_, for instance." (any tour stop). Practice saying one of your completed frames to a partner.
+    Image: `Lesson2_PortoFoodTour_Img_Sardines.jpg` - "Sardinhas (2)" by Joseolgon, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Sardinhas_(2).jpg.
+    Image: `Lesson2_PortoFoodTour_Img_GroceryStore.jpg` - "Traditional shop (40148719474) - A Pérola do Bolhão, Porto" by Francisco Restivo, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Traditional_shop_(40148719474).jpg.
   - **Level 3 (3 items):** Two-slot frame with a model card: "For example, **_ is a great place because _**."
     Second frame: "Take **_, for example - it's _**." Put your two sentences together and read them aloud to a
     partner as one connected description.

@@ -33,11 +33,12 @@ DAY 1 PACING
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Visual Inquiry hook (5 min):** Project a photo of the Sagrada Família's towers (exterior, showing the contrast
+**Visual Inquiry hook (5 min):** Project the lesson's photo (`Lesson1_SagradaFamilia_Img_Hook.jpg`, embedded in the student packet) of the Sagrada Família's towers (exterior, showing the contrast
 between the older Nativity Facade and the newer construction cranes still visible near the top). Ask: "What do you
 notice? What questions do you have? Does this look finished to you?" Take 3-4 call-outs without confirming or
 correcting; write every guess on the board under a running heading, **"What We Think We're Looking At."** This
 list stays up and gets checked against the text later in Phase 1 (see board-dependent moment below).
+Image: `Lesson1_SagradaFamilia_Img_Hook.jpg` - "Sagrada familia (left side)" by Stefano Mortellaro, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Sagrada_familia_(left_side).jpg.
 
 **Skill Spotlight (2 min):** "Today we're practicing describing a place by noticing specific features, like a facade
 or a column, and comparing them to something more familiar, like a typical cathedral. We're also going to

@@ -29,9 +29,10 @@ the print packet already showed.
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Visual Inquiry hook:** Display the lesson's photo of a stone wood-fired oven (`Lesson1_Kitchen_Img_Hook.jpg`,
+**Visual Inquiry hook:** Display the lesson's photo of bread baking in a wood-fired oven in Altamura, Puglia (`Lesson1_Kitchen_Img_Hook.jpg`,
 embedded in the student packet). Ask: "What do you think people cook here? How is this kitchen different from your own?"
 Take 3-4 quick guesses before reading.
+Image: `Lesson1_Kitchen_Img_Hook.jpg` - "Forno a legna (Altamura)" by Francesco Paolo Fumarola, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:Forno_a_legna_(Altamura).jpg.
 
 **Skill Spotlight:** "Today we're practicing describing a place by comparing it to somewhere more familiar, and
 noticing small sensory details, the way our writer compares her grandmother's wood-fired kitchen to her own
