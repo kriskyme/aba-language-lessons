@@ -1,4 +1,4 @@
-# Academic Writing Module Lesson-Plan Generation Prompt (v4.3)
+# Academic Writing Module Lesson-Plan Generation Prompt (v4.4)
 
 Companion to the Academic Writing Lesson Generation Prompt. Plans a full **Set** (Beginner: 4 lessons, one
 Module) or a full **Module Pair** (Intermediate/Advanced/Proficient: two consecutive Modules' Sets, 8 lessons;
@@ -11,7 +11,7 @@ Focus A/B collision or a gap in Module N+1's CSV coverage before 8 lessons are w
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets and Module Pair, §C; Rotation Log
 mechanics and adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v4.3.** History: `Changelog.md`.
+**Current version: v4.4.** History: `Changelog.md`.
 
 ## 0. Rotation Log
 
@@ -62,7 +62,9 @@ own template.
      T-shirt, dress, scarf, hat), so every drafting lesson can print the list and no student is without one
      (Quality Standards §D9); the drafting lessons take the category as their slug and title. A Scenario asserts nothing as fact, so it needs no
      real-world-verifiability rule or fabricated-quote guardrail; each object must be concrete and writable at
-     every task Level in the band (from a single-word frame to a full essay where the band reaches that high),
+     every task Level in the band (from a single-word frame to a full essay where the band reaches that high;
+     for frame-regime Levels, name the activity shape each lesson's slots use from the Lesson prompt's 0.4d bank,
+     never "frame rounds," so no shape sits in the same slot in consecutive lessons; Quality Standards §D10),
      the draft object must sustain the full arc, and both are flagged per Section 0 if they echo the preceding
      Set/Pair or another Band's most recent.
    - **Genre / real-world writing form,** from the Lesson prompt's 0.9 mapping using **Module N's row only** (the

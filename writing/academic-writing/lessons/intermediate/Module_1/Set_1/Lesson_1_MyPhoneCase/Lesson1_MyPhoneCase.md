@@ -1,6 +1,6 @@
 # Academic Writing Lesson 1
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.1.2
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.1.6
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 1 of 8 (Set position 1 of 4: Grammar Focus A, input,
 modeling, deeper practice; Mentor Ladder)
@@ -8,7 +8,8 @@ modeling, deeper practice; Mentor Ladder)
 ### Scenario: "My Phone Case"
 
 _Regenerated 2026-09-08 against `Generate_Lesson_Prompt_v6.md` with `shared/Generation_Quality_Standards.md`
-(version 1.1.1.0 -> 1.1.1.1); revised the same day to 1.1.1.2 under the self-contained rule (Quality Standards
+(version 1.1.1.0 -> 1.1.1.1); revised the same day to 1.1.1.2 under the self-contained rule, and to 1.1.1.3 when the
+packet's "See How It's Done" section was removed (the Mentor Ladder is teacher-presented, packet prompt v3.10) (Quality Standards
 §D8): every student works from their own phone case, no picture is provided or shown. Scenario, Grammar Focus A/B, and Mentor Ladder direction are taken as given from the
 approved `Module1_Intermediate_Lesson_Plan.md`; what changed is the content built on them - see `Changelog.md`._
 
@@ -76,14 +77,15 @@ Lesson 2's Level 5 extension.
 
 ### Phase 1: Hook, Skill Spotlight (15 min)
 
-**Hook (8 min):** Ask two students to hold up their own phone cases, picked because they are easy to compare (a
-thin plain one and a thick decorated one). Ask: "Which one is thicker? Which one would you rather carry all day? Why?" Take 2-3 quick oral answers.
+**Hook (8 min):** Ask two volunteers to describe their own phone case in one phrase each, and write the two
+phrases on the board (aim for an easy contrast: a thin plain one and a thick decorated one). Ask: "Which one is
+thicker? Which one would you rather carry all day? Why?" Take 2-3 quick oral answers.
 Keep the language at Level 3-4.
 
-**Skill Spotlight (7 min):** "Today and tomorrow we're practicing describing something by comparing it to
-something else and giving a real reason for the comparison. Later in this unit, some of you will also practice
-describing something in a way that lets the reader guess how you feel about it, without saying the feeling out
-loud."
+**Skill Spotlight (7 min):** "Today and tomorrow we're practicing describing something of our own by comparing
+it to something else and giving a real reason for the comparison." One sentence, the same for every Level; Level
+5's implied-attitude feature is introduced inside its own tasks (Activity 6, Day 2), not here (Quality Standards
+§D1).
 
 ### Phase 2: Focus A mini-lesson: comparatives and reason words (30 min)
 
@@ -101,7 +103,7 @@ _Comparative adjectives (10 min)._
 Point out the two spelling rules explicitly (heavy is not "heavyer"; big is not "biger"); they are the two
 students most often get wrong. "Less" is recognition vocabulary here, not drilled.
 
-**Board-dependent moment, co-constructed live:** holding up the two hook cases, elicit the comparative sentence
+**Board-dependent moment, co-constructed live:** pointing to the two hook phrases on the board, elicit the comparative sentence
 from the class together ("This one is thinner than that one." / "This one is more colorful than that one."), then
 a second one nobody has said yet.
 
@@ -118,8 +120,7 @@ _Reason words (12 min)._
 its own example, so students meet a real reason-word toolkit rather than one isolated word; note that since and
 given that can open the sentence, and that a comma follows an opening reason clause.
 
-_Frame content, folded in (8 min)._ Every student puts their own phone case on the desk. Show the Word Bank, then
-the frame "It is ___." Elicit two words orally from the whole class about their own cases (color, then size). Then show "It is ___ and ___." and elicit a pair
+_Frame content, folded in (8 min)._ Show the Word Bank, then the frame "It is ___." Elicit two words orally from the whole class about their own cases (color, then size). Then show "It is ___ and ___." and elicit a pair
 that gives two different observations, not two words for the same thing (blue and thin, not thin and slim). For
 Level 3, introduce the -s rule briefly (It holds up well. / It looks new.), since the two-slot frame's sentence
 variant uses it on Day 2.
@@ -173,12 +174,14 @@ using a different reason word from the table (because, since, as, or given that)
 moving the reason clause to the front of the sentence where the new word allows it and adding the comma. Built
 only from what Phase 2 taught; this is Level 5's own Day 1 task, not a share of Level 4's.
 
-**Activity 3-equivalent, Levels 2-3 (parallel, 12 min):** working from their own phone case on the desk and the
-Word Bank,
-Level 2 completes "It is ___." three separate times, one word from a different Word Bank group each round
-(color, then size, then condition), and reads each finished sentence to a partner. Level 3 completes "It is ___
-and ___." three times, each round a pair from two different groups, so the two slots always carry two separate
-observations. The teacher circulates and listens to each student sound out the word before writing it.
+**Activity 3-equivalent, Levels 2-3 (parallel, 12 min), choose what fits, then the one frame round (0.4d):**
+each student first circles every Word Bank word that fits their own phone case and crosses out the ones that
+do not (a genuine choice against the case as they know it, not the case on the desk). Then Level 2 completes
+"It is ___." three times, one circled word from a different group each round (color, then size, then
+condition), and reads each finished sentence to a partner. Level 3 completes "It is ___ and ___." three times,
+each round a pair of circled words from two different groups, so the two slots always carry two separate
+observations. The teacher circulates and listens to each student sound out the word before writing it. This is
+the lesson's one complete-the-frame task; Day 2's frame-regime work takes a different shape.
 
 ---
 
@@ -207,10 +210,21 @@ assume every clause hides a mistake.
 
 ### Phase 2: Frame practice / original sentences with Focus A (25 min)
 
-**Levels 2-3 (frame regime), Activity 5-equivalent:** three more guided rounds each, on a belonging of the
-student's own choosing (a bag, a watch, a wallet, a pair of shoes), not the phone case again. Same frames; each
-round a genuinely different observation from a different Word Bank group. Level 3 also writes one sentence in
-the -s form about the same belonging ("It looks new." / "It holds a lot.").
+**Levels 2-3 (frame regime), Activity 5-equivalent, fix the wrong word (0.4d):** the frame-regime parallel to
+the editing paragraph, not another frame round. Three printed items each state one fact about a phone case in
+a clause, then give a frame sentence about it with a word that does not fit the fact or is misspelled; the
+student crosses out the wrong word and writes the right one from the Word Bank.
+
+- **Level 2:** (1) "The case has a crack down the back. It is new." (cross out new; cracked); (2) "You can see
+  the phone through it. It is black." (clear); (3) "Every corner is scraped white. It is scrached." (misspelled;
+  scratched).
+- **Level 3:** the pair must say two different things and be spelled right: (1) "The case is pink and very
+  thin. It is thin and slim." (slim repeats thin; pink and thin); (2) "The case bends easily and is quite old.
+  It is soft and rubbery." (rubbery repeats soft; soft and worn); (3) "The case is striped and it catches the
+  light. It is striped and shiney." (misspelled; shiny). Level 3 then writes one sentence in the -s form about
+  their own case ("It looks new." / "It holds a lot.").
+
+Answer keys are in the packet notes above; the teacher circulates and hears each replacement word sounded out.
 
 **Activity 5, Level 4: write one original sentence using each target item**, about your own phone case or
 another belonging: bigger, more colorful, because, more durable, heavier, easier. At least two sentences must
@@ -226,7 +240,8 @@ for recognition; Lesson 2 builds the fuller hedging and concession work on it.
 ### Phase 3: Leveled Mentor Ladder walkthrough (30 min)
 
 Present all four Mentor Texts together, in Level order, on the shared Scenario (a model student, "Maria," and her
-phone case). Maria's own case is plain and blue.
+phone case), on the board or read aloud: the ladder is the teacher's material and is not printed in the packet
+(packet prompt 2.6). Maria's own case is plain and blue.
 
 **Level 2 Mentor Text**
 
@@ -263,10 +278,10 @@ look, to its history, to the writer's habits. The implied attitude is carried by
 daily wiping, and the refusal to switch even after admitting a newer case would protect the phone better; the
 word "sentimental" never appears. "A bit" and "probably" are the hedges Level 5's Activity 6 practiced.)
 
-**Walkthrough:** for each text, name in one line what makes it that Level's version (one word in a frame; two
-different observations in a frame; a comparison with a stated reason; details that make the reader guess a
-feeling). Students find their own Level's text and the one directly above it, and say to a partner one thing
-the next text up does that theirs does not.
+**Walkthrough (teacher-led, from the board):** for each text, name in one line what makes it that Level's
+version (one word in a frame; two different observations in a frame; a comparison with a stated reason; details
+that make the reader guess a feeling). Students find their own Level's text and the one directly above it on the
+board, and say to a partner one thing the next text up does that theirs does not. Nothing here is printed.
 
 **Board-dependent moment, co-constructed live:** a "what changes at each Level" board built from student
 observations ("Level 2 says one word. Level 3 says two different things. Level 4 explains why. Level 5 makes us
@@ -291,18 +306,36 @@ guess how Maria feels.").
    not absurd ones; Activity 3 uses all four reason words so it cannot be solved by scanning for "because."
 8. Requires the centerpiece: not applicable to a grammar lesson (no comprehension items).
 9. Padded banks: the Word Bank has 23 words for three-word tasks; no matching lists.
-10. Time balance: Levels 2-3 do three frame rounds per activity plus partner reads (about 12 min); Levels 4-5 do
-    8-item classify or 6-sentence production plus the heavier tier (about 12 min).
+10. Time balance: Levels 2-3 do the circle-what-fits pass, one three-round frame task, and partner reads on Day
+    1 and a three-item fix-the-wrong-word task on Day 2 (about 12 min each); Levels 4-5 do 8-item classify or
+    6-sentence production plus the heavier tier (about 12 min).
 11. Counts: Level 4 text 68 words / 5 sentences; Level 5 text 100 words / 7 sentences; editing paragraph 6
     sentences / 8 errors; all counted, not estimated.
 12. Instructions complete inline; Word Bank precedes every task that uses it.
-13. Skill Spotlight named on Day 1; the Closing Transfer Check belongs to Lesson 4.
+13. Skill Spotlight named on Day 1 as one sentence for every Level, naming the skill and not the phone case; the
+    Closing Transfer Check belongs to Lesson 4.
 14. Board moment each day: the live comparative sentence (Day 1), the "what changes" board (Day 2).
 15. Teaching precedes practice: the -s rule is taught in Day 1 Phase 2 before Level 3 uses it on Day 2; hedges
     are introduced in Activity 6 itself before use.
 16. Adjacency: this is the Set's first lesson; the plan's cross-Band check applies.
 17. Oral protocol: none in this lesson.
-18. No em-dashes; pacing diagram per day; metadata line present.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.1.6; the Mentor Ladder is
+    teacher-presented and the packet prints no example or find-your-example task (packet prompt 2.6).
+
+_Revised 2026-09-08 (1.1.1.5 -> 1.1.1.6) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels 2-3
+keep one complete-the-frame task (Day 1, now preceded by circling the Word Bank words that fit); Day 2's second
+set of frame rounds on another belonging is replaced by a three-item fix-the-wrong-word task parallel to the
+editing paragraph. The Day 1 hook no longer has students hold up their cases (Quality Standards §D8); the
+frame fold-in no longer puts the case on the desk. Packet Tasks C-D (Unit 1A) and B-C (Unit 1B) rewritten as
+steps; no Task lead re-quotes the frame (Style Guide v2.11)._
+
+_Revised 2026-09-08 (1.1.1.4 -> 1.1.1.5) per Style Guide v2.10: the packet's objective is a student can-do, "I can
+describe something of my own by comparing it to something else and giving a real reason for the comparison,"
+in place of "You will describe something of your own..." (both mastheads). No other change._
+
+_Revised 2026-09-08 (1.1.1.3 -> 1.1.1.4) per Quality Standards v1.4 / Style Guide v2.9: the packet's objective is one
+sentence naming the skill for every student ("describe something of your own by comparing it..."), with no object
+and no "some of you"; the Skill Spotlight script is the same one sentence._
 19. Self-contained: every student works from their own phone case (or a classmate's); the hook uses two
     students' cases; no picture, prop, or card is prepared or shown by the teacher; no placeholder in the packet.
 
@@ -321,7 +354,10 @@ guess how Maria feels.").
 9. Self-revision: not this lesson.
 10. Skill Spotlight: Module 1's; Module 2's comes at Lesson 5.
 11. Rotation: per the approved plan.
-12. Content volume: Day 1 has three activities (8, 8, 8 items), a 3-item Level 5 tier, and frame rounds; Day 2 has an 8-error editing
-    paragraph, a 6-item production task, a 3-item heavier tier, and the ladder.
+12. Content volume: Day 1 has three activities (8, 8, 8 items), a 3-item Level 5 tier, and the frame-regime
+    choose-and-complete task; Day 2 has an 8-error editing paragraph, a 3-item frame-regime fix-the-wrong-word
+    task, a 6-item production task, a 3-item heavier tier, and the ladder.
+17. Frame-regime shapes (0.4d): one complete-the-frame task (Day 1), fix-the-wrong-word on Day 2, choose-what-fits
+    folded into Day 1; no shape twice; the frame stated once per day in the grammar box.
 13. Level 5 bridge: not applicable (no essay regime in this band).
 14. Paired tier: Level 5's Activity 3b and Activity 6 are the heavier tiers to Level 4's Activities 3 and 5, built only from taught content.

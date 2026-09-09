@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.5
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.8
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B, task-ladder
 practice, prewriting)
@@ -26,6 +26,19 @@ longer prints desk or borrowing logistics (Style Guide §E)._
 
 _Revised 2026-09-08 (1.1.2.4 -> 1.1.2.5): the packet's planning tasks say "the clothing you circled," not "the
 thing you circled," matching Lesson 3._
+
+_Revised 2026-09-08 (1.1.2.7 -> 1.1.2.8) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels 2-3's
+Day 1 frame rounds are now a three-item better-of-two task and Day 2's second round is spell-from-sound
+dictation (words only); the oral editing pass and packet Tasks J-K no longer say "hold up your case" (Quality
+Standards §D8). Packet Unit 2A Tasks C, E, J, K and Unit 2B Tasks A, B rewritten; Task F says "the frame"._
+
+_Revised 2026-09-08 (1.1.2.6 -> 1.1.2.7) per Style Guide v2.10: the packet's objective is a student can-do, "I can
+describe something of my own by comparing it to something else and giving a real reason for the comparison,"
+in place of "You will describe something of your own..." (both mastheads). No other change._
+
+_Revised 2026-09-08 (1.1.2.5 -> 1.1.2.6) per Quality Standards v1.4 / Style Guide v2.9: the packet's objective is one
+sentence naming the skill for every student ("describe something of your own by comparing it..."), with no object
+and no "some of you"; no other change._
 
 ---
 
@@ -189,13 +202,19 @@ table; no new grammar.
   the same observation twice (both condition words for the same wear; both texture words for the same feel).
   This is Level 3's own required feature (0.2) made into a genuine choice, and Level 2 does it as the lighter,
   receptive tier before returning to its one-slot frame.
-- **Level 2:** complete "It is ___." three times about their own case, one word from a different Word Bank group
-  each round (color, then thickness, then condition). Read each finished sentence to a partner.
-- **Level 3:** complete "It is ___ and ___." three times about their own case, each pair from two different Word
-  Bank groups, so the two slots always carry two different observations; then write one -s sentence about the
-  same case ("It looks new."). Read each to a partner.
+- **Level 2, better of two (0.4d):** three items, each a one-clause fact about a phone case and two frame
+  sentences about it; circle the more exact one and copy its word. (1) "The case has thin lines of two colors.
+  It is patterned. / It is striped." (striped); (2) "You can bend it with your fingers. It is soft. / It is
+  rubbery." (rubbery); (3) "Its corners are scraped white. It is worn. / It is scratched." (scratched).
+- **Level 3, better of two:** the same shape with pairs; the better sentence is the one whose two words say two
+  different things and fit both facts. (1) "The case has thin lines of two colors, and it is not thick. It is
+  striped and thin. / It is patterned and small." (striped and thin); (2) "It bends easily, and it is a little
+  old. It is soft and worn. / It is soft and smooth." (soft and worn); (3) "It has scrapes on every corner, and
+  it weighs a lot. It is scratched and heavy. / It is worn and heavy." (scratched and heavy). Then one -s
+  sentence about their own case ("It looks new.").
 
-The teacher circulates and listens to each student sound out the word before writing it.
+No frame round this lesson: Lesson 1 Day 1 had the Set's guided rounds, and Lesson 3 writes the real one. The
+teacher circulates and hears each student say what the better word tells the reader.
 
 ### Phase 3: Confusable pair and mixed editing (25 min)
 
@@ -241,10 +260,10 @@ sentence 7 (an opening "given that" clause with its comma). Sentences 1 and 7 ar
 **Level 5 addition to Activity 5:** after fixing, mark one place where "although" could replace "but," and write
 that sentence out in the margin.
 
-**Levels 2-3 during Activity 5 (oral editing pass, 14 min):** read your three frame sentences from Phase 2 to a
-new partner, holding up the case. The partner answers two questions out loud: "Does the word match the case?" and,
-for Level 3,
-"Did I hear two different things?" Fix any sentence the partner could not confirm, then swap roles.
+**Levels 2-3 during Activity 5 (oral editing pass, 14 min):** read the three sentences you circled in Phase 2 to
+a new partner. For each one the partner says, in a word or two, what the sentence tells them about the case
+(its pattern, its feel, its condition) and, for Level 3, whether they heard two different things. If the
+partner cannot say, choose the other sentence and read again; then swap roles.
 
 ---
 
@@ -253,22 +272,21 @@ for Level 3,
 ```
 0            25                55                        75  (minutes)
 |--Phase 1----|-----Phase 2-----|---------Phase 3-----------|
-| Frame rd 2 /| Prewriting,      | Prewriting share +         |
+| Spell/sound | Prewriting,      | Prewriting share +         |
 | feature     | differentiated   | board synthesis            |
 | warm-up     |                  |                             |
 ```
 
-### Phase 1: Frame practice round 2 / required-feature warm-up (25 min)
+### Phase 1: Spell from sound / required-feature warm-up (25 min)
 
-**Levels 2-3 (frame regime):** the same frames as Day 1, on the student's own phone case again (or a classmate's,
-held up), this time choosing words not used on Day 1. Lesson 1 Day 2 used another belonging; this round is the
-last one on the phone case, a final rehearsal of the frames before Phase 2 moves to the draft object.
+**Levels 2-3 (frame regime), spell from sound (0.4d):** words only, no frame. Partners take turns: the partner
+picks three Word Bank words from three different groups and reads them aloud one at a time; the student writes
+each word without looking at the bank, then checks it against the bank and fixes any letter. Swap roles. This
+is the CSV row's own skill (spelling from sound) with the frame taken away for one round.
 
-- **Level 2:** "It is ___." three times, each word from a different Word Bank group. Say the word to a partner
-  before writing it.
-- **Level 3:** "It is ___ and ___." three times, each pair from two different groups (use Day 1's circle test:
-  does the pair say two different things?), then one -s sentence about the same case ("It holds a lot." / "It
-  looks worn.").
+- **Level 2:** three words written from sound and checked.
+- **Level 3:** three words written from sound and checked; then circle the two that would go together in one
+  frame (two different things about a case) and say why to the partner.
 
 **Activity 6, Level 4 (required-feature warm-up):** write two comparison sentences about your own phone case
 (compared with an old case, a friend's case, or a classmate's case) and two reason sentences, each using a different
@@ -301,7 +319,7 @@ five groups as the Word Bank, refilled for a jacket; Levels 2-3 draw their words
 > **Condition:** new, faded, worn, torn, stained, clean
 > **Feel/quality:** warm, light, heavy, soft, thick, sturdy
 
-Everyone plans directly from the object on the desk; nothing from Lesson 1's packet is needed (Quality Standards
+Everyone plans directly from the object as they know it; nothing from Lesson 1's packet is needed (Quality Standards
 §D9). This prewriting is rehearsal: Lesson 3 builds its own quick plan inside its own packet.
 
 - **Level 2:** on the Draft Word Bank, write three words that fit your own jacket, one from each of three
@@ -356,9 +374,10 @@ board is this lesson's; Lesson 3 does not depend on it.
 8. Requires the centerpiece: not applicable to a grammar lesson (no comprehension items).
 9. Padded banks: the Word Bank has 23 words and the Draft Word Bank 30 for three-word tasks; the circle test's
    four pairs are the whole set, not a bank.
-10. Time balance: Levels 2-3 do the circle test + three frame rounds + partner reads (about 12 min) and an oral
-    editing pass (14 min); Levels 4-5 do an 8-item combine (+3-item tier) (12 min) and an 8-error edit (14 min).
-    Day 2 warm-ups are 3 frame rounds vs. 5 sentences vs. 2 sentences with a partner test, each about 20 min.
+10. Time balance: Levels 2-3 do the circle test + three better-of-two items + partner reads (about 12 min) and an
+    oral editing pass (14 min); Levels 4-5 do an 8-item combine (+3-item tier) (12 min) and an 8-error edit (14
+    min). Day 2 warm-ups are three words from sound vs. 5 sentences vs. 2 sentences with a partner test, each
+    about 20 min.
 11. Counts: Activity 1, 8 items; Activity 2, 8 items; Activity 3, 3 items; circle test, 4 pairs; Activity 4, 8
     items (10 blanks); Activity 5, 7 sentences, 8 errors, listed by number; all counted.
 12. Instructions complete inline; the Word Bank and the Draft Word Bank each precede every task that uses
@@ -373,7 +392,7 @@ board is this lesson's; Lesson 3 does not depend on it.
 16. Adjacency: Focus B and the confusable drill are new to this Set; the hook slot is not used at position 2
     (the prompt's flow opens Lesson 2 with the mini-lesson).
 17. Oral protocol: no whole-class discussion protocol in this lesson; partner checks have a fixed question each.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.5.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.8.
 19. Self-contained: the phone case and the jacket are the student's own (a classmate's as fallback); no prop,
     picture, or card the teacher prepares.
 20. Self-contained across lessons: no task needs Lesson 1's packet (the ladder look-back is gone); Day 2's
@@ -402,8 +421,10 @@ board is this lesson's; Lesson 3 does not depend on it.
     jacket and its Draft Word Bank, as rehearsal; Lesson 3 rebuilds its plan in its own packet (§D9).
 16. Self-contained across lessons; concrete prompts: see shared items 20-21.
 12. Content volume: Day 1 has four activity types (identify, combine, choose, edit) plus a heavier tier and
-    parallel frame rounds; Day 2 is a warm-up plus prewriting day, exempt from item minimums but with a written
-    product at every Level.
+    the frame-regime pair-judgment and better-of-two tasks; Day 2 is a warm-up plus prewriting day, exempt from
+    item minimums but with a written product at every Level.
+17. Frame-regime shapes (0.4d): no complete-the-frame task in this lesson (pair judgment and better of two on
+    Day 1, spell from sound and plan the words on Day 2); no shape twice; the frame stated once per day.
 13. Level 5 bridge: not applicable (no essay regime in this band).
 14. Paired tiers: Activity 3 is Level 5's heavier tier on Activity 2; the circle test is Level 2's lighter tier
     on Level 3's required feature; the "although" margin note is Level 5's heavier tier on Activity 5. Each uses

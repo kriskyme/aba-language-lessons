@@ -1,4 +1,4 @@
-# Passage Reading Homework Generation Prompt (v2.1)
+# Passage Reading Homework Generation Prompt (v2.2)
 
 Companion to the Passage Reading Lesson Generation Prompt. Generates one homework assignment from a single
 completed 2-day lesson, for the general (non-TOEFL) track: one section per task Level in the band, each keyed to
@@ -8,7 +8,7 @@ that Level's position (lowest, in between, highest) plus Foundation Support wher
 alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item quality) govern every item and are not
 restated. This prompt states only what is specific to Reading homework.
 
-**Current version: v2.1.** History: `Changelog.md`.
+**Current version: v2.2.** History: `Changelog.md`.
 
 **Input:** the completed lesson, Day 1 and Day 2 in full (anchor text with paragraph lettering, Phase 1
 vocabulary and idiom list, Skill Spotlight, Module, Band), supplied directly. If none is provided, stop and ask.
@@ -54,8 +54,10 @@ middle design, each with its own content; **Foundation Support** the non-verbal 
 **Part 1: Vocabulary & Idiom in Production.** 3-4 words or idioms from the Phase 1 list (a working subset, not
 full coverage). Require original sentences, not fill-in-the-blank recognition; producing is a harder skill than
 recognizing.
-- **Lowest:** a word bank plus sentence starters or frames (reuse a frame family from the lesson). Credit any
-  reasonable, correctly used sentence.
+- **Lowest:** a word bank plus one sentence starter or frame (reuse a frame family from the lesson), completed
+  once, plus one item in a different shape from the Lesson prompt's 0.11 bank (choose what fits, fix the wrong
+  word, sort first); never the same frame several times (Quality Standards §D10). Credit any reasonable,
+  correctly used sentence.
 - **In between:** independent original sentences, one per word, no starter.
 - **Highest:** combine 2-3 words into one connected short paragraph (3-5 sentences) on a topic of the student's
   choice.
@@ -66,7 +68,8 @@ recognizing.
 paraphrase or a broader skill. Ask the student to apply it to something in their own life or surroundings, new
 content, never a re-analysis of the anchor text (Phase 3 already did that work in class). This is a light written
 preview of the Closing Transfer Check's move: producing a new instance, not recognizing one.
-- **Lowest:** 1-2 sentences with a frame mirroring the lesson's Closing Transfer Check design.
+- **Lowest:** one sentence with a frame mirroring the lesson's Closing Transfer Check design, the only frame
+  production in Part 2.
 - **In between:** 2-3 independent sentences, no frame.
 - **Highest:** 3-4 sentences including a brief explanation of why the chosen word or detail reveals what it
   does, the reasoning-about-craft standard the highest Level meets elsewhere.

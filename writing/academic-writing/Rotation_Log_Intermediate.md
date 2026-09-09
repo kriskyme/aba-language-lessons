@@ -18,10 +18,10 @@ Lesson 2 Day 2; what Lessons 3-4 and Module 2 write about), per `shared/Program_
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.2 |
-| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.5 |
-| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.9 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Reader's request, revision for effect (join, upgrade, add, reorder), final copy, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.10 |
+| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.4 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.6 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.10 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Reader's request, revision for effect (join, upgrade, add, reorder), final copy, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.11 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -154,6 +154,30 @@ Stronger": Level 4 joins two sentences, upgrades a word, and adds what the reade
 Levels 2-3 write two more frames and circle the best; every move a before/after table row. Day 2 is "Final Copy,"
 the hand-off note, and the Closing Transfer Check; "Last Look" is gone. The prompt's position 4 role, 0.4a, 0.6, and
 0.3 item 9 say the same for every future Pair.
+
+**2026-09-08 addendum: Mentor Ladder not printed (`1.1.1.2` -> `1.1.1.3`; packet prompt v3.10, Lesson prompt
+v6.7).** Per user direction, Lesson 1's packet no longer carries the "See How It's Done" section (the four
+star-labeled Mentor Texts) or its find-your-example task; the ladder stays in the Markdown and is presented by
+the teacher on the board or read aloud. The same section had been hand-removed once before and reinstated by
+the v6 regeneration; the rule now lives in the prompts so it stays out.
+
+**2026-09-08 addendum: objective names the skill, for everyone (Quality Standards v1.4).** All four packets'
+objectives (both mastheads) are now the one sentence "You will describe something of your own by comparing it to
+something else and giving a real reason for the comparison": no "phone case" or "clothing," and no "Some of you
+will also" tier narration; Lesson 1's Skill Spotlight script matches. Versions `1.1.1.4`, `1.1.2.6`, `1.1.3.10`,
+`1.1.4.11`.
+
+**2026-09-08 addendum: objective is a student can-do (Style Guide v2.10).** The same eight objectives now read
+"I can describe something of my own by comparing it to something else and giving a real reason for the
+comparison," mirroring the `learningobjectives.csv` Level 4 Writing row's "Can ..." form, in place of "You will
+describe something of your own...". Versions `1.1.1.5`, `1.1.2.7`, `1.1.3.11`, `1.1.4.12`.
+
+**2026-09-08 addendum: frame-regime shapes rotate (Quality Standards v1.5 §D10, Lesson prompt v6.9 0.4d).** Levels
+2-3 had completed the same frame at nearly every phase (about nineteen times across the Set). Now Lesson 1 Day 1
+holds the one guided round (after circling the words that fit), Lesson 1 Day 2 is fix-the-wrong-word, Lesson 2
+is better-of-two then spell-from-sound, Lesson 3 writes the frame once, and Lesson 4 adds one sentence for the
+reader's part and chooses between two. Lesson 1's hook and Lesson 2's partner check no longer have students
+hold up their cases. Versions `1.1.1.6`, `1.1.2.8`, `1.1.3.12`, `1.1.4.13`.
 
 ---
 

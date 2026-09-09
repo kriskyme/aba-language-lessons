@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v2.0)
+# Listening/Speaking Lesson Generation Prompt (v2.1)
 
 **Lesson type:** a **Listening/Speaking Lesson** is a fixed 2-day cycle (Day 1 Listening, Day 2 Speaking; two
 75-minute periods) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -13,7 +13,7 @@ rule, plus the shared self-check) alongside it. This prompt states only what is 
 listening/speaking lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with
 the real source as the content vehicle.
 
-**Current version: v2.0.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.1.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Advanced band, Module 2: Narrating"); a topic direction is
 optional. Without a Module/Band pair, do not search for a source. Live web search is required to find and confirm
@@ -209,8 +209,34 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the real sourc
     example?
 13. **Lowest task Level's fixed-frame items** carry a complete inline instruction (what to listen for, what fills
     the blanks), with a separate frame box only where a speak-it-aloud step anchors it?
+14. **Fixed-output Levels (0.6; Quality Standards §D10):** where Level 1 or 2 is a task Level, its form (point,
+    name, or the frame) is produced at most once per day, every other Level 1-2 item takes a different 0.6
+    shape, no shape twice in this lesson or in the same slot as the previous lesson, and the frame is printed
+    once per day?
 
 If any check fails, revise before finalizing; do not build any task on a source that failed items 1-3.
+
+### 0.6 Fixed-output Levels (1-2): task shape bank and slot assignment
+
+Quality Standards §D10 applies. Level 1's row is recognize-and-point or name a word; Level 2's is a one-slot
+frame heard and produced. The form does not change, so the activity around it must. **The cap:** the student
+produces the form (points to or names the image, says or completes the frame) at most once per lesson day; no
+task says "three times." Every other Level 1-2 item in the lesson takes a different shape from this bank, and
+no shape appears twice in one lesson or in the same slot as the previous lesson:
+
+| Shape | What the student does | Slot |
+|---|---|---|
+| Point or name | Point to the embedded image the heard word or frame names, or say the word; the Day 1 production | Day 1 Phase 4 |
+| Choose what was heard | From the target-word list, circle the words the clip actually said and cross out the ones it did not | Day 1 Phase 2 (listen-for purpose) |
+| Fix the wrong word | A printed line from the clip with one word changed or misspelled; cross out, write or say the right one | Day 1 Phase 4 (alongside the production) or Day 2 Phase 1 |
+| Say from sound | A partner says a target word; the student repeats it and points to or writes it, then checks | Day 2 Phase 2 or Phase 3 |
+| Better of two | Two printed frame lines about the clip's object; circle the one that fits and say the word that makes it fit | Day 2 Phase 2 |
+| A partner's object | Say the frame about a partner's belonging, not the clip's; the Day 2 production | Day 2 Phase 2 or Phase 4 |
+| Transfer | The form once, on the lesson's fresh prompt (Quality Standards §D3) | Day 1 Phase 5 and Day 2 Phase 5 |
+
+The frame is printed once per day, in the first task that uses it; later tasks say "the frame." A Set's Module
+Lesson-Plan names the slot-to-shape assignment per lesson so the same shape does not land in the same slot
+twice running.
 
 ---
 
@@ -244,7 +270,8 @@ _Phase 2: Watch & Listening Notes (15 min)_
 - Play the full source once (for Proficient-length sources, the first half with a clear timestamp cutoff).
 - Students fill a shared note-taking organizer matched to the Module (0.4) while watching.
 - Set a differentiated listening purpose per task Level before playback: the lowest Level a narrow, concrete
-  listen-for question; the highest an open interpretive one.
+  listen-for question (for Levels 1-2, a 0.6 shape such as choose-what-was-heard); the highest an open
+  interpretive one.
 
 _Phase 3: Listening Skill Instruction (10 min)_
 - Teach the named strategy directly using a real, timestamped excerpt as the model; brief guided practice on a
@@ -253,6 +280,8 @@ _Phase 3: Listening Skill Instruction (10 min)_
 _Phase 4: Differentiated Listening Task, Choose One Level (20 min)_
 - One merged, star-rated task per task Level: what main-idea, detail, and critical-thinking items would cover,
   written as a single sequential item set per Level from the start (the same merge the packet prompt applies).
+  A Level 1-2 set produces its form once and fills the rest with 0.6 shapes, never the same point-or-name item
+  repeated.
 - **Board-dependent moment** (Quality Standards §D4): students from different task Levels compare and report
   into the shared Phase 2 organizer, so the complete picture exists only once several Levels have contributed.
 - **Respectful Tiers** (Quality Standards §B): the lowest task Level's task includes a genuine, simplified
@@ -279,8 +308,9 @@ _Phase 1: Speaking Skill Spotlight (15 min)_
   skill Phase 5 asks students to reproduce.
 
 _Phase 2: Differentiated Speaking Practice, Choose One Level (20 min)_
-- One merged, star-rated production task per task Level: a fixed sentence frame at the lowest Level, an open
-  register-appropriate production at the highest, matching the packet prompt's Practice It tasks.
+- One merged, star-rated production task per task Level: at the lowest Level the Level's frame, produced once,
+  with its other items in 0.6 shapes; an open register-appropriate production at the highest, matching the
+  packet prompt's Practice It tasks.
 
 _Phase 3: Pronunciation Mini-Focus (10 min)_
 - Teach one feature actually audible in the source (0.4 bank) using the source's own audio as the model. Students

@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.9
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.12
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 3 of 8 (Set position 3 of 4: Drafting, then self-edit and improve)
 
@@ -27,6 +27,19 @@ improve tasks are merged into one "Check and Fix Your Work" Task per star._
 _Revised 2026-09-08 (1.1.3.8 -> 1.1.3.9) per user review and Style Guide v2.8: the section is "Check and Improve
 Your Writing" (never "fix"); every multi-step Task in the packet is a one-sentence lead plus numbered steps with
 check items as questions; the "Keep your piece" wrap-up line is gone._
+
+_Revised 2026-09-08 (1.1.3.11 -> 1.1.3.12) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels
+2-3 write the frame once on Day 1 (the "once more about a different part" round is gone; a partner part-check
+takes its place) and Day 2's "write it once more with a word from a different group" fallback is gone. Packet
+Unit 3A Tasks B-C and Unit 3B Task A adjusted._
+
+_Revised 2026-09-08 (1.1.3.10 -> 1.1.3.11) per Style Guide v2.10: the packet's objective is a student can-do, "I can
+describe something of my own by comparing it to something else and giving a real reason for the comparison,"
+in place of "You will describe something of your own..." (both mastheads). No other change._
+
+_Revised 2026-09-08 (1.1.3.9 -> 1.1.3.10) per Quality Standards v1.4 / Style Guide v2.9: the packet's objective is one
+sentence naming the skill for every student ("describe something of your own by comparing it..."), with no object
+and no "some of you"; no other change._
 
 _Revised 2026-09-08 (1.1.3.6 -> 1.1.3.7) per user review, Quality Standards v1.3, and Lesson prompt v6.5: the
 object is a subject, not a prop (no "look at it," "point to," or desk language anywhere); Day 1 completes the
@@ -135,10 +148,11 @@ below are what to check while the draft is in progress, not only at the end.
   slot (for example "gray" and "faded"), says to the teacher or a partner which one fits their item better
   and why in one phrase ("faded, because the color is washed out"), and writes that one. The word is
   a choice the student makes and can defend, not a foregone answer.
-- **When the frame is complete:** a second round of the same frame about a different part of the item (a
-  sleeve, a pocket, the collar): the student names the part, sounds out the word (Level 3: two words about two
-  different things), writes it, and reads the line to a partner. This keeps frame-based students producing for
-  the block; Day 2's improvement round is different in kind (a more exact word, then an -s sentence).
+- **When the frame is complete:** the student reads the line to a partner, who says which part of the item
+  the word describes (Level 3: which part each word describes), and the student says whether that is the part
+  they meant. The frame is written once today (Lesson prompt 0.4d: one complete-the-frame task per lesson);
+  Day 2's improvement round is different in kind (a more exact word, then an -s sentence), and Lesson 4's
+  reader's request adds the second sentence.
 - **Foundation Support (plugs in alongside Level 2, not in place of it):** a student who cannot yet spell from
   sound chooses the slot word from three printed Word Bank words in the packet (the teacher reads them aloud),
   then traces it into the frame; or dictates the word to the teacher, who scribes it, then the student says
@@ -249,8 +263,8 @@ revision throughout: cross out, do not erase.
 
 - **Level 2:** is there a Draft Word Bank word that fits the item more exactly than the one chosen (faded
   instead of old, fleece instead of soft)? If yes, cross out the old word and write the whole new sentence on
-  the line below; if the first word was already the best, write "It is ___." once more with a word from a
-  different Word Bank group. Read the result to a partner.
+  the line below; if the first word was already the best, leave it and put a check next to it. Read the result
+  to a partner.
 - **Level 3:** the same more-exact-word check on both slots, then one sentence in the -s form about what the
   item does ("It keeps me warm." / "It looks new." / "It fits well."), using the third-person -s rule from
   Lesson 1 Day 1. Read both lines to a partner.
@@ -298,9 +312,9 @@ Set (Pair position 8).
    practice object, appears only as the shape of Maria's models in Phase 1); the Level 4 path's "reason"
    explains a comparison, not a
    cause-and-effect process; no narrating or evaluating drift.
-4. Respectful Tiers: Levels 2-3 make a defended word choice between two candidates, do a second frame round
-   on a different part of the item (Day 1), and on Day 2 make a more-exact-word revision and (Level 3) an -s
-   sentence; on both days they have a genuine production role for the full block.
+4. Respectful Tiers: Levels 2-3 make a defended word choice between two candidates and a partner-checked
+   frame (Day 1), and on Day 2 make a more-exact-word revision and (Level 3) an -s sentence; on both days they
+   have a genuine production role for the block.
 5. Live oral work: the share-out gives Levels 2-3 a prepared single line (their frame) rather than an easier
    stem in a harder turn; partner checks ask the partner to say which part a word describes, never to point;
    Foundation Support is described where it plugs in (Day 1 Phase 2).
@@ -311,9 +325,11 @@ Set (Pair position 8).
 8. Requires the centerpiece: every task is written about the student's own chosen item, from what they know of
    it; the item need not be present (D8).
 9. Padded banks: the Draft Word Bank has 30 words for one- and two-word tasks; no matching lists.
-10. Time balance: Levels 2-3 have the real frame, a defended choice, and a second frame round on another part
-    (Day 1), then a more-exact-word revision and an -s sentence (Day 2), filling the same 50- and 30-minute
-    blocks Levels 4-5 spend drafting and improving; no add-on is gated on finishing early at any Level.
+10. Time balance: Levels 2-3 have the real frame, a defended choice, and a partner part-check (Day 1), then a
+    more-exact-word revision and an -s sentence (Day 2), inside the 50- and 30-minute blocks Levels 4-5 spend
+    drafting and improving; no add-on is gated on finishing early at any Level.
+17. Frame-regime shapes (0.4d): one complete-the-frame task (the draft, Day 1) preceded by plan-the-words;
+    check-and-improve on Day 2; no second frame round; the frame appears once per day, in the draft Task.
 11. Counts: Level 4 and Level 5 drafts are counted (sentences only) by the students themselves at the end of
     Day 1 Phase 2, then checked against the target table (checklist item 8); no model text is introduced in
     this lesson, so no new authored count applies.
@@ -329,7 +345,7 @@ Set (Pair position 8).
     Lesson 4's before/after-table revision.
 17. Oral protocol: the share-out has per-Level lines, a task for every listener, and a rotated second question
     in Day 2's pair check; no static single prompt.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.9.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.12.
 19. Self-contained: the item is the student's own and need not be present (no "look at it," "point to,"
     desk, or borrowing language anywhere); Foundation Support uses printed Draft Word Bank words; no prop,
     picture, or card the teacher prepares; no drawing box.

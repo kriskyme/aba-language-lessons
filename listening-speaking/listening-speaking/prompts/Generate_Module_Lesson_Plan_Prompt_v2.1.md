@@ -1,4 +1,4 @@
-# Listening/Speaking Module Lesson-Plan Generation Prompt (v2)
+# Listening/Speaking Module Lesson-Plan Generation Prompt (v2.1)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Produces a plan for **one Set** (4 lessons, 8
 instructional days): topic directions to search within, content-format, listening-strategy, speaking-skill,
@@ -8,7 +8,7 @@ or answer key. Run this first, approve the plan, then generate the Set's lessons
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets, §C; Rotation Log mechanics and the
 cross-Set / cross-Module adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v2.** History: `Changelog.md`.
+**Current version: v2.1.** History: `Changelog.md`.
 
 Why this exists: the Lesson prompt's constraints are Set-wide (format rotation, strategy/skill/protocol variety,
 no vocabulary-theme overlap, task-Level content traced to real CSV rows), easier to satisfy by planning the Set
@@ -63,13 +63,16 @@ approved Set under this Module/Band's `## Module N` section in `Rotation_Log_<Ba
    - **Target vocabulary theme,** one line; no overlap within the Set or with earlier Sets in this Module/Band;
      flagged if it echoes the previous Module.
    - **Task-Level basis:** for every task Level, the exact Listening/Speaking CSV objective (Level N) with both
-     halves named explicitly, the Listening half for Day 1 and the Speaking half for Day 2.
+     halves named explicitly, the Listening half for Day 1 and the Speaking half for Day 2. For a fixed-output
+     Level (Level 1 or 2), also name the Lesson prompt's 0.6 shape each of the lesson's slots uses, so no shape
+     sits in the same slot in consecutive lessons (Quality Standards §D10).
 
 4. After the table, report a short self-check: every format, strategy, and skill used without repeats (twice
    only where a bank is smaller than the lesson count); no topic direction or theme repeats within the Set or
    against earlier Sets; every task Level traced to a quoted row with both halves, exactly the band's Level
-   count; the Module's verb consistent across all lessons; Lesson 1 following the adjacency rule in every rotated
-   column, echoes flagged; Lesson # continuing the global numbering.
+   count; the Module's verb consistent across all lessons; no Level 1-2 task shape in the same slot in
+   consecutive lessons; Lesson 1 following the adjacency rule in every rotated column, echoes flagged; Lesson #
+   continuing the global numbering.
 
 5. Search for no source, write no task, produce no answer key in this step. If asked to generate lesson content
    in the same turn, stop and confirm the plan is approved first.

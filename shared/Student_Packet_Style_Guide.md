@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.8)
+# Student Packet Style Guide (v2.11)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -141,10 +141,11 @@ h3 {
 }
 ```
 
-The paragraph always opens with a bold `Objective:` label before the can-do sentence itself
-(`<p class="objective"><strong>Objective:</strong> describe...</p>`) - every modality's packets
-follow this, so a generation prompt that produces an unlabeled `.objective` paragraph is
-producing wrong output, not a stylistic variant.
+The paragraph always opens with a bold `Objective:` label before the can-do sentence itself, which is
+written in the student's voice as "I can" plus the skill (`<p class="objective"><strong>Objective:</strong>
+I can describe...</p>`; form in §E) - every modality's packets follow this, so a generation prompt that
+produces an unlabeled `.objective` paragraph, or one that opens "You will," "To describe," or a bare
+verb, is producing wrong output, not a stylistic variant.
 
 ```css
 
@@ -630,7 +631,7 @@ these.
 | Teacher-facing term | Student-facing translation |
 |---|---|
 | Task Level / Level (numeric); tier, regime, or Level names of any kind | A star rating (★ to ★★★★, more stars = more challenging), with no numeric Level and no tier name ("Foundation," "Extension," "beginner," "warm-up," etc.). See §F. |
-| Skill Spotlight | A plain can-do objective statement near the start of the packet, phrased as something the student can picture doing, not narrated as "today we are practicing X." |
+| Skill Spotlight | A can-do statement in the student's own voice near the start of the packet, mirroring the `learningobjectives.csv` row's "Can ..." form: "I can" plus the skill, with "my" or "me" where the sentence refers to the student ("Objective: I can describe something of my own by comparing it to something else and giving a real reason for the comparison."). Never "You will," "To describe," a bare verb phrase ("describe..."), or "today we are practicing X." One sentence naming the skill, not the lesson's object or text ("something of my own," never "my phone case"), identical for every student: never "Some of you will also," "if you are at," or any tier narration (Quality Standards §D1). |
 | Closing Transfer Check | A plain closing-activity instruction stating what to pick and what to do with it, never named as a check and never referencing assessment or evidence language, and with no stage directions about what the teacher will do next. |
 | Fishbowl / Town Hall / Concentric Circles / Jigsaw / discussion carousel | A plain small-group discussion instruction: get into a group, here are your questions, take turns talking. Do not name the protocol. Render as simultaneous small groups (a static page cannot run a live rotation) and fold any outer-circle or tracking task into a group's own task rather than dropping it. |
 | Activation hooks by name (K-W-L Walk, Mystery Quote, Stand Up/Move, Four Corners, etc.) | The plain instruction the activity produces (a warm-up question, a prompt to discuss), never the activity's name - in headings included. |
@@ -730,6 +731,12 @@ inside that task block with no heading; a bank serving several tasks or a whole 
 the first task that uses it, with any instruction about the bank after the div, not before it.
 Fixed-frame items state their full instruction inline; a standalone frame box is reserved for a task with
 a genuine speak-it-aloud step, and it renders before any instruction that refers back to it.
+
+**A fixed frame is printed once per masthead section as a model** (in the grammar box, the word bank, or the
+first Task that uses it: "It is ___ and ___."). Every later Task prints only the blank frame line the student
+completes, and its lead says "Complete the frame" or "Write your sentence," never re-quoting the frame. The
+packet's frame-regime Tasks also follow Quality Standards §D10: a section that shows the same
+complete-the-frame Task twice for one star is a source-document error to report, not a layout to reproduce.
 
 **Multiple choice.** Options fold into the question as an inline parenthetical list, one instruction line
 at the top of the task block, no repeated verb per item and no option-per-line layout. A genuinely
@@ -1011,8 +1018,10 @@ Run this list first, then the modality's own list.
 
 1. No §E left-column term, section number, or version narrative anywhere in student-facing text?
 2. One combined document covering every task Level in the band, not per-Level handouts?
-3. Objective stated as a plain can-do statement near the top of each masthead section, before any task
-   content, and the closing activity connecting back to it?
+3. Objective stated as one "I can ..." sentence in the student's voice near the top of each masthead
+   section, before any task content, naming the skill (not the object) with no "You will," "To," bare verb,
+   "some of you," or other tier narration, and the closing activity connecting back to it? (§E; Quality
+   Standards §D1)
 4. Sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the heading text, task
    lettering restarting in each?
 5. Opening masthead only carries the two-tag `.masthead-meta` stack (modality label; Band plus
@@ -1046,8 +1055,11 @@ Run this list first, then the modality's own list.
 16. No object logistics or handling ("look at it," "point to," "hold it up"), no word range or "count your
     words," no pacing line, and no wrap-up or "keep working on it" line outside the Pair position 4 hand-off
     anywhere in student-facing text? (§E)
+17. Each fixed frame printed once per masthead section as a model, later Tasks showing only the blank line,
+    no lead re-quoting it, and no star given the same complete-the-frame Task twice in one section? (§F;
+    Quality Standards §D10)
 
 ## Changelog
 
-**Current version: v2.8.** For the full dated version history and the reasoning behind each
+**Current version: v2.9.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

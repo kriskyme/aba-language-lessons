@@ -144,3 +144,11 @@ the draft, Lesson 4 (Lesson prompt v6.6, position 4) no longer repeats that chec
 and three revision moves with Module 1's tools (join, upgrade, add; Level 5 also reorders) recorded in a
 before/after table, Levels 2-3 write two more frames and choose; Day 2 is a final copy, the hand-off note, and the
 Closing Transfer Check. Lesson 4 at `1.1.4.10`.
+
+**Addendum (2026-09-08, eighth): frame-regime shapes rotate.** Per Quality Standards §D10 (v1.5) and Lesson
+prompt v6.9's 0.4d, Levels 2-3 no longer get a guided frame round at every phase. Their shapes across the Set:
+Lesson 1 Day 1 choose-what-fits then the one guided round; Lesson 1 Day 2 fix-the-wrong-word; Lesson 2 Day 1
+pair judgment and better-of-two; Lesson 2 Day 2 spell-from-sound and plan-the-words; Lesson 3 Day 1 the draft
+(one frame sentence); Lesson 3 Day 2 check-and-improve; Lesson 4 Day 1 one sentence for the reader's part and
+choose the better of two; Lesson 4 Day 2 final copy and the Transfer Check. Versions `1.1.1.6`, `1.1.2.8`,
+`1.1.3.12`, `1.1.4.13`.

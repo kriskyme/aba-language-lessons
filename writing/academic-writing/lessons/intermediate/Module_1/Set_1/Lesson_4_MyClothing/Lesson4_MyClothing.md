@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.10
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.13
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise for effect with Module 1's tools,
 final copy, hand-off to Module 2's Set, not published; Closing Transfer Check for Module 1's skill)
@@ -35,6 +35,19 @@ _Regenerated 2026-09-08 (1.1.4.9 -> 1.1.4.10) against `Generate_Lesson_Prompt_v6
 and improves the draft, so this lesson no longer repeats that checklist. Day 1 is a reader's request and revision
 for effect (join, upgrade, add what the reader asked for, and at Level 5 reorder), with the before/after table as
 evidence; Day 2 is a final copy, the hand-off note, and the Closing Transfer Check. No "Last Look" pass._
+
+_Revised 2026-09-08 (1.1.4.12 -> 1.1.4.13) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels 2-3
+write one more frame sentence, about the part the reader asked for, and choose the better of two (not two more
+and the best of three). Packet Unit 4A Tasks B-C rewritten; Unit 4B unchanged (Tasks I-J are the Closing
+Transfer Check, the only frame in that section)._
+
+_Revised 2026-09-08 (1.1.4.11 -> 1.1.4.12) per Style Guide v2.10: the packet's objective is a student can-do, "I can
+describe something of my own by comparing it to something else and giving a real reason for the comparison,"
+in place of "You will describe something of your own..." (both mastheads). No other change._
+
+_Revised 2026-09-08 (1.1.4.10 -> 1.1.4.11) per Quality Standards v1.4 / Style Guide v2.9: the packet's objective is one
+sentence naming the skill for every student ("describe something of your own by comparing it..."), with no object
+and no "some of you"; no other change._
 
 _Revised 2026-09-08 (1.1.4.8 -> 1.1.4.9) per Style Guide v2.8: the section is "Check and Improve Your Writing,"
 and each Task is a one-sentence lead plus numbered steps, never "fix."_
@@ -142,26 +155,26 @@ Each move is one row of the table; three rows at this Level.
 
 Four rows of the table at this Level; the "Why" column for the reorder row says what the new position does.
 
-**Levels 2-3 (frame regime), write more, then choose:** the Lesson 3 frame is one sentence; this day produces two
-more about other parts of the item (a sleeve, a pocket, the collar, the hood), each sounded out and, at Level 3,
-each with two words about two different things. Then the student reads all three to a partner and circles the
-one that says the most about the item; the circled sentence is the one copied on Day 2. Choosing among three
-of their own sentences is this Level's revision move. A student who received a "Tell me about the ___" request
-writes one of the two new sentences about that part.
+**Levels 2-3 (frame regime), the reader's part, then choose (0.4d):** the Lesson 3 frame is one sentence; this
+day produces one more, about the part the reader asked for ("Tell me about the ___": a sleeve, a pocket, the
+collar, the hood), sounded out and, at Level 3, with two words about two different things. Then the student
+reads both to a partner and circles the one that says the most about the item; the circled sentence is the
+one copied on Day 2. Answering the reader and choosing between two of their own sentences is this Level's
+revision move. This is the lesson's one complete-the-frame task.
 
 **Foundation Support** (alongside Level 2, not in place of it): a student who cannot yet spell from sound says
 the word, the teacher writes it on a card, and the student copies it into the frame and says which part of the
 item the word is about.
 
 **Teacher circulation:** three visible changes on every Level 4 page (four at Level 5) with a filled table row for
-each; three frame sentences on every Level 2-3 page with one circled. A change that only corrects (a comma, a
+each; two frame sentences on every Level 2-3 page (Lesson 3's and today's) with one circled. A change that only corrects (a comma, a
 spelling) is not one of the three; send the student back to the move list.
 
 ### Phase 3: Revision share (15 min)
 
 **Board-dependent moment, co-constructed live:** a before/after board in two columns. Two or three volunteers
 read one row of their table aloud (Level 5 first, since the reorder row is the hardest to hear; then one Level 4
-join or upgrade; then one Level 2-3 student reads their three sentences and says which they circled and why). The
+join or upgrade; then one Level 2-3 student reads their two sentences and says which they circled and why). The
 teacher writes each "before" on the left and each "after" on the right, and the class names in one line what
 the change did (joined two ideas; a sharper word; answered the reader; put the history before the habits). The
 board stays up for Day 2.
@@ -233,16 +246,16 @@ it saw on a item.
 **Quality Standards §F (shared):**
 1. Four task Levels (2, 3, 4, 5), each citing its own CSV row: yes (table above).
 2. Each at its own ceiling: Level 5's four moves stay inside the paragraph regime (6-9 sentences, 90-150 words);
-   Level 2's stays single-word frame work (three frames, one chosen); Level 4 is not pulled up to Level 5's
+   Level 2's stays single-word frame work (two frames, one chosen); Level 4 is not pulled up to Level 5's
    reorder or implied-attitude demand.
 3. Module verb: every task describes an object (the item, then a pen); every revision move sharpens the
    description (a joined comparison, a more exact word, a detail the reader asked for), not a narrative or an
    evaluation.
-4. Respectful Tiers: Levels 2-3 write two new frame sentences and choose the best of three (a genuine
-   judgment), answer a reader's request, and write on a real new object in the Closing Transfer Check; nothing
-   on the board answers which sentence says the most.
+4. Respectful Tiers: Levels 2-3 answer a reader's request with one new frame sentence and choose the better
+   of two (a genuine judgment), and write on a real new object in the Closing Transfer Check; nothing on the
+   board answers which sentence says the most.
 5. Live oral work: the reader's request is written, not spoken; the revision share and the cold-called
-   read-aloud both have the text written first; Levels 2-3 read three sentences they rehearsed with a partner.
+   read-aloud both have the text written first; Levels 2-3 read two sentences they rehearsed with a partner.
    Foundation Support is placed alongside Level 2 in Phase 2.
 6. Item distinctness: the three (four) moves are different in kind (join, upgrade, add, reorder) and none
    repeats Lesson 3 Day 2's check items; the Level 5 tier adds a move rather than restating Level 4's.
@@ -252,10 +265,10 @@ it saw on a item.
 8. Requires the centerpiece: every move is made on the student's own draft; the reader's request comes from
    reading that draft.
 9. Padded banks: the Draft Word Bank has 30 words for one- or two-word choices; no matching lists.
-10. Time balance: Levels 2-3 read and request (Phase 1), write two more frames and choose (Phase 2), copy the
+10. Time balance: Levels 2-3 read and request (Phase 1), write the reader's frame and choose (Phase 2), copy the
     chosen sentence and write the hand-off (Day 2), and write two card sentences (Phase 3), about the same
     minutes as Levels 4-5's three or four moves, table, copy, note, and card.
-11. Counts: three moves and three table rows at Level 4, four at Level 5, three frame sentences at Levels 2-3,
+11. Counts: three moves and three table rows at Level 4, four at Level 5, two frame sentences at Levels 2-3,
     all stated; the sentence ceilings (6 and 9) are stated in the moves; no counting task is printed.
 12. Instructions complete inline; the Draft Word Bank precedes the upgrade move and the before/after table
     sits inside the Task that fills it.
@@ -272,7 +285,7 @@ it saw on a item.
     check-and-improve, then a closing-line read-aloud); no checklist is repeated across the two lessons.
 17. Oral protocol: no discussion protocol in this lesson; the cold-call has a written card first for every
     Level.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.10.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.13.
 19. Self-contained: the item and the pen are the students' own; the Foundation Support card is written live by
     the teacher, not prepared; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the only thing needed from earlier is the carried draft; the Draft Word Bank

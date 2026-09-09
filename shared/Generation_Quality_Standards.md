@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.3)
+# Generation Quality Standards (v1.6)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -94,7 +94,8 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    point item, up to 3-5 minutes for an extended composition or analysis item), so estimated time-on-task is
    roughly even across every task Level. The lowest Level must not finish in a fraction of the highest
    Level's time. Estimate the running total before finalizing; if a Level runs over its target, cut items
-   rather than note the overage.
+   rather than note the overage. "More items" never means the same item again: a Level whose output form is
+   fixed gets its extra items in different activity shapes (D10).
 6. **Counted, not estimated.** Every word count, sentence count, paragraph count, and item count a ceiling
    or minimum governs is verified by an actual count, never eyeballed. A count at or near a range's floor is
    a warning sign, not an acceptable minimum.
@@ -112,6 +113,10 @@ Rules shared by every 2-day lesson cycle in the program:
    skill in one or two plain, student-facing sentences, separate from the topic and tied to the Module's
    verb: "today we're practicing describing a place by comparing it to somewhere familiar," not "today we're
    reading about Ciudad Perdida." The Spotlight and the Closing Transfer Check name exactly the same skill.
+   The statement names the skill, never the lesson's object, text, or clip ("describe something of your own by
+   comparing it," not "describe your phone case"), and it is the same sentence for every task Level: never
+   "some of you will also," "if you are at," or any other tier narration. A Level's own required feature (an
+   implied attitude, an essay structure) lives inside that Level's task, not in the Spotlight.
 2. **Closing Transfer Check (end of Day 2).** Every student applies the spotlighted skill to something new
    (not the centerpiece), produces it out loud or on a small card, and the teacher cold-calls two or three
    pairs to share. Evidence is a demonstration, never a declaration: no thumbs-up/sideways/down, no show
@@ -136,6 +141,8 @@ Rules shared by every 2-day lesson cycle in the program:
 6. **No adjacent repeats.** A lesson's strategy, hook, oral-output protocol, and genre or format each differ
    from the immediately preceding lesson in the Set, and a Set's first lesson from the previous Set's last
    (see `Program_Conventions.md` §F). Adjacency is the rule; full-history non-repetition is not required.
+   For the task shape of a fixed-output Level, D10 applies instead: no shape twice in a lesson and no shape in
+   the same slot in consecutive lessons.
 7. **Oral output is scaffolded for everyone.** Any live discussion protocol supplies 2-3 distinct rotated
    prompts (never one static prompt for the whole window), explicit sentence stems per task Level inside
    each Level's own ceiling, and an explicit active task for every student not currently speaking.
@@ -163,6 +170,28 @@ of the form) is reprinted or rebuilt in that lesson's own packet, in that lesson
 warm-up is rehearsal, never an input. Where a lesson offers a choice of object, the choices are printed as a
 short list the student circles. The test: a student who was absent, or lost the earlier packet, can start every
 task in this one.
+
+**D10. Fixed-output Levels rotate the activity, not the output.** Where a Level's CSV row fixes its output
+form (a word spelled into a frame, a pointed-to image, a single labeled word), the form stays fixed, but the
+activity that produces it changes shape from phase to phase and lesson to lesson within a Set. Repeating a
+fixed form is never a design choice: when a page needs filling, add a shape, not a round. The rule in full:
+
+- The student produces the fixed form at most once per Level per lesson day (a guided round, a draft, a
+  reader's addition, a Transfer Check are each one production). No task says "N times" except the single
+  guided round where the CSV row itself calls for several words (one word per group, in one task).
+- Every other item for that Level takes a different shape from this bank: choose the item that fits the
+  object and cross out the ones that do not; fix the wrong or misspelled item in a printed example; produce
+  from sound (a partner says it, the student writes or says it, then checks against the list); choose the
+  better of two printed examples and say what makes it better; sort the list into its groups before
+  producing; produce about a partner's object.
+- No shape is met twice in one lesson, and no shape sits in the same slot in consecutive lessons of a Set.
+- The fixed form is shown once per day as a model, then referred to ("the frame," "the label"), never
+  re-taught in every task.
+- Homework follows the same rule: one production of the form plus items in other shapes, never "more rounds."
+  An assessment produces the form once per Level and never repeats an item shape for that Level.
+
+A Level that repeats one shape has been given filler, not practice, however many items it prints. Each lesson
+type's own prompt states the bank in its own terms and assigns a shape to each slot of its cycle.
 
 ## E. Style constraints for generated Markdown
 
@@ -202,8 +231,9 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 10. Time-on-task roughly balanced across task Levels, estimated per item, over-length Levels cut? (C5)
 11. Every governed count actually counted, none at or near a floor? (C6)
 12. Every instruction complete inline; every bank, frame, or model placed before the items it serves? (C7)
-13. Skill Spotlight on Day 1 and a matching Closing Transfer Check on Day 2 that demonstrates, never
-    self-reports, on an object or scenario not used elsewhere in this Set? (D1-D3)
+13. Skill Spotlight on Day 1, naming the skill (not the object or text) in one sentence that is the same for
+    every Level with no tier narration, and a matching Closing Transfer Check on Day 2 that demonstrates,
+    never self-reports, on an object or scenario not used elsewhere in this Set? (D1-D3)
 14. A genuine board-dependent moment each day? (D4)
 15. Every practice activity preceded by the teaching it depends on? (D5)
 16. No strategy, hook, protocol, or genre repeated from the immediately preceding lesson? (D6)
@@ -217,7 +247,11 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     carried piece; every plan, bank, model, and object choice rebuilt or reprinted here? (D9)
 21. Concrete prompts: at Beginner and Intermediate, every student-facing prompt is an action with a visible
     product, no process or reflection question, and the self-check is yes/no items with marks? (E6)
+22. Fixed-output Levels: the form produced at most once per Level per day (the single guided round the only
+    "several words" task), no activity shape met twice in one lesson or in the same slot as the previous
+    lesson, the form shown once as a model, every other item in a rotated shape, and homework holding one
+    production plus other shapes? (D10)
 
 ## Changelog
 
-**Current version: v1.3.** See `Changelog.md` in this folder.
+**Current version: v1.6.** See `Changelog.md` in this folder.

@@ -1,4 +1,4 @@
-# Passage Reading Module Lesson-Plan Generation Prompt (v2.0)
+# Passage Reading Module Lesson-Plan Generation Prompt (v2.1)
 
 Companion to the Passage Reading Lesson Generation Prompt. Produces a plan for **one Set** (4 lessons, 8
 instructional days): topics, genres, reading-strategy and oral-protocol rotation, vocabulary themes, and
@@ -9,7 +9,7 @@ errors slip through.
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets, §C; Rotation Log mechanics and the
 cross-Set / cross-Module adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v2.0.** History: `Changelog.md`.
+**Current version: v2.1.** History: `Changelog.md`.
 
 Why this exists: several of the Lesson prompt's constraints are Set-wide (genre rotation across the bank,
 strategy/hook/protocol variety, no vocabulary overlap within a Set, task-Level content traced to real CSV rows).
@@ -75,7 +75,9 @@ protocol; vocabulary theme and topic get the recency flag. Append the approved S
      Set in this Module/Band; flagged if it echoes the previous Module.
    - **Task-Level basis:** for every task Level in the band, the exact Reading CSV objective (Level N) that Level's
      task is built to satisfy, mapped explicitly. Never one generic task description; never a Writing objective for
-     a task that happens to use writing as its format.
+     a task that happens to use writing as its format. For a fixed-output Level (Level 1 or 2), also name the
+     0.11 shape each of the lesson's slots uses, so no shape sits in the same slot in consecutive lessons
+     (Quality Standards §D10).
    - **Interactivity note:** favor variety across oral, collaborative, and physical or visual formats; writing is
      one format among several, not the default.
 
@@ -83,8 +85,9 @@ protocol; vocabulary theme and topic get the recency flag. Append the approved S
    repeats within the Set or against earlier Sets; every task Level traced to a quoted Reading row, exactly the
    band's Level count; the Module's verb consistent across all lessons; Intermediate-and-up topics real and
    verifiable with no fabricated attributed quotes; Fishbowl lessons carrying an explicit outer-circle task and
-   every lesson 2-3 rotated prompts; Lesson 1 following the adjacency rule in every rotated column, with theme and
-   topic echoes flagged; Lesson # continuing the global numbering.
+   every lesson 2-3 rotated prompts; no Level 1-2 task shape in the same slot in consecutive lessons; Lesson 1
+   following the adjacency rule in every rotated column, with theme and topic echoes flagged; Lesson #
+   continuing the global numbering.
 
 5. Write no anchor text, question, vocabulary list, or answer key in this step. If asked to generate lesson
    content in the same turn, stop and confirm the plan is approved first.

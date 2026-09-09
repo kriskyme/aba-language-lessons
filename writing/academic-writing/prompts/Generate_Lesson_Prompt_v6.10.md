@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.6)
+# Academic Writing Lesson Generation Prompt (v6.10)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.10.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -96,9 +96,10 @@ form, not content. Never draft about the practice object, and never change the d
 exactly that Level's output form and required feature (0.2): a **Mentor Text** at Levels 1-5 (a word, a frame, or
 a paragraph), a **Mentor Essay** at Levels 6-8 (a complete essay, not a longer paragraph). Beginner has 3 Mentor
 Texts; Intermediate 4 Mentor Texts; Advanced and Proficient 4 models mixing Texts and Essays. Present them
-together, in Level order, as one visible ladder on Lesson 1 Day 2 once Focus A has been introduced, so a student
-sees the model one step up and one step down; the paragraph-to-essay jump in kind is exactly what the ladder makes
-visible. The ladder is also worked evidence for Level 7's self-revision requirement (0.2, 0.4a).
+together, in Level order, as one ladder the teacher presents on the board or reads aloud on Lesson 1 Day 2 once
+Focus A has been introduced, so a student sees the model one step up and one step down; the paragraph-to-essay
+jump in kind is exactly what the ladder makes visible. The ladder lives in the Markdown and on the board; it is
+never printed in the student packet (packet prompt 2.6). The ladder is also worked evidence for Level 7's self-revision requirement (0.2, 0.4a).
 
 **The Module governs the writing purpose, not just the difficulty** (Quality Standards §A4):
 
@@ -229,6 +230,10 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
     for depends on Lesson 2's prewriting or Lesson 1's ladder being in hand (the carried draft excepted); the
     drafting lesson's plan is rebuilt in its own packet; at Beginner and Intermediate no printed question asks
     the student about their own plan, process, or what a model does?
+17. **Frame-regime shapes (0.4d; Quality Standards §D10):** the frame produced at most once per Level per day
+    ("three times" only in Lesson 1 Day 1's guided round), every other frame-regime task in a different shape
+    from the 0.4d bank, no shape met twice here or in the same slot as the previous lesson, and the frame
+    stated once per day?
 
 If any check fails, rewrite before proceeding. Do not build the drafting and editing lessons on a Mentor Ladder
 that fails its own ceilings.
@@ -322,8 +327,8 @@ add up to 75 in the timing column. Minimums for every generated lesson:
   confusable-pair drill: at least 6. An editing paragraph: at least 6-8 sentences with 6-8 verified errors.
 - **Activities per grammar/practice day** (Lessons 1-2, both days): at least 3 distinct activities from the 0.4
   bank, not the same one or two types reused.
-- **Frame-regime parity:** Levels 1-3 get more rounds on their own and classmates' belongings, not one, so they have as much printed material
-  as their composition-regime classmates.
+- **Frame-regime parity:** Levels 1-3 have as much printed material as their composition-regime classmates,
+  supplied in rotated activity shapes (0.4d), never as more rounds of the same frame.
 - **Essay-regime parity:** Levels 6-8's Essay Focus track gets the same standard in its own shapes: a full short
   model essay (not a paragraph) for essay analysis, at least 2 candidate hooks per hook activity, both a general
   and a specific outline.
@@ -331,6 +336,32 @@ add up to 75 in the timing column. Minimums for every generated lesson:
   governed by 0.2's targets and 0.6's checklists.
 - **Check before finalizing:** lay out each grammar/practice day as it would print; if it looks like a handout with
   room to spare, add another activity from the bank rather than padding with filler.
+
+### 0.4d Frame-regime task bank and Set assignment (Levels 1-3)
+
+Quality Standards §D10 applies: a frame-regime Level's output form is fixed by its CSV row, so the activity
+that produces it must change shape at every phase. **The cap: the frame is produced at most once per Level per
+lesson day,** and only Lesson 1 Day 1's guided round says "three times" (one word per Word Bank group, in one
+task). Every other frame-regime task takes a different shape from this bank; no shape is met twice in one
+lesson or in the same slot as the previous lesson, and homework follows the same rule (Homework prompt):
+
+| Shape | What the student does | Where it sits in a Set |
+|---|---|---|
+| Choose what fits | From the Word Bank, circle the words that fit the object, cross out the ones that do not (Level 3: circle a pair that says two different things) | Lesson 1 Day 1 |
+| Complete the frame | The one guided round: the frame completed from the Word Bank on the practice object | Lesson 1 Day 1 (the lesson's one round) |
+| Fix the wrong word | Three printed frame sentences about the practice object, each with a word that does not fit or is misspelled; cross out, write the right word (Level 3: a pair that says the same thing twice, or a misspelled word) | Lesson 1 Day 2, alongside Levels 4+'s editing paragraph |
+| Better of two | Two printed frame sentences about the practice object; circle the more exact one and write the word that made it better | Lesson 2 Day 1 |
+| Pair judgment | Circle the printed pairs that say two different things about the object, cross out the ones that repeat | Lesson 2 Day 1 |
+| Spell from sound | A partner reads three Word Bank words aloud; the student writes each without looking, then checks (Level 3 also marks which two would go in one frame). Words only, no frame | Lesson 2 Day 2 |
+| Plan the words | Three Draft Word Bank words that fit the draft object, circle the one (Level 3: two) for the draft | Lesson 2 Day 2 and Lesson 3 Day 1 (0.1a) |
+| The draft | One frame sentence on the draft object (the lesson's one round; no second sentence "about another part") | Lesson 3 Day 1 |
+| Check and improve | Read the frame to a partner, swap in a more exact word where one fits | Lesson 3 Day 2 |
+| The reader's part | One more frame sentence about the part the reader asked for; circle the better of the two for the final copy | Lesson 4 Day 1 |
+| Transfer | The frame on a third object (0.8) | Lesson 4 Day 2 |
+
+The frame itself is stated once per day, in the grammar box or the Word Bank, and every later task says "the
+frame." A Module Pair's second Module rotates the same bank against Module N+1's frame; a Beginner Set uses the
+Lesson 1-4 column as written.
 
 ### 0.4c Essay Focus: structure content for Levels 6-8
 
@@ -452,8 +483,9 @@ board, a "strong revision" board).
 The rules (Quality Standards §D1-D3) are shared. Writing-specific placement:
 - **Skill Spotlight: Lesson 1 Day 1, during Focus A's mini-lesson,** tied to the Module's verb and the specific
   required feature ("Today we're practicing describing something by comparing it to something else and giving a
-  real reason for the comparison"). For a band reaching Essay Composition, add a second sentence naming what
-  Levels 6-8 are additionally building toward (structuring that comparison as a full essay).
+  real reason for the comparison"). One sentence, the same for every Level, naming the skill and not the
+  Scenario object; no "some of you will also" (Quality Standards §D1). A Level's own required feature, including
+  the essay structure Levels 6-8 build toward, is stated inside that Level's tasks, not in the Spotlight.
 - **Closing Transfer Check: Lesson 4 Day 2** (Beginner's finale; a Pair's position 4 hand-off): every student
   applies the spotlighted skill to something new (not their Scenario piece), out loud or on a small card; a few
   cold-called. Demonstration, not self-report.
@@ -578,12 +610,14 @@ _Phase 1: Editing a paragraph on Focus A (20 min)_
 - A short paragraph with a stated, verified number of Focus A errors.
 
 _Phase 2: Frame warm-up / original sentences with Focus A (25 min)_
-- Levels 1-3 (where present): guided frame completion on the student's own object. Levels 4+: original sentences using
+- Levels 1-3 (where present): fix-the-wrong-word on printed frame sentences about the practice object (0.4d), the
+  day's parallel to the editing paragraph; not a second guided frame round. Levels 4+: original sentences using
   Focus A, one per target item.
 
 _Phase 3: Leveled Mentor Ladder walkthrough (30 min)_
-- Present the ladder (0.1b) in Level order on the shared Scenario, naming what makes each model that Level's
-  version. Students identify their own Level's model and the one directly above it.
+- Present the ladder (0.1b) in Level order on the shared Scenario, on the board or read aloud, naming what
+  makes each model that Level's version. Students identify their own Level's model and the one directly above
+  it from the board; nothing about the ladder is printed.
 
 ### Lesson 2, Day 1: Grammar Focus B, Sentence Variety
 
@@ -601,7 +635,7 @@ _Phase 3: Confusable-pair drill and mixed editing (25 min)_
 ### Lesson 2, Day 2: Task-Ladder Practice and Prewriting
 
 _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
-- Levels 1-3: a second guided frame round on the Scenario, choosing genuinely distinct observations (0.2 Level 3).
+- Levels 1-3: spell-from-sound dictation of Word Bank words with a partner (0.4d), not another frame round.
   Levels 4+: a short warm-up targeting only the required feature (one comparison sentence and one because-sentence;
   one sentence with a specific detail a partner tests for the implied attitude).
 
@@ -628,8 +662,8 @@ _Phase 1: Quick plan (10 min)_
   Markdown.
 
 _Phase 2: Independent/guided drafting, opening and body (50 min)_
-- Frame-regime Levels complete their frame(s) on the draft object (not the practice frames), the teacher
-  circulating to hear each student sound out their word. Composition-regime Levels draft the opening and body
+- Frame-regime Levels complete the frame once on the draft object (the lesson's one round, 0.4d; no second
+  sentence about another part), the teacher circulating to hear each student sound out their word. Composition-regime Levels draft the opening and body
   toward 0.2's targets and complete the draft today (Levels 4+ count sentences at the end of the block).
   Circulation checks the required feature is present in progress, not only at the end.
 
@@ -666,8 +700,8 @@ _Phase 2: Revise for effect with Module N's tools (45 min)_
 - Composition-regime Levels make three moves, each recorded in the before/after table (0.4a): join two short
   sentences with Focus B's connector or turn a plain "but" into the concession form where taught; upgrade one
   plain word to a more exact one from the bank; add the sentence the reader asked for. The band's top Level adds
-  a fourth: move one sentence so the order runs in one direction. Frame-regime Levels write two more frame
-  sentences about other parts of the object and choose the best of their three for the final copy. **Beginner:**
+  a fourth: move one sentence so the order runs in one direction. Frame-regime Levels write one more frame
+  sentence about the part the reader asked for and circle the better of their two for the final copy (0.4d). **Beginner:**
   open with the Peer Editing exchange (0.6) and revise from the partner's form as well. **Module Pair:** no Peer
   Editing here; it happens at position 8.
 
@@ -701,8 +735,9 @@ own Focus A/B and these substitutions, applied to the existing draft on the draf
 - **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N draft; a short recap of
   the Scenario's purpose and named reader and what the piece already accomplishes; Module N+1's Skill Spotlight
   alongside a one-line reminder of Module N's (0.8). Phases 2-3 teach Module N+1's Focus A.
-- **Lesson 5 Day 2 Phase 3** is a Mentor Ladder **second look**: the same ladder, now asking what Module N+1's focus
-  would add to each Level's already-complete model (a before/after framing, not a new ladder).
+- **Lesson 5 Day 2 Phase 3** is a Mentor Ladder **second look**: the same ladder, presented again by the teacher,
+  now asking what Module N+1's focus would add to each Level's already-complete model (a before/after framing,
+  not a new ladder; still not printed).
 - **Lesson 6 Day 1** teaches Module N+1's Focus B with the same activity shapes.
 - **Lesson 6 Day 2 Phase 1's** warm-up targets Module N+1's required feature on a sentence from the student's own
   draft; **Phase 2** replaces prewriting with **annotating the existing draft** for where Module N+1's focus will be

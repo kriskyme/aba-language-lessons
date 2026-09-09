@@ -1,4 +1,4 @@
-# Academic Writing Homework Generation Prompt (v4.1)
+# Academic Writing Homework Generation Prompt (v4.2)
 
 Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
 completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
@@ -8,7 +8,7 @@ Module Pair (8 lessons): one section per task Level in the band, each keyed to t
 alongside it. Quality Standards §A-§C govern every item and are not restated. This prompt states only what is
 specific to Writing homework.
 
-**Current version: v4.1.** History: `Changelog.md`.
+**Current version: v4.2.** History: `Changelog.md`.
 
 **Input:** the lesson content generated so far, in full (the Scenario, the Grammar Focus A/B and Essay Focus A/B
 content taught so far, the Leveled Mentor Ladder, the Skill Spotlight, Module(s), Band). If none is provided,
@@ -57,8 +57,10 @@ template is keyed to the Level's **composition regime** (Lesson prompt 0.1), not
 frame/paragraph and paragraph/essay boundaries do not move with position (Intermediate's lowest Level is
 frame-regime; Advanced's highest is essay-regime).
 
-- **Frame-regime Levels (1-3):** the most scaffolded design: a word bank plus the lesson's own frame(s) verbatim.
-  Credit any reasonable, genuinely chosen word.
+- **Frame-regime Levels (1-3):** the most scaffolded design: a word bank plus the lesson's own frame verbatim,
+  completed once, plus one item in a different shape from the Lesson prompt's 0.4d bank (choose what fits, fix
+  the wrong word, better of two); never the frame several times (Quality Standards §D10). Credit any
+  reasonable, genuinely chosen word.
 - **Paragraph-regime Levels (4-5):** independent original sentences using the target Focus A/B items, no frame.
 - **Essay-regime Levels (6-8):** combine 2-3 target items (Focus A/B and any taught Essay Focus cohesive device)
   into one connected short paragraph, never a full essay; a full essay belongs to Lesson 3 in class.
@@ -74,7 +76,9 @@ pre-written sentence.
 a new instance of the Scenario's underlying task, never the Scenario's own object already covered in class: a
 student who described "my phone case" in class describes a different object at home with the same
 comparison-plus-reason skill.
-- **Frame-regime:** one or two more rounds of the lesson's frame on a new object of the student's own at home.
+- **Frame-regime:** the lesson's frame once on a new object of the student's own at home, plus one other-shape
+  item about that object (circle the Word Bank words that fit it, cross out the ones that do not); never "more
+  rounds" (Quality Standards §D10).
 - **Paragraph-regime:** 2-4 sentences on a new object, including the Level's own required feature (Lesson prompt
   0.2).
 - **Essay-regime:** one paragraph applying Focus A/B and, where already taught by this checkpoint, one structural

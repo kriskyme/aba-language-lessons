@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v3.1)
+# Passage Reading Lesson Generation Prompt (v3.2)
 
 **Lesson type:** a **Passage Reading Lesson** is a fixed 2-day cycle (two 75-minute periods) built around one
 shared anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is distinct from
@@ -12,7 +12,7 @@ framing (Conventions §E) applies here with reading as the content vehicle: the 
 real-world ideas and build critical thinking, with language acquisition happening through meaningful
 communication.
 
-**Current version: v3.1.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.2.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** every request names at minimum a Module and a Band (e.g. "Advanced band, Module 6: Arguing"); a
 topic is optional. A specific Level is never part of the request - the band determines every task Level
@@ -186,6 +186,9 @@ anchor text and the Reading-specific rules in this prompt:
 10. **Phase 3 protocol (0.10):** Fishbowl gives every outer-circle student an explicit task and 2-3 rotated
     prompts; Concentric Circles gets 2-3 prompts; Town Hall, Jigsaw, and carousel split 2-3 prompts across groups?
 11. **Reading strategy** named and fully integrated into the text's layout per the Reading Execution Rules?
+12. **Fixed-output Levels (0.11; Quality Standards §D10):** where Level 1 or 2 is a task Level, its form is
+    produced at most once per day, every other Level 1-2 item takes a different 0.11 shape, no shape twice in
+    this lesson or in the same slot as the previous lesson, and the frame or label set is printed once per day?
 
 If any check fails, revise before finalizing; do not build Day 2 tasks on an anchor text that failed items 1-5.
 
@@ -352,6 +355,29 @@ explicit task and the prompts rotate (Quality Standards §D7). Rotate across cyc
   groups or stations so simultaneous conversations are not identical.
 - Board record by protocol: see 0.7.
 
+### 0.11 Fixed-output Levels (1-2): task shape bank and slot assignment
+
+Quality Standards §D10 applies. Level 1's row is a literal match of a decoded word or frame to a picture or
+object, and Level 2's is a fixed-frame sentence located or completed with visual support; the form does not
+change, so the activity around it must. **The cap:** the student produces the form (decodes and writes or
+matches the word, completes the frame) at most once per lesson day; no task says "three times." Every other
+Level 1-2 item in the lesson takes a different shape from this bank, and no shape appears twice in one lesson
+or in the same slot as the previous lesson:
+
+| Shape | What the student does | Slot |
+|---|---|---|
+| Decode and match | Sound out the printed word or frame sentence and match it to the embedded picture or the student's own object; the one production | Day 1 Phase 3 (Fact Finder) or Day 2 Phase 2 (matrix cell), not both |
+| Choose what fits | From the target-word list, circle the words the text or picture supports and cross out the ones it does not | Day 1 Phase 3 |
+| Fix the wrong word | A printed frame sentence about the text with a word that does not fit or is misspelled; cross out, write the right one | Day 2 Phase 1 (refresher task) |
+| Sort first | Sort the word bank into its groups (color, size, action) before reading the frame sentences that use them | Day 1 Phase 1 (pre-teach) |
+| Read to a partner | Read a completed frame to a partner who says what it describes or points to the matching paragraph letter | Day 2 Phase 2 or Phase 3 |
+| Better of two | Two printed frame sentences about the picture; circle the one that fits and say the word that makes it fit | Day 2 Phase 2 |
+| Transfer | The form once, on the lesson's fresh object (0.8) | Day 2 Phase 3 |
+
+The frame or label set is printed once per day, in the pre-teach box or the first task that uses it; later
+tasks say "the frame." A Set's Module Lesson-Plan names the slot-to-shape assignment per lesson so the same
+shape does not land in the same slot twice running.
+
 ---
 
 ## Unit Architecture: 2-Day Text Cycle Model
@@ -447,20 +473,23 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 
 *Phase 3: Day 1 Literal Comprehension & Vocab Context Check (25 min)*
 - A rapid factual check pitched at the lesson's task Levels: a Fact Finder set for the lowest task Level, a Cause
-  & Effect set for the band's native Level(s). Every item follows Quality Standards §C.
+  & Effect set for the band's native Level(s). Every item follows Quality Standards §C; a Level 1-2 Fact Finder
+  set uses one 0.11 shape, not the same match item repeated.
 - A vocabulary context-completion exercise using Phase 1's target terms.
 
 **DAY 2: DEEP ANALYSIS, EVALUATION & PRODUCTION (75 MIN)**
 
 *Phase 1: Text Re-Engagement & Vocab Warm-Up (15 min)*
 - 3-minute partner re-scan of the Day 1 text for key details, dates, and paragraph letters.
-- Vocabulary Refresher Text (8-9 min) per 0.5, with its light task.
+- Vocabulary Refresher Text (8-9 min) per 0.5, with its light task (for Levels 1-2, a 0.11 shape different from
+  Day 1's).
 - Spoken Vocabulary Mastery (3-4 min): oral word-form practice or oral scenario questions.
 
 *Phase 2: Collaborative Multi-Level Investigation (30 min)*
 - Collaborative Evidence Matrix in mixed-ability groups sized to the band's task-Level count (triads for
   Beginner, groups of 4 otherwise), one student per task Level.
-- Each student completes their own Level's cell as rehearsal prep, then shares orally to combine knowledge.
+- Each student completes their own Level's cell as rehearsal prep, then shares orally to combine knowledge (a
+  Level 1-2 cell is one 0.11 shape, the form produced here only if it was not produced on Day 1).
 - Every task stays at its own Level's ceiling (0.2); no unstated-premise or rhetorical-manipulation detection
   below Level 7.
 - Preferred slot for the board-dependent moment (0.7): the shared organizer built live as groups report.
