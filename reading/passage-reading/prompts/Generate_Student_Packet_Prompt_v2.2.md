@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v2.0)
+# Passage Reading Student Print Formatting Prompt (v2.2)
 
 Companion to the Passage Reading Lesson Generation Prompt. Takes one completed 2-day lesson and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document covering both days, with
@@ -89,9 +89,8 @@ source lesson's per-Level stems, stems only (Style Guide §F).
 
 "Words to Know" renders as the `.vocab-list` table. "Idioms to Know" always renders as the `.spotlight-box`
 "Phrase Spotlight" treatment, each entry an unnumbered `.idiom-item` paragraph (`<span class="idiom-phrase">phrase
-</span>: gloss.`), regardless of how many idioms there are; never a table, never numbered. A transparent chunk (per
-the lesson doc's own classification) gets `<span class="idiom-tag">Slang</span>` appended after `.idiom-phrase`;
-an opaque idiom stays unlabeled.
+</span>: gloss.`), regardless of how many idioms there are; never a table, never numbered, and never labeled. The
+lesson doc's transparent/opaque classification is for the teacher and does not appear on the page.
 
 ### 2.8 Callout boxes and word banks
 
@@ -122,6 +121,13 @@ The Day 2 vocabulary refresher, or a second comparison text attached to a task, 
 visually distinct from the anchor text but not a callout box. Include a rule between it and surrounding content
 only where it aids readability.
 
+### 2.11 Photos
+
+A Visual Inquiry hook photo, and the Level 1-2 picture task's picture, embed the lesson's own named `_Img_` asset
+per Style Guide §F ("Embedded photos"): one `<img class="photo">` data URI with its `.image-caption`, sized per §F.
+If the lesson `.md` calls for a picture but names no asset file, stop and report it as a source-document gap
+rather than printing a placeholder or a teacher note.
+
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
 Style Guide §A-§D. A Passage Reading packet has no delta CSS of its own (Style Guide §H.2); the base stylesheet is
@@ -144,7 +150,8 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    directly (2.4)?
 6. Discuss It as simultaneous small groups with 2-3 unquoted, left-aligned prompts, any outer-circle task folded
    in, stems only (2.6)?
-7. Idioms as the Phrase Spotlight, unnumbered, with `.idiom-tag` on transparent chunks only (2.7)?
+7. Idioms as the Phrase Spotlight, unnumbered and unlabeled (2.7)?
 8. Annotation key present, floated beside the first paragraphs, `!` mark only when an evaluative-language
    objective exists (2.9)?
 9. Refresher text as a plain bordered block, not a callout (2.10)?
+10. Every hook or task photo embedded from the lesson's named asset, none placeholdered (2.11)?

@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.1)
+# Listening/Speaking Student Print Formatting Prompt (v2.2)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -145,7 +145,7 @@ Chart," never the protocol or organizer's name ("K-W-L").
 ### 2.13 Callout boxes, answer space, rules
 
 Style Guide §F and §I: callouts reserved for genuine spotlights (Good to Know, Learn the Phrase, the citebox, an
-idiom Phrase Spotlight rendered the same way as Reading's, `.idiom-tag` on transparent chunks only); word banks
+idiom Phrase Spotlight rendered the same way as Reading's, unnumbered and unlabeled); word banks
 get the dashed-rule exception only; answer space matched to expected length; no decorative rules.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS

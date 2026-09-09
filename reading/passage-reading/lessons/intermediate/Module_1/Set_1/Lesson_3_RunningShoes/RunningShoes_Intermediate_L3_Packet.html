@@ -215,15 +215,6 @@
         font-weight: 700;
         font-style: italic;
       }
-      .idiom-tag {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 10.5px;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: var(--ink-soft);
-        margin-left: 6px;
-      }
 
       .annot-key {
         float: right;
@@ -274,9 +265,10 @@
 
       .photo {
         display: block;
-        width: 100%;
+        max-width: 100%;
         height: auto;
-        margin: 14px 0 4px;
+        max-height: 300px;
+        margin: 14px auto 4px;
       }
 
       .article {
@@ -417,9 +409,7 @@
         margin: 16px 0;
       }
       .discuss-block .prompt {
-        font-size: 16px;
-        font-weight: 400;
-        text-align: left;
+        font-size: 14.5px;
         margin: 10px 0 16px;
       }
       .stems {
@@ -515,7 +505,7 @@
       <div class="spotlight-box">
         <div class="spotlight-label">Phrase Spotlight</div>
         <div class="idiom-item">
-          <span class="idiom-phrase">in the end</span><span class="idiom-tag">Slang</span>: finally, after everything else is considered.
+          <span class="idiom-phrase">in the end</span>: finally, after everything else is considered.
         </div>
       </div>
 
@@ -600,8 +590,7 @@
           <span class="num">4.</span>
           <div class="qbody">
             Why does the guide recommend getting fitted in a real store? Finish the sentence:
-            because it prevents <span class="blank"></span>. (Paragraph <span class="blank"></span>)
-            <span class="ans-line-sm"></span>
+            because it prevents <span class="blank" style="min-width:220px"></span>. (Paragraph <span class="blank"></span>)
           </div>
         </li>
         <li>
@@ -692,7 +681,7 @@
         <ol class="qlist">
           <li>
             <span class="num">1.</span>
-            <div class="qbody">Look at the photo above. Finish the sentence: "It is ___."<span class="ans-line-sm"></span></div>
+            <div class="qbody">Look at the photo above. Complete the frame: It is <span class="blank" style="min-width:160px"></span>.</div>
           </li>
           <li>
             <span class="num">2.</span>
@@ -701,7 +690,6 @@
             &nbsp; <strong>painful</strong></div>
           </li>
         </ol>
-        <div class="starter">"It is ___."</div>
       </div>
 
       <div class="task-block">
@@ -710,8 +698,7 @@
           <li>
             <span class="num">1.</span>
             <div class="qbody">
-              Name two features of a good running shoe. Finish the sentence: "It is ___ and ___."
-              <span class="ans-line-sm"></span>
+              Name two features of a good running shoe. Complete the frame: It is <span class="blank" style="min-width:120px"></span> and <span class="blank" style="min-width:120px"></span>.
             </div>
           </li>
           <li>

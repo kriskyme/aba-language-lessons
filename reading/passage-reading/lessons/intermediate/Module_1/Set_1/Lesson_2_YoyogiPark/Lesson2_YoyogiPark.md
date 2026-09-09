@@ -153,7 +153,8 @@ Mixed-ability groups of 4, one student per task Level. Each completes their own 
 
 **Level 2 (extension-down)** - grounding: Level 2 Reading objective ("Can read one short sentence using the
 fixed frame ('It is ___.') describing a familiar object, decoding the open-slot word... with visual support.")
-- Task: Using a picture of the park's new corner, complete: "It is ___." (e.g., "It is new.")
+- Task: Using the lesson's picture of the park's new corner (`Lesson2_YoyogiPark_Img_Park.jpg`, embedded in the
+  student packet), complete: "It is ___." (e.g., "It is new.")
 - Respectful Tiers add-on: circle the word that best shows how the park feels now - *welcoming* / *empty* -
   using the picture and Paragraph D as a clue.
 

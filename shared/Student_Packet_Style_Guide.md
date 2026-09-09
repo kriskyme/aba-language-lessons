@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.11)
+# Student Packet Style Guide (v2.14)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -17,7 +17,8 @@ See `Changelog.md` for history.
 Produce one HTML file with all CSS embedded in a `<style>` block in the head and no external
 resources (fonts, scripts, images) other than a simple browser print trigger (`window.print()` on
 an on-screen button hidden via `@media print`). This is what makes the document reliably printable
-directly from a browser without setup.
+directly from a browser without setup. An image is embedded inline as a base64 data URI in the `<img>`'s
+`src`; never a `src` that points at a file, even one in the same folder.
 
 ### A.2 Black and white only
 
@@ -38,7 +39,9 @@ questions/items with their answer lines, and reused/refresher text blocks.
 
 ## B. Base stylesheet
 
-The required starting point for every packet, across every modality: reuse it as-is. A modality's
+The required starting point for every packet, across every modality: paste every rule below into the
+packet's `<style>`, in full, whether or not this packet uses it. A packet's `<style>` is never a subset
+of this block, so a rule a later edit needs (an embedded photo, a second Task shape) is already there. A modality's
 own packet prompt may add a new class only where a structural element genuinely isn't covered here
 (see "Extending this stylesheet" below) - never restyle an existing element's fonts, colors, or
 spacing on its own judgment.
@@ -263,15 +266,6 @@ p {
   font-weight: 700;
   font-style: italic;
 }
-.idiom-tag {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-left: 6px;
-}
 
 .annot-key {
   float: right;
@@ -311,6 +305,14 @@ p {
   font-size: 13px;
   color: var(--ink-soft);
   margin: 14px 0 4px;
+}
+.photo {
+  /* an embedded image (base64 data URI); sized by this rule, never per packet */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  margin: 14px auto 4px;
 }
 .image-caption {
   font-family: system-ui, -apple-system, sans-serif;
@@ -505,6 +507,10 @@ p {
 .discuss-block {
   margin: 16px 0;
 }
+.discuss-block .prompt {
+  font-size: 14.5px;
+  margin: 10px 0 16px;
+}
 .stems {
   margin: 0;
   padding-left: 0;
@@ -618,7 +624,11 @@ modality's document structure needs that no existing class already provides). Th
 inline in the modality's packet prompt, so one paste covers every modality and a fix to a delta
 class lands once. Never restyle an existing base class's fonts, colors, or spacing - if an existing
 class's look needs to change, that change belongs in §B (updating it for every modality at once),
-not as a modality-local override.
+not as a modality-local override. The type scale is fixed: every student-facing reading line
+(instruction, question, discussion prompt, Task item, article body) is the one 14.5px body size, and
+only the named display and label classes §B already defines (masthead, section titles and labels,
+captions, stems, footnotes, the Task label) carry a different size. A packet never introduces a
+selector §B or §H doesn't define, and never gives a section its own size or weight for emphasis.
 
 ## E. Universal teacher-to-student translations
 
@@ -744,6 +754,13 @@ picture-based item embeds its real images (`.pic-options`, an `<img>` inside eac
 `.pic-label`); a packet never ships an empty picture box or a "[TEACHER: insert ...]" note. If no image can be
 embedded, the item is rewritten around the student's own object or one in the room (Quality Standards §D8).
 
+**Embedded photos.** A hook photo or a task's picture prompt is one `<img class="photo" src="data:image/jpeg;base64,..."
+alt="...">` immediately followed by its `.image-caption`. The source file lives in the lesson folder under its
+Program Conventions §H name (`Lesson<N>_<Slug>_Img_<Purpose>.<ext>`) and the lesson `.md` names it at the point of
+use; the packet embeds a downscaled copy (at most about 800px on the long side, roughly 100 KB), leaving the
+source file unchanged. `.image-placeholder` is only ever a box the student draws in, never a box waiting for a
+photo.
+
 ## G. The Markdown document is the source of truth; the packet is always a regeneration
 
 Run the packet prompt immediately after the lesson, homework, or assessment Markdown is complete, in
@@ -757,7 +774,9 @@ regeneration.
 The only edits applied directly to the HTML without touching the Markdown are pure formatting or
 translation-layer fixes that change no lesson content: a styling issue, a missed §E translation,
 spacing or layout. The test: would a teacher reading the Markdown need to know this changed? If yes,
-edit the Markdown and regenerate; if no, fix the HTML directly.
+edit the Markdown and regenerate; if no, fix the HTML directly. A hand edit that adds markup first
+confirms every class it uses is defined in that packet's `<style>`; a packet generated before a §B rule
+existed gets its `<style>` synced to the current §B in the same edit, not left to render unstyled.
 
 Deliver the HTML for visual review before treating it as final; apply feedback as scoped edits rather
 than a full regeneration per round. Where a source lesson has a structural element no rule covers, apply
@@ -1046,7 +1065,8 @@ Run this list first, then the modality's own list.
 12. Every decorative, non-load-bearing horizontal rule removed?
 13. Black-and-white only; no em-dashes; single self-contained HTML file with no external dependencies
     besides the print trigger; base stylesheet reused unmodified plus only that modality's §H classes;
-    §C markup conventions followed?
+    no selector in the packet's `<style>` that §B/§H doesn't define, and no body-text class at a size
+    other than 14.5px (§D); §C markup conventions followed?
 14. Produced by regenerating from the current Markdown, not by hand-editing a previous HTML for a
     content change? (§G)
 15. No reference to an earlier lesson's notes, planning, examples, or board, other than the carried piece;
@@ -1058,8 +1078,11 @@ Run this list first, then the modality's own list.
 17. Each fixed frame printed once per masthead section as a model, later Tasks showing only the blank line,
     no lead re-quoting it, and no star given the same complete-the-frame Task twice in one section? (§F;
     Quality Standards §D10)
+18. Every embedded image a base64 data-URI `<img class="photo">` (or a `.pic-box` `<img>`) with its rule
+    present in `<style>`, a caption, a §H-named asset file in the lesson folder that the `.md` names, and no
+    placeholder or teacher note anywhere? (§A.1, §F; Quality Standards §D8)
 
 ## Changelog
 
-**Current version: v2.9.** For the full dated version history and the reasoning behind each
+**Current version: v2.14.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

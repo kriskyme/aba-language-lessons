@@ -29,8 +29,8 @@ the print packet already showed.
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Visual Inquiry hook:** Display a photo of a trullo (a round white stone house with a cone-shaped roof) with a
-wood-fired oven inside. Ask: "What do you think people cook here? How is this kitchen different from your own?"
+**Visual Inquiry hook:** Display the lesson's photo of a stone wood-fired oven (`Lesson1_Kitchen_Img_Hook.jpg`,
+embedded in the student packet). Ask: "What do you think people cook here? How is this kitchen different from your own?"
 Take 3-4 quick guesses before reading.
 
 **Skill Spotlight:** "Today we're practicing describing a place by comparing it to somewhere more familiar, and

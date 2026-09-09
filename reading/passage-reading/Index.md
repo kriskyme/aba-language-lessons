@@ -29,7 +29,7 @@ currently supports it.
 | `Generate_Homework_Prompt_v2.2.md` | Generates one homework assignment (vocabulary/idiom production plus skill practice) from a single completed 2-day lesson, general track only, one section per task Level keyed to its position. Run with the two shared files pasted alongside; Respectful Tiers and item quality point to Quality Standards; Section 3 is Quality Standards §F plus 7 Reading items. | Current (v2.2) |
 | `Generate_TOEFL_Extension_Prompt_v1.1.md` | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson, working from the shared anchor text and Phase 1 vocabulary only. v1.1 adds Markdown heading syntax (it was the only prompt without any), a paste bundle, and pointers to Quality Standards §C for distractor quality; content unchanged. | Current (v1.1) |
 | `Generate_Assessment_Prompt_v5.1.md` | Builds a differentiated assessment (one section per task Level plus study guides) from a completed Set (or an explicitly scoped checkpoint or multi-Set span). Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Reading-specific (Source/Tests tagging, lesson-blocks with one new passage per lesson and the skip-a-lesson procedure, task types by Level position, the Foundation Support check's format, the study guide, the Scoring Guide) and points to Quality Standards §C for item quality, which is where Reading's assessments now pick up the distractor-plausibility and padded-word-bank rules they never had. Section 3 is Quality Standards §F plus 11 Reading items. | Current (v5.0); the stale "Current version: v4.1" body marker corrected |
-| `Generate_Student_Packet_Prompt_v2.0.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.0); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`) |
+| `Generate_Student_Packet_Prompt_v2.2.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.0); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`) |
 | `Generate_Assessment_Student_Packet_Prompt_v2.0.md` | Takes one completed Assessment `.md` and produces the student handout: self-contained task-Level sections with page breaks, every tag and the Scoring Guide stripped, a per-Level `Objective:` statement, full passages reprinted per section, no checklist substitute for rubric-scored items. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 Reading items. | Current (v2.0) |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
@@ -89,10 +89,22 @@ items, rather than Listening/Speaking's Speaking-Task-card checklist treatment.
 
 **Print formatting (Step 6), student version:** Lesson 1's packet (`Unit 1A`/`Unit 1B: A Grandmother's Kitchen`,
 `Module_1/Set_1/Lesson_1_Kitchen/Kitchen_Intermediate_L1_Packet.html`) exists as a finished HTML file; its settled CSS
-is now the base stylesheet in `shared/Student_Packet_Style_Guide.md`. Lesson 2's packet
+is now the base stylesheet in `shared/Student_Packet_Style_Guide.md`. **2026-09-09:** a raw photo was added to
+`Lesson_1_Kitchen/` and renamed per the asset convention (`shared/Program_Conventions.md` §H) as
+`Lesson1_Kitchen_Img_Hook.jpg`, the Phase 1 Visual Inquiry hook photo; embedded into the packet's "Before You Read"
+as a base64 `<img class="photo">` (small portrait image, so capped at 250px tall and centered rather than full
+width), replacing the "[TEACHER: insert photo ...]" placeholder. The photo shows a stone wood-fired oven, not a
+trullo, so the caption and the lesson `.md`'s hook line were changed to match. In the same pass all four
+Intermediate Set 1 packets had their "Finish the sentence" items reduced to one sized `.blank` (no trailing
+`.ans-line-sm`), their Day 2 Task A/B frames printed once inline as the answer space ("Complete the frame: It is
+___."), and the redundant `.starter` box that repeated the frame after Task A removed (Style Guide §B/§F). Lesson 2's packet
 (`Unit 2A`/`Unit 2B: New Corner of Yoyogi Park`,
 `Module_1/Set_1/Lesson_2_YoyogiPark/YoyogiPark_Intermediate_L2_Packet.html`) is current against the print prompt, and its
-three discussion prompts match Lesson 1 and Lesson 2's own source docs. Lesson 3's packet
+three discussion prompts match Lesson 1 and Lesson 2's own source docs. **2026-09-09:** a raw photo was added to
+`Lesson_2_YoyogiPark/`, renamed per §H as `Lesson2_YoyogiPark_Img_Park.jpg` (the Day 2 Task A picture), and embedded
+into the packet as a base64 `<img class="photo">` (downscaled to 720px wide for embedding; source unchanged; the §B
+`.photo` rule added to this packet and Lesson 4's, neither of which had it), replacing
+the "[TEACHER: insert photo ...]" placeholder; the `.md` Task A line now names the asset. Lesson 3's packet
 (`Unit 3A`/`Unit 3B: How to Choose Running Shoes That Feel Comfortable`,
 `Module_1/Set_1/Lesson_3_RunningShoes/RunningShoes_Intermediate_L3_Packet.html`) is the first packet generated
 against v1.7, so it's also the first to carry the `.masthead-meta` tag stack (`Reading` /
@@ -109,7 +121,10 @@ same session but not logged here until now - corrected); `Lesson3_RunningShoes.m
 names the image file, only the generic "a picture of a running shoe" instruction, so it needs no
 change. Lesson 4's packet
 (`Unit 4A`/`Unit 4B: Painting Wynwood Walls`,
-`Module_1/Set_1/Lesson_4_WynwoodWalls/WynwoodWalls_Intermediate_L4_Packet.html`) is also current against
+`Module_1/Set_1/Lesson_4_WynwoodWalls/WynwoodWalls_Intermediate_L4_Packet.html`; **2026-09-09:** its Day 2 Task A
+placeholder replaced by the embedded `Lesson4_WynwoodWalls_Img_BirdMural.jpg`, same treatment as Lesson 2 above. The
+mural photographed is a pink bird while the article and word bank say orange and blue; "bright"/"big" in the bank still
+fit the photo, so only the `.md`'s example answer changed, "It is orange." to "It is bright.") is also current against
 v1.7, carrying the `.masthead-meta` tag stack (`Reading` / `Intermediate 1.1.4.0`) on its opening
 masthead. Its source lesson already supplies 2 discussion prompts (generated against v2.7), pulled
 directly per Section 2.9 with no fallback needed; a Focus on the Objective worked-model box was
@@ -258,7 +273,7 @@ black-and-white student handout as one self-contained HTML file - four Task-Leve
 its own, with every source-lesson/Tests tag and the entire Scoring Guide stripped. Independent of Step 6 below
 (a lesson's own print formatting), since an assessment has no taught Unit A/B to translate.
 
-**Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v2.0.md` (pasted with
+**Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v2.2.md` (pasted with
 `shared/Student_Packet_Style_Guide.md`) against a completed 2-day lesson from Step 2 (both days, in full) to
 produce a single, print-ready, black-and-white student handout as one self-contained HTML file, pulling its 2-3
 discussion prompts directly from the source lesson. This step is
@@ -275,8 +290,7 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   revised.
 - **Self-contained rule backlog (Quality Standards §D8, 2026-09-08):** these packets still carry a "[TEACHER:
   insert photo ...]" note or a teacher-prepared prop, to be replaced by an embedded image or a real-object
-  redesign when each is next touched: `Kitchen_Intermediate_L1_Packet.html`, `YoyogiPark_Intermediate_L2_Packet.html`,
-  `WynwoodWalls_Intermediate_L4_Packet.html` (photo notes); the four Advanced Set 1 lesson `.md` files' Foundation
+  redesign when each is next touched (all three Intermediate photo notes were resolved 2026-09-09): the four Advanced Set 1 lesson `.md` files' Foundation
   Support blocks ("provide a picture card set").
 
 - **Resolved 2026-09-08**: Advanced Module 1 Set 1's Closing Transfer Check repetition (all 4 lessons sharing

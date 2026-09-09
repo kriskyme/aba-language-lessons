@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.6)
+# Generation Quality Standards (v1.7)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -154,7 +154,8 @@ Rules shared by every 2-day lesson cycle in the program:
    belonging (their own phone, bag, shoe); (2) an object visible in the room; (3) only when neither can
    carry the task (a Beginner label set of unrelated nouns, a "prompted by two pictures" objective), a real
    image embedded in the packet at generation time as a data-URI `<img>`, saved as an asset per Conventions
-   §H. A hook that compares two things uses two students' belongings or two things in the room. Foundation
+   §H and named in the lesson `.md` at the point of use (`Lesson<N>_<Slug>_Img_<Purpose>.<ext>`), so the packet
+   step knows what to embed and the Index can track a missing file. A hook that compares two things uses two students' belongings or two things in the room. Foundation
    Support uses printed words from the packet and the student's own drawing.
    Never print a placeholder ("[TEACHER: insert photo]", an empty picture box) and never write "the picture
    your teacher shows you." **The object is a subject, not a prop:** no task requires the belonging to be
@@ -240,8 +241,8 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 17. Oral protocol has 2-3 rotated prompts, per-Level stems, and a task for every non-speaker? (D7)
 18. No em-dashes; pacing diagram per day; metadata line present with the correct version code? (E)
 19. Self-contained: no prop, picture, card, or photo the teacher must prepare or show; every picture or object
-    prompt met by the student's own belonging, an object in the room, or an image embedded in the packet; no
-    placeholder anywhere; and no task that needs the belonging physically present (no "look at it," "point
+    prompt met by the student's own belonging, an object in the room, or an image embedded in the packet and
+    named by asset file in the `.md`; no placeholder anywhere; and no task that needs the belonging physically present (no "look at it," "point
     to," "hold it up")? (D8)
 20. Self-contained across lessons: no task needs anything a student made in an earlier lesson except the
     carried piece; every plan, bank, model, and object choice rebuilt or reprinted here? (D9)
@@ -254,4 +255,4 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 
 ## Changelog
 
-**Current version: v1.6.** See `Changelog.md` in this folder.
+**Current version: v1.7.** See `Changelog.md` in this folder.

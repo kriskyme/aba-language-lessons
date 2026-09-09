@@ -1,4 +1,4 @@
-# Program Conventions (v1.10)
+# Program Conventions (v1.11)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -315,7 +315,8 @@ the lesson `.md` or student packet `.html` - integrating an asset into the
 actual content (e.g. wiring a choice image to its multiple-choice item, or
 swapping a packet's "real picture placeholder" for the real image) is a
 separate step, tracked per lesson type's own `Index.md` Pending work until
-done.
+done. The embed itself follows `Student_Packet_Style_Guide.md` §F's
+"Embedded photos" rule (markup, sizing, caption, asset naming).
 
 ## Changelog
 
