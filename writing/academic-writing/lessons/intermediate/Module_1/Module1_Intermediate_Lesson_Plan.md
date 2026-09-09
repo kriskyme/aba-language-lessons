@@ -152,3 +152,7 @@ pair judgment and better-of-two; Lesson 2 Day 2 spell-from-sound and plan-the-wo
 (one frame sentence); Lesson 3 Day 2 check-and-improve; Lesson 4 Day 1 one sentence for the reader's part and
 choose the better of two; Lesson 4 Day 2 final copy and the Transfer Check. Versions `1.1.1.6`, `1.1.2.8`,
 `1.1.3.12`, `1.1.4.13`.
+
+**Addendum (2026-09-08, ninth): no hand-off note.** Per Lesson prompt v6.11, position 4's Day 2 is Final copy
+(30), Closing Transfer Check (30), and Transfer share (15); the draft goes to the folder unmarked, and Module 2's
+Lesson 5 re-reads it with the teacher's recap naming what Module 1 added. Lesson 4 at `1.1.4.14`.

@@ -179,6 +179,12 @@ is better-of-two then spell-from-sound, Lesson 3 writes the frame once, and Less
 reader's part and chooses between two. Lesson 1's hook and Lesson 2's partner check no longer have students
 hold up their cases. Versions `1.1.1.6`, `1.1.2.8`, `1.1.3.12`, `1.1.4.13`.
 
+**2026-09-08 addendum: the hand-off note is cut (Lesson prompt v6.11, packet prompt v3.14).** Lesson 4's "Before
+It Moves On" section (marks on the draft, a "Next time I will add" stem, a second copy of the frame sentence)
+had no reader in Lessons 5-8 and re-ran Lesson 3's check; Day 2 is now Final copy, Closing Transfer Check, and a
+Transfer share, with one hand-off line under Final Copy. Lesson 4 at `1.1.4.14`; Lesson 3 at `1.1.3.13` (one
+overview line).
+
 ---
 
 **Format for the next entry** (append below the table's last row within the relevant Set subsection, or start a

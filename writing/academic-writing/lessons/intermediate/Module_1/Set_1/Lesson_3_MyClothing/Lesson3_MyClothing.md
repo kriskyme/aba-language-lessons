@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.12
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.3.13
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 3 of 8 (Set position 3 of 4: Drafting, then self-edit and improve)
 
@@ -27,6 +27,9 @@ improve tasks are merged into one "Check and Fix Your Work" Task per star._
 _Revised 2026-09-08 (1.1.3.8 -> 1.1.3.9) per user review and Style Guide v2.8: the section is "Check and Improve
 Your Writing" (never "fix"); every multi-step Task in the packet is a one-sentence lead plus numbered steps with
 check items as questions; the "Keep your piece" wrap-up line is gone._
+
+_Revised 2026-09-08 (1.1.3.12 -> 1.1.3.13): one overview line no longer says Lesson 4 writes a hand-off note (Lesson
+prompt v6.11). No packet change._
 
 _Revised 2026-09-08 (1.1.3.11 -> 1.1.3.12) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels
 2-3 write the frame once on Day 1 (the "once more about a different part" round is gone; a partner part-check
@@ -296,7 +299,7 @@ closing lines volunteered from the pair check, at least one per Level.
 **What this lesson does not do.** There is no Peer Editing exchange, no publishing or gallery walk, and no Closing
 Transfer Check at this position. Every student leaves Day 2 with a complete draft that has been self-checked
 and improved once.
-Lesson 4 runs the hard self-revision pass and the hand-off note; Peer Editing and publishing wait for Module 2's
+Lesson 4 runs the hard self-revision pass and the final copy; Peer Editing and publishing wait for Module 2's
 Set (Pair position 8).
 
 ---
@@ -345,7 +348,7 @@ Set (Pair position 8).
     Lesson 4's before/after-table revision.
 17. Oral protocol: the share-out has per-Level lines, a task for every listener, and a rotated second question
     in Day 2's pair check; no static single prompt.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.12.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.3.13.
 19. Self-contained: the item is the student's own and need not be present (no "look at it," "point to,"
     desk, or borrowing language anywhere); Foundation Support uses printed Draft Word Bank words; no prop,
     picture, or card the teacher prepares; no drawing box.

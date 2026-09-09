@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.10)
+# Academic Writing Lesson Generation Prompt (v6.11)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.10.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.11.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -453,7 +453,8 @@ Essay-regime Levels add structure questions: can your partner identify the hook,
 sentence unaided; for Levels 7-8, what do they think the implication or the two audiences' concerns are, checked
 against the writer's intent. **Timing:** Beginner runs Peer Editing at Lesson 4 Day 1. Intermediate/Advanced/
 Proficient run it once, at Lesson 8 Day 1 (Pair position 8), covering both Modules' focuses; it is not run at Pair
-position 4, since the piece is not yet complete.
+position 4, since the piece is not yet complete. The position 8 form names both Modules' features for the reader
+to find, since the draft carries no marks from position 4.
 
 **Self-revision timing:** Beginner's hard Level 7-8 requirement (0.4a) applies at Lesson 4 Day 1. In a Module Pair
 it applies **twice**: Pair position 4 (Module N's tools, before hand-off) and Pair position 8 (Module N+1's tools,
@@ -547,7 +548,7 @@ it is.
 | 1 | N | 1 | Grammar Focus A: input, modeling, deeper practice; Mentor Ladder |
 | 2 | N | 2 | Grammar Focus B, Essay Focus A/B (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
 | 3 | N | 3 | Drafting on the draft object, parts 1-2 (a complete opening-through-conclusion draft), self-edit |
-| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence; final copy; hand-off (not published). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
+| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence; final copy, kept unmarked for Module N+1 (not published, no hand-off note). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
 | 5 | N+1 | 1 | Re-engagement (re-read own draft; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Mentor Ladder second look |
 | 6 | N+1 | 2 | Module N+1's Grammar Focus B, Essay Focus A/B (where applicable); revision-planning against the existing draft (replaces prewriting) |
 | 7 | N+1 | 3 | Revision and expansion drafting, parts 1-2, applying Module N+1's focus into the existing draft; merged self-edit checklist |
@@ -708,32 +709,40 @@ _Phase 2: Revise for effect with Module N's tools (45 min)_
 _Phase 3: Revision share (15 min)_
 - Two or three before/after rows read aloud; the class names what each change did (board-dependent moment).
 
-### Lesson 4, Day 2: Draft Hand-off (or Publishing) and Closing Transfer Check
+### Lesson 4, Day 2: Final Copy and Closing Transfer Check (or Publishing)
 
-_Phase 1: Final copy (20 min)_
+**Module Pair (position 4):**
+
+_Phase 1: Final copy (30 min)_
 - A clean copy of the revised piece (frame-regime Levels copy their chosen sentence), capitals and periods in
-  place. No proofread checklist and no counting task.
+  place. No proofread checklist and no counting task. The copy goes to the student's folder unmarked: no
+  hand-off note, no stem, no feature-marking task exists at this position. Module N+1's Lesson 5 re-reads the
+  draft itself. **Do not publish or share the piece here.**
 
-_Phase 2 (Module Pair): Hand-off note (30 min)_
-- A short note, differentiated by regime, recording what this Module's focus added and that the piece now moves
-  to Module N+1's Set for revision, expansion, peer editing, and publishing. At Levels 1-5 the note is concrete
-  actions (Quality Standards §E6): mark each taught feature on the draft (circle the comparative, box the reason
-  word, star the compound sentence) and finish a printed stem ("Next time I will add ___"); Level 5 also copies
-  its implied-attitude sentence and finishes "I want my reader to guess ___" so the intention travels with the
-  draft. Levels 6-8 may write the note as prose. **Do not publish or share the piece here.**
+_Phase 2: Closing Transfer Check (30 min)_ (0.8; Module N's skill at this position): in pairs, on cards, with
+the partner test the Level's required feature calls for.
 
-_Phase 2 (Beginner): Publish/share (30 min)_
+_Phase 3: Transfer share (15 min)_
+- Two or three pairs cold-called to read their cards; the instances captured on the board (the day's
+  board-dependent moment). Demonstration, not self-report; nothing collected.
+
+**Beginner (the Set's finale):**
+
+_Phase 1: Final copy (20 min)_ as above.
+
+_Phase 2: Publish/share (30 min)_
 - A short gallery walk, read-aloud, or class posting; the piece is genuinely finished.
 
-_Phase 3: Closing Transfer Check (25 min)_ (0.8; Module N's skill at this position).
+_Phase 3: Closing Transfer Check (25 min)_ (0.8).
 
 ### Lessons 5-8 (Module Pair only): Module N+1's Set
 
 Not generated for Beginner. Lessons 5-8 run Lessons 1-4's structure (same phases, same minutes) with Module N+1's
 own Focus A/B and these substitutions, applied to the existing draft on the draft object rather than a new piece:
 
-- **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N draft; a short recap of
-  the Scenario's purpose and named reader and what the piece already accomplishes; Module N+1's Skill Spotlight
+- **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N draft, which arrives
+  unmarked; the teacher's short recap, not a student note, names the Scenario's purpose and named reader, what
+  the piece already accomplishes, and what Module N's focus added; Module N+1's Skill Spotlight
   alongside a one-line reminder of Module N's (0.8). Phases 2-3 teach Module N+1's Focus A.
 - **Lesson 5 Day 2 Phase 3** is a Mentor Ladder **second look**: the same ladder, presented again by the teacher,
   now asking what Module N+1's focus would add to each Level's already-complete model (a before/after framing,

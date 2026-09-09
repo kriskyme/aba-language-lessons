@@ -33,8 +33,8 @@ Beginner (or Pair positions 1-4, with one difference at 4):
 - **After Lesson 3:** the student's in-progress draft and self-edit pass exist; Part 2 may apply the checklist to
   a fresh instance.
 - **After Lesson 4:** Beginner: the piece is published; Part 2 may extend the Closing Transfer Check response. Pair
-  position 4: the draft is complete and self-revised but **not published**; Part 2 may extend the hand-off note or
-  draft, never implying the piece is finished.
+  position 4: the draft is complete and self-revised but **not published**; Part 2 may extend the draft,
+  never implying the piece is finished.
 
 Pair positions 5-8 extend the same logic with Module N+1's content:
 - **After 5:** Module N+1's Focus A newly available, on top of positions 1-4.

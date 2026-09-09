@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.13)
+# Academic Writing Student Print Formatting Prompt (v3.14)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.13.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.14.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
@@ -120,9 +120,11 @@ this is:**
   Pair position 8, also include the separate short task exercising Module N+1's own skill (Lesson prompt 0.8) as
   a second "Wrap It Up" prompt, not labeled as covering "a different Module."
 - **A hand-off (a Pair's Lesson 4):** the piece is a complete, self-revised draft, not yet published. Never use
-  "finished," "published," "share your piece," or any language implying the piece is done. Frame the hand-off
-  plainly ("You'll keep working on this piece soon"). That line belongs to Lesson 4's hand-off only; no other
-  unit ends with a "keep your piece" or "you'll keep working on it" wrap-up (Style Guide §E).
+  "finished," "published," "share your piece," or any language implying the piece is done. The hand-off is one
+  plain `.instr` line after the last Final Copy Task ("You'll keep working on this piece soon."), nothing more:
+  no "Before It Moves On" section, no note, stem, or feature-marking Task. That line belongs to Lesson 4's
+  hand-off only; no other unit ends with a "keep your piece" or "you'll keep working on it" wrap-up (Style
+  Guide §E).
 No stage directions about what the teacher will do next (Style Guide §E).
 
 ### 2.8 Trade and Check and Check and Improve Your Writing
@@ -171,8 +173,8 @@ A Pair position 4 lesson (Set position 4) prints no checklist at all. Its Day 1 
 Reader's Request" (one unstarred Task: trade pieces, read, write one thing you want to know more about on your
 partner's page), then "Make It Stronger": one Task per star as steps, the before/after table under the
 composition-regime Tasks. Its Day 2 unit is "Final Copy" (one Task per star: copy the chosen sentence, or copy
-the paragraph cleanly), "Before It Moves On" (the hand-off note, 2.7), and "Wrap It Up" (the Closing Transfer
-Check). No "Last Look," no proofread pass, no counting.
+the paragraph cleanly, then the one hand-off line, 2.7) and "Wrap It Up" (the Closing Transfer Check). No
+"Last Look," no proofread pass, no counting, no hand-off section.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 
@@ -197,8 +199,9 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    as its own kind of task (2.4)?
 5. Grammar and essay-structure boxes plainly titled, star-free, before the tasks that need them (2.5)?
 6. No Mentor Ladder, worked example, or find-your-example task printed anywhere (2.6)?
-7. Lesson 4/8 closing checked for hand-off vs. finale, with no "finished/published" language at a hand-off, and
-   the Module N+1 task included at Pair position 8 (2.7)?
+7. Lesson 4/8 closing checked for hand-off vs. finale, with no "finished/published" language at a hand-off, the
+   hand-off one line after Final Copy with no note section, and the Module N+1 task included at Pair position 8
+   (2.7)?
 8. Check Your Own Work and Trade and Check present with the lesson's actual items, oral equivalents printed for
    frame-regime Levels (2.8)?
 9. `.blank` inside sentences, `.ans-line-sm`/`.ans-line` standalone, sized to the Level's target (2.9)?

@@ -1,9 +1,9 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.13
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.14
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise for effect with Module 1's tools,
-final copy, hand-off to Module 2's Set, not published; Closing Transfer Check for Module 1's skill)
+final copy kept for Module 2's Set, not published, no hand-off note; Closing Transfer Check for Module 1's skill)
 
 ### Scenario: "My Clothing" (the draft object, one piece of the student's own clothing, continued from Lessons 2-3; the phone case was the practice object)
 
@@ -35,6 +35,11 @@ _Regenerated 2026-09-08 (1.1.4.9 -> 1.1.4.10) against `Generate_Lesson_Prompt_v6
 and improves the draft, so this lesson no longer repeats that checklist. Day 1 is a reader's request and revision
 for effect (join, upgrade, add what the reader asked for, and at Level 5 reorder), with the before/after table as
 evidence; Day 2 is a final copy, the hand-off note, and the Closing Transfer Check. No "Last Look" pass._
+
+_Revised 2026-09-08 (1.1.4.13 -> 1.1.4.14) per Lesson prompt v6.11 / packet prompt v3.14: the hand-off note is
+gone. Day 2 is Final copy (30), Closing Transfer Check (30), Transfer share (15); the draft goes to the folder
+unmarked and Module 2's Lesson 5 re-reads it. Packet Unit 4B loses "Before It Moves On" (Tasks E-H); the one
+line "You'll keep working on this piece soon." sits under Final Copy; Wrap It Up is Tasks E-H._
 
 _Revised 2026-09-08 (1.1.4.12 -> 1.1.4.13) per Quality Standards v1.5 §D10 / Lesson prompt v6.9 0.4d: Levels 2-3
 write one more frame sentence, about the part the reader asked for, and choose the better of two (not two more
@@ -181,16 +186,16 @@ board stays up for Day 2.
 
 ---
 
-## DAY 2: FINAL COPY, HAND-OFF, AND CLOSING TRANSFER CHECK (75 MIN)
+## DAY 2: FINAL COPY AND CLOSING TRANSFER CHECK (75 MIN)
 
 ```
-0        20                        50                      75  (minutes)
-|--Phase 1--|---------Phase 2---------|--------Phase 3---------|
-| Final     | Hand-off note            | Closing Transfer        |
-| copy      | (not publishing)         | Check                   |
+0                    30                      60           75  (minutes)
+|-------Phase 1-------|-------Phase 2--------|--Phase 3---|
+| Final copy          | Closing Transfer     | Transfer   |
+| (not publishing)    | Check (cards)        | share      |
 ```
 
-### Phase 1: Final copy (20 min)
+### Phase 1: Final copy, not publishing (30 min)
 
 Students write a clean copy of the revised piece on the packet's lines: Levels 4-5 the whole paragraph with
 every Day 1 change in place, capitals and periods intact; Levels 2-3 the sentence they circled on Day 1. No
@@ -198,25 +203,14 @@ proofread checklist and no counting task at this position (the piece was checked
 teacher's circulation check is that each Day 1 table row shows up in the copy. The word ranges (Level 4: 40-90;
 Level 5: 90-150) remain the teacher's check and are not printed.
 
-### Phase 2: Hand-off note, not publishing (30 min)
-
 The piece is a complete, self-revised draft. It is not published, posted, read to the class, or exchanged for
 peer editing at this position: it moves to Module 2's Set, which revises and expands it with Module 2's own
-grammar tools, runs Peer Editing on both Modules' focuses, and publishes it. Students write a short hand-off
-note on the last line of their draft:
+grammar tools, runs Peer Editing on both Modules' focuses, and publishes it. The copy goes into the student's
+folder unmarked, with no hand-off note; Module 2's Lesson 5 re-reads it, and the teacher's recap there names
+what this Module added. The packet's one line under Final Copy, "You'll keep working on this piece soon," is
+the whole hand-off. Nothing is collected for grading.
 
-- **Levels 4-5:** on the draft, circle the comparative, put a box around the reason word, and put a star next
-  to the compound sentence, so the next reader sees what this unit added; then finish the printed stem "Next
-  time I will add ___" with a detail, a reason, or a comparison. Level 5 also copies the sentence carrying the
-  implied-attitude detail onto the hand-off lines and finishes "I want my reader to guess ___," so the intention
-  travels with the draft into Module 2's Peer Editing. Actions and stems, not reflection (Quality Standards §E6).
-- **Levels 2-3:** copy the final frame sentence cleanly onto the hand-off line, circle the word (Level 3: both
-  words) they chose, and write next to each circled word which part of the item it is about.
-
-The teacher collects nothing for grading; drafts stay in the student's folder for Module 2's Lesson 1
-re-engagement.
-
-### Phase 3: Closing Transfer Check (25 min)
+### Phase 2: Closing Transfer Check (30 min)
 
 Every student applies Module 1's spotlighted skill (describing something by comparing it to something else and
 giving a real reason) to a new object, not the item. The object is written in: **the pen or pencil each
@@ -232,8 +226,12 @@ writes on a small card:
   guess out loud; a wrong guess sends the writer back for a sharper detail.
 
 Levels 4-5 pairs are encouraged to join the comparison and its reason, or the two Level 5 sentences, into one
-compound sentence where it fits naturally. The teacher cold-calls two or three pairs to read their cards aloud.
-Demonstration only: no thumbs, no hands, nothing collected.
+compound sentence where it fits naturally.
+
+### Phase 3: Transfer share (15 min)
+
+The teacher cold-calls two or three pairs to read their cards aloud. Demonstration only: no thumbs, no hands,
+nothing collected.
 
 **Board-dependent moment, co-constructed live:** capture two or three of the read-aloud instances on the board
 under the Day 1 before/after board, one per Level where possible, so the class sees the same skill on a pen that
@@ -266,8 +264,8 @@ it saw on a item.
    reading that draft.
 9. Padded banks: the Draft Word Bank has 30 words for one- or two-word choices; no matching lists.
 10. Time balance: Levels 2-3 read and request (Phase 1), write the reader's frame and choose (Phase 2), copy the
-    chosen sentence and write the hand-off (Day 2), and write two card sentences (Phase 3), about the same
-    minutes as Levels 4-5's three or four moves, table, copy, note, and card.
+    chosen sentence (Day 2), and write a card sentence (Day 2 Phase 2), about the same minutes as Levels 4-5's
+    three or four moves, table, copy, and card.
 11. Counts: three moves and three table rows at Level 4, four at Level 5, two frame sentences at Levels 2-3,
     all stated; the sentence ceilings (6 and 9) are stated in the moves; no counting task is printed.
 12. Instructions complete inline; the Draft Word Bank precedes the upgrade move and the before/after table
@@ -281,18 +279,18 @@ it saw on a item.
 15. Teaching precedes practice: no new teaching here; every move uses a tool from Lessons 1-2, listed under
     "What this lesson works from."
 16. Adjacency: this lesson's protocol (a reader's request, revision for effect with a before/after table,
-    a final copy, a hand-off note, a card-based Closing Transfer Check) differs from Lesson 3's (drafting, then
+    a final copy, a card-based Closing Transfer Check) differs from Lesson 3's (drafting, then
     check-and-improve, then a closing-line read-aloud); no checklist is repeated across the two lessons.
 17. Oral protocol: no discussion protocol in this lesson; the cold-call has a written card first for every
     Level.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.13.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.14.
 19. Self-contained: the item and the pen are the students' own; the Foundation Support card is written live by
     the teacher, not prepared; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the only thing needed from earlier is the carried draft; the Draft Word Bank
     and before/after table are printed here; the reader's request is made in this lesson.
 21. Concrete prompts: every move is an action with a visible product (a joined sentence, a replaced word, an
-    added sentence, a moved sentence, a table row); the reader's request is one written line; the hand-off note
-    is marks plus a printed stem; no checklist and no reflection question at any Level.
+    added sentence, a moved sentence, a table row); the reader's request is one written line; no hand-off
+    note; no checklist and no reflection question at any Level.
 
 **Writing-specific (Lesson prompt 0.3):**
 1. Ceilings: each Level's sentence ceiling is stated inside its moves (stay inside 6 / 9) and checked by the
