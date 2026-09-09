@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.14
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.15
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise for effect with Module 1's tools,
 final copy kept for Module 2's Set, not published, no hand-off note; Closing Transfer Check for Module 1's skill)
@@ -35,6 +35,10 @@ _Regenerated 2026-09-08 (1.1.4.9 -> 1.1.4.10) against `Generate_Lesson_Prompt_v6
 and improves the draft, so this lesson no longer repeats that checklist. Day 1 is a reader's request and revision
 for effect (join, upgrade, add what the reader asked for, and at Level 5 reorder), with the before/after table as
 evidence; Day 2 is a final copy, the hand-off note, and the Closing Transfer Check. No "Last Look" pass._
+
+_Revised 2026-09-08 (1.1.4.14 -> 1.1.4.15) per Conventions §C v1.10: the paragraph is Module 1's part of a
+two-part piece; Module 2 adds its own paragraph and publishes, rather than revising and expanding this one.
+Wording only; packet tag bumped._
 
 _Revised 2026-09-08 (1.1.4.13 -> 1.1.4.14) per Lesson prompt v6.11 / packet prompt v3.14: the hand-off note is
 gone. Day 2 is Final copy (30), Closing Transfer Check (30), Transfer share (15); the draft goes to the folder
@@ -203,9 +207,10 @@ proofread checklist and no counting task at this position (the piece was checked
 teacher's circulation check is that each Day 1 table row shows up in the copy. The word ranges (Level 4: 40-90;
 Level 5: 90-150) remain the teacher's check and are not printed.
 
-The piece is a complete, self-revised draft. It is not published, posted, read to the class, or exchanged for
-peer editing at this position: it moves to Module 2's Set, which revises and expands it with Module 2's own
-grammar tools, runs Peer Editing on both Modules' focuses, and publishes it. The copy goes into the student's
+The paragraph is complete and self-revised; the piece is not. It is not published, posted, read to the class,
+or exchanged for peer editing at this position: it moves to Module 2's Set, which adds a second paragraph in
+Module 2's own form on the same clothing (a frame sentence at Levels 2-3), assembles the two-part piece, runs
+Peer Editing on both Modules' focuses, and publishes it (Conventions §C: the piece is built in parts). The copy goes into the student's
 folder unmarked, with no hand-off note; Module 2's Lesson 5 re-reads it, and the teacher's recap there names
 what this Module added. The packet's one line under Final Copy, "You'll keep working on this piece soon," is
 the whole hand-off. Nothing is collected for grading.
@@ -283,7 +288,7 @@ it saw on a item.
     check-and-improve, then a closing-line read-aloud); no checklist is repeated across the two lessons.
 17. Oral protocol: no discussion protocol in this lesson; the cold-call has a written card first for every
     Level.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.14.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.15.
 19. Self-contained: the item and the pen are the students' own; the Foundation Support card is written live by
     the teacher, not prepared; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the only thing needed from earlier is the carried draft; the Draft Word Bank

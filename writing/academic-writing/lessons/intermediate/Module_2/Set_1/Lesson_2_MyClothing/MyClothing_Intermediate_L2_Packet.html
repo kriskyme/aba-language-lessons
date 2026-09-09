@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telling a Story About My Clothing: Lesson 2</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 2A: Telling a Story About My Clothing</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing</span>
+          <span class="masthead-tag">Intermediate 2.1.2.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, and say how it turned out and why.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Care verbs:</strong> washed &middot; folded &middot; packed &middot; dried &middot; cleaned &middot; ironed<br />
+        <strong>Wearing verbs:</strong> zipped &middot; buttoned &middot; tied &middot; wrapped &middot; tucked &middot; stretched<br />
+        <strong>Getting verbs:</strong> picked &middot; wanted &middot; needed &middot; ordered &middot; carried &middot; saved<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; finally &middot; last winter &middot; one morning<br />
+        <strong>People and places:</strong> my mother &middot; my friend &middot; the store &middot; the market &middot; school &middot; the bus &middot; the rain
+      </div>
+
+      <div class="section-title">Grammar: Two Events in One Sentence (Time Clauses)</div>
+      <div class="spotlight-box">
+        <p>Time words like first, then, and after that put events in order as a list. A <strong>time clause</strong>
+        puts two events in one sentence, so the reader knows which came first without a list. It starts with
+        when, before, after, while, or as soon as, and it has its own subject and verb.</p>
+        <table class="rule-table">
+          <tr><th>Time word</th><th>What it says</th><th>Clause first (comma)</th><th>Clause second (no comma)</th></tr>
+          <tr><td>when</td><td>at that moment</td><td>When I got home, I tried it on again.</td><td>I tried it on again when I got home.</td></tr>
+          <tr><td>before</td><td>this happened first</td><td>Before I left for school, I zipped it up.</td><td>I zipped it up before I left for school.</td></tr>
+          <tr><td>after</td><td>this happened second</td><td>After I washed it, I hung it on the line.</td><td>I hung it on the line after I washed it.</td></tr>
+          <tr><td>while</td><td>at the same time</td><td>While I was waiting for the bus, the rain started.</td><td>The rain started while I was waiting for the bus.</td></tr>
+          <tr><td>as soon as</td><td>right after</td><td>As soon as it dried, I folded it.</td><td>I folded it as soon as it dried.</td></tr>
+        </table>
+        <p class="model-step"><strong>Comma rule:</strong> put a comma after the time clause when it opens the
+        sentence. When the clause comes second, there is no comma.</p>
+        <p class="model-step">A time clause has its own subject and verb. "After that" is a time word with no
+        verb, so it is not a clause; "After I washed it" is a clause.</p>
+      </div>
+
+      <div class="section-title">Grammar: Setting the Scene</div>
+      <div class="spotlight-box">
+        <p>Two ways to let a reader guess how you felt without writing a feeling word:</p>
+        <table class="rule-table">
+          <tr><th>Tool</th><th>Rule</th><th>Example</th></tr>
+          <tr><td>Past continuous for background</td><td>was / were + verb-ing sets the scene; the simple past gives the event that interrupts it</td><td>I was running for the bus when my phone slipped out of my pocket.</td></tr>
+          <tr><td>Adverbs of manner</td><td>adjective + -ly says how an action was done (careful, carefully; slow, slowly; quiet, quietly; quick, quickly). Fast and hard do not change.</td><td>I folded it slowly. / I put it on quickly and left.</td></tr>
+        </table>
+        <p class="model-step">A reader guesses a feeling from how something was done. "I folded it slowly and put
+        it at the bottom of the drawer" tells more than "I was sad."</p>
+      </div>
+
+      <div class="section-title">Try It</div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Mark each sentence below.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write CX on the line if the sentence has a time clause, or N if it does not.</span></li>
+          <li><span class="num">2.</span><span class="qbody">In each CX sentence, underline the time clause.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Add the comma where one is missing.</span></li>
+        </ol>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Last winter I bought this jacket at the market. <span class="blank"></span></li>
+          <li><span class="num">2.</span>When I got home I tried it on again. <span class="blank"></span></li>
+          <li><span class="num">3.</span>I wore it every day, and it kept me warm. <span class="blank"></span></li>
+          <li><span class="num">4.</span>Before I left for school, I zipped it up. <span class="blank"></span></li>
+          <li><span class="num">5.</span>I dropped it on the bus while I was looking for my ticket. <span class="blank"></span></li>
+          <li><span class="num">6.</span>After that I washed it twice. <span class="blank"></span></li>
+          <li><span class="num">7.</span>As soon as it dried I folded it. <span class="blank"></span></li>
+          <li><span class="num">8.</span>My friend wore hers first, so I wore mine. <span class="blank"></span></li>
+        </ol>
+      </div>
+
+      <p class="instr">When you finish your task, read your sentences to a partner who worked at a different
+      star level.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span> Choose the better sentence.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Each item tells you one fact about a piece of clothing, then two sentences about it. Circle the sentence that tells the reader more exactly what happened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write the verb that made it better on the line.
+<ol class="fillblank">
+          <li><span class="num">1.</span>The shirt was wrinkled, not dirty. I cleaned it. / I ironed it. <span class="blank"></span></li>
+          <li><span class="num">2.</span>The scarf went around my neck twice. I wore it. / I wrapped it. <span class="blank"></span></li>
+          <li><span class="num">3.</span>The hoodie went into my bag for the trip. I carried it. / I packed it. <span class="blank"></span></li>
+        </ol></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;</span>
+        Each pair below tells two things that happened with a hoodie. Circle the pairs that name two different
+        things.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>washed it and dried it</li>
+          <li><span class="num">2.</span>cleaned it and washed it</li>
+          <li><span class="num">3.</span>folded it and packed it</li>
+          <li><span class="num">4.</span>packed it and folded it</li>
+          <li><span class="num">5.</span>picked it and carried it</li>
+          <li><span class="num">6.</span>tied it and tied it</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;</span> Choose the better sentence.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Each item tells you two things that happened to a piece of clothing, in order, then two sentences about it. Circle the sentence whose two verbs are two different actions in the order they really happened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write the two verbs that made it better on the line.
+<ol class="fillblank">
+          <li><span class="num">1.</span>The sweater went in the sink, then on the line. I washed it and dried it. / I cleaned it and washed it. <span class="blank"></span></li>
+          <li><span class="num">2.</span>The scarf goes around, then the ends get knotted. I tied it and wrapped it. / I wrapped it and tied it. <span class="blank"></span></li>
+          <li><span class="num">3.</span>The shirt came off the line and went in the drawer. I folded it and washed it. / I dried it and folded it. <span class="blank"></span></li>
+        </ol></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;</span> Sort the pairs below, which each tell two things that happened with a hoodie.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Circle the pairs whose two verbs are two different actions in the order they really happen.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Cross out the pairs that repeat an action or put the actions in the wrong order.
+<ol class="fillblank">
+          <li><span class="num">1.</span>washed it and dried it</li>
+          <li><span class="num">2.</span>cleaned it and washed it</li>
+          <li><span class="num">3.</span>folded it and packed it</li>
+          <li><span class="num">4.</span>packed it and folded it</li>
+          <li><span class="num">5.</span>picked it and carried it</li>
+          <li><span class="num">6.</span>tied it and tied it</li>
+        </ol></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Combine each pair of sentences into one sentence with a time clause.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Use the time word in parentheses. Where two are given, choose the one that fits the order of the events.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write four of the eight with the time clause first and four with it second.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Put a comma after the clause when it comes first, and no comma when it comes second.</span></li>
+        </ol>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>I found the hoodie in the closet. I put it on. (as soon as)<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>I was waiting for the bus. The rain started. (while)<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>I washed it. I hung it on the line. (after)<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>I zipped it up. I went out. (before)<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>My mother saw the hole. She sewed it that night. (when)<span class="ans-line-sm"></span></li>
+          <li><span class="num">6.</span>I tried on three sweaters. I chose this one. (after / before)<span class="ans-line-sm"></span></li>
+          <li><span class="num">7.</span>I wore it to the game. My friend wanted one too. (when / as soon as)<span class="ans-line-sm"></span></li>
+          <li><span class="num">8.</span>I paid for it. I saw the same one cheaper across the street. (after)<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Combine each pair of sentences into one sentence with a time clause.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Use the time word in parentheses. Where two are given, choose the one that fits the order of the events.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write four of the eight with the time clause first and four with it second.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Put a comma after the clause when it comes first, and no comma when it comes second.</span></li>
+        </ol>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>I found the hoodie in the closet. I put it on. (as soon as)<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>I was waiting for the bus. The rain started. (while)<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>I washed it. I hung it on the line. (after)<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>I zipped it up. I went out. (before)<span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span>My mother saw the hole. She sewed it that night. (when)<span class="ans-line-sm"></span></li>
+          <li><span class="num">6.</span>I tried on three sweaters. I chose this one. (after / before)<span class="ans-line-sm"></span></li>
+          <li><span class="num">7.</span>I wore it to the game. My friend wanted one too. (when / as soon as)<span class="ans-line-sm"></span></li>
+          <li><span class="num">8.</span>I paid for it. I saw the same one cheaper across the street. (after)<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Rewrite your sentences for items 2, 5, and 8 from Task G.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Open each one with a past continuous background ("I was standing at the counter when ...").</span></li>
+          <li><span class="num">2.</span><span class="qbody">Put in one adverb of manner that lets a reader guess how the writer felt. Use no feeling word.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Under each sentence, write in one word the feeling a reader would guess.
+<ol class="fillblank">
+          <li><span class="num">2.</span><span class="ans-line-sm"></span>Feeling a reader would guess: <span class="blank"></span></li>
+          <li><span class="num">5.</span><span class="ans-line-sm"></span>Feeling a reader would guess: <span class="blank"></span></li>
+          <li><span class="num">8.</span><span class="ans-line-sm"></span>Feeling a reader would guess: <span class="blank"></span></li>
+        </ol></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">A Word That's Easy to Mix Up</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">then vs. than</p>
+        <table class="rule-table">
+          <tr><th>Form</th><th>Meaning</th><th>Example</th></tr>
+          <tr><td>then</td><td>what came next</td><td>I washed it, then I dried it.</td></tr>
+          <tr><td>than</td><td>follows a comparing word (warmer than, longer than)</td><td>The sweater was warmer than the hoodie.</td></tr>
+        </table>
+        <p class="model-step">Test: if the word says what happened next, write "then." If a comparing word comes
+        right before it, write "than."</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> Circle then or than in each sentence.
+        Items 7 and 8 have two choices each.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>First I tried on the hoodie, (then / than) I tried on the sweater.</li>
+          <li><span class="num">2.</span>The sweater was warmer (then / than) the hoodie.</li>
+          <li><span class="num">3.</span>I looked at the price, and (then / than) I put it back.</li>
+          <li><span class="num">4.</span>My friend's jacket is longer (then / than) mine.</li>
+          <li><span class="num">5.</span>I washed it first, (then / than) I dried it.</li>
+          <li><span class="num">6.</span>After a wash it looked better (then / than) new.</li>
+          <li><span class="num">7.</span>The gray one was cheaper (then / than) the red one, so (then / than) I bought it.</li>
+          <li><span class="num">8.</span>I zipped it up, and (then / than) I ran, faster (then / than) the bus.</li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> <span class="stars">&#9733;</span> Read and check with a partner.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read the three sentences you circled in Task B to a partner, one at a time.</span></li>
+          <li><span class="num">2.</span><span class="qbody">After each one, your partner says what happened first.</span></li>
+          <li><span class="num">3.</span><span class="qbody">If your partner cannot tell, say the sentence again with a time word from the Word Bank in front of it ("First I ironed it.").</span></li>
+          <li><span class="num">4.</span><span class="qbody">Swap roles.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;</span> Read and check with a partner.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read the three sentences you circled in Task D to a partner, one at a time.</span></li>
+          <li><span class="num">2.</span><span class="qbody">After each one, your partner says which of the two actions came first and how they can tell.</span></li>
+          <li><span class="num">3.</span><span class="qbody">If your partner cannot tell, say the sentence again with a time word from the Word Bank in front of it ("First I washed it.").</span></li>
+          <li><span class="num">4.</span><span class="qbody">Swap roles.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task L.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Find and fix the 8 mistakes in the paragraph below.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Mark each mistake on the paragraph. Some are past verb forms, some are commas after a time clause, and some are then / than.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write each corrected word or comma on the lines below, with the number of its sentence.</span></li>
+        </ol>
+        <div class="spotlight-box">
+          <p>One morning I finded this hat on the bus seat next to me. When I picked it up I saw a name inside.
+          Then I looked around, but nobody claim it. I carryed it in my bag for a week, than I wore it to school.
+          Before I put it on I brushed it. As soon as my friend seen it, she laughed. I still wear it because it
+          is warmer then my old one.</p>
+        </div>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task M.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Find and fix the 8 mistakes in the paragraph below, then change two of its sentences.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Mark each mistake on the paragraph. Some are past verb forms, some are commas after a time clause, and some are then / than.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write each corrected word or comma on the lines below, with the number of its sentence.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Rewrite sentence 1 so it opens with a past continuous background and the finding of the hat interrupts it.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Add one adverb of manner to sentence 5 and write the new sentence.</span></li>
+        </ol>
+        <div class="spotlight-box">
+          <p>One morning I finded this hat on the bus seat next to me. When I picked it up I saw a name inside.
+          Then I looked around, but nobody claim it. I carryed it in my bag for a week, than I wore it to school.
+          Before I put it on I brushed it. As soon as my friend seen it, she laughed. I still wear it because it
+          is warmer then my old one.</p>
+        </div>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <ol class="fillblank">
+          <li><span class="num">3.</span>Sentence 1:<span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span>Sentence 5:<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 2B: Telling a Story About My Clothing</h1>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, and say how it turned out and why.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Care verbs:</strong> washed &middot; folded &middot; packed &middot; dried &middot; cleaned &middot; ironed<br />
+        <strong>Wearing verbs:</strong> zipped &middot; buttoned &middot; tied &middot; wrapped &middot; tucked &middot; stretched<br />
+        <strong>Getting verbs:</strong> picked &middot; wanted &middot; needed &middot; ordered &middot; carried &middot; saved<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; finally &middot; last winter &middot; one morning<br />
+        <strong>People and places:</strong> my mother &middot; my friend &middot; the store &middot; the market &middot; school &middot; the bus &middot; the rain
+      </div>
+
+      <div class="section-title">Warm Up</div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Spell three verbs from sound.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Your partner picks three verbs from three different verb groups of the Word Bank and reads them to you, one at a time, with the -ed ending. Do not look at the bank.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write each verb as you hear it.
+<ol class="fillblank">
+          <li><span class="num">1.</span><span class="blank"></span></li>
+          <li><span class="num">2.</span><span class="blank"></span></li>
+          <li><span class="num">3.</span><span class="blank"></span></li>
+        </ol></span></li>
+          <li><span class="num">3.</span><span class="qbody">Now look at the Word Bank. Check each verb and fix any letter that is wrong (the doubled consonant in zipped, the i in carried).</span></li>
+          <li><span class="num">4.</span><span class="qbody">Swap roles.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Spell three verbs from sound.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Your partner picks three verbs from three different verb groups of the Word Bank and reads them to you, one at a time, with the -ed ending. Do not look at the bank.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write each verb as you hear it.
+<ol class="fillblank">
+          <li><span class="num">1.</span><span class="blank"></span></li>
+          <li><span class="num">2.</span><span class="blank"></span></li>
+          <li><span class="num">3.</span><span class="blank"></span></li>
+        </ol></span></li>
+          <li><span class="num">3.</span><span class="qbody">Now look at the Word Bank. Check each verb and fix any letter that is wrong (the doubled consonant in zipped, the i in carried).</span></li>
+          <li><span class="num">4.</span><span class="qbody">Write 1 and 2 next to the two verbs that would go together in one frame, in the order they would really happen. Tell your partner why.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Swap roles.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+        Write about things that really happened with your clothing.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read your first paragraph again.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence about something that happened with it, with a time word from the bank that places it (last winter, one morning).<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write one sentence about something else that happened with it, with a time word from the bank that orders it (first, then, next, after that, finally).<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Write one sentence that says how it turned out, with a reason word (because, since, as, given that).<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">Join your two event sentences into one sentence with a time clause (when, before, after, while, as soon as), with the comma where the rule puts it.<span class="ans-line-sm"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        Write two sentences about one moment with your clothing, then test them on a partner.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read your first paragraph again.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write two sentences about one moment with it. Each one must carry one concrete detail and no feeling word (no happy, sad, love, hate, nervous). One of the two must use a past continuous background or an adverb of manner.
+<ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span>Partner's guess:<span class="ans-line-sm"></span></li>
+        </ol></span></li>
+          <li><span class="num">3.</span><span class="qbody">Trade with a partner and ask, for each sentence: "What does this detail make you think I felt?" Write your partner's guess under each sentence.</span></li>
+          <li><span class="num">4.</span><span class="qbody">If a guess is wrong, the detail is not doing its job yet. Circle the detail you will replace.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Plan Your Story</div>
+      <p class="instr">Read your first paragraph again. Your story is about one real thing that happened with the
+      same piece of clothing, told in order. Pick one of these and circle it:
+      <strong>the day I got it &middot; one day I wore it that mattered</strong>. Then plan your story below.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span> Plan your words.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write three verbs from the Word Bank that really happened with your clothing on the day you circled, one from each of three different groups.<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Circle the one verb you would put in "I ___-ed it."</span></li>
+          <li><span class="num">3.</span><span class="qbody">Tell a partner why that verb and not the other two.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span> Plan your words.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write three verbs from the Word Bank that really happened with your clothing on the day you circled, one from each of three different groups.<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write 1 and 2 next to the two verbs you would put in "I ___-ed it and ___-ed it.", in the order they happened. The pair must be two different actions in a real order.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Say the sentence aloud to a partner.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Plan your story in three lines.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write one event on each line, in the order it happened.
+<ol class="fillblank">
+          <li><span class="num">1.</span>First<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>Then<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>Finally<span class="ans-line-sm"></span></li>
+        </ol></span></li>
+          <li><span class="num">2.</span><span class="qbody">Complete the outcome line.<br />How it turned out: <span class="blank" style="min-width: 220px;"></span>, because <span class="blank" style="min-width: 220px;"></span>.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Put a bracket [ ] around the two events that could go in one sentence with a time clause.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Plan your story as a list of events.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">List four or five events in the order they happened.
+<ol class="fillblank">
+          <li><span class="num">1.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">4.</span><span class="ans-line-sm"></span></li>
+          <li><span class="num">5.</span><span class="ans-line-sm"></span></li>
+        </ol></span></li>
+          <li><span class="num">2.</span><span class="qbody">Complete this line.<br />Why it mattered: <span class="blank" style="min-width: 320px;"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Circle the one event or detail in your list that most clearly hints at how you felt.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Complete this line.<br />What I want the reader to guess: <span class="blank" style="min-width: 320px;"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">Read your list to a partner without the last line. Write what your partner guesses.<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">6.</span><span class="qbody">If the guess misses, circle the detail you will sharpen.</span></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

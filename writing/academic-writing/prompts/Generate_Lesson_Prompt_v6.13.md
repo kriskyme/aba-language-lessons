@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.11)
+# Academic Writing Lesson Generation Prompt (v6.13)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.11.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.13.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -94,8 +94,11 @@ form, not content. Never draft about the practice object, and never change the d
 
 **0.1b Leveled Mentor Ladder.** One short worked model per task Level, all on the practice object, each modeling
 exactly that Level's output form and required feature (0.2): a **Mentor Text** at Levels 1-5 (a word, a frame, or
-a paragraph), a **Mentor Essay** at Levels 6-8 (a complete essay, not a longer paragraph). Beginner has 3 Mentor
-Texts; Intermediate 4 Mentor Texts; Advanced and Proficient 4 models mixing Texts and Essays. Present them
+a paragraph), a **Mentor Essay** at Levels 6-8: at Pair position 1, the Module's part of the essay (two or three genuine
+body paragraphs, each led by a topic sentence, under a printed working thesis line), never a longer paragraph;
+at Pair position 5's second look, the same ladder with the introduction and conclusion added, so the complete
+essay is seen once, in Module N+1. Beginner has 3 Mentor Texts; Intermediate 4 Mentor Texts; Advanced and
+Proficient 4 models mixing Texts and Essays. Present them
 together, in Level order, as one ladder the teacher presents on the board or reads aloud on Lesson 1 Day 2 once
 Focus A has been introduced, so a student sees the model one step up and one step down; the paragraph-to-essay
 jump in kind is exactly what the ladder makes visible. The ladder lives in the Markdown and on the board; it is
@@ -159,6 +162,9 @@ Level or vice versa.
 - Output: a five-paragraph essay: introduction (hook, connecting information, thesis), 2-3 body paragraphs each
   opening with its own topic sentence, and a conclusion that restates the thesis and closes with a suggestion,
   prediction, question, or opinion. Approximately 300-450 words. Not three interchangeable body paragraphs.
+  **Built in parts across the Pair** (Conventions §C): Pair positions 3-4 draft and revise the body paragraphs
+  under a working thesis (about 200-300 words); position 7 drafts the introduction and conclusion; position 8
+  assembles the whole.
 - Thesis: **direct** (names the essay's points of development). Hook: any of question, observation, scenario,
   quote, statistic.
 - Grammar: complex sentences with sustained control; register-shifting cohesive devices (however, in fact, on the
@@ -168,7 +174,8 @@ Level or vice versa.
   that reader's stated concern. The Scenario must name that reader and concern.
 
 **Level 7 (C1) - Essay Composition**
-- Output: introduction, 3 body paragraphs, conclusion; approximately 450-650 words.
+- Output: introduction, 3 body paragraphs, conclusion; approximately 450-650 words. Built in parts as at Level 6
+  (bodies about 300-450 words at positions 3-4; introduction and conclusion at 7; the whole at 8).
 - Thesis: **indirect** (signals that points of development exist without naming them). Hook: a quote, statistic, or
   scenario/anecdote, not a plain question.
 - Grammar: sophisticated cohesion (this suggests, what's more, admittedly), idiomatic and precise vocabulary,
@@ -194,9 +201,11 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
    (words, sentences, or paragraphs), counted, not a neighboring Level's?
 2. **Regime (0.1):** Levels 1-3 have a fully provided frame with only the target word(s) student-authored; Levels
    4-5 have no frame and a single paragraph; Levels 6-8 have a genuine essay with hook, thesis, topic-sentence-led
-   body paragraphs, and conclusion?
+   body paragraphs, and conclusion, built in parts (bodies at positions 3-4, introduction and conclusion at 7,
+   the whole at 8), with no position drafting a complete essay before 8?
 3. **Required feature (0.2):** each Level's exact feature is present in its model and demanded by its drafting and
-   editing tasks; thesis kind (direct at 6, indirect at 7-8) and hook type correct at 6-8? A borrowed Level (e.g.
+   editing tasks; thesis kind (direct at 6, indirect at 7-8) correct in the working thesis, and hook type correct
+   where the introduction is drafted (position 7)? A borrowed Level (e.g.
    Level 5 inside Advanced) still hits its full own-Level bar.
 4. **Scenario (0.1a):** supplies what every Level needs: a named reader and concern for a band including Level 6;
    two distinct readers or stakes for a band including Level 8?
@@ -219,7 +228,7 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
 12. **Content volume (0.4b):** each grammar/practice day has at least 3 distinct activities meeting the item
     minimums and reads as a full page when printed?
 13. **Level 5 bridge (0.4c):** in Advanced and Proficient, Level 5 gets a light, receptive look at the shared model
-    essay, positioned next to it, without raising Level 5's own output past one paragraph?
+    essay's body paragraphs, positioned next to them, without raising Level 5's own output past one paragraph?
 14. **Paired tier (0.4c):** each single-audience activity was considered for a lighter or heavier adjacent tier,
     added only where it closes a real gap, drawing only on grammar already taught by that point?
 15. **Practice object vs draft object (0.1a):** positions 1-2 through Lesson 2 Day 1 and the Mentor Ladder use the
@@ -369,8 +378,13 @@ Grammar Focus A/B is sentence-level and necessary but not sufficient for Levels 
 (essay structure and thesis construction) and **Essay Focus B** (paragraph-internal and cross-paragraph cohesion),
 drawn from `Academic Writing Essay Content Sample`. Where a band includes Levels 6-8, these run as a parallel
 track through Lessons 1-2: composition-regime Levels 4-5 have Grammar Focus A/B as their centerpiece; essay-regime
-Levels 6-8 have Essay Focus A/B as theirs, with Grammar Focus A/B folded in as lighter sentence craft (the mirror
-of how frame-regime Levels get a light Grammar warm-up inside a Paragraph Composition band).
+Levels 6-8 have Essay Focus as theirs, with Grammar Focus A/B folded in as lighter sentence craft (the mirror
+of how frame-regime Levels get a light Grammar warm-up inside a Paragraph Composition band). **Which Essay Focus
+a Module carries follows the part of the essay it drafts** (Conventions §C): Module N, which drafts the body
+paragraphs, teaches **Essay Focus B** (topic and supporting sentences, outlining, combining) plus working-thesis
+construction (direct at 6, indirect at 7-8) as the outline's spine; Module N+1, which drafts the introduction
+and conclusion, teaches **Essay Focus A** (the five-paragraph shape, hook types in its own form, the
+introduction's connecting sentences, the conclusion's closing moves) and assembles the whole.
 
 **Essay Focus Bank by Level:**
 
@@ -401,13 +415,17 @@ lesson's own day-by-day order; being modeled inside a Mentor Essay does not coun
 
 **Essay-regime activity types** (from the essay sample; use alongside the sentence-level types in 0.4 on the days
 that carry Essay Focus A/B):
-- **Essay analysis:** a short original model essay built for this Scenario; students identify its purpose,
-  paragraph count, thesis, and each body paragraph's topic sentence.
-- **Hook-writing practice:** the connecting information and thesis of a short essay without its hook; students
-  write one or two candidate hooks and compare effectiveness.
-- **Thesis identify/rewrite:** identify a thesis as direct or indirect, then rewrite it as the other kind.
-- **Outlining:** a general outline (main points), then a specific outline (supporting detail) for the same essay,
-  side by side.
+- **Essay analysis:** a short original model essay built for this Scenario; at Module N, students identify its
+  working thesis and each body paragraph's topic sentence and support; at Module N+1, its hook type, the
+  introduction's connecting sentences, and the conclusion's closing move.
+- **Thesis identify/rewrite (Module N):** identify a working thesis as direct or indirect, then rewrite it as the
+  other kind; write a working thesis for a given pair of body-paragraph topics.
+- **Outlining (Module N):** a general outline (main points), then a specific outline (supporting detail) for the
+  same body paragraphs, side by side.
+- **Hook-writing practice (Module N+1):** the connecting information and thesis of an introduction without its
+  hook; students write one or two candidate hooks in Module N+1's form and compare effectiveness.
+- **Conclusion practice (Module N+1):** a body-paragraph set without its conclusion; students restate the thesis
+  in new words and choose a closing move.
 
 ### 0.5 Respectful Tiers for writing
 
@@ -436,12 +454,16 @@ specific to the lesson's two focuses and required feature, in the sample's own p
 - Punctuation and capitalization are correct, including comma use in compound or complex sentences.
 - (Levels 7-8 required; 4-6 recommended) The self-revision evidence (0.4a) is present and visible.
 
-**Essay-regime Levels (6-8) add:**
-- The essay has a real hook of this Level's type, not a flat statement of the thesis.
-- The thesis is present at the end of the introduction and is the correct kind (direct at 6, indirect at 7-8).
-- Every body paragraph opens with a topic sentence stating its own main point.
-- The conclusion restates the thesis and introduces no new information.
+**Essay-regime Levels (6-8) add, at position 3 (the body paragraphs):**
+- The working thesis line is the correct kind (direct at 6, indirect at 7-8) and every body paragraph serves it.
+- Every body paragraph opens with a topic sentence stating its own main point, and every sentence after it
+  supports that point.
 - (Level 8) Both audience sections are present and genuinely distinct in register and approach.
+
+**At position 7 (the merged checklist, over the introduction, conclusion, and the kept bodies):**
+- The introduction has a real hook of this Level's type in Module N+1's form, not a flat statement of the thesis.
+- The thesis is present at the end of the introduction, the correct kind, and matches the kept bodies.
+- The conclusion restates the thesis and introduces no new information.
 
 **Frame-regime Levels (1-3):** replace the written checklist with a short oral self-check ("does your word
 match your object? read your sentence to a partner, does it make sense?").
@@ -538,31 +560,37 @@ than forcing a bad-fit essay type:
 This prompt generates **one 2-day lesson per run**; run it once per position against the same approved plan.
 Beginner's 4 lessons in one Set share one Scenario from grammar input (practice object) through a finished,
 published piece (draft object, 0.1a). Intermediate, Advanced, and Proficient pair two consecutive Modules (1-2,
-3-4, 5-6, 7-8) so one Scenario/essay, on the draft object, spans both Modules' Sets, 8 lessons, each Module contributing its own, different Grammar/Essay Focus (Conventions
-§C). Each Module still keeps its own ordinary 4-lesson Set, folder, and version codes; **Pair position** (1-8) is
+3-4, 5-6, 7-8) so one Scenario/essay, on the draft object, spans both Modules' Sets, 8 lessons, each Module contributing its own, different Grammar/Essay Focus and
+**drafting only its own part of the piece** (Conventions §C: essay Levels write the body paragraphs in Module N
+and the introduction and conclusion in Module N+1; paragraph Levels write one paragraph per Module; position 8
+assembles and publishes). Each Module still keeps its own ordinary 4-lesson Set, folder, and version codes; **Pair position** (1-8) is
 the lesson's place in the arc, **Set position** (1-4, restarting per Module) is which of the Module's own lessons
 it is.
 
 | Pair position | Module | Set position | Content role |
 |---|---|---|---|
 | 1 | N | 1 | Grammar Focus A: input, modeling, deeper practice; Mentor Ladder |
-| 2 | N | 2 | Grammar Focus B, Essay Focus A/B (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
-| 3 | N | 3 | Drafting on the draft object, parts 1-2 (a complete opening-through-conclusion draft), self-edit |
-| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence; final copy, kept unmarked for Module N+1 (not published, no hand-off note). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
-| 5 | N+1 | 1 | Re-engagement (re-read own draft; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Mentor Ladder second look |
-| 6 | N+1 | 2 | Module N+1's Grammar Focus B, Essay Focus A/B (where applicable); revision-planning against the existing draft (replaces prewriting) |
-| 7 | N+1 | 3 | Revision and expansion drafting, parts 1-2, applying Module N+1's focus into the existing draft; merged self-edit checklist |
-| 8 | N+1 | 4 | Peer editing (both Modules), **revise for effect** (Module N+1's tools), publishing, Closing Transfer Check for both skills plus Module N+1's verb |
+| 2 | N | 2 | Grammar Focus B, Essay Focus B's outlining and combining (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
+| 3 | N | 3 | Drafting Module N's part on the draft object: the body paragraphs under a working thesis (essay Levels) or the Module's one paragraph (paragraph Levels), complete on Day 1; check and improve on Day 2 |
+| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence, on Module N's part only; final copy of that part, kept unmarked for Module N+1 (not published, no hand-off note). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
+| 5 | N+1 | 1 | Re-engagement (re-read own kept part; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Essay Focus A (the five-paragraph shape, hook types in Module N+1's form); Mentor Ladder second look, now with introductions and conclusions added |
+| 6 | N+1 | 2 | Module N+1's Grammar Focus B; Essay Focus A continued (the introduction's connecting sentences, the conclusion's closing moves); planning Module N+1's part against the kept part (replaces prewriting) |
+| 7 | N+1 | 3 | Drafting Module N+1's part: the introduction and conclusion around the kept bodies (essay Levels) or the second paragraph in Module N+1's form (paragraph Levels), complete on Day 1; Day 2 the merged self-edit checklist over both parts |
+| 8 | N+1 | 4 | Assemble the whole piece; Peer Editing (both Modules), **revise for effect** (Module N+1's tools), publishing, Closing Transfer Check for both skills plus Module N+1's verb |
 
 Key rules:
 - **Genre, Scenario (practice object and draft object), and essay type are fixed once by Module N's mapping (0.9)
   and inherited unchanged by Module N+1.** The shared piece stays one genre and one draft object throughout.
-- **Position 5 does not re-derive the Scenario or genre;** it re-reads Module N's draft and gives a short recap
-  (purpose, reader, what is already written), then introduces Module N+1's Focus A as genuinely new content.
+- **Position 5 does not re-derive the Scenario or genre;** it re-reads Module N's kept part and gives a short
+  recap (purpose, reader, what is already written, what is still to be written), then introduces Module N+1's
+  Focus A as genuinely new content.
+- **Neither Module drafts a complete piece.** Positions 3-4 produce and revise Module N's part; position 7
+  produces Module N+1's part; only position 8 holds the assembled whole.
 - **Module N+1's own CSV verb is covered by Lesson 8's separate Closing Transfer Check task (0.8),** not by the
   shared essay.
 - **Revision for effect sits at both positions 4 and 8;** peer editing and publishing happen only at position 8
-  (0.6). Position 4 completes and self-revises the draft but does not publish it or run a Peer Editing exchange.
+  (0.6). Position 4 completes and self-revises Module N's part but does not publish it or run a Peer Editing
+  exchange.
 - **Module N+1's Focus A/B is genuinely different from Module N's** (0.9; 0.4's pending Alternate column).
 - Positions 3-4 continue positions 1-2's content; positions 6-8 continue what position 5 established.
 
@@ -578,16 +606,18 @@ The flow below is written for a Paragraph Composition band. Where a band include
 parallel through Lessons 1-2, the same move a Paragraph Composition band makes for its frame-regime Levels, one
 regime higher:
 - **Levels 4-5 (where present):** follow the flow exactly, Grammar Focus A/B as centerpiece.
-- **Levels 6-8:** the same two lessons on Essay Focus A/B (0.4c) as centerpiece: Lesson 1 covers essay structure,
-  hook types, and direct-thesis construction (Level 6's row) plus the Level 7/8 extension; Lesson 2 Day 1 covers
-  topic sentences, outlining, and cohesion (Essay Focus B); Lesson 2 Day 2's warm-up and prewriting produce an
-  essay outline rather than a paragraph plan. Grammar Focus A/B runs inside the same days as lighter sentence
-  craft.
+- **Levels 6-8:** the same two lessons on the Module's Essay Focus (0.4c) as centerpiece. At Pair positions 1-2
+  (Module N): Lesson 1 covers the body paragraph (topic sentence and support) and working-thesis construction
+  (direct at 6, indirect at 7-8); Lesson 2 Day 1 covers outlining and combining sentences for cohesion; Lesson 2
+  Day 2's warm-up and prewriting produce an outline of the body paragraphs rather than a paragraph plan. At
+  positions 5-6 (Module N+1): the five-paragraph shape, hook types in Module N+1's form, the introduction, and
+  the conclusion. Grammar Focus A/B runs inside the same days as lighter sentence craft.
 - **Mentor Ladder walkthrough (Lesson 1 Day 2 Phase 3) and prewriting share (Lesson 2 Day 2 Phase 3)** present
   every Level together; the Mentor Essays sit at the top of the same ladder as the Mentor Texts.
-- **Lesson 3:** Levels 6-8 draft the introduction and first body paragraph on Day 1, the remaining body
-  paragraph(s) and conclusion on Day 2. Provisional pacing, unchecked against a real class; a dedicated outlining
-  lesson may be needed later.
+- **Lesson 3:** Levels 6-8 draft the Module's part on Day 1 from the quick plan's outline: at position 3, the
+  body paragraphs under the working thesis line (no introduction, no conclusion); at position 7, the
+  introduction and conclusion around the kept bodies. Day 2 checks and improves that part like every other
+  Level. Provisional pacing, unchecked against a real class.
 - **Lesson 4 (and 8):** use 0.6's essay-specific checklist and Peer Editing additions.
 
 ### Lesson 1, Day 1: Grammar Focus A, Input and Modeling
@@ -664,8 +694,10 @@ _Phase 1: Quick plan (10 min)_
 
 _Phase 2: Independent/guided drafting, opening and body (50 min)_
 - Frame-regime Levels complete the frame once on the draft object (the lesson's one round, 0.4d; no second
-  sentence about another part), the teacher circulating to hear each student sound out their word. Composition-regime Levels draft the opening and body
-  toward 0.2's targets and complete the draft today (Levels 4+ count sentences at the end of the block).
+  sentence about another part), the teacher circulating to hear each student sound out their word. Composition-regime Levels draft the Module's part
+  toward 0.2's targets and complete it today (Levels 4+ count sentences at the end of the block): the whole
+  paragraph at Levels 4-5, the body paragraphs under the working thesis line at Levels 6-8 (position 3) or the
+  introduction and conclusion (position 7).
   Circulation checks the required feature is present in progress, not only at the end.
 
 _Phase 3: Mid-draft share-out (15 min)_
@@ -698,7 +730,7 @@ _Phase 1: A reader's request (15 min)_
   Editing (0.6): one request, no form, no compliment-and-suggestion.
 
 _Phase 2: Revise for effect with Module N's tools (45 min)_
-- Composition-regime Levels make three moves, each recorded in the before/after table (0.4a): join two short
+- Composition-regime Levels make three moves on the Module's part, each recorded in the before/after table (0.4a): join two short
   sentences with Focus B's connector or turn a plain "but" into the concession form where taught; upgrade one
   plain word to a more exact one from the bank; add the sentence the reader asked for. The band's top Level adds
   a fourth: move one sentence so the order runs in one direction. Frame-regime Levels write one more frame
@@ -738,24 +770,30 @@ _Phase 3: Closing Transfer Check (25 min)_ (0.8).
 ### Lessons 5-8 (Module Pair only): Module N+1's Set
 
 Not generated for Beginner. Lessons 5-8 run Lessons 1-4's structure (same phases, same minutes) with Module N+1's
-own Focus A/B and these substitutions, applied to the existing draft on the draft object rather than a new piece:
+own Focus A/B and these substitutions, applied to the kept part on the draft object rather than a new piece:
 
-- **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N draft, which arrives
+- **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N part, which arrives
   unmarked; the teacher's short recap, not a student note, names the Scenario's purpose and named reader, what
-  the piece already accomplishes, and what Module N's focus added; Module N+1's Skill Spotlight
+  is already written, what Module N's focus added, and what Module N+1 will add (the introduction and
+  conclusion, or the second paragraph); Module N+1's Skill Spotlight
   alongside a one-line reminder of Module N's (0.8). Phases 2-3 teach Module N+1's Focus A.
 - **Lesson 5 Day 2 Phase 3** is a Mentor Ladder **second look**: the same ladder, presented again by the teacher,
-  now asking what Module N+1's focus would add to each Level's already-complete model (a before/after framing,
-  not a new ladder; still not printed).
-- **Lesson 6 Day 1** teaches Module N+1's Focus B with the same activity shapes.
+  now with each model completed by Module N+1's part (the essay Levels' introductions and conclusions; the
+  paragraph Levels' second paragraph), asking what Module N+1's focus added (a before/after framing, not a new
+  ladder; still not printed). This is the one time the complete piece is modeled.
+- **Lesson 6 Day 1** teaches Module N+1's Focus B with the same activity shapes; essay Levels continue Essay Focus
+  A (the introduction's connecting sentences; the conclusion's closing moves) with hook-writing and conclusion
+  practice on a model.
 - **Lesson 6 Day 2 Phase 1's** warm-up targets Module N+1's required feature on a sentence from the student's own
-  draft; **Phase 2** replaces prewriting with **annotating the existing draft** for where Module N+1's focus will be
-  added, expanded, or strengthened; Phase 3 shares planned revisions.
-- **Lesson 7** is revision and expansion drafting: Day 1 applies Module N+1's focus into the opening and body
-  (with a "strong revision" board), Day 2 completes the pass and runs the **merged self-edit checklist** covering
-  both Modules' focuses and required features (0.6).
-- **Lesson 8 Day 1 Phase 1** is the **Peer Editing exchange** covering both Modules (0.6); Phase 2 is hard
-  self-revision with Module N+1's tools (0.4a artifact required at Levels 7-8).
+  kept part; **Phase 2** replaces prewriting with **planning Module N+1's part against the kept part** (the hook
+  and thesis the bodies already serve; the closing move; or the second paragraph's shape); Phase 3 shares plans.
+- **Lesson 7** drafts Module N+1's part: Day 1 writes the introduction and conclusion around the kept bodies
+  (essay Levels) or the second paragraph (paragraph Levels), complete today, with a "strong sentence" board; Day
+  2 runs the **merged self-edit checklist** over both parts, covering both Modules' focuses and required features
+  (0.6), and improves from the marks.
+- **Lesson 8 Day 1 Phase 1** assembles the whole piece in order, then runs the **Peer Editing exchange** covering
+  both Modules (0.6); Phase 2 is hard self-revision with Module N+1's tools on the whole (0.4a artifact required
+  at Levels 7-8).
 - **Lesson 8 Day 2 Phase 2** is **Publish/share** (the piece is genuinely finished now); **Phase 3's** Closing
   Transfer Check covers both Modules' combined skill plus the separate Module N+1 verb task (0.8).
 

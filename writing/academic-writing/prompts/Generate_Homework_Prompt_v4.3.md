@@ -1,4 +1,4 @@
-# Academic Writing Homework Generation Prompt (v4.2)
+# Academic Writing Homework Generation Prompt (v4.3)
 
 Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
 completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
@@ -8,7 +8,7 @@ Module Pair (8 lessons): one section per task Level in the band, each keyed to t
 alongside it. Quality Standards §A-§C govern every item and are not restated. This prompt states only what is
 specific to Writing homework.
 
-**Current version: v4.2.** History: `Changelog.md`.
+**Current version: v4.3.** History: `Changelog.md`.
 
 **Input:** the lesson content generated so far, in full (the Scenario, the Grammar Focus A/B and Essay Focus A/B
 content taught so far, the Leveled Mentor Ladder, the Skill Spotlight, Module(s), Band). If none is provided,
@@ -30,16 +30,17 @@ Beginner (or Pair positions 1-4, with one difference at 4):
 - **After Lesson 1:** Focus A and the Mentor Ladder only. No Focus B, confusable pair, or prewriting.
 - **After Lesson 2 (default):** Focus A and B (and Essay Focus A/B where taught) and the prewriting. Drafting has
   not started; homework primes Lesson 3 without asking the student to draft the Scenario piece at home.
-- **After Lesson 3:** the student's in-progress draft and self-edit pass exist; Part 2 may apply the checklist to
-  a fresh instance.
+- **After Lesson 3:** the student's draft of the Module's part and its self-edit pass exist; Part 2 may apply the
+  checklist to a fresh instance of that part (a body paragraph, a paragraph), never the whole piece.
 - **After Lesson 4:** Beginner: the piece is published; Part 2 may extend the Closing Transfer Check response. Pair
-  position 4: the draft is complete and self-revised but **not published**; Part 2 may extend the draft,
-  never implying the piece is finished.
+  position 4: the Module's part is complete and self-revised but **not published**; Part 2 may extend that
+  part, never the other Module's part and never implying the piece is finished.
 
 Pair positions 5-8 extend the same logic with Module N+1's content:
 - **After 5:** Module N+1's Focus A newly available, on top of positions 1-4.
 - **After 6 (default):** Module N+1's Focus A and B (and Essay Focus where applicable) and the revision plan.
-- **After 7:** the revised, expanded draft reflecting both Modules' focuses.
+- **After 7:** both parts exist and have been checked together; Part 2 may practice Module N+1's part on a fresh
+  instance (a hook and thesis for a given pair of topics; a closing move), never the assembled piece.
 - **After 8:** the piece is published; Part 2 may extend either the Closing Transfer Check response or the separate
   Module N+1 verb task.
 

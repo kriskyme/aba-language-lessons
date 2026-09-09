@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telling a Story About My Clothing: Lesson 4</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .discuss-block,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 4A: Telling a Story About My Clothing</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing</span>
+          <span class="masthead-tag">Intermediate 2.1.4.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, and say how it turned out and why.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Care verbs:</strong> washed &middot; folded &middot; packed &middot; dried &middot; cleaned &middot; ironed<br />
+        <strong>Wearing verbs:</strong> zipped &middot; buttoned &middot; tied &middot; wrapped &middot; tucked &middot; stretched<br />
+        <strong>Getting verbs:</strong> picked &middot; wanted &middot; needed &middot; ordered &middot; carried &middot; saved<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; finally &middot; last winter &middot; one morning<br />
+        <strong>People and places:</strong> my mother &middot; my friend &middot; the store &middot; the market &middot; school &middot; the bus &middot; the rain
+      </div>
+
+      <div class="section-title">Put It Together</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Give your piece a title and put its two parts in order.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write a title on the line: the name of your piece of clothing ("My Jacket," "My Gray Scarf").<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Put the two parts of your piece in order under the title: the part that describes the clothing first, the part that tells what happened with it second.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Write 1 in the margin next to the first part and 2 next to the second. If your parts are paragraphs, number the paragraphs; if your parts are sentences, number the sentences.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Trade and Check</div>
+      <p class="instr">Trade whole pieces with a partner. Read your partner's piece once all the way through. Then do the Task that matches your partner's piece, writing on your partner's page. When you are both done, give the pieces back.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span> Read your partner's two sentences and ask for one more.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read both sentences aloud to your partner.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Say what the clothing is like, and say what happened to it.</span></li>
+          <li><span class="num">3.</span><span class="qbody">On your partner's page, write one word for the part or the event you would like a second sentence about. Use one of these: Tell me about: the <span class="blank"></span>. / What happened next?</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span> Read your partner's two sentences and ask for one more.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read both sentences aloud to your partner.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Say what the clothing is like, and say what happened to it.</span></li>
+          <li><span class="num">3.</span><span class="qbody">On your partner's page, write one word for the part or the event you would like a second sentence about. Use one of these: Tell me about: the <span class="blank"></span>. / What happened next?</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Mark your partner's two paragraphs, then write them one compliment and one suggestion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">In paragraph 1, underline the comparison and circle its reason word.</span></li>
+          <li><span class="num">2.</span><span class="qbody">In paragraph 2, number the time words in the order they appear, and put a box around the sentence that says how it turned out.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Copy out one sentence you would keep exactly as it is.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Write one thing you want to know more about, or one place where you could not tell what happened first.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Mark your partner's two paragraphs, then write them one compliment and one suggestion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">In paragraph 1, underline the comparison and circle its reason word.</span></li>
+          <li><span class="num">2.</span><span class="qbody">In paragraph 2, number the time words in the order they appear, and put a box around the sentence that says how it turned out.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Write the feeling you guess from paragraph 2, and the sentence that told you.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Copy out one sentence you would keep exactly as it is.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">Write one thing you want to know more about, or one place where you could not tell what happened first.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Make It Stronger</div>
+      <p class="instr">Anything you change: cross out the old version with a single line, do not erase it, and write the new version next to it or above it, so both stay on the page.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;</span> Answer your partner, then choose your best.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Find what your partner asked about on your page (a part of the clothing, or what happened next).</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one more sentence about it, spelling the verb by its sounds: I <span class="blank"></span>-ed it.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Read both of your "I ___-ed it" sentences (this one and the one from before) to a partner.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Circle the one that tells the most about what happened. That is the one that goes in your final copy.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;</span> Answer your partner, then choose your best.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Find what your partner asked about on your page (a part of the clothing, or what happened next).</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one more sentence about it, with two actions in the order they really happened, spelling each verb by its sounds: I <span class="blank"></span>-ed it and <span class="blank"></span>-ed it.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Read both of your two-action sentences (this one and the one from before) to a partner.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Circle the one that tells the most about what happened. That is the one that goes in your final copy.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Make three changes that make your story stronger.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Find two event sentences that belong together and join them with a time clause (when, before, after, while, as soon as), with a comma where the rule puts it; or turn a "then" sentence into a time-clause sentence. If paragraph 2 already has a time-clause sentence, join a different pair, or join two sentences in paragraph 1 with and, but, or so. Cross out the old two and write the new one.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Find one plain verb (got, put, went, had). Cross it out and write a more exact one from the Word Bank or your own (ordered, tucked, carried).</span></li>
+          <li><span class="num">3.</span><span class="qbody">Add the event or detail your partner asked for, with a real time word in it. Stay inside 6 sentences in each paragraph: if you now have 7, join two sentences or cut the weakest.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Write each change in the table: three rows.</span></li>
+        </ol>
+        <table class="rule-table">
+          <tr><th>What I first wrote</th><th>What I changed it to</th><th>Why</th></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        </table>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Make four changes that make your story stronger.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Find two event sentences that belong together and join them with a time clause (when, before, after, while, as soon as), with a comma where the rule puts it; or turn a "then" sentence into a time-clause sentence. If paragraph 2 already has a time-clause sentence, join a different pair, or join two sentences in paragraph 1 with and, but, or so. Cross out the old two and write the new one.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Find one plain verb (got, put, went, had) and replace it with a more exact one from the Word Bank or your own; or add an adverb of manner, or a "was ___-ing" background, to one plain event sentence.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Add the event or detail your partner asked for, with a real time word in it.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Number the sentences of paragraph 2 in the margin. Move one sentence so that the ending (how it turned out, or why the day mattered) lands last, with the detail that lets a reader guess your feeling just before it. Stay inside 9 sentences.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Write each change in the table: four rows. For the moved sentence, the "Why" column says what the new place does.</span></li>
+        </ol>
+        <table class="rule-table">
+          <tr><th>What I first wrote</th><th>What I changed it to</th><th>Why</th></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;<br />&nbsp;<br />&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        </table>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 4B: Telling a Story About My Clothing</h1>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, and say how it turned out and why.</p>
+
+      <div class="section-title">Final Copy</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Copy your two sentences cleanly under your title.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write your title on the first line.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write your describing sentence on the next line, with a capital letter and a period.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write the story sentence you circled on the last line, with a capital letter and a period.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Copy your two sentences cleanly under your title.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write your title on the first line.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write your describing sentence on the next line, with a capital letter and a period.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write the story sentence you circled on the last line, with a capital letter and a period.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Copy your title and both paragraphs cleanly.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write your title on the first line.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write paragraph 1 with every change from Unit 4A in place, each sentence starting with a capital letter and ending with a period.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Start paragraph 2 on a new line and write it the same way.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Copy your title and both paragraphs cleanly.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write your title on the first line.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write paragraph 1 with every change from Unit 4A in place, each sentence starting with a capital letter and ending with a period.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Start paragraph 2 on a new line and write it the same way, in the new order.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Share Your Writing</div>
+      <p class="instr">Your piece is finished. Now the class reads it.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> Walk the room and read two finished pieces.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Leave your final copy open on your desk.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Take a small card and walk around the room.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Stop at two pieces that are not your partner's. At each one, read the whole piece, then write one line on your card (Tasks F to I say what to write).</span></li>
+          <li><span class="num">4.</span><span class="qbody">Back in your seat, choose the sentence from your own piece that you like best, ready to read aloud.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;</span> At each piece, write on your card one word you learned about that clothing and one verb from the story.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;</span> At each piece, write on your card one word you learned about that clothing and one verb from the story.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;</span> At each piece, write on your card one thing you now know about that clothing that you could not have guessed from the title.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> At each piece, write on your card one thing you now know about that clothing that you could not have guessed from the title.</p>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <p class="instr">Sit with a partner. Take a card. Write on one side about your own key, then on the other side about this morning. Read each side to your partner.</p>
+
+      <p class="section-label">Your Key</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> <span class="stars">&#9733;</span> Write two sentences about your key.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write "It is ___." with a describing word you spell by its sounds (small, silver, old).<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write "I ___-ed it." with one thing you did with it (dropped, packed, saved).<span class="ans-line-sm"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;</span> Write two sentences about your key.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write "It is ___ and ___." with two words that say two different things about it.<span class="ans-line-sm"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write "I ___-ed it and ___-ed it." with two things you did with it, in the order they happened.<span class="ans-line-sm"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task L.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Compare your key to your partner's, then tell one thing that happened with it.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write one sentence comparing your key to your partner's, with a reason word (because, since, as, or given that) and a real reason. Example: My key is smaller than Lena's, because it opens a locker, not a door.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence telling something that happened with it, with a time word. Example: Last week I dropped it under the bus seat.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task M.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Compare your key to your partner's, tell one thing that happened with it, then add a detail.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write one sentence comparing your key to your partner's, with a reason word (because, since, as, or given that) and a real reason.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence telling something that happened with it, with a time word.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write a third sentence with one concrete detail about that moment that lets your partner guess how you felt, with no feeling word.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Your partner reads it and says the guess out loud.</span></li>
+          <li><span class="num">5.</span><span class="qbody">If the guess is wrong, write a sharper detail.</span></li>
+        </ol>
+      </div>
+
+      <p class="section-label">This Morning</p>
+      <p class="instr">On the other side of the card, write about this morning, from waking up to arriving here.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task N.</span> <span class="stars">&#9733;</span> Write "I ___-ed." with one thing you did this morning, spelling the verb by its sounds (walked, brushed, packed).</p>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task O.</span> <span class="stars">&#9733;&#9733;</span> Write "I ___-ed and ___-ed." with two things you did this morning, in the order they happened.</p>
+        <span class="ans-line-sm"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task P.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Tell what happened this morning, in order.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write three sentences in order, using at least two time words.</span></li>
+          <li><span class="num">2.</span><span class="qbody">End with how the morning turned out and why. Example: I was late because I missed the first bus.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task Q.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Tell what happened this morning, in order, then add a detail.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write three sentences in order, using at least two time words, ending with how the morning turned out and why.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Add one detail that lets your partner guess how you felt, with no feeling word.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Your partner reads it and says the guess out loud.</span></li>
+        </ol>
+      </div>
+
+    </div>
+  </body>
+</html>

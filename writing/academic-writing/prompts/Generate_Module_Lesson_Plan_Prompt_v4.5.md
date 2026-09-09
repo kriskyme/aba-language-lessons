@@ -1,4 +1,4 @@
-# Academic Writing Module Lesson-Plan Generation Prompt (v4.4)
+# Academic Writing Module Lesson-Plan Generation Prompt (v4.5)
 
 Companion to the Academic Writing Lesson Generation Prompt. Plans a full **Set** (Beginner: 4 lessons, one
 Module) or a full **Module Pair** (Intermediate/Advanced/Proficient: two consecutive Modules' Sets, 8 lessons;
@@ -11,7 +11,7 @@ Focus A/B collision or a gap in Module N+1's CSV coverage before 8 lessons are w
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets and Module Pair, §C; Rotation Log
 mechanics and adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v4.4.** History: `Changelog.md`.
+**Current version: v4.5.** History: `Changelog.md`.
 
 ## 0. Rotation Log
 
@@ -53,7 +53,9 @@ own template.
      mid-Pair.
    - **Lesson-position table:** Beginner's 4-row Set-position table, or the Pair's 8-row table (Pair position,
      Module, Set position, global Lesson #, content role), from the Lesson prompt's "THE MODULE PAIR" section,
-     filled with this Pair's Module numbers and Lesson #s.
+     filled with this Pair's Module numbers and Lesson #s, and naming the part of the piece each Module drafts
+     (Conventions §C: bodies under a working thesis / introduction and conclusion for essay Levels; one paragraph
+     per Module for paragraph Levels).
    - **Scenario,** two or three lines: the shared writing situation and Module-aligned purpose, the **practice
      object** (Lessons 1-2's grammar work and the Mentor Ladder), and the **draft object** (introduced at Lesson
      2 Day 2 prewriting; what Lessons 3-4 and a Pair's second Module write about), both the student's own
@@ -76,15 +78,18 @@ own template.
    - **Grammar Focus A/B pairing for Module N+1 (Pair only),** genuinely different in content from Module N's
      (Section 0's within-pair rule), from the bank's Alternate column once authored or hand-selected for Module
      N+1's own purpose. Name the row and confirm no collision.
-   - **Essay Focus A/B direction (Advanced, Proficient only),** anchored at Level 6's row (Lesson prompt 0.4c),
-     taught once via Module N (Module N+1 may add a distinct cohesion extension, not a re-teach), and the essay
-     type from Module N's mapping, or the extended-paragraph fallback where none is mapped.
+   - **Essay Focus A/B direction (Advanced, Proficient only),** anchored at Level 6's row (Lesson prompt 0.4c):
+     Module N carries Essay Focus B (topic and supporting sentences, outlining, combining) plus working-thesis
+     construction, since it drafts the body paragraphs; Module N+1 carries Essay Focus A (the five-paragraph
+     shape, hook types in its own form, the introduction, the conclusion), since it drafts those and assembles the
+     whole; and the essay type from Module N's mapping, or the extended-paragraph fallback where none is mapped.
    - **CSV-objective-coverage check (Pair only):** state concretely what Lesson 8's separate Closing Transfer
      Check task will ask students to do to exercise Module N+1's own verb (Lesson prompt 0.8), calibrated to the
      Scenario's subject matter where reasonable, so the Lesson prompt is not left to invent it.
    - **Leveled Mentor Ladder direction,** one line per task Level: what that Level's Mentor Text or Essay will
-     model on this Scenario (Lesson prompt 0.1b), a direction, not the model itself; for a Pair, one more line per
-     Level on what Lesson 5's second look will ask students to notice.
+     model on this Scenario (Lesson prompt 0.1b), a direction, not the model itself: at position 1 an essay Level's
+     model is its body paragraphs under a working thesis; for a Pair, one more line per Level on what Lesson 5's
+     second look adds (the introduction and conclusion, or the second paragraph) and asks students to notice.
    - **Task-Level basis:** for every task Level, the exact Writing CSV Description (Level N, Module N) the Mentor
      Ladder and drafting task satisfy, mapped explicitly.
 

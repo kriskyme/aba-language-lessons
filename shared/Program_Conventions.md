@@ -1,4 +1,4 @@
-# Program Conventions (v1.9)
+# Program Conventions (v1.10)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -121,7 +121,13 @@ lesson type's own prompt family.
 Proficient bands, Academic Writing further pairs two consecutive Modules - odd with the next even
 (1-2, 3-4, 5-6, 7-8) - so that one Scenario/essay, on the draft object, spans both Modules' Sets (8 lessons total, not 4),
 with each Module teaching its own Grammar/Essay Focus and contributing it to the same shared piece
-rather than each Module producing an independent essay. Beginner is exempt and keeps the
+rather than each Module producing an independent essay. The piece is **built in parts**: each Module
+drafts only the part its own form fits, and neither Module drafts a complete piece. Essay Levels (6-8):
+the first Module plans a working thesis and drafts the body paragraphs; the second Module drafts the
+introduction (a hook in its own form, connecting sentences, the thesis in place) and the conclusion.
+Paragraph Levels (4-5): one paragraph per Module, in that Module's form, on the same subject, so the
+finished piece is two paragraphs. The second Module's last lesson assembles the whole, peer-edits,
+revises for effect, and publishes it. Beginner is exempt and keeps the
 single-Module model described above (its task Levels are single-word Guided Frame Composition, which
 the draft-carrying/revision-focus model doesn't fit). This does not change what a Set is, and does
 not merge or restart Set numbering across the two Modules paired together - each Module still keeps

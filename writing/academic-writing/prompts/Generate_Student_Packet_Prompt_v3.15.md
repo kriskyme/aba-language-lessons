@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.14)
+# Academic Writing Student Print Formatting Prompt (v3.15)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.14.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.15.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
@@ -36,6 +36,7 @@ Style Guide §E's rows apply. Add these:
 | Scenario | Not named. Present the topic and stimulus (the student's own object, the prompt, an embedded image where the lesson uses one per Quality Standards §D8) directly, no framing about why it was chosen. Never "the picture your teacher shows you" and never an empty picture box. |
 | Frame-regime / composition-regime / essay-regime | Never appears; the star rating and the task's own instruction carry the difference. |
 | Leveled Mentor Ladder / Mentor Text / Mentor Essay | Not printed at all (2.6). The teacher presents the ladder; no "See How It's Done," no star-labeled examples, no task that refers to an example. |
+| The part of the piece a Module drafts (Conventions §C) | Named plainly in the task: "Write your body paragraphs," "Write your introduction and conclusion," "Write your second paragraph"; never "the rest of your essay" or "finish your essay." |
 | Required feature | Stated as a plain instruction inside the task ("Include one comparison and one reason"). |
 | Self-edit checklist plus its revision / Peer Editing Form | "Check and Improve Your Writing" / "Trade and Check" (2.8), with the actual items as questions, no section numbers, never "fix." |
 | Editing a paragraph, confusable-pair drill, and other activity-type names | A plain instruction (how many errors to find; a forced choice), never the activity-type name. |
@@ -169,12 +170,20 @@ wrap-up line after it. No "Write It"
 section, no "Finish your piece from last time," and no count-your-sentences task on Day 2; the draft was
 completed on Day 1. A partner check says which part a word describes; it never points (Style Guide §E).
 
+A drafting lesson's Write It tasks name the part the Module drafts: at Pair position 3 the essay Levels' task
+is "Write your body paragraphs" (two or three, each with a topic sentence, under the working thesis you wrote in
+Get Ready to Write), with no hook or conclusion step; at position 7 it is "Write your introduction and
+conclusion" with the kept body paragraphs in hand; paragraph Levels write "one paragraph" at both positions.
+Check and Improve Your Writing asks only about the part written that lesson (position 7's merged list also
+re-checks the kept part's features by name).
+
 A Pair position 4 lesson (Set position 4) prints no checklist at all. Its Day 1 unit is the Word Bank, then "A
 Reader's Request" (one unstarred Task: trade pieces, read, write one thing you want to know more about on your
 partner's page), then "Make It Stronger": one Task per star as steps, the before/after table under the
 composition-regime Tasks. Its Day 2 unit is "Final Copy" (one Task per star: copy the chosen sentence, or copy
-the paragraph cleanly, then the one hand-off line, 2.7) and "Wrap It Up" (the Closing Transfer Check). No
-"Last Look," no proofread pass, no counting, no hand-off section.
+the paragraph cleanly, or copy your body paragraphs cleanly, then the one hand-off line, 2.7) and "Wrap It Up"
+(the Closing Transfer Check). No "Last Look," no proofread pass, no counting, no hand-off section. A position 8
+lesson's Day 2 unit is "Final Copy" of the assembled whole, then the publish/share step and "Wrap It Up."
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 

@@ -18,10 +18,10 @@ Lesson 2 Day 2; what Lessons 3-4 and Module 2 write about), per `shared/Program_
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.4 |
-| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.6 |
-| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.10 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Reader's request, revision for effect (join, upgrade, add, reorder), final copy, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.11 |
+| 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.6 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.8 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.13 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Reader's request, revision for effect (join, upgrade, add, reorder), final copy, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.14 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -76,9 +76,9 @@ Lesson 3's Foundation Support matches printed Word Bank words in the packet rath
 **2026-09-08 addendum: retrofitted as Part 1 of Module Pair 1-2.** Per `shared/Program_Conventions.md` §C's
 Module Pair addendum (Intermediate/Advanced/Proficient pair two consecutive Modules into one essay), this Set's
 Lesson 4 (`1.1.4.0` → `1.1.4.1`) no longer ends in a published, finished piece — it now ends in a complete,
-self-revised draft handed off to Module 2's Set. **Part 2 of this pair, Module 2's Set 1, has not yet been
-planned or generated** — see `writing/academic-writing/Changelog.md`'s dated entry and `Index.md`'s Pending
-work.
+self-revised draft handed off to Module 2's Set. **Part 2 of this pair, Module 2's Set 1, was planned and
+generated 2026-09-09** — see `## Module 2: Narrating` below and
+`lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md`.
 
 **2026-09-08 addendum: Lesson 4 regenerated (`1.1.4.1` -> `1.1.4.2`)** against `Generate_Lesson_Prompt_v6.md` and
 `shared/Generation_Quality_Standards.md`, the second lesson run against the shared-layer prompts (after Lesson 1).
@@ -184,6 +184,48 @@ It Moves On" section (marks on the draft, a "Next time I will add" stem, a secon
 had no reader in Lessons 5-8 and re-ran Lesson 3's check; Day 2 is now Final copy, Closing Transfer Check, and a
 Transfer share, with one hand-off line under Final Copy. Lesson 4 at `1.1.4.14`; Lesson 3 at `1.1.3.13` (one
 overview line).
+
+**2026-09-08 addendum: the piece is built in parts (Conventions §C v1.10).** Module 1's paragraph is its part of a
+two-part piece; Module 2 adds its own paragraph and publishes. Lesson 4 at `1.1.4.15` (wording only).
+
+## Module 2: Narrating
+
+### Set 1 (planned and generated 2026-09-09; Part 2 of Module Pair 1-2, continuing Module 1 Set 1's kept paragraph)
+
+Planned before generation by `Generate_Module_Lesson_Plan_Prompt_v4.5.md` as half of
+`lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md` (plan 1.0), the first Pair plan
+written before its lessons; the four lessons generated against `Generate_Lesson_Prompt_v6.13.md` and their
+packets against `Generate_Student_Packet_Prompt_v3.15.md`. Global Lesson #s and version codes are scoped to
+Module 2 (Conventions §C/§G): this Set is Intermediate 1-4 again, at `2.1.x.0`. The piece is built in parts
+(Conventions §C v1.10): Module 1's kept descriptive paragraph stays; this Set adds a second paragraph in
+Module 2's form (one thing that happened with the item, in order, with an outcome and a reason) and Lesson 4
+assembles, peer-edits, revises, and publishes the whole. Lessons 1-4 write about the draft object only; the
+phone case returns only as Maria's Mentor Ladder in Lesson 1's second look.
+
+| # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Intermediate 1 | 1 of 4 (Pair position 5) | 2026-09-09 | Re-engagement with the kept paragraph; Module 2's Skill Spotlight; Grammar Focus A input, modeling, deeper practice; Mentor Ladder second look (each model completed by its story) | My clothing (draft object, continued from Module 1; same Scenario) | 2.1.1.0 |
+| 2 | Intermediate 2 | 2 of 4 (Pair position 6) | 2026-09-09 | Grammar Focus B; then / than; warm-up on the kept paragraph; planning the second paragraph against it | (same Scenario, continued) | 2.1.2.0 |
+| 3 | Intermediate 3 | 3 of 4 (Pair position 7) | 2026-09-09 | Drafting the second paragraph, complete on Day 1; merged self-edit checklist over both paragraphs, improve | (same Scenario, continued) | 2.1.3.0 |
+| 4 | Intermediate 4 | 4 of 4 (Pair position 8) | 2026-09-09 | Assemble the whole; Peer Editing (both Modules); revise for effect (join with a time clause, upgrade a verb, answer the reader, Level 5 reorders); final copy; publish (gallery walk); Closing Transfer Check on the student's key plus Module 2's own verb task on "this morning" | (same Scenario, continued; the finished piece is two paragraphs under one title) | 2.1.4.0 |
+
+**Grammar Focus (A/B):** Focus A: the simple past for a sequence of events (regular -ed with three spelling
+rules; irregular list wore, got, bought, chose, put, took, found, lost, gave, saw, paid, was / were) + time
+connectors (first, then, next, after that, finally; last winter, one morning) / Focus B: complex sentences
+with a time clause (when, before, after, while, as soon as) and the comma after an opening clause; confusable
+pair then / than. Level 5 extension: past-continuous background + adverbs of manner. Frames (Levels 2-3):
+"I ___-ed it." and "I ___-ed it and ___-ed it." Module 1's reason words reused for the outcome, not re-taught.
+Hand-selected for the Level 4 row (the bank's Alternate column is not yet authored); checked distinct from
+Module 1's pair and from Advanced Set 1's.
+
+**Real-world writing form:** Personal narrative paragraph (Module 2's row), added to Module 1's descriptive
+paragraph as the second paragraph of one piece.
+
+**Notes:** Draft Word Bank refilled for narrating (care, wearing, and getting verbs; time words; people and
+places; 32 words), printed in all four packets. Closing Transfer Check objects: the student's own key (both
+skills) and this morning (Module 2's verb). Frame-regime shapes per lesson: choose what fits + the guided round
+/ fix the wrong word (Lesson 1); better of two + pair judgment / spell from sound + plan the words (Lesson 2);
+plan the words + the draft / check and improve (Lesson 3); the reader's part + choose / transfer (Lesson 4).
 
 ---
 

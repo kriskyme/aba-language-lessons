@@ -7,52 +7,49 @@ cross-Band check to run before planning a new Set.
 
 ## Module 1: Describing
 
-### Set 1 (planned/generated 2026-08-31 through 2026-09-01 as a single 8-day lesson under the pre-2026-09-08
-convention; reorganized into 4 separate 2-day lessons 2026-09-08 with no content change — see each lesson's own
-Markdown doc for the "reorganized from" note)
+### Set 1 (Two Places to Study; regenerated 2026-09-08 against Lesson prompt v6.12 and packet prompt v3.14 from plan 2.0)
 
-All 4 lessons below share one Scenario, Grammar Focus A/B pairing, and Essay Focus A/B direction — the one
-genuine difference from a Reading/Listening-Speaking Set, whose 4 lessons each get an independent anchor text.
+All 4 lessons share one Scenario, one Grammar Focus A/B pairing, and one Essay Focus A/B direction; Lessons 1-2
+write about the practice object and Lessons 3-4 about the draft object (Conventions §C).
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Advanced 1 | 1 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Grammar Focus A input, modeling, deeper practice | Two apartments (Apartment A: quiet/smaller/pricier; Apartment B: bigger/cheaper/louder), for a prospective roommate (Sam, whose stated concern is quiet) | 1.1.1.0 |
-| 2 | Advanced 2 | 2 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Grammar Focus B, Essay Focus A/B, Mentor Ladder, prewriting | (same Scenario, continued) | 1.1.2.0 |
-| 3 | Advanced 3 | 3 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08 | Drafting, parts 1-2, self-edit | (same Scenario, continued) | 1.1.3.0 |
-| 4 | Advanced 4 | 4 of 4 | 2026-08-31 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08 | Hard self-revision, draft completion, hand-off (not published), Closing Transfer Check | (same Scenario, continued) | 1.1.4.1 |
+| 1 | Advanced 1 | 1 of 4 | 2026-08-31 (orig.); regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Essay Focus B and the working thesis; Mentor Ladder (teacher-presented; essay Levels' models are body paragraphs) | My room (practice object), written for a cousin who wants quiet | 1.1.1.2 |
+| 2 | Advanced 2 | 2 of 4 | 2026-08-31 (orig.); regenerated 2026-09-08 | Grammar Focus B, Essay Focus B continued (outlining the body paragraphs), quiet/quite; Day 2 warm-up and prewriting introduce the draft object | My room; then two places to study (home vs. one of: the library, a cafe, a classroom after school, a park, a friend's place), for Dana, who needs quiet | 1.1.2.2 |
+| 3 | Advanced 3 | 3 of 4 | 2026-08-31 (orig.); regenerated 2026-09-08 | Drafting Module 1's part on Day 1 (one paragraph at Levels 4-5; the body paragraphs under a working thesis at Levels 6-7); check and improve on Day 2 | Two places to study (draft object) | 1.1.3.2 |
+| 4 | Advanced 4 | 4 of 4 | 2026-08-31 (orig.); regenerated 2026-09-08 | Revise Module 1's part for effect (join, upgrade, add; Level 7 move); final copy of that part kept for Module 2, no hand-off note; Closing Transfer Check on the student's desk | Two places to study | 1.1.4.3 |
 
-**Grammar Focus (A/B):** Focus A: tense control + hedging/evaluative language (seems, tends to, a bit, at least,
-worth it) / Focus B: complex sentences with a concession subordinator (although, even though); Level 4 warm-up
-(not centerpiece): comparative adjectives (-er/more) + because-clauses / simple vs. compound sentences (and/but/
-so); Essay Focus A: five-paragraph essay shape + hook types + thesis construction (direct at Level 6, indirect at
-Level 7) / Essay Focus B: topic-sentence/supporting-sentence structure + outlining (general at Level 6, specific
-at Level 7) + combining sentences for cohesion; Level 5 essay-structure bridge (receptive only): find/underline
-one topic sentence on the same shared model essay Levels 6-7 analyze.
+**Grammar Focus (A/B):** Focus A: consistent tense across a paragraph + hedging/evaluative language (seems, tends
+to, a bit, fairly, mostly, at least, worth it), Level 5's row, with Level 4's comparatives + reason connectors
+(because, since, as, given that) folded in / Focus B: concession (although, even though, while), with Level 4's
+compound sentences (and, but, so) folded in; confusable pair quiet/quite. Essay Focus A: five-paragraph shape,
+hook types, direct thesis (Level 6) and indirect thesis (Level 7) / Essay Focus B: topic and supporting
+sentences, general outline (6), specific outline and combining sentences (7); Level 5 receptive bridge on the
+model essay "My Room, Then and Now."
 
-**Real-world writing form:** Descriptive paragraph (Levels 4-5); comparison essay, modeled on "Two Ways to
-Commute to Work" (Levels 6-7).
+**Real-world writing form:** descriptive paragraph that compares (Levels 4-5); comparison essay for a named
+reader (Levels 6-7). Module 2 inherits it.
 
-**Notes (carried forward from this Set's pre-reorganization history):** Originally generated under v2 as a
-single-paragraph lesson through Level 7. Regenerated under v3 once the user supplied a new essay-writing content
-sample: Levels 6-7 became a genuine five-paragraph comparison essay via the new Essay Focus A/B track. Regenerated
-again under v3.1 after the user flagged that Advanced's Grammar Focus A/B read identically to Lesson 1
-(Intermediate)'s: v3 had anchored Focus A/B at Level 4's row (Intermediate's own native centerpiece), not
-Advanced's actual native Paragraph Composition floor, Level 5. The corrected row-selection rule now anchors
-Advanced's Focus A/B at Level 5's row, with Level 4 receiving its own row as a light warm-up rather than the
-centerpiece. Updated again under v3.2 (Level 5 essay-structure bridge added) and v3.3 (reason-connector richness,
-teaching-before-practice sequencing fix, two new paired tiers) — see the full account in this Set's Lesson 1
-Markdown doc. **2026-09-08: reorganized from a single 8-day document into 4 separate 2-day lessons** (Lessons 1-4
-above), per `shared/Program_Conventions.md` §C's corrected Set-size convention — the pre-v1.2 reconstructed
-Unit1/Unit2 packet pair and the intermediate Intro+Unit1-8 packet set (built 2026-09-08, same day) are both
-superseded; each of the 4 lessons above now has its own current-convention packet (one file, two masthead
-sections — `Generate_Student_Packet_Prompt_v2.2.md`). See `Index.md`'s "Sets" section.
+**Previous Scenario (for the cross-Band rotation check):** "Two apartments for Sam" (Apartment A quiet, smaller,
+pricier; Apartment B bigger, cheaper, louder; Sam a prospective roommate who wants quiet), 2026-08-31 through
+2026-09-08, versions 1.1.1.0 / 1.1.2.0 / 1.1.3.0 / 1.1.4.1, with the model essay "Two Ways to Commute to Work."
+Its history (v2 single paragraph; v3 essay track; v3.1 Focus A/B re-anchored at Level 5's row; v3.2 Level 5
+bridge; v3.3 reason-connector richness; the 2026-09-08 reorganization into four 2-day lessons and the Module
+Pair retrofit of Lesson 4) is kept in `Module1_Advanced_Lesson_Plan.md`'s History block.
 
-**2026-09-08 addendum: retrofitted as Part 1 of Module Pair 1-2.** Per `shared/Program_Conventions.md` §C's
-Module Pair addendum (Intermediate/Advanced/Proficient pair two consecutive Modules into one essay), this Set's
-Lesson 4 (`1.1.4.0` → `1.1.4.1`) no longer ends in a published, finished piece — it now ends in a complete,
-self-revised draft handed off to Module 2's Set. **Part 2 of this pair, Module 2's Set 1, has not yet been
-planned or generated** — see `writing/academic-writing/Changelog.md`'s dated entry and `Index.md`'s Pending
-work.
+**2026-09-08 addendum: regenerated as Two Places to Study.** The Set predated the practice-object/draft-object
+split (Conventions §C v1.9) and neither apartment was the student's own, and its packets carried every rule
+change of 2026-09-08 as backlog (printed Mentor Ladder, "Some of you" objectives, combined-star self-checks,
+printed word ranges, a hand-off note, cross-lesson references, no Word Bank, a phone-case content leak,
+same-shape tasks at adjacent Levels). Regenerated in place from plan 2.0 with the folders renamed to
+`Lesson_1_MyRoom`, `Lesson_2_MyRoom`, `Lesson_3_TwoPlacesToStudy`, `Lesson_4_TwoPlacesToStudy`. **Part 2 of
+this pair, Module 2's Set 1, has not yet been planned or generated.**
+
+**2026-09-08 addendum: the piece is built in parts (Conventions §C v1.10, Lesson prompt v6.13).** Module 1
+drafts the body paragraphs under a working thesis (Levels 6-7) or the one descriptive paragraph (Levels 4-5);
+Essay Focus B and the working thesis are Module 1's, Essay Focus A (hooks, introduction, conclusion) is Module
+2's; the Level 6-7 Mentor Essays are body paragraphs only, completed at Module 2's second look. Plan 2.1;
+versions `1.1.1.2`, `1.1.2.2`, `1.1.3.2`, `1.1.4.3`.
 
 ---
 

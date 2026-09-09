@@ -156,3 +156,16 @@ choose the better of two; Lesson 4 Day 2 final copy and the Transfer Check. Vers
 **Addendum (2026-09-08, ninth): no hand-off note.** Per Lesson prompt v6.11, position 4's Day 2 is Final copy
 (30), Closing Transfer Check (30), and Transfer share (15); the draft goes to the folder unmarked, and Module 2's
 Lesson 5 re-reads it with the teacher's recap naming what Module 1 added. Lesson 4 at `1.1.4.14`.
+
+**Addendum (2026-09-08, tenth): the piece is built in parts.** Per `shared/Program_Conventions.md` §C (v1.10),
+Module 1's Lesson 4 keeps a paragraph (a frame sentence at Levels 2-3), not a draft to be expanded; Module 2's
+Set writes a second paragraph in its own form on the same clothing, assembles the two-part piece, peer-edits,
+and publishes it. Lesson 4 at `1.1.4.15` (wording only).
+
+**Addendum (2026-09-09, tenth): superseded by the Pair plan.** Module 2's Set was planned and generated, so the
+single plan for the whole Pair is now
+`lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md` (plan 1.0), which restates
+this document's Module 1 decisions unchanged and adds Module 2's. Per Conventions §C v1.10 the piece is built
+in parts: the paragraph Lesson 4 keeps is paragraph 1 of a two-paragraph piece, and Module 2 adds paragraph 2
+(a story about the same item) rather than revising and expanding this one. This document is kept for its
+history only.

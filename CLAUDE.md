@@ -111,7 +111,8 @@ Each lesson type's actual cycle differs by design:
   object** for Lessons 1-2's grammar work and Mentor Ladder, and a **draft
   object** introduced at Lesson 2 Day 2's prewriting that Lessons 3-4 (and a
   Module Pair's second Module) write about, so the draft transfers the
-  grammar to a fresh object (`shared/Program_Conventions.md` §C).
+  grammar to a fresh object; a Module Pair's piece is built in parts, each
+  Module drafting only the part its own form fits (`shared/Program_Conventions.md` §C).
   (Corrected 2026-09-08 from an original 8-day/1-lesson-per-Set model — see
   `shared/Program_Conventions.md` §C.)
 
@@ -224,7 +225,8 @@ noted in Known Issues.
   apartments... for Sam") were recovered and are now organized under the
   canonical `Module_1/Set_1/Lesson_1_<Slug>/` structure
   (`lessons/intermediate/Module_1/Set_1/Lesson_1_MyPhoneCase/`,
-  `lessons/advanced/Module_1/Set_1/Lesson_1_TwoApartments/`), each holding its
+  `lessons/advanced/Module_1/Set_1/Lesson_1_MyRoom/`, the Advanced Set having
+  been regenerated 2026-09-08 as "Two Places to Study"), each holding its
   Markdown doc plus a reconstructed pre-v1.2 Unit 1/Unit 2 print-packet pair.
   Current-convention (v1.6, Lesson Introduction Page + Units 1-8) packets
   still need to be built for both — tracked in

@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Describing Two Places to Study: Lesson 3</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        margin-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .discuss-block,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: Describing Two Places to Study</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing</span>
+          <span class="masthead-tag">Advanced 1.1.3.2</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by comparing it to
+      something else and giving a real reason for the comparison.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Sound and light:</strong> quiet &middot; noisy &middot; calm &middot; busy &middot; bright &middot; dim<br />
+        <strong>Space:</strong> roomy &middot; cramped &middot; open &middot; crowded &middot; private &middot; shared<br />
+        <strong>Comfort:</strong> warm &middot; cool &middot; soft &middot; hard &middot; cozy &middot; plain<br />
+        <strong>Access:</strong> near &middot; far &middot; free &middot; open late &middot; easy to reach &middot; hard to book<br />
+        <strong>Feel:</strong> focused &middot; relaxed &middot; distracting &middot; welcoming &middot; formal &middot; familiar
+      </div>
+      <p class="instr">Use these words if you need them. You may also use your own.</p>
+
+      <div class="section-title">Get Ready to Write</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Pick one of these places to compare with your home and circle it: the library &middot; a cafe &middot; a classroom after school &middot; a park &middot; a friend's place.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span> Plan in two lines.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write three Word Bank words that fit your home and three that fit the place you circled, one from each of three different groups: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one line naming the comparison you will make and the reason for it: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span> Plan the order.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Number the groups in the order you will describe them: sound and light, space, comfort, access, feel.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one detail that would let Dana guess which place you prefer, without your saying so: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write a general outline of your body paragraphs.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">A direct working thesis naming two points: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">One topic sentence per body paragraph.</span></li>
+          <li><span class="num">3.</span><span class="qbody">The sentence that will say why one point matters to Dana: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Write a specific outline of your body paragraphs.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">An indirect working thesis: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Three topic sentences, each with two details in order under it.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Mark the detail whose emphasis carries the implication, and name the implication for yourself in one line: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+
+      <div class="section-title">Write It</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;</span> Write one paragraph comparing your home with the place you circled, one sentence per step, 3-6 sentences.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Name the two places in one sentence.</span></li>
+          <li><span class="num">2.</span><span class="qbody">One sentence about your home as a place to study.</span></li>
+          <li><span class="num">3.</span><span class="qbody">One comparison sentence with a comparative (quieter than, more crowded than, better than).</span></li>
+          <li><span class="num">4.</span><span class="qbody">The reason, with a reason word (because, since, as, given that), joined to the comparison or on its own.</span></li>
+          <li><span class="num">5.</span><span class="qbody">One sentence Dana could use to choose, joined with and, but, or so.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;</span> Write one paragraph of 6-9 sentences.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Open with one sentence naming both places.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Describe them in your planned order, one or two sentences per group, in one tense.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Use at least one softening word where you are not sure, or where a thing is mixed.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Place one detail that implies which place you prefer, with no feeling word.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Close with one sentence Dana could act on.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write your body paragraphs, under a direct working thesis.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Copy your working thesis onto the first line. It stays one line, not a paragraph.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write two or three body paragraphs, each opening with its topic sentence and supporting it with details, reasons, or contrasts.</span></li>
+          <li><span class="num">3.</span><span class="qbody">In one body paragraph, one sentence that says why a feature matters to Dana.</span></li>
+          <li><span class="num">4.</span><span class="qbody">One place where you turn to Dana directly ("You said you cannot work with...").</span></li>
+          <li><span class="num">5.</span><span class="qbody">No beginning and no ending yet: those are written in a later unit around these paragraphs.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Write your body paragraphs, under an indirect working thesis.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Copy your working thesis onto the first line.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write three body paragraphs whose details are chosen and placed so that the implication is felt, never stated.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Connect with what's more, admittedly, this suggests, on the other hand, not only "and."</span></li>
+          <li><span class="num">4.</span><span class="qbody">Somewhere in the draft, cross out one sentence and write a better one in its place.</span></li>
+          <li><span class="num">5.</span><span class="qbody">No beginning and no ending yet: those are written in a later unit around these paragraphs.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+
+      <div class="section-title">Share a Line</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> <span class="stars">&#9733;</span> Read your comparison sentence to the class.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;</span> Read the detail that shows which place you prefer. The class says what they think you prefer.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task L.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Read the sentence that tells Dana why a feature matters.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task M.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Read the sentence you crossed out, then the one you wrote in its place.</p>
+      </div>
+
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: Describing Two Places to Study</h1>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by comparing it to
+      something else and giving a real reason for the comparison.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Sound and light:</strong> quiet &middot; noisy &middot; calm &middot; busy &middot; bright &middot; dim<br />
+        <strong>Space:</strong> roomy &middot; cramped &middot; open &middot; crowded &middot; private &middot; shared<br />
+        <strong>Comfort:</strong> warm &middot; cool &middot; soft &middot; hard &middot; cozy &middot; plain<br />
+        <strong>Access:</strong> near &middot; far &middot; free &middot; open late &middot; easy to reach &middot; hard to book<br />
+        <strong>Feel:</strong> focused &middot; relaxed &middot; distracting &middot; welcoming &middot; formal &middot; familiar
+      </div>
+
+      <div class="section-title">Check and Improve Your Writing</div>
+      <p class="instr">Mark your draft as each line says. When you change something, cross it out and write the new version next to it. Do not erase.</p>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Check your paragraph, then make it better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Does every sentence have a subject and a verb, in one tense?</span></li>
+          <li><span class="num">2.</span><span class="qbody">Is there exactly one comparison? Circle the comparative.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Is there one reason with a reason word? Put a box around it.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Is there one sentence joined with and, but, or so, with a comma before it? Underline it.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Do capitals and periods sit where they belong?</span></li>
+          <li><span class="num">6.</span><span class="qbody">Replace one plain word with a more exact one from the Word Bank.</span></li>
+          <li><span class="num">7.</span><span class="qbody">If any check said no, add what is missing.</span></li>
+          <li><span class="num">8.</span><span class="qbody">Add one more real detail about either place.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Check your paragraph, then make it better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Is the whole paragraph in one tense? Circle any verb that slips.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Are the details in the order you planned? Number them in the margin.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Is there at least one softening word? Underline it.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Is there exactly one detail that implies your preference, with no feeling word? Put a box around it.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is there a concession sentence with its comma?</span></li>
+          <li><span class="num">6.</span><span class="qbody">If a feeling word slipped in, replace it with a detail.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Add one softening word where a claim is too flat.</span></li>
+          <li><span class="num">8.</span><span class="qbody">Move one detail so the order runs the way you planned.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Check your body paragraphs, then make them better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Is the working thesis on the first line direct, naming two points? Underline it.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Does every body paragraph open with a topic sentence? Circle each one.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Does every sentence after it support that point? Underline any sentence that does not.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Is there one sentence that says why a feature matters to Dana? Put a box around it.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is there one place where you turn to Dana directly? Mark it with a star.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Add or sharpen the Dana sentence; add the turn to Dana if it is missing.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Rewrite one topic sentence so it states the paragraph's one point; move any sentence that belongs in another paragraph.</span></li>
+          <li><span class="num">8.</span><span class="qbody">Give a thin paragraph one more supporting sentence.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Check your body paragraphs, then make them better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Is the working thesis indirect? Underline it.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Which detail carries the implication? Put a box around it. If any sentence states the implication outright, mark it for cutting.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Is there a crossed-out line replaced in place? If not, that is your first change.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Do the paragraphs connect with connecting phrases rather than "and"? Circle each one.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Cut the sentence that states the implication, and give the detail that carries it more room or a later place.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Cross out one line and write a better one in its place, if you have not already.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Combine two short sentences with a connecting phrase.</span></li>
+          <li><span class="num">8.</span><span class="qbody">Reword the working thesis if the paragraphs have outgrown it.</span></li>
+        </ol>
+      </div>
+
+
+      <div class="section-title">Share a Line</div>
+      <p class="instr">Sit with a partner and read one line each.</p>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span> Read your reason sentence to your partner.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span> Read the detail that implies your preference. Your partner says what they infer.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Read the sentence where you turn to Dana.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Read your replacement line. Your partner says what the paragraph now implies.</p>
+      </div>
+
+
+    </div>
+  </body>
+</html>
