@@ -132,3 +132,15 @@ Lesson 1's ladder, and no printed prompt at this band asks a reflection question
 are titled "Describing My Clothing" (folders `Lesson_3_MyClothing/`, `Lesson_4_MyClothing/`), the printed list has
 eight choices, and per Style Guide v2.5 the packets print no object logistics, word ranges, or pacing lines
 (students count sentences only). Lessons 2-4 at `1.1.2.4`, `1.1.3.6`, `1.1.4.6`.
+
+**Addendum (2026-09-08, sixth): the object is a subject, not a prop; Lesson 3 Day 2 is check-and-improve.** Per
+Quality Standards v1.3 (§D8), no task requires the clothing to be present or asks the student to look at or
+point to it; partner checks say which part a word describes. Per Lesson prompt v6.5, Lesson 3 completes the
+draft on Day 1 and Day 2 opens directly on the self-edit checklist, then a "Make It Better" phase. Lessons 3-4 at
+`1.1.3.7`, `1.1.4.7`.
+
+**Addendum (2026-09-08, seventh): Lesson 4 revises for effect.** With Lesson 3 Day 2 now checking and improving
+the draft, Lesson 4 (Lesson prompt v6.6, position 4) no longer repeats that checklist: Day 1 is a reader's request
+and three revision moves with Module 1's tools (join, upgrade, add; Level 5 also reorders) recorded in a
+before/after table, Levels 2-3 write two more frames and choose; Day 2 is a final copy, the hand-off note, and the
+Closing Transfer Check. Lesson 4 at `1.1.4.10`.

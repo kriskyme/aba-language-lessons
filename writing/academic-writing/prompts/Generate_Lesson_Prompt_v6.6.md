@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.4)
+# Academic Writing Lesson Generation Prompt (v6.6)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -81,7 +81,9 @@ both the student's own belongings (a place or person where the Module's form cal
 plan. The draft object may be one of a short printed list of like things, four to eight (clothing: jacket,
 hoodie, sweater, shirt, T-shirt, dress, scarf, hat), that the student circles at the start of each drafting
 lesson, so no student is stuck without one; the lesson and its packet are then titled by the category ("My
-Clothing"), and the Draft Word Bank is built for the category, not one item. The practice object carries grammar input, controlled practice, the frame rounds, and the Mentor Ladder from
+Clothing"), and the Draft Word Bank is built for the category, not one item. The object is a subject, not a
+prop (Quality Standards §D8): no task asks the student to look at it, point to it, hold it up, or have it on
+the desk; they write from what they know of their own belonging. The practice object carries grammar input, controlled practice, the frame rounds, and the Mentor Ladder from
 Lesson 1 through Lesson 2 Day 1. Lesson 2 Day 2's prewriting introduces the draft object together with a **Draft
 Word Bank** (the Set's Word Bank groups, refilled with words that fit the draft object; printed in Lesson 2's Day 2
 unit and reprinted in every later lesson), and every later position writes about the draft object only: Lesson 3's
@@ -207,7 +209,8 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
 8. **Editing (0.6):** the self-edit checklist names this lesson's focuses and required feature; Peer Editing
    scaffolds per Level and sits only where 0.6 places it?
 9. **Self-revision (0.4a):** a concrete mechanism with a template at Levels 7-8, at both Pair positions 4 and 8 for
-   Intermediate/Advanced/Proficient?
+   Intermediate/Advanced/Proficient, recording revision for effect (joins, upgrades, order, a reader's request)
+   and never repeating position 3's correctness checklist?
 10. **Skill Spotlight, Pair-aware (0.8):** Lesson 5 adds Module N+1's Spotlight; Lesson 8's Closing Transfer Check
     covers both Modules' skill plus the separate Module N+1 verb task?
 11. **Rotation (0.9):** different Focus pair, Scenario topic, and real-world writing form than the preceding
@@ -305,6 +308,12 @@ template in the revision lesson's materials explicitly:
 - **Revision partner note:** a peer names one specific place they were confused or wanted more; the revision
   responds to that note (doubles as part of Peer Editing, 0.6).
 
+The evidence records **effect moves** made with the Module's own tools (two short sentences joined with Focus
+B's connector; a plain "but" turned into "although"; a plain word upgraded to a more exact one; one sentence
+moved so the order runs looks, history, habits; the sentence a reader asked for, added), never corrections: a
+missing comma or a misspelled comparative is position 3 Day 2's business (check-and-improve), and position 4
+does not re-run that checklist.
+
 ### 0.4b Content volume per day
 
 A printed grammar or practice day must read as a full worksheet page and genuinely occupy 75 minutes, not just
@@ -381,12 +390,13 @@ object to describe, a more interesting two-slot choice, a comparison that matter
 **Foundation Support** in this cycle (Quality Standards §D8: nothing the teacher must make): matching a printed Word
 Bank word to the student's own object (select, don't spell), tracing a pre-written word
 with a meaning-check question, or teacher-scribed dictation where the student says the word and the teacher writes
-it, checking afterward that the student can point to which word is which. Alongside the lowest task Level, not in
+it, checking afterward that the student can say which word is which. Alongside the lowest task Level, not in
 place of it.
 
 ### 0.6 Editing checklist and Peer Editing, by regime
 
-**Composition-regime Levels (4-8), self-edit checklist (Lesson 3 Day 2, and Lesson 4 Day 1):** a short checklist
+**Composition-regime Levels (4-8), self-edit checklist (Lesson 3 Day 2 only; Lesson 4 revises for effect and
+never re-runs it):** a short checklist
 specific to the lesson's two focuses and required feature, in the sample's own pattern. Template to adapt:
 - Every sentence has a subject and a verb, and matches Focus A's target form correctly.
 - At least one sentence uses Focus B's structure correctly.
@@ -417,7 +427,9 @@ position 4, since the piece is not yet complete.
 **Self-revision timing:** Beginner's hard Level 7-8 requirement (0.4a) applies at Lesson 4 Day 1. In a Module Pair
 it applies **twice**: Pair position 4 (Module N's tools, before hand-off) and Pair position 8 (Module N+1's tools,
 before publishing). This is deliberately more revision practice than the single-Set model. Levels 4-6 are
-encouraged to do the same at both points.
+encouraged to do the same at both points. At every position the revision is **for effect** (0.4a), distinct in
+kind from position 3 Day 2's check-and-improve pass: a joined or upgraded sentence, a moved sentence, a reader's
+request answered, never a second correctness check.
 
 ### 0.7 Board-dependent moments: where they fit in a Writing lesson
 
@@ -503,11 +515,11 @@ it is.
 | 1 | N | 1 | Grammar Focus A: input, modeling, deeper practice; Mentor Ladder |
 | 2 | N | 2 | Grammar Focus B, Essay Focus A/B (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
 | 3 | N | 3 | Drafting on the draft object, parts 1-2 (a complete opening-through-conclusion draft), self-edit |
-| 4 | N | 4 | **Hard self-revision** (Module N's tools), draft completion, hand-off (not published). **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
+| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence; final copy; hand-off (not published). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
 | 5 | N+1 | 1 | Re-engagement (re-read own draft; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Mentor Ladder second look |
 | 6 | N+1 | 2 | Module N+1's Grammar Focus B, Essay Focus A/B (where applicable); revision-planning against the existing draft (replaces prewriting) |
 | 7 | N+1 | 3 | Revision and expansion drafting, parts 1-2, applying Module N+1's focus into the existing draft; merged self-edit checklist |
-| 8 | N+1 | 4 | Peer editing (both Modules), **hard self-revision** (Module N+1's tools), publishing, Closing Transfer Check for both skills plus Module N+1's verb |
+| 8 | N+1 | 4 | Peer editing (both Modules), **revise for effect** (Module N+1's tools), publishing, Closing Transfer Check for both skills plus Module N+1's verb |
 
 Key rules:
 - **Genre, Scenario (practice object and draft object), and essay type are fixed once by Module N's mapping (0.9)
@@ -516,7 +528,7 @@ Key rules:
   (purpose, reader, what is already written), then introduces Module N+1's Focus A as genuinely new content.
 - **Module N+1's own CSV verb is covered by Lesson 8's separate Closing Transfer Check task (0.8),** not by the
   shared essay.
-- **Hard self-revision sits at both positions 4 and 8;** peer editing and publishing happen only at position 8
+- **Revision for effect sits at both positions 4 and 8;** peer editing and publishing happen only at position 8
   (0.6). Position 4 completes and self-revises the draft but does not publish it or run a Peer Editing exchange.
 - **Module N+1's Focus A/B is genuinely different from Module N's** (0.9; 0.4's pending Alternate column).
 - Positions 3-4 continue positions 1-2's content; positions 6-8 continue what position 5 established.
@@ -548,8 +560,9 @@ regime higher:
 ### Lesson 1, Day 1: Grammar Focus A, Input and Modeling
 
 _Phase 1: Hook, Skill Spotlight (15 min)_
-- A short hook tied to the Scenario (two students' belongings held up and compared, a real situation, a short
-  prompt; never a prop the teacher brings, Quality Standards §D8), pitched near the band's lower
+- A short hook tied to the Scenario (two students' belongings named and compared from memory, a real situation,
+  a short prompt; never a prop the teacher brings and never an object that must be present, Quality Standards
+  §D8), pitched near the band's lower
   task Level. Skill Spotlight (0.8).
 
 _Phase 2: Focus A mini-lesson: rule and examples (30 min)_
@@ -606,8 +619,8 @@ _Phase 3: Prewriting share and board synthesis (20 min)_
 ### Lesson 3, Day 1: Drafting, Part 1
 
 _Phase 1: Quick plan (10 min)_
-- Students pick the draft object from the printed list, circle it, and put the real thing on the desk. Then a
-  minimal plan built inside this packet, with no reference to Lesson 2's products or Lesson 1's ladder (Quality
+- Students pick the draft object from the printed list and circle it. Then a minimal plan built inside this
+  packet, with no reference to Lesson 2's products or Lesson 1's ladder (Quality
   Standards §D9): Levels 1-3 write three Draft Word Bank words that fit the object; Levels 4-6 name one thing to
   compare it to and one real reason, or list ideas; Levels 7-8 outline. The Draft Word Bank is reprinted before
   it. At Beginner and Intermediate the packet carries no questions here, only these actions (§E6); the
@@ -617,35 +630,55 @@ _Phase 1: Quick plan (10 min)_
 _Phase 2: Independent/guided drafting, opening and body (50 min)_
 - Frame-regime Levels complete their frame(s) on the draft object (not the practice frames), the teacher
   circulating to hear each student sound out their word. Composition-regime Levels draft the opening and body
-  toward 0.2's targets; the draft need not be finished today. Circulation checks the required feature is present
-  in progress, not only at the end.
+  toward 0.2's targets and complete the draft today (Levels 4+ count sentences at the end of the block).
+  Circulation checks the required feature is present in progress, not only at the end.
 
 _Phase 3: Mid-draft share-out (15 min)_
 - A few students share one sentence from their draft.
 
-### Lesson 3, Day 2: Drafting, Part 2 and Self-Edit
+### Lesson 3, Day 2: Self-Edit and Improve
 
-_Phase 1: Complete the draft (30 min)_ to the Level's full 0.2 target. Students count sentences only; the word
-range is the teacher's circulation check and never reaches the packet (Style Guide §E).
+The draft is complete from Day 1; Day 2 opens directly on checking it. No "finish your piece" phase and no
+"from last time" wording in the packet (Quality Standards §D9; Style Guide §E). Students count sentences only;
+the word range is the teacher's circulation check and never reaches the packet.
 
-_Phase 2: Self-edit checklist pass (25 min)_ against the regime's checklist (0.6).
+_Phase 1: Self-edit checklist pass (25 min)_ against the regime's checklist (0.6), one list per Level, marks on
+the page (circle, underline, box); frame-regime Levels read the frame to a partner who says which part each
+word describes.
+
+_Phase 2: Improve the piece from the marks (30 min)_: a more exact word from the bank, a missing required
+feature added, one more concrete detail, a feeling word replaced by a detail (Level 5); frame-regime Levels
+swap in a more exact word where one fits and add one -s sentence about what the object does. Visible revision
+(0.4a): cross out, do not erase.
 
 _Phase 3: Share-out / final line check (20 min)_: a read-aloud or partner check of the closing line or frame.
 
-### Lesson 4, Day 1: Self-Revision and Draft Completion
+### Lesson 4, Day 1: Revise for Effect
 
-_Phase 1: Self-edit checklist pass, Module N's own focus and feature (25 min)_
+The draft was checked and improved at Lesson 3 Day 2; this day never re-runs that checklist.
 
-_Phase 2: Self-revision time, including self-revision evidence (35 min)_
-- Revise from the checklist pass. Levels 7-8 must produce one of 0.4a's concrete artifacts; Levels 4-6 encouraged.
-  **Beginner:** open with the Peer Editing exchange (0.6) and revise from both the checklist and the partner's
-  feedback. **Module Pair:** no Peer Editing here; it happens at position 8.
+_Phase 1: A reader's request (15 min)_
+- Partners trade pieces and read. Each reader writes one thing they want to know more about on the writer's
+  page (frame-regime Levels: which part of the object they would like a second sentence about). Not Peer
+  Editing (0.6): one request, no form, no compliment-and-suggestion.
 
-_Phase 3: Quick revision share (15 min)_
+_Phase 2: Revise for effect with Module N's tools (45 min)_
+- Composition-regime Levels make three moves, each recorded in the before/after table (0.4a): join two short
+  sentences with Focus B's connector or turn a plain "but" into the concession form where taught; upgrade one
+  plain word to a more exact one from the bank; add the sentence the reader asked for. The band's top Level adds
+  a fourth: move one sentence so the order runs in one direction. Frame-regime Levels write two more frame
+  sentences about other parts of the object and choose the best of their three for the final copy. **Beginner:**
+  open with the Peer Editing exchange (0.6) and revise from the partner's form as well. **Module Pair:** no Peer
+  Editing here; it happens at position 8.
+
+_Phase 3: Revision share (15 min)_
+- Two or three before/after rows read aloud; the class names what each change did (board-dependent moment).
 
 ### Lesson 4, Day 2: Draft Hand-off (or Publishing) and Closing Transfer Check
 
-_Phase 1: Final polish / proofread pass, complete the draft to full length (20 min)_
+_Phase 1: Final copy (20 min)_
+- A clean copy of the revised piece (frame-regime Levels copy their chosen sentence), capitals and periods in
+  place. No proofread checklist and no counting task.
 
 _Phase 2 (Module Pair): Hand-off note (30 min)_
 - A short note, differentiated by regime, recording what this Module's focus added and that the piece now moves

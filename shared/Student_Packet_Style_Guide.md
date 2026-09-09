@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.5)
+# Student Packet Style Guide (v2.8)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -638,9 +638,9 @@ these.
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
 | Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
 | Section numbers, prompt names, version narrative | Never appear. |
-| Object logistics ("put it on your desk," "borrow one if you have none," "hold it up," "take out your...") | Not printed; the teacher manages objects live. The packet prints the choice list and the task, nothing about where the object is. |
+| Object logistics and object handling ("put it on your desk," "borrow one if you have none," "hold it up," "take out your...," "look at it," "point to the part") | Not printed; the object is a subject, not a prop (Quality Standards §D8). The packet prints the choice list and the task, nothing about where the object is or about looking at or pointing to it; a partner check asks the student to say which part a word describes. |
 | Word-count targets (the 0.2 ranges in words; "count your words") | Students see a sentence count only ("3-6 sentences"), never a word range and never an instruction to count words; word targets stay in the Markdown for the teacher. |
-| Pacing notes ("It is fine to finish tomorrow," "you have 20 minutes," "finish this first," "if there is time") | Not printed; time is managed in class. |
+| Pacing notes ("It is fine to finish tomorrow," "you have 20 minutes," "finish this first," "if there is time") and wrap-up lines ("Keep your piece," "You'll keep working on it soon") | Not printed; time is managed in class. The one continuation line allowed is the Pair position 4 hand-off note itself, never a closing line elsewhere. |
 | A previous lesson's notes, planning, examples, or board ("last time," "your planning notes," "the example from earlier this week") | Never referenced; whatever this day's tasks need is reprinted or rebuilt in this packet (Quality Standards §D9). Only the piece a Set carries forward may be "the piece you wrote last time." |
 
 If a source lesson uses a term not listed here or in the modality's own rows, apply the same principle:
@@ -679,6 +679,19 @@ their one-star-per-stem form (below).
 **No conditional extra work.** A packet never prints "Finished early?", "If you have time," "If you
 finish," or any add-on gated on speed. A heavier tier is its own lettered, starred Task in the sequence or
 is left out; the teacher decides live who moves on.
+
+**Check-then-improve is one Task.** When a unit has a self-check and the revision that acts on it, they form
+one section, "Check and Improve Your Writing," holding one lettered Task per star level: that level's check
+questions first, then its improvement steps and answer space, in the same numbered list. Never a check
+section followed by a revision section that repeats the same star sequence; like-star Tasks whose second half
+acts on the first are merged. The wording is "improve," "make it better," "change," "make each change you
+marked": never "fix" or "correct," since the piece is being improved, not repaired.
+
+**Instructions as steps.** A Task whose instruction has more than one action or question is a one-sentence
+lead line after the label and star ("Check your paragraph, then make it better.") followed by a numbered
+list, one action or one question per step, in the order the student does them; a check item is a question
+("Is there one clear reason with because, since, as, or given that?"), not a statement. Never a prose
+paragraph of chained instructions. A blank or answer line sits inside the step that needs it.
 
 **Ascending order within a Task.** Where a Task contains more than one star-rated block, blocks appear
 in ascending star order regardless of the source's order.
@@ -1007,7 +1020,9 @@ Run this list first, then the modality's own list.
 6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
    instruction before the task list; one star per lettered Task, self-check lists included, with no
    star on a list item or two stars on a line; letters continuous; ascending order within a Task; no star
-   inside any teaching callout; no "Finished early?" or other speed-gated add-on? (§F)
+   inside any teaching callout; no "Finished early?" or other speed-gated add-on; check and improve merged
+   into one Task per star under "Check and Improve Your Writing," never two like-star sequences and never
+   "fix"; every multi-step Task a one-sentence lead plus numbered steps, check items as questions? (§F)
 7. Every teaching callout before the tasks that depend on it? (§F)
 8. Every standalone question numbered; every bank, frame, starter, or model placed before the items it
    serves; multiple choice inline with one top instruction line; picture items with embedded images and no
@@ -1028,10 +1043,11 @@ Run this list first, then the modality's own list.
 15. No reference to an earlier lesson's notes, planning, examples, or board, other than the carried piece;
     at Beginner and Intermediate no reflection question, only actions with a visible product? (§E; Quality
     Standards §D9, §E6)
-16. No object logistics, no word range or "count your words," and no pacing line anywhere in student-facing
-    text? (§E)
+16. No object logistics or handling ("look at it," "point to," "hold it up"), no word range or "count your
+    words," no pacing line, and no wrap-up or "keep working on it" line outside the Pair position 4 hand-off
+    anywhere in student-facing text? (§E)
 
 ## Changelog
 
-**Current version: v2.5.** For the full dated version history and the reasoning behind each
+**Current version: v2.8.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.4
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.2.5
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B, task-ladder
 practice, prewriting)
@@ -23,6 +23,9 @@ ladder._
 _Revised 2026-09-08 (1.1.2.3 -> 1.1.2.4): the draft object is the category "my clothing," printed as a list of
 eight choices the student circles (jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat); the packet no
 longer prints desk or borrowing logistics (Style Guide §E)._
+
+_Revised 2026-09-08 (1.1.2.4 -> 1.1.2.5): the packet's planning tasks say "the clothing you circled," not "the
+thing you circled," matching Lesson 3._
 
 ---
 
@@ -370,7 +373,7 @@ board is this lesson's; Lesson 3 does not depend on it.
 16. Adjacency: Focus B and the confusable drill are new to this Set; the hook slot is not used at position 2
     (the prompt's flow opens Lesson 2 with the mini-lesson).
 17. Oral protocol: no whole-class discussion protocol in this lesson; partner checks have a fixed question each.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.4.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.2.5.
 19. Self-contained: the phone case and the jacket are the student's own (a classmate's as fallback); no prop,
     picture, or card the teacher prepares.
 20. Self-contained across lessons: no task needs Lesson 1's packet (the ladder look-back is gone); Day 2's

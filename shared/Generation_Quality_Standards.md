@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.2)
+# Generation Quality Standards (v1.3)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -55,9 +55,10 @@ line contributed at a natural pause.
 
 **Foundation Support (below the lowest task Level):** for a student functioning below the band's own floor,
 do not reuse the lowest Level's tasks at a slower pace. Provide non-verbal or minimally-verbal response
-modes (matching a printed word in the packet to a real object, pointing, a two-choice circle, tracing with a
-meaning check, teacher-scribed dictation) and, in oral work, a physical role (moving, pointing, holding up a
-word the student wrote) rather than a spoken turn; never a card set the teacher has to make (D8). This is support
+modes (matching a printed word in the packet to a printed picture or category, a two-choice circle, tracing
+with a meaning check, teacher-scribed dictation) and, in oral work, a physical role (moving, holding up a word
+the student wrote) rather than a spoken turn; never a card set the teacher has to make, and never a task that
+needs the object in the room (D8). This is support
 added on top of the lowest task Level, not a replacement for it; the lesson says where it plugs in. An
 assessment for a lesson that used Foundation Support gives those students a lighter check in the same
 response mode, scored as a completion checklist, not a percentage. If no lesson in scope used it, none is
@@ -147,9 +148,12 @@ Rules shared by every 2-day lesson cycle in the program:
    carry the task (a Beginner label set of unrelated nouns, a "prompted by two pictures" objective), a real
    image embedded in the packet at generation time as a data-URI `<img>`, saved as an asset per Conventions
    §H. A hook that compares two things uses two students' belongings or two things in the room. Foundation
-   Support uses printed words from the packet, the student's own drawing, and pointing at real objects.
+   Support uses printed words from the packet and the student's own drawing.
    Never print a placeholder ("[TEACHER: insert photo]", an empty picture box) and never write "the picture
-   your teacher shows you."
+   your teacher shows you." **The object is a subject, not a prop:** no task requires the belonging to be
+   physically present. The student describes their own belonging from what they know of it, so never "look at
+   it," "point to the part," "hold it up," "put it on your desk," or "take out your..."; a partner check asks
+   the student to *say* which part a word describes, never to point to it.
 
 **D9. Self-contained across lessons.** A lesson's tasks require nothing a student produced in an earlier
 lesson except the one piece a Set carries forward (a Writing draft from position 3 on; Reading and
@@ -206,8 +210,9 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 17. Oral protocol has 2-3 rotated prompts, per-Level stems, and a task for every non-speaker? (D7)
 18. No em-dashes; pacing diagram per day; metadata line present with the correct version code? (E)
 19. Self-contained: no prop, picture, card, or photo the teacher must prepare or show; every picture or object
-    prompt met by the student's own belonging, an object in the room, or an image embedded in the packet, and
-    no placeholder anywhere? (D8)
+    prompt met by the student's own belonging, an object in the room, or an image embedded in the packet; no
+    placeholder anywhere; and no task that needs the belonging physically present (no "look at it," "point
+    to," "hold it up")? (D8)
 20. Self-contained across lessons: no task needs anything a student made in an earlier lesson except the
     carried piece; every plan, bank, model, and object choice rebuilt or reprinted here? (D9)
 21. Concrete prompts: at Beginner and Intermediate, every student-facing prompt is an action with a visible
@@ -215,4 +220,4 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 
 ## Changelog
 
-**Current version: v1.2.** See `Changelog.md` in this folder.
+**Current version: v1.3.** See `Changelog.md` in this folder.

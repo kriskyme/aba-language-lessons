@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.5)
+# Academic Writing Student Print Formatting Prompt (v3.9)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.5.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.9.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
@@ -37,7 +37,7 @@ Style Guide §E's rows apply. Add these:
 | Frame-regime / composition-regime / essay-regime | Never appears; the star rating and the task's own instruction carry the difference. |
 | Leveled Mentor Ladder / Mentor Text / Mentor Essay | Worked examples labeled only by star count ("★★★ Example"), never "Mentor," "Level," "ladder," or "set" (2.6). |
 | Required feature | Stated as a plain instruction inside the task ("Include one comparison and one reason"). |
-| Self-edit checklist / Peer Editing Form | "Check Your Own Work" / "Trade and Check" (2.8), with the actual items, no section numbers. |
+| Self-edit checklist plus its revision / Peer Editing Form | "Check and Improve Your Writing" / "Trade and Check" (2.8), with the actual items as questions, no section numbers, never "fix." |
 | Editing a paragraph, confusable-pair drill, and other activity-type names | A plain instruction (how many errors to find; a forced choice), never the activity-type name. |
 | Self-revision mechanism | A plain instruction to cross out (not erase) what changed and write the new version next to it. |
 | Hand-off note (Pair position 4) | Plain continuation language ("You'll keep working on this piece soon"), never "finished" or "published" (2.7). |
@@ -82,7 +82,10 @@ tied to that task's content ("Task B. Read the essay below, then answer the ques
 the instruction line of the individual activity block it differentiates. Everything else about stars, one star
 per lettered Task, letter continuity, ascending order, and callouts is Style Guide §F. Where a frame-regime
 Level's work is a fill-in-the-blank and a composition-regime Level's is an original paragraph, present each
-star's actual instruction as written (a blank frame for ★/★★, a writing space for ★★★/★★★★).
+star's actual instruction as written (a blank frame for ★/★★, a writing space for ★★★/★★★★). Any Task with
+more than one action or question is a one-sentence lead line then a numbered list, one action or question per
+step, blanks and answer lines inside the step that needs them; never a paragraph of chained instructions
+(Style Guide §F, instructions as steps).
 
 ### 2.5 Grammar box translation
 
@@ -113,16 +116,21 @@ this is:**
   a second "Wrap It Up" prompt, not labeled as covering "a different Module."
 - **A hand-off (a Pair's Lesson 4):** the piece is a complete, self-revised draft, not yet published. Never use
   "finished," "published," "share your piece," or any language implying the piece is done. Frame the hand-off
-  plainly ("You'll keep working on this piece soon").
+  plainly ("You'll keep working on this piece soon"). That line belongs to Lesson 4's hand-off only; no other
+  unit ends with a "keep your piece" or "you'll keep working on it" wrap-up (Style Guide §E).
 No stage directions about what the teacher will do next (Style Guide §E).
 
-### 2.8 Trade and Check and Check Your Own Work
+### 2.8 Trade and Check and Check and Improve Your Writing
 
-Translate the self-edit checklist into "Check Your Own Work": under the section title, one plain line for
-anything every Level does (the cross-out rule, "mark it as each line says"), then one lettered Task per star
-level, each with exactly one star tag and its own complete list of short, direct items phrased as things to
-look for, repeating the items the Levels share (Style Guide §F). Frame-regime Levels' oral check is its own
-one-star Task, not omitted. Never a star on a list item, never two stars on one line. Translate the Peer
+Translate the self-edit checklist and the revision that acts on it into one section, "Check and Improve
+Your Writing": under the section title, one plain line for anything every Level does (the cross-out rule,
+"mark it as each line says"), then one lettered Task per star level, each with exactly one star tag, a
+one-sentence lead ("Check your paragraph, then make it better."), and one numbered list: that level's check
+items as questions (repeating the items the Levels share), continuing straight into its improvement steps
+with their answer space (Style Guide §F, check-then-improve; instructions as steps). Say "improve," "make it
+better," "make each change you marked," never "fix." Frame-regime Levels' oral check plus their frame
+revision is its own one-star Task, not omitted. Never a check section followed by a separate revision
+section. Never a star on a list item, never two stars on one line. Translate the Peer
 Editing Form, where this lesson runs it, into "Trade and Check": partner instructions, the form's specific
 questions, then space for one compliment and one suggestion. No "Finished early?" or other speed-gated
 add-on anywhere in the packet; a heavier tier from the lesson is its own starred Task or is dropped.
@@ -140,12 +148,26 @@ count only ("Aim for 3-6 sentences"); the word range and any "finish tomorrow" p
 A drafting lesson's Day 1 unit opens with the Draft Word Bank, then a section titled "Get Ready to Write"
 holding one unstarred Task: the printed list of draft-object choices to circle, four to eight like things
 ("Pick one of these things to write about and circle it: my jacket, my hoodie, my sweater, my shirt, my
-T-shirt, my dress, my scarf, my hat"), then the quick-plan action with its answer line ("Look at it. Write
-three words from the Word Bank that fit it"). Nothing else: no "put it on your desk" or borrowing fallback
-(the teacher's, Style Guide §E), no questions, no "last time," no "your planning notes," no "the example from
+T-shirt, my dress, my scarf, my hat"), then the quick-plan action with its answer line ("Write three words
+from the Word Bank that fit it"). Nothing else: no "look at it," no "put it on your desk" or borrowing fallback
+(the object is a subject, not a prop, Style Guide §E), no questions, no "last time," no "your planning notes," no "the example from
 earlier this week," and no re-look at Mentor Ladder examples (Quality Standards §D9, §E6). The unit heading
 names the generic category ("Describing My Clothing"), not one item from the list.
-Later in the same unit, a task that needs a list or plan builds it inside the task with its own lines.
+Later in the same unit, a task that needs a list or plan builds it inside the task with its own lines. The
+drafting task's lead line says "Write about the clothing" (the category), not "the thing you circled."
+
+A drafting lesson's Day 2 unit opens directly with "Check and Improve Your Writing" (2.8), one Task per star
+holding the check questions and then the improvement steps the lesson names, then the share section, with no
+wrap-up line after it. No "Write It"
+section, no "Finish your piece from last time," and no count-your-sentences task on Day 2; the draft was
+completed on Day 1. A partner check says which part a word describes; it never points (Style Guide §E).
+
+A Pair position 4 lesson (Set position 4) prints no checklist at all. Its Day 1 unit is the Word Bank, then "A
+Reader's Request" (one unstarred Task: trade pieces, read, write one thing you want to know more about on your
+partner's page), then "Make It Stronger": one Task per star as steps, the before/after table under the
+composition-regime Tasks. Its Day 2 unit is "Final Copy" (one Task per star: copy the chosen sentence, or copy
+the paragraph cleanly), "Before It Moves On" (the hand-off note, 2.7), and "Wrap It Up" (the Closing Transfer
+Check). No "Last Look," no proofread pass, no counting.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 

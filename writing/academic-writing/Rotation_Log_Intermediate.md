@@ -19,9 +19,9 @@ Lesson 2 Day 2; what Lessons 3-4 and Module 2 write about), per `shared/Program_
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Intermediate 1 | 1 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus A input, modeling, deeper practice; Mentor Ladder | My phone case (was: my water bottle) | 1.1.1.2 |
-| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.4 |
-| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.6 |
-| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Self-revision, draft completion, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.6 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 | Grammar Focus B, task-ladder practice, prewriting | (same Scenario; Day 2 introduces the draft object, my clothing) | 1.1.2.5 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; regenerated 2026-09-08 (Lesson prompt v6, packet print v3.0) | Drafting, parts 1-2, self-edit | My clothing (draft object, printed list of eight; same Scenario) | 1.1.3.9 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-08-30 (orig.); reorganized 2026-09-08; retrofitted 2026-09-08; regenerated 2026-09-08 | Reader's request, revision for effect (join, upgrade, add, reorder), final copy, hand-off (not published), Closing Transfer Check | My clothing (draft object, printed list of eight; same Scenario) | 1.1.4.10 |
 
 **Grammar Focus (A/B):** Focus A: comparative adjectives (-er/more) + because/since/as/given that reason clauses
 (richer set as of v3.3) / Focus B: simple vs. compound sentences (and/but/so); Level 5 extension: hedging
@@ -127,6 +127,33 @@ choices (jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat) in Lessons 
 packets no longer print "put it on your desk / borrow a classmate's," any word range, or "it is fine to finish
 tomorrow"; students count sentences only. Lesson 2 `1.1.2.3` -> `1.1.2.4`, Lesson 3 `1.1.3.5` -> `1.1.3.6`,
 Lesson 4 `1.1.4.5` -> `1.1.4.6`.
+
+**2026-09-08 addendum: object as subject, not prop; Lesson 3 Day 2 check-and-improve (Quality Standards v1.3,
+Lesson prompt v6.5).** Per user review: "Look at it" and every point-to / desk instruction removed from Lessons 3
+and 4 (partner checks say which part a word describes; Lesson 4's hand-off picture replaced by writing the part
+next to each circled word). Lesson 3 completes the draft on Day 1; Unit 3B now opens directly with "Check Your
+Own Work," then a new "Make It Better" section (one Task per star: a more exact word; the -s sentence; fix marks
+plus one more detail; fix marks plus replace a feeling word), then Share a Line; the former "Write It" finishing
+tasks are gone. Lesson 3 `1.1.3.6` -> `1.1.3.7`, Lesson 4 `1.1.4.6` -> `1.1.4.7`; Lesson 2 `1.1.2.4` -> `1.1.2.5` (its planning
+tasks now say "the clothing you circled").
+
+**2026-09-08 addendum: check and fix merged (Style Guide v2.7).** Per user review, Lesson 3 Unit 3B's "Check Your
+Own Work" and "Make It Better" are one section, "Check and Fix Your Work," with one Task per star holding the
+check items and then the fix; Lesson 4 Unit 4A's "Check Your Own Work" and "Fix It Up" likewise. Lesson 3
+`1.1.3.7` -> `1.1.3.8`, Lesson 4 `1.1.4.7` -> `1.1.4.8`.
+
+**2026-09-08 addendum: "Check and Improve Your Writing," steps, no wrap-up (Style Guide v2.8).** Per user review
+the merged section is renamed (no "fix"), every multi-step Task in both packets is a one-sentence lead plus
+numbered steps with check items as questions, and Lesson 3's "Keep your piece" closing line is removed. Lesson 3
+`1.1.3.8` -> `1.1.3.9`, Lesson 4 `1.1.4.8` -> `1.1.4.9`.
+
+**2026-09-08 addendum: Lesson 4 regenerated as revision for effect (`1.1.4.9` -> `1.1.4.10`, Lesson prompt v6.6,
+packet prompt v3.9).** Per user review, Lesson 3 Day 2's check-and-improve had made Lesson 4's checklist a repeat.
+Lesson 4 Day 1 is now a reader's request (trade, read, write one thing you want to know more about) and "Make It
+Stronger": Level 4 joins two sentences, upgrades a word, and adds what the reader asked for; Level 5 also reorders;
+Levels 2-3 write two more frames and circle the best; every move a before/after table row. Day 2 is "Final Copy,"
+the hand-off note, and the Closing Transfer Check; "Last Look" is gone. The prompt's position 4 role, 0.4a, 0.6, and
+0.3 item 9 say the same for every future Pair.
 
 ---
 

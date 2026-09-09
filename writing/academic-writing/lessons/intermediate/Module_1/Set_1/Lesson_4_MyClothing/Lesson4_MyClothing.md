@@ -1,9 +1,9 @@
 # Academic Writing Lesson 4
 
-**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.6
+**Module:** 1: Describing | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 1.1.4.10
 
-**Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: hard self-revision with Module 1's
-tools, draft completion, hand-off to Module 2's Set, not published; Closing Transfer Check for Module 1's skill)
+**Set:** 1 of Module Pair 1-2 | **Pair position:** 4 of 8 (Set position 4 of 4: revise for effect with Module 1's tools,
+final copy, hand-off to Module 2's Set, not published; Closing Transfer Check for Module 1's skill)
 
 ### Scenario: "My Clothing" (the draft object, one piece of the student's own clothing, continued from Lessons 2-3; the phone case was the practice object)
 
@@ -24,6 +24,21 @@ marks on the draft plus a printed stem, not a reflective sentence._
 _Revised 2026-09-08 (1.1.4.5 -> 1.1.4.6) per Style Guide v2.5: the lesson is "My Clothing"; the packet carries no
 desk or borrowing logistics and no word ranges; students count sentences only._
 
+_Revised 2026-09-08 (1.1.4.6 -> 1.1.4.7) per Quality Standards v1.3: the object is a subject, not a prop. The
+Levels 2-3 self-check and partner check say which part a word describes instead of looking or pointing; the
+hand-off note's small picture is replaced by writing which part each circled word is about._
+
+_Revised 2026-09-08 (1.1.4.7 -> 1.1.4.8) per Style Guide v2.7: Unit 4A's check and fix tasks are merged into one
+"Check and Fix Your Work" Task per star._
+
+_Regenerated 2026-09-08 (1.1.4.9 -> 1.1.4.10) against `Generate_Lesson_Prompt_v6.6.md`: Lesson 3 Day 2 now checks
+and improves the draft, so this lesson no longer repeats that checklist. Day 1 is a reader's request and revision
+for effect (join, upgrade, add what the reader asked for, and at Level 5 reorder), with the before/after table as
+evidence; Day 2 is a final copy, the hand-off note, and the Closing Transfer Check. No "Last Look" pass._
+
+_Revised 2026-09-08 (1.1.4.8 -> 1.1.4.9) per Style Guide v2.8: the section is "Check and Improve Your Writing,"
+and each Task is a one-sentence lead plus numbered steps, never "fix."_
+
 _Revised 2026-09-08 (1.1.4.4 -> 1.1.4.5) per Style Guide v2.4: the packet's Day 1 self-check is now one lettered
 Task per star (four Tasks), no star on a list item, and Unit 4B's Last Look likewise split into four one-star Tasks; the Markdown's per-Level lists were already separate._
 
@@ -42,10 +57,12 @@ Task per star (four Tasks), no star on a list item, and Unit 4B's Last Look like
 
 Every student arrives with a complete Lesson 3 draft about one piece of their own clothing (circled from the
 printed list: jacket, hoodie, sweater, shirt, T-shirt, dress, scarf, hat), the Set's draft object (Conventions
-§C): Levels 2-3 a filled frame, Levels 4-5 an original paragraph. Teacher-managed, not printed: the same item,
-or the borrowed one, should be on the desk again today; a student who does not have it keeps working from the
-draft and borrows something close. Below, "the item" means whichever piece the student circled. The phone case, the practice object of Lessons 1-2, does not appear in this lesson.
-No new grammar is taught this lesson. The checklist and revision work name only what Lessons 1-3 already taught:
+§C): Levels 2-3 a filled frame, Levels 4-5 an original paragraph. The item need not be present (Quality
+Standards §D8): every check works from the draft and from what the student knows of their own clothing. Below,
+"the item" means whichever piece the student circled. The phone case, the practice object of Lessons 1-2, does not appear in this lesson.
+No new grammar is taught this lesson, and the Lesson 3 Day 2 checklist is not run again: the draft arrives checked
+and improved once, and this lesson revises it for effect. The revision moves use only what Lessons 1-3 already
+taught:
 
 - **Focus A (Lesson 1):** comparative adjectives (-er / more, with the spelling rules) and reason clauses with
   because, since, as, and given that (comma after an opening reason clause).
@@ -72,127 +89,101 @@ detail that implies a feeling without stating it.
 
 ---
 
-## DAY 1: SELF-REVISION AND DRAFT COMPLETION (75 MIN)
+## DAY 1: REVISE FOR EFFECT (75 MIN)
 
 ```
-0            25                              60         75  (minutes)
-|--Phase 1----|--------------Phase 2------------|-Phase 3--|
-| Self-edit    | Self-revision time, with         | Quick     |
-| checklist    | before/after evidence            | revision  |
-| pass         |                                  | share     |
+0          15                                  60         75  (minutes)
+|-Phase 1---|--------------Phase 2--------------|-Phase 3--|
+| A reader's | Revise for effect with Module 1's  | Revision  |
+| request    | tools, before/after evidence       | share     |
 ```
 
-### Phase 1: Self-edit checklist pass, Module 1's own focus and feature (25 min)
+This day never re-runs Lesson 3 Day 2's checklist. Every move below is a change for effect made with a taught
+tool, recorded so the teacher can see it (Section 0.4a). The packet prints Phase 1 as "A Reader's Request" and
+Phase 2 as "Make It Stronger," one Task per star as numbered steps (Style Guide §F).
 
-Students read their own Lesson 3 draft against the checklist for their Level, marking the draft as each item
-says. Marking is the point: an item is done only when the mark is on the page, so the teacher can see at a glance
-where a draft is missing something. No partner work yet; Peer Editing happens once, at Module 2's Lesson 4, when
-both Modules' tools are available.
+### Phase 1: A reader's request (15 min)
 
-**Level 4 checklist (written, on the draft):**
+Partners trade pieces and read them silently. Each reader writes one line on the writer's page: one thing they
+want to know more about (Levels 4-5: "I want to know more about ___"; for a Level 2-3 frame, which part of the
+item they would like a second sentence about: "Tell me about the ___"). Then the pieces go back. This is not
+Peer Editing (Section 0.6): one request, no form, no compliment or suggestion. Peer Editing happens once, at
+Module 2's Lesson 4, when both Modules' tools are available.
 
-1. Circle your comparative word (-er or more). Does it compare your item to one other thing?
-2. Underline your reason clause and put a box around its reason word (because, since, as, or given that). Is it a
-   real reason, not the same idea said again?
-3. Put a star next to one compound sentence (and / but / so). Is there a comma before the connector?
-4. Check every "it's" and "its." It's = it is; its = belonging to it.
-5. Count your sentences: 3-6 (the word range, 40-90, is the teacher's check, not printed).
+**Teacher-facing:** while pairs read, note two or three requests to use in Phase 3.
 
-**Level 5 checklist (written, on the draft):** items 1-4 above, then:
+### Phase 2: Revise for effect with Module 1's tools (45 min)
 
-5. Number your details in the margin in the order they appear. Do they move in one direction (look, then history,
-   then habits, for example), or do they jump around?
-6. Draw a wavy line under the one detail that shows how you feel about the item. Then scan the whole paragraph
-   for a feeling word (love, like, hate, favorite, boring). If one is there, that sentence fails the task; mark
-   it for Phase 2.
-7. Put a check next to one hedge (a bit, a little, seems, at least, probably) or one although / even though
-   sentence. If there is none, mark where one could go.
-8. Count your sentences: 6-9 (the word range, 90-150, is the teacher's check, not printed).
-
-**Levels 2-3 self-check (printed, then read to a partner):**
-
-- Level 2: Look at your item. Point to the thing your word describes. Is it there?
-  Say the word slowly. Does every sound you hear have a letter on the page?
-- Level 3: Point to the thing your first word describes, then the thing your second word describes. Are they two
-  different things (a color and a size, not two words for the same idea)? Say each word slowly and check its
-  letters.
-- Both: read the finished sentence to a partner. Your partner points to what the word (or words) describes on
-  your item. If they point to the wrong thing, or cannot point, mark that word for Phase 2.
-
-### Phase 2: Self-revision time, including self-revision evidence (35 min)
-
-Students revise from their own checklist marks and complete the draft to full length. The revision leaves
-visible evidence on the page (Section 0.4a); "I fixed it" with a clean rewrite and nothing else is not enough
-at this position. Two mechanisms; every Level uses at least one:
-
-**Mechanism 1, on the draft: cross out, do not erase.** Draw one line through what changes and write the new
-version above or beside it, so the original stays readable.
-
-**Mechanism 2, the before/after table** (printed in the packet; Levels 4-5 fill it for the one or two sentences
-that changed most):
+Every change is visible (cross out, do not erase) and, at Levels 4-5, recorded in the before/after table
+printed in the packet:
 
 | What I first wrote | What I changed it to | Why |
 |---|---|---|
 | | | |
 | | | |
 
-**Level 4:** revise from checklist marks 1-5, using Mechanism 1 on the draft, and fill at least one row of the
-before/after table. Typical revisions at this Level: a missing comma before and / but / so; a reason that
-restates the comparison ("it is thinner because it is not thick") replaced by a real one; a spelling slip in the
-comparative (biger, heavyer).
+**Level 4, three moves:**
 
-**Level 5 (heavier tier, same 35 minutes):** revise from marks 1-8. Two rows of the before/after table are
-required at this Level, and at least one of the two must be the implied-attitude detail: if a feeling word was
-found in Phase 1, the row shows the sentence with the feeling word and the concrete detail that replaces it; if
-no feeling word was found, the row shows the detail as first written and a sharper version of it (more
-specific, more concrete), with the "Why" column saying what the reader should now guess. The prompt makes
-visible self-revision recommended rather than required at Level 5; for this lesson it is required, since it is
-this band's top Level and the Level whose feature (an implied, not stated, attitude) is impossible to check
-without seeing what changed.
+1. **Join.** Find two short sentences that belong together and join them with and, but, or so, comma before
+   the connector (Focus B). If the piece already has a compound sentence, join a different pair.
+2. **Upgrade.** Find one plain word (big, nice, good, old) and replace it with a more exact one from the Draft
+   Word Bank or your own (faded, baggy, sturdy).
+3. **Answer the reader.** Add the sentence your reader asked for, with a real detail in it. Stay inside 6
+   sentences: if adding it makes 7, join two sentences or cut the weakest.
 
-**Levels 2-3 (frame regime):** revise the frame word itself. Each student looks at the Word Bank and asks: is
-there a word that describes my item more exactly than the one I chose (faded instead of old; fleece instead
-of soft)? If yes, cross out the old word on the frame (Mechanism 1) and write the new one beside it, then write
-the whole new sentence on the line below the old one, so the two sentences sit side by side. If the first word
-was already the best one, the student writes one new sentence about a different part of the item in the same
-frame (Level 2: "It is ___." with a word from a different Word Bank group; Level 3: "It is ___ and ___." with two
-new words from two groups), so every student leaves Phase 2 with a before-and-after pair on the page.
+Each move is one row of the table; three rows at this Level.
 
-**Foundation Support** (alongside Level 2, not in place of it): a student who cannot yet spell the word from
-sound says the word, the teacher writes it on a card, and the student copies it into the frame and then points
-to the thing on the item that the word describes.
+**Level 5, four moves (heavier tier, same 45 minutes):** moves 1-3 above, where move 1 may instead turn a plain
+"but" sentence into an although / even though sentence (the Lesson 2 extension), plus:
 
-**Teacher circulation:** check the required feature is present in progress, not only at the end: a comparison and
-a stated reason on every Level 4 draft, a concrete detail with no feeling word on every Level 5 draft, a
-before/after pair on every Level 2-3 page.
+4. **Reorder.** Number the details in the margin. Move one sentence so the order runs in one direction (what
+   it looks like, then what has happened to it, then when it is worn), and make sure the implied-attitude
+   detail still lands late, where it carries the most weight. Stay inside 9 sentences.
 
-### Phase 3: Quick revision share (15 min)
+Four rows of the table at this Level; the "Why" column for the reorder row says what the new position does.
+
+**Levels 2-3 (frame regime), write more, then choose:** the Lesson 3 frame is one sentence; this day produces two
+more about other parts of the item (a sleeve, a pocket, the collar, the hood), each sounded out and, at Level 3,
+each with two words about two different things. Then the student reads all three to a partner and circles the
+one that says the most about the item; the circled sentence is the one copied on Day 2. Choosing among three
+of their own sentences is this Level's revision move. A student who received a "Tell me about the ___" request
+writes one of the two new sentences about that part.
+
+**Foundation Support** (alongside Level 2, not in place of it): a student who cannot yet spell from sound says
+the word, the teacher writes it on a card, and the student copies it into the frame and says which part of the
+item the word is about.
+
+**Teacher circulation:** three visible changes on every Level 4 page (four at Level 5) with a filled table row for
+each; three frame sentences on every Level 2-3 page with one circled. A change that only corrects (a comma, a
+spelling) is not one of the three; send the student back to the move list.
+
+### Phase 3: Revision share (15 min)
 
 **Board-dependent moment, co-constructed live:** a before/after board in two columns. Two or three volunteers
-read one row of their before/after table aloud (Level 5 first, since their rows carry the detail-for-feeling
-swap; then one Level 4 row; then one Level 2-3 pair of sentences). The teacher writes each "before" in the left
-column and each "after" in the right, and the class names in one line what the change did (fixed the comma; gave
-a real reason; made us guess the feeling instead of telling us). The board stays up for Day 2.
+read one row of their table aloud (Level 5 first, since the reorder row is the hardest to hear; then one Level 4
+join or upgrade; then one Level 2-3 student reads their three sentences and says which they circled and why). The
+teacher writes each "before" on the left and each "after" on the right, and the class names in one line what
+the change did (joined two ideas; a sharper word; answered the reader; put the history before the habits). The
+board stays up for Day 2.
 
 ---
 
-## DAY 2: DRAFT HAND-OFF AND CLOSING TRANSFER CHECK (75 MIN)
+## DAY 2: FINAL COPY, HAND-OFF, AND CLOSING TRANSFER CHECK (75 MIN)
 
 ```
 0        20                        50                      75  (minutes)
 |--Phase 1--|---------Phase 2---------|--------Phase 3---------|
 | Final     | Hand-off note            | Closing Transfer        |
-| polish    | (not publishing)         | Check                   |
+| copy      | (not publishing)         | Check                   |
 ```
 
-### Phase 1: Final polish / proofread pass, complete the draft to full length (20 min)
+### Phase 1: Final copy (20 min)
 
-A last quiet read-through of the revised draft, focused on anything Day 1 changed: a revised sentence often
-loses its capital letter or final period, and a swapped word can break the -s agreement around it. Students
-then count sentences against their Level's target (Level 4: 3-6; Level 5: 6-9; Levels 2-3: every slot filled,
-one clean final copy of the sentence) and add or cut to land inside it; the word ranges (40-90, 90-150) are the
-teacher's circulation check and are not printed (Style Guide §E). The
-draft is complete when the count is inside the range and every checklist mark from Day 1 has been acted on.
+Students write a clean copy of the revised piece on the packet's lines: Levels 4-5 the whole paragraph with
+every Day 1 change in place, capitals and periods intact; Levels 2-3 the sentence they circled on Day 1. No
+proofread checklist and no counting task at this position (the piece was checked once, at Lesson 3 Day 2); the
+teacher's circulation check is that each Day 1 table row shows up in the copy. The word ranges (Level 4: 40-90;
+Level 5: 90-150) remain the teacher's check and are not printed.
 
 ### Phase 2: Hand-off note, not publishing (30 min)
 
@@ -207,8 +198,7 @@ note on the last line of their draft:
   implied-attitude detail onto the hand-off lines and finishes "I want my reader to guess ___," so the intention
   travels with the draft into Module 2's Peer Editing. Actions and stems, not reflection (Quality Standards §E6).
 - **Levels 2-3:** copy the final frame sentence cleanly onto the hand-off line, circle the word (Level 3: both
-  words) they chose, and draw a small picture of the item with an arrow from each circled word to the thing it
-  describes.
+  words) they chose, and write next to each circled word which part of the item it is about.
 
 The teacher collects nothing for grading; drafts stay in the student's folder for Module 2's Lesson 1
 re-engagement.
@@ -242,74 +232,81 @@ it saw on a item.
 
 **Quality Standards §F (shared):**
 1. Four task Levels (2, 3, 4, 5), each citing its own CSV row: yes (table above).
-2. Each at its own ceiling: Level 5's checklist and revision stay inside the paragraph regime (6-9 sentences,
-   90-150 words); Level 2's stays single-word frame work; Level 4 is not pulled up to Level 5's implied-attitude
-   demand.
-3. Module verb: every task describes an object (the item, then a pen); the hand-off note names what the
-   description gained, not a narrative or an evaluation.
-4. Respectful Tiers: Levels 2-3 make a genuine choice in Phase 2 (a more exact word from the Word Bank, or a new
-   observation), produce a before/after pair, and write on a real new object in the Closing Transfer Check; the
-   partner-points check gives them an interpretive moment nothing on the board answers.
-5. Live oral work: the only public turn is the cold-called read-aloud, with the card written first; Levels 2-3
-   read a frame sentence they rehearsed with a partner. Foundation Support is placed alongside Level 2 in Phase 2.
-6. Item distinctness: not applicable to a revision day (no item sets); the Level 4 and Level 5 checklists differ
-   in their Level-specific items (organization, feeling-word scan, hedge) rather than restating one another.
-7. Not trivially easy: the Level 5 feeling-word scan and the partner's guess in Phase 3 both fail a draft that
-   states the feeling; the Level 2-3 partner-points check fails a word that does not match the item.
-8. Requires the centerpiece: every check is run on the student's own draft and own object, not from memory.
+2. Each at its own ceiling: Level 5's four moves stay inside the paragraph regime (6-9 sentences, 90-150 words);
+   Level 2's stays single-word frame work (three frames, one chosen); Level 4 is not pulled up to Level 5's
+   reorder or implied-attitude demand.
+3. Module verb: every task describes an object (the item, then a pen); every revision move sharpens the
+   description (a joined comparison, a more exact word, a detail the reader asked for), not a narrative or an
+   evaluation.
+4. Respectful Tiers: Levels 2-3 write two new frame sentences and choose the best of three (a genuine
+   judgment), answer a reader's request, and write on a real new object in the Closing Transfer Check; nothing
+   on the board answers which sentence says the most.
+5. Live oral work: the reader's request is written, not spoken; the revision share and the cold-called
+   read-aloud both have the text written first; Levels 2-3 read three sentences they rehearsed with a partner.
+   Foundation Support is placed alongside Level 2 in Phase 2.
+6. Item distinctness: the three (four) moves are different in kind (join, upgrade, add, reorder) and none
+   repeats Lesson 3 Day 2's check items; the Level 5 tier adds a move rather than restating Level 4's.
+7. Not trivially easy: a change that only corrects does not count as a move (circulation sends it back); the
+   reader's request cannot be answered from the board; the Level 5 reorder must keep the implied detail late;
+   the partner's guess in the Closing Transfer Check fails a stated feeling.
+8. Requires the centerpiece: every move is made on the student's own draft; the reader's request comes from
+   reading that draft.
 9. Padded banks: the Draft Word Bank has 30 words for one- or two-word choices; no matching lists.
-10. Time balance: Levels 2-3 do a two-part self-check plus partner read (Phase 1), a frame revision with a
-    before/after pair (Phase 2), a clean copy with a labeled picture (Day 2 Phase 2), and two card sentences
-    (Phase 3), about the same minutes as Levels 4-5's checklist, table, note, and card.
-11. Counts: Level 4 and Level 5 sentence and word ranges are stated and counted by the student in Day 1 Phase 1
-    and again in Day 2 Phase 1; the before/after table rows are counted (at least one at Level 4, two at Level 5).
-12. Instructions complete inline; the Draft Word Bank and the before/after table precede the tasks that use
-    them.
+10. Time balance: Levels 2-3 read and request (Phase 1), write two more frames and choose (Phase 2), copy the
+    chosen sentence and write the hand-off (Day 2), and write two card sentences (Phase 3), about the same
+    minutes as Levels 4-5's three or four moves, table, copy, note, and card.
+11. Counts: three moves and three table rows at Level 4, four at Level 5, three frame sentences at Levels 2-3,
+    all stated; the sentence ceilings (6 and 9) are stated in the moves; no counting task is printed.
+12. Instructions complete inline; the Draft Word Bank precedes the upgrade move and the before/after table
+    sits inside the Task that fills it.
 13. Skill Spotlight named in Lesson 1 Day 1; the Closing Transfer Check here uses the same skill on a pen, an
     object no other lesson in the Set uses (Lesson 1 used two phone cases and a bag, watch, wallet, or shoes;
     Lesson 2 used an unnamed object in the room and then introduced the item; Lesson 3 drafted on the item);
     demonstration, not self-report.
-14. Board moment each day: the before/after board (Day 1), built on again with the pen instances (Day 2).
-15. Teaching precedes practice: no new teaching here; every checklist item names content from Lessons 1-2,
-    listed under "What this lesson works from."
-16. Adjacency: this lesson's protocol (self-revision with a before/after table, then a hand-off note and a
-    card-based Closing Transfer Check) differs from Lesson 3's (drafting and a closing-line read-aloud).
+14. Board moment each day: the before/after board of effect moves (Day 1), built on again with the pen
+    instances (Day 2).
+15. Teaching precedes practice: no new teaching here; every move uses a tool from Lessons 1-2, listed under
+    "What this lesson works from."
+16. Adjacency: this lesson's protocol (a reader's request, revision for effect with a before/after table,
+    a final copy, a hand-off note, a card-based Closing Transfer Check) differs from Lesson 3's (drafting, then
+    check-and-improve, then a closing-line read-aloud); no checklist is repeated across the two lessons.
 17. Oral protocol: no discussion protocol in this lesson; the cold-call has a written card first for every
     Level.
-18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.6.
+18. No em-dashes; pacing diagram per day; metadata line present with version 1.1.4.10.
 19. Self-contained: the item and the pen are the students' own; the Foundation Support card is written live by
     the teacher, not prepared; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the only thing needed from earlier is the carried draft; the Draft Word Bank
-    and before/after table are printed here.
-21. Concrete prompts: the hand-off note is marks on the draft plus a printed stem; the checklists are one per
-    Level, printed as one Task per star (Style Guide §F), and are yes/no
-    items with marks; no reflection question at any Level.
+    and before/after table are printed here; the reader's request is made in this lesson.
+21. Concrete prompts: every move is an action with a visible product (a joined sentence, a replaced word, an
+    added sentence, a moved sentence, a table row); the reader's request is one written line; the hand-off note
+    is marks plus a printed stem; no checklist and no reflection question at any Level.
 
 **Writing-specific (Lesson prompt 0.3):**
-1. Ceilings: each Level's completion target is stated in its own range and counted by the student before
-   hand-off.
-2. Regime: Levels 2-3 revise inside a fully provided frame; Levels 4-5 revise a single paragraph.
-3. Required feature: Level 4's checklist demands one comparison and one stated reason; Level 5's demands
-   logical order and one implied detail with no feeling word; the Closing Transfer Check demands the same on a
-   pen.
+1. Ceilings: each Level's sentence ceiling is stated inside its moves (stay inside 6 / 9) and checked by the
+   teacher on the final copy; word ranges stay the teacher's.
+2. Regime: Levels 2-3 write and choose among fully provided frames; Levels 4-5 revise a single paragraph.
+3. Required feature: Level 4's join move keeps the comparison and reason together in one sentence; Level 5's
+   reorder move enforces logical order and keeps the implied detail late; the Closing Transfer Check demands
+   the same features on a pen.
 4. Scenario: no Level 6+ in this band; no named reader needed.
-5. Focus A/B: the checklist names Focus A (comparatives, four reason words) and Focus B (compound sentences with
-   a comma; it's / its) explicitly; Level 5's hedge and concession items are its own row's content.
+5. Focus A/B: the join move is Focus B (and / but / so with a comma); the upgrade move draws on the Draft Word
+   Bank; Level 5's although option is its own row's content.
 6. Respectful Tiers: see shared item 4.
 7. Module verb, Pair-aware: Pair position 4; the shared piece exercises Describing only; Module 2's verb is
    covered at Lesson 8.
-8. Editing: the self-edit checklist sits at Lesson 4 Day 1 as 0.6 places it and names this Set's focuses and
-   required features; no Peer Editing at this position (Module Pair rule).
-9. Self-revision: a concrete mechanism (strikethrough on the draft, plus a before/after table) with its
-   template printed in the lesson's materials; required at Level 5 and used at every Level.
+8. Editing: the self-edit checklist ran once, at Lesson 3 Day 2, as 0.6 places it; this lesson does not repeat
+   it; a reader's request is not Peer Editing (no form), which waits for position 8 (Module Pair rule).
+9. Self-revision: a concrete mechanism (strikethrough on the draft, plus a before/after table) recording
+   revision for effect, not corrections, with its template printed in the packet; required at Levels 4-5, and
+   a choose-among-three move at Levels 2-3.
 10. Skill Spotlight, Pair-aware: this position closes Module 1's skill; Module 2's Spotlight comes at Lesson 5.
 11. Rotation: per the approved plan; no new Focus; the draft object is the one Lesson 2 Day 2 introduced.
-12. Content volume: a revision day, exempt from 0.4b's item minimums; governed by 0.2's targets and 0.6's
-    checklists, both stated.
+12. Content volume: a revision day, exempt from 0.4b's item minimums; governed by the stated number of moves
+    and 0.2's ceilings.
 13. Level 5 bridge: not applicable (no essay regime in this band).
-14. Paired tier: Level 5's eight-item checklist and two-row table are the heavier tier to Level 4's five-item
-    checklist and one-row table; Levels 2-3's frame revision is the lighter tier of the same before/after move,
-    built only from the Draft Word Bank and the frames.
+14. Paired tier: Level 5's fourth move (reorder) and four-row table are the heavier tier to Level 4's three
+    moves; Levels 2-3's write-two-more-and-choose is the lighter tier of the same revise-for-effect idea, built
+    only from the frames and the Draft Word Bank.
 15. Practice object vs draft object: every revision task works on the item draft; the Draft Word Bank, not
     the practice Word Bank, is reprinted; the Closing Transfer Check's pen is a third object.
 16. Self-contained across lessons; concrete prompts: see shared items 20-21.
