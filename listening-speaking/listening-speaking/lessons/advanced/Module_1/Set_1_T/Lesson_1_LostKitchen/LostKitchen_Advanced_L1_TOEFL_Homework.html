@@ -59,30 +59,36 @@
       .masthead {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 16px;
         text-align: left;
         margin-bottom: 20px;
       }
       .masthead h1 {
         font-size: 26px;
-        margin-bottom: 6px;
+        margin-bottom: 0;
       }
       .masthead-meta {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 4px;
-        margin-top: 4px;
+        gap: 2px;
+        margin-top: 0;
       }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 12px;
         font-weight: 700;
+        line-height: 1.25;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--ink);
         white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
       }
 
       .objective {
@@ -200,7 +206,7 @@
       <div class="masthead">
         <h1>The Lost Kitchen: TOEFL Homework Recording Script</h1>
         <div class="masthead-meta">
-          <span class="masthead-tag">Listening &amp; Speaking</span>
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
           <span class="masthead-tag">Advanced 1.1T.1.4</span>
         </div>
       </div>

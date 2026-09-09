@@ -78,17 +78,23 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 4px;
+        gap: 2px;
         margin-top: 0;
       }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;
         font-size: 12px;
         font-weight: 700;
+        line-height: 1.25;
         letter-spacing: .08em;
         text-transform: uppercase;
         color: var(--ink);
         white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
       }
 
       .objective {
@@ -343,8 +349,7 @@
       <div class="masthead">
         <h1>Unit 2A: Describing My Room</h1>
         <div class="masthead-meta">
-          <span class="masthead-tag">Writing</span>
-          <span class="masthead-tag">Describing</span>
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
           <span class="masthead-tag">Advanced 1.1.2.2</span>
         </div>
       </div>
@@ -530,6 +535,10 @@
 
       <div class="masthead masthead-later">
         <h1>Unit 2B: Describing My Room</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Advanced 1.1.2.2</span>
+        </div>
       </div>
       <p class="objective"><strong>Objective:</strong> I can describe something of my own by comparing it to
       something else and giving a real reason for the comparison.</p>

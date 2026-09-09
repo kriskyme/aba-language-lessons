@@ -60,6 +60,10 @@
         color: var(--ink);
       }
       .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 16px;
         text-align: left;
         margin-bottom: 20px;
       }
@@ -72,6 +76,28 @@
         margin-top: 60px;
         page-break-before: always;
         break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
       }
 
       .objective {

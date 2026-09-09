@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v2.4)
+# Passage Reading Student Print Formatting Prompt (v2.5)
 
 Companion to the Passage Reading Lesson Generation Prompt. Takes one completed 2-day lesson and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document covering both days, with
@@ -43,7 +43,8 @@ Style Guide §E's rows apply. Add these for a Reading lesson:
 One shared document for the whole class, every task Level inside it as a star-rated option. Label the two sessions
 Unit 1A and Unit 1B (or the lesson's own number: Unit 2A/2B, ...), folded into the section heading text itself
 ("Unit 1A: The Basilica That Refuses to Be Finished"), left-aligned, never as a separate divider. Task lettering
-restarts in Unit 1B. The masthead carries the modality label `Reading` (Style Guide §B, §I item 5).
+restarts in Unit 1B. Each masthead section carries the modality label `Reading` in its
+`.masthead-meta` stack (Style Guide §B, §I item 5).
 
 ### 2.2 Objective statement
 
@@ -147,7 +148,7 @@ of truth; deliver the HTML for review; content changes go into the `.md` and reg
 Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
 
 1. Section 1's Reading rows applied: no strategy or role names; paragraph letters and footnotes carried through?
-2. Unit 1A / Unit 1B labels folded into the headings, masthead label `Reading` (2.1)?
+2. Unit 1A / Unit 1B labels folded into the headings, both masthead sections carrying the label `Reading` (2.1)?
 3. Objective as a can-do statement before any warm-up, and Wrap It Up connecting back to it (2.2, 2.5)?
 4. Fact Finder and Cause & Effect merged into one Task where they covered the same content (2.3)?
 5. Worked-model box present between the Units if the objective is first tested in Unit 1B, stating its examples

@@ -61,17 +61,23 @@
     display:flex;
     flex-direction:column;
     align-items:flex-end;
-    gap:4px;
+    gap:2px;
     margin-top:0;
   }
   .masthead-tag{
     font-family:system-ui,-apple-system,sans-serif;
     font-size:12px;
     font-weight:700;
+    line-height:1.25;
     letter-spacing:.08em;
     text-transform:uppercase;
     color:var(--ink);
     white-space:nowrap;
+  }
+  .masthead-sep {
+    font-weight:400;
+    color:var(--rule);
+    padding:0 3px;
   }
 
   .objective{
@@ -393,8 +399,7 @@
   <div class="masthead">
     <h1>Unit 1A: A Grandmother's Kitchen</h1>
     <div class="masthead-meta">
-      <span class="masthead-tag">Reading</span>
-      <span class="masthead-tag">Describing</span>
+      <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Describing</span>
       <span class="masthead-tag">Intermediate</span>
     </div>
   </div>
@@ -554,6 +559,10 @@
 
   <div class="masthead masthead-later">
     <h1>Unit 1B: A Grandmother's Kitchen</h1>
+    <div class="masthead-meta">
+      <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Describing</span>
+      <span class="masthead-tag">Intermediate</span>
+    </div>
   </div>
 
   <div class="section-title">Warm-Up</div>

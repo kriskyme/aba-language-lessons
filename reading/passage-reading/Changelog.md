@@ -2,6 +2,7 @@
 
 | Date | Version | Summary |
 | --- | --- | --- |
+| 2026-09-09 | v2.5 (print) | Packet masthead meta is now two lines (modality `·` Module name / Band and version code, tighter `line-height`) and appears on the Unit _B masthead too, not the opening one only - see `shared/Changelog.md`'s Style Guide v2.24 entry. Packet prompt §2.1 and Section 5 item 2; all 8 packets swept. |
 | 2026-09-09 | — | Packet masthead title now bottom-aligns with the Band/version tag (`.masthead` `align-items: flex-end`, zero h1/meta margins) - see `shared/Changelog.md`'s Style Guide v2.23 entry. CSS synced into every packet under `lessons/`; no prompt change. |
 | 2026-09-09 | — | Packet masthead now carries the Module name as its second tag (`Describing`, `Narrating`), and the `.md` metadata line's Module field is `<N>, <Name>` - see `shared/Changelog.md`'s Style Guide v2.20 / Quality Standards v1.12 entry. No prompt change; all 8 packets swept in place (Kitchen and Yoyogi Park also gained the `.masthead-meta` stack and CSS they had lacked, Band only, no version code), Advanced `.md`s normalized from `1 (Describing)` |
 | 2026-09-09 | — | "Circle" and similar instruction verbs only when their targets are printed on the page; a stem-only choice is answered in writing ("Say which, and why") - see `shared/Changelog.md`'s Quality Standards v1.11 / Style Guide v2.19 entry. No prompt change. |

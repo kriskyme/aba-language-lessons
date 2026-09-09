@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.23)
+# Student Packet Style Guide (v2.24)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -120,17 +120,23 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 4px;
+  gap: 2px;
   margin-top: 0;
 }
 .masthead-tag {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 12px;
   font-weight: 700;
+  line-height: 1.25;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--ink);
   white-space: nowrap;
+}
+.masthead-sep {
+  font-weight: 400;
+  color: var(--rule);
+  padding: 0 3px;
 }
 
 .objective {
@@ -561,21 +567,36 @@ p {
 }
 ```
 
-The document's opening masthead (only - never a later `.masthead.masthead-later` heading) includes
-a `<div class="masthead-meta">` alongside the `h1`, holding exactly three stacked
-`<span class="masthead-tag">` lines, in this order:
+Every masthead in the document - the opening `.masthead` and each later
+`.masthead.masthead-later` - includes a `<div class="masthead-meta">` alongside its `h1`, with
+identical content in each, so a Unit _B page (which always starts its own printed sheet) identifies
+itself as fully as page 1 does. The stack holds exactly two `<span class="masthead-tag">` lines:
 
 1. That modality's plain class label (`Reading`, `Listening & Speaking`, or `Writing` - see each
-   lesson type's own Student Packet prompt §2.4 for which one).
-2. The lesson's Module name, plain and on its own (`Describing`, `Narrating`, ...), spelled exactly
-   as `Program_Conventions.md` §A names it. The name, never the number: the version code on the
-   next line already carries the number, and the name is what stays readable if Modules are ever
-   reordered. No `Module` prefix.
-3. The lesson's Band and its version code, combined as one space-separated string:
+   lesson type's own Student Packet prompt §2.4 for which one), then
+   `<span class="masthead-sep">&#183;</span>`, then the lesson's Module name plain and unprefixed
+   (`Describing`, `Narrating`, ...), spelled exactly as `Program_Conventions.md` §A names it. The
+   Module's name, never its number: the version code on the next line already carries the number,
+   and the name is what stays readable if Modules are ever reordered.
+2. The lesson's Band and its version code, combined as one space-separated string:
    `<Band> <Module>.<Set>.<Lesson>.<Version>` (e.g. `Advanced 1.1.1.0`). Band is plain language
    (`Beginner`, `Intermediate`, `Advanced`, or `Proficient`); the version code format is defined in
    `Program_Conventions.md` §G - the lesson number in it is the global one from
-   `Program_Conventions.md` §C, not restarted per Set.
+   `Program_Conventions.md` §C, not restarted per Set. A lesson that is unversioned by design
+   carries the Band alone.
+
+Two lines, not one per fact: three stacked tags made the meta block the tallest thing in the
+masthead, pushing the lesson's first content down the page.
+
+```html
+<div class="masthead">
+  <h1>Unit 3A: Saving the Key Deer</h1>
+  <div class="masthead-meta">
+    <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+    <span class="masthead-tag">Advanced 1.1.3.1</span>
+  </div>
+</div>
+```
 
 Nothing else sits on that stack (no "Class" or "Packet" suffix), and nowhere else in the document
 is there a Name/Date field, a subject/module kicker line, a subtitle line under any heading, or a
@@ -1099,9 +1120,10 @@ Run this list first, then the modality's own list.
    Standards §D1)
 4. Sessions labeled Unit _A / Unit _B (never "Day 1"/"Day 2"), folded into the heading text, task
    lettering restarting in each?
-5. Opening masthead only carries the three-tag `.masthead-meta` stack (modality label; Module name,
-   never its number; Band plus `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field,
-   kicker, subtitle, or footer?
+5. Every masthead, opening and later, carries the same two-line `.masthead-meta` stack (modality
+   label, a `.masthead-sep` dot, then the Module name, never its number; Band plus
+   `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field, kicker, subtitle, or
+   footer?
 6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
    instruction before the task list; one star per lettered Task, self-check lists included, with no
    star on a list item or two stars on a line; letters continuous; ascending order within a Task; no star
@@ -1150,5 +1172,5 @@ Run this list first, then the modality's own list.
 
 ## Changelog
 
-**Current version: v2.23.** For the full dated version history and the reasoning behind each
+**Current version: v2.24.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

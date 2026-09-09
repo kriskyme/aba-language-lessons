@@ -1,4 +1,4 @@
-# Academic Writing Student Print Formatting Prompt (v3.16)
+# Academic Writing Student Print Formatting Prompt (v3.17)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
 cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
@@ -50,9 +50,9 @@ Style Guide §E's rows apply. Add these:
 Each lesson is one self-contained file covering both days, laid out as two masthead sections: `.masthead` for Day
 1, `.masthead.masthead-later` for Day 2 (Style Guide §B), both under the same heading text, numbered by the
 lesson's **Set position** (1-4, not its global number) and lettered by day: "Unit `{N}A`: `{Title}`" / "Unit
-`{N}B`: `{Title}`". Never "Day 1"/"Day 2." Task lettering restarts at A in each section. The opening masthead
-carries the modality label `Writing` and the lesson's Band plus its version code, where `<Lesson>` is the global
-number (Style Guide §B). File name `{Topic}_{Band}_L{N}_Packet.html` in the lesson's folder (Conventions §D).
+`{N}B`: `{Title}`". Never "Day 1"/"Day 2." Task lettering restarts at A in each section. Both masthead
+sections carry the same `.masthead-meta` stack: the modality label `Writing` and the lesson's Band plus its
+version code, where `<Lesson>` is the global number (Style Guide §B). File name `{Topic}_{Band}_L{N}_Packet.html` in the lesson's folder (Conventions §D).
 
 **Self-containment across a shared Scenario:** every lesson's packet stands alone. Reprint whatever shared
 Scenario reference material (a Word Bank, a comparison table, an embedded image) either of this lesson's days actually
@@ -204,7 +204,7 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
 1. Section 1's Writing rows applied: no Focus, Scenario, regime, Mentor, ladder, required-feature, or
    activity-type language anywhere?
 2. One file, two masthead sections under one heading numbered by Set position, `Writing` label and global-number
-   version code on the opening masthead only; shared Scenario material this lesson needs reprinted (2.1)?
+   version code on both mastheads; shared Scenario material this lesson needs reprinted (2.1)?
 3. `Objective:` statement under both mastheads (2.2)?
 4. Every Task label alone on its own line, bare or with one informative clause; each star's instruction written
    as its own kind of task (2.4)?

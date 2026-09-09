@@ -1,4 +1,4 @@
-# Listening/Speaking TOEFL Track Tier Prompt (v1)
+# Listening/Speaking TOEFL Track Tier Prompt (v1.1)
 
 **What this generates:** a TOEFL-capable variant of an already-generated Listening/Speaking Set. It threads
 TOEFL-relevant skill practice through both days of each lesson (a teacher-narrated connection in Phases 1 and 3
@@ -128,7 +128,8 @@ response-time windows, no reference to the homework file.
 
 **2.5 Teacher-only homework file (D).** A separate, self-contained HTML file named
 `<TopicSlug>_<Level>_L<n>_TOEFL_Homework.html` in the lesson folder, reusing the base stylesheet, this modality's
-§H.1 classes, its own `.masthead-meta` two-tag masthead (same Band and `T` version code) and print button. Inside
+§H.1 classes, its own `.masthead-meta` masthead exactly as Style Guide §B specifies it (same Band and `T`
+version code) and print button. Inside
 one `.reader-copy` box headed via `.reader-warn` with "Teacher use only - recording script and scoring guide. Do
 not print or share with students.": brief instructions at the top (record one audio playback per item matching
 its response window, post to Teams, have students record their response there by an assigned date, score with the
