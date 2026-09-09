@@ -152,7 +152,7 @@ Context sentences (paraphrased from the source, not quoted verbatim):
     advocates give. Populate the T-chart from Phase 2 with two features per column, one comparison, one stated
     reason. **Respectful Tiers check:** also ask - "According to the segment, what does Adam Millsap say could
     happen to housing prices if preservation rules are too strict?" then "Do you think that's a fair concern, or
-    is it overstated? Circle one and say why" - a genuine simplified interpretive step, not fact-retrieval alone.
+    is it overstated? Say which, and why" - a genuine simplified interpretive step, not fact-retrieval alone.
   - **Level 5:** Summarize how the segment is organized and identify one evaluative word or phrase that
     signals admiration without anyone saying "this is great." Note the organizational flow segment by segment
     on the T-chart.

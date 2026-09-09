@@ -176,7 +176,7 @@ affordable, storm-resistant homes for displaced Lower Ninth Ward families; it is
     an academic voice) and identify one clearly evaluative word choice that signals a speaker's opinion without
     them stating it directly - for example, Rev. Calhoun's repeated "no... whatsoever." Note the organizational
     flow on the two-column organizer. **Respectful Tiers check:** also ask - "Based on his words, does Rev.
-    Calhoun sound hopeful or discouraged about the neighborhood's recovery? Circle one and quote the exact
+    Calhoun sound hopeful or discouraged about the neighborhood's recovery? Say which, and quote the exact
     words that show it." - a genuine simplified interpretive step, not fact-retrieval alone.
   - **Level 6:** List two stated facts (over $500 million in public and private investment has reached the
     neighborhood; the population is roughly half of what it was before Katrina) and two clearly-signaled

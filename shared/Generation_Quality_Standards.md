@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.10)
+# Generation Quality Standards (v1.11)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -111,11 +111,16 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    tonal shift," no "(a 'quiet little cafe')" after "what she originally planned." In a two-source comparison
    item, the material printed for each source is that source's own words or a neutral paraphrase of what it
    says, never a characterization of its tone or a statement of the contrast the question asks for. A
-   parenthetical in a stem is limited to a format instruction ("2-3 sentences," "circle one"), a choice menu
+   parenthetical in a stem is limited to a format instruction ("2-3 sentences," "circle one" when options are printed, C10), a choice menu
    in which no option is the answer, or a gloss of a word the item does not test. A frame model at a
    fixed-form Level ("It is ___." shown once as "It is soft.") models the form, not the answer, and is not
    covered by this rule. The teacher's exemplar answer belongs on an `Answer note:` line (E2), never in the
    stem.
+10. **An instruction names an action the page allows.** "Circle," "underline," "match," "cross out," and
+    "point to" appear only when the thing to be circled, underlined, matched, crossed out, or pointed to is
+    printed on the page. A two-way choice that exists only in a stem's wording ("Is she being modest, or does
+    she really believe it?") is answered in writing, "Say which, and why," or its options are printed as an
+    inline menu the student can mark. Never "Circle one and say why" over a plain answer line.
 
 ## D. Lesson shape
 
@@ -274,7 +279,9 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     production plus other shapes? (D10)
 23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find,
     and every exemplar answer sits on an `Answer note:` line under its item? (C9, E2)
+24. Every "circle," "underline," "match," or "point to" instruction has printed options or targets on the
+    page, and every choice posed only in a stem's wording is answered in writing or given a printed menu? (C10)
 
 ## Changelog
 
-**Current version: v1.10.** See `Changelog.md` in this folder.
+**Current version: v1.11.** See `Changelog.md` in this folder.

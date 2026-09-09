@@ -139,7 +139,7 @@ Context sentences (paraphrased from the source, not quoted verbatim):
     originally planned, and the stated reason things turned out differently. Populate
     the T-chart from Phase 2 with two features per column, one comparison, one stated reason. **Respectful
     Tiers check:** also ask - "According to the segment, why doesn't French call herself a 'chef'?" then "Do you
-    think she's being modest, or does she really believe it? Circle one and say why" - a genuine simplified
+    think she's being modest, or does she really believe it? Say which, and why" - a genuine simplified
     interpretive step, not fact-retrieval alone.
     - **Answer note:** what she originally planned: a "quiet little cafe."
   - **Level 5:** Summarize how the segment is organized and identify one evaluative word that signals

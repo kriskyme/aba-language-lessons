@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.18)
+# Student Packet Style Guide (v2.19)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -750,7 +750,10 @@ packet's frame-regime Tasks also follow Quality Standards §D10: a section that 
 complete-the-frame Task twice for one star is a source-document error to report, not a layout to reproduce.
 
 **Multiple choice.** Options fold into the question as an inline parenthetical list, one instruction line
-at the top of the task block, no repeated verb per item and no option-per-line layout. This is the one
+at the top of the task block, no repeated verb per item and no option-per-line layout. A "circle one"
+lead appears only above such a printed list; an item whose two choices sit only in the stem's wording
+either prints them as the inline list or reads "Say which, and why" over its answer lines, never "Circle
+one" (Quality Standards §C10). This is the one
 stem parenthetical that may carry source content; every other parenthetical in a stem is limited by
 Quality Standards §C9 (format, a choice menu with no correct option, or an untested gloss), and a
 two-source compare layout prints each source's own content, never its tone or the contrast asked for. A genuinely
@@ -1059,7 +1062,8 @@ Run this list first, then the modality's own list.
    "fix"; every multi-step Task a one-sentence lead plus numbered steps, check items as questions? (§F)
 7. Every teaching callout before the tasks that depend on it? (§F)
 8. Every standalone question numbered; every bank, frame, starter, or model placed before the items it
-   serves; multiple choice inline with one top instruction line; picture items with embedded images and no
+   serves; multiple choice inline with one top instruction line, no "circle" instruction without a printed
+   list; picture items with embedded images and no
    empty placeholder or "[TEACHER: insert ...]" note anywhere? (§F)
 9. Stems listed alone, no coaching notes? (§F)
 10. Callout boxes reserved for genuine spotlights; word banks using only the light dashed-rule exception
@@ -1094,5 +1098,5 @@ Run this list first, then the modality's own list.
 
 ## Changelog
 
-**Current version: v2.18.** For the full dated version history and the reasoning behind each
+**Current version: v2.19.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.
