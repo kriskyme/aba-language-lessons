@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v2.3)
+# Listening/Speaking Lesson Generation Prompt (v2.5)
 
 **Lesson type:** a **Listening/Speaking Lesson** is a fixed 2-day cycle (Day 1 Listening, Day 2 Speaking; two
 75-minute periods) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -13,7 +13,7 @@ rule, plus the shared self-check) alongside it. This prompt states only what is 
 listening/speaking lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with
 the real source as the content vehicle.
 
-**Current version: v2.3.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Advanced band, Module 2: Narrating"); a topic direction is
 optional. Without a Module/Band pair, do not search for a source. Live web search is required to find and confirm
@@ -148,7 +148,13 @@ fit.
    unlikely to be common knowledge at the band and not explained by the source itself, add a short, sourced
    "Background Note" callout (one or two plain sentences inside the Level's register ceiling). Occasional (1-3
    per lesson), informational only, never the basis of an item.
-7. **Standalone transcript file.** Save `<Slug>_Transcript.md` in the lesson's folder, holding the source's full
+7. **A two-source task prints both sources' words in the `.md`.** Where a task Level's objective needs two
+   real sources on the same subject (Level 7's typically does), the `.md` itself carries each source's own
+   words, paired subject by subject, in the quantity Quality Standards §C9 sets - not a sentence naming what
+   each source covers, and never an instruction telling the student to go notice the evidence themselves. The
+   packet is a regeneration of the `.md`, so whatever the `.md` omits here cannot appear in the packet. Both
+   sources are verified and cited per items 1-2, and both are subject to item 4's fair-use ceiling.
+8. **Standalone transcript file.** Save `<Slug>_Transcript.md` in the lesson's folder, holding the source's full
    real transcript or captions as close to verbatim as is obtainable, headed by the same citation block as the
    lesson. It is exempt from item 4's ceiling because it is a teacher-only working reference: never printed in,
    derived into, or surfaced in the student packet. If a genuine full transcript cannot be retrieved (only
@@ -174,10 +180,11 @@ bank; Conventions §F for the cross-Set rule). These banks are starting points a
 - **Pronunciation features (Day 2, Phase 3):** content-word stress; thought-group pausing; linking; rising and
   falling intonation for questions vs. statements; contrastive stress; reduced forms in fast speech
   (Advanced/Proficient only).
-- **Phase 1 hooks:** Visual Inquiry, Four-Corner Debate, Mystery Quote, K-W-L Walk.
-- **Oral output protocols (Day 2, Phase 4):** Town Hall, Fishbowl, Concentric Circles/Speed-Dating, Jigsaw Expert
-  Panels, small-group carousel; each with 2-3 rotated prompts and an active task for every non-speaker (Quality
-  Standards §D7).
+- **Phase 1 hooks:** Visual Inquiry, Take a Side, Mystery Quote, K-W-L Chart.
+- **Oral output protocols (Day 2, Phase 4):** Town Hall, Panel Round, Rotating Partners, Jigsaw Expert Panels,
+  small-group discussion; each with 2-3 rotated prompts and an active task for every non-speaker (Quality
+  Standards §D7). Every hook and protocol runs from where students sit: no facing circles, corners, stations,
+  or anything posted around the room (Quality Standards §D11).
 
 ### 0.5 Self-check before finalizing
 
