@@ -79,6 +79,14 @@ generic artifact).
 **Approved 2026-09-01.** Logged to `Rotation_Log_Advanced.md`. Step 2 (lesson
 generation) is underway. Lesson 1 generated: see `Set_1/Lesson_1_LostKitchen/Lesson1_LostKitchen.md`.
 
+**Set 1 complete (Lessons 1-4) with its assessment generated. Set 2 opened 2026-09-10:** Lesson 5 generated
+(`Set_2/Lesson_5_HighLine/Lesson5_HighLine.md`, version `1.2.5.0`), on New York's High Line. Lesson 5's Level 7
+pairing departs from this plan's suggested second-source angle for that row (the city planning department's
+description against a resident or journalist's account): no verifiable pair of spoken sources on one project
+supported it, so the lesson pairs the park's landscape architect against the co-founder of the group that saved
+the structure, which the same Level 7 objective is satisfied by. Every other column of the Lesson 5 row is as
+planned. **Lesson 6 generated 2026-09-10** (`Set_2/Lesson_6_GodsAndGoddesses/Lesson6_GodsAndGoddesses.md`, version `1.2.6.0`), on the Museum of Fine Arts, Boston's rebuilt galleries of ancient Greek, Roman and Byzantine art. Lesson 6 follows this plan's suggested second-source angle for its row exactly (the museum's own account against an art critic's review), so nothing to reconcile there; it is the first lesson in this Band to embed an image, which opened the Set's `Set2_Advanced_Image_Credits.md`. **Lesson 7 generated 2026-09-10** (`Set_2/Lesson_7_QuietZone/Lesson7_QuietZone.md`, version `1.2.7.0`), on the National Radio Quiet Zone and the Green Bank Telescope; it follows this plan's suggested second-source angle for its row exactly (the institution's own account against an independent journalist's feature), so nothing to reconcile there. **Lesson 8 generated 2026-09-10** (`Set_2/Lesson_8_Lesage/Lesson8_Lesage.md`, version `1.2.8.0`), on Maison Lesage in Paris, **completing Set 2**. Lesson 8 departs from this plan's suggested second-source angle for its row (the brand's official video against an independent journalist's profile): no Chanel-side page could be retrieved to quote from, so the second source is a second journalist on the same house, recorded in the lesson and the rotation log. With Set 2 complete, the remaining step for this Module and Band is the Set 2 assessment.
+
 ### Rotation Log entry (ready to append once approved)
 
 ```

@@ -19,10 +19,10 @@ lessons of this Set have now been generated.
 
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic |
 |---|---|---|---|---|---|---|
-| 1 | Feature-style article | Close Reading with Annotation | Visual Inquiry | Fishbowl | Architecture & ornamentation | La Sagrada Família basilica in Barcelona |
-| 2 | Short story | Reciprocal Teaching | K-W-L Walk | Jigsaw | Metalworking & forging | A Japanese swordsmith's forge |
+| 1 | Feature-style article | Close Reading with Annotation | Visual Inquiry | Panel Round | Architecture & ornamentation | La Sagrada Família basilica in Barcelona |
+| 2 | Short story | Reciprocal Teaching | K-W-L Chart | Jigsaw | Metalworking & forging | A Japanese swordsmith's forge |
 | 3 | Opinion-editorial | Think-Aloud Modeling | Mystery Quote | Town Hall | Music & analog sound | The resurgence of vinyl record shops |
-| 4 | Interview-profile | Reader's Theater | Four-Corner Debate | Concentric Circles | Coastal-lighthouse life | A keeper's account of Portland Head Light, Maine |
+| 4 | Interview-profile | Reader's Theater | Take a Side | Rotating Partners | Coastal-lighthouse life | A keeper's account of Portland Head Light, Maine |
 
 Note: Lesson 1 uses Fishbowl and Lesson 4 uses Concentric Circles. Per the Lesson Generation Prompt's v2.7
 correction (Section 0.10), both are fully valid at this program's class size once scaffolded with an explicit
@@ -51,3 +51,14 @@ for Set 2 onward. If this Module already has a section above, append this Set as
 rather than creating a duplicate `## Module N` heading. `Version` is new as of 2026-09-07 -
 `shared/Program_Conventions.md` §G - and only applies from this Set onward; bump a lesson's own Iteration
 digit in place here whenever that lesson is substantively revised after generation.)
+
+---
+
+**Protocol and hook names made room-neutral (2026-09-10).** Quality Standards §D11 retired every hook and
+protocol that required rearranging the room. The table rows above carry the new names, and all four affected
+lessons were rewritten to match in the same pass: Lesson 1's Fishbowl became a **Panel Round** (speakers take
+turns from their seats, listeners keep the same tally task), Lesson 4's Concentric Circles became **Rotating
+Partners** (find a new partner per prompt) and its Four-Corner Debate became **Take a Side** (the four options
+printed in the packet and circled, with a show of hands for the board tally), and Lesson 2's hook was renamed
+K-W-L Walk -> **K-W-L Chart**, which is a rename only: it already built the chart on the board with nobody
+leaving their seat. The old-to-new mapping is in Listening/Speaking's `Rotation_Log.md`.

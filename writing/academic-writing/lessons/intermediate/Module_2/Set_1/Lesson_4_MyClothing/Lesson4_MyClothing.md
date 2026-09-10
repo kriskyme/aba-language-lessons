@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4 (Module 2)
 
-**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.4.0
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.4.1
 
 **Set:** 1 of Module 2 (Part 2 of Module Pair 1-2) | **Pair position:** 8 of 8 (Set position 4 of 4: assemble
 the whole piece, Peer Editing on both Modules' features, revise for effect with Module 2's tools, publish;
@@ -158,7 +158,7 @@ last). The board stays up for Day 2.
 0                    25                    50                   75  (minutes)
 |-------Phase 1-------|-------Phase 2-------|-------Phase 3------|
 | Final copy of the   | Publish / share     | Closing Transfer   |
-| whole piece         | (gallery walk)      | Check + share      |
+| whole piece         | (read two pieces)   | Check + share      |
 ```
 
 ### Phase 1: Final copy of the whole piece (25 min)
@@ -171,13 +171,12 @@ circulation check is that each Day 1 table row shows up in the copy and that the
 
 ### Phase 2: Publish / share (25 min)
 
-The piece is genuinely finished. **Gallery walk:** every final copy lies open on its desk. Students walk with a
-small card and stop at two pieces that are not their partner's; at each, they read the whole piece and write
-on their card one line, by Level: Levels 2-3, one word they learned about that item and one verb from the
+The piece is genuinely finished. **Pass and read:** every final copy is passed to a neighbor, read, then passed
+on again, so each student reads two pieces that are not their partner's without leaving their seat. At each,
+they write on their card one line, by Level: Levels 2-3, one word they learned about that item and one verb from the
 story; Levels 4-5, one thing they now know about the item that they could not have guessed from the title.
-Then, back in seats, three or four writers are cold-called to read their favorite sentence from their own
-piece aloud, one per Level where possible. Nothing is collected for grading; the copies go home or onto the
-class wall.
+Then three or four writers are cold-called to read their favorite sentence from their own
+piece aloud, one per Level where possible. Nothing is collected for grading; the copies go home.
 
 ### Phase 3: Closing Transfer Check (25 min)
 
@@ -230,7 +229,7 @@ key and a morning that it saw on a piece of clothing.
 4. Respectful Tiers: Levels 2-3 answer a reader with one new frame sentence and choose the better of two (a
    genuine judgment), publish a real two-line piece, and write on two new prompts.
 5. Live oral work: the Peer Editing form is written (Levels 2-3's is a rehearsed read with two written words);
-   the gallery walk gives every Level a card task; the cold-call has a written card first; Foundation Support
+   the pass-and-read gives every Level a card task; the cold-call has a written card first; Foundation Support
    is placed alongside Level 2 in Phase 2.
 6. Item distinctness: the three (four) moves are different in kind (join, upgrade, add, reorder) and none
    repeats Lesson 3 Day 2's check items; the two Transfer Checks test the combined skill and Module 2's skill
@@ -242,7 +241,7 @@ key and a morning that it saw on a piece of clothing.
    that piece.
 9. Padded banks: the Draft Word Bank has 32 words for one- or two-verb choices; no matching lists.
 10. Time balance: Levels 2-3 assemble and trade (Phase 1), write the reader's frame and choose (Phase 2), copy
-    two lines and walk the gallery (Day 2), and write two card sides, about the same minutes as Levels 4-5's
+    two lines and read two passed pieces (Day 2), and write two card sides, about the same minutes as Levels 4-5's
     moves, table, copy, and cards.
 11. Counts: three moves and three table rows at Level 4, four at Level 5, two past sentences at Levels 2-3, all
     stated; the sentence ceilings (6 and 9 per paragraph) are stated in the moves; no counting task is printed.
@@ -256,10 +255,10 @@ key and a morning that it saw on a piece of clothing.
 15. Teaching precedes practice: no new teaching here; every move uses a tool listed under "What this lesson
     works from."
 16. Adjacency: this lesson's protocol (assemble, a Peer Editing form, revision for effect with a table, a
-    gallery walk, two card checks) differs from Lesson 3's (drafting, then check-and-improve, then a
+    pass-and-read, two card checks) differs from Lesson 3's (drafting, then check-and-improve, then a
     closing-line read-aloud); no checklist is repeated.
-17. Oral protocol: the gallery walk has a per-Level card task; the cold-call has a written card first.
-18. No em-dashes; pacing diagram per day; metadata line present with version 2.1.4.0.
+17. Oral protocol: the pass-and-read has a per-Level card task; the cold-call has a written card first.
+18. No em-dashes; pacing diagram per day; metadata line present with version 2.1.4.1.
 19. Self-contained: the item, the key, and the morning are the students' own; the Foundation Support card is
     written live; no prop, picture, or card the teacher prepares.
 20. Self-contained across lessons: the two parts are the carried piece; the Draft Word Bank, the form, and the

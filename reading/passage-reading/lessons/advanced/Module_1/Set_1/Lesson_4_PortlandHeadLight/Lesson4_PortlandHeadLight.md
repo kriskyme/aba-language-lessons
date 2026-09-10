@@ -3,10 +3,10 @@
 **Module:** 1, Describing | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
 **Task Levels this lesson:** 4 (extension-down), 5 and 6 (native), 7 (extension-up)
 **Genre:** Interview-profile piece | **Reading Strategy:** Reader's Theater
-**Phase 1 Hook:** Four-Corner Debate | **Phase 3 Protocol:** Concentric Circles
+**Phase 1 Hook:** Take a Side | **Phase 3 Protocol:** Rotating Partners
 **Vocabulary Theme:** Coastal-lighthouse life (beacon, keeper, foghorn, shoal, isolated, vigil)
 **Topic:** A keeper's account of Portland Head Light, Maine
-**Version:** 1.1.4.0
+**Version:** 1.1.4.1
 
 Generated per `Generate_Lesson_Prompt_v2.8.md`, following the approved
 `Module1_Advanced_Lesson_Plan.md`, Lesson 4 row.
@@ -39,11 +39,11 @@ DAY 1 PACING
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Four-Corner Debate hook (board-dependent, 5 min):** Post this statement where all four corners of the room can
-see it: "A machine can do a lighthouse keeper's job just as well as a person." Label the four corners Strongly
-Agree, Agree, Disagree, Strongly Disagree. Students move to the corner matching their view. Build a live tally on
-the board as each corner is counted (do not pre-fill any numbers). After reading, return to the board and check
-which corner's reasoning comes closest to what the keeper in the interview actually says.
+**Take a Side hook (board-dependent, 5 min):** Read this statement: "A machine can do a lighthouse keeper's job
+just as well as a person." Students circle Strongly Agree, Agree, Disagree, or Strongly Disagree in their packet.
+Take a show of hands per option and build a live tally on the board as each is counted (do not pre-fill any
+numbers). After reading, return to the board and check which option's reasoning comes closest to what the keeper
+in the interview actually says.
 
 **Skill Spotlight (2 min):** "Today we're practicing describing a job by comparing how it used to be done to how
 it's done now, and giving a clear reason for the comparison, the way the keeper compares her nightly routine to
@@ -135,7 +135,7 @@ counted.
 > ¹ Portland Head Light was commissioned by George Washington in 1791, making it the oldest lighthouse in Maine;
 > it is now automated and sits inside Fort Williams Park in Cape Elizabeth.
 
-**Board-dependent moment (Phase 1, satisfies Section 0.7):** After reading, return to the Four-Corner Debate tally
+**Board-dependent moment (Phase 1, satisfies Section 0.7):** After reading, return to the Take a Side tally
 collected on the board during the hook. As a class, check each corner's reasoning against Paragraphs [D]-[E]:
 whose original reasoning comes closest to what the keeper actually says a machine can and cannot do? This only
 exists once the class's own tally is on the board to check.
@@ -250,12 +250,12 @@ the text can you see that interest working even though it's never stated directl
 build a shared "Then (Keeper) / Now (Machine)" T-chart on the board, adding one entry per group. No single
 group's own notes contain the complete picture; it exists only once every task Level has reported in.
 
-### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Concentric Circles
+### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Rotating Partners
 
-Form two circles of equal size, facing partners. Each pair discusses the current prompt for 2-3 minutes, then the
-outer circle rotates one seat to form new pairs for the next prompt. Both circles talk at once, so every student
-is active throughout; advance to the next prompt at each rotation (roughly every 8-10 minutes across the 25-30
-minute window) rather than discussing one prompt the whole time:
+Students pair up from where they sit. Each pair discusses the current prompt for 2-3 minutes, then each student
+finds a new partner for the next prompt. Everyone talks at once, so every student is active throughout; advance
+to the next prompt at each changeover (roughly every 8-10 minutes across the 25-30 minute window) rather than
+discussing one prompt the whole time:
 
 1. Describe the keeper's job. How does it compare to what happens at the lighthouse today? Use one specific
    detail from the text to support your description.
@@ -274,16 +274,16 @@ minute window) rather than discussing one prompt the whole time:
 
 **Differentiated participation (Section 0.8, Part B):** The Level 4 student does not take an on-demand turn with
 a new partner at every rotation alongside the higher task Levels. Instead: before the first rotation, they
-rehearse their stem once, quietly, with a same-circle partner, and get a thumbs-up, so their first pairing is
+rehearse their stem once, quietly, with a partner, and get a thumbs-up, so their first pairing is
 already a repetition, not a cold performance. Alternatively, if the teacher judges the student needs more support
 that day: for the first rotation, they take a listening/tracking role - a tally sheet marking how many times
 their partner says "alone" versus "machine" as a reason for how the job changed - with one fully-prepared
-sentence to contribute once they do rotate in.
+sentence to contribute once they move to a new partner.
 
 **Foundation Support (for a student functioning below Level 4's own floor):** Provide a picture card set showing
 a lighthouse tower, a keeper figure, and a sensor/machine icon. The student's Phase 3 role is physical, not
 spoken: they hold up the picture card that matches whatever is currently being discussed by their partner, and,
-during the Four-Corner Debate from Day 1, they can move to whichever corner a partner points them to rather than
+during Day 1's Take a Side, they can circle whichever option a partner points them to rather than
 explaining their reasoning aloud. Pair this student with a peer buddy throughout Phase 2's matrix work as well.
 
 **Closing Transfer Check (5 min, ends Phase 3):** In pairs, every student produces one new instance of the Day 1
@@ -293,7 +293,7 @@ word ___ to show how I feel about this, without saying it directly." Say it out 
 cold-calls 2-3 pairs to share aloud. Nothing is collected or graded.
 
 **Board-Dependent Moment Rotation note:** this lesson places its two board-dependent moments in Phase 1 (Day 1,
-the Four-Corner Debate tally-and-check) and Phase 2 (Day 2, the Then/Now T-chart built from group report-backs),
+the Take a Side tally-and-check) and Phase 2 (Day 2, the Then/Now T-chart built from group report-backs),
 rotating the required slot away from Lesson 3's Phase 1 + Phase 3 pairing and keeping the slot genuinely varied
 across this Set's four cycles.
 
@@ -332,9 +332,9 @@ across this Set's four cycles.
     Lesson 3's genre (opinion-editorial).
 11. **Module-objective alignment:** every task Level's questions trace to Describing (features, comparisons,
     stated reasons, organization, evaluative word choice, register shift, rhetorical framing) - none drift into
-    Arguing (a verdict on whether automation "should" have happened) or Evaluating; the Concentric Circles
+    Arguing (a verdict on whether automation "should" have happened) or Evaluating; the Rotating Partners
     discussion prompts stay description-and-comparison-focused, not policy verdicts.
-12. **Board-dependent moment:** two genuine instances - Phase 1's live Four-Corner Debate tally (built from
+12. **Board-dependent moment:** two genuine instances - Phase 1's live Take a Side tally (built from
     student movement/call-outs before reading, checked against the text afterward) and Phase 2's live Then/Now
     T-chart (synthesizes each group's distributed findings; no single group's notes contain the full picture).
 13. **Skill Spotlight / Closing Transfer Check:** Day 1 Phase 1 names the skill in plain language (comparison-
@@ -354,8 +354,8 @@ across this Set's four cycles.
 17. **Task Levels by band table applied correctly:** exactly 4 task Levels (Advanced band), each citing the
     correct CSV Level's Reading objective as quoted in the table above, not an invented difficulty curve.
 18. **Phase 3 discussion format (Section 0.10):** three distinct discussion prompts are rotated through at every
-    partner rotation, not one static prompt for the full window. Concentric Circles needs no outer-circle task
-    under Section 0.10, since both circles are paired and active by design; it still gets the same 2-3-prompt
-    treatment as Fishbowl.
+    partner changeover, not one static prompt for the full window. Rotating Partners needs no listener task
+    under Section 0.10, since everyone is paired and active by design; it still gets the same 2-3-prompt
+    treatment as a Panel Round.
 
 Self-check passed.

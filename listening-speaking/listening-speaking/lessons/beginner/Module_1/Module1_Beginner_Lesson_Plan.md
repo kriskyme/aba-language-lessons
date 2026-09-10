@@ -32,8 +32,10 @@ source the way it is at higher bands.
 
 Every topic points to a real, findable category of graded-for-absolute-beginners video (a
 labeled-object clip, a simple routine clip) rather than a generic invented scene. Passage Reading's
-own `lessons/beginner/` is currently empty, so there is no cross-lesson-type topic overlap to avoid
-either.
+own Beginner Set 1 has since been planned (school-bag labels, a beach postcard, a fruit stand, a
+lost-cat notice), and none of its four topics overlaps this Set's, so there is still no
+cross-lesson-type topic overlap to avoid. (Corrected 2026-09-10: this paragraph previously said
+Passage Reading's `lessons/beginner/` was empty, which was true when the plan was approved.)
 
 ## Plan table
 
@@ -41,24 +43,72 @@ either.
 
 | #   | Topic Direction                                                                    | Content Format                                    | Listening Strategy                     | Speaking Skill              | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                | Version |
 | --- | ----------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------- | ---------------------------- | ------------------- | ------------------- | --------------------------------- | ------- |
-| 1   | A single familiar everyday object, shown and named (e.g. a fruit, a clothing item)  | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist              | Giving Examples phrases      | Visual Inquiry      | Fishbowl            | Common everyday objects           | 1.1.1.0  |
-| 2   | A simple daily routine shown step by step (e.g. a morning routine)                  | Simple routine clip                                | Listen for Sequence Markers             | Sequencing Language          | K-W-L Walk          | Jigsaw               | Daily routine actions             | 1.1.2.0  |
-| 3   | A family member introduced by a child or narrator                                   | Family-introduction clip                           | Recognize Examples                      | Asking for Clarification     | Four-Corner Debate  | Town Hall           | Family members & relationships    | 1.1.3.0  |
-| 4   | Colors and shapes of common items, shown and named                                  | Colors/shapes labeling clip                        | Predict from Context Before Confirming  | Making Comparisons           | Mystery Quote       | Concentric Circles  | Colors & shapes                   | 1.1.4.0  |
+| 1   | A single familiar everyday object, shown and named (e.g. a fruit, a clothing item)  | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist              | Giving Examples phrases      | Visual Inquiry      | Panel Round         | Common everyday objects           | 1.1.1.0  |
+| 2   | A simple daily routine shown step by step (e.g. a morning routine)                  | Simple routine clip                                | Listen for Sequence Markers             | Sequencing Language          | K-W-L Chart         | Jigsaw               | Daily routine actions             | 1.1.2.0  |
+| 3   | A family member introduced by a child or narrator                                   | Family-introduction clip                           | Recognize Examples                      | Asking for Clarification     | Take a Side         | Town Hall           | Family members & relationships    | 1.1.3.0  |
+| 4   | The right size and style of everyday clothes, tried on and judged                    | Try-on / choosing-clothes clip                     | Predict from Context Before Confirming  | Making Comparisons           | Mystery Quote       | Rotating Partners   | Sizes & fit                       | 1.1.4.0  |
+
+**Room-neutral names (2026-09-10).** This plan was approved before Quality Standards §D11, so its
+Phase 1 hook and Phase 3 protocol columns originally named four activities that §D11 has since
+retired. The table above carries the current names; see `Rotation_Log.md` for the mapping used.
+
+**Note on colour (added 2026-09-10, Style Guide v2.27 §A.2).** No item may be answered by reading a
+chromatic colour off a printed picture, because every packet prints in grayscale. Lesson 4's row was
+therefore moved off colour, first onto "shapes and sizes" and then, at generation, onto **sizes and
+fit**, once it turned out that no A1 shapes clip with a verifiable transcript could be confirmed
+(Oxford's shapes song is JavaScript-gated and returns an empty page body; PBS's is 1:57 and ideal
+but prints no transcript and exposes no caption file). The source that could be verified carries
+size and fit language instead, so the row's topic direction, content format, and vocabulary theme
+now read accordingly. Build
+picture items on size, shape, quantity, texture, pattern, or setting; black, white, and grey are
+fine. Colour may still appear in a vocabulary list, in the clip's own words, or in a spoken task
+where the student describes their own belonging - just never as what a picture item is answered
+with. The full rule lives in `shared/Student_Packet_Style_Guide.md` §A.2 and is not restated here.
+Passage Reading's Beginner plan made the same move for the same reason.
 
 **Phase 3 scaffolding note:** per the same lesson the Intermediate plan already learned from,
-Fishbowl (Lesson 1) and Concentric Circles (Lesson 4) are valid at a realistic class size (8-12
+Panel Round (Lesson 1) and Rotating Partners (Lesson 4) are valid at a realistic class size (8-12
 students) only when every seat has an explicit active task and the protocol rotates through 2-3
 discussion prompts rather than running one static prompt for the whole window. Apply this at Step 2
 generation from the start.
+
+## Fixed-output task shapes by slot (Section 0.6)
+
+All three of this Band's task Levels are fixed-output frames (Level 1's point-or-name, Level 2's
+one-slot frame, Level 3's two-slot frame), so the form itself never varies and the activity around
+it has to. Quality Standards §D10 and the Lesson prompt's Section 0.6 cap the form at once per
+lesson day and require every other Level 1-2 item to take a different shape, with no shape twice in
+one lesson and no shape in the same slot as the previous lesson. This table fixes that assignment
+across Set 1 so each lesson can be checked against the plan rather than against its neighbours.
+
+| Slot | Lesson 1 | Lesson 2 | Lesson 3 | Lesson 4 |
+| ---- | -------- | -------- | -------- | -------- |
+| Day 1 Phase 2 (listen-for purpose) | Choose what was heard | Choose what was heard | Choose what was heard | Choose what was heard |
+| Day 1 Phase 4 (the day's production) | Point or name | Point or name + Fix the wrong word | Point or name | Point or name + Fix the wrong word |
+| Day 1 Phase 5 | Transfer | Transfer | Transfer | Transfer |
+| Day 2 Phase 1 | Fix the wrong word | - | Fix the wrong word | - |
+| Day 2 Phase 2 (the day's production) | Better of two | Say from sound | A partner's object | Better of two |
+| Day 2 Phase 3 | Say from sound | - | Say from sound | - |
+| Day 2 Phase 4 | - | A partner's object | - | A partner's object |
+| Day 2 Phase 5 | Transfer | Transfer | Transfer | Transfer |
+
+Three of the seven shapes have exactly one legal slot in Section 0.6's bank - Choose what was heard
+(Day 1 Phase 2), Point or name (Day 1 Phase 4), and Transfer (Day 1 Phase 5 and Day 2 Phase 5) - so
+those rows repeat across the Set by design, and the no-same-slot-twice-running rule bites only on
+the four shapes that have a choice of slot. Those four alternate: Fix the wrong word sits at Day 2
+Phase 1 in Lessons 1 and 3 and rides alongside the Day 1 Phase 4 production in Lessons 2 and 4; Say
+from sound, Better of two, and A partner's object rotate through Day 2 Phases 2-4 so no lesson
+repeats its predecessor's shape in the same slot. No shape appears twice within one lesson (Transfer
+excepted, which the bank itself assigns to both days' Phase 5). The frame prints once per day, in
+the first task that uses it.
 
 ## Self-check
 
 - **Content format, listening strategy, and speaking skill variety:** all four choices in each of
   the three columns are used exactly once across Set 1's four lessons - full variety, no adjacent
   repeats.
-- **Phase 1/Phase 3 rotation:** both 4-option banks (Visual Inquiry/K-W-L Walk/Four-Corner
-  Debate/Mystery Quote; Fishbowl/Jigsaw/Town Hall/Concentric Circles) are each used exactly once,
+- **Phase 1/Phase 3 rotation:** both 4-option banks (Visual Inquiry/K-W-L Chart/Take a
+  Side/Mystery Quote; Panel Round/Jigsaw/Town Hall/Rotating Partners) are each used exactly once,
   no adjacent repeats.
 - **Topic/vocabulary overlap:** all 4 topic directions and all 4 vocabulary themes are distinct
   from each other, and from anything already generated elsewhere in the repo (nothing yet exists
@@ -90,8 +140,8 @@ fresh by this plan's approval). **Set 1 status: planned; Lesson 1 generation in 
 ### Set 1 (planned 2026-09-07)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist | Giving Examples phrases | Visual Inquiry | Fishbowl | Common everyday objects | A single familiar everyday object, shown and named | 1.1.1.0 |
-| 2 | Simple routine clip | Listen for Sequence Markers | Sequencing Language | K-W-L Walk | Jigsaw | Daily routine actions | A simple daily routine shown step by step | 1.1.2.0 |
-| 3 | Family-introduction clip | Recognize Examples | Asking for Clarification | Four-Corner Debate | Town Hall | Family members & relationships | A family member introduced by a child or narrator | 1.1.3.0 |
-| 4 | Colors/shapes labeling clip | Predict from Context Before Confirming | Making Comparisons | Mystery Quote | Concentric Circles | Colors & shapes | Colors and shapes of common items, shown and named | 1.1.4.0 |
+| 1 | Labeled-object clip (flashcard-style graded video) | Listen for Main Ideas/Gist | Giving Examples phrases | Visual Inquiry | Panel Round | Common everyday objects | A single familiar everyday object, shown and named | 1.1.1.0 |
+| 2 | Simple routine clip | Listen for Sequence Markers | Sequencing Language | K-W-L Chart | Jigsaw | Daily routine actions | A simple daily routine shown step by step | 1.1.2.0 |
+| 3 | Family-introduction clip | Recognize Examples | Asking for Clarification | Take a Side | Town Hall | Family members & relationships | A family member introduced by a child or narrator | 1.1.3.0 |
+| 4 | Colors/shapes labeling clip | Predict from Context Before Confirming | Making Comparisons | Mystery Quote | Rotating Partners | Colors & shapes | Colors and shapes of common items, shown and named | 1.1.4.0 |
 ```

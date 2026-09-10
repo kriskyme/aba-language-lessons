@@ -3,7 +3,7 @@
 **Module:** 1, Describing | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
 **Task Levels this lesson:** 4 (extension-down), 5 and 6 (native), 7 (extension-up)
 **Genre:** Feature-style newspaper/magazine article | **Reading Strategy:** Close Reading with Annotation
-**Phase 1 Hook:** Visual Inquiry | **Phase 3 Protocol:** Fishbowl
+**Phase 1 Hook:** Visual Inquiry | **Phase 3 Protocol:** Panel Round
 **Vocabulary Theme:** Architecture & ornamentation (facade, spire, mosaic, ornamentation)
 **Topic:** La Sagrada Família, Antoni Gaudí's still-unfinished basilica in Barcelona, Spain
 
@@ -250,16 +250,16 @@ board only fills in once every task Level in every group has reported.
 
 ### Phase 3: Structured Oral Output Debate & Synthesis (30 min)
 
-**Protocol: Fishbowl.** Arrange 5-6 chairs in an inner circle; remaining students form an outer circle. Students
-rotate into and out of the inner circle every 5-6 minutes so multiple task Levels get a turn inside. Rotate through
-three prompts as the circle turns over, roughly one per rotation:
+**Protocol: Panel Round.** Five or six students speak in turn from their seats while the rest listen; the speaking
+group swaps every 5-6 minutes so multiple task Levels get a turn. Work through three prompts as the group turns
+over, roughly one per changeover:
 1. "Is the Sagrada Família more impressive as a feat of engineering or as a work of art?"
 2. "Which facade, the Nativity Facade or the Passion Facade, does a better job of matching its mood to its subject?"
 3. "Should the Sagrada Família ever be declared finished, or does it work better as a project that never quite ends?"
 
-**Outer-circle task (Section 0.10):** every outer-circle student keeps a running tally sheet marking which side
-(or, for prompts 2-3, which position) each inner-circle speaker argues for, plus one target vocabulary word they
-hear used well. This is the default active task for the whole outer circle, separate from the Level 4 and
+**Listener task (Section 0.10):** every student not currently speaking keeps a running tally sheet marking which
+side (or, for prompts 2-3, which position) each speaker argues for, plus one target vocabulary word they
+hear used well. This is the default active task for every listener, separate from the Level 4 and
 Foundation Support roles below, which layer additional support on top of it for those specific students.
 
 **Sentence stems by task Level (register capped at each Level's own ceiling):**
@@ -269,17 +269,17 @@ Foundation Support roles below, which layer additional support on top of it for 
 - Level 7: "Comparing the two texts, I noticed the [tourism-board version/magazine article] frames this as ___,
   which serves the unstated interest of ___."
 
-**Differentiated participation (Section 0.8, Part B):** The Level 4 student does not take an on-demand inner-circle
-turn alongside the higher task Levels. Instead: (1) Rehearsed pair-share first, 2 minutes before the Fishbowl
+**Differentiated participation (Section 0.8, Part B):** The Level 4 student does not take an on-demand speaking
+turn alongside the higher task Levels. Instead: (1) Rehearsed pair-share first, 2 minutes before the Panel Round
 begins, where the Level 4 student says their stem once, quietly, to a partner and gets a thumbs-up; their first
-public attempt inside the circle is then already a repetition, not a cold performance. Alternatively, if the teacher
+public attempt is then already a repetition, not a cold performance. Alternatively, if the teacher
 judges the student needs more support that day: (2) a listening/tracking role, marking a tally sheet for which
-side (engineering or art) each inner-circle speaker argues, with one fully-prepared sentence to contribute at a
+side (engineering or art) each speaker argues, with one fully-prepared sentence to contribute at a
 natural pause.
 
 **Foundation Support (for a student functioning below Level 4's own floor):** Provide a picture card set showing
 the Nativity Facade, the Passion Facade, and the columns. The student's Phase 3 role is physical, not spoken:
-they hold up the picture card that matches whatever feature is currently being discussed in the Fishbowl, and,
+they hold up the picture card that matches whatever feature is currently being discussed in the Panel Round, and,
 during the K-W-L-style board check from Day 1, they can point to the paragraph letter a partner names rather
 than reading it aloud. Pair this student with a peer buddy throughout Phase 2's matrix work as well.
 
@@ -323,7 +323,7 @@ graded.
     bands/cycles, and does not repeat any genre used elsewhere in this Advanced plan.
 11. **Module-objective alignment:** every task Level's questions trace to Describing (features, comparisons,
     stated reasons, organization, evaluative word choice, register shift, rhetorical framing) - none drift into
-    Explaining (cause-and-effect analysis as the graded skill) or Evaluating (a verdict/ranking task); the Fishbowl
+    Explaining (cause-and-effect analysis as the graded skill) or Evaluating (a verdict/ranking task); the Panel Round's
     debate prompt ("more impressive as engineering or art") stays a comparison-of-features debate, not a
     policy verdict.
 12. **Board-dependent moment:** two genuine instances - Phase 1's live "What We Think We're Looking At" list

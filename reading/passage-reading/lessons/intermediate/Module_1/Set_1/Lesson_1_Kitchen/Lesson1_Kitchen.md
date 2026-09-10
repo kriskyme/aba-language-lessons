@@ -5,11 +5,11 @@ plan (`Rotation_Log_Intermediate.md`, Lesson 1 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** Short narrative/personal-story article | **Reading strategy:** Teacher Read-Aloud with Interactive Stops
-**Phase 1 hook:** Visual Inquiry | **Phase 3 protocol:** Fishbowl
+**Phase 1 hook:** Visual Inquiry | **Phase 3 protocol:** Panel Round
 **Vocabulary theme:** Traditional cooking tools & sensations
 
-**Patch, 2026-09-01:** Day 2 Phase 3 (Fishbowl) is updated to match the current Lesson Generation Prompt
-(v2.7, Section 0.10): the outer circle now has an explicit active task instead of only listening, and the single
+**Patch, 2026-09-01:** Day 2 Phase 3 (then a Fishbowl) is updated to match the current Lesson Generation Prompt
+(v2.7, Section 0.10): the listeners now have an explicit active task instead of only listening, and the single
 discussion prompt is expanded to three prompts rotated through at each inner-circle changeover. Nothing else in
 this lesson changed - word counts, task-Level mapping, vocabulary, and every other section are unaffected.
 These three prompts already matched the student print packet (`Module 1 Lesson 1 (Intermediate) - Kitchen
@@ -115,7 +115,7 @@ using a real ______ oven.
 
 ```
 |---Phase 1 (15m)---|-------Phase 2 (30m)-------|--------Phase 3 (30m)--------|
-  Re-scan, Refresher      Collaborative Matrix          Fishbowl + Closing
+  Re-scan, Refresher      Collaborative Matrix        Panel Round + Closing
     Text, Vocab Drill        (Board T-Chart)              Transfer Check
 ```
 
@@ -172,14 +172,14 @@ live two-column T-chart on the board: "Wood-Fired Oven" vs. "Modern Electric Ove
 groups actually say (features, one comparison, one reason) - this is where the class's full comparison exists,
 not on any single group's handout.
 
-### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Fishbowl (scaffolded per v2.7, Section 0.10)
+### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Panel Round (scaffolded per Section 0.10)
 
-Inner circle (roughly half the class, 4-6 of a typical 8-12) discusses. The outer circle is never just listening: while
-the inner circle talks, every outer-circle student keeps a running tally of which kitchen (wood-fired or electric)
-each inner-circle speaker prefers, plus one describing word or phrase they use for it. Rotate through the three
-prompts below at each inner-circle changeover (roughly every 8-10 minutes across the 25-30 minute window),
-swapping which students sit in the circle each time; a student rotating in may draw on the notes they took as an
-outer-circle listener.
+Four to six students of a typical 8-12 discuss in turn from their seats. The listeners are never just listening:
+while the panel talks, every student not currently speaking keeps a running tally of which kitchen (wood-fired or
+electric) each speaker prefers, plus one describing word or phrase they use for it. Work through the three
+prompts below, advancing at each changeover (roughly every 8-10 minutes across the 25-30 minute window) and
+swapping which students speak each time; a student taking a turn may draw on the notes they took while
+listening.
 
 1. Which kitchen would you rather cook in: Elena's grandmother's, or a modern kitchen? Why?
 2. Which detail in the article makes the kitchen feel most real to you: the smell of the bread, the burn marks on
@@ -194,10 +194,10 @@ outer-circle listener.
 - **Level 5:** "The writer organizes the text by ___, and I think the phrase '___' shows that Elena feels ___
   about the kitchen."
 
-**Differentiated participation (Level 2):** before their first rotation into the circle, Level 2's student rehearses
-their "It is ___." stem once, quietly, with a partner, and gets a thumbs-up. Before that first rotation, they take
-the same listening/tracking role described above for the outer circle generally, with one fully-prepared line
-ready to contribute at a natural pause once they rotate in, rather than an on-demand turn.
+**Differentiated participation (Level 2):** before their first speaking turn, Level 2's student rehearses
+their "It is ___." stem once, quietly, with a partner, and gets a thumbs-up. Until that turn, they take
+the same listening/tracking role described above for listeners generally, with one fully-prepared line
+ready to contribute at a natural pause once it is their turn, rather than an on-demand turn.
 
 **Closing Transfer Check:** In pairs, every student describes one object or place in the classroom by comparing
 it to something else, out loud (e.g., "This desk is like my kitchen table at home because..."). Teacher cold-calls
@@ -248,7 +248,7 @@ actually transferred.
 
 **18 (added by the 2026-09-01 patch, matching self-check item 18 of the v2.7 lesson prompt):** Phase 3 supplies
 three distinct discussion prompts, rotated through rather than one static prompt for the full window; every
-outer-circle student has an explicit, active task (a running tally of kitchen preference plus one describing word)
+listener has an explicit, active task (a running tally of kitchen preference plus one describing word)
 rather than passive listening.
 
 **Topic-grounding and guardrail check (per the updated Module Lesson-Plan prompt):** the topic is grounded in

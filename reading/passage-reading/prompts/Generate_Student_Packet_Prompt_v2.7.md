@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v2.6)
+# Passage Reading Student Print Formatting Prompt (v2.7)
 
 Companion to the Passage Reading Lesson Generation Prompt. Takes one completed 2-day lesson and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document covering both days, with
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), delta classes (§H), and the shared packet self-check (§I). This prompt states
 only what is specific to a Passage Reading packet.
 
-**Current version: v2.6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.7.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** an already-completed 2-day lesson, supplied in full (both days): the anchor text with its paragraph
 lettering and footnotes, the Phase 1 target vocabulary and idiom list with each idiom's transparent/opaque
@@ -120,6 +120,21 @@ underline    a word you don't know
 
 Add a fifth mark, `!` next to a word that feels like the writer's opinion, only when the lesson's task Levels
 include an evaluative-language objective (in practice Advanced and up). An unused mark is worse than no mark.
+
+**The key is band-conditioned by that same rule.** The four marks above are the Intermediate-and-up default.
+A Beginner anchor is calibrated to Level 1, whose ceiling (Lesson prompt 0.2) allows one memorized frame, at
+most a single coordinator, and literal picture matching with no inference: there is no connector to circle
+beyond "and," and no main-idea sentence to bracket that the Level's own comprehension demand would support.
+A Beginner packet therefore prints three marks, substituting the mark its text can actually carry:
+
+```
+underline    a word you do not know
+( circle )   a word that tells you about a thing
+?            next to anything that surprises you
+```
+
+Never print a mark the band's anchor text cannot support, and never pad the key back to four to make packets
+across bands look alike.
 
 ### 2.10 Refresher and secondary text blocks
 

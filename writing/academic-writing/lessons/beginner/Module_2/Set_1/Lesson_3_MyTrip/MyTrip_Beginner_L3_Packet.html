@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Trip: Lesson 3</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: My Trip</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Beginner 2.1.3.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell a reader what happened, in the order it
+      happened, and spell each word from its sounds.</p>
+
+      <div class="section-title">Words for a Trip</div>
+      <div class="wordbank">
+        <strong>Event words:</strong> bus &middot; walk &middot; line &middot; stop &middot; rain &middot; shop &middot; game &middot; snack<br />
+        <strong>Getting-ready verbs:</strong> packed &middot; dressed &middot; zipped &middot; locked &middot; tidied<br />
+        <strong>Moving verbs:</strong> walked &middot; rushed &middot; stepped &middot; hurried &middot; climbed<br />
+        <strong>Doing-there verbs:</strong> shopped &middot; looked &middot; picked &middot; counted &middot; carried<br />
+        <strong>Waiting and looking verbs:</strong> waited &middot; checked &middot; watched &middot; smiled &middot; noticed<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; last
+      </div>
+      <p class="instr">Use these words when you need them. You may also use your own.</p>
+
+      <div class="section-title">The Frames</div>
+      <div class="spotlight-box">
+        <div class="model-step"><strong>&#9733;</strong> First, ___.</div>
+        <div class="model-step"><strong>&#9733;&#9733;</strong> I ___-ed.</div>
+        <div class="model-step"><strong>&#9733;&#9733;&#9733;</strong> First, I ___-ed. Then, I ___-ed.</div>
+      </div>
+
+      <div class="section-title">Get Ready to Write</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Circle the trip you are writing about:
+        <strong>to the store &middot; to school &middot; to the park &middot; to a friend's house &middot; on the bus &middot; to the market &middot; to a game &middot; to the library</strong>.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> Write three words from the list above
+        that name things that happened on the trip you circled. Take them from at least two different groups.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody"><span class="blank"></span> <span class="blank"></span> <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Write It</div>
+      <p class="instr">Say your word to a partner and stretch it into its sounds. Your partner counts the sounds
+      and says the number back. Then write your line one time.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;</span> Circle the one word you will use, then write your line.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">First, <span class="blank"></span>.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Read it back. Is there a letter or a letter pair for every sound you hear?</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;</span> Circle the one verb you will use, then write your sentence.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">I <span class="blank"></span>.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Underline your -ed ending. Circle your capital letter and your period.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Circle two of your words that name two different actions, number them 1 and 2 in the order they happened, then write your story.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">First, I <span class="blank"></span>. Then, I <span class="blank"></span>.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write a 1 and a 2 above your two verbs.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Share a Line</div>
+      <div class="discuss-block">
+        <p class="instr">Read your finished line aloud.</p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span><span>"First, ___."</span></li>
+          <li><span class="stars">&#9733;&#9733;</span><span>"I ___-ed."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;</span><span>"First, I ___-ed. Then, I ___-ed, and that is the order it happened."</span></li>
+        </ul>
+        <p class="instr">While you listen: put a mark next to any word on your own page that you also hear someone
+        else use.</p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: My Trip</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Beginner 2.1.3.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell a reader what happened, in the order it
+      happened, and spell each word from its sounds.</p>
+
+      <div class="section-title">Words for a Trip</div>
+      <div class="wordbank">
+        <strong>Event words:</strong> bus &middot; walk &middot; line &middot; stop &middot; rain &middot; shop &middot; game &middot; snack<br />
+        <strong>Getting-ready verbs:</strong> packed &middot; dressed &middot; zipped &middot; locked &middot; tidied<br />
+        <strong>Moving verbs:</strong> walked &middot; rushed &middot; stepped &middot; hurried &middot; climbed<br />
+        <strong>Doing-there verbs:</strong> shopped &middot; looked &middot; picked &middot; counted &middot; carried<br />
+        <strong>Waiting and looking verbs:</strong> waited &middot; checked &middot; watched &middot; smiled &middot; noticed<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; last
+      </div>
+
+      <div class="section-title">A More Exact Verb</div>
+      <div class="spotlight-box">
+        <div class="model-step">moved <span class="masthead-sep">&#183;</span> walked, rushed, climbed</div>
+        <div class="model-step">used it <span class="masthead-sep">&#183;</span> packed, zipped, locked</div>
+        <div class="model-step">looked <span class="masthead-sep">&#183;</span> watched, checked, noticed</div>
+        <div class="model-step">helped <span class="masthead-sep">&#183;</span> carried, tidied, counted</div>
+        <div class="model-step">started <span class="masthead-sep">&#183;</span> opened, unlocked, boarded</div>
+      </div>
+
+      <div class="section-title">Check and Improve Your Writing</div>
+      <p class="instr">Anything you change: cross out the old word with a single line, do not erase it, and write
+      the new word above it, so both stay on the page.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Check your line, then make it better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read your line to a partner. Your partner says what happened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Could your partner say what happened? (yes / no)</span></li>
+          <li><span class="num">3.</span><span class="qbody">Does your word have a letter or a letter pair for every sound you hear? (yes / no)</span></li>
+          <li><span class="num">4.</span><span class="qbody">Does your word name something that really happened on your own trip? (yes / no)</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is there a more exact word above that fits? If yes, cross out your old word.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Write your line again. If your word was already the best one, leave it and put a check next to it: First, <span class="blank"></span>.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Read it to your partner.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Check your sentence, then make it better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read your sentence to a partner. Your partner says what happened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Could your partner say what happened? (yes / no)</span></li>
+          <li><span class="num">3.</span><span class="qbody">Does your verb use the right one of the four rules for -ed? (yes / no)</span></li>
+          <li><span class="num">4.</span><span class="qbody">Does your sentence start with a capital and end with a period? (yes / no)</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is there a more exact verb above that fits? If yes, cross out your old verb.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Write the whole sentence again: I <span class="blank"></span>.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Read it to your partner.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Check your story, then make it better.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Read your story to a partner. Your partner says what happened and which action came first.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Did your partner say the same action came first that you meant? (yes / no)</span></li>
+          <li><span class="num">3.</span><span class="qbody">Do your two verbs name two different actions, not one action twice? (yes / no)</span></li>
+          <li><span class="num">4.</span><span class="qbody">Does each verb use the right rule for -ed, with a capital and a period on both sentences? (yes / no)</span></li>
+          <li><span class="num">5.</span><span class="qbody">Cross out the verb your partner found hardest to picture, and write a more exact one above it.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Write the whole story again: First, I <span class="blank"></span>. Then, I <span class="blank"></span>.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Read it to your partner.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Read It to Someone New</div>
+      <div class="discuss-block">
+        <p class="instr">Read your improved line to a different partner. Your partner says the part they can
+        picture best, and whether it happened at the start, the middle, or the end of the trip. Nothing is
+        rewritten now.</p>
+      </div>
+    </div>
+  </body>
+</html>

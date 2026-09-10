@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Describing My Headphones: Lesson 2</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .discuss-block,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 2A: Describing My Headphones</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Proficient 1.1.2.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by choosing which
+      details to give and how much weight to give them, so that a reader sees it the way I want them to.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Sound:</strong> crisp &middot; muddy &middot; boomy &middot; thin &middot; warm &middot; flat<br />
+        <strong>Fit and feel:</strong> snug &middot; loose &middot; padded &middot; heavy &middot; light &middot; pressing<br />
+        <strong>Condition:</strong> cracked &middot; frayed &middot; scuffed &middot; faded &middot; hardened &middot; worn<br />
+        <strong>Use:</strong> commuting &middot; studying &middot; calls &middot; running &middot; waiting &middot; sleeping<br />
+        <strong>Parts to name exactly:</strong> the headband &middot; the earcup &middot; the padding &middot; the hinge &middot; the cable &middot; the charging port
+      </div>
+      <p class="instr">Use these words when a task asks for one. You may also use your own.</p>
+
+      <div class="section-title">Grammar: Packing the Detail In, and Letting One Sentence Land</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Shortening a clause to a participle</p>
+        <p class="model-step">Most clauses that come after a noun can drop the pronoun and the verb and keep only a participle. One sentence can then carry two details without reading as a list.</p>
+        <table class="rule-table">
+          <tr><th>Full clause</th><th>Shortened</th></tr>
+          <tr><td>a ring that has hardened over three winters</td><td>a ring, hardened over three winters</td></tr>
+          <tr><td>the fabric that is fraying along the top edge</td><td>the fabric fraying along the top edge</td></tr>
+          <tr><td>the cups, which are covered in a woven fabric</td><td>the cups, covered in a woven fabric</td></tr>
+          <tr><td>the strap that was repaired last spring</td><td>the strap, repaired last spring</td></tr>
+        </table>
+        <p class="model-step">An active clause shortens to an <strong>-ing</strong> participle: fraying, digging, catching. A passive clause shortens to an <strong>-ed</strong> participle: hardened, repaired, covered.</p>
+        <p class="subgroup-label">The commas travel with the clause</p>
+        <p class="model-step">A shortened clause that says which one you mean takes no commas: <em>the strap digging into my shoulder.</em> One that adds information about a thing already named keeps a comma at each end: <em>the left strap, repaired last spring, is the shorter one.</em></p>
+        <p class="subgroup-label">Sentence length</p>
+        <p class="model-step">Two long sentences followed by a short one make the short one land. This is the one tool here that changes nothing about the meaning and everything about the weight.</p>
+        <p class="model-step">The cups are covered in a woven fabric that has stayed matt where every other pair I have owned went shiny, and the padding under it is firm rather than soft, so it has kept its shape for three years of daily wear. The cable is sunk into a channel along the band, out of the way of coat buttons and door handles alike. Nothing catches.</p>
+        <p class="model-step">Put the sentence you want remembered last, and make it short.</p>
+      </div>
+
+      <div class="section-title">The Jobs Inside a Body Paragraph</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Every sentence is doing one job</p>
+        <p class="model-step">The jobs are: <strong>topic sentence</strong> (states the paragraph's one point), <strong>example</strong>, <strong>detail</strong>, <strong>reason</strong>, <strong>contrast</strong>, and <strong>link</strong> (points forward or back). A paragraph with three sentences doing the same job has a gap somewhere else.</p>
+        <p class="model-step">A <strong>general outline</strong> lists the topic sentences only. A <strong>specific outline</strong> lists, under each topic sentence, the supporting sentences by job.</p>
+      </div>
+
+      <div class="section-title">Try It</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Eight phrases about a pair of headphones</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>a ring that has hardened until it squeaks</li>
+          <li><span class="num">2.</span>the fabric fraying along the top edge of the left cup</li>
+          <li><span class="num">3.</span>the cable, which was replaced two winters ago, runs inside the band</li>
+          <li><span class="num">4.</span>the padding compressed flat under the headband</li>
+          <li><span class="num">5.</span>the hinge that cracked in the first year</li>
+          <li><span class="num">6.</span>the charging port, which is loosening at one corner</li>
+          <li><span class="num">7.</span>the earcup resting against my glasses</li>
+          <li><span class="num">8.</span>the case that was bought separately</li>
+        </ol>
+      </div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Eight pairs of sentences</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>The headband is heavier than it looks. It is wrapped in a thick synthetic leather.</li>
+          <li><span class="num">2.</span>The left cup sits lower than the right. It was dropped on a platform two years ago.</li>
+          <li><span class="num">3.</span>The mesh has torn along one edge. It covers the driver inside the cup.</li>
+          <li><span class="num">4.</span>The cable runs inside a channel. The channel is molded along the top of the band.</li>
+          <li><span class="num">5.</span>The padding is firm rather than soft. It is made from a denser foam than most.</li>
+          <li><span class="num">6.</span>The ring on the hinge squeaks now. It has hardened over three winters.</li>
+          <li><span class="num">7.</span>The case zips shut around them. It came in the same box.</li>
+          <li><span class="num">8.</span>The port takes the cable at one angle only. It has loosened at one corner.</li>
+        </ol>
+      </div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">One body paragraph, sentences numbered</p>
+        <p>(1) The first difference is the padding. (2) The old cups were covered in a soft foam that flattened inside a year, so by the end the metal band underneath pressed on the top of my head after about forty minutes. (3) The pair I have now uses a firmer foam under a fabric that has not gone shiny, and I have worn them through a whole shift without noticing them. (4) That is the test that matters on a long day.</p>
+      </div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">The thesis and topic sentences of The Pair I Replaced</p>
+        <p><strong>Working thesis:</strong> The pair I use now is better than the pair it replaced for two reasons: the padding has lasted, and the cable finally stays out of the way.</p>
+        <p>1. The first difference is the padding.</p>
+        <p>2. The second difference is the cable.</p>
+        <p>3. You asked whether they are worth the money, Tomas.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Sort the eight phrases above, then shorten them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Next to each phrase write F if the part after the noun is a full clause and R if it is already shortened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Rewrite each F phrase as a shortened one, keeping the commas where they belong.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span> Join the eight pairs above into single sentences.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Use a shortened clause in each one, and keep the first sentence's subject.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Put in the commas the clause needs, or leave them out where it needs none.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span> Name the job of each sentence in the numbered paragraph above.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write beside each number: topic sentence, example, detail, reason, contrast, or link.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Say in one line which job the paragraph uses most, and whether that is a strength here: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;</span> Write the general outline of The Pair I Replaced.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Copy the working thesis, then the three topic sentences under it.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one line saying what a general outline cannot tell you about a paragraph: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Combine sentences 2, 3, and 4 of the numbered paragraph into two sentences.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Make the join carry the logic, rather than an "and".</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write in one line what the new pair does that the original three did not: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write a specific outline of the second body paragraph.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">List each supporting sentence by job under its topic sentence.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Mark with an arrow the one detail you would cut first if the paragraph ran long.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Rebuild the numbered paragraph so its shape is deliberately different.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">The paragraph builds from general to concrete. Build yours the other way.</span></li>
+          <li><span class="num">2.</span><span class="qbody">End on the shortest sentence in the paragraph.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Write in one line what the reader now notices first: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Write the same content as two specific outlines, for two different readers.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write a specific outline of the third body paragraph.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Underneath it, write a second specific outline of the same content, built for a reader who already owns the pair.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Mark the one line that changes job between the two outlines.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="section-title">Lie and Lay</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Which form fits</p>
+        <p class="model-step"><em>Lie</em> takes no object: lie, lay, lain, lying. <em>Lay</em> takes one: lay, laid, laid, laying. The past of <em>lie</em> is <em>lay</em>, which is the whole difficulty.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>The case (lies / lays) flat in the bottom of my bag.</li>
+          <li><span class="num">2.</span>Last night I (lay / laid) them on the desk without the case.</li>
+          <li><span class="num">3.</span>They have (lain / laid) on that shelf since March.</li>
+          <li><span class="num">4.</span>She (lay / laid) her own pair beside mine to compare them.</li>
+          <li><span class="num">5.</span>The cable (lies / lays) in a channel along the band.</li>
+          <li><span class="num">6.</span>I (lay / laid) down for twenty minutes with them still on.</li>
+          <li><span class="num">7.</span>He has (lain / laid) the manual on top of the box.</li>
+          <li><span class="num">8.</span>The old pair (lies / lays) in a drawer I never open.</li>
+        </ol>
+      </div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> Circle the correct form in each of the eight sentences above.</p>
+      </div>
+
+      <div class="section-title">Find the Mistakes</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">A paragraph about a pair of headphones</p>
+        <p>The old pair, that I kept for the gym, had a ring hardened until it squeaked. The fabric fraying along the top edge of the left cup, was the first thing anyone noticed. The cable of the headphones lay in a channel along the band, and it never caught on anything. The hinge who cracked in the first year was repaired with tape. I laid down with them on most evenings that winter. The case, bought separately, were the only part still in good condition. They were a heavy black old scuffed pair that I wore every day until the port loosened and I finally admitted that the tape on the hinge was not a repair but a decision I had made about how much this pair was worth to me.</p>
+      </div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> Find and correct the 7 mistakes in the paragraph above (commas on clauses, a relative pronoun, a heavy "of", lie and lay, a plural verb, and adjective order). Write each correction on a line.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task K.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Cut the last sentence of the paragraph above into a long sentence and a short one.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">The paragraph must end on the short one.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+
+      <div class="masthead masthead-later">
+        <h1>Unit 2B: Describing My Headphones</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Proficient 1.1.2.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by choosing which
+      details to give and how much weight to give them, so that a reader sees it the way I want them to.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Sound:</strong> crisp &middot; muddy &middot; boomy &middot; thin &middot; warm &middot; flat<br />
+        <strong>Fit and feel:</strong> snug &middot; loose &middot; padded &middot; heavy &middot; light &middot; pressing<br />
+        <strong>Condition:</strong> cracked &middot; frayed &middot; scuffed &middot; faded &middot; hardened &middot; worn<br />
+        <strong>Use:</strong> commuting &middot; studying &middot; calls &middot; running &middot; waiting &middot; sleeping<br />
+        <strong>Parts to name exactly:</strong> the headband &middot; the earcup &middot; the padding &middot; the hinge &middot; the cable &middot; the charging port
+      </div>
+
+      <div class="section-title">One Sentence at a Time</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Write two sentences about your own headphones.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">The first names one part exactly and says what has happened to it: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">The second is a detail that would let a partner guess how you feel about the pair, with no feeling word in it: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Read only the second to your partner. Write what they guessed: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Write two sentences about your own headphones for Tomas, who cannot wear anything that presses on his head for more than half an hour.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">The first says why one named feature matters to him: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">The second turns to address him directly and prepares him for something less flattering: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write three sentences about your own headphones that imply something you never state.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write the three sentences.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Underneath, write in one line what you intend a reader to infer: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Fold the page so that line is hidden and hand it to a partner. Write what they inferred: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Write one sentence about your own headphones twice.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Once pitched high and general: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Once clipped and concrete: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write one line naming what the shift between them does that neither version does alone: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Your Next Piece: My Bag</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">Circle the one you carry most</p>
+        <p>backpack &middot; tote bag &middot; shoulder bag &middot; messenger bag &middot; gym bag &middot; purse &middot; laptop sleeve &middot; duffel bag</p>
+        <p class="model-step">You will write about this bag as it is now and as it was when you got it.</p>
+        <p class="subgroup-label">Your readers</p>
+        <p class="model-step"><strong>Priya</strong> is about to start a year of daily commuting with a laptop to carry, and has asked whether a bag like this one lasts.</p>
+        <p class="model-step"><strong>Marcus</strong> already carries the same kind of bag and wants to know whether it is worth repairing rather than replacing.</p>
+      </div>
+
+      <div class="section-title">Draft Word Bank</div>
+      <div class="wordbank">
+        <strong>Shape and size:</strong> slouched &middot; boxy &middot; deep &middot; flat &middot; bulging &middot; narrow<br />
+        <strong>Fit and feel:</strong> padded &middot; stiff &middot; soft &middot; heavy &middot; digging &middot; balanced<br />
+        <strong>Condition:</strong> frayed &middot; scuffed &middot; faded &middot; stretched &middot; stained &middot; split<br />
+        <strong>Use:</strong> commuting &middot; the gym &middot; groceries &middot; travel &middot; a laptop &middot; overnight<br />
+        <strong>Parts to name exactly:</strong> the strap &middot; the base &middot; the zip &middot; the lining &middot; the buckle &middot; the front pocket
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span> List six details about your bag in the order you would write them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">One line each.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Beside two of them, write the Draft Word Bank word that names the part exactly.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Put a star beside the one detail that would let a reader guess how you feel about the bag, with no feeling word.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span> Plan your body paragraphs for Priya.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write a direct working thesis naming two points: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one topic sentence for each of your two body paragraphs.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Write the one sentence in which you will say why one of those points matters to Priya: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Plan one body paragraph in detail.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write an indirect working thesis: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write the topic sentence, then three supporting details in order.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Mark with an arrow the detail chosen to carry the implication.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Write in one line what the implication is: <span class="ans-line"></span></span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Plan two groups of body paragraphs, one for Priya and one for Marcus.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write the working thesis that sets up both groups without revealing the complication: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write two topic sentences for the Priya group and two for the Marcus group.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Beside the Marcus group, write how its paragraphs will be built differently: <span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Mark with an arrow the one detail that complicates what the Priya group establishes.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+    </div>
+  </body>
+</html>

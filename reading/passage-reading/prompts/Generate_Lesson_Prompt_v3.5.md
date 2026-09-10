@@ -306,9 +306,9 @@ The rules (Quality Standards §D1-D3, §B) are shared. Reading-specific placemen
   - Evaluating: "in one sentence, give your verdict on `[pick a fresh object/scenario]` and one reason"
   - Arguing: "in one sentence, state a position on `[pick a fresh object/scenario]` and one reason"
 - **Differentiated Phase 3 participation** for the lowest task Level, within the chosen protocol: a rehearsed
-  pair-share immediately before their turn (their small group's round, or their first rotation into the circle),
-  or a listening/tracking role for the stretch before their turn (the same tally or word-list task an
-  outer-circle student already has under 0.10) with one fully prepared sentence to contribute at a natural pause.
+  pair-share immediately before their turn (their small group's round, or their first speaking turn),
+  or a listening/tracking role for the stretch before their turn (the same tally or word-list task every
+  listener already has under 0.10) with one fully prepared sentence to contribute at a natural pause.
 - **Foundation Support** in this cycle (Quality Standards §D8: nothing the teacher must make): matching a printed
   word in the packet to a target term, pointing to the paragraph that answers a Fact Finder, a two-choice circle
   instead of an open completion, a peer buddy for the paired-reading and matrix steps, and in Phase 3 a physical
@@ -508,7 +508,7 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 *Phase 3: Structured Oral Output Debate & Synthesis (30 min)*
 - Shift all primary post-reading performance to oral communication; no standalone formal writing tasks.
 - Choose a protocol per 0.10, rotating across cycles, with explicit sentence frames ("I agree with... because...",
-  "On the other hand..."), 2-3 rotated prompts, and an active task for every outer-circle student.
+  "On the other hand..."), 2-3 rotated prompts, and an active task for every student not currently speaking.
 - Role-specific stems mapped to every task Level, each inside its own Level's ceiling.
 - Differentiated participation for the lowest task Level and a Foundation Support role where present (0.8).
 - Closing Transfer Check ends Group Synthesis (0.8): every student, in pairs, out loud, one new instance of the

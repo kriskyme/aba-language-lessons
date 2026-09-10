@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finishing the Piece About My Bag: Lesson 3</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .discuss-block,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: Finishing the Piece About My Bag</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Proficient 2.1.3.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, so that the order itself carries what mattered.</p>
+
+      <div class="section-title">Draft Word Bank</div>
+      <div class="wordbank">
+        <strong>Time and sequence:</strong> that winter &middot; the week after &middot; by then &middot; until then &middot; ever since &middot; the first month<br />
+        <strong>Reaching back:</strong> already &middot; up to that point &middot; the year before &middot; earlier that autumn &middot; before that &middot; since the spring<br />
+        <strong>What happened:</strong> split &middot; snapped &middot; gave way &middot; soaked through &middot; held &middot; survived<br />
+        <strong>How it turned out:</strong> worth it &middot; a nuisance &middot; no trouble &middot; the last straw &middot; fine in the end &middot; still going<br />
+        <strong>Parts to name exactly:</strong> the strap &middot; the base &middot; the zip &middot; the lining &middot; the buckle &middot; the front pocket
+      </div>
+      <p class="instr">Use these words when a task asks for one. You may also use your own.</p>
+
+      <div class="section-title">Before You Plan</div>
+      <div class="spotlight-box">
+        <p class="spotlight-label">What you are writing today</p>
+        <p class="model-step">At &#9733;: a second paragraph telling one real thing that happened with your bag, in order, with why it mattered and one detail that lets a reader guess how you feel.</p>
+        <p class="model-step">At &#9733;&#9733;, &#9733;&#9733;&#9733;, and &#9733;&#9733;&#9733;&#9733;: the introduction and the conclusion of your piece, around the body paragraphs you already have. Nobody rewrites the part they already have.</p>
+        <p class="subgroup-label">Hook types</p>
+        <table class="rule-table">
+          <tr><th>Hook type</th><th>What it does</th><th>Available at</th></tr>
+          <tr><td>Scenario</td><td>drops the reader into a single moment, in progress</td><td>&#9733;&#9733; &#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;</td></tr>
+          <tr><td>Anecdote</td><td>tells one short true incident and stops</td><td>&#9733;&#9733; &#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;</td></tr>
+          <tr><td>Withheld detail</td><td>names something without explaining it yet</td><td>&#9733;&#9733; &#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;</td></tr>
+          <tr><td>Quote</td><td>opens on someone's words</td><td>&#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;</td></tr>
+          <tr><td>Statistic</td><td>opens on a number that reframes the subject</td><td>&#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;</td></tr>
+          <tr><td>Plain question</td><td>asks the reader something</td><td>&#9733;&#9733; only</td></tr>
+        </table>
+        <p class="subgroup-label">The order inside each part</p>
+        <p class="model-step">The introduction runs hook, then two or three connecting sentences that narrow, then the thesis <strong>last</strong>. Your working thesis is copied out unchanged; it is not rewritten.</p>
+        <p class="model-step">The conclusion says the thesis again in new words, then makes one closing move: a suggestion, a prediction, a question, or an opinion. It adds no new information.</p>
+      </div>
+
+      <div class="section-title">Plan It</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Plan your second paragraph.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Circle one: the day I got it &middot; one day I carried it that mattered</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write four events in the order they happened, one line each.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Put a star beside the one that will let a reader guess how you feel.</span></li>
+        </ol>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Plan your introduction and conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Name your hook type and write its first line: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Copy your working thesis out: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Name your conclusion's closing move: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Plan your introduction and conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Name your hook type and write its first line: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one line saying what it withholds: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Copy your indirect working thesis out: <span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Name your closing move: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Plan your introduction and conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Name your hook type and write the sentence that opens both readers' questions: <span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Copy your working thesis out: <span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write one line naming what your conclusion will refuse to settle: <span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Write It</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;</span> Write your second paragraph.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Tell the events in the order they happened.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Use the past perfect where you reach back to something earlier, and at least two cue words from the Draft Word Bank.</span></li>
+          <li><span class="num">3.</span><span class="qbody">One sentence says why it mattered.</span></li>
+          <li><span class="num">4.</span><span class="qbody">One detail lets a reader guess how you feel. No feeling word appears anywhere.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Count your sentences and write the number here: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;</span> Write your introduction, then your conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Open on your hook, then two connecting sentences that narrow toward your subject without previewing your two points.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Your working thesis is the last sentence, copied out unchanged.</span></li>
+          <li><span class="num">3.</span><span class="qbody">The conclusion says that thesis in different words and closes on a suggestion.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Add no fact that is not already in your body paragraphs.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Count the sentences in your introduction and write the number here: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write your introduction, then your conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Your hook is a quote, a statistic, or an anecdote, and your indirect thesis is the last sentence, copied out unchanged.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Your conclusion closes on a question or an opinion, and does not settle the thing your body paragraphs made a reader work out.</span></li>
+          <li><span class="num">3.</span><span class="qbody">When you change something as you write, cross it out and write the new version beside it. Do not erase.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Count the sentences in your introduction and write the number here: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Write your introduction, then your conclusion.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Your hook names something that belongs to both readers' questions at once, without explaining it.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Your connecting sentences keep both questions open, and your thesis is the last sentence, copied out unchanged.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Your conclusion gives both readers the same answer, then declines to settle which reading of the bag is right.</span></li>
+          <li><span class="num">4.</span><span class="qbody">When you change something as you write, cross it out and write the new version beside it.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Count the sentences in your introduction and write the number here: <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: Finishing the Piece About My Bag</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Proficient 2.1.3.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened with something of my own, in
+      order, so that the order itself carries what mattered.</p>
+
+      <div class="section-title">Draft Word Bank</div>
+      <div class="wordbank">
+        <strong>Time and sequence:</strong> that winter &middot; the week after &middot; by then &middot; until then &middot; ever since &middot; the first month<br />
+        <strong>Reaching back:</strong> already &middot; up to that point &middot; the year before &middot; earlier that autumn &middot; before that &middot; since the spring<br />
+        <strong>What happened:</strong> split &middot; snapped &middot; gave way &middot; soaked through &middot; held &middot; survived<br />
+        <strong>How it turned out:</strong> worth it &middot; a nuisance &middot; no trouble &middot; the last straw &middot; fine in the end &middot; still going<br />
+        <strong>Parts to name exactly:</strong> the strap &middot; the base &middot; the zip &middot; the lining &middot; the buckle &middot; the front pocket
+      </div>
+
+      <div class="section-title">Check and Improve Your Writing</div>
+      <p class="instr">Lay both parts in front of you, the part you already had above the part you wrote yesterday. Mark on the page: circle, underline, box. Cross out rather than erase.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span> Check both paragraphs, then improve them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">In the first paragraph, circle one shortened clause. Does it have its commas right: none if it says which one you mean, two if it adds information about a thing already named?</span></li>
+          <li><span class="num">2.</span><span class="qbody">In the first paragraph, box the detail that lets a reader guess how you feel. Is it still a fact rather than an adjective about you?</span></li>
+          <li><span class="num">3.</span><span class="qbody">In the second paragraph, underline every verb. Is the line of events in the past simple, and does every reach-back use had plus the past participle?</span></li>
+          <li><span class="num">4.</span><span class="qbody">Circle each cue word you used. Are there at least two?</span></li>
+          <li><span class="num">5.</span><span class="qbody">Underline the sentence that says why it mattered.</span></li>
+          <li><span class="num">6.</span><span class="qbody">Box the detail that lets a reader guess how you feel here. Is there a feeling word anywhere in the paragraph? If there is, it has to go.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Read both in order. Do they describe the same bag without contradicting each other, and does the second have 6 to 9 sentences?</span></li>
+          <li><span class="num">8.</span><span class="qbody">Replace one flat word with a more exact one from the Draft Word Bank.</span></li>
+          <li><span class="num">9.</span><span class="qbody">If a reach-back is doing its work with the verb form alone, add a cue word in front of it. If your two boxed details imply the same thing, change one.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span> Check both parts, then improve them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Underline the first sentence of each body paragraph. Does each still state that paragraph's single point?</span></li>
+          <li><span class="num">2.</span><span class="qbody">Circle the sentence that says why a feature matters to Priya. Is it still about what she will be doing with the bag?</span></li>
+          <li><span class="num">3.</span><span class="qbody">Box your hook. Is it a moment rather than a summary of the piece?</span></li>
+          <li><span class="num">4.</span><span class="qbody">Number your connecting sentences. Do they narrow toward your subject without previewing your two points?</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is your thesis the last sentence of the introduction, and is it the working thesis copied out unchanged?</span></li>
+          <li><span class="num">6.</span><span class="qbody">Underline the sentence in your conclusion that says the thesis again in different words.</span></li>
+          <li><span class="num">7.</span><span class="qbody">Does your conclusion add any fact that is not in your body paragraphs? If it does, cross it out.</span></li>
+          <li><span class="num">8.</span><span class="qbody">Read the whole in order. Does the introduction promise what the body paragraphs deliver?</span></li>
+          <li><span class="num">9.</span><span class="qbody">Rewrite any connecting sentence that previews your points. If your hook is a summary, replace it with one moment. Add to the circled Priya sentence one thing about her year of commuting that the feature answers.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Check both parts, then improve them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Underline the three or four details carrying your implication. Are they still facts about the bag?</span></li>
+          <li><span class="num">2.</span><span class="qbody">Circle each of these you used: admittedly, what's more, this suggests, in fairness. Is each still doing the job it names?</span></li>
+          <li><span class="num">3.</span><span class="qbody">Box your hook. Does it point at something without explaining it?</span></li>
+          <li><span class="num">4.</span><span class="qbody">Number your connecting sentences. Do they narrow without giving away what the hook withholds?</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is your indirect thesis the last sentence of the introduction, copied out unchanged?</span></li>
+          <li><span class="num">6.</span><span class="qbody">Underline your closing move. Does it leave your implication standing rather than explaining it?</span></li>
+          <li><span class="num">7.</span><span class="qbody">Are your crossings-out still legible?</span></li>
+          <li><span class="num">8.</span><span class="qbody">Hand the whole piece to a partner and ask them to write in the margin what they think you are not saying. Write what they wrote: <span class="ans-line"></span></span></li>
+          <li><span class="num">9.</span><span class="qbody">If your partner reached it only from the conclusion, move one detail earlier. If they missed it entirely, change or add one detail rather than stating it. Leave every crossing-out visible.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Check both parts, then improve them.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Draw a line where the Priya group ends and the Marcus group begins. Are the two still built differently in sentence length, order, and level of abstraction?</span></li>
+          <li><span class="num">2.</span><span class="qbody">Mark with a T each place where the tone or the level of abstraction changes. You still need at least two.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Box your hook. Does it name one thing that belongs to both readers' questions, without explaining it?</span></li>
+          <li><span class="num">4.</span><span class="qbody">Number your connecting sentences. Do both readers' questions stay open through all of them?</span></li>
+          <li><span class="num">5.</span><span class="qbody">Is your thesis the last sentence of the introduction, copied out unchanged?</span></li>
+          <li><span class="num">6.</span><span class="qbody">Underline the sentence in your conclusion that gives both readers the same answer, and your closing move. Does the closing move decline to settle which reading is right without contradicting that answer?</span></li>
+          <li><span class="num">7.</span><span class="qbody">Are your crossings-out still legible?</span></li>
+          <li><span class="num">8.</span><span class="qbody">Hand the whole piece to a partner. Ask them to write the answer each group reaches and whether the ending settles anything. Write what they wrote: <span class="ans-line"></span></span></li>
+          <li><span class="num">9.</span><span class="qbody">If your partner said the ending settled it, cut whichever sentence did the settling. If your hook belonged to only one reader, replace the thing it names with a part of the bag both would ask about. Leave every crossing-out visible.</span></li>
+        </ol>
+      </div>
+
+    </div>
+  </body>
+</html>

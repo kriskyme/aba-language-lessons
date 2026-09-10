@@ -5,22 +5,22 @@ plan (`Rotation_Log_Intermediate.md`, Lesson 4 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** Short interview transcript (Q&A) | **Reading strategy:** Reader's Theater
-**Phase 1 hook:** Four-Corner Debate | **Phase 3 protocol:** Concentric Circles
+**Phase 1 hook:** Take a Side | **Phase 3 protocol:** Rotating Partners
 **Vocabulary theme:** Art & creative process
 
 Genre and reading-strategy check against Lesson 3: genre changes (how-to guide -> interview transcript),
 reading strategy changes (Whisper Reading -> Reader's Theater), Phase 1 hook changes (Mystery Quote ->
-Four-Corner Debate), Phase 3 protocol changes (Town Hall -> Concentric Circles) - no adjacent repeats, matching
+Take a Side), Phase 3 protocol changes (Town Hall -> Rotating Partners) - no adjacent repeats, matching
 the plan.
 
 **Fictional-subject note:** the artist interviewed below ("Jade Rivera") is a fictional, composite figure created for
 this lesson. The mural location (Wynwood Walls, Miami) is real; no quote or statement here is attributed to a real,
 identifiable individual.
 
-**Checked against v2.7, 2026-09-01:** unlike Lessons 1 and 2, this lesson's Day 2 Phase 3 (Concentric Circles)
-needed no patch. It already rotates through two distinct prompts at each partner changeover, and Concentric
-Circles needs no separate outer-circle task under Section 0.10 - both circles are paired and active by design, so
-there's no passive side to scaffold. No content below was changed.
+**Checked against v2.7, 2026-09-01:** unlike Lessons 1 and 2, this lesson's Day 2 Phase 3 (then Concentric
+Circles, now Rotating Partners) needed no patch. It already rotates through two distinct prompts at each partner
+changeover, and a paired protocol needs no separate listener task under Section 0.10 - everyone is paired and
+active by design, so there's no passive side to scaffold. No content below was changed.
 
 ---
 
@@ -28,15 +28,16 @@ there's no passive side to scaffold. No content below was changed.
 
 ```
 |--Phase 1 (15m)--|--------Phase 2 (35m)--------|------Phase 3 (25m)------|
-  Four-Corner Debate      Reader's Theater            Fact Finders / C&E
+  Take a Side             Reader's Theater            Fact Finders / C&E
   Skill Spotlight, Vocab     Anchor Text                Vocab in Context
 ```
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Four-Corner Debate hook:** Label the room's four corners "Color matters most," "Shape matters most," "Both
-equally," "Neither, something else matters more." Students move to the corner that matches their opinion about
-art, then 2-3 students from each corner explain why in one sentence.
+**Take a Side hook:** Students circle the option in their packet that matches their opinion about art - "Color
+matters most," "Shape matters most," "Both equally," "Neither, something else matters more" - then compare with
+a neighbor who circled something different. Take a show of hands per option, then 2-3 students who chose
+differently explain why in one sentence.
 
 **Skill Spotlight:** "Today we're practicing describing a piece of art by comparing it to another piece and giving
 the reason for the difference, the way this artist compares her new mural to one she painted last year."
@@ -108,7 +109,7 @@ stand out. Anyone walking through the ______ can see it for free, since it is no
 
 ```
 |---Phase 1 (15m)---|-------Phase 2 (30m)-------|--------Phase 3 (30m)--------|
-  Re-scan, Refresher        Collaborative Matrix         Concentric Circles
+  Re-scan, Refresher        Collaborative Matrix         Rotating Partners
     Text, Vocab Drill                                     + Closing Transfer
 ```
 
@@ -143,7 +144,7 @@ Mixed-ability groups of 4, one student per task Level. Each completes their own 
 **Level 2 (extension-down)** - grounding: Level 2 Reading objective ("Can read one short sentence using the
 fixed frame ('It is ___.') describing a familiar object, decoding the open-slot word... with visual support.")
 - Task: Using the lesson's picture of the bird mural (`Lesson4_WynwoodWalls_Img_BirdMural.jpg`, embedded in the
-  student packet), complete: "It is ___." (e.g., "It is orange.")
+  student packet), complete: "It is ___." (e.g., "It is bright.")
 - Respectful Tiers add-on: circle the word that best shows how the mural makes the street feel - *alive* /
   *empty* - using the picture and Paragraph C as a clue.
 Image: `Lesson4_WynwoodWalls_Img_BirdMural.jpg` - "Parrots on a Wall - panoramio" by agracier, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Parrots_on_a_Wall_-_panoramio.jpg.
@@ -168,12 +169,11 @@ details, and identify at least one clearly evaluative word choice that signals t
 live two-column T-chart on the board: "Bird Mural (this year)" vs. "Wave Mural (last year)," filled in only from
 what groups actually say - this is where the class's full comparison exists, not on any single group's handout.
 
-### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Concentric Circles
+### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Rotating Partners
 
-Form two circles, an inner circle facing an outer circle. Ask: "Which matters more when describing art: color or
-shape? Use the mural to support your answer." Partners discuss for 1 minute, then the outer circle rotates to a
-new partner and repeats with a new prompt: "Would you rather see this mural in a gallery or on this outdoor
-wall? Why?"
+Students pair up from where they sit. Ask: "Which matters more when describing art: color or shape? Use the
+mural to support your answer." Partners discuss for 1 minute, then each student finds a new partner and repeats
+with a new prompt: "Would you rather see this mural in a gallery or on this outdoor wall? Why?"
 
 **Sentence stems by task Level** (each capped at that Level's own vocabulary ceiling):
 - **Level 2:** "It is ___." (differentiated participation - see below)
@@ -182,10 +182,10 @@ wall? Why?"
 - **Level 5:** "The artist organizes her answers by ___, and the word '___' shows that she feels ___ about
   painting outdoors."
 
-**Differentiated participation (Level 2):** before the circles begin rotating, Level 2's student rehearses their "It
-is ___." stem once, quietly, with a partner, and gets a thumbs-up. During Concentric Circles, they take a
-listening/tracking role for the first rotation - a tally sheet marking how many partners choose "color" versus
-"shape" - with one fully-prepared line ready to contribute once they rotate to a partner, rather than an
+**Differentiated participation (Level 2):** before the round begins, Level 2's student rehearses their "It
+is ___." stem once, quietly, with a partner, and gets a thumbs-up. For their first partner they take a
+listening/tracking role - a tally sheet marking how many partners choose "color" versus
+"shape" - with one fully-prepared line ready to contribute once they move to a new partner, rather than an
 on-demand turn with a stranger from the very first round.
 
 **Closing Transfer Check:** In pairs, every student describes one object in the classroom by comparing its color
@@ -234,8 +234,8 @@ shape because..."). Teacher cold-calls 2-3 pairs to share. No self-report, no co
     CSV Level's Reading objective (quoted above), not an invented curve.
 
 **18 (checked against the v2.7 lesson prompt, 2026-09-01, no change needed):** Phase 3 already rotates through
-two distinct prompts at the partner changeover (comfortably within the 2-3 range); Concentric Circles needs no
-outer-circle task under Section 0.10, since both circles are paired and active by design.
+two distinct prompts at the partner changeover (comfortably within the 2-3 range); Rotating Partners needs no
+listener task under Section 0.10, since everyone is paired and active by design.
 
 **Topic-grounding and guardrail check (per the updated Module Lesson-Plan prompt):** the topic is grounded in
 a real, documented location (Wynwood Walls, Miami); the interviewed artist is explicitly a fictional, composite

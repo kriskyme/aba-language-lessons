@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The House of Little Hands: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+  width: 165px;
+  flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      .upside-down {
+        transform: rotate(180deg);
+      }
+
+      .verify-window {
+        border: 1px solid var(--ink);
+        border-left: 4px solid var(--ink);
+        background: var(--paper);
+        padding: 12px 16px;
+        margin: 18px 0 12px;
+        page-break-inside: avoid;
+      }
+      .verify-window .verify-src {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: var(--ink-soft);
+        margin: 0 0 8px;
+      }
+      .verify-window p {
+        margin: 0 0 8px 14px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .verify-window p:last-child {
+        margin-bottom: 0;
+      }
+      .verify-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        margin: 0 0 14px;
+      }
+
+      .stop-flag {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 2px solid var(--ink);
+        padding: 10px 14px;
+        margin: 12px 0 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .stop-badge {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        background: var(--ink);
+        color: var(--paper);
+        clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .stop-flag .instr {
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .refresher,
+        .verify-window,
+        .notes-table,
+        .discuss-block,
+        .wrapup,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">      <div class="masthead">
+        <h1>Unit 8A: The House of Little Hands</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Advanced 1.2.8.1</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can hear a stretch of detail and say the
+        one thing it all adds up to.
+      </p>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Good to Know</div>
+        <p class="model-step">
+          Haute couture is clothing made to order for one client, fitted to that
+          person and finished largely by hand. An embroidery house like Lesage
+          does not sell finished clothes: it makes decoration to order for the
+          designers who do.
+        </p>
+        <p class="model-step">
+          Charles Frederick Worth, named at the end of the report, was a designer
+          working in Paris in the second half of the 1800s, often described as
+          the first high-fashion designer.
+        </p>
+        <p class="model-step">
+          This report was broadcast in 2011. The second source in Task D is a
+          magazine profile of the same house published in 2018.
+        </p>
+      </div>
+
+      <div class="section-title">Before You Listen</div>
+      <p class="instr">
+        Fill in the first two columns below, on how expensive handmade clothing
+        is actually made, then compare with a neighbour. Leave "What I Learned"
+        blank for now.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>What I Know</th>
+          <th>What I Want to Know</th>
+          <th>What I Learned</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. adornment</span
+          ><span
+            >something added to a thing or a person to make it look richer or
+            more striking</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">2. intricate</span
+          ><span
+            >made of many small parts fitted together, so it takes close
+            attention to follow</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">3. commission</span
+          ><span
+            >to order a piece of work specially, from the person who will make
+            it</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">4. archive</span
+          ><span
+            >an organised store of material kept because of what it records</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">5. flimsy</span
+          ><span>thin and weak, so light that it seems it could tear</span>
+        </div>
+        <div class="vrow">
+          <span class="word">6. perpetuate</span
+          ><span>to keep something going so that it does not die out</span>
+        </div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">little hands</span>: the French name for the
+          people who do the handwork, translated literally.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">if butterflies could sew</span>: an imagined
+          comparison, used to say that work is impossibly fine and light.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">where the magic begins</span>: the point at
+          which something ordinary turns into something remarkable.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">the City of Light</span>: a long-standing
+          nickname for Paris.
+        </div>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll listen to:</strong> "At Maison Lesage, Beauty Embroidered
+        By Hand," an NPR radio report from the Paris embroidery house that makes
+        the beadwork and embroidery for the couture designers, and from the rooms
+        where the work is done.
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you listen, write the one main idea of each section on the heading
+        line, and two details that support it underneath.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>Section</th>
+          <th>The main idea</th>
+          <th>Two details underneath</th>
+        </tr>
+        <tr>
+          <td>1. The rooms and the work</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2. How one piece is made</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3. The archive</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4. The school</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="section-title">Listen Closely</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-3 sentences, describe what Maison Lesage makes and where the
+              work happens, choosing your own connectors.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Write down one comparison a speaker makes, and the reason given
+              for it.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Add one branch to the class outline on the board. Write it here
+              first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Francois Lesage says he would rather sell one dress for 100,000
+              euros than 100,000 dresses for one euro. Circle the one you think
+              a workshop should aim for: <strong>a few pieces made
+              slowly</strong> or <strong>many pieces made quickly</strong>.
+              Write one sentence saying why.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Summarize how this report is organized, in order, in 3-4
+              sentences.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one evaluative word choice by which a speaker signals an
+              opinion of this workshop without ever stating it. Write the words
+              and what the opinion is.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Note the organizational flow on the class outline on the board.
+              Write it here first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              List two stated facts and two clearly-signaled evaluative
+              comments. Keep the two lists separate.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one clear tonal shift in the report. Describe what changes in
+              the language at that point.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              The reporter and the Chanel employee both describe the same small
+              piece of embroidery. Write what each of them says about it, then
+              mark which parts of each are stated fact and which are evaluation.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          This task compares two real accounts of the same workshop. The first is
+          the radio report you listened to, broadcast in 2011. The second is a
+          magazine profile of the same house, published in 2018 after a visit to
+          the same rooms. Each row below gives each account's own words on a
+          single subject.
+        </p>
+        <div class="match-list">
+          <div class="match-row">
+            <span class="match-label">The embroidery, seen up close</span>
+            <span class="match-src"
+              ><strong>Radio report:</strong> Stamberg says "Workers in white lab
+              coats attach sequins, beads, rhinestones, shells, ribbons, feathers
+              to pieces of air-thin fabric, which will adorn de luxe designs by
+              the top names in fashion." and "The most delicate, exquisite,
+              improbable sewing."</span
+            >
+            <span class="match-src"
+              ><strong>Magazine profile:</strong> "spectacular swatches of
+              embroidery that sparkle like mini meteor showers frozen in time"
+              and "like luminescent paintings comprised of sequins, beads,
+              pearls, flecks of gold, silken thread, raffia and much more
+              besides" and "There are blue and green gem-encrusted collars and
+              golden swirls of matt sequins taking shape beneath their
+              fingertips."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">The people who do the work</span>
+            <span class="match-src"
+              ><strong>Radio report:</strong> Stamberg says "The House of Lesage
+              is a house of handwork, done by what the French call petit mains -
+              little hands. They do it all." Angelique Ginguene says "The
+              drawing, the sewing, the embroidery. It's very precious hands." and
+              "They have to count how many blue pearl, how many red pearl the
+              girl will need for realize embroidery."</span
+            >
+            <span class="match-src"
+              ><strong>Magazine profile:</strong> "These artisans, who often work
+              in the shadows, are the lifeblood of luxury brands." and "anything
+              from 35 to 70 hand-workers, depending on workflow" and "must
+              deliver embroideries for each collection within four weeks of
+              receiving Lagerfeld's croquis."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">Who owns the house</span>
+            <span class="match-src"
+              ><strong>Radio report:</strong> Stamberg says "Their chief designer,
+              Karl Lagerfeld, bought Lesage in 2002 to ensure that this
+              130-year-old embroidery business would stay in business in a world
+              of mass-produced, made-in-China clothing."</span
+            >
+            <span class="match-src"
+              ><strong>Magazine profile:</strong> "Acquired by Chanel in 2002,
+              Lesage is part of the maison's Paraffection ('for love') subsidiary,
+              which counts a number of specialist M&#233;tiers d'Art workshops"
+              and "Chanel's initiative, much like Homo Faber, though more
+              prolonged and distinct, aims to promote and preserve the savoir
+              faire of artisans through its acquisition of M&#233;tiers d'Art
+              firms producing couture goods for Chanel and other prestigious
+              houses."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">The archive</span>
+            <span class="match-src"
+              ><strong>Radio report:</strong> Stamberg says "There are some 50,000
+              samples in the Lesage archive, a museum of embroidery, really." and
+              "Shelves there buckle with cardboard boxes marked Yves St. Laurent,
+              Winter 1975, Chanel, Summer 2003."</span
+            >
+            <span class="match-src"
+              ><strong>Magazine profile:</strong> "its basement stores 75,000
+              archival pieces of couture embroidery dating back to the
+              mid-19th century" and Hubert Barr&#232;re says "The word 'archive'
+              is deceptive because it sounds outdated; these embroideries are
+              still so very modern."</span
+            >
+          </div>
+        </div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Working only from the words above, write what impression of this
+              workshop each account leaves, and name the choices in their wording
+              that build it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Name one interest or assumption behind one account's framing that
+              neither states outright, and point to the words that led you to it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Check It Against the Source</div>
+      <p class="verify-instr">
+        These are the speaker's own words. Read each one against what you wrote
+        above, and mark the one place where your words and theirs are different.
+      </p>
+      <div class="verify-window">
+        <p class="verify-src">Radio report, about 3:15-4:10</p>
+        <p>
+          There are some 50,000 samples in the Lesage archive, a museum of embroidery, really. Shelves there buckle with cardboard boxes marked Yves St. Laurent, Winter 1975, Chanel, Summer 2003 - inside the boxes, samples of the embroideries Lesage produced for that particular collection.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="verify-window">
+        <p class="verify-src">Radio report, about 4:10-5:20</p>
+        <p>
+          Hundreds of hours of handwork, thousands of sequins, beads, miles of silken threads. These rarified creations come naturally with rarified costs.
+        </p>
+        <p>
+          I prefer to sell one dress for 100,000 euros, than 100,000 dresses for one euro.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <p class="instr">
+        You will hear the second part once more. Cover it with your hand while it plays.
+      </p>
+
+      <div class="section-title">Finish the Chart</div>
+      <div class="wrapup">
+        <p class="instr">
+          Go back to the table at the start of this unit and fill in the "What I
+          Learned" column.
+        </p>
+      </div>
+
+      <div class="section-title">Show What You Noticed</div>
+      <div class="wrapup">
+        <div class="stop-flag">
+          <div class="stop-badge" aria-hidden="true">STOP</div>
+          <p class="instr">
+            <strong>Don't read ahead.</strong> Your teacher will read a short
+            paragraph out loud once.
+          </p>
+        </div>
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            Write the main idea of what you heard in one sentence, and one detail
+            you deliberately left out of it. Then say both to a partner.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
+      <p class="instr" style="font-style: italic; margin-bottom: 6px">
+        This is printed upside-down on purpose. Don't turn the page around until
+        you've said and written your answer above.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          The mural on the end wall of the sports hall was commissioned by the
+          council for four hundred pounds. Twelve people worked on it over one
+          summer. The design is intricate at the bottom, where children painted
+          their own hands, and plain at the top, where nobody could reach. The
+          paper drawings were so flimsy they tore in the wind. The photographs
+          went into the library's archive. Nobody calls it adornment now. It is
+          simply the wall, and the town repaints it every spring to perpetuate
+          it.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 8B: The House of Little Hands</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Advanced 1.2.8.1</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can say clearly whether I go along with
+        what someone has just said, and add my own reason.
+      </p>
+
+      <div class="section-title">Learn the Phrase</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Agreeing and Disagreeing</div>
+        <p class="model-step">
+          The report is full of small agreements landing in real time. Checking a
+          fabric, the reporter asks "Muslin or chiffon. Chiffon, no?" and
+          Angelique Ginguene answers "Chiffon, yes. Exactly."
+        </p>
+        <p class="model-step">
+          Later the reporter finishes a teacher's thought for her, "A dream since
+          you were a little girl... to work in couture," and gets back a single
+          word: "Exactly." Francois Lesage, making a claim about the past, backs
+          himself the same way: "It's true." Each of these confirms one specific
+          thing, not the whole conversation.
+        </p>
+        <p class="model-step">
+          Now it's your turn. In the tasks below, you'll agree and disagree using
+          frames like these:
+        </p>
+        <ul class="qlist">
+          <li><span class="num">&bull;</span> "Exactly."</li>
+          <li><span class="num">&bull;</span> "That's true, and ___."</li>
+          <li><span class="num">&bull;</span> "I'd go further: ___."</li>
+          <li><span class="num">&bull;</span> "I see that, but ___."</li>
+          <li><span class="num">&bull;</span> "I'd put it differently: ___."</li>
+          <li>
+            <span class="num">&bull;</span> "I'm not sure about that, because
+            ___."
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Practice It</div>
+      <p class="instr">
+        Every task below is about a workspace you know where somebody makes,
+        mends or prepares something: a kitchen, a garage, a salon, a shop counter,
+        a market stall. Choose it from memory. Work in pairs: when one of you
+        finishes describing, the other gives an opinion about the place, and the
+        describer agrees or disagrees using a frame above. Then swap. Pick one
+        task.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe the workspace in a few sentences, choosing your own
+              connectors: what is in it, where things are kept, and what somebody
+              would notice first. Include one comparison ("It's like ___") with a
+              brief reason for it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Give an extended description of the workspace in a clear order, and
+              include one evaluative word choice that lets a listener hear your
+              opinion of it without your stating it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe the workspace fluently, moving between what is in it and
+              why that matters, and explain why one feature of it matters. Watch
+              your partner, and when they react, adjust your tone or your
+              approach once in response.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe the same workspace twice, to two different listeners in
+              turn: first to someone who might come and work there, then to
+              someone who might buy what is made there. Every fact stays true in
+              both; what changes is which facts you choose and how formally you
+              speak. Somewhere in the second description, catch one imprecise
+              word of your own and repair it aloud as you go.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Say It Like a Native Speaker</div>
+        <p class="model-step">
+          In connected speech, a word ending in a consonant runs straight into a
+          word beginning with a vowel, and the join disappears: the two words
+          arrive as one.
+        </p>
+        <p class="model-step">
+          Listen again and draw a link mark wherever two words run together in
+          each of these three real lines.
+        </p>
+        <ul class="qlist">
+          <li>
+            <span class="num">&bull;</span> "Everything, everything is possible
+            to do."
+          </li>
+          <li>
+            <span class="num">&bull;</span> "And it's on this little, thin,
+            flimsy piece of fabric."
+          </li>
+          <li>
+            <span class="num">&bull;</span> "It's very precious hands."
+          </li>
+        </ul>
+        <p class="model-step">
+          Then say one agreeing line and one disagreeing line twice, once with
+          every word separated and once linked, and tell your partner which one
+          sounded like a person rather than a list.
+        </p>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+      <div class="discuss-block">
+        <p class="instr">
+          Work with a partner. In each question, one of you describes and the
+          other responds with an agreeing or disagreeing phrase and a reason, then
+          you swap. When you finish a question, find a new partner and go on to
+          the next one. Keep the record in question 4 as you go.
+        </p>
+
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            Describe the workspace you chose in Practice It. Your partner says
+            whether the picture you gave them matches a place they know.
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            Describe a workroom, kitchen or shop you have seen where all the
+            tools were left out on show. Your partner says what that arrangement
+            tells them about the person who works there.
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">3.</span>
+          <div class="qbody">
+            Describe the tidiest workspace and the messiest workspace you have
+            ever seen. Your partner says which of the two they would rather work
+            in.
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">4.</span>
+          <div class="qbody">
+            Each time, write the frame your partner used and one word from the
+            description that made them agree or disagree.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+
+        <p class="instr" style="font-weight: 700; margin-bottom: 6px">
+          Starter phrases:
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span> "Exactly."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "That's true, and ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;</span> "I see that, but
+            ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I'd put it
+            differently: ___."
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <p class="instr">
+          With a partner, say one sentence giving your opinion about an ordinary
+          preference of yours (the best time of day to do something, the best way
+          to travel a short distance). Your partner responds with an agreeing or
+          a disagreeing phrase and a reason, linking the words as you practised.
+          Then swap.
+        </p>
+        <ul class="stems">
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "That's true, and ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I'm not sure
+            about that, because ___."
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -7,21 +7,143 @@ for cross-Band notes and mechanics that aren't repeated here.
 
 ### Set 1 (planned 2026-09-01) - complete, 4 of 4 lessons generated, assessment generated
 
-| Lesson # | Content Format                          | Listening Strategy                       | Speaking Skill                    | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                | Topic Direction                                                       |
-| -------- | --------------------------------------- | ----------------------------------------- | --------------------------------- | ------------------ | ------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| 1        | Chef profile (home/studio tour)         | Listen for Stated vs. Implied Opinion     | Hedging an Opinion                | Mystery Quote      | Town Hall          | Culinary technique & atmosphere | A real chef's restaurant kitchen and cooking philosophy               |
-| 2        | Architecture/preservation feature       | Recognize Examples                        | Summarizing What Someone Said     | Visual Inquiry     | Fishbowl           | Architecture & restoration      | A real historic building's restoration project                        |
-| 3        | Nature/conservation documentary segment | Listen for Cause-and-Effect Language      | Turn-Taking/Interrupting Politely | Four-Corner Debate | Jigsaw             | Conservation & habitat          | A real conservation program protecting an endangered species' habitat |
-| 4        | Fine-art craft-studio tour              | Listen for Signposting/Discourse Markers  | Making Comparisons                | K-W-L Chart        | Rotating Partners  | Technique & artistic vision     | A real glassblower's or sculptor's studio and process                 |
+| Lesson # | Content Format                          | Listening Strategy                       | Speaking Skill                    | Phase 1 Hook   | Phase 3 Protocol  | Vocabulary Theme                | Topic Direction                                                       |
+| -------- | --------------------------------------- | ---------------------------------------- | --------------------------------- | -------------- | ----------------- | ------------------------------- | --------------------------------------------------------------------- |
+| 1        | Chef profile (home/studio tour)         | Listen for Stated vs. Implied Opinion    | Hedging an Opinion                | Mystery Quote  | Town Hall         | Culinary technique & atmosphere | A real chef's restaurant kitchen and cooking philosophy               |
+| 2        | Architecture/preservation feature       | Recognize Examples                       | Summarizing What Someone Said     | Visual Inquiry | Panel Round       | Architecture & restoration      | A real historic building's restoration project                        |
+| 3        | Nature/conservation documentary segment | Listen for Cause-and-Effect Language     | Turn-Taking/Interrupting Politely | Take a Side    | Jigsaw            | Conservation & habitat          | A real conservation program protecting an endangered species' habitat |
+| 4        | Fine-art craft-studio tour              | Listen for Signposting/Discourse Markers | Making Comparisons                | K-W-L Chart    | Rotating Partners | Technique & artistic vision     | A real glassblower's or sculptor's studio and process                 |
 
-### Set 2 (planned 2026-09-01) - Planned only, not yet generated
+### Set 2 (planned 2026-09-01) - complete, 4 of 4 lessons generated and retrofitted to §D12; assessment pending
 
-| Lesson # | Content Format                   | Listening Strategy                         | Speaking Skill           | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                 | Topic Direction                                                |
-| -------- | --------------------------------- | ------------------------------------------- | ------------------------ | ------------------ | ------------------ | --------------------------------- | ---------------------------------------------------------------- |
-| 5        | Urban-planning walking tour       | Predict from Context Before Confirming      | Giving Examples phrases  | Mystery Quote      | Town Hall          | Urban design & public space      | A real city's public-space or waterfront redevelopment project  |
-| 6        | Museum/exhibit-guide description  | Listen for Sequence Markers                 | Sequencing Language      | Visual Inquiry     | Panel Round        | Provenance & display language    | A real museum's flagship or famous exhibit                       |
-| 7        | Behind-the-scenes facility tour   | Listen for Contrastive/Concession Language  | Asking for Clarification | Take a Side        | Jigsaw             | Scientific equipment & discovery | A real research facility or observatory, behind the scenes       |
-| 8        | Atelier/workshop profile          | Listen for Main Ideas/Gist                  | Agree/Disagree phrases   | K-W-L Chart        | Rotating Partners  | Precision & couture design       | A real fashion designer's or luxury craftsman's atelier          |
+| Lesson # | Content Format                   | Listening Strategy                         | Speaking Skill           | Phase 1 Hook   | Phase 3 Protocol  | Vocabulary Theme                 | Topic Direction                                                | Version   |
+| -------- | -------------------------------- | ------------------------------------------ | ------------------------ | -------------- | ----------------- | -------------------------------- | -------------------------------------------------------------- | --------- |
+| 5        | Urban-planning walking tour      | Predict from Context Before Confirming     | Giving Examples phrases  | Mystery Quote  | Town Hall         | Urban design & public space      | A real city's public-space or waterfront redevelopment project | `1.2.5.1` |
+| 6        | Museum/exhibit-guide description | Listen for Sequence Markers                | Sequencing Language      | Visual Inquiry | Panel Round       | Provenance & display language    | A real museum's flagship or famous exhibit                     | `1.2.6.1` |
+| 7        | Behind-the-scenes facility tour  | Listen for Contrastive/Concession Language | Asking for Clarification | Take a Side    | Jigsaw            | Scientific equipment & discovery | A real research facility or observatory, behind the scenes     | `1.2.7.1` |
+| 8        | Atelier/workshop profile         | Listen for Main Ideas/Gist                 | Agree/Disagree phrases   | K-W-L Chart    | Rotating Partners | Precision & couture design       | A real fashion designer's or luxury craftsman's atelier        | `1.2.8.1` |
+
+**Set 2 retrofitted to Quality Standards §D12 (2026-09-10), all four lessons bumped to `.1`.** Lessons 5-8
+were generated earlier the same day against `Generate_Lesson_Prompt_v2.5.md`, the version on disk when the run
+began; a parallel pass bumped the prompt to v2.6 mid-run, replacing the five-phase Day 1 with the six-phase
+commit-verify-return arc. Rather than leave the Set in the backlog, all four Day 1s were rewritten in the same
+session that generated them: phase budgets to 15/15/10/20/7/8, the source now played twice with no wording on
+the page and the second play under a narrower per-Level purpose written into each lesson, a Commit and Revise
+split inside Phase 4, and a new Phase 5 printing two verification windows before a covered replay. Every window
+is a contiguous verbatim stretch under eighty words with its own segment label, chosen on evidence: in each
+lesson one window is the stretch a named task actually turns on and the other carries a connected-speech
+feature this Band predictably mishears, and in Lessons 7 and 8 that second feature is the one Day 2's
+pronunciation focus goes on to teach. Packets regenerated with the `.verify-window` block placed after every
+listening task's response space, per `Generate_Student_Packet_Prompt_v2.7.md` §2.8. Versions `1.2.5.1`,
+`1.2.6.1`, `1.2.7.1`, `1.2.8.1`; all four cleared from `Index.md`'s §D12 backlog.
+
+**Lesson 8 generated (2026-09-10), completing Set 2:** two real accounts of the same subject, Maison
+Lesage, the Paris embroidery house that makes the beadwork for the couture designers. Primary (audio):
+NPR Morning Edition, "At Maison Lesage, Beauty Embroidered By Hand" (special correspondent Susan
+Stamberg, host David Greene, with Francois Lesage then 82, Angelique Ginguene of Chanel, and school
+teacher Marie-Lee Lyon; broadcast 2011-09-09, runtime 7:20 from the page's own audio metadata).
+Secondary (Level 7 only, written excerpts): The Week, "Chanel's special effects studio: Maison Lesage,"
+by Alexandra Zagalsky (published 2018-12-07, reported early November 2018), a profile of the same
+workshop seven years later. **Two departures recorded rather than worked around.** First, the plan's
+suggested angle for this row was the brand's own video or page against a journalist's profile; every
+Chanel-side domain refuses automated retrieval (chanel.com, le19m.com and the English lesage-paris.com
+all returned 403 or nothing, and only the French Lesage homepage resolved), so quoting brand copy would
+have meant quoting text that was never retrieved, which §0.3 items 1 and 3 forbid. The second source is
+therefore a second journalist, the same call Lesson 5 made when its planned angle could not be sourced.
+Second, the written-not-spoken Level 7 deviation carries over from Lessons 6 and 7. The pairing is
+still a different exercise from Lesson 7's: there an institution corrected a journalist, here two
+journalists admire the same thing and will name very different amounts of it, the radio piece giving
+the workers as "little hands" and "the girl" counting pearls while the magazine gives the ownership
+structure, the headcount ("anything from 35 to 70 hand-workers, depending on workflow") and the
+four-week deadline. The radio host's own framing hands Level 7 its way in: the piece is introduced as
+"one small reminder this morning that life goes on." Both sources fetched directly and saved
+teacher-only in `Lesage_Transcript.md`, which records NPR's accuracy disclaimer, a speaker-label error
+in NPR's published transcript ("House of Jean-Francois Lesage", a different house, never quoted), the
+published "petit mains" spelling (quoted, since it is what the reporter says), and the article's curly
+quotes and combining accents. Pronunciation is linking, **the last unused entry in §0.4's bank, so this
+Band has now used all six**. Version `1.2.8.0`. See
+`lessons/advanced/Module_1/Set_2/Lesson_8_Lesage/Lesson8_Lesage.md` and
+`Lesson_8_Lesage/Lesage_Advanced_L8_Packet.html`.
+
+**Set 2 is complete (2026-09-10).** Four lessons generated in one pass, Lessons 5 to 8. Across the Set
+the four Phase 1 hooks and the four Phase 3 protocols are each used exactly once, all eight Closing
+Transfer Checks use distinct objects or scenarios, and no two lessons share a note-taking organizer
+shape. Two sources were video (Lessons 5 and 6) and two audio (Lessons 7 and 8). Every lesson's Level 7
+task pairs the taught source with a second real source on the same subject; only Lesson 5's second
+source is itself spoken, and the written-second-source deviation is flagged in each of the other three.
+The remaining step for this Set is its assessment: run `Generate_Assessment_Prompt_v2.1.md` and
+`Generate_Assessment_Student_Packet_Prompt_v2.1.md`, with Part A needing 2 to 3 new real clips that
+avoid all eight sources used across Sets 1 and 2 and the two used in Set 1's assessment.
+
+**Lesson 7 generated (2026-09-10):** two real accounts of the same subject, the National Radio Quiet Zone
+in West Virginia and the Green Bank Telescope at the centre of it. Primary (spoken, and the Set's first
+audio-only source): NPR All Tech Considered, "Enter The Quiet Zone: Where Cell Service, Wi-Fi Are Banned"
+(reporter Elise Hu, host Steve Inskeep, with Karen O'Neil who oversees the site, observatory engineer
+Chuck Niday, and four residents; broadcast 2013-10-08, runtime 5:25 from the page's own audio metadata).
+Secondary (Level 7 only, written excerpts): the Green Bank Observatory's own "What is the Green Bank
+Observatory?" and "National Radio Quiet Zone" pages. The plan's suggested angle for this row, the
+institution's own account against an independent journalist's feature, and it carries the same
+written-not-spoken deviation as Lesson 6 and Set 1's Lessons 3-4, flagged in the lesson. The pairing is
+unusually pointed: the observatory's page is openly arguing with coverage of exactly this kind ("we are
+NOT the land of no internet! Go behind the click-bait headlines"; "Despite popular misconceptions, the
+'quiet zone' does not mean 'no internet.'") while the 2013 report calls it "a place the wireless
+revolution skipped over" and closes on residents "content to stay disconnected," so the thirteen-year gap
+between the two is the task rather than a weakness. The source is also an exceptionally good fit for the
+row's strategy, being built out of concessions throughout. Both sources fetched directly and saved
+teacher-only in `QuietZone_Transcript.md`, which records NPR's accuracy disclaimer, the two speaker
+labels missing from NPR's published transcript, and two typographical errors on the observatory's page;
+no quotation used in the lesson contains any of them. NPR's transcript carries no timestamps, so
+proportioned segment labels across the confirmed 5:25 are used. Pronunciation is reduced forms in fast
+speech, which Section 0.4 marks Advanced and Proficient only and which no lesson in this Band had used.
+Second deviation flagged: the piece is a reported feature rather than an interview and contains only two
+real reporter clarification questions ("How many bars do you have?", "For fun?"), so Day 2's speaking
+skill is grounded in genuine but thin source language, said so rather than overstated. Version
+`1.2.7.0`. See `lessons/advanced/Module_1/Set_2/Lesson_7_QuietZone/Lesson7_QuietZone.md` and
+`Lesson_7_QuietZone/QuietZone_Advanced_L7_Packet.html`.
+
+**Lesson 6 generated (2026-09-10):** two real accounts of the same subject, the Museum of Fine Arts,
+Boston's rebuilt galleries of ancient Greek, Roman and Byzantine art. Primary (spoken): PBS NewsHour's
+*Canvas* segment "Museum uses technology to deepen visitor engagement with ancient sculptures" (special
+correspondent Jared Bowen of GBH Boston with curators Christine Kondoleon and Laure Marest; aired
+2022-11-28, runtime 5:45 from the page's own video metadata, dead centre of the Level 5 target).
+Secondary (Level 7 only, written excerpts): WBUR Commentary, "Everything old is new again in the MFA's
+transformed art galleries of Ancient Greece, Rome and the Byzantine Empire," by arts critic Lloyd
+Schwartz (2022-03-14). This is the plan's own suggested angle for this row, official account against a
+critic's review, and it carries the same deviation Set 1's Lessons 3 and 4 did: the Level 7 CSV row asks
+for two *spoken* descriptions and the second here is written, flagged in the lesson rather than hidden.
+The Level 7 comparison turns on the 13-foot statue: the segment names her Juno, the largest classical
+sculpture in America, arriving "from the sky" after a century standing "anonymously" in a suburban
+estate, while the review declines to name her, dates the 1904 purchase and the 2011 acquisition, and
+ends on the rest of her sculpture group still being in Italy. Both full sources fetched directly and
+saved teacher-only in `GodsAndGoddesses_Transcript.md`; PBS's transcript carries no timestamps, so
+proportioned segment labels across the confirmed 5:45 are used. First lesson in this Band to embed an
+image: a CC BY 4.0 Wikimedia Commons photograph of the museum's Athena Parthenos carries the Visual
+Inquiry hook (students say what the white marble looked like when new, and the clip's last segment
+settles it), fetched per `Program_Conventions.md` §I, saved as
+`Lesson6_GodsAndGoddesses_Img_Hook.jpg`, and recorded in the Set's new
+`Set2_Advanced_Image_Credits.md`. New pronunciation feature again (content-word stress). Two further
+deviations flagged in the lesson's own self-check: the note-taking organizer is a stop-by-stop
+tour-route chart rather than §0.4's T-chart, since Lesson 5 used the T-chart; and Visual Inquiry with
+Panel Round repeats Set 1 Lesson 2's pairing, which §D6 permits because adjacency, not full history, is
+the rule. Version `1.2.6.0`. See
+`lessons/advanced/Module_1/Set_2/Lesson_6_GodsAndGoddesses/Lesson6_GodsAndGoddesses.md` and
+`Lesson_6_GodsAndGoddesses/GodsAndGoddesses_Advanced_L6_Packet.html`.
+
+**Lesson 5 generated (2026-09-10), opening Set 2:** two real sources, both spoken, both on the same subject
+(New York's High Line). Primary: PBS NewsHour, "Above Manhattan's bustle, a reshaped public space" (Jeffrey
+Brown walking the park with James Corner, the landscape architect; aired 2016-08-11, runtime 6:32 from the
+page's own video metadata). Secondary (Level 7 only, excerpt): TED2011, Robert Hammond, "Building a park in the
+sky" (5:24, filmed 2011-03, published 2011-06-30), the co-founder's account five years earlier, for a
+designer-framing-vs-founder-framing comparison in place of the plan's suggested city-planner-vs-resident angle,
+which no verifiable pair of spoken sources supported. Both full transcripts were fetched directly and are saved
+teacher-only in `HighLine_Transcript.md`; TED's own paragraph timestamps are used for the secondary source,
+while the PBS transcript carries none, so proportioned segment labels across the confirmed 6:32 runtime are used
+for the primary. Generated against `Generate_Lesson_Prompt_v2.5.md` and `Generate_Student_Packet_Prompt_v2.6.md`,
+with the three rules the packet prompt has not yet been bumped for applied by hand ("I can ..." objectives,
+room-neutral hook and protocol names, no teacher-prepared media). Cross-Set rule (`Program_Conventions.md` §F)
+checked against Set 1's Lesson 4: no repeat in format, strategy, skill, hook, or protocol. Version `1.2.5.0`.
+See `lessons/advanced/Module_1/Set_2/Lesson_5_HighLine/Lesson5_HighLine.md` and
+`Lesson_5_HighLine/HighLine_Advanced_L5_Packet.html`.
 
 **Open items, flagged 2026-09-03, resolved in part 2026-09-04:** Lessons 1-2 were generated under the
 pre-correction 8-day cycle and had not received the retroactive 2-day restructure that Intermediate Set 1 got
@@ -277,3 +399,129 @@ for Set 2 onward. If this Module already has a section above, append this Set as
 rather than creating a duplicate `## Module N` heading. `Version` is new as of 2026-09-07 -
 `shared/Program_Conventions.md` §G - and only applies from this Set onward; bump a lesson's own Iteration
 digit in place here whenever that lesson is substantively revised after generation.)
+
+---
+
+## Module 2: Narrating
+
+### Set 1 (planned 2026-09-10) - Planned only, not yet generated
+
+| Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Personal-story talk (first-person stage or long-form telling) | Listen for Sequence Markers | Sequencing Language | Mystery Quote | Town Hall | Procedure, precision & working under pressure | An astronaut's own account of one high-stakes repair that had to work the first time | 2.1.1.0 |
+| 2 | Investigative news feature with insider interview | Predict from Context Before Confirming | Summarizing What Someone Said | Visual Inquiry | Panel Round | Disclosure, evidence & institutional language | An insider's account of uncovering or reporting something an organization did not want known | 2.1.2.0 |
+| 3 | Storytelling-podcast narrative episode segment | Listen for Stated vs. Implied Opinion | Giving Examples | Take a Side | small-group discussion | Endurance, hazard & survival | An expedition, voyage, or survival ordeal recounted by someone who was on it | 2.1.3.0 |
+| 4 | Oral-history archive interview clip | Listen for Contrastive/Concession Language | Asking for Clarification | K-W-L Chart | Jigsaw Expert Panels | Memory, testimony & historical reference | A first-hand oral history of a specific documented historical event, told by someone who lived through it | 2.1.4.0 |
+
+**Planned only, no lesson generated yet (2026-09-10).** Plan approved the same day; see
+`lessons/advanced/Module_2/Module2_Advanced_Lesson_Plan.md` for the task-Level mapping (the verbatim Module 2 CSV
+rows for Levels 4-7), the per-lesson Level 7 second-source angles, and the self-check. The `Version` column above
+records the code each lesson will carry once generated - this is the first table in this Band's log to carry that
+column, which both Module 1 tables predate. None of the four lessons exists yet, so no `Set_1/` folder has been
+created under `Module_2/`.
+
+**Note on where this Set sits:** Module 1's Set 2 (Lessons 5-8) remains planned-only and was deliberately left
+that way per user direction 2026-09-10; this Band moves on to Module 2 without generating it. Set and lesson
+numbering are scoped to the Module/Band pair (Conventions §C), so Module 2 opens its own Set 1 and its own
+Lessons 1-4 rather than continuing Module 1's count.
+
+**Cross-Module adjacency check (Conventions §F).** The rule checks this Set's Lesson 1 against the immediately
+preceding Module's most recently *logged* Set's final lesson - Module 1 Set 2's Lesson 8 (Atelier/workshop
+profile | Listen for Main Ideas/Gist | Agree/Disagree phrases | K-W-L Chart | Rotating Partners). Because that Set
+was never generated, the lesson a class actually last met is Set 1's Lesson 4 (Fine-art craft-studio tour |
+Listen for Signposting/Discourse Markers | Making Comparisons | K-W-L Chart | Rotating Partners). Rather than pick
+a reading, Lesson 1 was checked against **both** and clears both in all five rotated columns; its vocabulary theme
+and topic direction echo neither.
+
+**Cross-Band echoes flagged, not blocked (2026-09-10).** Intermediate's Module 2 Set 1 was planned the same day.
+§F scopes rotation to one Module/Band pair, so nothing here is blocked, but the topic directions were moved off
+Intermediate's deliberately to keep a teacher from sourcing near-identical material for two Bands in one term.
+Two light echoes remain: this Set's Lesson 3 (expedition/survival) is domain-adjacent to Intermediate's Lesson 2
+(rescue/emergency), and its Lesson 4 (oral history of a documented event) to Intermediate's Lesson 4 (an older
+person's one remembered day). Both Advanced versions turn on a second checkable account of the same events, which
+the Intermediate versions do not.
+
+**Lesson 1's row amended 2026-09-10, before generation.** Topic direction and vocabulary theme were changed from
+"an athlete's, performer's, or competitor's own account of a defining contest" and "Competition, preparation &
+defining-moment language." The approved direction had no transcript-verifiable source: TED, NPR and StoryCorps do
+not publish transcripts in a machine-verifiable form, and the verifiable families carry no athlete contest
+narration with a second account for Level 7. A PBS interview with Lindsey Vonn was retrieved in full and rejected
+as Module drift (weighted to present recovery, not a narrated sequence). Format and all five rotated columns are
+unchanged, so the cross-Module adjacency clearances recorded above still stand. Decided with the user, not
+silently substituted; the reasoning is in `lessons/advanced/Module_2/Module2_Advanced_Lesson_Plan.md`.
+
+**Lesson 1 generated (2026-09-10), version `2.1.1.0`.** Two real sources. Primary: "A View of the Earth,"
+Michael J. Massimino (NASA astronaut, STS-125), The Moth, recorded 2012-11-14 and carried in the Radio Hour
+episode "Astronauts, Family Trees and Drips" (2014-08-26) - a stage telling of the 2009 spacewalk to repair the
+Hubble Space Telescope's imaging spectrograph. Secondary (Level 7 only, excerpts): NASA's own "STS-125 MCC Status
+Report #13" and "15 Years Ago: STS-125, the Final Hubble Servicing Mission," for a personal-telling-versus-
+institutional-record comparison. Generated against `Generate_Lesson_Prompt_v2.5.md` and
+`Generate_Student_Packet_Prompt_v2.6.md`. See
+`lessons/advanced/Module_2/Set_1/Lesson_1_HubbleRepair/Lesson1_HubbleRepair.md`, its `HubbleRepair_Transcript.md`,
+and `HubbleRepair_Advanced_L1_Packet.html`. **Open item flagged, not hidden:** the telling runs roughly 20 to 24
+minutes against Section 0.2's 5 to 8 minute Level 5 target. The lesson plays a defined span (its self-made
+Segments 2 through 5, roughly 12 to 14 minutes) and the deviation is stated in the lesson's own self-check. No
+images, so this Set has no `Image_Credits.md`.
+
+**Two topic echoes to steer around when Lessons 3 and 7 are written (flagged 2026-09-10).** Lesson 1's amended
+domain sits next to this Set's own planned Lesson 3 (an expedition or survival ordeal) and next to Module 1
+Set 2's planned Lesson 7 ("a real research facility or observatory," theme "Scientific equipment & discovery").
+Neither is generated, so nothing collides today. Steer Lesson 3 to a terrestrial account and Lesson 7 away from
+space when either is taken up.
+
+**Lesson 2's Content Format amended 2026-09-10, before generation,** from "Long-form investigative interview clip"
+to "Investigative news feature with insider interview." No verifiable long-form investigative interview carrying an
+insider's own account could be confirmed at this band's runtime; the source used is a news report built around
+exactly that interview. Topic direction, theme, and all four other rotated columns are unchanged, so the
+adjacency clearances recorded above still stand. Reasoning in
+`lessons/advanced/Module_2/Module2_Advanced_Lesson_Plan.md`.
+
+**Lesson 2 generated (2026-09-10), version `2.1.2.0`.** Two real sources. Primary: "In Flint, public trust
+poisoned by toxic drinking water crisis," PBS NewsHour, correspondent William Brangham, aired 2016-01-20, in which
+Dr. Mona Hanna-Attisha of Hurley Medical Center narrates how she hit roadblocks on the state's data, pulled about
+1,700 children's records herself, found the rate of elevated blood lead had risen sharply, was publicly dismissed,
+and was confirmed two weeks later. Secondary (Level 7 only, excerpts): the CDC's "Blood Lead Levels Among Children
+Aged <6 Years - Flint, Michigan, 2013-2016," MMWR 65(25), 2016-07-01, for a personal-account-versus-official-report
+comparison. Generated against `Generate_Lesson_Prompt_v2.5.md` and `Generate_Student_Packet_Prompt_v2.6.md`. See
+`lessons/advanced/Module_2/Set_1/Lesson_2_FlintWater/`. **This lesson brought the Set its first images** (a Visual
+Inquiry hook), creating `Set_1/Set1_Advanced_Image_Credits.md`: two Public domain EPA photographs from Wikimedia
+Commons, a Flint water-plant tower and a home water test.
+
+**Open items on Lesson 2, flagged not hidden.** (1) Runtime runs roughly 9 to 10 minutes against Section 0.2's
+5 to 8 minute Level 5 target - modest, and much closer than Lesson 1's. (2) The subject is children's lead
+exposure and the segment includes two children describing how they felt; the lesson's tasks stay on the
+discovery-and-disclosure sequence, but a teacher should preview it. (3) The state's own voice is absent from the
+primary source, which is what Level 6's task is built to notice, and which is also why Level 7's second source is
+the CDC rather than the organization that did the dismissing; Michigan's own Task Force report returns HTTP 403.
+
+**Lesson 3 generated (2026-09-10), version `2.1.3.0`.** Primary source: "Follow me up a mountain |
+Climbing Mt Bowen," *Earshot*, ABC Radio National, broadcast 2023-03-20, 29:45, produced by Sophie
+Kesteven. Warren Macdonald and Geert van Keulen, strangers who met the day before, climbed Mount Bowen
+on Hinchinbrook Island in April 1997; a one-tonne boulder pinned Macdonald in a creek bed, van Keulen
+walked out for a day and a half to raise the alarm, and Macdonald was trapped more than 40 hours and
+lost both legs. Level 7 uses Macdonald's telling against van Keulen's and rescue crewman Daniel
+Portefaix's telling of the same hours. Generated against `Generate_Lesson_Prompt_v2.5.md` and
+`Generate_Student_Packet_Prompt_v2.6.md`. See `lessons/advanced/Module_2/Set_1/Lesson_3_MountBowen/`.
+**No cell of the approved row was amended** - unlike Lessons 1 and 2, the source matches the planned
+storytelling-podcast format exactly. No images, so nothing was added to the Set's image register.
+
+**Open items on Lesson 3, flagged not hidden.** (1) **ABC publishes no transcript for this episode**,
+so `MountBowen_Transcript.md` is a *partial* record under Section 0.3 item 8: it holds ABC's own
+companion feature for the same episode, verbatim, with an explicit statement of what is missing.
+Nothing was reconstructed. Every quotation in the lesson traces to that file, and the lesson tells the
+teacher to check quoted wording against the audio on first playthrough. This is the weakest
+source-verification in the Set and the first partial record in this lesson type; if ABC later publishes
+a transcript, re-check the quoted lines and bump the lesson. (2) Runtime 29:45 against a 5 to 8 minute
+target, played as a defined span (Segments 2 through 4, roughly 8 to 10 minutes) - the Set's second
+runtime flag after Lesson 1's. (3) Level 7's two narrators come from the same published feature rather
+than two independent publications, unlike Lessons 1 and 2; a separate official record from the
+Queensland rescue service was looked for and not found in verifiable form. (4) Content: both legs
+amputated above the knee, a near-death rescue, and a described episode of survivor guilt and
+depression - the Set's second lesson needing a teacher preview, after Lesson 2's.
+
+**Lesson 1's flagged topic echo is resolved (2026-09-10).** Lesson 1 flagged that Lesson 3's planned
+expedition or survival account sat next to its own space-repair domain. Lesson 3 as generated is
+terrestrial, and the two ordeals share only the fact of someone being stuck, so no steer was needed in
+the end. The separate flag against Module 1 Set 2's planned Lesson 7 ("a real research facility or
+observatory") still stands and applies whenever that Set is generated.
+

@@ -5,16 +5,16 @@ plan (`Rotation_Log_Intermediate.md`, Lesson 2 row).
 
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** Simple newspaper-style news brief | **Reading strategy:** Reciprocal Teaching
-**Phase 1 hook:** K-W-L Walk | **Phase 3 protocol:** Jigsaw
+**Phase 1 hook:** K-W-L Chart | **Phase 3 protocol:** Jigsaw
 **Vocabulary theme:** Park features & seasonal use
 
 Genre and reading-strategy check against Lesson 1: genre changes (narrative -> news brief), reading strategy
 changes (Teacher Read-Aloud with Interactive Stops -> Reciprocal Teaching), Phase 1 hook changes (Visual
-Inquiry -> K-W-L Walk), Phase 3 protocol changes (Fishbowl -> Jigsaw) - no adjacent repeats, matching the plan.
+Inquiry -> K-W-L Chart), Phase 3 protocol changes (Fishbowl -> Jigsaw) - no adjacent repeats, matching the plan.
 
 **Patch, 2026-09-01:** Day 2 Phase 3 (Jigsaw) is updated to match the current Lesson Generation Prompt (v2.7,
 Section 0.10): the single closing discussion question is expanded to three questions, split across the mixed
-Jigsaw groups rather than every group answering the same one (Jigsaw needs no outer-circle task - every seat
+Jigsaw groups rather than every group answering the same one (Jigsaw needs no listener task - every seat
 is already active by design). Nothing else in this lesson changed - word counts, task-Level mapping, vocabulary,
 and every other section are unaffected. These three prompts already matched the student print packet (`Module
 1 Lesson 2 (Intermediate) - Yoyogi Park Student Packet.html`), which had already been formatted with all three
@@ -27,13 +27,13 @@ classroom version) in line with what the print packet already showed.
 
 ```
 |--Phase 1 (15m)--|--------Phase 2 (35m)--------|------Phase 3 (25m)------|
-  K-W-L Walk, Skill      Reciprocal Teaching         Fact Finders / C&E
+  K-W-L Chart, Skill      Reciprocal Teaching         Fact Finders / C&E
   Spotlight, Vocab          Anchor Text                Vocab in Context
 ```
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**K-W-L Walk hook (board-dependent):** Build a K-W-L chart live on the board. Ask: "What do you already know
+**K-W-L Chart hook (board-dependent):** Build a K-W-L chart live on the board. Ask: "What do you already know
 about city parks?" (fill the K column from student call-outs). Then: "What do you want to know about this park?"
 (fill the W column). Do not pre-fill either column - the content only exists once students supply it. The L column
 is completed after reading, at the end of Phase 3 or the start of Day 2 Phase 1.
@@ -237,7 +237,7 @@ empty, but now it has..."). Teacher cold-calls 2-3 pairs to share. No self-repor
     ranking or verdict task beyond the Level 5 evaluative-word-spotting task, which stays interpretive, not a
     graded verdict).
 12. Board-dependent moment: the Day 2 Phase 2 "Before/After" T-chart is co-constructed live from group
-    reports; the K-W-L Walk in Day 1 Phase 1 is also genuinely board-dependent (K and W columns filled live
+    reports; the K-W-L Chart in Day 1 Phase 1 is also genuinely board-dependent (K and W columns filled live
     from student call-outs, L column completed after reading) - either satisfies Section 0.7 on its own.
 13. Skill Spotlight (Day 1 Phase 1) and Closing Transfer Check (Day 2 Phase 3) name and reproduce the same
     skill: describing by comparing before/after. Closing check is live oral production, not self-report.
@@ -252,7 +252,7 @@ empty, but now it has..."). Teacher cold-calls 2-3 pairs to share. No self-repor
 
 **18 (added by the 2026-09-01 patch, matching self-check item 18 of the v2.7 lesson prompt):** Phase 3 supplies
 three distinct discussion prompts, split across the mixed Jigsaw groups rather than one static prompt for every
-group. Jigsaw does not require an outer-circle task under Section 0.10 - every seat is already active by design.
+group. Jigsaw does not require a listener task under Section 0.10 - every seat is already active by design.
 
 **Topic-grounding and guardrail check (per the updated Module Lesson-Plan prompt):** the topic is grounded in
 a real, verifiable place (Yoyogi Park, Tokyo) rather than a generic invented scene; the quoted local resident is

@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Park in the Sky: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .task-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+  width: 165px;
+  flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      .upside-down {
+        transform: rotate(180deg);
+      }
+
+      .verify-window {
+        border: 1px solid var(--ink);
+        border-left: 4px solid var(--ink);
+        background: var(--paper);
+        padding: 12px 16px;
+        margin: 18px 0 12px;
+        page-break-inside: avoid;
+      }
+      .verify-window .verify-src {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: var(--ink-soft);
+        margin: 0 0 8px;
+      }
+      .verify-window p {
+        margin: 0 0 8px 14px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .verify-window p:last-child {
+        margin-bottom: 0;
+      }
+      .verify-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        margin: 0 0 14px;
+      }
+
+      .stop-flag {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 2px solid var(--ink);
+        padding: 10px 14px;
+        margin: 12px 0 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .stop-badge {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        background: var(--ink);
+        color: var(--paper);
+        clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .stop-flag .instr {
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .refresher,
+        .verify-window,
+        .notes-table,
+        .discuss-block,
+        .wrapup,
+        .citebox {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+
+    <div class="sheet">      <div class="masthead">
+        <h1>Unit 5A: A Park in the Sky</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Advanced 1.2.5.1</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can predict what a speaker is about to
+        say from what they have already said, then listen to check whether I
+        was right.
+      </p>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Good to Know</div>
+        <p class="model-step">
+          The High Line is an elevated freight railway on the west side of
+          Manhattan, built in the 1930s to lift trains off the street. The last
+          train ran in 1980, the structure stood empty for nearly thirty years,
+          and the first section reopened as a public park in 2009.
+        </p>
+        <p class="model-step">
+          The two speakers had different jobs on the same project. Robert
+          Hammond was a neighbor who co-founded the group that campaigned to
+          stop the city demolishing the structure. James Corner is the
+          landscape architect whose firm designed what was built on it.
+        </p>
+      </div>
+
+      <div class="section-title">Before You Watch</div>
+      <p class="instr">
+        Read the two quotations below. They have no title and no place name.
+      </p>
+      <p><strong>A.</strong> "derelict, abandoned, dangerous, dark, drugs, crime."</p>
+      <p>
+        <strong>B.</strong> "a beautifully surprising and delightful
+        one-and-a-half-mile ribbon of green."
+      </p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">
+            What kind of place does A describe? What kind of place does B
+            describe?
+            <span class="ans-line"></span>
+          </div>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <div class="qbody">
+            Are these two the same place or two different places? Write your
+            answer and one reason for it.
+            <span class="ans-line"></span>
+          </div>
+        </li>
+      </ol>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. derelict</span
+          ><span>left to fall apart from long neglect; run-down and unused</span>
+        </div>
+        <div class="vrow">
+          <span class="word">2. liability</span
+          ><span
+            >something that causes trouble, cost, or risk to whoever owns
+            it</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">3. eyesore</span
+          ><span
+            >something so ugly that people notice it and wish it were gone</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">4. amenities</span
+          ><span
+            >the useful or pleasant things a place offers, such as cafes,
+            seating, or shops</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">5. plantings</span
+          ><span
+            >the flowers, grasses, shrubs, and trees deliberately put into a
+            space</span
+          >
+        </div>
+        <div class="vrow">
+          <span class="word">6. skyrocket</span
+          ><span>to rise extremely fast and by a very large amount</span>
+        </div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">a leap of faith</span>: a decision to go
+          ahead with something before you can be sure it will work.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">get a kick out of it</span>: to enjoy
+          something in a small, delighted, slightly surprised way.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">a victim of its own success</span>: so
+          popular that the popularity itself has become the problem.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">it's not Disney</span>: a way of saying a
+          place feels genuine rather than built to entertain, using a theme-park
+          company's name to stand for the polished and artificial.
+        </div>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll watch:</strong> "Above Manhattan's bustle, a reshaped
+        public space," a PBS NewsHour segment in which a reporter walks the
+        High Line in New York with James Corner, the landscape architect who
+        designed it.
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you watch, fill in what each part of the place used to be, what it
+        is now, and the exact word or phrase a speaker chose for it.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>&nbsp;</th>
+          <th>What was here before</th>
+          <th>What is here now</th>
+          <th>The words they use for it</th>
+        </tr>
+        <tr>
+          <td>The structure itself</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>The plants and greenery</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>The neighborhood around it</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="section-title">Listen Closely</div>
+      <p class="instr">
+        Pick one task below. When you're done, find someone who worked on a
+        different task and take turns sharing what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              In 2-3 sentences, describe what this place was before and what it
+              is now, choosing your own connectors.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Write down one comparison Corner makes between the park and
+              something else, and the reason he gives for it.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Add one row to the class chart on the board, with the speaker's
+              own word for it. Write the row here first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Corner says the park is "real and authentic. It's not Disney."
+              Circle the one you would rather visit: <strong>a place that
+              feels finished and polished</strong> or <strong>a place that
+              feels found and a little wild</strong>. Write one sentence saying
+              why.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Summarize how this description is organized, in order, in 3-4
+              sentences.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one evaluative word choice by which Corner signals his
+              opinion of the place without ever saying he likes it. Write the
+              words and what the opinion is.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Note the organizational flow on the class chart on the board.
+              Write it here first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              List two stated facts and two clearly-signaled evaluative
+              comments. Keep the two lists separate.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Find one clear tonal shift in the segment. Describe what changes
+              in the language at that point.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Say which speaker made each of your four items, and what that
+              does to the way the park comes across.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          This task compares two real sources about the same park. The first is
+          the PBS segment you watched, recorded in 2016, in which the reporter
+          walks the finished park with James Corner, the landscape architect who
+          designed it. The second is a recorded talk given in 2011 by Robert
+          Hammond, the co-founder of the group that saved the structure, when
+          only the first section was open. Each row below gives each source's own
+          words on a single subject.
+        </p>
+        <div class="match-list">
+          <div class="match-row">
+            <span class="match-label">What the abandoned structure looked like</span>
+            <span class="match-src"
+              ><strong>PBS segment:</strong> Corner says "the High Line was really perceived by a
+              lot of people to be a liability, derelict, abandoned, dangerous,
+              dark, drugs, crime." and "it was a beautifully surprising and
+              delightful one-and-a-half-mile ribbon of green."</span
+            >
+            <span class="match-src"
+              ><strong>2011 talk:</strong> Hammond says "what first attracted me, or interested
+              me, was this view from the street, which is this steel structure,
+              sort of rusty, this industrial relic." and "when I went up on top,
+              it was a mile and a half of wildflowers running right through the
+              middle of Manhattan with views of the Empire State Building and
+              the Statue of Liberty and the Hudson River."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">Why the park worked</span>
+            <span class="match-src"
+              ><strong>PBS segment:</strong> Corner says "We believed that if we were to simply
+              leverage that, make it more of a garden than it was then... that
+              there would be something very charming about that." and "We
+              amplify found conditions."</span
+            >
+            <span class="match-src"
+              ><strong>2011 talk:</strong> Hammond says "even though I love the designs that we
+              were building, I was always frightened that I wouldn't really love
+              it, because I fell in love with that wildscape, and how could you
+              recreate that magic?" and "what I found is it's in the people and
+              how they use it that, to me, makes it so special."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">Money and the neighborhood</span>
+            <span class="match-src"
+              ><strong>PBS segment:</strong> the reporter, walking beside Corner,
+              says "property values around it have skyrocketed, pushing all but
+              the rich, individuals and companies, further away."</span
+            >
+            <span class="match-src"
+              ><strong>2011 talk:</strong> Hammond says "we said over a 20-year time period, the
+              value to the city in increased property values and increased taxes
+              would be about 250 million. That was enough. It really got the city
+              behind it." and "Now people estimate it's created about a half a
+              billion dollars... in tax revenues for the city." and "the city has
+              planned, for better or for worse, 12 million square-feet of
+              development that the High Line is going to ring around."</span
+            >
+          </div>
+          <div class="match-row">
+            <span class="match-label">What the place does to the people on it</span>
+            <span class="match-src"
+              ><strong>PBS segment:</strong> Corner says "It affects people's psyche. It affects
+              their imagination... In a sense, they're theatricalizing everyday
+              life." and "We're social animals... we also want to have a place to
+              participate with other people."</span
+            >
+            <span class="match-src"
+              ><strong>2011 talk:</strong> Hammond says "I realized right after we opened that
+              there were all these people holding hands on the High Line. And I
+              realized New Yorkers don't hold hands; we just don't do that
+              outside." and "that's the power that public space can have to
+              transform how people experience their city and interact with each
+              other."</span
+            >
+          </div>
+        </div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Working only from the words above, write what impression of the
+              park each speaker leaves, and name the choices in their wording
+              that build it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Name one interest or assumption behind one speaker's framing that
+              neither speaker states outright, and point to the words that led
+              you to it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Check It Against the Source</div>
+      <p class="verify-instr">
+        These are the speaker's own words. Read each one against what you wrote
+        above, and mark the one place where your words and theirs are different.
+      </p>
+      <div class="verify-window">
+        <p class="verify-src">PBS segment, about 0:00-1:00</p>
+        <p>
+          I think this is what a lot of people like. They see this. They have discovered a found object. There's a sense of surprise, a sense of delight. It's real and authentic. It's not Disney.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="verify-window">
+        <p class="verify-src">PBS segment, about 5:20-6:32</p>
+        <p>
+          If anything, the High Line may be a victim of its own success. It can be clogged with people, and property values around it have skyrocketed, pushing all but the rich, individuals and companies, further away.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <p class="instr">
+        You will hear the second part once more. Cover it with your hand while it plays.
+      </p>
+
+      <div class="section-title">Show What You Noticed</div>
+      <div class="wrapup">
+        <div class="stop-flag">
+          <div class="stop-badge" aria-hidden="true">STOP</div>
+          <p class="instr">
+            <strong>Don't read ahead.</strong> Your teacher will read a short
+            paragraph out loud and will stop partway through.
+          </p>
+        </div>
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            When your teacher stops, write your prediction of what happened to
+            the building. Then listen to the rest, and tell a partner what in
+            the wording made you predict it and whether the ending confirmed
+            it.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top: 20px">Check What You Heard</p>
+      <p class="instr" style="font-style: italic; margin-bottom: 6px">
+        This is printed upside-down on purpose. Don't turn the page around until
+        you've said and written your answer above.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          For thirty years the grain elevator stood derelict beside the tracks
+          at the end of Main Street. Neighbors called it an eyesore. The council
+          treated the tower as a liability, one more building to pull down
+          before it fell down on its own. Then a group of climbers asked the
+          council for the keys, and the tower reopened last spring with ropes on
+          every wall, a cafe, and other amenities the town had never had, with
+          plantings along the old loading dock. Rents on that street have
+          skyrocketed since.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 5B: A Park in the Sky</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Advanced 1.2.5.1</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can make a general statement and then give
+        a specific example that shows it is true.
+      </p>
+
+      <div class="section-title">Learn the Phrase</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Giving Examples</div>
+        <p class="model-step">
+          Robert Hammond announces his example out loud before he gives it:
+          "Just one quick example is I realized right after we opened that there
+          were all these people holding hands on the High Line." A claim about
+          what makes the park special, then one small, concrete, checkable
+          thing.
+        </p>
+        <p class="model-step">
+          James Corner puts the general idea first and the examples second:
+          "People want the cosmopolitanism, the diversity, the exposure, the
+          amenities that a city provides. They want restaurants and cafes and
+          theaters and museums, and parks and public spaces."
+        </p>
+        <p class="model-step">
+          Now it's your turn. In the tasks below, you'll give examples using
+          frames like these:
+        </p>
+        <ul class="qlist">
+          <li><span class="num">&bull;</span> "For example, ___."</li>
+          <li><span class="num">&bull;</span> "Just one quick example is ___."</li>
+          <li><span class="num">&bull;</span> "Take ___, for instance."</li>
+          <li><span class="num">&bull;</span> "___, like ___ and ___."</li>
+        </ul>
+      </div>
+
+      <div class="section-title">Practice It</div>
+      <p class="instr">
+        Every task below is about a public place you already know well: a park,
+        a square, a station, a market, or a street you walk often. Pick one task.
+        When you're done, find someone who worked on a different task and take
+        turns sharing.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe your place in a few sentences, choosing your own
+              connectors. Include one comparison ("It's like ___") with a brief
+              reason for it, and give one example using a frame above.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Give an extended description of your place in a clear order, using
+              at least two example frames, and including one evaluative word
+              choice that lets a listener hear your opinion of the place without
+              your stating it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe your place fluently, moving between what is there and why
+              it matters, and explain why one feature of it matters. Watch your
+              partner, and when they react, adjust your tone or your approach
+              once in response.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe your place twice to the same partner, using different
+              examples each time: once so a listener would want to go there,
+              once so a listener would think it had been neglected. Every fact
+              stays true both times. Somewhere in the second version, catch one
+              imprecise word of your own and repair it aloud as you go.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Say It Like a Native Speaker</div>
+        <p class="model-step">
+          When English speakers list examples, the voice steps up on each item
+          and falls on the last one. That fall is how a listener hears that the
+          list is finished.
+        </p>
+        <p class="model-step">
+          Mark where the voice rises and where it finally falls on each of these
+          two real lines, then listen again to check.
+        </p>
+        <ul class="qlist">
+          <li>
+            <span class="num">&bull;</span> "They want restaurants and cafes and
+            theaters and museums, and parks and public spaces."
+          </li>
+          <li>
+            <span class="num">&bull;</span> "derelict, abandoned, dangerous,
+            dark, drugs, crime."
+          </li>
+        </ul>
+        <p class="model-step">
+          Then say your own example list from Practice It twice, once flat and
+          once with the rise and fall, and tell your partner which one sounded
+          finished.
+        </p>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+      <div class="discuss-block">
+        <p class="instr">
+          Your teacher will run this as a whole-class discussion and call on
+          speakers. Every time you speak, include at least one concrete example,
+          introduced with a starter phrase from the list. Use the questions
+          below in order.
+        </p>
+
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            A city has an old, unused structure taking up space. Should public
+            money turn it into a park? Give one example that supports your
+            position.
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            Around the High Line, property values skyrocketed and long-time
+            residents and businesses moved away. Is that a fair price for a
+            public space that millions of people use?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">3.</span>
+          <div class="qbody">
+            What run-down or unused place near here could become somewhere
+            people would travel to see, and what specific things would you put
+            in it?
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">4.</span>
+          <div class="qbody">
+            While others are speaking, keep a list here: the speaker's name and
+            the concrete example they gave. You may be asked to read one back.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+
+        <p class="instr" style="font-weight: 700; margin-bottom: 6px">
+          Starter phrases:
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span> "For example, ___."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;</span> "Take ___, for instance."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;</span> "Just one quick
+            example is ___."
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "___, like
+            ___ and ___."
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <p class="instr">
+          With a partner, make one general statement about something you do
+          often outside of class (how you get to school, what you cook, how you
+          spend a free evening) and support it with two concrete examples, using
+          a starter phrase and today's rise-and-fall list intonation.
+        </p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;&#9733;</span> "For example, ___."</li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "Take ___,
+            for instance."
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

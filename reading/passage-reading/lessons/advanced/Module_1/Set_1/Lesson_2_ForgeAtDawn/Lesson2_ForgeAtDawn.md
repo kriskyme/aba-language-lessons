@@ -3,7 +3,7 @@
 **Module:** 1, Describing | **Band:** Advanced (Levels 5-6, B2-B2+) | **Anchor text calibrated to:** Level 5
 **Task Levels this lesson:** 4 (extension-down), 5 and 6 (native), 7 (extension-up)
 **Genre:** Short story with a clear narrative arc | **Reading Strategy:** Reciprocal Teaching
-**Phase 1 Hook:** K-W-L Walk | **Phase 3 Protocol:** Jigsaw Expert Panels
+**Phase 1 Hook:** K-W-L Chart | **Phase 3 Protocol:** Jigsaw Expert Panels
 **Vocabulary Theme:** Metalworking & forging (forge, hammer, anvil, quench, temper, blade)
 **Topic:** A day inside a traditional Japanese swordsmith's forge, following the real tamahagane steel-forging
 process
@@ -39,7 +39,7 @@ DAY 1 PACING
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**K-W-L Walk hook (board-dependent, 5 min):** Build a K-W-L chart live on the board. Ask: "What do you already
+**K-W-L Chart hook (board-dependent, 5 min):** Build a K-W-L chart live on the board. Ask: "What do you already
 know about how a sword is made?" (fill the K column from student call-outs - do not pre-fill it). Then: "What do
 you want to find out?" (fill the W column). Both columns exist only once students supply them. The L column is
 completed after reading, at the end of Phase 3 or the start of Day 2 Phase 1.
@@ -329,7 +329,7 @@ graded.
 17. **Task Levels by band table applied correctly:** exactly 4 task Levels (Advanced band), each citing the
     correct CSV Level's Reading objective as quoted in the table above, not an invented difficulty curve.
 18. **Phase 3 discussion format (Section 0.10):** three distinct discussion prompts are split across the mixed
-    Jigsaw groups, not every group answering the same one. Jigsaw needs no outer-circle task under Section
+    Jigsaw groups, not every group answering the same one. Jigsaw needs no listener task under Section
     0.10 - every seat is already active inside a small group by design.
 
 Self-check passed.

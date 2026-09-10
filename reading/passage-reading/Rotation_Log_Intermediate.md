@@ -9,10 +9,10 @@ for cross-Band notes and mechanics that aren't repeated here.
 
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic |
 |---|---|---|---|---|---|---|
-| 1 | Short narrative/personal-story article | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Fishbowl | Traditional cooking tools & sensations | A traditional wood-fired kitchen in a trullo home in Puglia, southern Italy |
-| 2 | Simple newspaper-style news brief | Reciprocal Teaching | K-W-L Walk | Jigsaw | Park features & seasonal use | A newly renovated section of Yoyogi Park in Tokyo |
+| 1 | Short narrative/personal-story article | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Panel Round | Traditional cooking tools & sensations | A traditional wood-fired kitchen in a trullo home in Puglia, southern Italy |
+| 2 | Simple newspaper-style news brief | Reciprocal Teaching | K-W-L Chart | Jigsaw | Park features & seasonal use | A newly renovated section of Yoyogi Park in Tokyo |
 | 3 | How-to/instructional guide | Whisper Reading | Mystery Quote | Town Hall | Footwear & physical comfort | What podiatrists and running-shop staff actually recommend when choosing shoes for everyday pavement running |
-| 4 | Short interview transcript (Q&A) | Reader's Theater | Four-Corner Debate | Concentric Circles | Art & creative process | A street artist describes painting a mural in Wynwood Walls, Miami's outdoor street-art neighborhood |
+| 4 | Short interview transcript (Q&A) | Reader's Theater | Take a Side | Rotating Partners | Art & creative process | A street artist describes painting a mural in Wynwood Walls, Miami's outdoor street-art neighborhood |
 
 Note (corrected 2026-09-01, patched 2026-09-01): Lessons 1 and 4 above used Fishbowl and Concentric Circles
 respectively. An earlier version of this note (v2.6-era) said these protocols were no longer the program's
@@ -45,3 +45,14 @@ for Set 2 onward. If this Module already has a section above, append this Set as
 rather than creating a duplicate `## Module N` heading. `Version` is new as of 2026-09-07 -
 `shared/Program_Conventions.md` §G - and only applies from this Set onward; bump a lesson's own Iteration
 digit in place here whenever that lesson is substantively revised after generation.)
+
+---
+
+**Protocol and hook names made room-neutral (2026-09-10).** Quality Standards §D11 retired every hook and
+protocol that required rearranging the room. The table rows above carry the new names, and all four affected
+lessons were rewritten to match in the same pass: Lesson 1's Fishbowl became a **Panel Round** (speakers take
+turns from their seats, listeners keep the same tally task), Lesson 4's Concentric Circles became **Rotating
+Partners** (find a new partner per prompt) and its Four-Corner Debate became **Take a Side** (the four options
+printed in the packet and circled, with a show of hands for the board tally), and Lesson 2's hook was renamed
+K-W-L Walk -> **K-W-L Chart**, which is a rename only: it already built the chart on the board with nobody
+leaving their seat. The old-to-new mapping is in Listening/Speaking's `Rotation_Log.md`.

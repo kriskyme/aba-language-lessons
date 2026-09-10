@@ -1,0 +1,1369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Papa: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .photo {
+        /* an embedded image (base64 data URI); sized by this rule, never per packet */
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin: 14px auto 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      /* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+         A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+         A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+         Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .discuss-block .prompt {
+        font-size: 14.5px;
+        margin: 10px 0 16px;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article,
+        .citebox,
+        .notes-table {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+      .citebox {
+        border: 1px solid var(--ink);
+        padding: 12px 16px;
+        margin: 10px 0 16px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .citebox strong {
+        font-weight: 700;
+      }
+
+      .notes-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .notes-table th,
+      .notes-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .notes-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+      .notes-table td {
+        height: 38px;
+      }
+
+      .upside-down {
+        transform: rotate(180deg);
+      }
+
+      .stop-flag {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 2px solid var(--ink);
+        padding: 10px 14px;
+        margin: 12px 0 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .stop-badge {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        background: var(--ink);
+        color: var(--paper);
+        clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .stop-flag .instr {
+        margin: 0;
+      }
+
+      .task-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        color: var(--ink-soft);
+        margin: 0 0 10px;
+      }
+
+      .pic-options {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 8px 0 4px 4px;
+      }
+      .pic-option {
+        width: 110px;
+      }
+      .pic-option .pic-box {
+        /* holds an embedded <img>; never printed empty for the teacher to fill */
+        border: 1px solid var(--ink);
+        height: 70px;
+        padding: 0;
+        overflow: hidden;
+      }
+      .pic-option .pic-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .pic-option .pic-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
+
+      .qitem {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+
+      .mc-list {
+        margin: 8px 0 4px 30px;
+        padding-left: 0;
+        list-style: none;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .mc-list li {
+        margin-bottom: 6px;
+      }
+      .mc-letter {
+        font-weight: 700;
+        margin-right: 6px;
+      }
+
+      .time-list {
+        margin: 8px 0 4px;
+        padding-left: 0;
+        list-style: none;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .time-list li {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--rule-light);
+        padding: 7px 2px;
+      }
+      .time-list li:last-child {
+        border-bottom: none;
+      }
+      .time-list .time-window {
+        color: var(--ink-soft);
+        white-space: nowrap;
+      }
+
+      .reader-copy {
+        border: 2px dashed var(--ink);
+        padding: 14px 16px;
+        margin: 20px 0;
+        page-break-before: always;
+      }
+      .reader-copy .reader-warn {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">
+        Print this packet
+      </button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: Papa</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Proficient 1.1.3.0</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can use what I have already heard to
+        guess what is coming next, and then listen to find out whether I was
+        right.
+      </p>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Good to Know</div>
+        <p class="model-step">
+          <strong>Ernest Hemingway</strong> (1899-1961) was an American
+          novelist and short-story writer, known for very short, plain
+          sentences and for novels including "A Farewell To Arms," "For Whom
+          The Bell Tolls," and "The Old Man And The Sea." He was awarded the
+          Nobel Prize in Literature in 1954.
+        </p>
+        <p class="model-step">
+          <strong>The television broadcast</strong> you will hear about: in the
+          1950s A. E. Hotchner adapted several of Hemingway's novels for
+          American television. One of them, "For Whom The Bell Tolls," was
+          shown in two parts, with a cast that included Jason Robards, Maria
+          Schell, Eli Wallach, and Maureen Stapleton.
+        </p>
+        <p class="model-step">
+          <strong>Gertrude Stein</strong> (1874-1946) was an American writer
+          who lived in Paris, where her home was a gathering place for young
+          writers and artists in the 1920s. She read and gave advice on the
+          early work of several of them, Hemingway among them.
+        </p>
+      </div>
+
+      <div class="section-title">Before You Listen</div>
+      <p class="instr">
+        Someone said the line below. You are not told who, or what they were
+        talking about.
+      </p>
+      <div class="spotlight-box">
+        <div class="spotlight-label">The Line</div>
+        <p class="model-step">"I picked the verys like you pick berries."</p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Who might be speaking, and what could they be describing? Write your
+          guess.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Write the words in the line itself that led you to that guess.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+
+      <p class="section-label">Words to Know</p>
+      <div class="vocab-list">
+        <div class="vrow">
+          <span class="word">1. awe</span>
+          <span>a feeling of respect mixed with slight fear, strong enough that you hesitate to approach the person who causes it</span>
+        </div>
+        <div class="vrow">
+          <span class="word">2. considerate</span>
+          <span>careful to think about how your actions affect other people, and to act on that thought</span>
+        </div>
+        <div class="vrow">
+          <span class="word">3. generous</span>
+          <span>willing to give freely, of money, time, or praise</span>
+        </div>
+        <div class="vrow">
+          <span class="word">4. warfare</span>
+          <span>sustained fighting between two sides, used here of a personal quarrel rather than an actual war</span>
+        </div>
+        <div class="vrow">
+          <span class="word">5. transference</span>
+          <span>the carrying over of a feeling from one person or situation to another</span>
+        </div>
+        <div class="vrow">
+          <span class="word">6. prize</span>
+          <span>to value something highly, especially over a long time</span>
+        </div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">hit it off</span>: to like each other
+          immediately on first meeting, without either person having to work at
+          it.
+        </div>
+        <div class="idiom-item">
+          <span class="idiom-phrase">deliver the goods</span>: to actually
+          produce what you promised, rather than only promising it.
+        </div>
+      </div>
+
+      <div class="citebox">
+        <strong>You'll listen to:</strong> a Fresh Air interview from NPR, in
+        which Terry Gross talks with the writer A. E. Hotchner about Ernest
+        Hemingway, whom Hotchner knew well for years. Your teacher will play two
+        parts of it.
+      </div>
+
+      <div class="section-title">Listening Notes</div>
+      <p class="instr">
+        While you listen, fill in what Hotchner says Hemingway was like, and the
+        moment or story he tells to show it.
+      </p>
+      <table class="notes-table">
+        <tr>
+          <th>The moment</th>
+          <th>What he says Hemingway was like</th>
+          <th>The story that shows it</th>
+        </tr>
+        <tr>
+          <td>When they first met</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Over the overdue manuscript</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>After the television broadcast</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>What Hotchner learned from him</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="section-title">Listen Closely</div>
+      <p class="instr">
+        Choose one task. When you finish, find someone who did a task with a
+        different number of stars and tell them what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Using your notes, number these four moments in the order Hotchner
+              tells them: the drive to Key West, the note sent to Cuba, calling
+              him Papa, the overdue manuscript.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              In two or three sentences, summarize how the interview is
+              organized, from where it starts to where it ends.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              Find one word Hotchner uses about Hemingway that tells you what he
+              thinks of him, even though he never says "I think" or "in my
+              opinion." Write the word and what it describes.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Hotchner says Hemingway telephoned the actors after the broadcast.
+              From his words alone, is he offering that as praise or as
+              criticism? Say which, and quote the exact words that show it.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Write two things Hotchner states as facts about Hemingway or about
+              their work together.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Write two comments where he judges Hemingway rather than states
+              something. Next to each one, write the words that signal it is a
+              judgement.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              In the second part, Terry Gross asks a question and Hotchner
+              answers it with a claim about Hemingway's writing. Write her
+              question and his claim, then write the point where he stops
+              describing and starts evaluating.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          This task compares two real accounts of the same man: the interview
+          you have just heard, and the biographical note the Nobel Prize
+          published about Hemingway when it gave him its prize for literature in
+          1954. Each row below gives both accounts' own words on one subject.
+        </p>
+        <div class="match-list">
+          <div class="match-row">
+            <span class="match-label">What his writing is like</span>
+            <span class="match-src"><strong>Fresh Air:</strong> "Notice the simplicity of the language that's used and the almost poetic repetition. It's almost as if it's poetry." and "He transports you into the area with a minimum of description so that you furnish some of the description. That's the great gift that he had that he brought to American literature."</span>
+            <span class="match-src"><strong>Nobel Prize note:</strong> "His straightforward prose, his spare dialogue, and his predilection for understatement are particularly effective in his short stories, some of which are collected in Men Without Women (1927) and The Fifth Column and the First Forty-Nine Stories (1938)."</span>
+          </div>
+          <div class="match-row">
+            <span class="match-label">What kind of man he was</span>
+            <span class="match-src"><strong>Fresh Air:</strong> "Afterwards, he went to the phone and called Maria and called Jason and told them how terrific he thought it was. He was very considerate that way." and "He really was very generous other writers - if they weren't Faulkner, whom he'd never be generous with." and "his attitude toward me was that of father to son"</span>
+            <span class="match-src"><strong>Nobel Prize note:</strong> "Hemingway - himself a great sportsman - liked to portray soldiers, hunters, bullfighters - tough, at times primitive people whose courage and honesty are set against the brutal ways of modern society, and who in this confrontation lose hope and faith."</span>
+          </div>
+          <div class="match-row">
+            <span class="match-label">Where the work came from</span>
+            <span class="match-src"><strong>Fresh Air:</strong> "...That he really picked up on that business of editing out from Gertrude Stein because he had had an introduction to her in her salon..." and "So he said, I picked the verys like you pick berries."</span>
+            <span class="match-src"><strong>Nobel Prize note:</strong> "Ernest Hemingway (1899-1961), born in Oak Park, Illinois, started his career as a writer in a newspaper office in Kansas City at the age of seventeen." and "During the twenties, Hemingway became a member of the group of expatriate Americans in Paris, which he described in his first important work, The Sun Also Rises (1926)."</span>
+          </div>
+        </div>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Each account describes the same man. Write what impression of him
+              a reader is left with by each one, using the printed words as your
+              evidence.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Identify one interest or assumption behind one account's framing
+              that neither account states outright.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Listen again to the end of the first part you heard, from "Afterwards,
+          he went to the phone" to "Oh, that was - that was a real warfare
+          there."
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Write the surface content of that stretch in one plain sentence:
+              what is Hotchner telling us about Hemingway?
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              He begins a judgement and does not finish it. Write down the words
+              where he breaks off, and who supplies the next word.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">
+              He never says what was actually wrong between the two writers.
+              Write what he says instead, and what that wording lets him avoid.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">
+              Write where the exception to his praise sits inside his own
+              sentence, and what that placement does to how much weight it
+              carries.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-title">Show What You Noticed</div>
+      <div class="stop-flag">
+        <div class="stop-badge" aria-hidden="true">STOP</div>
+        <p class="instr">
+          <strong>Don't read ahead.</strong> Your teacher will read a short
+          paragraph out loud and will stop partway through.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          When your teacher stops, tell a partner what you think comes next and
+          which exact words you already heard point that way. Write both here
+          before you check the script.
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          After you hear the rest, write whether you were right.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+
+      <p class="section-label">Check What You Heard</p>
+      <p class="instr">
+        This is printed upside-down on purpose. Don't turn the page around until
+        you've said and written your answer above.
+      </p>
+      <div class="refresher refresher-noline upside-down">
+        <p>
+          My old neighbor ran the corner hardware shop for forty years.
+          Customers walked in braced for a lecture, because everyone knew about
+          the long-running warfare between him and the discount chain on the
+          ring road. What they got instead was a man so considerate that he sent
+          you next door if the other shop was cheaper. I was in awe of him. He
+          was generous with his time in a way I came to prize, and something
+          like a transference happened: he taught me what my father never had.
+        </p>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: Papa</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Proficient 1.1.3.0</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can take a turn in a conversation without
+        shutting the other person down.
+      </p>
+
+      <div class="section-title">Learn the Phrase</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Coming In Without Taking Over</div>
+        <p class="model-step">
+          Terry Gross interrupts her guest three times in the part you heard,
+          and each time he keeps going. Here is what she actually does.
+        </p>
+        <p class="model-step">
+          <strong>Offer the word he is reaching for, as a question.</strong>
+          Hotchner says "That was a...", Gross says "Jealous?", and Hotchner
+          carries straight on. One word, offered rather than asserted, and the
+          turn goes back at once.
+        </p>
+        <p class="model-step">
+          <strong>Say almost nothing, and keep the turn with him.</strong>
+          Hotchner says "I nearly fell over because I didn't think he was
+          keeping...", Gross says "Right.", and Hotchner finishes "...Any
+          track."
+        </p>
+        <p class="model-step">
+          <strong>Put two words of judgement in, and let him take it up.</strong>
+          Hotchner lists the cast and trails off with "whatever.", Gross says
+          "Good cast.", and Hotchner opens his next turn by repeating "Good
+          cast."
+        </p>
+        <p class="model-step">
+          <strong>Frames to use:</strong> ___? (one word, offered, with your
+          voice rising) / Right. / Yeah. / a two-word judgement they can pick up
+          and repeat.
+        </p>
+        <p class="model-step">
+          What all three have in common: none of them takes the floor. Each is
+          short enough that the first speaker keeps going, which is what makes
+          it polite rather than an interruption.
+        </p>
+      </div>
+
+      <div class="section-title">Practice It</div>
+      <p class="instr">
+        Choose one task. When you finish, find someone who did a task with a
+        different number of stars and tell them what you said.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task A</span>
+          <span class="stars">&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Give a long spoken description of one person from the interview,
+              Hemingway or Hotchner, organized so a listener can follow it.
+              Include one word choice that signals what you think of that person
+              without you stating your opinion outright. Write the word you plan
+              to use here first.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task B</span>
+          <span class="stars">&#9733;&#9733;</span>
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe one thing Hotchner says Hemingway did, moving between
+              what he did and why it matters, and explaining out loud why that
+              one thing matters to the picture of him.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              When your partner reacts, change how you are speaking once in
+              response to their reaction. Write what their reaction was, and
+              what you changed.
+              <span class="ans-line"></span>
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task C</span>
+          <span class="stars">&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Both deliveries use only details that are true. Your details come from
+          the two sets of words printed in Task C of Unit 3A.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe Hemingway to your partner twice. The first time, choose
+              and emphasize the details that leave the impression the interview
+              leaves. The second time, choose and emphasize the details that
+              leave the impression the biographical note leaves.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Somewhere in the two deliveries, catch a word of your own that is
+              not quite accurate and repair it out loud as you go. Write the word
+              you replaced and the word you replaced it with.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line">
+          <span class="exercise-label">Task D</span>
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <p class="task-instr">
+          Do not plan this one first. Your partner will come in three times,
+          using the three moves above, one each.
+        </p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Describe a person you know well. Each time your partner comes in,
+              change how you are speaking in response: more formal or less, more
+              general or more specific.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Correct yourself at least once, when a word you have chosen turns
+              out to be inaccurate or misleading. Write the two words
+              afterwards.
+              <span class="ans-line"></span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Say It Like a Native Speaker</div>
+        <p class="model-step">
+          A falling voice at the end hands the turn over. A rising voice asks
+          the other person for more. That is why these four lines from the
+          interview sound so different from each other.
+        </p>
+        <p class="model-step">"Jealous?"</p>
+        <p class="model-step">"Good cast."</p>
+        <p class="model-step">"Did you call him Papa?"</p>
+        <p class="model-step">"How did that feel?"</p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Next to each of the four lines above, write "rising" or "falling."
+          Then listen to those four moments again and check what you wrote.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Say your own Practice It language to your partner again, using a
+          falling voice where you mean to hand the turn over and a rising one
+          where you want them to keep going. Write which one you used more.
+          <span class="ans-line"></span>
+        </div>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+      <div class="discuss-block">
+        <p class="instr">
+          Answer the first question with a partner. When you finish a question,
+          find a new partner and go on to the next one. While your partner is
+          speaking, use at least one of the three moves above.
+        </p>
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            Describe someone you know well. What are they like, and what is the
+            one story you would tell to show it?
+            <span class="ans-line"></span>
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            Describe someone whose reputation does not match what they are
+            actually like.
+            <span class="ans-line"></span>
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">3.</span>
+          <div class="qbody">
+            Describe one thing you learned from a person who taught you
+            something.
+            <span class="ans-line"></span>
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">4.</span>
+          <div class="qbody">
+            After each round, write which move you used and what your partner
+            did next.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+        <p class="instr">Ways to describe the person:</p>
+        <ul class="stems">
+          <li>
+            <span class="stars">&#9733;</span>
+            <span>The thing about ___ is that ___.</span>
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;</span>
+            <span>___ is ___, and the reason that matters is ___.</span>
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;</span>
+            <span>If you only knew one thing about ___, it should be ___.</span>
+          </li>
+          <li>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+            <span>People take ___ for ___, which is not quite it. It's closer to ___.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+      <div class="wrapup">
+        <div class="qitem">
+          <span class="num">1.</span>
+          <div class="qbody">
+            One of you describes a place you go often. The other comes in once,
+            using a word offered as a question, a one-word answer, or a
+            two-word judgement. Then swap. Write the move you used.
+            <span class="ans-line"></span>
+          </div>
+        </div>
+        <div class="qitem">
+          <span class="num">2.</span>
+          <div class="qbody">
+            Look at the sentence you wrote about what your partner did next. Did
+            your interruption give them more room to talk, or less?
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Describing My Notebook: Lesson 1</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .article .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 1A: Describing My Notebook</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Beginner 1.1.1.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by choosing the word
+      that really fits it and spelling that word from its sounds.</p>
+
+      <div class="section-title">Word Bank</div>
+      <div class="wordbank">
+        <strong>Color:</strong> red &middot; black &middot; tan &middot; gray &middot; blue<br />
+        <strong>Size and shape:</strong> big &middot; thin &middot; flat &middot; slim &middot; long<br />
+        <strong>Feel:</strong> soft &middot; hard &middot; smooth &middot; rough &middot; bumpy<br />
+        <strong>Condition:</strong> new &middot; old &middot; bent &middot; torn &middot; clean<br />
+        <strong>Cover and marks:</strong> plain &middot; lined &middot; blank &middot; spotted &middot; striped
+      </div>
+      <p class="instr">Use these words when you need them. You may also use your own.</p>
+
+      <div class="section-title">How to Spell a Word from Its Sounds</div>
+      <div class="spotlight-box">
+        <div class="spotlight-label">Four steps</div>
+        <div class="model-step"><strong>1.</strong> Say the word.</div>
+        <div class="model-step"><strong>2.</strong> Stretch it slowly and count the sounds on your fingers.</div>
+        <div class="model-step"><strong>3.</strong> Write a letter or a letter pair for each sound.</div>
+        <div class="model-step"><strong>4.</strong> Read it back. Does it say the word you meant?</div>
+      </div>
+      <table class="rule-table">
+        <tr><th>Sound</th><th>Words with that sound</th></tr>
+        <tr><td>a</td><td>t-a-n, fl-a-t, bl-a-ck</td></tr>
+        <tr><td>e</td><td>r-e-d, b-e-nt</td></tr>
+        <tr><td>i</td><td>b-i-g, th-i-n, sl-i-m</td></tr>
+        <tr><td>o</td><td>s-o-ft, l-o-ng</td></tr>
+        <tr><td>u</td><td>b-u-mpy</td></tr>
+        <tr><td>Two letters, one sound</td><td>th in thin, ck in black, sm in smooth, gr in gray</td></tr>
+      </table>
+
+      <div class="section-title">The Frames</div>
+      <div class="spotlight-box">
+        <div class="model-step"><strong>&#9733;</strong> ___ book</div>
+        <div class="model-step"><strong>&#9733;&#9733;</strong> It is ___.</div>
+        <div class="model-step"><strong>&#9733;&#9733;&#9733;</strong> It is ___ and ___.</div>
+      </div>
+      <p class="instr">A two-star and three-star sentence starts with a capital letter and ends with a period.</p>
+
+      <div class="section-title">Sort the Words</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Write each word under the group it
+        belongs to. The groups do not all hold the same number of words.</p>
+        <div class="wordbank">flat &middot; red &middot; bent &middot; smooth &middot; tan &middot; lined &middot; thin &middot; clean &middot; rough &middot; gray &middot; torn &middot; plain</div>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Color: <span class="blank" style="min-width: 320px;"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Size and shape: <span class="blank" style="min-width: 300px;"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Feel: <span class="blank" style="min-width: 335px;"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Condition: <span class="blank" style="min-width: 310px;"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">Cover and marks: <span class="blank" style="min-width: 280px;"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Choose What Fits</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> Circle the words that fit your own
+        notebook. Cross out the words that do not.</p>
+        <div class="wordbank">big &middot; thin &middot; red &middot; black &middot; soft &middot; bent &middot; new &middot; lined</div>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Say to a partner why you crossed one word out.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Circle a pair of words above that says two different things about your notebook.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write the pair: <span class="blank"></span> and <span class="blank"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Cross out any word you circled that says the same thing as one of these two.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Write It</div>
+      <p class="instr">Write your frame three times: once with a Color word, once with a Size and shape word, and
+      once with a Condition word. Sound each word out before you write it.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;</span> Write your phrase three times.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Color: <span class="blank"></span> book</span></li>
+          <li><span class="num">2.</span><span class="qbody">Size and shape: <span class="blank"></span> book</span></li>
+          <li><span class="num">3.</span><span class="qbody">Condition: <span class="blank"></span> book</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;</span> Write your sentence three times, with a capital and a period each time.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Color: It is <span class="blank"></span>.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Size and shape: It is <span class="blank"></span>.</span></li>
+          <li><span class="num">3.</span><span class="qbody">Condition: It is <span class="blank"></span>.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Write your sentence three times. Each time, take the two words from two different groups.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">It is <span class="blank"></span> and <span class="blank"></span>.</span></li>
+          <li><span class="num">2.</span><span class="qbody">It is <span class="blank"></span> and <span class="blank"></span>.</span></li>
+          <li><span class="num">3.</span><span class="qbody">It is <span class="blank"></span> and <span class="blank"></span>.</span></li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 1B: Describing My Notebook</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Describing</span>
+          <span class="masthead-tag">Beginner 1.1.1.0</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can describe something of my own by choosing the word
+      that really fits it and spelling that word from its sounds.</p>
+
+      <div class="section-title">Fix the Wrong Word</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Each sentence has one word that is
+        spelled wrong or that says nothing about a notebook. Cross it out and write the right word above it.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is bluu.<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>It is thn.<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>It is loud.<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Each sentence has one word that is spelled wrong, or two words that say the same thing. Cross out one word and write a better one above it.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>It is black and blak.<span class="ans-line-sm"></span></li>
+          <li><span class="num">2.</span>It is flatt and clean.<span class="ans-line-sm"></span></li>
+          <li><span class="num">3.</span>It is thin and slim.<span class="ans-line-sm"></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Build the Word from Its Sounds</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> Say each row of sounds, blend them, and
+        write the whole word.</p>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>/f/ /l/ /a/ /t/ <span class="blank"></span></li>
+          <li><span class="num">2.</span>/th/ /i/ /n/ <span class="blank"></span></li>
+          <li><span class="num">3.</span>/r/ /e/ /d/ <span class="blank"></span></li>
+          <li><span class="num">4.</span>/b/ /l/ /a/ /ck/ <span class="blank"></span></li>
+          <li><span class="num">5.</span>/s/ /o/ /f/ /t/ <span class="blank"></span></li>
+          <li><span class="num">6.</span>/t/ /a/ /n/ <span class="blank"></span></li>
+          <li><span class="num">7.</span>/b/ /e/ /n/ /t/ <span class="blank"></span></li>
+          <li><span class="num">8.</span>/s/ /l/ /i/ /m/ <span class="blank"></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span> Mark two of the eight words you wrote that could go in one frame together.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write them: <span class="blank"></span> and <span class="blank"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Say to a partner what two different things they describe.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Share a Line</div>
+      <div class="discuss-block">
+        <p class="instr">Your teacher will read three models from the board. Find the one at your own star level,
+        then say to a partner one thing the next model up does that yours does not.</p>
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span><span>"My model is ___ book. The next one up also has ___."</span></li>
+          <li><span class="stars">&#9733;&#9733;</span><span>"My model is a whole sentence. The next one up also has ___."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;</span><span>"My model has two words that say ___ and ___."</span></li>
+        </ul>
+        <p class="instr">While you listen: say back the one difference your partner names before you say yours.</p>
+      </div>
+    </div>
+  </body>
+</html>

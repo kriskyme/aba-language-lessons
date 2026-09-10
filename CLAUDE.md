@@ -165,13 +165,13 @@ noted in Known Issues.
   `Changelog.md`, and prompts point there rather than restate it — this
   applies to Novel Reading and any future lesson type too, from the start
   rather than as a later cleanup.
-- **Fix modality-neutral bugs in `shared/` first.** Before editing a
-  modality's prompt to fix a quality problem, ask whether the rule stays
-  true when "text" is swapped for "clip" or "scenario." If yes, it goes in
-  `Generation_Quality_Standards.md` or the Style Guide, is logged once in
-  `shared/Changelog.md`, and each modality's own `Changelog.md` gets at most
-  a one-line pointer to that entry, not a restated copy. This is what stops
-  a fix landing in one modality and the same bug resurfacing in another.
+- **Fix modality-neutral bugs in `shared/` first.** A quality problem
+  reported in one lesson is usually a rule that was missing program-wide, so
+  it gets fixed in `shared/` and swept across every modality rather than
+  patched where it was noticed. This is what stops a fix landing in one
+  modality and the same bug resurfacing in another. It is the default on
+  every reported defect, not a decision to be raised with the user — see
+  "The generalization pass" below for the steps.
 - **No prose cross-references between modalities.** A prompt may point at a
   `shared/` section, never at another modality's prompt ("same as Passage
   Reading 2.12"). Such a pointer has no mechanical link, so a change on one
@@ -207,6 +207,65 @@ noted in Known Issues.
   exists for exactly this. Keeps prompts shorter to paste and maintain
   without losing the reasoning behind past changes.
 
+## The generalization pass
+
+When a defect is reported in a generated lesson, homework, assessment, or
+packet - or found while doing something else - the fix is generalized by
+default. Nobody has to ask for it, and it is not a decision to put back to
+the user: they report the symptom, the pass decides the scope and tells them
+what it did. The steps below are the procedure; run them in order.
+
+1. **Apply the swap test before making any edit.** Does the rule stay true
+   when "text" is swapped for "clip" or for "scenario"? For a rule about
+   printed output, does it stay true in another modality's packet? Answer
+   this every time, including for a fix that looks like a one-line
+   rewording - most of the rules now in `shared/` started as one.
+2. **Land the rule in `shared/`.** Route it by the "Cross-modality
+   conventions live in one shared file" bullet above: program-wide facts to
+   `Program_Conventions.md`, pedagogy and item quality to
+   `Generation_Quality_Standards.md`, anything about printed output to
+   `Student_Packet_Style_Guide.md`. Then, in the same pass:
+   - Bump **both** version stamps in that file - the `# Title (vX.Y)` header
+     and the trailing `**Current version:**` footer. They drift apart when
+     only one is touched, and a stale stamp has to be corrected later as its
+     own changelog entry.
+   - Add the matching numbered item to that file's own self-check
+     (Quality Standards §F, Style Guide §I), so the rule is enforced at
+     generation time rather than only stated.
+   - Write one dated row in `shared/Changelog.md`, quoting the user's own
+     words as the trigger and naming what was actually wrong.
+3. **Sweep every prompt in all three modalities,** not only the one in front
+   of you. Grep the pattern by name across `*/*/prompts/`. A prompt is bumped
+   **only if it restates the rule in its own words**; a prompt that cites the
+   shared section by name inherits the fix and is left alone. Bumping means
+   renaming the file to its new version and updating every `Index.md`
+   reference to it. Each modality's own `Changelog.md` gets a one-line
+   pointer to the shared entry, never a restated copy.
+4. **Sweep the already-generated content, split by whether the fix is
+   mechanical.**
+   - **Mechanical** - a rewording, a rename, or a structural edit you can
+     make from what is already in the file: fix **every** affected lesson,
+     homework, and packet in this pass. Bump each one's version code
+     (`Program_Conventions.md` §G) and update its `Rotation_Log_<Band>.md`
+     row at the same time.
+   - **Needs new research** - re-fetching a source, writing new content,
+     finding an image: log it in that modality's `Index.md` Pending work,
+     **naming every affected file explicitly** and what is wrong with each.
+     Never "some lessons" or "the rest." A backlog entry that doesn't name
+     its files is how the same defect gets reported again on a different
+     lesson.
+5. **Clear on touch.** Before editing any lesson for any reason, check
+   whether it is named in a Pending work entry; if it is, clear that entry in
+   the same pass. Each lesson type's `Index.md` Pending work is the register
+   for outstanding items - the Known issues section below carries only
+   cross-modality summaries, so the outstanding count stays well defined.
+6. **Report; don't ask.** Say what generalized and where it landed, how many
+   lessons were swept, and how many remain backlogged across the `Index.md`
+   files. When a fix was arguably general but was judged local, give the
+   reason in one sentence so the user can overrule it. A fix that is
+   obviously local - a wrong fact in one transcript, a typo, one bad
+   vocabulary choice - needs no mention at all.
+
 ## Known issues / pending consolidation work
 
 - **Self-contained rule backlog (added 2026-09-08).** `shared/Generation_Quality_Standards.md` §D8 now forbids
@@ -228,9 +287,11 @@ noted in Known Issues.
   `lessons/advanced/Module_1/Set_1/Lesson_1_MyRoom/`, the Advanced Set having
   been regenerated 2026-09-08 as "Two Places to Study"), each holding its
   Markdown doc plus a reconstructed pre-v1.2 Unit 1/Unit 2 print-packet pair.
-  Current-convention (v1.6, Lesson Introduction Page + Units 1-8) packets
-  still need to be built for both — tracked in
-  `writing/academic-writing/Index.md`'s Pending work.
+  Both Sets' packets were subsequently regenerated to the current convention,
+  which is one self-contained file per lesson with two masthead sections
+  (Unit `<Set position>`A / `<Set position>`B), the "Lesson Introduction Page
+  + Units 1-8" shape having been retired 2026-09-08; `Index.md` records no
+  packet backlog for either Set.
 - **Resolved 2026-09-08**: every filename cited in all three lesson types'
   `Index.md` files (and this file) was checked against disk in the
   shared-layer restructure pass; no mismatches remain. Passage Reading's

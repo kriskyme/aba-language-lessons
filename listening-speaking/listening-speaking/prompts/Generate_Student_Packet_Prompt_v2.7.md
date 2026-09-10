@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.6)
+# Listening/Speaking Student Print Formatting Prompt (v2.7)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -12,12 +12,14 @@ regeneration of the Markdown (§G), this modality's delta classes (§H.1), and t
 This prompt states only what is specific to a Listening/Speaking packet. A TOEFL Track Tier variant's rendering
 is in `Generate_TOEFL_Track_Tier_Prompt_*.md` Section 2, applied on top of this prompt.
 
-**Current version: v2.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.7.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** the completed lesson in full: the citation block, target vocabulary, both Skill Spotlights, the
 differentiated Day 1 listening tasks and Day 2 speaking tasks, Background Notes, the note-taking organizer, the
 oral-output protocol's prompts and stems, the pronunciation focus, and both Closing Transfer Checks. Pull all
-content from the lesson; invent nothing; drop no task Level. The transcript file is never read into the packet.
+content from the lesson; invent nothing; drop no task Level. The transcript file is not read into the packet
+except for the lesson's own Day 1 Phase 5 verification windows, which are carried verbatim as the lesson wrote
+them (2.8).
 Student version only.
 
 ## SECTION 1: LISTENING/SPEAKING-SPECIFIC TRANSLATIONS
@@ -27,8 +29,9 @@ Style Guide §E's rows apply. Add these:
 | Teacher-facing term | Student-facing translation |
 |---|---|
 | Listening Skill Spotlight / Speaking Skill Spotlight | Each part's plain can-do objective statement (2.2). |
-| Listening Closing Transfer Check / Speaking Closing Transfer Check | Plain closing activities (2.8, 2.12). |
+| Listening Closing Transfer Check / Speaking Closing Transfer Check | Plain closing activities (2.9, 2.13). |
 | Background Note | A short "Good to Know" box (2.5). |
+| Verification window / §D12 Verify beat | A plain "Check It Against the Source" block: the speaker's own words with a line to mark what was different, then the instruction to cover it (2.8). Never named a check, a verification, an answer key, or a transcript. |
 | Timestamp/segment markers (`[Segment N: ...]`) | Shown to students in plain form (2.3): a segment cue is a real navigational aid for finding a place in a recording during replay, unlike a paragraph letter. |
 | "watch" vs. "listen" | Matched to the source's real, confirmed media type everywhere (2.3); never default to "watch"/"video." |
 
@@ -89,7 +92,9 @@ Print the source lesson's Day 1 Phase 2 note-taking structure as a simple fillab
 own row labels (a two-column table for a comparison chart; the equivalent simple structure for a sequence chain,
 cause-and-effect chain, criteria grid, or claims tracker), positioned before the star-rated listening tasks so
 students fill it in while the source plays. "While you watch, fill in..." or "While you listen, fill in..." is the
-whole instruction.
+whole instruction. The source plays twice (lesson Day 1 Phases 2 and 4), so the organizer's instruction covers
+both: the first play open, the second under the narrower purpose the lesson states for it, printed as a second
+short line ("The second time, listen for ...").
 
 ### 2.7 Star-rated listening tasks
 
@@ -103,7 +108,7 @@ lettering, multiple-choice layout (options inline, one `.task-instr` line at the
 - **Fixed-frame items need a complete, self-contained instruction.** Where the lowest task Level is a fixed-frame
   extraction ("It is ___ and ___."), state inline what the student listens for and what goes in the blanks (with
   a word bank if needed). Do not add a separate unlabeled frame box repeating the frame; reserve a standalone
-  frame/"starter" box (2.10) for a task with a genuine speak-it-aloud step.
+  frame/"starter" box (2.11) for a task with a genuine speak-it-aloud step.
 - **Multi-source tasks (Level 7, when the top task compares two real sources):** present both sources' material
   inside that task block in a labeled "compare" layout, the comparison question after both. Print enough of
   each source to compare from: at least three short verbatim excerpts per source, each within the lesson's
@@ -116,7 +121,29 @@ lettering, multiple-choice layout (options inline, one `.task-instr` line at the
   the question asks for. A later Discuss It
   prompt that references the comparison points back to this Task by name rather than re-citing the sources.
 
-### 2.8 Show What You Noticed (Listening close)
+### 2.8 Check It Against the Source
+
+Print the lesson's Day 1 Phase 5 verification windows. This block is Quality Standards §D12's Verify beat and its
+placement is what makes it work: it sits **after** the response spaces of every listening task it could answer
+(2.7), never before them and never on a page a student sees while still writing. A window printed early is an
+answer key.
+
+- One `.verify-window` per window the lesson names (one at Beginner and Intermediate; at most two at Advanced and
+  Proficient). Inside it: a `.verify-src` line carrying the source label and the timestamp range, then the
+  source's own words verbatim as the lesson quoted them, one `<p>` per speaker turn or sentence group.
+- Carry the window exactly as the lesson wrote it. Never re-cut it from the transcript file, never extend it to
+  "give more context," and never trim it to fit a page: the lesson bounded it against its own fair-use ceiling
+  (Lesson prompt 0.3 item 4) and the packet is a regeneration, not a re-edit (Style Guide §G).
+- A `.verify-instr` line above the window tells the student what to do with it, in plain terms: read it against
+  what they wrote and mark the one place their words and the speaker's are different.
+- One numbered `.qitem` with a single `.ans-line` beneath for that difference. One line, not a paragraph, and
+  not a comprehension question.
+- Close the block with the cover instruction: they will hear this part once more and should cover the window
+  while it plays. Print it as its own line after the response space, not folded into the `.verify-instr`.
+- Nothing else goes inside a `.verify-window`: no task, no star rating, no `Answer note:` line, no vocabulary
+  gloss. Style Guide §H.1 carries the classes and §I item 23 checks the placement.
+
+### 2.9 Show What You Noticed (Listening close)
 
 Translate the Listening Closing Transfer Check into a plain paired activity around the lesson's read-aloud
 script: tell students their teacher will read a short paragraph aloud, they should not read it themselves yet,
@@ -128,13 +155,13 @@ the script in a `.refresher.refresher-noline.upside-down` block positioned AFTER
 "Check What You Heard" label, with an explicit instruction that it is printed upside-down on purpose and not to
 turn the page around until they have said and written their answer. No self-report framing; never named a check.
 
-### 2.9 Learn the Phrase (Speaking Skill Spotlight)
+### 2.10 Learn the Phrase (Speaking Skill Spotlight)
 
 Open Unit _B with the real modeled language from the source (the actual phrase(s) the speaker used) in a short
 "Learn the Phrase" `.spotlight-box`, with the sentence frames the lesson teaches **inside the same box**, not as a
 separate list below it. Invent no modeled language beyond what the lesson quotes.
 
-### 2.10 Star-rated speaking tasks (Practice It)
+### 2.11 Star-rated speaking tasks (Practice It)
 
 Same merge and star principle as 2.7, applied to the Day 2 Phase 2 production tasks, with any pronunciation
 marking exercise folded in as a short bonus line under the relevant task. The same multiple-choice,
@@ -142,19 +169,19 @@ embedded-image, and placement rules apply; a fixed-frame speaking item with pict
 is rewritten around the student's own object (Quality Standards §D8). A standalone frame/"starter" box, where a speak-it-aloud step justifies one, renders before any
 instruction that refers to it.
 
-### 2.11 Discuss It
+### 2.12 Discuss It
 
 The oral-output protocol's 2-3 rotated prompts as simultaneous small groups (Style Guide §E), each prompt numbered
 via `.qitem`, unquoted, regular weight, any outer-circle or tracking task folded into a prompt, plus star-coded
 stems (stems only, Style Guide §F).
 
-### 2.12 Wrap It Up (Speaking close)
+### 2.13 Wrap It Up (Speaking close)
 
 Translate the Speaking Closing Transfer Check into a plain paired closing activity. **Closing-loop headings stay
 jargon-free:** if Phase 5 revisits a named Phase 1 organizer to close the loop, the heading says "Finish the
 Chart," never the protocol or organizer's name ("K-W-L").
 
-### 2.13 Callout boxes, answer space, rules
+### 2.14 Callout boxes, answer space, rules
 
 Style Guide §F and §I: callouts reserved for genuine spotlights (Good to Know, Learn the Phrase, the citebox, an
 idiom Phrase Spotlight rendered the same way as Reading's, unnumbered and unlabeled); word banks
@@ -188,9 +215,12 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
    multi-source Level 7 task in a labeled compare layout within fair use, at least three verbatim excerpts per
    source on shared subjects in one of the two allowed layouts, each part holding source content and
    not the contrast; every `Answer note:` line stripped and no stem parenthetical stating the answer (2.7)?
-6. Show What You Noticed: "Don't read ahead" in a `.stop-flag` callout with its STOP badge, then the response
-   space, then the script upside-down under "Check What You Heard" with the don't-turn-the-page instruction (2.8)?
-7. Unit _B opens with Learn the Phrase carrying the real modeled language and its frames in one box (2.9)?
-8. Discuss It prompts numbered via `.qitem`, unquoted, outer-circle task folded in (2.11)?
-9. Closing-loop heading in plain language, no organizer or protocol name (2.12)?
-10. `.refresher`/`.notes-table` in the print page-break list; only §H.1 classes added (Section 3)?
+6. Every verification window after the response spaces of every task it could answer, never before them;
+   carrying its source label and timestamp range; holding no task, answer or `Answer note:` line; and closing
+   with the cover-it instruction for the replay (2.8, Style Guide §I item 23)?
+7. Show What You Noticed: "Don't read ahead" in a `.stop-flag` callout with its STOP badge, then the response
+   space, then the script upside-down under "Check What You Heard" with the don't-turn-the-page instruction (2.9)?
+8. Unit _B opens with Learn the Phrase carrying the real modeled language and its frames in one box (2.10)?
+9. Discuss It prompts numbered via `.qitem`, unquoted, outer-circle task folded in (2.12)?
+10. Closing-loop heading in plain language, no organizer or protocol name (2.13)?
+11. `.refresher`/`.notes-table` in the print page-break list; only §H.1 classes added (Section 3)?

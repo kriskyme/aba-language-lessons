@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v2.5)
+# Listening/Speaking Lesson Generation Prompt (v2.6)
 
 **Lesson type:** a **Listening/Speaking Lesson** is a fixed 2-day cycle (Day 1 Listening, Day 2 Speaking; two
 75-minute periods) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -13,14 +13,15 @@ rule, plus the shared self-check) alongside it. This prompt states only what is 
 listening/speaking lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with
 the real source as the content vehicle.
 
-**Current version: v2.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Advanced band, Module 2: Narrating"); a topic direction is
 optional. Without a Module/Band pair, do not search for a source. Live web search is required to find and confirm
 a real source (0.3).
 
-**Output, three artifacts in order, one workflow action:** (1) the source's `<Slug>_Transcript.md` (0.3 item 7),
-so every task is built against confirmed real text; (2) the teacher-facing lesson `.md`, with a metadata line
+**Output, three artifacts in order, one workflow action:** (1) the source's `<Slug>_Transcript.md` (0.3 item 8),
+so every task is built against confirmed real text and Day 1 Phase 5's verification windows are cut from real
+wording rather than recalled wording; (2) the teacher-facing lesson `.md`, with a metadata line
 directly under its H1: `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:**
 <Module>.<Set>.<Lesson>.<Version>` (Conventions §G); (3) the student packet `.html`, by running the Student Packet
 prompt against the finished `.md` (Style Guide §G). All three save to the same `Lesson_<N>_<Slug>/` folder
@@ -139,7 +140,9 @@ fit.
 4. **Fair-use ceiling inside the lesson `.md`:** never reproduce the full transcript there. Direct quotation is
    limited to short excerpts (one to two sentences at a time) for a specific task (a vocabulary-in-context item,
    a "listen for this line" cue, a quoted speaking-skill phrase). Everywhere else, paraphrase and point to the
-   timestamp.
+   timestamp. Day 1 Phase 5's **verification windows** are the one bounded exception: at most two per lesson,
+   each a single contiguous stretch of at most six lines or eighty words, each carrying its own timestamp range.
+   Everything outside them stays inside the sentence-level ceiling.
 5. **Timestamp markers, not paragraph letters.** Every listening or watching task cites an approximate timestamp
    range ("[2:15-3:40]"), used consistently wherever a segment is referenced. Where a real timestamp cannot be
    verified, use the source's own internal structure (headed sections, chapter markers) as the segment label
@@ -156,8 +159,9 @@ fit.
    sources are verified and cited per items 1-2, and both are subject to item 4's fair-use ceiling.
 8. **Standalone transcript file.** Save `<Slug>_Transcript.md` in the lesson's folder, holding the source's full
    real transcript or captions as close to verbatim as is obtainable, headed by the same citation block as the
-   lesson. It is exempt from item 4's ceiling because it is a teacher-only working reference: never printed in,
-   derived into, or surfaced in the student packet. If a genuine full transcript cannot be retrieved (only
+   lesson. It is exempt from item 4's ceiling because it is a working reference rather than student material:
+   the file itself is never printed whole, and the only part of it a student ever sees is the Phase 5
+   verification windows, cut from it and bounded by item 4. If a genuine full transcript cannot be retrieved (only
    fragments, a partial auto-caption track, or an AI-summarized fetch are confirmable), save what was actually
    verified and state at the top what is missing and how the included content was confirmed. Never pad a gap
    with invented dialogue.
@@ -204,9 +208,10 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the real sourc
 7. **Every listen-for or watch-for task tagged with a consistent timestamp range** or, where unverifiable, the
    source's own segment structure (0.3 item 5)?
 8. **Background Notes** occasional (1-3), factual, sourced, informational only, never tested (0.3 item 6)?
-9. **Transcript file** present in the lesson folder with the same citation block, honest about any gap, and
-   entirely absent from the student packet (0.3 item 7)?
-10. **Day 1 Phase 5's Closing Transfer Check script** is a short invented paragraph written into the lesson (60-90
+9. **Transcript file** present in the lesson folder with the same citation block, honest about any gap, never
+   printed whole, and reaching the student packet only as Phase 5's bounded verification windows (0.3 items 4,
+   8)?
+10. **Day 1 Phase 6's Closing Transfer Check script** is a short invented paragraph written into the lesson (60-90
     words, unrelated topic, recycling most target words), read aloud by the teacher, printed for students only
     after the response space, never left as an unspecified "new clip"?
 11. **Day 2 Phase 1's speaking skill** drawn from the real speakers' own language at a cited timestamp or, where
@@ -222,6 +227,10 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the real sourc
     once per day?
 15. **Answer notes:** every exemplar answer on an `Answer note:` line under its Level's task, and no task
     sentence or parenthetical stating what the item asks for (Quality Standards §F item 23)?
+16. **Day 1's three §D12 beats present and in order:** Phase 2's first listen carries no captions, transcript,
+    or window; Phase 4 commits answers before it replays, and its second listen states a narrower purpose that
+    is not Phase 2's; Phase 5 prints one or two verbatim windows inside 0.3 item 4's bound, each with a
+    timestamp range, positioned after the committed answers and ending in the covered-window replay?
 
 If any check fails, revise before finalizing; do not build any task on a source that failed items 1-3.
 
@@ -241,7 +250,7 @@ no shape appears twice in one lesson or in the same slot as the previous lesson:
 | Say from sound | A partner says a target word; the student repeats it and points to or writes it, then checks | Day 2 Phase 2 or Phase 3 |
 | Better of two | Two printed frame lines about the clip's object; circle the one that fits and say the word that makes it fit | Day 2 Phase 2 |
 | A partner's object | Say the frame about a partner's belonging, not the clip's; the Day 2 production | Day 2 Phase 2 or Phase 4 |
-| Transfer | The form once, on the lesson's fresh prompt (Quality Standards §D3) | Day 1 Phase 5 and Day 2 Phase 5 |
+| Transfer | The form once, on the lesson's fresh prompt (Quality Standards §D3) | Day 1 Phase 6 and Day 2 Phase 5 |
 
 The frame is printed once per day, in the first task that uses it; later tasks say "the frame." A Set's Module
 Lesson-Plan names the slot-to-shape assignment per lesson so the same shape does not land in the same slot
@@ -258,25 +267,33 @@ higher Levels fewer, deeper items; time-on-task balanced) and every item set fol
 **2-DAY SOURCE CYCLE OVERVIEW (approx. 150 MIN TOTAL)**
 
 ```
-DAY 1 (Unit A - Listening)  |--Hook, Vocab & Purpose (20)--|--Watch & Notes (15)--|--Skill Instr. (10)--|--Task (20)--|--Transfer Check (10)--|
+DAY 1 (Unit A - Listening)  |--Hook, Vocab & Purpose (15)--|--First Listen & Notes (15)--|--Skill Instr. (10)--|--Second Listen & Task (20)--|--Check Against Source (7)--|--Transfer Check (8)--|
 DAY 2 (Unit B - Speaking)   |--Skill Spotlight (15)--|--Differentiated Practice (20)--|--Pronunciation (10)--|--Oral Output (20)--|--Transfer Check & Wrap (10)--|
 ```
 
 ### DAY 1: Unit A - Listening (75 min)
 
-_Phase 1: Hook, Good to Know & Vocabulary (20 min)_
+Day 1 runs Quality Standards §D12's three beats against the real source: the class meets the clip twice with no
+wording on the page (Phases 2 and 4), commits its answers, checks them against the source's own words (Phase 5),
+then hears that stretch once more with the words covered. The order is the pedagogy, not a preference: wording
+that is present while an answer is being formed becomes the channel the answer comes through, and the listening
+skill the lesson names goes unpracticed.
+
+_Phase 1: Hook, Good to Know & Vocabulary (15 min)_
 - A real-world hook tied to the source's actual topic (rotate per 0.4 and the approved plan), not abstract
   framing above the band's register.
 - **Listening Skill Spotlight** (Quality Standards §D1): name the lesson's listening strategy in one or two plain
   student-facing sentences ("Today we're practicing listening for examples - noticing when a speaker gives a
-  specific case to support a bigger idea"). This is the exact skill Phase 5 asks students to reproduce.
+  specific case to support a bigger idea"). This is the exact skill Phase 6 asks students to reproduce.
 - Present the full citation block (0.3 item 2) and any Background Notes (0.3 item 6) together, up front.
 - Pre-teach 4-6 target words or phrases from the real transcript, in context sentences paraphrased from what the
   source actually says. Transparent chunks lightly glossed from Level 2 up; opaque idioms get an explicit gloss or
   guided confirmation at every Level.
 
-_Phase 2: Watch & Listening Notes (15 min)_
+_Phase 2: First Listen & Listening Notes (15 min)_
 - Play the full source once (for Proficient-length sources, the first half with a clear timestamp cutoff).
+- **Audio only.** Captions off, no transcript on the page, the board, or the screen, and no Phase 5 window
+  visible yet. This is the students' one uncued first contact with the clip and it cannot be given back.
 - Students fill a shared note-taking organizer matched to the Module (0.4) while watching.
 - Set a differentiated listening purpose per task Level before playback: the lowest Level a narrow, concrete
   listen-for question (for Levels 1-2, a 0.6 shape such as choose-what-was-heard); the highest an open
@@ -286,19 +303,48 @@ _Phase 3: Listening Skill Instruction (10 min)_
 - Teach the named strategy directly using a real, timestamped excerpt as the model; brief guided practice on a
   second short excerpt.
 
-_Phase 4: Differentiated Listening Task, Choose One Level (20 min)_
+_Phase 4: Second Listen & Differentiated Task, Choose One Level (20 min)_
 - One merged, star-rated task per task Level: what main-idea, detail, and critical-thinking items would cover,
   written as a single sequential item set per Level from the start (the same merge the packet prompt applies).
   A Level 1-2 set produces its form once and fills the rest with 0.6 shapes, never the same point-or-name item
   repeated. The exemplar answer for any item (the segment's organization, the evaluative word, the two facts,
   the tonal shift, the unstated interest) goes on an `**Answer note:**` line under that Level's task, never in
   the task sentence or its parenthetical (Quality Standards §C9, §E2).
+- The phase runs in three beats inside its own 20 minutes, and the lesson writes all three:
+  1. **Commit (about 10 min).** Students answer their Level's task from the first listen and their Phase 2
+     organizer, in writing, before anything is replayed.
+  2. **Second listen (about 5 min).** Play the source a second time, **still audio only**, under a narrower
+     per-Level purpose that the lesson states and that is not a repeat of Phase 2's ("this time, count how many
+     examples she gives before she names the cost"). A second play under the same purpose is a repetition, not a
+     beat; write the narrower purpose into the lesson or the phase has only one listen in it.
+  3. **Revise (about 5 min).** Students change what they now hear differently and mark which answers moved.
+     What moved is what Phase 5 checks.
 - **Board-dependent moment** (Quality Standards §D4): students from different task Levels compare and report
   into the shared Phase 2 organizer, so the complete picture exists only once several Levels have contributed.
 - **Respectful Tiers** (Quality Standards §B): the lowest task Level's task includes a genuine, simplified
   interpretive component, not fact-retrieval alone.
 
-_Phase 5: Listening Closing Transfer Check (10 min)_
+_Phase 5: Check It Against the Source (7 min)_
+This is §D12's Verify and Return beats. It runs only after every Level's answers are committed and revised.
+
+- **Verification windows.** The lesson names one or two, each a single contiguous stretch of the real transcript
+  at most six lines or eighty words long (0.3 item 4), quoted verbatim, carrying its own timestamp range (0.3
+  item 5) and its source label. Choose a stretch on evidence, not on convenience: one a Phase 4 item actually
+  turned on, or one carrying a connected-speech feature this Band predictably mishears (a word boundary, a weak
+  form, a reduced auxiliary, a flapped consonant). A window chosen because it was easy to excerpt teaches
+  nothing.
+- One window at Beginner and Intermediate; a second only at Advanced and Proficient, and only when the two
+  windows carry different features.
+- Students read the window against what they actually wrote in Phase 4 and mark, in one line, where their
+  wording and the speaker's diverge. The gap is the content of this phase; do not turn it into a graded item,
+  a comprehension question, or a fresh task.
+- **Return unsupported:** replay just that timestamp range once with the window covered (the packet prints the
+  cover instruction). This beat is required. Without it the phase ends on reading, and the lesson has taught the
+  eye rather than the ear.
+- The window is never the basis of a scored item, here or in the Set's assessment (Quality Standards §D12
+  exempts assessments from the whole arc).
+
+_Phase 6: Listening Closing Transfer Check (8 min)_
 - **Mechanism: a short invented script the teacher reads aloud**, written into the lesson (roughly 60-90 words, a
   topic unrelated to the source, recycling most of the lesson's target vocabulary). Invented, not found: its
   purpose is controlled vocabulary recycling and a clean skill-transfer test.
@@ -307,6 +353,8 @@ _Phase 5: Listening Closing Transfer Check (10 min)_
 - Students apply the Phase 1 strategy to what they heard (gist, prediction, retold order - whatever the named
   skill is), out loud to a partner; two or three pairs cold-called. Demonstration, not self-report (Quality
   Standards §D2). After sharing, students may read the script to check.
+- This phase tests the skill on **new** material and is not a second Phase 5. Phase 5 checks the lesson's own
+  source; this checks whether the skill travels off it.
 
 ### DAY 2: Unit B - Speaking (75 min)
 
@@ -355,4 +403,5 @@ line, oral focus over written drills). Listening/Speaking-specific:
 - **Citation block first:** every lesson opens with the 0.3 citation block before any activity content.
 - **Timestamps, not paragraph letters:** every segment reference uses a timestamp range or, where unverifiable,
   the source's own section labels; never a paragraph or line number.
-- **The transcript file is never read into the packet.**
+- **The transcript file is never read into the packet** beyond Day 1 Phase 5's verification windows, which are
+  carried into it verbatim as the lesson wrote them.

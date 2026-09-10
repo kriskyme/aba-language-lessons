@@ -6,7 +6,7 @@
 **Phase 1 Hook:** Mystery Quote | **Phase 3 Protocol:** Town Hall Role-Play
 **Vocabulary Theme:** Music & analog sound (turntable, groove, warmth, crackle, pressing, needle)
 **Topic:** The real-world resurgence of independent vinyl record shops
-**Version:** 1.1.3.0
+**Version:** 1.1.3.1
 
 Generated per `Generate_Lesson_Prompt_v2.8.md`, following the approved
 `Module1_Advanced_Lesson_Plan.md`, Lesson 3 row.
@@ -242,9 +242,9 @@ end of this lesson.
 
 ### Phase 3: Structured Oral Output Debate & Synthesis (30 min) - Town Hall Role-Play
 
-Set up the room as a town hall with several discussion tables, each working the same rotation of prompts below.
-Groups stay together for the full window; every seat is already active inside a small group at all times, so no
-outer-circle scaffolding is needed. Advance each table to the next prompt at each changeover (roughly every 8-10
+Students form small groups where they sit, each group working the same rotation of prompts below. Groups stay
+together for the full window; every seat is already active inside a small group at all times, so no listener
+scaffolding is needed. Advance each group to the next prompt at each changeover (roughly every 8-10
 minutes across the 25-30 minute window) rather than discussing one prompt the whole time:
 
 1. Describe the shop experience from Day 1's text. How does browsing a record shop compare to browsing a
@@ -346,7 +346,7 @@ its own template.
 17. **Task Levels by band table applied correctly:** exactly 4 task Levels (Advanced band), each citing the
     correct CSV Level's Reading objective as quoted in the table above, not an invented difficulty curve.
 18. **Phase 3 discussion format (Section 0.10):** three distinct discussion prompts are rotated through at every
-    table, not one static prompt for the full window. Town Hall needs no outer-circle task under Section 0.10 -
+    group, not one static prompt for the full window. Town Hall needs no listener task under Section 0.10 -
     every seat is already active inside a small group by design.
 
 Self-check passed.

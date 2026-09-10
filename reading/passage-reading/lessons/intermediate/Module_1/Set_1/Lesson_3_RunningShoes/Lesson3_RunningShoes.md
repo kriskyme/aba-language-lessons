@@ -9,7 +9,7 @@ plan (`Rotation_Log_Intermediate.md`, Lesson 3 row).
 **Vocabulary theme:** Footwear & physical comfort
 
 Genre and reading-strategy check against Lesson 2: genre changes (news brief -> how-to guide), reading strategy
-changes (Reciprocal Teaching -> Whisper Reading), Phase 1 hook changes (K-W-L Walk -> Mystery Quote), Phase
+changes (Reciprocal Teaching -> Whisper Reading), Phase 1 hook changes (K-W-L Chart -> Mystery Quote), Phase
 3 protocol changes (Jigsaw -> Town Hall) - no adjacent repeats, matching the plan.
 
 ---

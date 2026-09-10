@@ -66,28 +66,28 @@ Park, running shoes, a Wynwood mural), since a student could plausibly be in bot
 
 | #   | Topic Direction                                                    | Content Format                 | Listening Strategy                     | Speaking Skill           | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme               |
 | --- | ------------------------------------------------------------------ | ------------------------------ | -------------------------------------- | ------------------------ | ------------------ | ------------------ | ------------------------------ |
-| 1   | A real neighborhood bakery and its bread-making process            | Home/studio tour               | Listen for Main Ideas/Gist             | Making Comparisons       | Visual Inquiry     | Fishbowl           | Bread & baking sensations      |
-| 2   | A real open-air public market (e.g. a food or textile market)      | Walking-tour narration         | Recognize Examples                     | Giving Examples phrases  | Four-Corner Debate | Jigsaw             | Market sounds & smells         |
+| 1   | A real neighborhood bakery and its bread-making process            | Home/studio tour               | Listen for Main Ideas/Gist             | Making Comparisons       | Visual Inquiry     | Panel Round           | Bread & baking sensations      |
+| 2   | A real open-air public market (e.g. a food or textile market)      | Walking-tour narration         | Recognize Examples                     | Giving Examples phrases  | Take a Side | Jigsaw             | Market sounds & smells         |
 | 3   | A real piece of outdoor/everyday gear (e.g. a bicycle, a backpack) | Product demo/review            | Listen for Sequence Markers            | Sequencing Language      | Mystery Quote      | Town Hall          | Gear features & materials      |
-| 4   | A family elder or mentor, described by someone close to them       | Profile/oral-history interview | Predict from Context Before Confirming | Asking for Clarification | K-W-L Walk         | Concentric Circles | Personality & character traits |
+| 4   | A family elder or mentor, described by someone close to them       | Profile/oral-history interview | Predict from Context Before Confirming | Asking for Clarification | K-W-L Chart         | Rotating Partners | Personality & character traits |
 
 ### Set 2 (Lessons 5-8) - Planned only, not yet generated
 
 | #   | Topic Direction                                                       | Content Format                   | Listening Strategy                         | Speaking Skill                    | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme             |
 | --- | --------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ | --------------------------------- | ------------------ | ------------------ | ---------------------------- |
-| 5   | A real animal and its habitat, in a nature-documentary style clip     | Nature description               | Listen for Stated vs. Implied Opinion      | Hedging an Opinion                | Visual Inquiry     | Fishbowl           | Animal features & habitat    |
-| 6   | A potter's, weaver's, or woodworker's real workshop and craft process | Craft-studio tour                | Listen for Signposting/Discourse Markers   | Summarizing What Someone Said     | Four-Corner Debate | Jigsaw             | Tools & materials of a craft |
+| 5   | A real animal and its habitat, in a nature-documentary style clip     | Nature description               | Listen for Stated vs. Implied Opinion      | Hedging an Opinion                | Visual Inquiry     | Panel Round           | Animal features & habitat    |
+| 6   | A potter's, weaver's, or woodworker's real workshop and craft process | Craft-studio tour                | Listen for Signposting/Discourse Markers   | Summarizing What Someone Said     | Take a Side | Jigsaw             | Tools & materials of a craft |
 | 7   | A real historical artifact or exhibit in a museum                     | Museum/exhibit-guide description | Listen for Cause-and-Effect Language       | Turn-Taking/Interrupting Politely | Mystery Quote      | Town Hall          | Art & artifact description   |
-| 8   | A real natural landmark (e.g. a waterfall, canyon, or coastline)      | Travel/landmark description      | Listen for Contrastive/Concession Language | Agree/Disagree phrases            | K-W-L Walk         | Concentric Circles | Landscape & scenery          |
+| 8   | A real natural landmark (e.g. a waterfall, canyon, or coastline)      | Travel/landmark description      | Listen for Contrastive/Concession Language | Agree/Disagree phrases            | K-W-L Chart         | Rotating Partners | Landscape & scenery          |
 
 Set 2's Lesson 5 was checked against Set 1's Lesson 4 for adjacency at original planning time (both Sets were
 planned together, before the Sets concept formally existed) - content format, strategy, skill, hook, and
 protocol all differ, so it passes the cross-Set check retroactively.
 
 **Phase 3 scaffolding note:** per the same lesson Passage Reading learned the hard way (v2.7, Section 0.10),
-Fishbowl and Concentric Circles are valid at a realistic class size (8-12 students) only when every seat has an
+Panel Round and Rotating Partners are valid at a realistic class size (8-12 students) only when every seat has an
 explicit active task and the protocol rotates through 2-3 discussion prompts rather than running one static
-prompt for the whole window. Apply this at Step 2 generation for Lessons 1, 5 (Fishbowl) and 4, 8 (Concentric
+prompt for the whole window. Apply this at Step 2 generation for Lessons 1, 5 (Panel Round) and 4, 8 (Concentric
 Circles) from the start, rather than needing a later patch.
 
 ## Self-check
@@ -132,16 +132,25 @@ whenever this module is retaught with fresh material.
 ### Set 1 (planned 2026-09-01)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction |
 |---|---|---|---|---|---|---|---|
-| 1 | Home/studio tour | Listen for Main Ideas/Gist | Making Comparisons | Visual Inquiry | Fishbowl | Bread & baking sensations | A real neighborhood bakery and its bread-making process |
-| 2 | Walking-tour narration | Recognize Examples | Giving Examples phrases | Four-Corner Debate | Jigsaw | Market sounds & smells | A real open-air public market |
+| 1 | Home/studio tour | Listen for Main Ideas/Gist | Making Comparisons | Visual Inquiry | Panel Round | Bread & baking sensations | A real neighborhood bakery and its bread-making process |
+| 2 | Walking-tour narration | Recognize Examples | Giving Examples phrases | Take a Side | Jigsaw | Market sounds & smells | A real open-air public market |
 | 3 | Product demo/review | Listen for Sequence Markers | Sequencing Language | Mystery Quote | Town Hall | Gear features & materials | A real piece of outdoor/everyday gear |
-| 4 | Profile/oral-history interview | Predict from Context Before Confirming | Asking for Clarification | K-W-L Walk | Concentric Circles | Personality & character traits | A family elder or mentor |
+| 4 | Profile/oral-history interview | Predict from Context Before Confirming | Asking for Clarification | K-W-L Chart | Rotating Partners | Personality & character traits | A family elder or mentor |
 
 ### Set 2 (planned 2026-09-01)
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction |
 |---|---|---|---|---|---|---|---|
-| 5 | Nature description | Listen for Stated vs. Implied Opinion | Hedging an Opinion | Visual Inquiry | Fishbowl | Animal features & habitat | A real animal and its habitat |
-| 6 | Craft-studio tour | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | Four-Corner Debate | Jigsaw | Tools & materials of a craft | A potter's, weaver's, or woodworker's workshop |
+| 5 | Nature description | Listen for Stated vs. Implied Opinion | Hedging an Opinion | Visual Inquiry | Panel Round | Animal features & habitat | A real animal and its habitat |
+| 6 | Craft-studio tour | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | Take a Side | Jigsaw | Tools & materials of a craft | A potter's, weaver's, or woodworker's workshop |
 | 7 | Museum/exhibit-guide description | Listen for Cause-and-Effect Language | Turn-Taking/Interrupting Politely | Mystery Quote | Town Hall | Art & artifact description | A real historical artifact or exhibit |
-| 8 | Travel/landmark description | Listen for Contrastive/Concession Language | Agree/Disagree phrases | K-W-L Walk | Concentric Circles | Landscape & scenery | A real natural landmark |
+| 8 | Travel/landmark description | Listen for Contrastive/Concession Language | Agree/Disagree phrases | K-W-L Chart | Rotating Partners | Landscape & scenery | A real natural landmark |
 ```
+
+---
+
+**Room-neutral rotation names (2026-09-10).** Quality Standards §D11 replaced every hook and protocol that
+required rearranging the room; this plan's rotation columns now use the room-neutral names
+(Concentric Circles -> Rotating Partners, Fishbowl -> Panel Round, Four-Corner Debate -> Take a Side,
+K-W-L Walk -> K-W-L Chart). The already-generated lessons were rewritten to match in the same pass; the
+old-to-new mapping is in `Rotation_Log.md`'s cross-Band notes. The banks are unchanged in size, so this
+plan's own no-adjacent-repeats check still holds.

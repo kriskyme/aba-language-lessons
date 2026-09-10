@@ -243,7 +243,7 @@ instead of eight.
   would you choose, and in what order would you make your decisions?" 2) "Which matters more: how many pockets
   a backpack has, or how comfortable it feels? Why?" 3) "What's one step people might forget when choosing a
   backpack?"
-- **Outer-circle active task:** every student not currently on the panel keeps a running tally of every
+- **Listener task:** every student not currently on the panel keeps a running tally of every
   sequencing phrase they hear a panelist use ("first," "once," "then," "after that"), plus one vocabulary word
   from Day 1's list.
 - **Board-dependent moment:** running board record of sequencing phrases actually spoken during the Town Hall,

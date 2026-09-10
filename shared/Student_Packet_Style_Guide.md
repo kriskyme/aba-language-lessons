@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.26)
+# Student Packet Style Guide (v2.28)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -25,6 +25,23 @@ directly from a browser without setup. An image is embedded inline as a base64 d
 Design for black-and-white printing exclusively: no color-dependent meaning anywhere in the layout
 (star counts, not color, indicate difficulty; borders and typographic weight, not color,
 distinguish content types). Use a pure black/white/gray palette.
+
+**No item is answered by reading a chromatic color off a printed picture.** The rule above is about
+the packet's own design; this one is about its content, and it binds the lesson document as much as
+the packet, because the packet is where the task is finally answered. An embedded photograph prints
+in grayscale, so an item asking which picture is red, a word bank offering *orange* and *blue* as
+answers about a photograph, or an expected answer of "It is orange." cannot be settled from the
+printed page. Where an objective calls for matching a described feature to a picture (the CSV's
+Level 1-3 rows, whose own examples use color), build the item on a feature that survives grayscale:
+size, shape, quantity, texture, pattern, or the weather or setting of a scene.
+
+Two things this does **not** forbid. **Black, white, and gray survive grayscale** and are legitimate
+answers about a printed picture: a black cat, a white hat, and a black-and-white cat stay
+distinguishable in print. And a task in which the student **describes their own belonging** may use
+any color, because they answer from what they know of the object, not from anything printed. Color
+words may also appear freely in an anchor text, a vocabulary list, a word bank whose answers lie
+elsewhere, or a spoken task. The prohibition is narrow: a chromatic color as the thing a printed
+picture is supposed to tell the student.
 
 ### A.3 No em-dashes
 
@@ -840,7 +857,10 @@ shape with white text, never an emoji or image, so it prints identically everywh
 `.pic-option` (picture items with embedded images), `.match-list`/`.match-row` (matching items, one pair per line,
 label above a full-width `.ans-line`; in a two-source compare layout, `.match-src` for each source's excerpt line
 under a subject label), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
-(lettered answer choices), `.time-list` (response-time windows), `.reader-copy`/`.reader-warn`
+(lettered answer choices), `.time-list` (response-time windows), `.verify-window`/`.verify-src`/`.verify-instr`
+(the bounded verification window: a short stretch of the source's own words, printed after the response
+spaces of every task it could answer, with its source label and timestamp range and the instruction to
+cover it for the re-encounter; Quality Standards §D12), `.reader-copy`/`.reader-warn`
 (teacher-only page in a separate file).
 
 ```css
@@ -1020,6 +1040,38 @@ under a subject label), `.qitem` (standalone numbered question), `.mc-list`/`.mc
   letter-spacing: 0.02em;
   margin-bottom: 10px;
 }
+
+.verify-window {
+  border: 1px solid var(--ink);
+  border-left: 4px solid var(--ink);
+  background: var(--paper);
+  padding: 12px 16px;
+  margin: 18px 0 12px;
+  page-break-inside: avoid;
+}
+.verify-window .verify-src {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.verify-window p {
+  margin: 0 0 8px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.verify-window p:last-child {
+  margin-bottom: 0;
+}
+.verify-instr {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-style: italic;
+  margin: 0 0 14px;
+}
 ```
 
 ### H.2 Passage Reading
@@ -1174,8 +1226,16 @@ Run this list first, then the modality's own list.
 21. No instruction to form a circle, move to a corner or station, walk the room, or rearrange seating; every
     discussion instruction runs from where the student sits, and a rotation prints as finding a new
     partner? (§E, Quality Standards §D11)
+22. No item answered by reading a chromatic color off a printed picture: no picture task turning on one, no
+    chromatic color offered as an answer option or word-bank entry about a photograph, and no expected answer
+    naming one (A.2). Picture items use size, shape, quantity, texture, pattern, setting, or black/white/gray,
+    all of which survive grayscale. Color is still fine where the student describes their own belonging.
+23. In a packet carrying a verification window, does the window sit after the response spaces of every task
+    it could answer, carry its source label and timestamp range, stay inside the lesson's stated ceiling, hold
+    no task, answer or `Answer note:` inside it, and close with the instruction to cover it for one more
+    unsupported encounter? (Quality Standards §D12, §H.1)
 
 ## Changelog
 
-**Current version: v2.25.** For the full dated version history and the reasoning behind each
+**Current version: v2.28.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

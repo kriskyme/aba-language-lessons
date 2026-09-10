@@ -7,8 +7,10 @@ append-template at the bottom. **A new Band's file is created lazily** the first
 generated, mirroring how `Set_<N>/` folders are created lazily - see `shared/Program_Conventions.md` §D.
 
 **Current files:**
+- [`Rotation_Log_Beginner.md`](Rotation_Log_Beginner.md) - Module 1: Describing, Set 1 (complete)
 - [`Rotation_Log_Intermediate.md`](Rotation_Log_Intermediate.md) - Module 1: Describing, Set 1 (complete)
-- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Module 1: Describing, Set 1 (2 of 4 lessons generated)
+- [`Rotation_Log_Advanced.md`](Rotation_Log_Advanced.md) - Module 1: Describing, Set 1 (complete)
+- [`Rotation_Log_Proficient.md`](Rotation_Log_Proficient.md) - Module 1: Describing, Set 1 (complete)
 
 **Read the relevant Band's file in full before planning a new Set** (per the Module Lesson-Plan Generation
 Prompt's Section 0); append to it (never overwritten) once a Set's plan is reviewed and approved.

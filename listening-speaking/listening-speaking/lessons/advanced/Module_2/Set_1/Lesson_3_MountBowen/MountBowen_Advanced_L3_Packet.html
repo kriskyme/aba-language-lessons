@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Follow Me Up a Mountain: Student Packet</title>
+    <style>
+    :root {
+      --ink: #000000;
+      --ink-soft: #333333;
+      --paper: #ffffff;
+      --rule: #999999;
+      --rule-light: #cccccc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #e8e8e8;
+      color: var(--ink);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      line-height: 1.55;
+    }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 40px 60px;
+    }
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 14px 40px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .print-btn {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      padding: 8px 16px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .print-btn:hover {
+      background: #333;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Iowan Old Style", Georgia, serif;
+      margin: 0;
+      color: var(--ink);
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .masthead h1 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+    .masthead + .masthead,
+    .masthead.masthead-later {
+      margin-top: 60px;
+      page-break-before: always;
+      break-before: page;
+    }
+    .masthead-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      margin-top: 0;
+      padding-top: 4px;
+    }
+    .masthead-tag {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .masthead-sep {
+      font-weight: 400;
+      color: var(--rule);
+      padding: 0 3px;
+    }
+
+    .objective {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+      color: var(--ink);
+      margin: 0 0 24px;
+    }
+    .objective strong {
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      font-weight: 700;
+      margin: 32px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule-light);
+    }
+
+    .exercise-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .instr-inline {
+      margin-top: 20px;
+    }
+    .instr-inline .exercise-label {
+      margin-right: 6px;
+    }
+
+    .section-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ink);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+    .instr {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+
+    .spotlight-box {
+      border: 1px solid var(--ink);
+      padding: 16px 20px;
+      margin: 14px 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .spotlight-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .model-step {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .model-step:last-child {
+      margin-bottom: 0;
+    }
+    .model-step strong {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      letter-spacing: .03em;
+    }
+
+    .vocab-list {
+      margin: 10px 0 6px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .vocab-list .vrow {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .vocab-list .vrow:last-child {
+      border-bottom: none;
+    }
+    .vocab-list .word {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      white-space: nowrap;
+      width: 165px;
+      flex-shrink: 0;
+    }
+
+    .idiom-item {
+      margin-bottom: 10px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .idiom-item:last-child {
+      margin-bottom: 0;
+    }
+    .idiom-phrase {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .annot-key {
+      float: right;
+      width: 190px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11.5px;
+      margin: 2px 0 12px 20px;
+      padding: 12px 14px;
+      border: 1px solid var(--ink);
+    }
+    .annot-key-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .annot-key .k-row {
+      margin: 7px 0;
+    }
+    .annot-key .k-mark {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      display: block;
+    }
+    .clearfloat {
+      clear: both;
+    }
+
+    .image-placeholder {
+      /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
+      border: 2px dashed var(--ink);
+      padding: 44px 20px;
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin: 14px 0 4px;
+    }
+    .photo {
+      /* an embedded image (base64 data URI); sized by this rule, never per packet */
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      margin: 14px auto 4px;
+    }
+    .image-caption {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    .article {
+      padding: 6px 0 0;
+      margin: 18px 0 22px;
+    }
+    .article .headline {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin: 20px 0 4px;
+    }
+    .article .byline {
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+    .article p {
+      font-size: 15.5px;
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .para-letter {
+      font-weight: 700;
+      margin-right: 2px;
+    }
+    .footref {
+      font-weight: 700;
+    }
+    .idiom-mark {
+      text-decoration: underline dotted var(--ink);
+      text-decoration-thickness: 1.5px;
+    }
+    .article .footnotes {
+      margin-top: 22px;
+      padding: 14px 0 22px;
+      border-top: 1px solid var(--rule-light);
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+    .article .footnotes div {
+      margin-bottom: 6px;
+    }
+
+    .qlist {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .qlist li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 11px;
+      font-size: 14.5px;
+    }
+    .num {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 20px;
+    }
+    .qbody {
+      flex: 1;
+    }
+
+    /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+       blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+       `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+       `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+       for writing a full answer - never place either one mid-sentence, and never use
+       `.ans-line-sm` where you mean `.blank`. */
+    .blank {
+      display: inline-block;
+      border-bottom: 1px solid var(--ink-soft);
+      min-width: 70px;
+    }
+    .ans-line {
+      display: block;
+      border-bottom: 1px solid var(--ink-soft);
+      height: 22px;
+      margin-top: 4px;
+    }
+    .ans-line-sm {
+      display: block;
+      border-bottom: 1px solid var(--ink-soft);
+      width: 100%;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .subgroup-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ink);
+      margin: 14px 0 8px;
+    }
+
+    .fillblank {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .fillblank li {
+      margin-bottom: 9px;
+      font-size: 14.5px;
+    }
+    .fillblank .num {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .refresher {
+      padding: 16px 0;
+      margin: 14px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .refresher.refresher-noline {
+      border-bottom: none;
+    }
+    .refresher .headline {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .refresher p {
+      font-size: 14.5px;
+    }
+
+    .task-block {
+      margin: 18px 0 22px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .task-block .stars {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+    .task-block p,
+    .task-block li {
+      font-size: 14.5px;
+    }
+    .task-block .instr-line {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .task-block .instr-line .exercise-label {
+      margin-right: 2px;
+    }
+    .task-block .instr-line .stars {
+      margin-right: 8px;
+    }
+    /* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+       A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+       A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+       Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
+    .wordbank {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      padding: 8px 0;
+      margin: 10px 0;
+      border-top: 1px dashed var(--rule-light);
+      border-bottom: 1px dashed var(--rule-light);
+    }
+    .task-block .starter {
+      font-style: italic;
+      padding: 8px 0 8px 14px;
+      margin: 10px 0;
+      border-left: 3px solid var(--ink);
+      font-size: 14px;
+    }
+
+    .discuss-block {
+      margin: 16px 0;
+    }
+    .discuss-block .prompt {
+      font-size: 14.5px;
+      margin: 10px 0 16px;
+    }
+    .stems {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .stems li {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 9px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .stems .stars {
+      font-size: 13px;
+      flex-shrink: 0;
+      width: 52px;
+      letter-spacing: 1px;
+    }
+
+    .wrapup {
+      margin: 16px 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+      .toolbar {
+        display: none;
+      }
+      .sheet {
+        padding: 0 12px;
+        max-width: 100%;
+      }
+      .spotlight-box,
+      .task-block,
+      .article p,
+      .refresher,
+      .discuss-block,
+      .wrapup,
+      .citebox,
+      .notes-table,
+      .article {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    .citebox {
+      border: 1px solid var(--ink);
+      padding: 12px 16px;
+      margin: 10px 0 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .citebox strong {
+      font-weight: 700;
+    }
+
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 20px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .notes-table th,
+    .notes-table td {
+      border: 1px solid var(--rule);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .notes-table th {
+      font-weight: 700;
+      background: #f2f2f2;
+    }
+    .notes-table td {
+      height: 38px;
+    }
+
+    .upside-down {
+      transform: rotate(180deg);
+    }
+
+    .stop-flag {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid var(--ink);
+      padding: 10px 14px;
+      margin: 12px 0 14px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .stop-badge {
+      flex: 0 0 auto;
+      width: 54px;
+      height: 54px;
+      background: var(--ink);
+      color: var(--paper);
+      clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .stop-flag .instr {
+      margin: 0;
+    }
+
+    .task-instr {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 10px;
+    }
+
+    .pic-options {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 8px 0 4px 4px;
+    }
+    .pic-option {
+      width: 110px;
+    }
+    .pic-option .pic-box {
+      /* holds an embedded <img>; never printed empty for the teacher to fill */
+      border: 1px solid var(--ink);
+      height: 70px;
+      padding: 0;
+      overflow: hidden;
+    }
+    .pic-option .pic-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pic-option .pic-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .match-list {
+      margin: 8px 0 4px 4px;
+    }
+    .match-row {
+      margin-bottom: 14px;
+    }
+    .match-row .match-label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .match-row .match-src {
+      display: block;
+      margin: 0 0 5px 12px;
+    }
+
+    .qitem {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-size: 14.5px;
+    }
+
+    .mc-list {
+      margin: 8px 0 4px 30px;
+      padding-left: 0;
+      list-style: none;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .mc-list li {
+      margin-bottom: 6px;
+    }
+    .mc-letter {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .time-list {
+      margin: 8px 0 4px;
+      padding-left: 0;
+      list-style: none;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .time-list li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule-light);
+      padding: 7px 2px;
+    }
+    .time-list li:last-child {
+      border-bottom: none;
+    }
+    .time-list .time-window {
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .reader-copy {
+      border: 2px dashed var(--ink);
+      padding: 14px 16px;
+      margin: 20px 0;
+      page-break-before: always;
+    }
+    .reader-copy .reader-warn {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+    </style>
+  </head>
+  <body>
+  <div class="toolbar">
+    <button class="print-btn" onclick="window.print()">Print this packet</button>
+  </div>
+  <div class="sheet">
+
+    <div class="masthead">
+      <h1>Unit 3A: Follow Me Up a Mountain</h1>
+      <div class="masthead-meta">
+        <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
+        <span class="masthead-tag">Advanced 2.1.3.0</span>
+      </div>
+    </div>
+
+    <p class="objective"><strong>Objective:</strong> I can tell the difference between an opinion a speaker states outright and one they only let me hear underneath what they say.</p>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Good to Know</p>
+      <p class="model-step">Hinchinbrook Island is a mountainous national park island off the coast of Far North Queensland, Australia. Mount Bowen is its highest peak. Getting on or off the island means taking a boat.</p>
+      <p class="model-step">The accident in this story happened in April 1997, before mobile phones were common and before emergency beacons were easy to get. That is why raising the alarm took as long as it did.</p>
+    </div>
+
+    <p class="section-title">Before You Listen</p>
+    <p class="instr">Read the situation, circle one answer, then find someone who circled the other and give them one reason.</p>
+    <div class="task-block">
+      <p class="task-instr">You are two days into a hike with someone you met yesterday. They want to keep going to the summit. You think the path has become unsafe.</p>
+      <ul class="mc-list">
+        <li><span class="mc-letter">A.</span> You owe it to them to keep going, because you agreed to.</li>
+        <li><span class="mc-letter">B.</span> You owe it to both of you to turn back, whatever you agreed.</li>
+      </ul>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Write the one reason you gave.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="section-label">Words to Know</p>
+    <div class="vocab-list">
+      <div class="vrow"><span class="word">1. pinning</span> (someone down) holding them in place so they cannot move at all.</div>
+      <div class="vrow"><span class="word">2. broke loose</span> came away suddenly from what was holding it.</div>
+      <div class="vrow"><span class="word">3. raise the alarm</span> tell people that something is badly wrong so help can start.</div>
+      <div class="vrow"><span class="word">4. winched</span> lowered or lifted by a motor-driven cable.</div>
+      <div class="vrow"><span class="word">5. toxins</span> harmful substances that build up in the body.</div>
+      <div class="vrow"><span class="word">6. survivor guilt</span> the feeling of having done wrong by coming through something others did not, or by being the reason someone else was harmed.</div>
+    </div>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Phrase Spotlight</p>
+      <p class="idiom-item"><span class="idiom-phrase">hit reset</span> start again from the beginning after things have got out of hand.</p>
+      <p class="idiom-item"><span class="idiom-phrase">you're on</span> I accept; I will do it with you.</p>
+      <p class="idiom-item"><span class="idiom-phrase">take me out</span> kill me, or finish me off.</p>
+    </div>
+
+    <div class="citebox">
+      <strong>You'll listen to:</strong> "Follow me up a mountain," a radio story about two hikers who met on an island in Australia and climbed a mountain together, and about the accident that happened on the way. From Earshot, ABC Radio National. You will hear three people: the hiker who was trapped, the hiker who went for help, and one of the rescue crew.
+    </div>
+
+    <p class="section-title">Listening Notes</p>
+    <p class="instr">While you listen, fill in each box with a few words.</p>
+    <table class="notes-table">
+      <tr>
+        <th>The climb</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>The rock</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>The decision</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>The walk out</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Getting the message through</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>The rescue</th>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <p class="section-title">Listen Closely</p>
+    <p class="instr">Do one task below. When you are done, find someone who worked on a different task and take turns sharing what you found.</p>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Number these five events 1 to 5 in the order they happened.
+            <br />&nbsp;&nbsp;&#95;&#95;&#95; the crew were winched down into the creek bed
+            <br />&nbsp;&nbsp;&#95;&#95;&#95; the two men set up camp near the creek
+            <br />&nbsp;&nbsp;&#95;&#95;&#95; a rock broke loose above Warren
+            <br />&nbsp;&nbsp;&#95;&#95;&#95; Geert reached the ferry
+            <br />&nbsp;&nbsp;&#95;&#95;&#95; Geert started walking down at first light
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Write the outcome of the rescue in one sentence.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">Write the reason the rescue took as long as it did, in one sentence.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">Underline the two words in your ordered list above that told you the order.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Summarize what happened from the rock falling to the helicopter, in four sentences, in order.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">In one sentence, say why this event mattered to Warren.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">He never says he was terrified. Write down one thing he says that tells you what he was feeling under the rock anyway.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">Write one sentence saying what that detail tells you, and why you read it that way.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">&#9733;&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Summarize the ordeal in four sentences.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Warren was under the rock for more than 40 hours. Write down how much of those hours the account actually gives you, and how you can tell.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">Name one clearly missing piece of information that would change how one-sided this account is, and write one sentence on what it would tell us that this version does not.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">Geert walked for a day and a half. Write one sentence on what we are told about that walk, and one on what we are not.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span></p>
+      <p class="task-instr">Three people in this story describe the same hours: Warren was under the rock, Geert went for help, and Daniel was on the rescue crew. Each row below gives their own words on a single subject.</p>
+      <div class="match-list">
+        <div class="match-row">
+          <span class="match-label">The decision to climb the mountain</span>
+          <span class="match-src"><strong>Warren:</strong> "I remember at one time being confronted with this thought of, 'Hey, is this what you've been looking for? Is this connected enough for you?'"</span>
+          <span class="match-src"><strong>Geert:</strong> "Within five or 10 minutes, he came to me and said, 'Yeah, you're on'." and "I felt guilty that if it wasn't for me, he wouldn't have gone up that mountain."</span>
+        </div>
+        <div class="match-row">
+          <span class="match-label">The moment it went wrong</span>
+          <span class="match-src"><strong>Warren:</strong> "I pulled up to make my way up and over, and I just heard this almighty crack." and "A refrigerator-sized piece of rock broke loose out of that wall and then just literally slammed me back down into the creek bed - and I mean slammed."</span>
+          <span class="match-src"><strong>Geert:</strong> "We had to go out into the mangroves, and Goodie found an old crab fisherman ... and he had a big radio on board and that's how we got the mayday out."</span>
+        </div>
+        <div class="match-row">
+          <span class="match-label">How close it came</span>
+          <span class="match-src"><strong>Warren:</strong> "I said, 'I reckon I can last another night, but I'm not sure I can do a second night'."</span>
+          <span class="match-src"><strong>Daniel:</strong> "At that stage is when Warren went in and out of consciousness. And that's when the real potential was for him not to survive the rescue."</span>
+        </div>
+        <div class="match-row">
+          <span class="match-label">Who was responsible</span>
+          <span class="match-src"><strong>Warren:</strong> "... he might have asked me to go but I mean, I made the decision to go and ... we got through it at the end of the day - he saved my life."</span>
+          <span class="match-src"><strong>Geert:</strong> "I felt guilty that if it wasn't for me, he wouldn't have gone up that mountain."</span>
+        </div>
+      </div>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Warren and Geert describe the same decision and the same days. Using the printed words only, write two to three sentences on how each one builds his account differently, and what each one leaves a listener concluding about whose fault it was.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Identify one thing one of them wants the listener to believe that he never states outright. Write one to two sentences and point to the words that led you there.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="section-title">Show What You Heard</p>
+    <div class="wrapup">
+      <div class="stop-flag">
+        <div class="stop-badge" aria-hidden="true">STOP</div>
+        <p class="instr">Don't read ahead. Your teacher will read a short story aloud first.</p>
+      </div>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Tell your partner one opinion the speaker states outright, and one they only imply.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Say what gave the implied one away.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="section-label">Check What You Heard</p>
+    <p class="instr"><em>This is printed upside-down on purpose. Don't turn the page around until after you have shared with your partner.</em></p>
+    <div class="refresher refresher-noline upside-down">
+      <p>My brother finally sold the van last spring. He had rebuilt the engine twice, and the second time he did it in a car park in the rain. When the buyer asked whether he was sad to see it go, he said he had already booked a flight for the money. He has never once said the van was a mistake. He just mentions, most times it comes up, how much the second rebuild cost him.</p>
+    </div>
+
+    <div class="masthead masthead-later">
+      <h1>Unit 3B: Follow Me Up a Mountain</h1>
+      <div class="masthead-meta">
+        <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
+        <span class="masthead-tag">Advanced 2.1.3.0</span>
+      </div>
+    </div>
+
+    <p class="objective"><strong>Objective:</strong> I can make a point land by giving one concrete example of it, instead of saying the general thing twice.</p>
+
+    <p class="section-title">Learn the Phrase</p>
+    <div class="spotlight-box">
+      <p class="spotlight-label">Giving Examples</p>
+      <p class="model-step">Everyone in this story reaches for a concrete instance instead of a general word. Three real ones: "I've always explained Hinchinbrook as a bit like Jurassic Park." "A refrigerator-sized piece of rock broke loose out of that wall ..." "Goodie found an old crab fisherman - he looked like Ernest Hemingway in his 90s."</p>
+      <p class="model-step">Each of those does a job a general word could not. <strong>A big rock</strong> tells you nothing; <strong>refrigerator-sized</strong> puts it in the room with you. A good example is chosen for the listener, out of something the listener already knows.</p>
+      <ul class="qlist">
+        <li><span class="num">&bull;</span><span class="qbody">"For example, &#95;&#95;&#95;."</span></li>
+        <li><span class="num">&bull;</span><span class="qbody">"It was a bit like &#95;&#95;&#95;."</span></li>
+        <li><span class="num">&bull;</span><span class="qbody">"To give you an idea, &#95;&#95;&#95;."</span></li>
+        <li><span class="num">&bull;</span><span class="qbody">"Say, for instance, &#95;&#95;&#95;."</span></li>
+        <li><span class="num">&bull;</span><span class="qbody">"I mean, &#95;&#95;&#95; - that kind of thing."</span></li>
+      </ul>
+    </div>
+
+    <p class="section-title">Practice It</p>
+    <p class="instr">Do one task below. Work in pairs and take turns. When you are done, find someone who worked on a different task and take turns sharing what you told.</p>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">&#9733;</span></p>
+      <p class="task-instr">Tell a true story of a time you had to make a decision quickly with someone you did not know well.</p>
+      <ol class="qlist">
+        <li><span class="num">1.</span><span class="qbody">Tell the sequence in four or five sentences, choosing your own ordering words.</span></li>
+        <li><span class="num">2.</span><span class="qbody">Say how it turned out, and give one brief reason it turned out that way.</span></li>
+        <li><span class="num">3.</span><span class="qbody">Include at least one example, using one of the frames above.</span></li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">&#9733;&#9733;</span></p>
+      <p class="task-instr">Tell a true story of a time you had to make a decision quickly with someone you did not know well.</p>
+      <ol class="qlist">
+        <li><span class="num">1.</span><span class="qbody">Tell it as a longer account, six to eight sentences, and say why it mattered to you.</span></li>
+        <li><span class="num">2.</span><span class="qbody">Include one detail that shows how you felt at the moment of deciding, without naming the feeling.</span></li>
+        <li><span class="num">3.</span><span class="qbody">Include at least two concrete examples.</span></li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">&#9733;&#9733;&#9733;</span></p>
+      <p class="task-instr">Tell a true story of a time you had to make a decision quickly with someone you did not know well.</p>
+      <ol class="qlist">
+        <li><span class="num">1.</span><span class="qbody">Tell it without a fixed pattern, moving between what happened and what it meant.</span></li>
+        <li><span class="num">2.</span><span class="qbody">Quote at least one thing the other person actually said.</span></li>
+        <li><span class="num">3.</span><span class="qbody">Keep an eye on your partner. When they look lost, change your pace or your wording once, and keep going.</span></li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span></p>
+      <p class="task-instr">Tell a true story of a time you had to make a decision quickly with someone you did not know well.</p>
+      <ol class="qlist">
+        <li><span class="num">1.</span><span class="qbody">Tell it twice, to two different partners, choosing different examples each time: once so the other person sounds like the one who decided, once so you do.</span></li>
+        <li><span class="num">2.</span><span class="qbody">Keep the same events in the same order both times.</span></li>
+        <li><span class="num">3.</span><span class="qbody">If your order comes out unclear at any point, catch it and fix it out loud as you go.</span></li>
+      </ol>
+    </div>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Say It Like a Native Speaker</p>
+      <p class="model-step">People do not speak in a flat line. They break a sentence into small groups of words and pause between them, and the groups fall where the meaning is. Mark with a slash where you think this speaker breaks the line, then listen and correct your marks: "A refrigerator-sized piece of rock broke loose out of that wall and then just literally slammed me back down into the creek bed."</p>
+      <p class="model-step">Read the line aloud twice, once with no pauses at all and once with your marked groups, and say what changed for the listener. Then say one of your own sentences from the task above with deliberate groups, and ask your partner where they heard the breaks.</p>
+    </div>
+
+    <p class="section-title">Discuss It</p>
+    <div class="discuss-block">
+      <p class="instr">Get into groups of four and talk through these questions, one at a time, from where you sit. While someone else is speaking, write down one example they give and whether it was concrete enough to picture. You will read one of those out at the end of each question.</p>
+      <p class="qitem"><span class="num">1.</span> Geert says he felt guilty; Warren says Geert saved his life. Both are talking about the same walk down the mountain. Can both be right?</p>
+      <p class="qitem"><span class="num">2.</span> Warren says that given the chance he would not go back and change it. What do you think he means, and do you believe him?</p>
+      <p class="qitem"><span class="num">3.</span> Think of a decision you made with someone else where it went wrong. Whose decision was it, really?</p>
+      <p class="instr"><strong>Starter phrases:</strong></p>
+      <ul class="stems">
+        <li><span class="stars">&#9733;</span> "He says &#95;&#95;&#95;. For example, &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;</span> "He never says &#95;&#95;&#95;, but you can hear it when he &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;&#9733;</span> "Geert states his opinion outright; Warren mostly implies his, for example when he &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "The effect of putting &#95;&#95;&#95; at the end of that sentence is &#95;&#95;&#95;, which lets him avoid saying &#95;&#95;&#95;."</li>
+      </ul>
+    </div>
+
+    <p class="section-title">Wrap It Up</p>
+    <div class="wrapup">
+      <p class="instr">With a partner, take turns. Give an opinion about a place you know well, in three or four sentences, without ever using an opinion word. Use at least one concrete example. Your partner says what your opinion was and which example gave it away.</p>
+      <ul class="stems">
+        <li><span class="stars">&#9733;</span> "It's the kind of place where &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;</span> "To give you an idea, &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;&#9733;</span> "Most days you'll see &#95;&#95;&#95;, and by about &#95;&#95;&#95; it's &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "I always tell people &#95;&#95;&#95;, and I let them work out the rest."</li>
+      </ul>
+    </div>
+
+  </div>
+  </body>
+</html>

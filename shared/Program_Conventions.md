@@ -377,4 +377,4 @@ Nobody hunts for images afterward.
 
 ## Changelog
 
-See `Changelog.md` in this folder.
+**Current version: v1.14.** See `Changelog.md` in this folder.

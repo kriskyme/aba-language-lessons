@@ -207,7 +207,7 @@ phone case returns only as Maria's Mentor Ladder in Lesson 1's second look.
 | 1 | Intermediate 1 | 1 of 4 (Pair position 5) | 2026-09-09 | Re-engagement with the kept paragraph; Module 2's Skill Spotlight; Grammar Focus A input, modeling, deeper practice; Mentor Ladder second look (each model completed by its story) | My clothing (draft object, continued from Module 1; same Scenario) | 2.1.1.0 |
 | 2 | Intermediate 2 | 2 of 4 (Pair position 6) | 2026-09-09 | Grammar Focus B; then / than; warm-up on the kept paragraph; planning the second paragraph against it | (same Scenario, continued) | 2.1.2.0 |
 | 3 | Intermediate 3 | 3 of 4 (Pair position 7) | 2026-09-09 | Drafting the second paragraph, complete on Day 1; merged self-edit checklist over both paragraphs, improve | (same Scenario, continued) | 2.1.3.0 |
-| 4 | Intermediate 4 | 4 of 4 (Pair position 8) | 2026-09-09 | Assemble the whole; Peer Editing (both Modules); revise for effect (join with a time clause, upgrade a verb, answer the reader, Level 5 reorders); final copy; publish (gallery walk); Closing Transfer Check on the student's key plus Module 2's own verb task on "this morning" | (same Scenario, continued; the finished piece is two paragraphs under one title) | 2.1.4.0 |
+| 4 | Intermediate 4 | 4 of 4 (Pair position 8) | 2026-09-09 | Assemble the whole; Peer Editing (both Modules); revise for effect (join with a time clause, upgrade a verb, answer the reader, Level 5 reorders); final copy; publish (gallery walk); Closing Transfer Check on the student's key plus Module 2's own verb task on "this morning" | (same Scenario, continued; the finished piece is two paragraphs under one title) | 2.1.4.1 |
 
 **Grammar Focus (A/B):** Focus A: the simple past for a sequence of events (regular -ed with three spelling
 rules; irregular list wore, got, bought, chose, put, took, found, lost, gave, saw, paid, was / were) + time
@@ -238,3 +238,11 @@ new `### Set N` subsection for a new Set — do not overwrite anything above):
 
 Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way
 this Set's entry does — they apply to all 4 rows, not repeated per row.
+
+---
+
+**Room-neutral publish step (2026-09-10), Lesson 4 `2.1.4.0` -> `2.1.4.1`.** Per Quality Standards §D11 (see
+`shared/Changelog.md`'s v1.16 entry), Lesson 4 Day 2's gallery walk - every final copy left open on its desk
+while students walked the room with a card - is now a pass-and-read: each copy is passed to a neighbor and on
+again, so every student reads two pieces that are not their partner's from their seat. The per-Level card task,
+the cold-call, and the Peer Editing form are unchanged. `.md` and packet both updated.

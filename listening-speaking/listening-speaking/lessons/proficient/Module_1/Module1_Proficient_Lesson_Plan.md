@@ -43,10 +43,10 @@ withheld-content requirement from the start, rather than retrofitting either lat
 
 | # | Topic Direction | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Suggested 2nd-Source Angle (Level 7) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | A real neighborhood/district undergoing visible change, described by people with different stakes in it | Long-form broadcast feature (neighborhood/place profile) | Listen for Stated vs. Implied Opinion | Making Comparisons | Four-Corner Debate | Town Hall | Urban change & neighborhood character | A real-estate/promotional description of the neighborhood vs. a longtime resident's or independent journalist's account |
-| 2 | A real designer's or maker's talk about one product or piece of design they created | TED Talk (product/design description) | Listen for Contrastive/Concession Language | Hedging an Opinion | Visual Inquiry | Fishbowl | Design & craftsmanship evaluation | The creator's own talk vs. an independent design critic's or reviewer's account of the same product |
-| 3 | A real person profiled by someone who knew them closely, visibly careful around one sensitive aspect of that person's life or reputation | Long-form interview (person-portrait) | Predict from Context Before Confirming | Turn-Taking/Interrupting Politely | Mystery Quote | Concentric Circles | Character & reputation | The interview subject's account of the profiled person vs. a second, independent profile or retrospective of the same person |
-| 4 | A real institution or historic site described in a lecture/docent walkthrough, where institutional framing plays down a known shortcoming | Lecture/docent walkthrough excerpt | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | K-W-L Walk | Jigsaw Expert Panels | Institutional description | The institution's own official/docent framing vs. an independent journalist's or historian's account of the same site |
+| 1 | A real neighborhood/district undergoing visible change, described by people with different stakes in it | Long-form broadcast feature (neighborhood/place profile) | Listen for Stated vs. Implied Opinion | Making Comparisons | Take a Side | Town Hall | Urban change & neighborhood character | A real-estate/promotional description of the neighborhood vs. a longtime resident's or independent journalist's account |
+| 2 | A real designer's or maker's talk about one product or piece of design they created | TED Talk (product/design description) | Listen for Contrastive/Concession Language | Hedging an Opinion | Visual Inquiry | Panel Round | Design & craftsmanship evaluation | The creator's own talk vs. an independent design critic's or reviewer's account of the same product |
+| 3 | A real person profiled by someone who knew them closely, visibly careful around one sensitive aspect of that person's life or reputation | Long-form interview (person-portrait) | Predict from Context Before Confirming | Turn-Taking/Interrupting Politely | Mystery Quote | Rotating Partners | Character & reputation | The interview subject's account of the profiled person vs. a second, independent profile or retrospective of the same person |
+| 4 | A real institution or historic site described in a lecture/docent walkthrough, where institutional framing plays down a known shortcoming | Lecture/docent walkthrough excerpt | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | K-W-L Chart | Jigsaw Expert Panels | Institutional description | The institution's own official/docent framing vs. an independent journalist's or historian's account of the same site |
 
 **Level 8 angle per lesson** (where the "withheld/downplayed" content comes from): Lesson 1 - an official/civic
 voice hedging around *why* change is happening or *who's* being displaced; Lesson 2 - the creator conceding then
@@ -85,8 +85,17 @@ planned for this Band). Step 2 (lesson generation) has not yet started.
 ### Set 1 (planned 2026-09-07) - Planned only, not yet generated
 | Lesson # | Content Format | Listening Strategy | Speaking Skill | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic Direction | Version |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Long-form broadcast feature (neighborhood/place profile) | Listen for Stated vs. Implied Opinion | Making Comparisons | Four-Corner Debate | Town Hall | Urban change & neighborhood character | A real neighborhood/district undergoing visible change, described by people with different stakes in it | 1.1.1.0 |
-| 2 | TED Talk (product/design description) | Listen for Contrastive/Concession Language | Hedging an Opinion | Visual Inquiry | Fishbowl | Design & craftsmanship evaluation | A real designer's or maker's talk about one product or piece of design they created | 1.1.2.0 |
-| 3 | Long-form interview (person-portrait) | Predict from Context Before Confirming | Turn-Taking/Interrupting Politely | Mystery Quote | Concentric Circles | Character & reputation | A real person profiled by someone who knew them closely, visibly careful around one sensitive aspect of that person's life or reputation | 1.1.3.0 |
-| 4 | Lecture/docent walkthrough excerpt | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | K-W-L Walk | Jigsaw Expert Panels | Institutional description | A real institution or historic site described in a lecture/docent walkthrough, where institutional framing plays down a known shortcoming | 1.1.4.0 |
+| 1 | Long-form broadcast feature (neighborhood/place profile) | Listen for Stated vs. Implied Opinion | Making Comparisons | Take a Side | Town Hall | Urban change & neighborhood character | A real neighborhood/district undergoing visible change, described by people with different stakes in it | 1.1.1.0 |
+| 2 | TED Talk (product/design description) | Listen for Contrastive/Concession Language | Hedging an Opinion | Visual Inquiry | Panel Round | Design & craftsmanship evaluation | A real designer's or maker's talk about one product or piece of design they created | 1.1.2.0 |
+| 3 | Long-form interview (person-portrait) | Predict from Context Before Confirming | Turn-Taking/Interrupting Politely | Mystery Quote | Rotating Partners | Character & reputation | A real person profiled by someone who knew them closely, visibly careful around one sensitive aspect of that person's life or reputation | 1.1.3.0 |
+| 4 | Lecture/docent walkthrough excerpt | Listen for Signposting/Discourse Markers | Summarizing What Someone Said | K-W-L Chart | Jigsaw Expert Panels | Institutional description | A real institution or historic site described in a lecture/docent walkthrough, where institutional framing plays down a known shortcoming | 1.1.4.0 |
 ```
+
+---
+
+**Room-neutral rotation names (2026-09-10).** Quality Standards §D11 replaced every hook and protocol that
+required rearranging the room; this plan's rotation columns now use the room-neutral names
+(Concentric Circles -> Rotating Partners, Fishbowl -> Panel Round, Four-Corner Debate -> Take a Side,
+K-W-L Walk -> K-W-L Chart). The already-generated lessons were rewritten to match in the same pass; the
+old-to-new mapping is in `Rotation_Log.md`'s cross-Band notes. The banks are unchanged in size, so this
+plan's own no-adjacent-repeats check still holds.

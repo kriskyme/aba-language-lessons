@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.15)
+# Generation Quality Standards (v1.17)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -11,7 +11,8 @@ word-count ceiling, a sourcing rule, a composition regime) and its concrete exam
 prompt restates a rule from this file, and no prompt cites another modality's prompt for one - it points
 here. A quality bug found while reviewing one modality's output is fixed here first if it passes the test
 above, logged once in `shared/Changelog.md`, and only then reflected in a modality's own Changelog as a
-one-line pointer.
+one-line pointer. The test is applied to every reported defect by default, not only when someone asks
+whether a fix should be generalized; `CLAUDE.md`'s "The generalization pass" carries the steps.
 
 Terms: "centerpiece" means the shared band-calibrated input every task Level works from - Reading's
 anchor text, Listening/Speaking's real source clip, Writing's Scenario and Mentor Ladder. "Item" means any
@@ -243,6 +244,25 @@ task for every student not currently speaking. Rotating Partners satisfies the r
 the prompt changes when the partner does - so nothing is lost by dropping the formation. This rule is about
 the room, D8 about the materials; an activity has to clear both.
 
+**D12. Commit, verify against the source, then return unsupported.** Where a lesson gives students access
+to the input's exact wording, a model answer, or an exemplar, that support arrives only after they have
+committed a response, and it is not the last thing they meet. The arc is three beats, in order:
+
+- **Commit.** Students answer from what they took in, with the support absent from the page.
+- **Verify.** The support is revealed, bounded to the stretch the task actually turned on, and students mark
+  where their own answer diverged from it. The point is the gap, not the correction: a student who mishears
+  a word boundary learns something a further round of the same task will not teach.
+- **Return unsupported.** One short re-encounter of that same stretch with the support covered or withdrawn,
+  so what was noticed consolidates in the skill being taught rather than in reading the answer.
+
+Never fold Verify into Commit. Support that is present while the answer is being formed is the channel the
+answer comes through, and the skill the lesson names goes unpracticed. Each lesson type states the arc in its
+own terms: Listening/Speaking as a second audio-only listen plus a bounded transcript window; Passage Reading
+as locating the evidence line after the answer is committed; Academic Writing as comparing a draft against the
+Mentor form and then producing one fresh instance without it. This is distinct from D2's Closing Transfer
+Check, which tests the skill on new material; D12 is about the lesson's own anchor input. Assessments are
+exempt: a verification beat inside a graded task contaminates the measure.
+
 ## E. Style constraints for generated Markdown
 
 1. **No em-dashes** anywhere in generated content. Use hyphens, colons, or parentheses.
@@ -317,7 +337,11 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 25. No activity requires moving furniture, forming a class-wide formation (facing circles, corners,
     stations), or posting anything around the room; every discussion protocol runs from where students
     sit? (D11)
+26. Does every support that carries the answer (the input's exact wording, a model, an exemplar) arrive
+    only after students have committed a response, bounded to the stretch the task turned on, with one
+    unsupported re-encounter after it, and no such support present on the page while the answer is being
+    formed? (D12)
 
 ## Changelog
 
-**Current version: v1.15.** See `Changelog.md` in this folder.
+**Current version: v1.17.** See `Changelog.md` in this folder.

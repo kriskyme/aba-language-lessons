@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.16)
+# Academic Writing Lesson Generation Prompt (v6.17)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.16.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.17.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -126,7 +126,7 @@ Level or vice versa.
 - Output: one word, sounded out and spelled from known letter-sound patterns, into a single provided frame ("big
   ___"), prompted by a picture.
 - Grammar: none beyond the memorized frame. Vocabulary: concrete, high-frequency, phonics-decodable (CVC).
-- Required feature: the word comes from the student sounding it out against the real object in front of them
+- Required feature: the word comes from the student sounding out what they know of their own object
   (or an embedded picture, per Quality Standards §D8), not from copying a printed list. This "genuine choice inside a constrained task" is Respectful Tiers at this Level (0.5).
 
 **Level 2 (A2) - Guided Frame Composition**
@@ -675,9 +675,11 @@ _Phase 1: Frame practice round 2 / required-feature warm-up (25 min)_
   one sentence with a specific detail a partner tests for the implied attitude).
 
 _Phase 2: Prewriting for the Scenario, differentiated by task Level (30 min)_
-- Introduce the draft object (0.1a): students take out their own, and the Draft Word Bank is presented, the same
-  groups as the Set's Word Bank refilled for this object. All Levels generate ideas about the draft object by
-  whatever means fits: labeling their own object or a drawing of it (1-3), an idea list or organizer (4-6), a
+- Introduce the draft object (0.1a): the category and its printed choice list are presented together with the
+  Draft Word Bank, the same groups as the Set's Word Bank refilled for this object. The object is a subject, not
+  a prop (Quality Standards §D8): nothing here asks students to take theirs out, and every Level writes from
+  what they already know of it. All Levels generate ideas by whatever means fits: choosing and writing the Word
+  Bank words that fit it (1-3), an idea list or organizer (4-6), a
   developed outline naming the intended implication, register shift, or self-revision target (7-8). This
   prewriting is rehearsal: nothing in Lesson 3 depends on it (Quality Standards §D9), so no task here says
   "next time" or "for your draft.
