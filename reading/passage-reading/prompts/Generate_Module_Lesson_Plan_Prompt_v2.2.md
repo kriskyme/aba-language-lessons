@@ -1,4 +1,4 @@
-# Passage Reading Module Lesson-Plan Generation Prompt (v2.1)
+# Passage Reading Module Lesson-Plan Generation Prompt (v2.2)
 
 Companion to the Passage Reading Lesson Generation Prompt. Produces a plan for **one Set** (4 lessons, 8
 instructional days): topics, genres, reading-strategy and oral-protocol rotation, vocabulary themes, and
@@ -9,7 +9,7 @@ errors slip through.
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets, §C; Rotation Log mechanics and the
 cross-Set / cross-Module adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v2.1.** History: `Changelog.md`.
+**Current version: v2.2.** History: `Changelog.md`.
 
 Why this exists: several of the Lesson prompt's constraints are Set-wide (genre rotation across the bank,
 strategy/hook/protocol variety, no vocabulary overlap within a Set, task-Level content traced to real CSV rows).
@@ -67,10 +67,11 @@ protocol; vocabulary theme and topic get the recency flag. Append the approved S
      the Set, and Lesson 1 follows the adjacency rule.
    - **Reading strategy,** from the Reading Execution Rules; no consecutive repeat, at least 3 distinct strategies
      across the Set, adjacency rule for Lesson 1.
-   - **Phase 1 hook:** Visual Inquiry / Four-Corner Debate / Mystery Quote / K-W-L Walk, each used once across the
+   - **Phase 1 hook:** Visual Inquiry / Take a Side / Mystery Quote / K-W-L Chart, each used once across the
      4 lessons, adjacency rule for Lesson 1.
-   - **Phase 3 protocol:** Town Hall Role-Play / Fishbowl / Concentric Circles / Jigsaw Expert Panels / small-group
-     carousel, all valid at 8-12 students once scaffolded (Lesson prompt 0.10); rotate; adjacency rule for Lesson 1.
+   - **Phase 3 protocol:** Town Hall Role-Play / Panel Round / Rotating Partners / Jigsaw Expert Panels /
+     small-group discussion, all valid at 8-12 students once scaffolded (Lesson prompt 0.10) and all run from
+     students' seats (Quality Standards §D11); rotate; adjacency rule for Lesson 1.
    - **Target vocabulary theme,** one line naming the semantic field; no overlap within the Set or with an earlier
      Set in this Module/Band; flagged if it echoes the previous Module.
    - **Task-Level basis:** for every task Level in the band, the exact Reading CSV objective (Level N) that Level's
@@ -84,7 +85,7 @@ protocol; vocabulary theme and topic get the recency flag. Append the approved S
 4. After the table, report a short self-check: every genre and strategy used without repeats; no topic or theme
    repeats within the Set or against earlier Sets; every task Level traced to a quoted Reading row, exactly the
    band's Level count; the Module's verb consistent across all lessons; Intermediate-and-up topics real and
-   verifiable with no fabricated attributed quotes; Fishbowl lessons carrying an explicit outer-circle task and
+   verifiable with no fabricated attributed quotes; Panel Round lessons carrying an explicit listener task and
    every lesson 2-3 rotated prompts; no Level 1-2 task shape in the same slot in consecutive lessons; Lesson 1
    following the adjacency rule in every rotated column, with theme and topic echoes flagged; Lesson #
    continuing the global numbering.

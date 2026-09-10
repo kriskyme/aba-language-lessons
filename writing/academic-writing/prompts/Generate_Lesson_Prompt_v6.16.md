@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.15)
+# Academic Writing Lesson Generation Prompt (v6.16)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -17,7 +17,7 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.15.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.16.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
 Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
@@ -767,7 +767,8 @@ _Phase 3: Transfer share (15 min)_
 _Phase 1: Final copy (20 min)_ as above.
 
 _Phase 2: Publish/share (30 min)_
-- A short gallery walk, read-aloud, or class posting; the piece is genuinely finished.
+- A read-aloud to two partners in turn, or copies passed around the class; the piece is genuinely finished.
+  Nothing that moves the class out of its seats or onto the walls (Quality Standards §D11).
 
 _Phase 3: Closing Transfer Check (25 min)_ (0.8).
 

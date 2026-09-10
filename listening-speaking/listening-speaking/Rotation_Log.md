@@ -75,6 +75,24 @@ been field-tested with a real class yet.
 entry" template. This is going-forward only: Set 1 in both Bands above predates it and is not retrofitted with
 a version.
 
+**Protocol and hook names made room-neutral (2026-09-09), applies to every Band.** Quality Standards §D11 now
+forbids any activity that requires rearranging the room, forming a class-wide formation, or posting anything on
+the walls, so five rotation-column names were replaced by their room-neutral equivalents. When checking
+adjacency against a row logged before this date, read the old name as the new one:
+
+| Logged before 2026-09-09 | Now |
+|---|---|
+| Concentric Circles / Speed-Dating | Rotating Partners |
+| Fishbowl | Panel Round |
+| Four-Corner Debate | Take a Side |
+| K-W-L Walk | K-W-L Chart |
+| small-group carousel | small-group discussion |
+
+Each Band's already-generated rows keep the name the lesson was actually built under, so the rows stay an
+accurate record; planned-only rows were renamed in place. The one lesson rewritten to match so far is Advanced
+Set 1 Lesson 4 (see `Rotation_Log_Advanced.md`); the rest are listed in `Index.md` Pending work. Town Hall,
+Jigsaw, Visual Inquiry, and Mystery Quote were already room-neutral and are unchanged.
+
 **Intermediate Set 1 assessment regenerated (2026-09-06), replacing the corrupted stub.** Part A (Listening)
 uses a real, verified source, "Visitors Laugh Away Troubles at the HaHaHouse Museum" (VOA Learning English,
 Andrea Golubic's laughter museum in Zagreb, Croatia), distinct from all 4 taught sources, with tiered items

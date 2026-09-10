@@ -4,6 +4,22 @@ One row per lesson, one subsection per Set, in the order Sets were planned for t
 for cross-Band notes and mechanics that aren't repeated here. Created 2026-09-07, the first Set ever planned for
 this Band.
 
+
+**Lesson 1 Task D rebuilt (2026-09-10), `1.1.1.0` -> `1.1.1.1`:** per user review of Advanced Lesson 3, which
+surfaced the same defect here. The Level 7 compare layout printed one summary sentence per source, and its two
+labels ("A mixed, on-the-ground account" / "A promotional mission statement") characterized each source's tone
+and stated the contrast question 1 asks for, which Quality Standards §C9's first half forbids; the `.md` also
+printed the full answer inline rather than on an `Answer note:` line (§E2). Rebuilt as three subject-paired rows
+- what was promised and what is there, what the houses are like, what the neighborhood says it needs - holding
+verbatim PBS transcript excerpts (Brangham's narration, Rev. Willie Calhoun, Burnell Cotlon, Kim Ford) against
+the Make It Right Foundation's own stated promises, 5 and 6 excerpts, both sources re-fetched and every excerpt
+verified verbatim. Only the foundation's own claims are used, never the source article's independent commentary
+on how the houses later fared, which is a third voice and not what this task compares. The labels are now plain
+source names and the answer sits on an `Answer note:` line. The packet also gained the `.match-src` rule it had
+never carried, and `LowerNinthWard_Transcript.md` was saved in the same pass (Lesson prompt §0.3). The lesson's
+remaining Task A-C stem parentheticals are still logged in `Index.md` Pending work. Not yet given to a real class.
+
+
 ## Module 1: Describing
 
 ### Set 1 (planned 2026-09-07) - Lesson 1 of 4 generated
@@ -28,7 +44,7 @@ comparison per the plan's suggested angle. Level 8's task is built on a genuine 
 the primary source (Mayor Mitch Landrieu's insurance-and-wealth explanation), not an invented one. First lesson
 ever generated for this Band - no adjacency check applies (no immediately preceding Proficient lesson to check
 against). Generated against `Generate_Lesson_Prompt_v1.1.md` and `Generate_Student_Packet_Prompt_v1.3.md`, current
-2-day Unit A/B architecture from the start. Version `1.1.1.0`, per `Program_Conventions.md` §G. See
+2-day Unit A/B architecture from the start. Version `1.1.1.1` (bumped 2026-09-10, see below), per `Program_Conventions.md` §G. See
 `lessons/proficient/Module_1/Set_1/Lesson_1_LowerNinthWard/Lesson1_LowerNinthWard.md` and
 `Lesson_1_LowerNinthWard/LowerNinthWard_Proficient_L1_Packet.html`.
 

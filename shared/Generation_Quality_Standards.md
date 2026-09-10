@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.13)
+# Generation Quality Standards (v1.15)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -114,12 +114,15 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    printed material is also enough to compare from: at least three short verbatim excerpts per source
    (ellipses at cuts, each excerpt within the lesson's fair-use ceiling), covering the same two or more
    subjects in both sources so the student compares like with like. A one-sentence summary of what a source
-   covers, or a list of two-word fragments, is not enough; a student cannot rewind the clip or open the second
-   source mid-task, so the page carries the comparison's evidence. Layout is the packet's choice: one block per
-   source, or one row per shared subject holding both sources' excerpts when the sources line up subject by
-   subject. A
-   parenthetical in a stem is limited to a format instruction ("2-3 sentences," "circle one" when options are printed, C10), a choice menu
-   in which no option is the answer, or a gloss of a word the item does not test. A frame model at a
+   covers, or a list of two-word fragments, is not enough; a student cannot rewind the clip or open the
+   second source mid-task, so the page carries the comparison's evidence. Those excerpts are written into
+   the lesson `.md` itself, paired by subject, not left for the packet to supply: a packet is a regeneration
+   of its `.md` (Style Guide §G), so an `.md` that only names what each source covers guarantees a packet
+   that cannot meet this floor, however the packet prompt is written. Layout is the packet's choice: one
+   block per source, or one row per shared subject holding both sources' excerpts when the sources line up
+   subject by subject. A parenthetical in a stem is limited to a format instruction ("2-3 sentences,"
+   "circle one" when options are printed, C10), a choice menu in which no option is the answer, or a gloss
+   of a word the item does not test. A frame model at a
    fixed-form Level ("It is ___." shown once as "It is soft.") models the form, not the answer, and is not
    covered by this rule. The teacher's exemplar answer belongs on an `Answer note:` line (E2), never in the
    stem.
@@ -221,6 +224,25 @@ fixed form is never a design choice: when a page needs filling, add a shape, not
 A Level that repeats one shape has been given filler, not practice, however many items it prints. Each lesson
 type's own prompt states the bank in its own terms and assigns a shape to each slot of its cycle.
 
+**D11. Participation is room-neutral.** An activity may move students to a partner or a small group. It may
+not require moving furniture, forming a class-wide formation (facing circles, corners, stations), or posting,
+placing, or hanging anything around the room. The teacher walks in with the lesson's own two files and the
+class runs from where it sits. Every protocol below has a room-neutral form that keeps the pedagogy:
+
+| Instead of | Run it as |
+|---|---|
+| Concentric Circles / Speed-Dating | **Rotating Partners** - students find a new partner for each of the 2-3 prompts, from wherever they sit; no formation and no signal to rotate as a class. |
+| Fishbowl (inner and outer circle) | **Panel Round** - 4-6 students speak in turn from their seats while every listener carries the explicit task D7 already requires. |
+| Four-Corner Debate | **Take a Side** - the choice is printed in the packet and marked there, then discussed with someone who marked it differently. |
+| K-W-L Walk (sheets posted around the room) | **K-W-L Chart** - the K and W columns printed in the packet, filled in individually, compared with a neighbor, and built live on the board from what students report. |
+| Stand Up/Move, gallery walk, discussion carousel | The prompts or the papers move on a signal; the students stay seated. |
+
+Town Hall, Jigsaw, Rotating Partners, Panel Round, and plain small-group discussion are already room-neutral.
+D7 still governs all of them: 2-3 rotated prompts, per-Level stems inside each Level's ceiling, and an active
+task for every student not currently speaking. Rotating Partners satisfies the rotation requirement directly -
+the prompt changes when the partner does - so nothing is lost by dropping the formation. This rule is about
+the room, D8 about the materials; an activity has to clear both.
+
 ## E. Style constraints for generated Markdown
 
 1. **No em-dashes** anywhere in generated content. Use hyphens, colons, or parentheses.
@@ -288,10 +310,14 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     production plus other shapes? (D10)
 23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find,
     and every exemplar answer sits on an `Answer note:` line under its item? In a two-source item, at least
-    three verbatim excerpts per source on the same two or more subjects, never a one-line summary? (C9, E2)
+    three verbatim excerpts per source on the same two or more subjects, written into the `.md` itself and
+    never a one-line summary? (C9, E2)
 24. Every "circle," "underline," "match," or "point to" instruction has printed options or targets on the
     page, and every choice posed only in a stem's wording is answered in writing or given a printed menu? (C10)
+25. No activity requires moving furniture, forming a class-wide formation (facing circles, corners,
+    stations), or posting anything around the room; every discussion protocol runs from where students
+    sit? (D11)
 
 ## Changelog
 
-**Current version: v1.13.** See `Changelog.md` in this folder.
+**Current version: v1.15.** See `Changelog.md` in this folder.

@@ -20,8 +20,8 @@ currently supports it.
 
 | File                                                              | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Sync status                        |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| `Generate_Lesson_Prompt_v3.4.md` | Generates one 2-day lesson: anchor text, tiered tasks, comprehension work. The current version. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; states only what is true of a passage-reading lesson (Section 0.2 ceilings, idioms, refresher text, genre bank, paragraph lettering and footnotes, Phase 3 protocols, the Reading Execution Rules and tiered framework) and points to the shared files for everything modality-neutral. Section 0.3's self-check is the shared Quality Standards §F list plus 11 Reading-only items. Section numbering 0.1-0.10 is unchanged from v2.10 so companion prompts' cross-references still hold. | Current (v3.3, 2026-09-09: expected answers on `Answer note:` lines, never in a stem or `[STOP & CHECK]` bracket - see `Changelog.md`) |
-| `Generate_Module_Lesson_Plan_Prompt_v2.1.md` | Plans **one Set** (4 lessons: topics, genres, strategy/hook/protocol rotation, vocabulary themes, task-Level-to-objective mapping) before any lesson content is generated. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; Rotation Log mechanics and the cross-Set / cross-Module adjacency rules now point to Conventions §F, and the prompt keeps only its own column list, log-entry template, the band-conditioned real-referent topic rule with its fabricated-quote guardrail, and the plan table's column definitions. Reading-modality objectives only. | Current (v2.1) |
+| `Generate_Lesson_Prompt_v3.5.md` | Generates one 2-day lesson: anchor text, tiered tasks, comprehension work. The current version. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; states only what is true of a passage-reading lesson (Section 0.2 ceilings, idioms, refresher text, genre bank, paragraph lettering and footnotes, Phase 3 protocols, the Reading Execution Rules and tiered framework) and points to the shared files for everything modality-neutral. Section 0.3's self-check is the shared Quality Standards §F list plus 11 Reading-only items. Section numbering 0.1-0.10 is unchanged from v2.10 so companion prompts' cross-references still hold. | Current (v3.3, 2026-09-09: expected answers on `Answer note:` lines, never in a stem or `[STOP & CHECK]` bracket - see `Changelog.md`) |
+| `Generate_Module_Lesson_Plan_Prompt_v2.2.md` | Plans **one Set** (4 lessons: topics, genres, strategy/hook/protocol rotation, vocabulary themes, task-Level-to-objective mapping) before any lesson content is generated. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; Rotation Log mechanics and the cross-Set / cross-Module adjacency rules now point to Conventions §F, and the prompt keeps only its own column list, log-entry template, the band-conditioned real-referent topic rule with its fabricated-quote guardrail, and the plan table's column definitions. Reading-modality objectives only. | Current (v2.1) |
 | `Rotation_Log.md`                                                  | Overview only as of the per-Band split: purpose, notes that apply across every Band (the miscount correction, the Sets-concept introduction), and links to each Band's own log. | N/A (data, not a prompt)           |
 | `Rotation_Log_Intermediate.md`                                     | Running record of every approved Intermediate-Band Set's genre/strategy/hook/protocol/vocabulary/topic choices, one row per lesson, nested by Set. Read before planning a new Set; appended to after a plan is approved. | N/A (data, not a prompt)           |
 | `Rotation_Log_Advanced.md`                                         | Same, for the Advanced Band. A new Band's file is created lazily the first time a lesson in that Band is generated. | N/A (data, not a prompt)           |
@@ -29,7 +29,7 @@ currently supports it.
 | `Generate_Homework_Prompt_v2.3.md` | Generates one homework assignment (vocabulary/idiom production plus skill practice) from a single completed 2-day lesson, general track only, one section per task Level keyed to its position. Run with the two shared files pasted alongside; Respectful Tiers and item quality point to Quality Standards; Section 3 is Quality Standards §F plus 7 Reading items. | Current (v2.3, 2026-09-09: any exemplar on an `Answer note:` line, never in the item - see `Changelog.md`) |
 | `Generate_TOEFL_Extension_Prompt_v1.1.md` | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson, working from the shared anchor text and Phase 1 vocabulary only. v1.1 adds Markdown heading syntax (it was the only prompt without any), a paste bundle, and pointers to Quality Standards §C for distractor quality; content unchanged. | Current (v1.1) |
 | `Generate_Assessment_Prompt_v5.2.md` | Builds a differentiated assessment (one section per task Level plus study guides) from a completed Set (or an explicitly scoped checkpoint or multi-Set span). Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Reading-specific (Source/Tests tagging, lesson-blocks with one new passage per lesson and the skip-a-lesson procedure, task types by Level position, the Foundation Support check's format, the study guide, the Scoring Guide) and points to Quality Standards §C for item quality, which is where Reading's assessments now pick up the distractor-plausibility and padded-word-bank rules they never had. Section 3 is Quality Standards §F plus 11 Reading items. | Current (v5.0); the stale "Current version: v4.1" body marker corrected |
-| `Generate_Student_Packet_Prompt_v2.5.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.5, 2026-09-09: both masthead sections carry the meta stack; v2.3, same day: Answer notes stripped, stems carried without answer-stating parentheticals, stops printed as questions - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 8 carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads as of 2026-09-09 |
+| `Generate_Student_Packet_Prompt_v2.6.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.5, 2026-09-09: both masthead sections carry the meta stack; v2.3, same day: Answer notes stripped, stems carried without answer-stating parentheticals, stops printed as questions - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 8 carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads as of 2026-09-09 |
 | `Generate_Assessment_Student_Packet_Prompt_v2.0.md` | Takes one completed Assessment `.md` and produces the student handout: self-contained task-Level sections with page breaks, every tag and the Scoring Guide stripped, a per-Level `Objective:` statement, full passages reprinted per section, no checklist substitute for rubric-scored items. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 Reading items. | Current (v2.0) |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
@@ -234,14 +234,14 @@ see `Changelog.md`.
 This is the process for producing one Set's worth of lessons, in order (see `shared/Program_Conventions.md` §C
 for what a Set is); today that's **4 lessons**.
 
-**Step 1 - Plan the Set.** Run `Generate_Module_Lesson_Plan_Prompt_v2.1.md` for the
+**Step 1 - Plan the Set.** Run `Generate_Module_Lesson_Plan_Prompt_v2.2.md` for the
 target Module, Band, and Set number. It reads the Rotation Log first (for cross-Set genre/strategy/vocabulary
 checks against the most recent Set already planned for this Module/Band, or the previous module's last Set if
 this is a new Module/Band's first Set), produces the 4-lesson plan table, and runs its self-check. Review the
 plan and approve it before moving on - do not generate lesson content against an unapproved plan. Once approved,
 append its Rotation Log entry to `Rotation_Log.md` per that prompt's Section 0.
 
-**Step 2 - Generate lessons two at a time.** Run `Generate_Lesson_Prompt_v3.4.md` (pasted with
+**Step 2 - Generate lessons two at a time.** Run `Generate_Lesson_Prompt_v3.5.md` (pasted with
 `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`) against the approved plan,
 fetching and citing any image a lesson needs in this same step (`shared/Program_Conventions.md` §I),
 generating two lessons per pass rather than one at a time or all four at once. Two at a time keeps each pass small
@@ -276,7 +276,7 @@ black-and-white student handout as one self-contained HTML file - four Task-Leve
 its own, with every source-lesson/Tests tag and the entire Scoring Guide stripped. Independent of Step 6 below
 (a lesson's own print formatting), since an assessment has no taught Unit A/B to translate.
 
-**Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v2.5.md` (pasted with
+**Step 6 - Print formatting for students.** Run `Generate_Student_Packet_Prompt_v2.6.md` (pasted with
 `shared/Student_Packet_Style_Guide.md`) against a completed 2-day lesson from Step 2 (both days, in full) to
 produce a single, print-ready, black-and-white student handout as one self-contained HTML file, pulling its 2-3
 discussion prompts directly from the source lesson. This step is
@@ -285,6 +285,22 @@ preview first; format feedback typically comes as scoped edits to that file rath
 teacher-facing formatted version exists yet - out of scope for this prompt.
 
 ## Pending work
+
+- **Room-neutral backlog (Quality Standards §D11, 2026-09-09):** these already-generated lessons run a hook or
+  protocol that rearranges the room or posts something on the walls. Rewrite each to its §D11 equivalent when
+  the lesson is next touched, updating its Band's rotation-log row in the same pass: Advanced
+  `Module_1/Set_1/Lesson_1_SagradaFamilia/` (a Fishbowl that arranges 5-6 chairs; also holds a picture-card
+  step under the §D8 backlog), `Lesson_2_ForgeAtDawn/` (K-W-L Walk), `Lesson_4_PortlandHeadLight/`
+  (Four-Corner Debate hook, and a Phase 3 protocol that takes "the same treatment as Fishbowl"); Intermediate
+  `Module_1/Set_1/Lesson_1_Kitchen/` (Fishbowl), `Lesson_2_YoyogiPark/` (K-W-L Walk),
+  `Lesson_4_WynwoodWalls/` (Four-Corner Debate that labels the room's corners, plus a Phase 3 that forms two
+  circles). Two more are name-only: `Lesson_2_ForgeAtDawn/` and Intermediate `Lesson_2_YoyogiPark/` call their
+  hook a K-W-L Walk but already build the chart on the board with nobody leaving their seat - rename to K-W-L
+  Chart, no redesign. The Advanced Module 1 plan's
+  header note and its Lesson 5-8 rows still name Fishbowl and Concentric Circles; rename them when that Set is
+  next planned. The old-to-new mapping lives in Listening/Speaking's `Rotation_Log.md`; the rule and its
+  replacement table are in `shared/Generation_Quality_Standards.md` §D11. Do not generate new content with the
+  old pattern.
 
 - **Resolved 2026-09-09 (Conventions §I):** all five Reading images that had been supplied by hand were replaced with
   cited Wikimedia Commons files, each `.md` carrying an `Image:` citation line and each Set's
@@ -296,6 +312,13 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   Set-level registers, `Module_1/Set_1/Set1_Intermediate_Image_Credits.md` (4 images) and
   `lessons/advanced/Module_1/Set_1/Set1_Advanced_Image_Credits.md` (1); the packets keep their descriptive captions
   only - see `shared/Changelog.md`.
+- **Stale masthead CSS in one packet (Style Guide §B, 2026-09-09):**
+  `lessons/advanced/Module_1/Set_1/Lesson_1_SagradaFamilia/SagradaFamilia_Advanced_L1_Packet.html` still defines
+  `.masthead .kicker` and `.masthead .sub`, classes §B has no equivalent for and §I item 5 bans from the markup
+  (nothing in the file uses them). Its `.masthead*` rules are also split across two places in the `<style>`
+  (around lines 49 and 180) and collapsed to one line each, unlike §B's one-declaration-per-line §C form. Delete
+  the two dead rules and regroup the block when this packet is next regenerated.
+
 - **Objective as a student can-do (Style Guide v2.10, 2026-09-08):** every existing packet's objective opens with
   a bare verb ("Objective: describe...", "Objective: listen for..."), the form the Style Guide retired in favor
   of "I can" plus the skill in the student's voice. Rewrite each as "I can ..." when its packet is next

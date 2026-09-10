@@ -1,4 +1,4 @@
-# Passage Reading Student Print Formatting Prompt (v2.5)
+# Passage Reading Student Print Formatting Prompt (v2.6)
 
 Companion to the Passage Reading Lesson Generation Prompt. Takes one completed 2-day lesson and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document covering both days, with
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), delta classes (§H), and the shared packet self-check (§I). This prompt states
 only what is specific to a Passage Reading packet.
 
-**Current version: v2.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v2.6.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** an already-completed 2-day lesson, supplied in full (both days): the anchor text with its paragraph
 lettering and footnotes, the Phase 1 target vocabulary and idiom list with each idiom's transparent/opaque
@@ -82,10 +82,12 @@ source mechanism specifically requires a public share step.
 
 ### 2.6 Discussion section
 
-Translate the oral-output protocol into small groups that all discuss simultaneously (Style Guide §E). Pull the
+Translate the oral-output protocol into its room-neutral student instruction (Style Guide §E, Quality Standards
+§D11): Rotating Partners prints as find-a-new-partner-as-you-go, every other protocol as small groups that all
+discuss simultaneously. Pull the
 source lesson's 2-3 distinct prompts directly; if an older lesson supplies only one, write 1-2 more that explore a
 different angle of the same core question and note in your working notes that the lesson should be regenerated
-against the current Lesson prompt. Fold any Fishbowl outer-circle task into one of the group prompts rather than
+against the current Lesson prompt. Fold any Panel Round listener task into one of the group prompts rather than
 dropping it. List prompts left-aligned, regular weight, unquoted. Provide star-coded stems below them, keyed to the
 source lesson's per-Level stems, stems only (Style Guide §F).
 

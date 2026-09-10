@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.24)
+# Student Packet Style Guide (v2.26)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -101,13 +101,14 @@ h3 {
 .masthead {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 16px;
   text-align: left;
   margin-bottom: 20px;
 }
 .masthead h1 {
   font-size: 26px;
+  line-height: 1.2;
   margin-bottom: 0;
 }
 .masthead + .masthead,
@@ -122,6 +123,7 @@ h3 {
   align-items: flex-end;
   gap: 2px;
   margin-top: 0;
+  padding-top: 4px;
 }
 .masthead-tag {
   font-family: system-ui, -apple-system, sans-serif;
@@ -668,7 +670,7 @@ these.
 | Task Level / Level (numeric); tier, regime, or Level names of any kind | A star rating (★ to ★★★★, more stars = more challenging), with no numeric Level and no tier name ("Foundation," "Extension," "beginner," "warm-up," etc.). See §F. |
 | Skill Spotlight | A can-do statement in the student's own voice near the start of the packet, mirroring the `learningobjectives.csv` row's "Can ..." form: "I can" plus the skill, with "my" or "me" where the sentence refers to the student ("Objective: I can describe something of my own by comparing it to something else and giving a real reason for the comparison."). Never "You will," "To describe," a bare verb phrase ("describe..."), or "today we are practicing X." One sentence naming the skill, not the lesson's object or text ("something of my own," never "my phone case"), identical for every student: never "Some of you will also," "if you are at," or any tier narration (Quality Standards §D1). |
 | Closing Transfer Check | A plain closing-activity instruction stating what to pick and what to do with it, never named as a check and never referencing assessment or evidence language, and with no stage directions about what the teacher will do next. |
-| Fishbowl / Town Hall / Concentric Circles / Jigsaw / discussion carousel | A plain small-group discussion instruction: get into a group, here are your questions, take turns talking. Do not name the protocol. Render as simultaneous small groups (a static page cannot run a live rotation) and fold any outer-circle or tracking task into a group's own task rather than dropping it. |
+| Fishbowl / Town Hall / Concentric Circles / Jigsaw / discussion carousel / Four Corners / gallery walk / Stand Up-Move | A plain instruction for the protocol's room-neutral form (Quality Standards §D11), never the protocol's name and never a room setup. Rotating Partners prints as find-a-new-partner-as-you-go ("When you finish a question, find a new partner and go on to the next one"); a Panel Round prints the listener's own task; Town Hall, Jigsaw, and small-group discussion print as get into a group, here are your questions, take turns talking. Fold any tracking or listening task into a student's own task rather than dropping it. |
 | Activation hooks by name (K-W-L Walk, Mystery Quote, Stand Up/Move, Four Corners, etc.) | The plain instruction the activity produces (a warm-up question, a prompt to discuss), never the activity's name - in headings included. |
 | Internal item labels (STOP & CHECK, Fact Finder, Cause & Effect set, controlled-practice type names) | Ordinary numbered or lettered questions with no internal label carried into student view. |
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
@@ -1169,8 +1171,11 @@ Run this list first, then the modality's own list.
     Standards §C9)
 20. In a Listening/Speaking packet, the "Don't read ahead" instruction printed inside a `.stop-flag` callout
     with its `.stop-badge`, ahead of the response space, and the badge used nowhere else on the page? (§H.1)
+21. No instruction to form a circle, move to a corner or station, walk the room, or rearrange seating; every
+    discussion instruction runs from where the student sits, and a rotation prints as finding a new
+    partner? (§E, Quality Standards §D11)
 
 ## Changelog
 
-**Current version: v2.24.** For the full dated version history and the reasoning behind each
+**Current version: v2.25.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

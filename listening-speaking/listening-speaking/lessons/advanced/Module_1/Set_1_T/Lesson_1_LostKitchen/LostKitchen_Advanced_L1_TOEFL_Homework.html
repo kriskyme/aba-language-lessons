@@ -59,14 +59,21 @@
       .masthead {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 16px;
         text-align: left;
         margin-bottom: 20px;
       }
       .masthead h1 {
         font-size: 26px;
+        line-height: 1.2;
         margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
       }
       .masthead-meta {
         display: flex;
@@ -74,6 +81,7 @@
         align-items: flex-end;
         gap: 2px;
         margin-top: 0;
+        padding-top: 4px;
       }
       .masthead-tag {
         font-family: system-ui, -apple-system, sans-serif;

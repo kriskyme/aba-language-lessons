@@ -12,16 +12,16 @@ for cross-Band notes and mechanics that aren't repeated here.
 | 1        | Chef profile (home/studio tour)         | Listen for Stated vs. Implied Opinion     | Hedging an Opinion                | Mystery Quote      | Town Hall          | Culinary technique & atmosphere | A real chef's restaurant kitchen and cooking philosophy               |
 | 2        | Architecture/preservation feature       | Recognize Examples                        | Summarizing What Someone Said     | Visual Inquiry     | Fishbowl           | Architecture & restoration      | A real historic building's restoration project                        |
 | 3        | Nature/conservation documentary segment | Listen for Cause-and-Effect Language      | Turn-Taking/Interrupting Politely | Four-Corner Debate | Jigsaw             | Conservation & habitat          | A real conservation program protecting an endangered species' habitat |
-| 4        | Fine-art craft-studio tour              | Listen for Signposting/Discourse Markers  | Making Comparisons                | K-W-L Walk         | Concentric Circles | Technique & artistic vision     | A real glassblower's or sculptor's studio and process                 |
+| 4        | Fine-art craft-studio tour              | Listen for Signposting/Discourse Markers  | Making Comparisons                | K-W-L Chart        | Rotating Partners  | Technique & artistic vision     | A real glassblower's or sculptor's studio and process                 |
 
 ### Set 2 (planned 2026-09-01) - Planned only, not yet generated
 
 | Lesson # | Content Format                   | Listening Strategy                         | Speaking Skill           | Phase 1 Hook       | Phase 3 Protocol   | Vocabulary Theme                 | Topic Direction                                                |
 | -------- | --------------------------------- | ------------------------------------------- | ------------------------ | ------------------ | ------------------ | --------------------------------- | ---------------------------------------------------------------- |
 | 5        | Urban-planning walking tour       | Predict from Context Before Confirming      | Giving Examples phrases  | Mystery Quote      | Town Hall          | Urban design & public space      | A real city's public-space or waterfront redevelopment project  |
-| 6        | Museum/exhibit-guide description  | Listen for Sequence Markers                 | Sequencing Language      | Visual Inquiry     | Fishbowl           | Provenance & display language    | A real museum's flagship or famous exhibit                       |
-| 7        | Behind-the-scenes facility tour   | Listen for Contrastive/Concession Language  | Asking for Clarification | Four-Corner Debate | Jigsaw             | Scientific equipment & discovery | A real research facility or observatory, behind the scenes       |
-| 8        | Atelier/workshop profile          | Listen for Main Ideas/Gist                  | Agree/Disagree phrases   | K-W-L Walk         | Concentric Circles | Precision & couture design       | A real fashion designer's or luxury craftsman's atelier          |
+| 6        | Museum/exhibit-guide description  | Listen for Sequence Markers                 | Sequencing Language      | Visual Inquiry     | Panel Round        | Provenance & display language    | A real museum's flagship or famous exhibit                       |
+| 7        | Behind-the-scenes facility tour   | Listen for Contrastive/Concession Language  | Asking for Clarification | Take a Side        | Jigsaw             | Scientific equipment & discovery | A real research facility or observatory, behind the scenes       |
+| 8        | Atelier/workshop profile          | Listen for Main Ideas/Gist                  | Agree/Disagree phrases   | K-W-L Chart        | Rotating Partners  | Precision & couture design       | A real fashion designer's or luxury craftsman's atelier          |
 
 **Open items, flagged 2026-09-03, resolved in part 2026-09-04:** Lessons 1-2 were generated under the
 pre-correction 8-day cycle and had not received the retroactive 2-day restructure that Intermediate Set 1 got
@@ -225,6 +225,38 @@ underlying enough-to-compare floor and the two allowed layouts (see `shared/Chan
 `Generate_Student_Packet_Prompt_v2.3.md` -> `_v2.4.md`. Lessons 2-4's Task D rows are logged in `Index.md`
 Pending work. Same content in the base `.md`/packet and the `Set_1_T` fork's; the fork's teacher-only homework
 file is unchanged. Not yet given to a real class.
+
+**Lessons 2-4's Task D rebuilt (2026-09-10), `1.1.2.1` -> `1.1.2.2`, `1.1.3.1` -> `1.1.3.2`, `1.1.4.2` ->
+`1.1.4.3`:** per user review of Lesson 3 ("looking at lesson 3 keydeer it doesn't have a lot of meat there"),
+the three Task D items the 2026-09-09 §C9 pass had logged rather than fixed are rebuilt on Lesson 1's pattern.
+Lesson 2 (LivingTextbooks): three subject-paired rows - why these buildings are worth keeping, what the
+architecture is like, what happens when a building is threatened - holding PBS transcript and Modern Phoenix
+archive excerpts, 6 per source. Lesson 3 (KeyDeer): four rows - what the deer is and where it is found, the
+habitat, how the refuge began and what happened after, what puts the deer in danger now - holding PBS
+transcript and U.S. Fish & Wildlife Service refuge-page excerpts, 7 and 6. The last row is where the two
+sources part: the segment names climate change and sea-level rise, the refuge's own page names motor vehicle
+collisions and illegal feeding and never mentions rising seas, so the divergence the question asks about is now
+discoverable from the page instead of asserted for the student. Lesson 4 (GlassBender): four rows - doing the
+work by hand, why he makes it, neon next to LEDs, how much work there is - holding video-caption and Boise Art
+Scene interview excerpts, 7 per source, both sources being Kirkman himself; on camera he is "nearly the last
+neon glass bender in the state," in print he has "never been busier." Every source re-fetched from its own page
+and every excerpt verified verbatim against it. All three packets also gained the `.match-src` rule they had
+never carried. `LivingTextbooks_Transcript.md` and `GlassBender_Transcript.md` saved in the same pass (Lesson
+prompt §0.3). Quality Standards §C9 now also requires the excerpts to be written into the `.md`, which is what
+let this drift: `Generate_Lesson_Prompt_v2.4.md` -> `_v2.5.md`. Not yet given to a real class.
+
+**Lesson 4's hook and protocol made room-neutral (2026-09-09), `1.1.4.1` -> `1.1.4.2`:** per user review of
+the Discuss It instruction ("isn't it the same as just find a new partner... I don't want to have to rearrange
+the room"), Day 2 Phase 4's Concentric Circles becomes **Rotating Partners** - the same three comparison prompts
+and the same Phase 1 frames, with students finding a new partner for each from where they sit, so the packet
+reads "When you finish a question, find a new partner and go on to the next one." Day 1 Phase 1's K-W-L Walk,
+which posted three sheets around the room for students to circulate between, becomes the **K-W-L Chart** the
+packet already printed, compared with a neighbor and built live on the board - which also clears Quality
+Standards §D8. Both rows above updated. The underlying rule is new Quality Standards §D11 (see
+`shared/Changelog.md`); `Generate_Lesson_Prompt_v2.3.md` -> `_v2.4.md`. This lesson's row here had also been
+left at `1.1.4.0` when the 2026-09-09 stem sweep bumped it to `1.1.4.1`; corrected in the same pass. Set 2's
+planned rows above take the §D11 names; Lessons 1-3, already generated under the old names, are logged in
+`Index.md` Pending work. Not yet given to a real class.
 
 ---
 

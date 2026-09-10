@@ -1,4 +1,4 @@
-# Passage Reading Lesson Generation Prompt (v3.4)
+# Passage Reading Lesson Generation Prompt (v3.5)
 
 **Lesson type:** a **Passage Reading Lesson** is a fixed 2-day cycle (two 75-minute periods) built around one
 shared anchor text (a single passage or excerpt), differentiated into band-scoped task Levels. It is distinct from
@@ -12,7 +12,7 @@ framing (Conventions §E) applies here with reading as the content vehicle: the 
 real-world ideas and build critical thinking, with language acquisition happening through meaningful
 communication.
 
-**Current version: v3.4.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.5.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** every request names at minimum a Module and a Band (e.g. "Advanced band, Module 6: Arguing"); a
 topic is optional. A specific Level is never part of the request - the band determines every task Level
@@ -183,8 +183,8 @@ anchor text and the Reading-specific rules in this prompt:
 9. **Paragraph lettering and footnotes (0.9):** every anchor paragraph lettered `[A]`, `[B]`, ... and referenced by
    letter everywhere; bracketed paragraph letters kept distinct from spelled-out "Partner A/B" labels; footnotes
    only where a real reference is unexplained, 1-3 per text, inside the Level's vocabulary ceiling, never tested?
-10. **Phase 3 protocol (0.10):** Fishbowl gives every outer-circle student an explicit task and 2-3 rotated
-    prompts; Concentric Circles gets 2-3 prompts; Town Hall, Jigsaw, and carousel split 2-3 prompts across groups?
+10. **Phase 3 protocol (0.10):** a Panel Round gives every listener an explicit task and 2-3 rotated
+    prompts; Rotating Partners gets 2-3 prompts; Town Hall, Jigsaw, and small-group discussion split 2-3 prompts across groups?
 11. **Reading strategy** named and fully integrated into the text's layout per the Reading Execution Rules?
 12. **Fixed-output Levels (0.11; Quality Standards §D10):** where Level 1 or 2 is a task Level, its form is
     produced at most once per day, every other Level 1-2 item takes a different 0.11 shape, no shape twice in
@@ -273,7 +273,7 @@ the feature that defines it.
 The rule itself (one genuine board-dependent moment per day; the three-property test; transcription does not
 count) is Quality Standards §D4. In this cycle the slots are:
 
-- **Day 1 Phase 1 activation:** a K-W-L Walk builds its K and W columns live on the board from student
+- **Day 1 Phase 1 activation:** a K-W-L Chart builds its K and W columns live on the board from student
   call-outs before reading (the L column after reading, on Day 1 or in Day 2 Phase 1); a Mystery Quote collects
   student guesses about the quote's source or meaning on the board and checks them off against the text.
 - **Day 2 Phase 2 investigation (preferred anchor slot):** build a shared graphic organizer on the board as
@@ -281,9 +281,10 @@ count) is Quality Standards §D4. In this cycle the slots are:
   contributed. Match the organizer to the Module: a comparison T-chart or Venn diagram for Describing, a
   cause-and-effect chain for Explaining, a criteria/verdict rubric for Evaluating, a two-column claims tracker for
   Arguing, a numbered process map for Instructing, and the equivalent for Narrating, Transacting, Socializing.
-- **Day 2 Phase 3 oral output:** Fishbowl and Concentric Circles keep a running board record of claims or
-  evidence as they are actually spoken (one visible circle is easy to transcribe live). Town Hall, Jigsaw, and
-  the carousel instead have each group report one claim or piece of evidence to the board when its window ends.
+- **Day 2 Phase 3 oral output:** a Panel Round keeps a running board record of claims or evidence as they are
+  actually spoken (one speaker at a time is easy to transcribe live). Rotating Partners, Town Hall, Jigsaw, and
+  small-group discussion instead have each pair or group report one claim or piece of evidence to the board when
+  its window ends.
   Either way this feeds the closing synthesis.
 
 One genuine instance per day satisfies the rule; vary which slot carries it across cycles.
@@ -338,24 +339,26 @@ assumes but does not give, the way a textbook footnotes a historical figure or a
 
 ### 0.10 Phase 3 discussion protocols: an active task for every seat
 
-All five protocols (Town Hall Role-Play, Fishbowl, Concentric Circles, Jigsaw Expert Panels, small-group
-discussion carousel) are valid at this program's actual class size (8-12 students), provided every seat has an
-explicit task and the prompts rotate (Quality Standards §D7). Rotate across cycles.
+All five protocols (Town Hall Role-Play, Panel Round, Rotating Partners, Jigsaw Expert Panels, small-group
+discussion) are valid at this program's actual class size (8-12 students), provided every seat has an explicit
+task and the prompts rotate (Quality Standards §D7). Rotate across cycles. All five run from where students
+sit: no facing circles, corners, or stations (Quality Standards §D11).
 
-- **Fishbowl, inner circle:** roughly half the class (4-6 of 8-12), using their task-Level stems, so the outer
-  circle stays a real group rather than one or two leftovers.
-- **Fishbowl, outer circle - never passive.** Every outer student has a concrete task tied to what is being
+- **Panel Round, the speakers:** roughly half the class (4-6 of 8-12) speaks in turn from their seats, using
+  their task-Level stems, so the listeners stay a real group rather than one or two leftovers.
+- **Panel Round, the listeners - never passive.** Every listener has a concrete task tied to what is being
   said, matched to the Module and stated in the lesson: a running list (3 words, phrases, comparisons, or
   methods that strike you as well put: Describing, Narrating, Instructing); a tally (which side each speaker
   takes, or how often a target word or claim type appears: Arguing, Evaluating); or a one-line reaction (one
-  claim you agree or disagree with and a one-sentence reason, ready for when you rotate in). The lowest task
+  claim you agree or disagree with and a one-sentence reason, ready for when it is your turn). The lowest task
   Level's version of this task doubles as its differentiated participation (0.8), not a second requirement.
 - **2-3 prompts, advanced at each changeover** (roughly every 8-10 minutes across the 25-30 minute window), never
-  one static question. A student rotating in brings their outer-circle notes as live material.
-- **Concentric Circles:** both circles talk at once with rotating partners, so no outer-circle task is needed;
-  give it the same 2-3 rotating prompts so each partner rotation works a fresh angle.
-- **Town Hall, Jigsaw, carousel:** every student is already active in a small group; split the 2-3 prompts across
-  groups or stations so simultaneous conversations are not identical.
+  one static question. The panel and the listeners swap at a changeover, and a new speaker brings their
+  listening notes as live material.
+- **Rotating Partners:** everyone talks at once in pairs, so no listener task is needed; give it the same 2-3
+  rotating prompts and have students find a new partner for each, so every partner works a fresh angle.
+- **Town Hall, Jigsaw, small-group discussion:** every student is already active in a group; split the 2-3
+  prompts across groups so simultaneous conversations are not identical.
 - Board record by protocol: see 0.7.
 
 ### 0.11 Fixed-output Levels (1-2): task shape bank and slot assignment
@@ -462,7 +465,8 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 **DAY 1: COMPREHENSION & TEXT DECODING (75 MIN)**
 
 *Phase 1: Pre-Reading & Activation (15 min)*
-- Spark curiosity with visual prompts, open opinion questions, or movement (Stand Up/Move, Four Corners).
+- Spark curiosity with visual prompts, open opinion questions, or a marked choice students then defend to a
+  neighbor (Take a Side). Nothing that moves the class out of its seats (Quality Standards §D11).
   Keep question language at or near the anchor Level's ceiling; no abstract philosophical framing pitched higher.
 - Skill Spotlight (0.8), immediately after or alongside the hook.
 - Pre-teach 4-6 high-yield target keywords from the anchor text, inside the band's lower-Level vocabulary
@@ -519,7 +523,7 @@ extension-up (4); Intermediate and Advanced have one of each (4).
 - **Rotation across cycles** (Quality Standards §D6 governs adjacency; these are the Reading banks):
   - Reading strategy: never the same strategy in two consecutive cycles (rotate across the Reading Execution
     Rules bank).
-  - Phase 1 activation hook: Visual Inquiry, Four-Corner Debate, Mystery Quote, K-W-L Walk.
+  - Phase 1 activation hook: Visual Inquiry, Take a Side, Mystery Quote, K-W-L Chart.
   - Phase 3 protocol: the five protocols in 0.10.
   - Genre: the band's bank in 0.6.
   - Board-dependent moment slot: vary which phase carries it (0.7).
