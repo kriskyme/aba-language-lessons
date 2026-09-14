@@ -1,4 +1,4 @@
-# Listening/Speaking Student Print Formatting Prompt (v2.8)
+# Listening/Speaking Student Print Formatting Prompt (v2.11)
 
 Companion to the Listening/Speaking Lesson Generation Prompt. Takes one completed lesson (both days) and produces a
 single, print-ready, black-and-white student handout: one self-contained HTML document with every teacher-facing
@@ -88,13 +88,40 @@ count (1-3); informational only.
 
 ### 2.6 Listening Notes organizer
 
-Print the source lesson's Day 1 Phase 2 note-taking structure as a simple fillable `.notes-table` with the lesson's
-own row labels (a two-column table for a comparison chart; the equivalent simple structure for a sequence chain,
-cause-and-effect chain, criteria grid, or claims tracker), positioned before the star-rated listening tasks so
-students fill it in while the source plays. "While you watch, fill in..." or "While you listen, fill in..." is the
-whole instruction. The source plays twice (lesson Day 1 Phases 2 and 4), so the organizer's instruction covers
-both: the first play open, the second under the narrower purpose the lesson states for it, printed as a second
-short line ("The second time, listen for ...").
+Print the source lesson's Day 1 Phase 2 note-taking structure as a fillable `.notes-table`, positioned before the
+star-rated listening tasks so students fill it in while the source plays. The columns come from the lesson's own
+organizer (a two-column table for a comparison chart; the equivalent simple structure for a sequence chain,
+cause-and-effect chain, criteria grid, or claims tracker).
+
+**The rows come from the lesson's segment map, not from bare counters** (Style Guide §F). The lesson defines named
+segments for every source, so the organizer carries **one row per segment, in the source's own order**, each row
+naming its part and its timing ("Part 3", "5:27-10:18") on a `.notes-tall` table (Style Guide §F, §H.1) so the box
+is sized for three or four handwritten lines. Never "Step 1, Step 2, Step 3": a counter tells a student how many
+boxes there are, and a student who has lost the thread needs to know which one they are in. Number the parts from
+1 on the student page; "Segment" is the lesson's teacher-side label and stays off it (Style Guide §E). Where the
+lesson's own organizer has more links than there are parts, group the links into the parts rather than splitting a
+part across rows.
+
+**Where the timings are an estimate** - the lesson derived them by word position because the source publishes none
+(Lesson prompt 0.3 item 5) - they still print. The estimate is the student's place-finder, and the lesson carries
+the honesty about its method; the page does not.
+
+**The instruction differs by how the source is delivered, and by nothing else.**
+
+- **Played straight through** (a span inside Lesson prompt 0.2's runtime range): "While you watch, fill in..." or
+  "While you listen, fill in...", plus one short line saying the times show where each part begins. The times are
+  signposts; the audio does not stop at them and the page must not imply it does.
+- **Played in named segments** (Quality Standards §D15, Lesson prompt §0.2, a span past that range): "Fill in only
+  the box for the part you have just heard."
+
+In both cases the instruction states only the student's job. **It does not narrate the playback** (Style Guide §E):
+not that the audio stops after each part, not how long the pause lasts, not who presses play. The parts and their
+times are already printed in the table; the pausing is the teacher's to run.
+
+The source plays twice (lesson Day 1 Phases 2 and 4), so the organizer's instruction covers both: the first play
+open, the second under the narrower purpose the lesson states for it, printed as a second short line ("The second
+time, listen for ..."). Where that purpose is stated per Level rather than for the whole class, the line says the
+source will be heard again and leaves the purpose to the task blocks.
 
 ### 2.7 Star-rated listening tasks
 
@@ -211,7 +238,11 @@ Run `shared/Student_Packet_Style_Guide.md` §I first. Then:
 3. Citebox right before the point students begin watching or listening, not at the top; no "ask your teacher for
    the link"; watch/listen wording matched to the real media type throughout; no second source component named
    that the citebox never introduced (2.3)?
-4. Fillable Listening Notes organizer before the star-rated listening tasks (2.6)?
+4. Fillable Listening Notes organizer before the star-rated listening tasks (2.6)? Does it carry one row per
+   segment of the lesson's map, in the source's own order, each naming its part and timing, on a `.notes-tall`
+   table - never bare "Step 1, Step 2" counters - and does its instruction match how the source is delivered
+   (signpost wording for straight-through, "the part you have just heard" for segmented) while narrating no
+   playback (2.6; Style Guide §E, §F)?
 5. Fixed-frame items with a complete inline instruction; picture items with embedded images and no empty box;
    multi-source Level 7 task in a labeled compare layout within fair use, at least three verbatim excerpts per
    source on shared subjects in one of the two allowed layouts, each part holding source content and

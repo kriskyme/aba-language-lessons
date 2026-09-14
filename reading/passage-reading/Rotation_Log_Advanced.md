@@ -96,3 +96,5 @@ Partners** (find a new partner per prompt) and its Four-Corner Debate became **T
 printed in the packet and circled, with a show of hands for the board tally), and Lesson 2's hook was renamed
 K-W-L Walk -> **K-W-L Chart**, which is a rename only: it already built the chart on the board with nobody
 leaving their seat. The old-to-new mapping is in Listening/Speaking's `Rotation_Log.md`.
+
+**Hook reframed to orient before it asks (2026-09-14).** Quality Standards §D13's content sweep reached this lesson type's Module 2 lessons but not Module 1. Module 1 Set 1 Lesson 3 VinylComeback (`1.1.3.1` -> `1.1.3.2`) printed its line "with no other context" and asked the class to guess what it might be describing. The packet now names the column and its subject first, asks whether students do anything the slower way on purpose, and then asks what the writer means by *friction* and why anyone would pay extra for it - both answerable from the line. The `.md` hook, which had drifted to a different quote from the packet's, was aligned to the packet's line in the same pass, and the Phase 2 board-dependent moment now checks readings rather than guesses.

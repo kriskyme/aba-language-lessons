@@ -169,10 +169,10 @@ layered underneath the existing Level 4 and Foundation Support roles - see `Chan
 generated directly against v2.7, so its Jigsaw Phase 3 already carries the current Section 0.10 scaffolding
 (three discussion prompts split across the mixed groups). Lesson 3 (434 words, 6 paragraphs) was generated
 against the current `Generate_Lesson_Prompt_v2.9.md`, carrying the required `**Version:**` header field
-(new as of v2.8/§G; Lessons 1-2 predate this and stay unversioned by design), now at `1.1.3.1` after the
-2026-09-10 §D11 pass; its Town Hall Phase 3 rotates through three discussion prompts across small groups
+(new as of v2.8/§G; Lessons 1-2 predate this and stay unversioned by design), now at `1.1.3.2` after the
+2026-09-10 §D11 pass and the 2026-09-14 §D13 hook reframe; its Town Hall Phase 3 rotates through three discussion prompts across small groups
 formed where students sit, and needs no listener task under Section 0.10.
-Its two board-dependent moments sit in Day 1 Phase 1 (Mystery Quote guess-and-check) and Day 2 Phase 3 (Town
+Its two board-dependent moments sit in Day 1 Phase 1 (Mystery Quote read-and-check) and Day 2 Phase 3 (Town
 Hall report-back), rotating the required slot away from Lesson 2's Phase 1 + Phase 2 pairing. Lesson 4 (454
 words of dialogue, 6 turn-blocks) was generated against `Generate_Lesson_Prompt_v2.9.md`, carrying `**Version:**
 1.1.4.1` (bumped from `1.1.4.0` in the 2026-09-10 §D11 pass); it is formatted as a Reader's Theater interview script (Interviewer/Keeper speaker roles, stage
@@ -523,6 +523,11 @@ preview first; format feedback typically comes as scoped edits to that file rath
 teacher-facing formatted version exists yet - out of scope for this prompt.
 
 ## Pending work
+
+- **Every Phase 1 hook in this lesson type has now been audited against Quality Standards §D13 (2026-09-14).**
+  The rule's own sweep had reached Module 2's lessons only; Module 1's VinylComeback, LostCat and RunningShoes
+  were fixed in the pass that followed, and the rest were checked and left alone. Nothing is outstanding on
+  this rule here; see `Changelog.md` and each `Rotation_Log_<Band>.md`.
 
 - **No lesson has been audited against §C9's extended self-answering-premise rule (2026-09-14).** Quality
   Standards §C9 now states that a stem asserting a change, reversal, or negation has already handed over the

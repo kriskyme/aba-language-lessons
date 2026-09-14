@@ -496,37 +496,6 @@
       font-family: system-ui, -apple-system, sans-serif;
       font-size: 14px;
     }
-      .verify-window {
-        border: 1px solid var(--ink);
-        border-left: 4px solid var(--ink);
-        background: var(--paper);
-        padding: 12px 16px;
-        margin: 18px 0 12px;
-        page-break-inside: avoid;
-      }
-      .verify-window .verify-src {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-        color: var(--ink-soft);
-        margin: 0 0 8px;
-      }
-      .verify-window p {
-        margin: 0 0 8px 14px;
-        font-size: 14px;
-        line-height: 1.6;
-      }
-      .verify-window p:last-child {
-        margin-bottom: 0;
-      }
-      .verify-instr {
-        font-family: system-ui, -apple-system, sans-serif;
-        font-size: 13.5px;
-        font-style: italic;
-        margin: 0 0 14px;
-      }
 
 
     @media print {
@@ -543,16 +512,6 @@
       .spotlight-box,
       .task-block,
       .article p,
-      .verify-window,
-      .refresher,
-      .discuss-block,
-      .wrapup,
-      .citebox,
-      .notes-table,
-      .article {
-        page-break-inside: avoid;
-        break-inside: avoid;
-      }
     }
 
     .citebox {
@@ -587,41 +546,25 @@
     .notes-table td {
       height: 38px;
     }
-
-    .upside-down {
-      transform: rotate(180deg);
+    .notes-table.notes-tall td {
+      height: 104px;
     }
-
-    .stop-flag {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      border: 2px solid var(--ink);
-      padding: 10px 14px;
-      margin: 12px 0 14px;
-      page-break-inside: avoid;
-      break-inside: avoid;
+    .notes-table th .part-when {
+      display: block;
+      font-weight: 400;
+      font-size: 12.5px;
+      margin-top: 2px;
     }
-    .stop-badge {
-      flex: 0 0 auto;
-      width: 54px;
-      height: 54px;
-      background: var(--ink);
-      color: var(--paper);
-      clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, -apple-system, sans-serif;
+    .notes-table th .part-ask {
+      display: block;
       font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+      margin-top: 6px;
     }
-    .stop-flag .instr {
-      margin: 0;
+    .notes-table.notes-tall th {
+      width: 33%;
     }
+
+
 
     .task-instr {
       font-family: system-ui, -apple-system, sans-serif;
@@ -743,7 +686,7 @@
       <h1>Unit 1A: The Stripped Screw</h1>
       <div class="masthead-meta">
         <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
-        <span class="masthead-tag">Advanced 2.1.1.1</span>
+        <span class="masthead-tag">Advanced 2.1.1.26</span>
       </div>
     </div>
 
@@ -756,20 +699,25 @@
     </div>
 
     <p class="section-title">Before You Listen</p>
-    <p class="instr">Here is one real line from the story you are about to hear. Read it, then answer with a partner.</p>
+    <p class="instr">Today you are listening to a true story an astronaut tells on stage, in front of an audience. It is about the day he went outside the space shuttle to repair a broken instrument on the Hubble Space Telescope, and one screw would not come out.</p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <span class="qbody">Have you ever had a repair or a job stall because one small part would not move? What was it, and what did you try?
+          <span class="ans-line"></span>
+          <span class="ans-line"></span>
+        </span>
+      </li>
+    </ol>
+    <p class="instr">This is one real line from the telling:</p>
     <div class="refresher refresher-noline">
       <p>"And my tool is moving, but the screw is not."</p>
     </div>
     <ol class="qlist">
       <li>
-        <span class="num">1.</span>
-        <span class="qbody">Who do you think is speaking?
-          <span class="ans-line"></span>
-        </span>
-      </li>
-      <li>
         <span class="num">2.</span>
-        <span class="qbody">What job do you think they are in the middle of?
+        <span class="qbody">From that line, what has gone wrong, and what would you try next if you were out there?
+          <span class="ans-line"></span>
           <span class="ans-line"></span>
         </span>
       </li>
@@ -793,34 +741,26 @@
     </div>
 
     <div class="citebox">
-      <strong>You'll listen to:</strong> "A View of the Earth," a true story an astronaut tells on stage about the day he had to repair a broken instrument on a space telescope. From The Moth. You will hear a live audience, so expect laughter.
+      <strong>You'll listen to:</strong> "A View of the Earth," a true story an astronaut tells on stage about the day he had to repair a broken instrument on a space telescope. From The Moth.
     </div>
 
     <p class="section-title">Listening Notes</p>
-    <p class="instr">While you listen, fill in each box with a few words.</p>
-    <table class="notes-table">
+    <p class="instr">Fill in only the box for the part you have just heard.</p>
+    <table class="notes-table notes-tall">
       <tr>
-        <th>What was broken</th>
+        <th>Part 1<span class="part-when">2:00-3:56</span><span class="part-ask">What was broken</span></th>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <th>Getting out there</th>
+        <th>Part 2<span class="part-when">3:56-5:27</span><span class="part-ask">Getting out there, and what went wrong</span></th>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <th>What went wrong</th>
+        <th>Part 3<span class="part-when">5:27-10:18</span><span class="part-ask">What they tried</span></th>
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <th>What they tried</th>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>What finally worked</th>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>How it ended</th>
+        <th>Part 4<span class="part-when">10:18-13:31</span><span class="part-ask">What finally worked, and how it ended</span></th>
         <td>&nbsp;</td>
       </tr>
     </table>
@@ -853,10 +793,6 @@
             <span class="ans-line"></span>
           </span>
         </li>
-        <li>
-          <span class="num">4.</span>
-          <span class="qbody">Underline the two words in your ordered list above that told you the order.</span>
-        </li>
       </ol>
     </div>
 
@@ -874,19 +810,13 @@
         </li>
         <li>
           <span class="num">2.</span>
-          <span class="qbody">In one sentence, say why this day mattered to him.
+          <span class="qbody">Why did this day matter to him?
             <span class="ans-line"></span>
           </span>
         </li>
         <li>
           <span class="num">3.</span>
-          <span class="qbody">He never uses the word <em>ashamed</em> or <em>guilty</em>. Write down one thing he does or says that tells you he feels something like it anyway.
-            <span class="ans-line"></span>
-          </span>
-        </li>
-        <li>
-          <span class="num">4.</span>
-          <span class="qbody">Write one sentence saying what that detail tells you, and why you read it that way.
+          <span class="qbody">He never uses the word <em>ashamed</em> or <em>guilty</em>, but that is close to how he feels while the repair is going wrong. What does he say or do that shows it?
             <span class="ans-line"></span>
           </span>
         </li>
@@ -898,29 +828,13 @@
       <ol class="qlist">
         <li>
           <span class="num">1.</span>
-          <span class="qbody">Summarize the day in four sentences.
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-          </span>
-        </li>
-        <li>
-          <span class="num">2.</span>
           <span class="qbody">Two other people are named as being right there: Mike Good, who he calls Bueno, and Drew Feustel. Write down everything the story actually tells you each of them did.
             <span class="ans-line"></span>
             <span class="ans-line"></span>
           </span>
         </li>
         <li>
-          <span class="num">3.</span>
-          <span class="qbody">Name one clearly missing piece of information that would change how one-sided this account is, and write one sentence on what it would tell us that this version does not.
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-          </span>
-        </li>
-        <li>
-          <span class="num">4.</span>
+          <span class="num">2.</span>
           <span class="qbody">The ground was working the problem for over an hour. Write one sentence on how much of that hour this account shows you, and how you know.
             <span class="ans-line"></span>
           </span>
@@ -956,82 +870,20 @@
       <ol class="qlist">
         <li>
           <span class="num">1.</span>
-          <span class="qbody">Both accounts cover the same hours. Using the printed words only, write two to three sentences on how each one is built differently, and what each one leaves the listener concluding.
+          <span class="qbody">These two tell the same day. What is different about the way each one tells it, and if you had only read one, what would you think had happened?
             <span class="ans-line"></span>
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-          </span>
-        </li>
-        <li>
-          <span class="num">2.</span>
-          <span class="qbody">Identify one interest or assumption behind one of the two versions that the version itself never states outright. Write one to two sentences and point to the words that led you there.
             <span class="ans-line"></span>
             <span class="ans-line"></span>
           </span>
         </li>
       </ol>
-    </div>
-
-    <p class="section-title">Check It Against the Source</p>
-    <p class="verify-instr">
-      These are the speakers' own words. Read the one that matches where your answers changed, against what you actually wrote above, and mark the one place where your words and theirs are different.
-    </p>
-      <div class="verify-window">
-        <p class="verify-src">The telling, the handrail</p>
-        <p>
-          And the first thing I had to do was to pull off or remove a handrail from the telescope that was blocking the access panel. And there were two screws on the top, and they came off easily. And there was one screw on the bottom, right, and that came out easily. And the fourth screw is not moving. And my tool is moving, but the screw is not.
-        </p>
-      </div>
-      <div class="qitem">
-        <span class="num">1.</span>
-        <div class="qbody">
-          Where are your words different from theirs?
-          <span class="ans-line"></span>
-        </div>
-      </div>
-      <div class="verify-window">
-        <p class="verify-src">The telling, the call from Houston</p>
-        <p>
-          And they said it was going to take about 60 pounds of force for me to do that. And Drew answers the call, and he goes, &quot;60 pounds of force.&quot; And they call me Mass. It's short for my last name. He goes, &quot;Mass, I think you got that in you. What do you think?&quot;
-        </p>
-      </div>
-      <div class="qitem">
-        <span class="num">2.</span>
-        <div class="qbody">
-          Where are your words different from theirs?
-          <span class="ans-line"></span>
-        </div>
-      </div>
-    <p class="instr"><em>Now cover both boxes with your hand or a sheet of paper. You will hear these two stretches once more with the words hidden.</em></p>
-
-    <p class="section-title">Show What You Heard</p>
-    <div class="wrapup">
-      <div class="stop-flag">
-        <div class="stop-badge" aria-hidden="true">STOP</div>
-        <p class="instr">Don't read ahead. Your teacher will read a short story aloud first.</p>
-      </div>
-      <ol class="qlist">
-        <li>
-          <span class="num">1.</span>
-          <span class="qbody">Tell your partner the order of what happened, and which words told you the order.
-            <span class="ans-line"></span>
-            <span class="ans-line"></span>
-          </span>
-        </li>
-      </ol>
-    </div>
-
-    <p class="section-label">Check What You Heard</p>
-    <p class="instr"><em>This is printed upside-down on purpose. Don't turn the page around until after you have shared with your partner.</em></p>
-    <div class="refresher refresher-noline upside-down">
-      <p>Last spring our stage crew had ninety minutes to fix a light before the doors opened. Rosa clipped her tether to the rail and went up. The access panel was buttoned up tight, and the third screw was already stripped, so she could not swap out the bulb. The catwalk was narrow and treacherous. She taped the screw head, turned it once, and the panel opened. We were dark for eleven minutes.</p>
     </div>
 
     <div class="masthead masthead-later">
       <h1>Unit 1B: The Stripped Screw</h1>
       <div class="masthead-meta">
         <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
-        <span class="masthead-tag">Advanced 2.1.1.1</span>
+        <span class="masthead-tag">Advanced 2.1.1.26</span>
       </div>
     </div>
 
@@ -1052,66 +904,60 @@
     </div>
 
     <p class="section-title">Practice It</p>
-    <p class="instr">Do one task below. Work in pairs, and take turns: one of you tells the story while the other listens. When you are done, find someone who worked on a different task and take turns sharing what you told.</p>
+    <p class="instr">Work in pairs, and take turns: one of you tells the story while the other listens. When you are done, find someone who worked on a different task and take turns sharing what you told.</p>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Everyone does this part</p>
+      <p class="model-step">Tell a true story of a time you were fixing, building, or setting up something and it did not work the first time. Tell what happened in order, choosing your own ordering words, say how it turned out, and include the part for your own task below.</p>
+    </div>
 
     <div class="task-block">
       <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">&#9733;</span></p>
-      <p class="task-instr">Tell a true story of a time you were fixing, building, or setting up something and it did not work the first time.</p>
       <ol class="qlist">
-        <li><span class="num">1.</span><span class="qbody">Tell the sequence in four or five sentences, choosing your own ordering words.</span></li>
-        <li><span class="num">2.</span><span class="qbody">Say how it turned out.</span></li>
-        <li><span class="num">3.</span><span class="qbody">Give one brief reason it turned out that way.</span></li>
+        <li><span class="num">1.</span><span class="qbody">Give one brief reason it turned out that way.</span></li>
       </ol>
     </div>
 
     <div class="task-block">
       <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">&#9733;&#9733;</span></p>
-      <p class="task-instr">Tell a true story of a time you were fixing, building, or setting up something and it did not work the first time.</p>
       <ol class="qlist">
-        <li><span class="num">1.</span><span class="qbody">Tell it as a longer account, six to eight sentences.</span></li>
-        <li><span class="num">2.</span><span class="qbody">Say why it mattered to you.</span></li>
-        <li><span class="num">3.</span><span class="qbody">Include one action or detail that shows how you felt at the worst moment, without naming the feeling.</span></li>
-        <li><span class="num">4.</span><span class="qbody">When you finish, your partner says what they think you felt and which detail told them.</span></li>
+        <li><span class="num">1.</span><span class="qbody">Say why it mattered to you.</span></li>
       </ol>
     </div>
 
     <div class="task-block">
       <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">&#9733;&#9733;&#9733;</span></p>
-      <p class="task-instr">Tell a true story of a time you were fixing, building, or setting up something and it did not work the first time.</p>
       <ol class="qlist">
-        <li><span class="num">1.</span><span class="qbody">Tell it without a fixed pattern, moving between what happened and what it meant.</span></li>
-        <li><span class="num">2.</span><span class="qbody">Quote at least one thing somebody actually said to you.</span></li>
-        <li><span class="num">3.</span><span class="qbody">Keep an eye on your partner. When they look lost or look ahead of you, change your pace or your wording once, and keep going.</span></li>
+        <li><span class="num">1.</span><span class="qbody">Include one action or detail that shows how you felt at the worst moment, without naming the feeling.</span></li>
       </ol>
     </div>
 
     <div class="task-block">
       <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span></p>
-      <p class="task-instr">Tell a true story of a time you were fixing, building, or setting up something and it did not work the first time.</p>
       <ol class="qlist">
-        <li><span class="num">1.</span><span class="qbody">Tell it twice, to two different partners. The first time, shape it so the listener finds it funny. The second time, shape it so the listener finds it tense.</span></li>
-        <li><span class="num">2.</span><span class="qbody">Keep the same events in the same order both times.</span></li>
-        <li><span class="num">3.</span><span class="qbody">If your order comes out unclear at any point, catch it and fix it out loud as you go, for example "sorry, that was after the part where &#95;&#95;&#95;."</span></li>
+        <li><span class="num">1.</span><span class="qbody">Ask your partner what they think you felt, and which detail told them.</span></li>
       </ol>
     </div>
 
     <div class="spotlight-box">
       <p class="spotlight-label">Say It Like a Native Speaker</p>
-      <p class="model-step">In fast speech, whole words get squeezed. Listen again to a short stretch of the story and notice the gap between what is written and what you hear: <strong>going to</strong> comes out as "gonna," <strong>kind of</strong> as "kinda," <strong>want to</strong> as "wanna," and <strong>and</strong> flattens almost to nothing at the front of a sentence.</p>
-      <p class="model-step">Mark five places where you hear a squeezed form. Then read the same stretch aloud twice, once with every word fully pronounced and once squeezed, and listen to the difference. Now say one of your own sentences from the task above the squeezed way.</p>
+      <p class="model-step">Your ordering words are the ones that get squeezed most, because they are the parts a speaker rushes through to get to what happened next. Here is one real stretch of the story, written twice: first the way The Moth prints it, then the way it is actually said at speed.</p>
+      <div class="refresher refresher-noline">
+        <p><strong>Printed:</strong> "And for the next hour or so, we tried all kinds of things. ... And then they called up after about an hour and 10 or 15 minutes of this, they said they wanted me to go to the front of the shuttle to a toolbox and get vice grips and tape."</p>
+        <p><strong>Said:</strong> "n' for the next hour or so, we tried all kindsa things. ... N'en they called up after 'bout an hour n' ten or fifteen minutes 'a this, they said they wanned me da go to the fronna the shuttle to a toolbox n' get vice grips n' tape."</p>
+      </div>
     </div>
 
     <p class="section-title">Discuss It</p>
     <div class="discuss-block">
       <p class="instr">Your class will talk through these questions together, one at a time, from where you sit. While someone else is speaking, keep a tally of which question each speaker is actually answering and one phrase they used to order their points. You will read your tally out at the end of each question.</p>
       <p class="qitem"><span class="num">1.</span> The storyteller spends more words on a few seconds at a window than on an hour of failed attempts. Was that the right call for a story? Would it be the right call for a report?</p>
-      <p class="qitem"><span class="num">2.</span> NASA's record and his telling describe the same day. If you only ever read one, what would you not know?</p>
-      <p class="qitem"><span class="num">3.</span> Think of a story you have heard someone tell about their own worst day at work. What did they leave out, and why do you think they left it out?</p>
+      <p class="qitem"><span class="num">2.</span> Think of a story you have heard someone tell about their own worst day at work. What did they leave out, and why do you think they left it out?</p>
       <p class="instr"><strong>Starter phrases:</strong></p>
       <ul class="stems">
         <li><span class="stars">&#9733;</span> "First he &#95;&#95;&#95;, and then &#95;&#95;&#95;."</li>
         <li><span class="stars">&#9733;&#9733;</span> "The part he spends longest on is &#95;&#95;&#95;, and I think that is because &#95;&#95;&#95;."</li>
-        <li><span class="stars">&#9733;&#9733;&#9733;</span> "His version and NASA's version disagree less about what happened than about &#95;&#95;&#95;."</li>
+        <li><span class="stars">&#9733;&#9733;&#9733;</span> "A story and a report would disagree less about what happened than about &#95;&#95;&#95;."</li>
         <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "The effect of putting &#95;&#95;&#95; at that point in the story is &#95;&#95;&#95;, which serves &#95;&#95;&#95;."</li>
       </ul>
     </div>

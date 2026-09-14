@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.31)
+# Generation Quality Standards (v1.40)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -54,9 +54,54 @@ below and states the addition ("Do Task D. Start three of your six sentences wit
 comma after it."), and the student writes in the Task they were sent to. Re-specifying - restating the
 sentence count, the target words, and the requirements in fresh wording, with a second set of answer lines -
 makes the student read two full sets of requirements to find the one difference between them, and the two
-statements drift apart the moment either is edited. The rule holds only where the work really is the same
+statements drift apart the moment either is edited. **Where every Level shares a core - the same prompt, the
+same object, the same opening move - the cleaner form is to print that core once above the task set and have
+each Level state only what it adds**, rather than have each tier point at the tier below. The student reads one
+short list for their own star instead of hunting for the delta inside a paragraph they have already read three
+times, and there is exactly one place to edit the shared part. The rule holds only where the work really is the same
 plus one demand; a tier with its own object, its own source, or a different product is its own task and is
 written out in full.
+
+**A printed shared core is a promise about every Level, and the lowest is where it breaks.** Once the page
+says "every task below is about X," each Level's items have to actually be about X. The failure to watch for
+is the lowest tier quietly working from the source instead: the higher Levels talk about the student's own
+place, object or day, while ★ circles lines about the clip's story, repeats words from a list, or says a
+sentence "about the story." It happens because the lowest tier's assigned shape is often source-facing by
+nature - a fixed-frame extraction, a word-recognition drill, a better-of-two - and it is easy to leave it
+pointing at the source while rewriting the tiers above it. The distinction that resolves it: a **supporting
+step** may stay on the source, since hearing a word or reading a printed pair is not a claim about the
+student's life, but the tier's **own production** - the thing the student says or writes as the task's product
+- sits on the shared core like every other Level's. Where the lowest Level genuinely cannot work from the
+shared core, the core is not shared and the lead-in must stop saying it is. The practical test: read the
+lead-in, then read ★'s product, and ask whether the second is an instance of the first. Scaffolding ★ needs to
+get there - a line to name the place first, a printed menu of options - is added to ★, not swapped for a
+different subject.
+
+**Where two task Levels both carry the same beat, the higher one carries its own Level's demand.** Two CSV
+rows can legitimately require the same act - Level 5 told to summarize the sequence, Level 6 told to identify
+a missing piece "in addition to summarizing events" - so the beat appears in both task sets by design. Printing
+it twice in the same words is still a defect: the page reads as a repeat, and the student at the higher Level
+spends their first item doing the lower Level's work. The common and worse form is the higher Level's version
+being the lower one **with a constraint dropped** - "Summarize the repair in four sentences, in order" at ★★,
+"Summarize the day in four sentences" at ★★★ - which inverts the tiering on the one item the two Levels share
+and makes the harder task look easier at the point a student compares them. The shared beat is written once per
+Level, each time carrying what its own row adds, and never loses a constraint on the way up. Check this at the
+Set level, not just the lesson: a beat copied across a Set's four lessons carries the defect into all of them at
+once.
+
+**Specification does not thin out as the Levels rise.** Where the lower task Levels are told what to produce
+in countable terms - four or five sentences, one reason, one detail that shows a feeling without naming it -
+the higher ones are told the same way. The common failure runs the other direction: the bottom two Levels get
+a product a student can check themselves against, and the top two get an abstraction ("tell it without a fixed
+pattern, moving between what happened and what it meant," "shape it so the listener finds it funny"). **That is
+not a harder task, it is an unspecified one.** The student cannot tell whether they have done it, the teacher
+cannot tell either, and the Level's own CSV row goes unassessed while the telling sounds perfectly fine. Name
+the move, give it a count and a place ("twice, in the middle, not at the end"), and show it once in the words a
+student would actually use. Where the demand is a rhetorical effect rather than a countable feature, have the
+student **commit to the specific choices that produce it before they start** - which moment gets the most time,
+where the pause goes, which detail is held until last - so that afterwards there is something concrete to check
+the effect against. A student who cannot name their three choices has not done the task, however well it
+sounded.
 
 **Differentiated participation in live oral work:** an easier sentence stem inside the same live, public
 speaking turn is not differentiation - the demand of real-time public speech is roughly constant across a
@@ -94,7 +139,14 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
 3. **Requires the centerpiece.** Every item is answerable only with the text, clip, or scenario in front of
    the student, never from memory of the lesson or of the original story. In an assessment, that means the
    assessment's own new passage or clip, printed or played in full, not the taught one. Reasoning items cite
-   specific evidence (a paragraph letter, a quoted phrase, a segment).
+   specific evidence (a paragraph letter, a quoted phrase, a segment). **An item printed over a compare
+   layout requires both sides of it.** Where the page prints two accounts side by side, a question a student
+   could finish having read one column ("what does each one leave the listener concluding?" - answerable one
+   column at a time, and the comparison never happens) wastes the layout it sits under. Name the comparison in
+   the question and make the effect turn on it: "What is different about the way each one tells it, and if you
+   had only read one, what would you think had happened?" Naming the comparison alone is not enough either -
+   "what is the difference between the two" invites a list of surface contrasts, which is a lower Level's work
+   than the row asking for critical assessment.
 4. **Plausible distractors and padded banks.** Every word bank or matching list carries 1-2 extra
    already-taught words beyond what its blanks or matches need, scaled to bank size (a 3-word bank gets +1, a
    5-word bank gets +2), each a genuine near-miss drawn from the same taught pool, never a new word, and
@@ -114,7 +166,22 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    template sentence. Any word bank, model, sentence frame, or starter box a student needs sits immediately
    before the item(s) it serves, never after and never bundled at the end of the task.
 8. **Traceable.** Every item is traceable to one task Level's CSV objective and, in an assessment, to a
-   specific source lesson, so a lesson can be dropped from scope without editing any other lesson's items.
+   specific source lesson, so a lesson can be dropped from scope without editing any other lesson's items. **And
+   scoped to it:** the item asks for what its row names as the product, and does not silently add an earlier
+   inferential step the row does not ask for. Where a row names the product as a telling detail - "identify
+   one clearly telling action or detail that signals how the speaker felt, even though the speaker never
+   names the feeling directly" - the item states the feeling and asks for the detail ("He never uses the
+   word *ashamed* or *guilty*, but that is close to how he feels while the repair is going wrong. What does
+   he say or do that shows it?"), rather than making the student first work out which feeling is in play and
+   then find its evidence. Two inferences for the price of one is not a harder version of the item; it is a
+   different item, traceable to no row, and the student who guesses the feeling wrong can no longer answer
+   the part the objective actually assesses. **The carve-out, and it is a real one:** where the withholding
+   is the content - an account whose flatness is the thing being noticed - naming a feeling in the stem
+   answers the item instead of setting it up, and the stem says that the flatness is the point rather than
+   supplying a word the source refuses. **And when a stem gains a premise, re-read the items after it:** the
+   follow-up that asked "what does that detail tell you, and why do you read it that way" was doing real work
+   while the student had to infer the feeling, and became a restatement of the stem the moment the stem
+   supplied it. An edit that scopes one item can push the next one into C9.
 9. **Never contains its own answer.** A question stem, its parenthetical, and any material printed before it
    in the same task never state, list, or quote what the item asks the student to find: no "(the scene, then
    her background, then her philosophy)" after "summarize how the segment is organized," no "(like 'success
@@ -168,7 +235,13 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
     "point to" appear only when the thing to be circled, underlined, matched, crossed out, or pointed to is
     printed on the page. A two-way choice that exists only in a stem's wording ("Is she being modest, or does
     she really believe it?") is answered in writing, "Say which, and why," or its options are printed as an
-    inline menu the student can mark. Never "Circle one and say why" over a plain answer line.
+    inline menu the student can mark. Never "Circle one and say why" over a plain answer line. **Printing the
+    container is not printing the thing.** "Underline the two words in your ordered list above that told you
+    the order" passes a check that only asks whether the list is on the page, and fails the moment a student
+    looks: the list holds event labels, and the ordering words are in the clip. Where the named thing is a
+    property of printed material rather than the material itself - the time words in a list, the linking word
+    in a plan, the evaluative adjective in a quotation - confirm that an actual instance is printed before
+    naming the action, and otherwise ask for it in writing.
 
 11. **The steps inside one Task are distinct, the same way items are.** A numbered step earns its number by
     requiring a judgment the previous steps did not already settle. Marking the same words a classifying step
@@ -400,19 +473,45 @@ out, and leaves the least confident students furthest from a contribution they c
 and then connects to what students already know gets every seat a real answer inside the first minute. Each
 lesson type names its own hook bank in its own prompt; every hook in every bank is subject to this rule.
 
-14. **A concept met for the first time is taught, not just ruled.** Where a callout introduces something the
-    band has not seen before - reported speech, a cleft, a time clause, a reading strategy, a signposting move -
-    stating the rule and showing input-to-output pairs is not teaching it. Four things go on the page, in this
-    order: **name the thing** ("this is direct speech; this is indirect speech"); **put it beside what it
-    contrasts with**, both written out, so the difference is visible rather than described; **number the
-    features that change**, each as its own line, so a student has something to check their own sentence
-    against; and **annotate every worked example feature by feature**, one column per feature, rather than
-    showing only the finished result. A transformation table whose columns are "before" and "after" tells a
-    student who already knows the concept what to produce and tells a student meeting it what to copy. Where a
-    feature does not apply in an example, say so in its column ("none: 'the soup' is not a pronoun") rather than
-    leaving the cell blank, since a blank reads as an oversight. This is a floor for a first introduction only;
-    a later lesson practising the same concept may state the rule in one line and move on.
+**D14. A concept met for the first time is taught, not just ruled.** Where a callout introduces something the
+band has not seen before - reported speech, a cleft, a time clause, a reading strategy, a signposting move -
+stating the rule and showing input-to-output pairs is not teaching it. Four things go on the page, in this
+order: **name the thing** ("this is direct speech; this is indirect speech"); **put it beside what it
+contrasts with**, both written out, so the difference is visible rather than described; **number the
+features that change**, each as its own line, so a student has something to check their own sentence
+against; and **annotate every worked example feature by feature**, one column per feature, rather than
+showing only the finished result. A transformation table whose columns are "before" and "after" tells a
+student who already knows the concept what to produce and tells a student meeting it what to copy. Where a
+feature does not apply in an example, say so in its column ("none: 'the soup' is not a pronoun") rather than
+leaving the cell blank, since a blank reads as an oversight. This is a floor for a first introduction only;
+a later lesson practising the same concept may state the rule in one line and move on.
 
+
+**D15. A long input is taken in in defined parts, not one unbroken pass.** Where the anchor input a lesson
+actually delivers runs past its own modality's ceiling for that Band - Passage Reading's word count for the
+anchor text, Listening/Speaking's Section 0.2 runtime range, the span a task Level is asked to hold - it is
+delivered in **named parts the lesson already labels**, with a short checkpoint between them, rather than in
+one continuous pass. An input inside its ceiling is delivered whole; this rule is about what happens when it
+is not.
+
+The checkpoint between parts is a place to catch what was just taken in - one cell of the note-taking
+organizer, one line of the chain, one sentence - and nothing more. It does not reveal the input's own wording,
+answer anything, or preview what comes next, so a segmented first pass is still the single uncued first
+contact D12 requires. The parts follow the input's own order and skip nothing inside the delivered span:
+segmenting is about where a student is allowed to stop and catch up, never about resequencing or abridging.
+
+Two consequences a lesson has to state rather than leave implicit. **A beat that re-delivers a named part
+budgets at least that part's own length** - a five-minute beat cannot replay eleven minutes - which is what
+makes the parts, not the whole input, the unit a second pass works on. And where a Level's purpose for that
+second pass points at material outside the part being re-delivered, it is the purpose that gets re-pointed,
+not the part that gets stretched.
+
+Why this is a rule and not a preference: an input past the Band's ceiling delivered in one block asks the
+weakest listener or reader in the room to hold the whole thing before producing anything, which is the demand
+the tiering exists to remove, and it hides the failure - a student who lost the thread at minute three has no
+place to rejoin and no signal to the teacher that they did. Passage Reading has always done this, through the
+lettered `[STOP & CHECK]` pause points embedded in its anchor text; the rule states program-wide what one
+modality had already built.
 ## E. Style constraints for generated Markdown
 
 1. **No em-dashes** anywhere in generated content. Use hyphens, colons, or parentheses.
@@ -523,7 +622,24 @@ Run this list first, then the modality's own list. If any item fails, revise bef
 37. Does the Closing Transfer Check's stated length or form leave room for the skill it transfers - no
     one-sentence cap on a check that also asks for a sequence, an order, or a turn from one part to another?
     (D2)
+38. Where the delivered input runs past its Band's ceiling, is it delivered in named parts with a short
+    catch-up checkpoint between them rather than one unbroken pass - and does every beat that re-delivers a
+    part budget at least that part's own length? (D15)
+39. For every "circle," "underline," "cross out" or "point to," is an actual instance of the thing named
+    printed on the page - not merely the list, quotation or block it would live in? (C10)
+40. Where two task Levels carry the same beat, does the higher Level's version add its own row's demand
+    rather than repeat the lower Level's wording - and does it never drop a constraint the lower Level
+    states? (B)
+41. Does every item ask for what its CSV row names as the product, with any premise the row does not ask
+    the student to derive supplied in the stem - unless the withholding is itself the lesson's content? (C8)
+42. Are the highest task Levels specified as concretely as the lowest - a countable product, or a set of
+    named choices the student commits to before performing - rather than given an abstraction the student
+    cannot check themselves against? (B)
+43. Where a shared core is printed above the task set ("every task below is about X"), is **every** Level's
+    own production an instance of it - ★ included, whose assigned shape is often source-facing and is the one
+    most often left pointing at the source while the tiers above it talk about the student's own life? A
+    supporting step may stay on the source; the product may not. (B)
 
 ## Changelog
 
-**Current version: v1.31.** See `Changelog.md` in this folder.
+**Current version: v1.40.** See `Changelog.md` in this folder.

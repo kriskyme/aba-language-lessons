@@ -13,6 +13,11 @@ Listening/Speaking Module 2 (Narrating), Advanced Band, Set 1, Lesson 1.
 - **How this was confirmed:** retrieved from The Moth's own published transcript page on
   2026-09-10 and reproduced here as published, including the page's own bracketed audience cues.
   No wording was altered, condensed, or supplied from any other account of the mission.
+- **Runtime:** approximately 17 minutes. Neither of The Moth's own pages for this story states a
+  duration; the figure was corrected 2026-09-14 after the lesson had stated 20 to 24 minutes,
+  derived from this file's word count (about 3,450 words of spoken text) rather than read off the
+  media. The lesson's segment boundaries were reproportioned against the real runtime at the same
+  time.
 - **Note on form:** The Moth publishes this transcript without timestamps and without speaker
   labels, since the story is a single uninterrupted stage telling. The bracketed cues
   ([audience laughter], [audience chuckles], [audience aww]) are the transcript's own. The lesson

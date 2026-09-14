@@ -349,3 +349,75 @@ Guide v2.34 §F: Module 1 `Lesson_1_NewBakery/` (`1.1.1.1` -> `1.1.1.2`), `Lesso
 
 **Still outstanding:** Lessons 5 and 7 remain on the §D12 verification-window backlog in `Index.md`. Today's
 passes were presentational and did not choose a transcript window for either.
+
+**Hooks reframed to orient before they ask (2026-09-14).** Quality Standards §D13's content sweep did not reach this Band when the rule landed. Four lessons fixed, `.md` and packet together, each bumped one version: Module 1 Set 1 Lesson 1 NewBakery (`1.1.1.3` -> `1.1.1.4`), which asked what makes the bakery different before saying anything about it; Set 1 Lesson 3 Backpack (`1.1.3.2` -> `1.1.3.3`), whose "mystery close-up" asked what the object is; Set 2 Lesson 7 RosettaStone (`1.2.7.2` -> `1.2.7.3`), which asked who said an unattributed line and what could have made it true; and Module 2 Set 1 Lesson 2 FireRescue (`2.1.2.2` -> `2.1.2.3`), which asked who is speaking and who "me" is. Each now names the topic first, asks something answerable by looking or from the student's own life, and then asks what the printed line leads them to expect.
+
+**Module 2 Lesson 1 NewKid aligned to the Set's Advanced Lesson 1 (2026-09-14, `2.1.1.3` -> `2.1.1.4`).** Per
+user direction, "the steps need more space and timing. remove the upside down etc." The Phase 2 organizer's
+five unlabelled Step rows became four part rows, each headed by the part's name and an estimated elapsed-time
+span (0:00-0:40, 0:40-1:27, 1:27-2:10, 2:10-2:55), on a `.notes-tall` table with room for three or four
+handwritten lines; the two columns are unchanged. NPR publishes no timestamps for this segment, so the times
+are proportioned by word position across the verified 2:55 runtime with five seconds allowed for the music
+cue, and the `.md` says so and marks the map "estimated." The clip still plays straight through, 2:55 being
+inside Level 3's range, so the times are signposts rather than §D15 segmentation. Per-part Answer notes were
+written for both columns, clearing this lesson from the organizer Answer-note backlog in `Index.md`. The
+packet's "Show What You Noticed" section and its upside-down "Check What You Heard" script were removed with
+their now-dead CSS, a second deliberate divergence from `Generate_Student_Packet_Prompt_v2.11.md` §2.9 after
+HubbleRepair's; Day 1's Transfer Check now runs orally from the `.md`, recorded in that lesson's Phase 6. The
+rule extension behind the organizer change is Style Guide v2.46 §F. No task, item, answer, target word, or
+Day 2 content changed.
+
+**NewKid's ★ picture item deleted, and Listen Closely's play-by-play cut (2026-09-14, `2.1.1.4` -> `2.1.1.5`).**
+Per user direction, "delete 1," on Day 1 Task A item 1. The item, its three embedded photographs, and the
+orphaned **I \_\_\_-ed.** starter box that existed only to serve it all came out; Task A's remaining items are
+renumbered 1 to 3. The photographs stay in the packet through Task B item 1, so nothing is orphaned in
+`Set1_Intermediate_Image_Credits.md`. **★ Task A is now off its own CSV row on Day 1:** Level 2's Listening
+objective is the deleted item almost word for word, and none of the three survivors is traceable to it. That
+and the loss of Level 2's Day 1 production are recorded in the lesson's Task A note. Separately and in the same
+pass, the Listen Closely instruction in this packet and in `Lesson_2_FireRescue/` lost its narration of the
+§D12 arc, per new Style Guide v2.47 §E; FireRescue's change is packet-only wording and moves no version code
+(Conventions §G).
+
+**NewKid trimmed further (2026-09-14, `2.1.1.5` -> `2.1.1.6`).** Per user direction, ★★ Task B's picture-pair
+item and three specification clauses in ★★★ Task C were deleted. The picture item took the last use of the
+three choice photographs, so the packet embeds one image now; the files stay in the folder with their credits
+rows marked no-longer-used. Task C's items 2 and 3 are plain questions now, item 3 rewritten from a statement,
+and item 4 lost its two-connector requirement. **Both of this Band's lowest Levels are now off their Day 1
+Listening CSV rows** (★ at `2.1.1.5`, ★★ here), since both rows are written around identifying a picture and
+no picture task remains; Task C also stops exercising Level 4's own-connector clause on Day 1. All three are
+recorded in the lesson with the smallest way back named. No shared rule changed.
+
+**NewKid's verification phase removed (2026-09-14, `2.1.1.6` -> `2.1.1.7`).** Per user direction, "remove
+check against the source." Day 1 drops to five phases and **this lesson now breaches Quality Standards §D12**:
+Commit and the second hearing survive in Phase 4, Verify and Return unsupported do not exist any more. The
+second lesson in the modality to take this removal, after Advanced Lesson 1. Day 1 re-timed to
+15 + 15 + 12 + 20 + 13, the freed minutes going to Phase 3's guided practice and to the Transfer Check, which
+has had no printed apparatus since `2.1.1.4`. The removed window's text and the three joins it was chosen for
+are kept in the Transfer Check's note so restoring the phase needs no new research. Both prompts still require
+the apparatus and Lesson 2 keeps its own, so this lesson no longer matches its Set-mate here.
+
+**★ put back on Practice It's shared prompt (2026-09-14).** NewKid `2.1.1.7` -> `2.1.1.8`: Day 2 ★ Task A
+gains a printed line and five printed ideas for naming where the student was, per user direction, and its
+three pairs now ask what was true of that day rather than of Darrell's story, since the lead-in promises every
+task is about a time the student was somewhere new. Loses its fixed answer key, gains coherence with the
+lead-in; both recorded in the lesson. FireRescue `2.1.2.3` -> `2.1.2.4`: the same defect found in the sweep,
+★'s "say one sentence about the story" rescoped to the shared prompt; its word-repetition drill is untouched,
+being a supporting step rather than the tier's production. Rule landed as Quality Standards §B and self-check
+43 (v1.40); all 31 packets surveyed, four other lead-ins that name a shared subject were clean.
+
+**NewKid's listener and non-speaker tasks removed (2026-09-14, `2.1.1.8` -> `2.1.1.9`).** Per user direction.
+Day 2 ★★★ and ★★★★ lost the partner's write-it-down step and are now speak-only; ★★★★ loses the read-back
+that was the only check on its telling-detail demand. Phase 4's Town Hall lost its one-sentence-per-speaker
+task, **which breaches Quality Standards §D7** (an explicit active task for every student not currently
+speaking): shared self-check 17 now reads Fail. Two stale dependencies from earlier passes were corrected on
+touch: Foundation Support pointed at packet pictures deleted at `2.1.1.6`, and the Day 2 board moment assumed
+students were writing the summaries it collects.
+
+**"Time connectors" translated off the student page (2026-09-14, packet-only, no version moved).** NewKid,
+FireRescue and Block42 printed the bare term six times between them, always in a task stem and nowhere else,
+while the same pages paraphrased the idea everywhere and the teacher-side term was a third one again
+("sequence markers"). Now plain throughout. Rule landed as Style Guide v2.48 §E and self-check 35; the same
+sweep found two Passage Reading packets printing "hedging" once each, also fixed, and nine Academic Writing
+packets printing "topic sentence," logged for a curriculum decision rather than swept. In the same pass,
+"Write the second one on the line, so you have it for later" was removed from NewKid and FireRescue Day 2
+Task B: neither lesson's `.md` ever had it, so the packets had drifted from their source (§G).

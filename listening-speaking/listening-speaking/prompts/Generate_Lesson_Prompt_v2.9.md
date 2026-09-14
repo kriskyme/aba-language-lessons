@@ -1,4 +1,4 @@
-# Listening/Speaking Lesson Generation Prompt (v2.7)
+# Listening/Speaking Lesson Generation Prompt (v2.9)
 
 **Lesson type:** a **Listening/Speaking Lesson** is a fixed 2-day cycle (Day 1 Listening, Day 2 Speaking; two
 75-minute periods) built around one shared real-world audio or video source (a talk, interview, news segment,
@@ -74,6 +74,19 @@ running somewhat past its band's range is a much smaller problem than an off-cei
 and register do not change. Flag the deviation in the self-check and keep the source if it is otherwise a strong
 fit.
 
+**The runtime is read off the media, never inferred.** Take it from the player, the page's own duration metadata,
+the episode listing, or a timestamped transcript's last cue. **Do not derive it from the transcript's word
+count, from an assumed speaking pace, or from what clips "of this type" usually run.** Those are guesses, they
+have been wrong by 30% in this repo, and a wrong runtime silently moves the lesson's distance from the Band
+target, resizes every phase that plays the source, and skews any segment map proportioned against it. Where no
+duration can be found anywhere, the lesson says exactly that, gives its best estimate **labelled as an
+estimate with the method named**, and flags it as an open item rather than stating it as the runtime.
+
+**A beat that replays a named span states at least that span's runtime.** When a phase replays "Segments 2
+through 5," the minutes budgeted for that beat cannot be less than those segments actually run. If the budget
+will not stretch, narrow the span and re-point the Levels' listening purposes into it; do not print a number the
+clock cannot meet.
+
 **Level 1 (A1)**
 - Runtime: 30 seconds to 2 minutes
 - Source type: graded-listening clips for absolute beginners, simple labeled object or routine videos, a slow
@@ -146,7 +159,10 @@ fit.
 5. **Timestamp markers, not paragraph letters.** Every listening or watching task cites an approximate timestamp
    range ("[2:15-3:40]"), used consistently wherever a segment is referenced. Where a real timestamp cannot be
    verified, use the source's own internal structure (headed sections, chapter markers) as the segment label
-   and say so; the teacher pencils in real elapsed times on first playthrough.
+   and say so; the teacher pencils in real elapsed times on first playthrough. A self-made segment map is
+   proportioned by cumulative word position in the saved transcript **scaled to the real runtime** (0.2), is
+   labelled a proportional estimate rather than a measured cue point, and is recomputed if that runtime is
+   ever corrected.
 6. **Background Note (footnote equivalent).** When the source names a real person, place, event, or reference
    unlikely to be common knowledge at the band and not explained by the source itself, add a short, sourced
    "Background Note" callout (one or two plain sentences inside the Level's register ceiling). Occasional (1-3
@@ -206,6 +222,15 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the real sourc
    task was built, and the full citation block first in the lesson (0.3 items 1-3)?
 3. **Runtime, pace, and register** inside 0.2's ceiling for the band's lower Level, or the deviation flagged and
    justified (0.2)?
+3a. **Runtime read off the media** - player, page duration metadata, episode listing, or a timestamped
+   transcript's last cue - and not derived from word count, assumed pace, or what clips of this type usually
+   run; where none exists, said so plainly and labelled as an estimate with its method named (0.2)?
+3b. **Every beat that replays a named span budgets at least that span's runtime** (0.2, Quality Standards
+   §D15)? Where a Level's purpose for that replay points outside the segment being replayed, the purpose is
+   re-pointed into it rather than the segment stretched.
+3c. **A played span past 0.2's range is delivered segment by segment** with a short organizer-filling pause
+   between, each segment mapped to the organizer cell it feeds, and the phase budgeted for playing time plus
+   pauses (Quality Standards §D15)?
 4. **Source content matches the Module's verb** per the CSV Description, not a neighboring Module (0.1)?
 5. **Both halves of each Level's CSV row used:** the Listening half for Day 1 tasks, the Speaking half for Day 2
    tasks (0.1)?
@@ -304,7 +329,14 @@ _Phase 1: Hook, Good to Know & Vocabulary (15 min)_
   guided confirmation at every Level.
 
 _Phase 2: First Listen & Listening Notes (15 min)_
-- Play the full source once (for Proficient-length sources, the first half with a clear timestamp cutoff).
+- **Play the source once - whole if it fits, in named segments if it does not (Quality Standards §D15).** A
+  played span inside 0.2's runtime range for the band's lower Level is played straight through. A span past
+  that range is played **segment by segment**, using the segment labels the lesson already defines (0.3 item
+  5), pausing 30 to 45 seconds after each for students to fill that segment's cell of the Phase 2 organizer and
+  nothing else. The segments run in the source's own order and skip nothing inside the span. The pause reveals
+  no wording and answers nothing, so this is still the single uncued first contact the next bullet requires.
+  Budget the phase against playing time **plus** the pauses, and say in the lesson which segment feeds which
+  organizer cell.
 - **Audio only.** Captions off, no transcript on the page, the board, or the screen, and no Phase 5 window
   visible yet. This is the students' one uncued first contact with the clip and it cannot be given back.
 - Students fill a shared note-taking organizer matched to the Module (0.4) while watching.

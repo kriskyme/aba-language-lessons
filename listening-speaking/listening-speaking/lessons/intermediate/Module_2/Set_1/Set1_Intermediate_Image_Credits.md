@@ -12,12 +12,15 @@ Created 2026-09-10 with Lesson 1, this Set's first images.
 | Asset file | Where used | Commons file title | Author | License | Source URL |
 | --- | --- | --- | --- | --- | --- |
 | `Lesson1_NewKid_Img_Hook.jpg` | Unit 1A, the opening photo students describe | Boxwood Lockers in the hallway.jpg | ChinaFlag | Public domain | https://commons.wikimedia.org/wiki/File:Boxwood_Lockers_in_the_hallway.jpg |
-| `Lesson1_NewKid_Img_ChoiceMoving.jpg` | Unit 1A, Task A item 1 and Task B item 1 picture choices | An Overview of Moving Companies and Their Use of Moving Boxes.jpg | brownpau | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:An_Overview_of_Moving_Companies_and_Their_Use_of_Moving_Boxes.jpg |
-| `Lesson1_NewKid_Img_ChoiceHallway.jpg` | Unit 1A, Task A item 1 and Task B item 1 picture choices | Lorain High School hallway.jpg | Matt Dempsey | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Lorain_High_School_hallway.jpg |
-| `Lesson1_NewKid_Img_ChoiceCafeteria.jpg` | Unit 1A, Task A item 1 and Task B item 1 picture choices | High school students eat lunch at a public school cafeteria in North Carolina 01.jpg | Harrison Keely | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:High_school_students_eat_lunch_at_a_public_school_cafeteria_in_North_Carolina_01.jpg |
+| `Lesson1_NewKid_Img_ChoiceMoving.jpg` | **No longer used as of `2.1.1.6`** (was Unit 1A, Task A item 1 and Task B item 1 picture choices; both items deleted on user instruction, 2026-09-14). File kept in the lesson folder, embedded nowhere. | An Overview of Moving Companies and Their Use of Moving Boxes.jpg | brownpau | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:An_Overview_of_Moving_Companies_and_Their_Use_of_Moving_Boxes.jpg |
+| `Lesson1_NewKid_Img_ChoiceHallway.jpg` | **No longer used as of `2.1.1.6`** (was Unit 1A, Task A item 1 and Task B item 1 picture choices; both items deleted on user instruction, 2026-09-14). File kept in the lesson folder, embedded nowhere. | Lorain High School hallway.jpg | Matt Dempsey | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Lorain_High_School_hallway.jpg |
+| `Lesson1_NewKid_Img_ChoiceCafeteria.jpg` | **No longer used as of `2.1.1.6`** (was Unit 1A, Task A item 1 and Task B item 1 picture choices; both items deleted on user instruction, 2026-09-14). File kept in the lesson folder, embedded nowhere. | High school students eat lunch at a public school cafeteria in North Carolina 01.jpg | Harrison Keely | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:High_school_students_eat_lunch_at_a_public_school_cafeteria_in_North_Carolina_01.jpg |
 
-All four were fetched 2026-09-10 at 960px from Wikimedia Commons and saved unchanged in the lesson folder;
-the packet embeds a downscaled base64 copy of each.
+All four were fetched 2026-09-10 at 960px from Wikimedia Commons and saved unchanged in the lesson folder.
+**As of 2026-09-14 the packet embeds only the hook**, the two picture-choice items having been deleted at
+`2.1.1.5` and `2.1.1.6`. The three choice files and their rows above are kept rather than deleted so the
+provenance survives if either item is ever restored; nothing here is a live credit obligation except the
+hook.
 
 ## Lesson 2: The Firefighter and the Girl in the Bathtub (`Lesson_2_FireRescue/`)
 

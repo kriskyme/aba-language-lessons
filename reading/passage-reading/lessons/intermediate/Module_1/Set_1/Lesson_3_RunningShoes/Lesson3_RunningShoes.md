@@ -6,7 +6,7 @@ plan (`Rotation_Log_Intermediate.md`, Lesson 3 row).
 **Module:** 1, Describing | **Band:** Intermediate (anchor Level 3, B1) | **Task Levels:** 2, 3, 4, 5
 **Genre:** How-to/instructional guide | **Reading strategy:** Whisper Reading
 **Phase 1 hook:** Mystery Quote | **Phase 3 protocol:** Town Hall
-**Vocabulary theme:** Footwear & physical comfort
+**Vocabulary theme:** Footwear & physical comfort | **Version:** 1.1.3.2
 
 Genre and reading-strategy check against Lesson 2: genre changes (news brief -> how-to guide), reading strategy
 changes (Reciprocal Teaching -> Whisper Reading), Phase 1 hook changes (K-W-L Chart -> Mystery Quote), Phase
@@ -24,9 +24,13 @@ changes (Reciprocal Teaching -> Whisper Reading), Phase 1 hook changes (K-W-L Ch
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Mystery Quote hook (board-dependent):** Write on the board: *"The best shoe is one you forget you're
-wearing."* Ask: "Who do you think said this? What do you think it means?" Collect 3-4 guesses on the board
-before reading, without confirming any of them. Check the guesses against the text at the end of Phase 3.
+**Mystery Quote hook (board-dependent):** Name the topic first: today's text is a how-to guide on choosing
+running shoes - fit, cushioning, and support. Ask what students notice about the shoes they have on right
+now while they walk, or whether they notice them at all; every student can answer that from their seat. Then
+write the line from the guide on the board: *"The best shoe is one you forget you're wearing."* Ask what
+that line says a good shoe should do, and one thing a shoe would have to get right for you to forget it -
+both answerable from the line. Collect 3-4 readings on the board before reading, without confirming any of
+them. Check them against the text at the end of Phase 3.
 
 **Skill Spotlight:** "Today we're practicing describing an object by comparing two versions of it and giving the
 reason one works better, the way this guide compares a well-fitted shoe to a poorly-fitted one."
@@ -97,7 +101,7 @@ comfort matters more than style.
 A good running shoe should feel ______ from the very first step. Check the ______ under your heel before you
 buy. Your foot's ______ tells you how much ______ you need. A shoe that fits well feels ______ at the heel.
 
-Check the Mystery Quote guesses now against the text: does "the best shoe is one you forget you're wearing"
+Check the Mystery Quote readings now against the text: does "the best shoe is one you forget you're wearing"
 match the guide's advice about comfort and fit?
 
 ---

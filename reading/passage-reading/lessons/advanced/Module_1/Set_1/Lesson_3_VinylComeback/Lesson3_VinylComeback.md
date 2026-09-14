@@ -6,7 +6,7 @@
 **Phase 1 Hook:** Mystery Quote | **Phase 3 Protocol:** Town Hall Role-Play
 **Vocabulary Theme:** Music & analog sound (turntable, groove, warmth, crackle, pressing, needle)
 **Topic:** The real-world resurgence of independent vinyl record shops
-**Version:** 1.1.3.1
+**Version:** 1.1.3.2
 
 Generated per `Generate_Lesson_Prompt_v2.8.md`, following the approved
 `Module1_Advanced_Lesson_Plan.md`, Lesson 3 row.
@@ -39,10 +39,14 @@ DAY 1 PACING
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Mystery Quote hook (board-dependent, 5 min):** Write this quote on the board with no source given: "It sounds
-warm, like it's alive." Ask: "What could this be describing? A person? A song? Something else?" Collect 3-4
-student guesses on the board exactly as students say them (do not pre-write any guesses). After reading, return
-to the board and check which guesses come closest to what the writer actually means.
+**Mystery Quote hook (board-dependent, 5 min):** Name the topic first, before anything goes on the board:
+today's text is a newspaper column about vinyl records, and about why people who can stream any song instantly
+and free are buying records again and paying more for them. Ask whether students do anything the slower way on
+purpose when a faster way exists, and why; take 3-4 aloud. Then write this line from the column on the board:
+"A generation raised on instant, frictionless access is now paying extra, on purpose, for a little friction
+back." Ask what the writer means by *friction* here, and why anyone would pay extra for it - both answerable
+from the line itself. Collect 3-4 readings on the board exactly as students say them (do not pre-write any).
+After reading, return to the board and check which come closest to what the writer actually means.
 
 **Skill Spotlight (2 min):** "Today we're practicing describing something by comparing it to something else and
 giving a clear reason for our opinion, the way this writer compares listening to vinyl records to streaming music
@@ -123,9 +127,9 @@ or phrase capturing your reasoning in the margin next to that marker.
 > ¹ Record Store Day is an annual event, started in the United States in 2007, when independent record shops
 > release special limited-edition pressings and hold in-store events to celebrate vinyl and support local shops.
 
-**Board-dependent moment (Phase 1, satisfies Section 0.7):** After reading, return to the Mystery Quote guesses
-collected on the board during the hook. As a class, check each guess against Paragraph [C]: which guesses come
-closest to the writer's actual point about vinyl's "warmth"? This only exists once the class's own guesses are
+**Board-dependent moment (Phase 1, satisfies Section 0.7):** After reading, return to the Mystery Quote
+readings collected on the board during the hook. As a class, check each against Paragraph [C]: which come
+closest to the writer's actual point about vinyl's "warmth"? This only exists once the class's own readings are
 on the board to check.
 
 ### Phase 3: Day 1 Literal Comprehension & Vocab Context Check (25 min)
@@ -287,7 +291,7 @@ show I think this is [good/well-made], without saying it directly." Say it out l
 cold-calls 2-3 pairs to share aloud. Nothing is collected or graded.
 
 **Board-Dependent Moment Rotation note:** this lesson places its two board-dependent moments in Phase 1 (Day 1,
-the Mystery Quote guess-and-check) and Phase 3 (Day 2, the Town Hall report-back), rather than Phase 1 + Phase 2
+the Mystery Quote read-and-check) and Phase 3 (Day 2, the Town Hall report-back), rather than Phase 1 + Phase 2
 as Lesson 2 did, keeping the required slot genuinely varied across this Set's cycles rather than settling into
 its own template.
 
@@ -326,7 +330,7 @@ its own template.
     stated reasons, organization, evaluative word choice, register shift, rhetorical framing) - none drift into
     Arguing (a verdict on whether vinyl "should" be supported) or Evaluating; the Town Hall discussion prompts
     stay description-and-comparison-focused, not policy verdicts.
-12. **Board-dependent moment:** two genuine instances - Phase 1's live Mystery Quote guess collection (built from
+12. **Board-dependent moment:** two genuine instances - Phase 1's live Mystery Quote reading collection (built from
     student call-outs before reading, checked against the text afterward) and Phase 3's live report-back list
     (synthesizes each table's distributed findings; no single table's notes contain the full picture).
 13. **Skill Spotlight / Closing Transfer Check:** Day 1 Phase 1 names the skill in plain language (comparison-

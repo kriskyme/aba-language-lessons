@@ -5,7 +5,7 @@ Generated per `Generate_Lesson_Prompt_v3.5.md`, against Module 1's approved Set 
 pass as Lesson 3 and checked directly against it for the Section 0.6 / §D6 adjacency rules. Last lesson of
 this Set.
 
-**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.4.2
+**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.4.3
 **Genre:** Short notice / simple sign | **Reading strategy:** Partner / Shared Reading
 **Phase 1 hook:** Mystery Quote | **Phase 3 protocol:** Jigsaw Expert Panels
 **Vocabulary theme:** Animals and markings
@@ -53,15 +53,19 @@ Credits are published in `../Set1_Beginner_Image_Credits.md`; the packet prints 
 
 ### Phase 1: Pre-Reading & Activation (15 min)
 
-**Mystery Quote hook (5 min):** before anyone sees the notice, show one line from it on its own:
+**Mystery Quote hook (5 min):** name the topic first, in Beginner sentences: "Today you read a lost cat
+notice. A cat named Pip is lost. The notice says what Pip looks like, so people can find her." Ask each
+student to say one thing about a cat or a dog they know - what does it look like? Every student has an
+answer to that. Then show one line from the notice:
 
 > Her fur is very soft to touch.
 
-Ask: "Who is *her*? Where would you read a line like this?" Take six or seven guesses.
+Ask: "What else do you think the notice tells you about Pip? Say one thing." Take six or seven. These are
+predictions the orientation makes reasonable - colour, tail, size - not guesses at who *her* is.
 
-**Board-dependent moment (Phase 1, this lesson's Day 1 slot):** write every guess on the board as it is
-called out. After the shared reading in Phase 2, go back down the list and tick the guesses the notice
-actually confirms and cross out the ones it rules out. The checked list exists only on the board.
+**Board-dependent moment (Phase 1, this lesson's Day 1 slot):** write every prediction on the board as it
+is called out. After the shared reading in Phase 2, go back down the list and tick the ones the notice
+actually tells you and cross out the ones it does not. The checked list exists only on the board.
 
 **Skill Spotlight (2 min):** "Today we're practicing describing an animal by its markings, the way the notice
 tells you Pip is black and white and has a long tail." Say the same sentence to the whole class; do not

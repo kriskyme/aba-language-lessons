@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.42)
+# Student Packet Style Guide (v2.48)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -767,6 +767,9 @@ these.
 | Frame / sentence frame / fixed frame / two-slot frame ("complete the frame," "say the frame," "use these frames," "not a memorized frame") | **Sentence.** "Complete the sentence," "Say the sentence," "Use these sentences," "Write your sentence three times." A frame is a teaching device, and the student's job is to finish a sentence; naming the device teaches nothing and a student who asks what a frame is gets a lesson in pedagogy instead of an answer. The word survives only where it is the content: a backpack's internal frame, a loom's wooden frame, the verb ("how the report frames the story"). "Frame" stays in the lesson `.md`, which is the teacher's document, and in this guide. |
 | Internal item labels (STOP & CHECK, Fact Finder, the native-Level item set's own name, controlled-practice type names) | Ordinary numbered or lettered questions with no internal label carried into student view. |
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
+| Metalanguage for the skill being taught: **time connectors**, sequence markers, transition words, discourse markers, cohesive devices, signposting, topic sentence, hedging | Not printed as a label. Name what the words **do**, in the student's own terms: "the words that tell you when," "your own words to show when each thing happened," "the sentence that says what the paragraph is about." The failure this catches is not a whole packet written in jargon - it is **one** surviving instance. The term gets paraphrased everywhere the page was written carefully and then appears, unglossed, in a single task, usually the highest tier, because that tier's CSV row is phrased in it and the row got copied into the stem. The student meets a named category once, having been taught the thing under a different name or no name, and has no way to tell whether it means something new. So the check is a count, not a read: grep the term across the finished packet, and if it appears at all, either every instance is plain or the term is genuinely taught on the page first. Teaching it is a real option at the upper Bands, but then it is introduced where the skill is introduced and used consistently after - never named once in isolation. The teacher-side Markdown keeps whatever term it likes; this row is about the printed page. |
+| Delivery mechanics: who presses play and when it stops ("your teacher will stop the audio partway through," "your teacher will play two parts of it"), and how long a beat lasts ("you will have about half a minute to write," "you have five minutes for this") | Not printed. Delivery is teacher-led facilitation, not page content, and a time allowance printed on the page is a clock the student cannot see and the teacher will override anyway. The page states what the student does with it, not what will be done to them. **What survives the cut** is anything the task itself turns on, said in the student's own experience rather than as teacher action: "You will hear two parts of it," "You will hear the first part of it," "You will hear the story again later, all the way to the end." Where the page already prints the parts and their times, even that is redundant and the instruction is just the student's job: "Fill in only the box for the part you have just heard." |
+| The lesson's staging narrated back at the student: what they do now, what happens after that, what they will come back to and change ("answer it from what you heard the first time, before anything is played again. Then you will hear the whole story once more and change any answer you now hear differently, ticking the ones that moved") | Not printed. This is the same fault as delivery mechanics one row up, one level out: not who presses play, but the **teaching protocol** - a commit beat, a second pass, a revise beat - written out as a script the student reads before doing any of it. The staging is the teacher's to run and it runs whether or not the page describes it; printed, it buries the one instruction that matters under a paragraph about a sequence the student cannot act on yet. The page states the job in front of them - "Do one task below" - and adds, in one short clause, only what stops them committing too hard too early: **"You may have to listen to it again," "You will read it again later."** Not when, not how many times, not what to do differently on the second pass. The student finds that out when the teacher gets there. |
 | Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
 | Section numbers, prompt names, version narrative | Never appear. |
 | Object logistics and object handling ("put it on your desk," "borrow one if you have none," "hold it up," "take out your...," "look at it," "point to the part") | Not printed; the object is a subject, not a prop (Quality Standards §D8). The packet prints the choice list and the task, nothing about where the object is or about looking at or pointing to it; a partner check asks the student to say which part a word describes. |
@@ -845,6 +848,14 @@ also makes the corrected text, rather than a list of loose words, the thing the 
 this governs a student's own handwriting: "cross out the old version and write the new one above it" on
 their own draft is theirs to space, and stays.
 
+**A question is printed as a question.** Where an item simply asks something, the page asks it - "Why did
+this day matter to him?" - not "In one sentence, say why this day mattered to him." The wrapper adds a verb
+the student does not need and a length the answer line already states, and it turns the one thing that should
+be scannable, the question, into the tail of an instruction. A stated length survives only where the length is
+part of what the answer must do: "Summarize the repair in four sentences, in order" keeps its four sentences,
+because four is the shape of the task. Clauses that carry a real constraint stay too, after the question mark:
+"Why did this matter to him? Use what he says, not what you assume."
+
 **Instructions as steps, and when not to use them.** Numbered steps are for actions a student could stop
 between: each one has its own product, its own target, or a choice to make (a self-check list, a Task with a
 written answer per part). A Task like that is a one-sentence lead line after the label and star ("Check your
@@ -863,6 +874,33 @@ each is counted rather than eyeballed:
   they cross out and try again, and a sentence that runs a few words long has nowhere to go.
 - **A prompt that asks for exactly one line** ("Write one line saying what it withholds") keeps one line.
   That is the answer's stated length, not an under-sized space.
+
+**An organizer cell is counted the same way, and its rows follow the input.** A `.notes-table` cell is a
+response space, so its height is counted from what that row is expected to hold, never left at the default
+because the default is what the class ships with. Two cases:
+
+- **A cell holding a phrase** - one link of a chain, one column of a K-W-L - keeps the base
+  `.notes-table td` height.
+- **A cell holding everything a student took from one delivered part of the input** - a played segment, a
+  chapter, a scene - takes `.notes-tall` on the table (§H.1), which is sized for three or four handwritten
+  lines. A row standing in for five minutes of listening and a row standing in for one phrase are not the
+  same size, and printing them the same tells the student to write one phrase.
+
+**Where the source has a named part structure, the organizer's rows are that structure.** One row per part,
+in the source's own order, each row naming its part and saying where that part sits in the source: a
+timestamp range for a clip ("Part 3 · 5:27-10:18"), the section or chapter heading for a text. This holds
+whether or not the delivery pauses. Where the input is **delivered in named parts** (Quality Standards
+§D15), the locator tells the student which box the pause is for, and an organizer whose rows cut across the
+parts leaves them nowhere to write during the pause the segmenting exists to give them. Where a short input
+**plays or is read straight through**, the same locator is a signpost: a student who has lost the thread can
+see which stretch is running and rejoin at the right row instead of guessing. Say which it is - a locator on
+a straight-through source is a place-finder, not a cue to stop.
+
+Rows labelled with bare counters - "Step 1, Step 2, Step 3" - carry none of that. They tell a student how
+many boxes there are and nothing about which one they are in, which is the one thing a student who has
+fallen behind needs. Use them only where the source genuinely has no part structure to name. Number the rows
+from 1 on the student page in the source's own order; the lesson's teacher-side segment label stays off it
+(§E).
 
 Over-provisioning is its own fault: a dozen lines under a task that needs nine pushes what follows onto another
 page and tells the student the answer should be longer than it is.
@@ -1038,6 +1076,11 @@ cover it for the re-encounter; Quality Standards §D12), `.reader-copy`/`.reader
 }
 .notes-table td {
   height: 38px;
+}
+/* One row per delivered part (Quality Standards D15): sized for three or four
+   handwritten lines, not a phrase. Applied to the table, not the cell. */
+.notes-table.notes-tall td {
+  height: 104px;
 }
 
 .upside-down {
@@ -1364,8 +1407,26 @@ Run this list first, then the modality's own list.
     deliverable the packet cannot hold? (§F)
 30. Is "everyone does this" stated once in the set's lead-in and nowhere else, with no un-starred Task
     carrying a sentence restating that it is for everyone? (§F)
+31. Is every organizer cell's height counted from what the row holds rather than left at the default - and
+    where the source has a named part structure, does the organizer carry one row per part, in the source's
+    own order, each naming its part and its locator into the source (a timestamp range, a section heading),
+    on a `.notes-tall` table - whether the delivery pauses between parts or runs straight through, and never
+    bare "Step 1, Step 2" counters where a real part structure exists? (§F, §H.1)
+32. Is the page free of delivery mechanics - who presses play, when it stops, how long a beat lasts - with
+    anything the task genuinely turns on stated as what the student will hear rather than as what the teacher
+    will do? (§E)
+33. Is every item that simply asks something printed as the question itself, with no "In one sentence, say
+    why ..." wrapper, and a stated length kept only where the length is part of what the answer must do? (§F)
+34. Is the lesson's staging kept off the page - no commit-then-replay-then-revise script, no "before anything
+    is played again," no account of what a later pass will ask - with the instruction stating the job in front
+    of the student plus at most one short clause telling them the input comes back ("You may have to listen to
+    it again")? (§E)
+35. Does no name for the skill itself reach the printed page unless the page teaches it - "time connectors,"
+    "sequence markers," "transition words," "topic sentence" - checked by searching the finished packet for
+    the term rather than by reading, since the standard failure is one unglossed instance in the highest
+    tier's stem while every other mention was paraphrased? (§E)
 
 ## Changelog
 
-**Current version: v2.42.** For the full dated version history and the reasoning behind each
+**Current version: v2.48.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

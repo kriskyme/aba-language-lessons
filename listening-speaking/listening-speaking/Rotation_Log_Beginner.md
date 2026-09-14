@@ -98,3 +98,5 @@ Unit 1A's Task C modelled "It is big and heavy. = the book" directly above an it
 complete "The book: It is ___ and ___" from a bank holding big and heavy, so the model answered its own item;
 it now models on the pen, which no item in either Unit describes (Quality Standards v1.22 §C9). `1.1.1.1` ->
 `1.1.1.2`. Both moved one further in the "frame" sweep above.
+
+**Hook reframed to orient before it asks (2026-09-14).** Quality Standards §D13's content sweep did not reach this Band when the rule landed. Module 1 Set 1 Lesson 4 HowAboutThis (`1.1.4.0` -> `1.1.4.1`) printed a line from the clip cold and asked students to circle where it is said, which is the withheld material itself. The packet now states the situation first in Beginner sentences (Anna is going to the theater; Genie shows her clothes; she says yes or no), prints the line inside that situation, and turns the circle-one into a prediction the orientation makes reasonable - what Genie shows her next, *a dress* or *a suit* - which still feeds the Phase 4 board tally unchanged.

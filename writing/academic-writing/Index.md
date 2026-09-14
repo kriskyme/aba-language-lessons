@@ -328,6 +328,25 @@ states it as optional and Lesson 2 teaches the required comma after an opening t
 
 ## Pending work
 
+- **"Topic sentence" on the student page: is it taught curriculum vocabulary here, or an unglossed label?
+  (Style Guide §E, self-check 35, 2026-09-14.)** The rule landed that day after a Listening/Speaking lesson
+  printed "time connectors" once, unglossed, in its highest tier's stem. A sweep of all three modalities found
+  Listening/Speaking and Passage Reading cases and fixed them; **Academic Writing's case is different in kind
+  and is deliberately not swept**, because at these Bands the term may be legitimate content rather than
+  jargon leaking onto the page. Nine packets print it:
+  `proficient/Module_1/Set_1/Lesson_2_MyHeadphones/` (9 times), `Lesson_1_MyHeadphones/` (6),
+  `Lesson_3_MyBag/` (6), `advanced/Module_1/Set_1/Lesson_2_MyRoom/` (6), `Lesson_1_MyRoom/` (5),
+  `Lesson_3_TwoPlacesToStudy/` (5), `proficient/Module_2/Set_1/Lesson_2_MyBag/` (5),
+  `advanced/Module_1/Set_1/Lesson_4_TwoPlacesToStudy/` (2), `proficient/Module_1/Set_1/Lesson_4_MyBag/` (1).
+  **The counts are the finding.** MyHeadphones Lesson 2 genuinely teaches it on the page ("The jobs are:
+  **topic sentence** (states the paragraph's one point), ...") and then uses it throughout, which is exactly
+  what §E sanctions. `Lesson_4_MyBag` uses it **once**, in a ★★ stem, with no on-page teaching - the failure
+  signature the rule names, and it also leans on a different lesson in the Set having taught it, which §D9
+  does not allow outside the carried draft. The low-count packets are the ones to check first. **What is
+  needed is one decision, not nine edits:** does Academic Writing teach "topic sentence" as named vocabulary
+  at Advanced and Proficient? If yes, every packet that uses it must introduce it, and the 1- and 2-count
+  packets are the gap. If no, all nine paraphrase it. Do not sweep either way until that is settled.
+
 - **No lesson has been audited against §C9's extended self-answering-premise rule (2026-09-14).** Quality
   Standards §C9 now states that a stem asserting a change, reversal, or negation has already handed over the
   state it changed from, so it cannot then ask for that state (see `shared/Changelog.md`, v1.25). The rule was

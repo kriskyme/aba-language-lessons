@@ -1,6 +1,6 @@
 # Listening/Speaking Module 2, Lesson 2 (Intermediate) - The Firefighter and the Girl in the Bathtub
 
-**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.2
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.4
 
 Generated against `Generate_Lesson_Prompt_v2.6.md` with `shared/Program_Conventions.md` and
 `shared/Generation_Quality_Standards.md`. Planned in
@@ -103,10 +103,13 @@ that stretch once more with the words covered.
 
 ### Phase 1: Hook, Good to Know & Vocabulary (15 min)
 
-**Mystery Quote hook (4 min).** One real line from the clip is printed in the packet, with nothing around
-it: *"And she says, oh, my God, that's me."* Students write who they think is speaking, who "me" is, and
-what has just happened. Pairs compare, then two or three read theirs out. Nobody is told the answer yet;
-the clip settles it in Phase 4.
+**Mystery Quote hook (4 min).** Name the topic first, in these words: "Today you are listening to a real
+radio story. A firefighter in Los Angeles carried a young girl out of a burning house in 1993. Thirty
+years later, the two of them meet again and talk about that night." Then ask: have you ever met someone
+again after years apart? Who was it, and what was the first thing you said? Take two or three aloud.
+Only then print-and-read the real line from the clip: *"And she says, oh, my God, that's me."* Students
+write one sentence on what they now expect the story to say about the moment those two meet again. Pairs
+compare, then two or three read theirs out. The clip settles it in Phase 4.
 
 **Listening Skill Spotlight (2 min)** (Quality Standards §D1). Say, in these words, to the whole class:
 "Today we are practicing predicting from context: using what a speaker has already told us to guess what
@@ -375,7 +378,17 @@ the list together after all four.
 List: checked, shopped, called, helped.
 **Answer note:** the point is the past-tense ending, not spelling speed; accept any correct rewrite.
 
-Then say one sentence about the story using the frame, out loud, to your partner.
+Then say one sentence using the frame, out loud, to your partner, about a time somebody helped you, using one
+word from the list above.
+**Answer note:** any true one-action sentence with a past-tense verb, for example *I called my sister.* The
+sentence is about the student's own day, not about the clip.
+
+**Rescoped at `2.1.2.4`.** This step used to read "say one sentence about the story," which put ★ off Practice
+It's own shared prompt: the lead-in tells the class that everyone is talking about a time somebody helped
+them, and Tasks B, C and D all do, while ★ alone talked about the firefighter's story. Quality Standards §B
+item 43 now states the rule this broke. Item 1's word-repetition drill is untouched: *Say from sound* is a
+listening shape by design and does not have to sit on the shared subject, but the **spoken production** does.
+Found while fixing the identical defect in this Set's Lesson 1, not reported separately.
 
 #### ★★ Task B (Level 3)
 

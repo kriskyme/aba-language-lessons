@@ -542,3 +542,184 @@ and `Changelog.md`. The Set's earlier entries above came back intact from the la
 this lesson beyond what those two sources carry is not recovered.)*
 
 **"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 Lessons 1-4 (LostKitchen in both the base Set and the TOEFL-track fork), Set 2 Lessons 5-8, and Module 2 Set 1 Lesson 3 (MountBowen).
+
+**Hooks reframed to orient before they ask (2026-09-14).** Quality Standards §D13 (a hook orients before it asks; no hook question whose answer lies only in withheld material) landed 2026-09-14 but its content sweep did not reach this Band. Four lessons here still opened on an unanswerable question and are fixed now, `.md` and packet together, each bumped one version: Module 1 Set 1 Lesson 1 LostKitchen (`1.1.1.3` -> `1.1.1.4`) and its TOEFL-track fork (`1.1T.1.7` -> `1.1T.1.8`), which asked who said an unattributed quote and what the place became; Set 1 Lesson 2 LivingTextbooks (`1.1.2.4` -> `1.1.2.5`), which asked what decade an uncaptioned house was built and whether it still stands; Set 2 Lesson 5 HighLine (`1.2.5.2` -> `1.2.5.3`), which withheld the place name entirely; and Module 2 Set 1 Lesson 1 HubbleRepair (`2.1.1.1` -> `2.1.1.2`), which asked who is speaking and what job they are in the middle of. Each now names topic, situation and text type first, asks one question every student can answer from their own life or from what is printed, and only then prints the line - asking what it leads them to expect, never who said it.
+
+**Lesson 1's runtime corrected, and its segment map with it (2026-09-14), version `2.1.1.2` -> `2.1.1.3`.**
+Per user report on the packet: "the listening is 17 minutes long." The lesson had stated 20 to 24 minutes, a
+figure derived from the transcript's word count (about 3,450 words of spoken text) at an assumed storytelling
+pace, because neither of The Moth's own pages for this story states a duration. The derived figure was roughly
+30% high. The real runtime is about 17 minutes, and because all six segment boundaries had been proportioned
+against the wrong total, they were recomputed by cumulative word position in `HubbleRepair_Transcript.md`
+scaled to 17:00: Segment 1 0:00-2:00, Segment 2 2:00-3:56, Segment 3 3:56-5:27, Segment 4 5:27-10:18, Segment 5
+10:18-13:31, Segment 6 13:31-end. The played span (Segments 2 through 5) is therefore 2:00 to 13:31, about 11
+and a half minutes rather than the 12 to 14 claimed; the §0.2 deviation is smaller than recorded but still
+real, and stays flagged. The old map was also mis-proportioned rather than merely mis-scaled - it put Segment 2
+at 3:30 where the words put it at 2:00 - so this is a recomputation, not a rescale. Generalized to the Lesson
+prompt, `_v2.7.md` -> `_v2.8.md`: §0.2 now requires the runtime to be read off the media and forbids deriving it
+from word count, assumed pace, or genre. **Open item flagged in the lesson, not silently fixed:** Phase 4 Beat 2
+budgets 5 minutes to replay those 11.5 minutes, a mismatch that predates this correction; it is logged by name
+in `Index.md` Pending work because resolving it means rewriting two Levels' listening purposes.
+
+**Lesson 1's listen is now segmented, not one block (2026-09-14), version `2.1.1.3` -> `2.1.1.4`.** Per user
+direction: "I don't want to just play this long audio. I only want to play segments." Generalized to Quality
+Standards §D15 - a delivered input past its Band's ceiling arrives in the named parts the lesson already
+labels, with a short catch-up checkpoint between - and to the Lesson prompt, `_v2.8.md` -> `_v2.9.md`, whose
+Phase 2 bullet had said the opposite ("Play the full source once"). Passage Reading had already solved this
+with its lettered `[STOP & CHECK]` stops, which is what carried the swap test. In this lesson: Phase 2 plays
+Segments 2, 3, 4 and 5 one at a time (1:56, 1:31, 4:51, 3:13) with a 30-to-45-second pause after each, mapped
+one-to-one onto the sequence chain's cells - Segment 2 fills "What was broken," Segment 3 "Getting out there"
+and "What went wrong," Segment 4 "What they tried," Segment 5 "What finally worked" and "How it ended" - and
+the phase is budgeted at about 11:30 of playing time plus three pauses, which is its full 15 minutes. Phase 4
+Beat 2 now re-delivers **Segment 5 alone** (3:13 inside a 5-minute beat) instead of the whole span, with all
+four Levels' narrowed purposes re-pointed into that segment, which it carries: Drew at the window, the sixty
+pounds, the flat battery and the fix. **This clears the Beat 2 open item flagged earlier the same day** - the
+5-minutes-for-11.5 mismatch is gone, resolved by making the part rather than the whole span the unit a second
+pass works on. The packet's Listening Notes instruction now tells students the audio stops after each of four
+parts and to fill only that part's boxes.
+
+**Lesson 1's Listening Notes organizer rebuilt to match the four played parts (2026-09-14), version
+`2.1.1.4` -> `2.1.1.5`.** Per user direction: "let's update the listening note boxes into 4 rows corresponding
+to those segments. include the timing in the segments. give more vertical space to write the notes." The
+packet had kept the sequence chain's six links as six rows while the audio now stops four times, so during
+each pause a student had two half-boxes open and none that matched what they had just heard; every box was
+also the base `.notes-table` height, sized for a phrase, including the one standing in for Segment 4's four
+minutes and fifty-one seconds. The organizer is now four rows in playing order - Part 1 2:00-3:56, Part 2
+3:56-5:27, Part 3 5:27-10:18, Part 4 10:18-13:31 - each naming its times on the student page, each on the new
+`.notes-tall` modifier at 104px, about three or four handwritten lines. All six chain links survive, grouped
+two into Part 2 and two into Part 4 rather than split across rows. The board chain in the `.md` was regrouped
+the same four ways so board and packet correspond, and the phase's Segment-to-Part mapping table now names
+which packet box each segment feeds. Student-side the parts are numbered from 1; "Segment" stays a teacher
+term (Style Guide §E). Generalized to Style Guide §F plus the new `.notes-tall` class in §H.1 (v2.43) and to
+the Student Packet prompt, `_v2.8.md` -> `_v2.9.md` §2.6.
+
+**Lesson 1's Phase 2 organizer gained its Answer notes (2026-09-14), version `2.1.1.5` -> `2.1.1.6`.** Per
+user request for the answers to each of the four parts. The organizer had been rebuilt into four timed boxes
+earlier the same day but carried no exemplar for what belongs in them, so a teacher running the segmented
+listen had nothing to check a box against at the Phase 4 board moment. One `**Answer note:**` per part now sits
+under the Segment-to-Part mapping table (Quality Standards §C9, §E2 - in the `.md` only; the packet carries
+none of it), each written as a bolded core that makes a box complete plus what a strong Level 6 or 7 box adds,
+and each grounded in its own segment's transcript span rather than in the lesson's existing summaries. Noticed
+while doing it, not swept: several other lessons' Phase 2 organizers carry no exemplar for their own cells
+either - `Lesson3_Backpack.md`'s Internal/External Frame T-chart is a confirmed case - so the gap is wider than
+this lesson. Logged in `Index.md` Pending work rather than fixed here, since each one means reading that
+lesson's transcript against its own organizer.
+
+**Module 2 Set 1's Task A underline item removed, and the "In one sentence, say why" formula reworded
+(2026-09-14).** Per user direction on Lesson 1. Two separate defects, both Set-wide templates rather than
+one-offs. (1) "Underline the two words in your ordered list above that told you the order" appeared in
+Lessons 1, 2 and 3 and was impossible as written: the printed list holds event labels the packet wrote, and
+the ordering words are in the clip, which each lesson's own Answer note conceded by ending "accept any
+ordering words the student actually used." Quality Standards §C10 already forbade it and was extended to say
+that printing the container is not printing the thing. Item and clause removed from all three. (2) "In one
+sentence, say why this mattered to him" ran across all four lessons of the Set and once in Module 1 Set 2's
+QuietZone; Style Guide §F now requires an item that is simply a question to be printed as the question.
+Versions: `2.1.1.7`, `2.1.2.2`, `2.1.3.3`, `2.1.4.1`, and QuietZone `1.2.7.3`. Lesson 1's citebox also lost
+"You will hear a live audience, so expect laughter," judged local: the Phase 2 teacher instruction still
+primes students for the audience before playback.
+
+**Module 2 Set 1's ★★/★★★ summary items differentiated (2026-09-14).** Per user question on Lesson 1: the
+★★ item read "Summarize the repair in four sentences, in order" and the ★★★ item "Summarize the day in four
+sentences" - the same work, with the higher Level having lost the ordering constraint. Both Levels' CSV rows
+require a summary (Level 5 "summarize the sequence and why it mattered"; Level 6 identifies a missing piece
+"in addition to summarizing events"), so the fix was differentiation, not deletion. Each ★★★ summary now
+regains "in order" and carries its own row's demand - summarize using only what the account actually shows -
+which is the base its missing-information items interrogate. Swept across all three lessons with the pair
+(`2.1.1.8`, `2.1.2.3`, `2.1.3.4`); Lesson 4 Block42 has no summary pair. Generalized to Quality Standards §B,
+which now covers two Levels sharing one beat and forbids the higher Level dropping a constraint the lower one
+states. **Pattern worth recording for this Set:** three Set-wide template defects surfaced in it today - this
+one, the impossible "underline the two words" item, and the "In one sentence, say why" formula - all written
+once and copied across the Set's lessons. When any task shape in this Set is next questioned, check all four
+lessons rather than the one reported.
+
+**Module 2 Set 1's unnamed-feeling item reworded across all four lessons (2026-09-14).** Per user direction
+on Lesson 1. The item had asked the student to work out which feeling was in play *and* find the detail that
+signals it, where Level 5's CSV row names only the detail as the product and treats the unnamed feeling as its
+premise. Lessons 1-3 now state the feeling and ask for the evidence as a direct question - HubbleRepair
+"but that is close to how he feels while the repair is going wrong. What does he say or do that shows it?",
+FlintWater "once she works out what the water is doing", MountBowen "under the rock" - versions `2.1.1.9`,
+`2.1.2.4`, `2.1.3.5`. **Lesson 4 Block42 was handled differently on purpose** (`2.1.4.2`): its span is
+Tanimoto reporting what was done to him without protest, so the absence of a feeling word is the content, and
+supplying one in the stem would answer the item rather than set it up. Its stem now says the flatness is the
+point and asks the question without naming a feeling, and the `.md` records why it diverges from its
+Set-mates. Generalized to Quality Standards §C8, which now requires an item to be scoped to what its row names
+as the product, with that carve-out stated. Fourth Set-wide copied template surfaced in this Set today, after
+the summary pair, the underline item and the "In one sentence, say why" formula.
+
+**Module 2 Set 1: two items removed from every lesson carrying them (2026-09-14).** Per user direction on
+Lesson 1. (1) "Write one sentence saying what that detail tells you, and why you read it that way," the ★★
+follow-up, was redundant - but only became so earlier the same day, when the item above it was rescoped to
+supply the feeling in its stem; before that the follow-up was where the student named it. Generalized to
+Quality Standards §C8: re-read the items after any stem that gains a premise. (2) Task C's summary item, the
+one differentiated earlier the same day, removed outright. Versions `2.1.1.10`, `2.1.2.5`, `2.1.3.6`; Task B
+and Task C item numbering closed up in each packet. **Recorded, not hidden:** Level 6's Day 1 set now carries
+no standalone summary while its CSV row reads "identify one clearly missing piece of information ... in
+addition to summarizing events." Its three remaining items are all accounts of what the telling does and does
+not give, and its Day 2 row carries narrating outright, so the row is weakly rather than not served. Each
+lesson's `.md` now says so under Level 6, so a later pass reads the absence as a decision rather than
+restoring the duplicate.
+
+**Module 2 Set 1: Task C's generic missing-piece item removed (2026-09-14).** Per user direction on Lesson 1.
+Swept across the three lessons carrying the identical template (`2.1.1.13`, `2.1.2.6`, `2.1.3.7`); Task C is
+now two items in each, renumbered, with the answer notes trimmed. Level 6's CSV row still holds: its two
+remaining items identify what the account withholds against named concrete material rather than in the
+abstract, which is the reason the generic item was the one that could go. Block42's differently-worded version
+was left in place and flagged to the user. No shared rule was taken from this - no defect was named, and the
+one arguable flaw (the counterfactual tail) would have justified a reword, not a deletion. Lesson 1's item 1
+answer note was rewritten with the full inventory for Bueno and Drew at the same time.
+
+**Module 2 Set 1: Task D reduced to a single question (2026-09-14).** Per user direction, confirmed as
+replacing both items: "just ask what does each one leave the listener concluding." Swept across the three
+lessons with the two-item compare template (`2.1.1.14`, `2.1.2.7`, `2.1.3.8`), each keeping its own subject
+wording. **Unlike this Set's other removals today, this one leaves a CSV row short.** Level 7's row names two
+products - assess how structural choices shape what the listener is meant to conclude, *and* identify at least
+one unstated motive not directly admitted - and no other item in these lessons covers the second. A note under
+Level 7 in each `.md` records that, and the answer material for the removed item stays in the Answer note as
+teacher background, since the unstated interests explain why each account leaves a listener concluding what it
+does. Block42's four-item Task D is a different design and was left alone. **Running total for this Set
+today:** seven task shapes changed or removed, every one of them a template copied across the Set's lessons.
+
+**Lesson 1's Day 1 Closing Transfer Check removed - this lesson only (2026-09-14), version `2.1.1.15`.** Per
+user direction to remove the "Show What You Heard" section and the upside-down script, with scope confirmed as
+this lesson rather than the modality. Day 1 now runs five phases; the eight minutes were given to Phase 2
+(15 to 20 min, which the segmented playback had left with no margin) and Phase 4 (20 to 23). The packet lost
+the section, the STOP callout and the upside-down block, and its dead `.upside-down`/`.stop-flag`/`.stop-badge`
+CSS with them. **Deliberate divergence, recorded in the lesson's own `.md`:** Lesson prompt v2.9 Phase 6 and
+Packet prompt v2.10 §2.9 both still require this apparatus, neither was changed, and Lessons 2-4 of this Set
+still carry theirs - so this lesson does not match its Set-mates or its prompts here, by choice. Quality
+Standards §D2 is unaffected: it mandates the end-of-Day-2 check, and Wrap It Up is intact. **If this is later
+wanted modality-wide,** it means bumping both prompts and sweeping 32 packets; that option was offered and
+declined for now.
+
+**Lesson 1's Phase 5 verification windows removed - this lesson only (2026-09-14), version `2.1.1.17`.** Per
+user direction. Day 1 is now four phases: Hook (15), First Listen & Notes (20), Skill Instruction (12), Second
+Listen & Task (28). **Unlike the Phase 6 removal logged above, this one breaches a shared rule and the lesson
+records it as such.** Quality Standards §D12 requires Commit, Verify against the source, Return unsupported,
+and names Listening/Speaking's form of the arc as the second audio-only listen plus a bounded transcript
+window; the second listen survives in Phase 4 Beat 2, but Verify and Return unsupported are gone, so a student
+who mishears a word boundary has no route to finding out why. Both prompts still require the phase, and Lessons
+2-4 of this Set keep theirs. Cleaned up on touch: two dangling Phase 5 cross-references, a self-check item
+still describing the transfer-check script removed in the previous pass, and a heading/map mismatch that pass
+had left behind (Phase 4 headed 20 minutes while the map said 23). **Day 1 of this lesson is now structurally
+unlike every other lesson in the modality;** if the shape is wanted generally it needs both prompts bumped and
+a 32-packet sweep, which remains offered and not taken.
+
+**Lesson 1's Day 2 tiers rebuilt as a cumulative ladder (2026-09-14), version `2.1.1.20`.** Per user
+direction. Sentence counts gone from all four tasks; the shared core box keeps the prompt, the in-order
+telling and the outcome, and now states that each task adds one thing to the one above it. ★ a brief reason,
+★★ why it mattered, ★★★ one action or detail showing the feeling without naming it, ★★★★ the partner naming
+the feeling and the detail. **Two consequences flagged in the lesson `.md`:** Levels 6 and 7 no longer have
+tasks matching their CSV rows (both now sit on the Level 5 row's telling-detail demand), and ★★★★ adds a
+partner action rather than a speaker demand, so ★★★ and ★★★★ produce the same thing. The smallest repair for
+the second is named there. The v1.38 specification written into these two tasks earlier the same day is
+superseded. Not swept to Lessons 2-4, whose Day 2 shape is now an open question rather than a known fix;
+their Pending work entry stands.
+
+**Lesson 1's pronunciation phase repaired after the Phase 5 removal broke it (2026-09-14), `2.1.1.23`.**
+Per user report that it "doesn't seem relevant." It was not irrelevant, it was broken: both of its
+instructions named a printed stretch, and removing Day 1's Check It Against the Source earlier the same day
+had taken the only printed transcript out of the packet, so there was nothing to mark or read aloud. The
+stretch now sits in the pronunciation box itself. The feature was also re-pointed from generic reduced forms
+onto the ordering words the lesson teaches, so pronunciation and sequencing work the same words. **Lesson
+worth carrying forward:** when a phase is removed, grep the rest of the lesson for what depended on it; that
+check was not run in the removal pass.
