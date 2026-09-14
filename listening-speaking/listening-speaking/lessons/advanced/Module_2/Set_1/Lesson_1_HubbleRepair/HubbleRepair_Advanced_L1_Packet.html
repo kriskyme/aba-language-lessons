@@ -290,7 +290,7 @@
       text-align: center;
       margin: 20px 0 4px;
     }
-    .article .byline {
+    .byline {
       text-align: center;
       font-family: system-ui, -apple-system, sans-serif;
       font-size: 11px;
@@ -311,6 +311,9 @@
     }
     .footref {
       font-weight: 700;
+      font-size: 0.72em;
+      vertical-align: super;
+      line-height: 0;
     }
     .idiom-mark {
       text-decoration: underline dotted var(--ink);
@@ -493,6 +496,38 @@
       font-family: system-ui, -apple-system, sans-serif;
       font-size: 14px;
     }
+      .verify-window {
+        border: 1px solid var(--ink);
+        border-left: 4px solid var(--ink);
+        background: var(--paper);
+        padding: 12px 16px;
+        margin: 18px 0 12px;
+        page-break-inside: avoid;
+      }
+      .verify-window .verify-src {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: var(--ink-soft);
+        margin: 0 0 8px;
+      }
+      .verify-window p {
+        margin: 0 0 8px 14px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .verify-window p:last-child {
+        margin-bottom: 0;
+      }
+      .verify-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        margin: 0 0 14px;
+      }
+
 
     @media print {
       body {
@@ -508,6 +543,7 @@
       .spotlight-box,
       .task-block,
       .article p,
+      .verify-window,
       .refresher,
       .discuss-block,
       .wrapup,
@@ -707,7 +743,7 @@
       <h1>Unit 1A: The Stripped Screw</h1>
       <div class="masthead-meta">
         <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
-        <span class="masthead-tag">Advanced 2.1.1.0</span>
+        <span class="masthead-tag">Advanced 2.1.1.1</span>
       </div>
     </div>
 
@@ -936,6 +972,38 @@
       </ol>
     </div>
 
+    <p class="section-title">Check It Against the Source</p>
+    <p class="verify-instr">
+      These are the speakers' own words. Read the one that matches where your answers changed, against what you actually wrote above, and mark the one place where your words and theirs are different.
+    </p>
+      <div class="verify-window">
+        <p class="verify-src">The telling, the handrail</p>
+        <p>
+          And the first thing I had to do was to pull off or remove a handrail from the telescope that was blocking the access panel. And there were two screws on the top, and they came off easily. And there was one screw on the bottom, right, and that came out easily. And the fourth screw is not moving. And my tool is moving, but the screw is not.
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">1.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+      <div class="verify-window">
+        <p class="verify-src">The telling, the call from Houston</p>
+        <p>
+          And they said it was going to take about 60 pounds of force for me to do that. And Drew answers the call, and he goes, &quot;60 pounds of force.&quot; And they call me Mass. It's short for my last name. He goes, &quot;Mass, I think you got that in you. What do you think?&quot;
+        </p>
+      </div>
+      <div class="qitem">
+        <span class="num">2.</span>
+        <div class="qbody">
+          Where are your words different from theirs?
+          <span class="ans-line"></span>
+        </div>
+      </div>
+    <p class="instr"><em>Now cover both boxes with your hand or a sheet of paper. You will hear these two stretches once more with the words hidden.</em></p>
+
     <p class="section-title">Show What You Heard</p>
     <div class="wrapup">
       <div class="stop-flag">
@@ -963,7 +1031,7 @@
       <h1>Unit 1B: The Stripped Screw</h1>
       <div class="masthead-meta">
         <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
-        <span class="masthead-tag">Advanced 2.1.1.0</span>
+        <span class="masthead-tag">Advanced 2.1.1.1</span>
       </div>
     </div>
 

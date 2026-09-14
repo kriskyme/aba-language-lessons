@@ -190,59 +190,55 @@ two-part piece; Module 2 adds its own paragraph and publishes. Lesson 4 at `1.1.
 
 ## Module 2: Narrating
 
-### Set 1 (planned and generated 2026-09-09; Part 2 of Module Pair 1-2, continuing Module 1 Set 1's kept paragraph)
+### Set 1 (first generated 2026-09-09 as Part 2 of Module Pair 1-2; de-paired, replanned and regenerated 2026-09-14 as a standalone Set)
 
-Planned before generation by `Generate_Module_Lesson_Plan_Prompt_v4.5.md` as half of
-`lessons/intermediate/ModulePair_1-2/ModulePair_1-2_Intermediate_Lesson_Plan.md` (plan 1.0), the first Pair plan
-written before its lessons; the four lessons generated against `Generate_Lesson_Prompt_v6.13.md` and their
-packets against `Generate_Student_Packet_Prompt_v3.15.md`. Global Lesson #s and version codes are scoped to
-Module 2 (Conventions §C/§G): this Set is Intermediate 1-4 again, at `2.1.x.0`. The piece is built in parts
-(Conventions §C v1.10): Module 1's kept descriptive paragraph stays; this Set adds a second paragraph in
-Module 2's form (one thing that happened with the item, in order, with an outcome and a reason) and Lesson 4
-assembles, peer-edits, revises, and publishes the whole. Lessons 1-4 write about the draft object only; the
-phone case returns only as Maria's Mentor Ladder in Lesson 1's second look.
+**This section was rebuilt 2026-09-14 after the file was truncated by a tooling error**, from
+`Module2_Intermediate_Lesson_Plan.md` (plan 1.0), `Index.md`, `Changelog.md` and the four lesson documents, all
+of which survived. Anything the earlier version held that is not derivable from those sources is not recovered.
+
+Originally generated 2026-09-09 against `Generate_Lesson_Prompt_v6.13.md` as Pair positions 5-8, inheriting
+Module 1's clothing Scenario across all four lessons. **De-paired by user direction 2026-09-14** - the reported
+symptom was that all four lessons carried the same topic, which was a correct consequence of the Pair rule
+rather than a generation fault (`shared/Program_Conventions.md` §C's Standing exception, v1.15). Replanned
+standalone as plan 1.0 against `Generate_Module_Lesson_Plan_Prompt_v4.6.md` and regenerated the same day against
+`Generate_Lesson_Prompt_v6.18.md`. Version codes continue rather than reset (Conventions §G). Two consequences
+are recorded rather than fixed: Module 1 Set 1's Lesson 4 still hands a piece off to a Module 2 that no longer
+receives it, and the fate of the Module Pair convention is deferred - both in `Index.md`'s Pending work.
+
+**Scenario: My Charger, then My Device.** Practice object (Lessons 1-2 and every Mentor Text): the student's own
+charger. Draft object (introduced at Lesson 2 Day 2, written about in Lessons 3-4): one device of their own from
+a printed list of eight - earbuds, speaker, watch, calculator, flashlight, remote control, game controller,
+mouse. The cross-Band topic sweep ruled out **my headphones**, already used by Proficient Module 1.
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Intermediate 1 | 1 of 4 (Pair position 5) | 2026-09-09 | Re-engagement with the kept paragraph; Module 2's Skill Spotlight; Grammar Focus A input, modeling, deeper practice; Mentor Ladder second look (each model completed by its story) | My clothing (draft object, continued from Module 1; same Scenario) | 2.1.1.0 |
-| 2 | Intermediate 2 | 2 of 4 (Pair position 6) | 2026-09-09 | Grammar Focus B; then / than; warm-up on the kept paragraph; planning the second paragraph against it | (same Scenario, continued) | 2.1.2.0 |
-| 3 | Intermediate 3 | 3 of 4 (Pair position 7) | 2026-09-09 | Drafting the second paragraph, complete on Day 1; merged self-edit checklist over both paragraphs, improve | (same Scenario, continued) | 2.1.3.0 |
-| 4 | Intermediate 4 | 4 of 4 (Pair position 8) | 2026-09-09 | Assemble the whole; Peer Editing (both Modules); revise for effect (join with a time clause, upgrade a verb, answer the reader, Level 5 reorders); final copy; publish (gallery walk); Closing Transfer Check on the student's key plus Module 2's own verb task on "this morning" | (same Scenario, continued; the finished piece is two paragraphs under one title) | 2.1.4.1 |
+| 1 | Intermediate 1 | 1 of 4 | 2026-09-09; de-paired and regenerated 2026-09-14; reworked through 2026-09-14 (see notes below) | Hook and Skill Spotlight; Grammar Focus A input, modeling, deeper practice; the Leveled Mentor Ladder, the Set's only presentation | My charger (practice object) | 2.1.1.10 |
+| 2 | Intermediate 2 | 2 of 4 | 2026-09-09; de-paired and regenerated 2026-09-14 | Grammar Focus B (time clauses); then / than; Day 2 prewriting introduces the draft object and the Draft Word Bank | My charger, then my device (draft object, printed list of eight) | 2.1.2.3 |
+| 3 | Intermediate 3 | 3 of 4 | 2026-09-09; de-paired and regenerated 2026-09-14 | Drafting the piece, complete on Day 1; self-edit checklist, check and improve on Day 2 | My device (draft object) | 2.1.3.2 |
+| 4 | Intermediate 4 | 4 of 4 | 2026-09-09; de-paired and regenerated 2026-09-14 | **The Set's finale:** a reader's request and Peer Editing (Day 1); final copy, publishing by pass-and-read, Closing Transfer Check | My device (draft object; the finished piece is one paragraph under one title) | 2.1.4.2 |
 
-**Grammar Focus (A/B):** Focus A: the simple past for a sequence of events (regular -ed with three spelling
-rules; irregular list wore, got, bought, chose, put, took, found, lost, gave, saw, paid, was / were) + time
-connectors (first, then, next, after that, finally; last winter, one morning) / Focus B: complex sentences
-with a time clause (when, before, after, while, as soon as) and the comma after an opening clause; confusable
-pair then / than. Level 5 extension: past-continuous background + adverbs of manner. Frames (Levels 2-3):
-"I ___-ed it." and "I ___-ed it and ___-ed it." Module 1's reason words reused for the outcome, not re-taught.
-Hand-selected for the Level 4 row (the bank's Alternate column is not yet authored); checked distinct from
-Module 1's pair and from Advanced Set 1's.
+**Grammar Focus (A/B):** retained unchanged through the de-pairing, which changed the Scenario and not the
+grammar. Focus A (Lesson 1): the simple past for a sequence of events - regular `-ed` with its four spelling
+rules, an irregular list the Scenario needs (got, bought, chose, put, took, found, lost, gave, saw, paid, lent,
+was / were), and time connectors that order events (first, then, next, after that, finally) or place them (last
+summer, one morning, yesterday). Focus B (Lesson 2 Day 1): complex sentences with a time clause (when, before,
+after, while, as soon as) and the comma after an opening clause; confusable pair then / than. Both hand-selected
+at the Level 4 row, the Grammar Focus Bank having no authored Alternate column - logged in `Index.md`.
 
-**Real-world writing form:** Personal narrative paragraph (Module 2's row), added to Module 1's descriptive
-paragraph as the second paragraph of one piece.
+**Module 2 Set 1 Lesson 1 reworked through the day (2026-09-14), `2.1.1.1` -> `2.1.1.10`.** In order: the Day 1
+grammar box trimmed for class load (irregular verbs to a two-across table, the time-word table down to its
+order-words row, two summary paragraphs cut); Activity 3 folded from three steps to one instruction; Day 2's
+editing paragraph changed from writing corrections above printed lines to crossing out and rewriting in full;
+its three Day 2 Tasks each folded to a single instruction; answer space recounted from the answers themselves
+(9 lines for the 82-word paragraph, 2 per composed sentence); Level 5's Task rewritten to send students to Level
+4's Task and add one demand; the "two or more words" threshold dropped from Activity 3b; sentence 2 of that
+rewrite made the worked example instead of a fourth item; and "frame" translated to "sentence" throughout.
+Set-mates moved with the sweeps that reached them: Lesson 2 `2.1.2.1` -> `2.1.2.3` (Task M now points at Task L
+instead of reprinting its paragraph and steps; "frame" to "sentence"), Lesson 3 `2.1.3.1` -> `2.1.3.2` ("frame"
+to "sentence"), Lesson 4 unchanged at `2.1.4.2`. The rules behind each are Style Guide v2.31-v2.35 and Quality
+Standards v1.19-v1.22, all in `shared/Changelog.md`.
 
-**Notes:** Draft Word Bank refilled for narrating (care, wearing, and getting verbs; time words; people and
-places; 32 words), printed in all four packets. Closing Transfer Check objects: the student's own key (both
-skills) and this morning (Module 2's verb). Frame-regime shapes per lesson: choose what fits + the guided round
-/ fix the wrong word (Lesson 1); better of two + pair judgment / spell from sound + plan the words (Lesson 2);
-plan the words + the draft / check and improve (Lesson 3); the reader's part + choose / transfer (Lesson 4).
-
----
-
-**Format for the next entry** (append below the table's last row within the relevant Set subsection, or start a
-new `### Set N` subsection for a new Set — do not overwrite anything above):
-
-```
-| N | Intermediate <global lesson #> | <Set position> of 4 | <date> | <content role> | <Scenario/topic, or "(same Scenario, continued)"> | <Module>.<Set>.<global lesson #>.<Version> |
-```
-
-Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way
-this Set's entry does — they apply to all 4 rows, not repeated per row.
-
----
-
-**Room-neutral publish step (2026-09-10), Lesson 4 `2.1.4.0` -> `2.1.4.1`.** Per Quality Standards §D11 (see
-`shared/Changelog.md`'s v1.16 entry), Lesson 4 Day 2's gallery walk - every final copy left open on its desk
-while students walked the room with a card - is now a pass-and-read: each copy is passed to a neighbor and on
-again, so every student reads two pieces that are not their partner's from their seat. The per-Level card task,
-the cold-call, and the Peer Editing form are unchanged. `.md` and packet both updated.
+**Module 1 Set 1 touched by the same sweeps (2026-09-14).** Lesson 2 (`1.1.2.8` -> `1.1.2.10`): a
+composed-sentence prompt gained a second answer line, and "frame" became "sentence". Lesson 4 (`1.1.4.15` ->
+`1.1.4.17`): the same second answer line, plus Task H now reads "Do Task G, then add a detail" rather than
+restating Task G's sentence. Lessons 1 and 3: "frame" to "sentence" only.

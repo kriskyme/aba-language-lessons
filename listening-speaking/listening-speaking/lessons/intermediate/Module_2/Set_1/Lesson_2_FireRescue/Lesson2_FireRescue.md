@@ -1,6 +1,6 @@
 # Listening/Speaking Module 2, Lesson 2 (Intermediate) - The Firefighter and the Girl in the Bathtub
 
-**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.0
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.2.2
 
 Generated against `Generate_Lesson_Prompt_v2.6.md` with `shared/Program_Conventions.md` and
 `shared/Generation_Quality_Standards.md`. Planned in

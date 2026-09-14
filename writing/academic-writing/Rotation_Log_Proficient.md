@@ -114,3 +114,7 @@ new `### Set N` subsection for a new Set — do not overwrite anything above):
 
 Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way
 this Set's entry does — they apply to all 4 rows, not repeated per row.
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 2 Set 1 `Lesson_2_MyBag/`, whose grammar table column headed **Frame** is now **Sentence**.
+
+**Teaching tables annotated (2026-09-14).** Per Quality Standards v1.23 §D14, a first introduction annotates each worked example feature by feature rather than showing before-and-after pairs. Module 1 Lesson 2's reduced relative clauses gained "what dropped" and "which participle, and why" columns (`1.1.2.0` -> `1.1.2.1`); Module 2 Lesson 2's fronting table gained "what moved to the front" and "does the verb jump in front of the subject" columns, the plain place-phrase row now saying no in its own column (`2.1.2.1` -> `2.1.2.2`).

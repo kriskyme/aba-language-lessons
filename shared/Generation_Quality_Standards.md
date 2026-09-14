@@ -1,4 +1,4 @@
-# Generation Quality Standards (v1.17)
+# Generation Quality Standards (v1.31)
 
 Shared, cross-modality quality rules for every generated lesson, homework assignment, and assessment,
 plus the one output self-check every generation run applies before its own modality-specific check.
@@ -47,6 +47,16 @@ with real stakes, a comparison worth making) and, on any production day, a genui
 The test, applied before finalizing: would a student at the lowest task Level, having done only their own
 Level's work, feel they did "the easy busywork" while everyone else did "the real thinking" or "the real
 talking"? If yes, strengthen that Level's task rather than leave the imbalance in place.
+
+**A tier that adds a demand to the Level below says so; it does not re-specify the task.** Where a higher
+task Level does the same work as the Level under it plus one more thing, its instruction names the Level
+below and states the addition ("Do Task D. Start three of your six sentences with the reason part, and put a
+comma after it."), and the student writes in the Task they were sent to. Re-specifying - restating the
+sentence count, the target words, and the requirements in fresh wording, with a second set of answer lines -
+makes the student read two full sets of requirements to find the one difference between them, and the two
+statements drift apart the moment either is edited. The rule holds only where the work really is the same
+plus one demand; a tier with its own object, its own source, or a different product is its own task and is
+written out in full.
 
 **Differentiated participation in live oral work:** an easier sentence stem inside the same live, public
 speaking turn is not differentiation - the demand of real-time public speech is roughly constant across a
@@ -109,14 +119,35 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    in the same task never state, list, or quote what the item asks the student to find: no "(the scene, then
    her background, then her philosophy)" after "summarize how the segment is organized," no "(like 'success
    story')" after "find one evaluative word," no "(from a measured tone to a regretful one)" after "locate one
-   tonal shift," no "(a 'quiet little cafe')" after "what she originally planned." In a two-source comparison
+   tonal shift," no "(a 'quiet little cafe')" after "what she originally planned."
+
+   **The stem's own premise counts, not just its parentheticals.** A stem that asserts a change, a reversal, or
+   a negation hands over the state it changed from, so the item cannot then ask for that state: "the writer
+   stops telling people the trail is easy... what had the writer said before?" answers itself, because a stem
+   saying somebody stopped saying X has already said X. The same goes for "she no longer uses the old method,
+   what did she use before?" and "the town rebuilt after the flood, what happened to it?" Write the premise as
+   the neutral fact that locates the moment ("before the walk, the writer had told everyone at home one thing
+   about the trail"), and let the item ask for the content. **A stem must not perform the verb the Level's own
+   can-do assigns to the student.** Where the CSS row has the student *identify* a pacing choice, *locate* a
+   shift, or *find* a detail, a stem that has already located it leaves only a reaction to it, and the item
+   stops testing the Level: "Day 3 takes one paragraph and the few minutes at the top take most of [C], what
+   does that make you weigh more heavily" has done the identifying, and answers itself besides, since the
+   longer treatment is self-evidently the weightier one. Name the place to look, never the thing to find:
+   "find the part the text spends longest on and the part it passes over fastest." In a two-source comparison
    item, the material printed for each source is that source's own words or a neutral paraphrase of what it
    says, never a characterization of its tone or a statement of the contrast the question asks for. That
    printed material is also enough to compare from: at least three short verbatim excerpts per source
    (ellipses at cuts, each excerpt within the lesson's fair-use ceiling), covering the same two or more
    subjects in both sources so the student compares like with like. A one-sentence summary of what a source
    covers, or a list of two-word fragments, is not enough; a student cannot rewind the clip or open the
-   second source mid-task, so the page carries the comparison's evidence. Those excerpts are written into
+   second source mid-task, so the page carries the comparison's evidence. **This floor is conditional on the
+   source not being re-inspectable, and inverts where it is.** It exists because a clip cannot be rewound and a
+   second source that is not printed cannot be opened. Where both sources sit in full on the page the student
+   is working from, as in a reading lesson whose packet prints the anchor text and a second text together, the
+   floor does not apply and pre-extracting the excerpts becomes the error: naming the shared subjects and
+   pairing the quotations performs the locating and matching the Level's own can-do assigns to the student,
+   which is exactly the failure described above. There the item says how many shared subjects to find and
+   nothing more, and the page gives ruled space to write each side's wording into. Those excerpts are written into
    the lesson `.md` itself, paired by subject, not left for the packet to supply: a packet is a regeneration
    of its `.md` (Style Guide §G), so an `.md` that only names what each source covers guarantees a packet
    that cannot meet this floor, however the packet prompt is written. Layout is the packet's choice: one
@@ -125,13 +156,91 @@ Every item set, at every task Level, in every lesson, homework, or assessment:
    "circle one" when options are printed, C10), a choice menu in which no option is the answer, or a gloss
    of a word the item does not test. A frame model at a
    fixed-form Level ("It is ___." shown once as "It is soft.") models the form, not the answer, and is not
-   covered by this rule. The teacher's exemplar answer belongs on an `Answer note:` line (E2), never in the
-   stem.
+   covered by this rule. A worked example is held to the same line: a starter or model that shows a finished
+   version of one of the task's **own** numbered items is that item's answer, however it is labelled, and a
+   student who spots the match has one fewer item to do while one who does not is marked against a peer who
+   copied. Build the example from something the task does not ask for, or take that item out of the ask and
+   say it is the worked one ("Sentence 2 is rewritten below. Rewrite sentences 5 and 8 the same way"), which
+   is the stronger of the two anyway: showing the before and the after makes the change itself visible, where
+   a bare finished sentence only shows where to arrive. The teacher's exemplar answer belongs on an
+   `Answer note:` line (E2), never in the stem.
 10. **An instruction names an action the page allows.** "Circle," "underline," "match," "cross out," and
     "point to" appear only when the thing to be circled, underlined, matched, crossed out, or pointed to is
     printed on the page. A two-way choice that exists only in a stem's wording ("Is she being modest, or does
     she really believe it?") is answered in writing, "Say which, and why," or its options are printed as an
     inline menu the student can mark. Never "Circle one and say why" over a plain answer line.
+
+11. **The steps inside one Task are distinct, the same way items are.** A numbered step earns its number by
+    requiring a judgment the previous steps did not already settle. Marking the same words a classifying step
+    already turned on, naming a category the student has just underlined, or re-stating the outcome of step 1
+    in a second notation is one step written three ways, and it reads to the student as being asked the same
+    question again. Fold such steps into a single instruction that names every mark to make ("Underline the
+    time word and circle the reason word"), and give the Task one answer space per thing genuinely written.
+    A later step is distinct when it acts on the first step's result rather than restating it: sorting what
+    was marked, rewriting a marked sentence, or explaining a choice. This applies to the `.md` activity and
+    to the packet Task that renders it, which must carry the same step count.
+
+    **A step whose product is already printed is a copy, not a step.** Writing, listing, or transcribing a
+    word, phrase, or sentence the page prints in full asks the student to hand back what the page gave them:
+    "circle the pair the sentence goes with, then write the sentence's two past forms" is finished by copying
+    the frame sentence directly above it, so the written half tests nothing and marks nothing. Saying a
+    printed word out loud is not the same thing - decoding is the production at a Level whose can-do is
+    reading - so an oral step stays wherever the CSV row assigns it. Nor is writing down *which* printed thing
+    the student picked: naming the one word in a chosen sentence that made it the better sentence records a
+    judgment the page does not make for them. The test is whether the printed material determines the answer
+    on its own - if a student could fill the line without having done the thinking step, it is a copy. Where a
+    Level's can-do does call for written production, what gets written cannot be what is printed: draw it from
+    a bank, from the student's own object or experience, or have the written step act on the printed text (put
+    it in order, change its form, finish it) rather than reproduce it.
+
+12. **A condition on an answer names what the answer must do, not an incidental shape.** "Open with a time
+    phrase of two or more words" is not a rule about time phrases; a one-word "Yesterday" does the same job as
+    "Yesterday afternoon" and is equally correct, so the threshold marks nothing, cannot be justified to a
+    student who asks, and turns a real demand (say when it happened) into an arbitrary one. State the function:
+    starts by saying when it happened, gives the reason, names a part nobody else's has. Counts stay where they
+    measure something real - a Level's own word or sentence ceiling from the CSV row, a count that is the task
+    ("write three sentences"), or a structural minimum that changes what the answer is ("at least two words that
+    keep the events in order," where one word cannot put three events in sequence).
+
+13. **A pointer into printed material is counted against the material, and says what it points at.** "Its third
+    and fourth sentences," "paragraph 2," "the last line of the first entry": every such reference is verified
+    by counting on the page, never written from memory of how the passage went. Where the reference survives
+    into the packet, it also names the content it points at ("its second and third sentences, the two where your
+    roommate speaks"), because a bare ordinal goes wrong the moment anyone edits the passage - adds a sentence,
+    splits a paragraph, cuts a line - and nothing in the instruction reveals that it now points somewhere else.
+    A pointer into the student's own writing ("your second paragraph") needs no content gloss, since only the
+    student can count it.
+
+14. **A template repeated across a Set varies its key.** Where the same item shape recurs in every lesson of a
+    Set (a sort, a matching set, an ordering item, a true/false row), the number of options, the split between
+    categories, and the order of the answers all change from lesson to lesson. Four lessons whose sort item is
+    always four lines answering E, R, E, R is not four items; it is one item printed four times, and a student
+    who meets the second one has been taught the key rather than the skill. An even split invites elimination
+    (C2) and a fixed order invites memorisation, so vary both: three-two, two-three, five options, the
+    categories in a different order. Check the keys side by side before finalising a Set, the same way genre
+    and hook are checked for adjacency (D6). The related trap is a category whose members all share a surface
+    cue (every reaction line containing "nobody," "without," or "never"): the cue becomes the rule the student
+    learns, so at least one member of each category carries no such marker.
+
+15. **A sort's categories fit the material it prints.** Where an item asks the student to put each printed line
+    into one of two or more categories, every line must have exactly one defensible home. If the text genuinely
+    supports a third answer, the third answer is a category, not a wrong answer: forcing a two-way choice on
+    material that is honestly both makes the item unanswerable as specified, and the student who sees the
+    doubling is penalised for reading well. The common case is narrative, where an action can report what
+    happened and show how somebody took it in the same clause ("she sat down on a rock and did not get up for a
+    long time"), so a stated-event / signalled-reaction sort needs a both category, with the pure categories
+    reserved for lines that do only one thing. Test every line against every category before printing the item,
+    and where a line has two homes either add the category or replace the line.
+
+16. **An instruction names what the student writes, in the page's own terms.** "Write the missing word,"
+    "say the missing word out loud," "fill in what is left out" are true only where the page actually prints a
+    blank where that word belongs. Where the sentence, frame, or stem is printed complete, nothing is missing
+    from the student's view, and the instruction has to name what it wants by its place in the material:
+    "write the sentence's two past forms, in the order they happened," "write the word under the picture you
+    marked." The test is mechanical - point at the thing the instruction calls for and check that a student
+    reading only the page can point at the same thing. This covers every modality: a clip's transcript line,
+    a scenario's model sentence, and a printed passage all fail the same way when an instruction describes a
+    gap the page does not show.
 
 ## D. Lesson shape
 
@@ -150,7 +259,12 @@ Rules shared by every 2-day lesson cycle in the program:
    pairs to share. Evidence is a demonstration, never a declaration: no thumbs-up/sideways/down, no show
    of hands, no "who feels confident?" A visible whole-class confidence vote converges on "yes" regardless
    of whether the skill transferred. Nothing is collected or graded. Where the closing input is a new text,
-   clip, or prompt, it is written into the lesson, never left for the teacher to improvise.
+   clip, or prompt, it is written into the lesson, never left for the teacher to improvise. The stated
+   length or form has to be able to hold the skill being transferred: a check on a Module whose verb is
+   narrating or explaining cannot be capped at one sentence and then also ask for a sequence, an order, or a
+   turn from one part to another, because the cap and the demand contradict each other on the page and the
+   student resolves it by dropping one. Size the cap to the Module's verb - a sequence needs three or four
+   sentences - and never state a cap and a demand the cap excludes in the same instruction.
 3. **Closing Transfer Check variety.** The concrete object, person, or scenario used in the Closing Transfer
    Check differs across every lesson in the same Set, checked against the Set's other lessons before
    finalizing. Any illustrative pattern in a prompt shows the grammatical shape only; do not reuse its
@@ -263,6 +377,42 @@ Mentor form and then producing one fresh instance without it. This is distinct f
 Check, which tests the skill on new material; D12 is about the lesson's own anchor input. Assessments are
 exempt: a verification beat inside a graded task contaminates the measure.
 
+**D13. A hook orients before it asks.** The Phase 1 activation hook is a lead-in to the lesson's content, not a
+riddle about it. Before its first question, it states in plain language what the lesson is about: the topic, the
+situation, and what kind of text, clip, or scenario is coming. Then the binding constraint:
+
+**No hook question's answer lies only in material the student has not been given.** A hook may ask for
+observation of something printed on the page, a prediction the orientation makes reasonable, an opinion, or
+prior knowledge; all of these a student can actually reason from. It may not ask who is speaking in an
+unattributed quote, what an uncaptioned photograph shows, what a text is about before its topic is named, or
+what happened before or after a withheld moment. Those answers are the withheld material itself, so the
+question is not a question; it is a request to produce information the page is deliberately keeping back.
+
+Withholding is not itself the defect, and this rule does not forbid it. A photograph may be shown before its
+place is named, provided what is asked of it is answerable by looking (what is in it, how many, is it moving
+and how can you tell). The test is applied per question, not per hook: can a student answer this from the
+orientation, from what is printed, from their own life, or as an opinion? If none of those, rewrite the
+question.
+
+Why this is a rule and not a matter of taste: a hook that opens on an unanswerable question teaches the class
+that the lesson's first move is guessing, spends the activation minutes on answers that must then be crossed
+out, and leaves the least confident students furthest from a contribution they can make. A hook that orients
+and then connects to what students already know gets every seat a real answer inside the first minute. Each
+lesson type names its own hook bank in its own prompt; every hook in every bank is subject to this rule.
+
+14. **A concept met for the first time is taught, not just ruled.** Where a callout introduces something the
+    band has not seen before - reported speech, a cleft, a time clause, a reading strategy, a signposting move -
+    stating the rule and showing input-to-output pairs is not teaching it. Four things go on the page, in this
+    order: **name the thing** ("this is direct speech; this is indirect speech"); **put it beside what it
+    contrasts with**, both written out, so the difference is visible rather than described; **number the
+    features that change**, each as its own line, so a student has something to check their own sentence
+    against; and **annotate every worked example feature by feature**, one column per feature, rather than
+    showing only the finished result. A transformation table whose columns are "before" and "after" tells a
+    student who already knows the concept what to produce and tells a student meeting it what to copy. Where a
+    feature does not apply in an example, say so in its column ("none: 'the soup' is not a pronoun") rather than
+    leaving the cell blank, since a blank reads as an oversight. This is a floor for a first introduction only;
+    a later lesson practising the same concept may state the rule in one line and move on.
+
 ## E. Style constraints for generated Markdown
 
 1. **No em-dashes** anywhere in generated content. Use hyphens, colons, or parentheses.
@@ -328,10 +478,12 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     "several words" task), no activity shape met twice in one lesson or in the same slot as the previous
     lesson, the form shown once as a model, every other item in a rotated shape, and homework holding one
     production plus other shapes? (D10)
-23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find,
+23. No stem, parenthetical, or pre-printed source material states what its item asks the student to find, and
+    no stem performing the verb the Level's can-do assigns to the student (identifying, locating, finding),
     and every exemplar answer sits on an `Answer note:` line under its item? In a two-source item, at least
     three verbatim excerpts per source on the same two or more subjects, written into the `.md` itself and
-    never a one-line summary? (C9, E2)
+    never a one-line summary, where the source is not re-inspectable; and, where both sources are printed in
+    full on the student's page, no pre-extracted or pre-paired excerpts at all? (C9, E2)
 24. Every "circle," "underline," "match," or "point to" instruction has printed options or targets on the
     page, and every choice posed only in a stem's wording is answered in writing or given a printed menu? (C10)
 25. No activity requires moving furniture, forming a class-wide formation (facing circles, corners,
@@ -341,7 +493,37 @@ Run this list first, then the modality's own list. If any item fails, revise bef
     only after students have committed a response, bounded to the stretch the task turned on, with one
     unsupported re-encounter after it, and no such support present on the page while the answer is being
     formed? (D12)
+27. Does the activation hook name the topic, situation, and kind of text, clip, or scenario before its first
+    question, with no hook question whose answer lies only in material the student has not been given (who is
+    speaking in an unattributed quote, what an uncaptioned photo shows, what happened before or after a
+    withheld moment)? (D13)
+28. Where an item template recurs across a Set, do its option count, category split, and answer order change
+    from lesson to lesson, with no category whose members all share a surface cue? (C14)
+29. In every sort or classification item, does each printed line have exactly one defensible category, with a
+    both category present wherever the material honestly supports one? (C15)
+30. Does every numbered step inside a Task require a judgment the earlier steps did not already settle, with
+    no step re-marking or re-naming what a previous step decided, no written step whose product is already
+    printed on the page, and no answer space where nothing new is written? (C11)
+31. Where a higher task Level is the Level below plus one added demand, does its instruction name that Task
+    and state only the addition, rather than restating the whole task in new words with its own answer
+    space? (B)
+32. Does every condition inside an instruction name what the answer must do, with no formal threshold (a word
+    count on a phrase, a minimum length on a feature) that a shorter correct answer would fail? (C12)
+33. Does every starter, model or worked example use something the task does not itself ask for, or else name
+    the item it works and drop that item from the ask? (C9)
+34. Where a callout introduces a concept for the first time, does it name the thing, show it beside what it
+    contrasts with, number the features that change, and annotate each worked example feature by feature, rather
+    than stating a rule over before-and-after pairs? (D14)
+35. Is every pointer into printed material (an ordinal sentence, paragraph, line or entry) counted against the
+    page rather than written from memory, and does it name the content it points at as well as the position?
+    (C13)
+36. Does every instruction that asks for a "missing" word, phrase, or line correspond to a blank the page
+    actually prints, with every other such instruction naming what to write by its place in the printed
+    material? (C16)
+37. Does the Closing Transfer Check's stated length or form leave room for the skill it transfers - no
+    one-sentence cap on a check that also asks for a sequence, an order, or a turn from one part to another?
+    (D2)
 
 ## Changelog
 
-**Current version: v1.17.** See `Changelog.md` in this folder.
+**Current version: v1.31.** See `Changelog.md` in this folder.

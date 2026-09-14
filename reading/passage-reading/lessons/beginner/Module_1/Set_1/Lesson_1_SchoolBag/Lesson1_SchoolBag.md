@@ -4,7 +4,7 @@ Generated per `Generate_Lesson_Prompt_v3.5.md`, against Module 1's approved Set 
 (`../../Module1_Beginner_Lesson_Plan.md`; `Rotation_Log_Beginner.md`, Lesson 1 row). First lesson
 generated in this Band.
 
-**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.1.0
+**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.1.1
 **Genre:** Label set with its images embedded in the packet | **Reading strategy:** Teacher Read-Aloud with Interactive Stops
 **Phase 1 hook:** Visual Inquiry | **Phase 3 protocol:** Rotating Partners
 **Vocabulary theme:** School things and size
@@ -214,7 +214,7 @@ support.")
 frame ('It is ___.') describing a familiar object, decoding the open-slot word... to identify the matching
 image, with visual support.")
 - Task: for Picture 2, circle the sentence that fits: **It is small.** / **It is big.** Then say the
-  open-slot word out loud.
+  describing word in the sentence you circled out loud.
   **Answer note:** It is small.
 
 **Level 3 (extension-up)** - grounding: Level 3 Reading objective ("Can read one short sentence using the
@@ -304,7 +304,7 @@ Quality Standards §F ran first; the Reading-specific items follow.
     instruction to look at, hold, or take out anything, and no task depends on work from an earlier lesson.
 18. **Room-neutral (§D11):** nothing moves furniture, forms a circle, or posts anything on a wall.
 19. **Style:** no em-dashes; ASCII pacing diagram present for each day; metadata line under the H1 carrying
-    the version code 1.1.1.0.
+    the version code 1.1.1.1.
 20. **Closing Transfer Check object:** the student's own pencil case, distinct from the objects planned for
     Lessons 2 to 4 (water bottle, jacket, phone).
 

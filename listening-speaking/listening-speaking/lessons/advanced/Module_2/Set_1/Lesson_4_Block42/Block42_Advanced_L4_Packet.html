@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unit 4: The Block That Would Not Sign</title>
+    <style>
+    :root {
+      --ink: #000000;
+      --ink-soft: #333333;
+      --paper: #ffffff;
+      --rule: #999999;
+      --rule-light: #cccccc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #e8e8e8;
+      color: var(--ink);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      line-height: 1.55;
+    }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 48px 40px 60px;
+    }
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 14px 40px 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .print-btn {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      padding: 8px 16px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .print-btn:hover {
+      background: #333;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Iowan Old Style", Georgia, serif;
+      margin: 0;
+      color: var(--ink);
+    }
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .masthead h1 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+    .masthead + .masthead,
+    .masthead.masthead-later {
+      margin-top: 60px;
+      page-break-before: always;
+      break-before: page;
+    }
+    .masthead-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      margin-top: 0;
+      padding-top: 4px;
+    }
+    .masthead-tag {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .masthead-sep {
+      font-weight: 400;
+      color: var(--rule);
+      padding: 0 3px;
+    }
+
+    .objective {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+      color: var(--ink);
+      margin: 0 0 24px;
+    }
+    .objective strong {
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      font-weight: 700;
+      margin: 32px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule-light);
+    }
+
+    .exercise-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .instr-inline {
+      margin-top: 20px;
+    }
+    .instr-inline .exercise-label {
+      margin-right: 6px;
+    }
+
+    .section-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ink);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+    .instr {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+
+    .spotlight-box {
+      border: 1px solid var(--ink);
+      padding: 16px 20px;
+      margin: 14px 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .spotlight-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .model-step {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .model-step:last-child {
+      margin-bottom: 0;
+    }
+    .model-step strong {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      letter-spacing: .03em;
+    }
+
+    .vocab-list {
+      margin: 10px 0 6px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .vocab-list .vrow {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .vocab-list .vrow:last-child {
+      border-bottom: none;
+    }
+    .vocab-list .word {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      white-space: nowrap;
+      width: 165px;
+      flex-shrink: 0;
+    }
+
+    .idiom-item {
+      margin-bottom: 10px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .idiom-item:last-child {
+      margin-bottom: 0;
+    }
+    .idiom-phrase {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .annot-key {
+      float: right;
+      width: 190px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11.5px;
+      margin: 2px 0 12px 20px;
+      padding: 12px 14px;
+      border: 1px solid var(--ink);
+    }
+    .annot-key-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .annot-key .k-row {
+      margin: 7px 0;
+    }
+    .annot-key .k-mark {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      display: block;
+    }
+    .clearfloat {
+      clear: both;
+    }
+
+    .image-placeholder {
+      /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
+      border: 2px dashed var(--ink);
+      padding: 44px 20px;
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin: 14px 0 4px;
+    }
+    .photo {
+      /* an embedded image (base64 data URI); sized by this rule, never per packet */
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      margin: 14px auto 4px;
+    }
+    .image-caption {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      color: var(--ink-soft);
+      text-align: center;
+      margin: 0 0 20px;
+    }
+
+    .article {
+      padding: 6px 0 0;
+      margin: 18px 0 22px;
+    }
+    .article .headline {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin: 20px 0 4px;
+    }
+    .byline {
+      text-align: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+    .article p {
+      font-size: 15.5px;
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .para-letter {
+      font-weight: 700;
+      margin-right: 2px;
+    }
+    .footref {
+      font-weight: 700;
+      font-size: 0.72em;
+      vertical-align: super;
+      line-height: 0;
+    }
+    .idiom-mark {
+      text-decoration: underline dotted var(--ink);
+      text-decoration-thickness: 1.5px;
+    }
+    .article .footnotes {
+      margin-top: 22px;
+      padding: 14px 0 22px;
+      border-top: 1px solid var(--rule-light);
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+    .article .footnotes div {
+      margin-bottom: 6px;
+    }
+
+    .qlist {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .qlist li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 11px;
+      font-size: 14.5px;
+    }
+    .num {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 20px;
+    }
+    .qbody {
+      flex: 1;
+    }
+
+    /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+       blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+       `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+       `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+       for writing a full answer - never place either one mid-sentence, and never use
+       `.ans-line-sm` where you mean `.blank`. */
+    .blank {
+      display: inline-block;
+      border-bottom: 1px solid var(--ink-soft);
+      min-width: 70px;
+    }
+    .ans-line {
+      display: block;
+      border-bottom: 1px solid var(--ink-soft);
+      height: 22px;
+      margin-top: 4px;
+    }
+    .ans-line-sm {
+      display: block;
+      border-bottom: 1px solid var(--ink-soft);
+      width: 100%;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .subgroup-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--ink);
+      margin: 14px 0 8px;
+    }
+
+    .fillblank {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .fillblank li {
+      margin-bottom: 9px;
+      font-size: 14.5px;
+    }
+    .fillblank .num {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .refresher {
+      padding: 16px 0;
+      margin: 14px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .refresher.refresher-noline {
+      border-bottom: none;
+    }
+    .refresher .headline {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .refresher p {
+      font-size: 14.5px;
+    }
+
+    .task-block {
+      margin: 18px 0 22px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .task-block .stars {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+    .task-block p,
+    .task-block li {
+      font-size: 14.5px;
+    }
+    .task-block .instr-line {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .task-block .instr-line .exercise-label {
+      margin-right: 2px;
+    }
+    .task-block .instr-line .stars {
+      margin-right: 8px;
+    }
+    /* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+       A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+       A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+       Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
+    .wordbank {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      padding: 8px 0;
+      margin: 10px 0;
+      border-top: 1px dashed var(--rule-light);
+      border-bottom: 1px dashed var(--rule-light);
+    }
+    .task-block .starter {
+      font-style: italic;
+      padding: 8px 0 8px 14px;
+      margin: 10px 0;
+      border-left: 3px solid var(--ink);
+      font-size: 14px;
+    }
+
+    .discuss-block {
+      margin: 16px 0;
+    }
+    .discuss-block .prompt {
+      font-size: 14.5px;
+      margin: 10px 0 16px;
+    }
+    .stems {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .stems li {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 9px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .stems .stars {
+      font-size: 13px;
+      flex-shrink: 0;
+      width: 52px;
+      letter-spacing: 1px;
+    }
+
+    .wrapup {
+      margin: 16px 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+      .verify-window {
+        border: 1px solid var(--ink);
+        border-left: 4px solid var(--ink);
+        background: var(--paper);
+        padding: 12px 16px;
+        margin: 18px 0 12px;
+        page-break-inside: avoid;
+      }
+      .verify-window .verify-src {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: var(--ink-soft);
+        margin: 0 0 8px;
+      }
+      .verify-window p {
+        margin: 0 0 8px 14px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .verify-window p:last-child {
+        margin-bottom: 0;
+      }
+      .verify-instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        font-style: italic;
+        margin: 0 0 14px;
+      }
+
+
+    @media print {
+      body {
+        background: #fff;
+      }
+      .toolbar {
+        display: none;
+      }
+      .sheet {
+        padding: 0 12px;
+        max-width: 100%;
+      }
+      .spotlight-box,
+      .task-block,
+      .article p,
+      .refresher,
+      .discuss-block,
+      .wrapup,
+      .citebox,
+      .notes-table,
+      .article {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    .citebox {
+      border: 1px solid var(--ink);
+      padding: 12px 16px;
+      margin: 10px 0 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .citebox strong {
+      font-weight: 700;
+    }
+
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 20px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13.5px;
+    }
+    .notes-table th,
+    .notes-table td {
+      border: 1px solid var(--rule);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .notes-table th {
+      font-weight: 700;
+      background: #f2f2f2;
+    }
+    .notes-table td {
+      height: 38px;
+    }
+
+    .upside-down {
+      transform: rotate(180deg);
+    }
+
+    .stop-flag {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 2px solid var(--ink);
+      padding: 10px 14px;
+      margin: 12px 0 14px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .stop-badge {
+      flex: 0 0 auto;
+      width: 54px;
+      height: 54px;
+      background: var(--ink);
+      color: var(--paper);
+      clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .stop-flag .instr {
+      margin: 0;
+    }
+
+    .task-instr {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 10px;
+    }
+
+    .pic-options {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 8px 0 4px 4px;
+    }
+    .pic-option {
+      width: 110px;
+    }
+    .pic-option .pic-box {
+      /* holds an embedded <img>; never printed empty for the teacher to fill */
+      border: 1px solid var(--ink);
+      height: 70px;
+      padding: 0;
+      overflow: hidden;
+    }
+    .pic-option .pic-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pic-option .pic-label {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12.5px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .match-list {
+      margin: 8px 0 4px 4px;
+    }
+    .match-row {
+      margin-bottom: 14px;
+    }
+    .match-row .match-label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .match-row .match-src {
+      display: block;
+      margin: 0 0 5px 12px;
+    }
+
+    .qitem {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-size: 14.5px;
+    }
+
+    .mc-list {
+      margin: 8px 0 4px 30px;
+      padding-left: 0;
+      list-style: none;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .mc-list li {
+      margin-bottom: 6px;
+    }
+    .mc-letter {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .time-list {
+      margin: 8px 0 4px;
+      padding-left: 0;
+      list-style: none;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+    }
+    .time-list li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule-light);
+      padding: 7px 2px;
+    }
+    .time-list li:last-child {
+      border-bottom: none;
+    }
+    .time-list .time-window {
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .reader-copy {
+      border: 2px dashed var(--ink);
+      padding: 14px 16px;
+      margin: 20px 0;
+      page-break-before: always;
+    }
+    .reader-copy .reader-warn {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+    </style>
+  </head>
+  <body>
+  <div class="toolbar">
+    <button class="print-btn" onclick="window.print()">Print this packet</button>
+  </div>
+  <div class="sheet">
+
+    <div class="masthead">
+      <h1>Unit 4A: The Block That Would Not Sign</h1>
+      <div class="masthead-meta">
+        <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
+        <span class="masthead-tag">Advanced 2.1.4.0</span>
+      </div>
+    </div>
+
+    <p class="objective"><strong>Objective:</strong> I can listen for the words a speaker uses to turn against what they have just said, so I can hear both halves of what they mean.</p>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Good to Know</p>
+      <p class="model-step">In February 1943 the United States government was holding about 120,000 people of Japanese descent in camps. Most were American citizens. That year the agency running the camps required every person over seventeen to fill out a form it used to sort people into "loyal" and "disloyal." People called it the "loyalty questionnaire."</p>
+      <p class="model-step">The camp in this recording, Tule Lake, was laid out in numbered blocks. Each block had its own barracks, its own dining hall where residents ate together, and a block office where paperwork was dropped off. The speaker lived in Block 42. Roughly two to three dozen men there refused the form.</p>
+      <p class="model-step">A <strong>Kibei</strong> was a Japanese American born in the United States, sent to Japan for schooling, and later returned. In the first part of the recording the speaker is arguing with an article he was sent before the interview, which claimed one man organised his block's refusal. He does not think that man was there.</p>
+    </div>
+
+    <p class="section-title">Before You Listen</p>
+    <p class="instr">Fill in both columns on your own. Then compare with the person next to you.</p>
+    <table class="notes-table">
+      <tr>
+        <th>What I already know</th>
+        <td>&nbsp;<br />&nbsp;<br />&nbsp;</td>
+      </tr>
+      <tr>
+        <th>What I want to find out</th>
+        <td>&nbsp;<br />&nbsp;<br />&nbsp;</td>
+      </tr>
+    </table>
+
+    <div class="citebox">
+      <strong>You'll listen to:</strong> the Jim M. Tanimoto Interview, recorded in 2009 for the Densho Digital Repository. Jim Tanimoto was born in 1920 in Gridley, California, and was held at the Tule Lake camp. You will hear him answering two interviewers, so expect questions and interruptions. You will hear two parts, about eight minutes in total.
+    </div>
+
+    <p class="section-title">Words to Know</p>
+    <div class="wordbank">
+      <strong>Word bank:</strong> pressure &middot; surrounded &middot; refuse ... period &middot; make up your own mind &middot; count off &middot; cart away &middot; go out of your way to &middot; antagonize &middot; barracks
+    </div>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <span class="qbody">There was <strong>pressure</strong> from the office to sign the form, but no one was dragged to the desk.</span>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <span class="qbody">By the time they finished dinner, soldiers <strong>surrounded</strong> the whole block.</span>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <span class="qbody">They would not sign yes and they would not sign no. They <strong>refused, period.</strong></span>
+      </li>
+      <li>
+        <span class="num">4.</span>
+        <span class="qbody">Nobody held a meeting. Each man <strong>made up his own mind.</strong></span>
+      </li>
+      <li>
+        <span class="num">5.</span>
+        <span class="qbody">The soldier told them to <strong>count off</strong>, one, two, and then split the ones from the twos.</span>
+      </li>
+      <li>
+        <span class="num">6.</span>
+        <span class="qbody">More than thirty men were sorted out and <strong>carted away</strong> to county jails.</span>
+      </li>
+    </ol>
+    <div class="refresher">
+      <p class="headline">Two phrases worth taking slowly</p>
+      <p><strong>"..., period."</strong> placed after a statement means <em>and there is nothing more to discuss</em>. It is the speaker closing the subject. It is not a full stop being read out.</p>
+      <p><strong>"went out of his way to"</strong> means <em>made a special effort to</em>, and it is nearly always used about effort a person did not have to make. In this recording it appears in the negative: a quiet man who never went out of his way to antagonize anybody.</p>
+    </div>
+
+    <p class="section-title">Listening Notes</p>
+    <p class="instr">While you listen, fill in each box with a few words.</p>
+    <table class="notes-table">
+      <tr>
+        <th>Forms arrive</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Some sign, most refuse</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Pressure to sign either way</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>The block is surrounded</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Counting off, one and two</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>Where they ended up</th>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Hearing a speaker turn</p>
+      <p class="model-step">Speakers often say one thing and then turn against it in the same breath. The turn is where the meaning is.</p>
+      <p class="model-step"><strong>A plain contrast.</strong> "There were some people in our block that did sign, but there was a lot of people in our block that wouldn't sign." Two groups, one sentence, joined by <em>but</em>. What comes after <em>but</em> is what the speaker wants you to keep.</p>
+      <p class="model-step"><strong>A concession.</strong> "Well, there was some pressure, I don't know if it was warnings or not, but there was some pressure that we should sign 'yes' or 'no.'" He states something, gives ground on it, then returns to it anyway. He admits the limit of his own claim without dropping the claim.</p>
+      <p class="model-step"><strong>Listen for:</strong> but &middot; although &middot; even though &middot; regardless &middot; still &middot; I don't know if ... &middot; or whatever it was. In speech the giveaway is often a hesitation just before the word.</p>
+    </div>
+
+    <p class="section-title">Listen Closely</p>
+    <p class="instr">Do one task below. Answer from what you heard and from your Listening Notes, before anything is played again. When you are done, find someone who worked on a different task and take turns sharing what you found.</p>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Number these six events 1 to 6 in the order he tells them.
+            <br />&nbsp;&nbsp;____ the men count off one and two
+            <br />&nbsp;&nbsp;____ forms are dropped at the block office
+            <br />&nbsp;&nbsp;____ the men are taken to Klamath Falls and Alturas
+            <br />&nbsp;&nbsp;____ soldiers surround the block
+            <br />&nbsp;&nbsp;____ most of the block refuses to sign
+            <br />&nbsp;&nbsp;____ someone from the office comes to collect the forms
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Write the sequence out as three sentences, using your own time connectors. Do not use <em>first, then, finally</em> in that order.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">What happened to the men in the end, and what reason does he give for it happening?
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">He says the soldiers were not interested in his parents, only in the younger men. Why do you think the soldiers made that choice? One sentence.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Summarise what you heard in four or five sentences: what arrived, what the block did, what was done about it, and where it ended.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">In one sentence, say why this mattered to him. Use what he says, not what you assume.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">He never names a feeling anywhere. Find one action or detail he describes that tells you how he felt that evening. Write it down, then write what it tells you.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">After the second listening, go back and mark the one sentence in your summary that changed.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">&#9733;&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Summarise what you heard in three sentences.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Name one piece of information that is clearly missing from this account, and say in one sentence what its absence does to the telling.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">He says twice that there was no meeting and that everyone made up their own mind. What would you need to hear, and from whom, before you could treat that as settled?
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">Write one question you would ask him if he were here, designed to get at what this account leaves out. He must be able to answer it himself.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span></p>
+      <p class="instr">Two people tell these events. Their own words are printed below, paired subject by subject. Read them against what you have just heard.</p>
+      <div class="match-list">
+        <div class="match-row">
+          <p class="match-src">Subject A: why the men would not sign</p>
+          <p><strong>Tanimoto, recorded interview:</strong> "My reason for not signing was I was a prisoner. I never did anything wrong, I wasn't convicted."</p>
+          <p><strong>Densho Encyclopedia, "Tule Lake":</strong> "Pressure to answer ambiguous questions within a fixed deadline without adequate opportunity to discuss and evaluate them led to anger and civil disobedience."</p>
+        </div>
+        <div class="match-row">
+          <p class="match-src">Subject B: whether the refusal was organised</p>
+          <p><strong>Tanimoto, recorded interview:</strong> "Everybody, I think, made up their own mind, and pretty much we didn't discuss it too often ... But we never had an organized meeting saying that, 'Hey, we're not gonna sign this thing.'"</p>
+          <p><strong>Densho Encyclopedia, "Tule Lake":</strong> "Several dozen young men in Block 42 refused to answer the questionnaire despite threats of $10,000 fines or twenty years in prison or both."</p>
+        </div>
+        <div class="match-row">
+          <p class="match-src">Subject C: the arrest and what followed</p>
+          <p><strong>Tanimoto, recorded interview:</strong> "So one evening, after dinner, our block was surrounded by military police. They had rifles with bayonets on them."</p>
+          <p><strong>Densho Encyclopedia, "Tule Lake":</strong> "For refusing to cooperate they were imprisoned in Alturas and Klamath Falls County jails, but since there were no criminal charges, the protesters were removed to Tule Lake isolation center where the Constitution did not apply."</p>
+        </div>
+        <div class="match-row">
+          <p class="match-src">Subject D: what caused the crisis</p>
+          <p><strong>Tanimoto, recorded interview:</strong> "I know in Tule Lake that eventually they got around to passing out this 'loyalty' papers."</p>
+          <p><strong>Densho Encyclopedia, "Tule Lake":</strong> "The infamous loyalty questionnaire was mishandled at Tule Lake, causing widespread dissent."</p>
+        </div>
+      </div>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Each teller puts a different thing in the position of cause. Name what causes the refusal in each account, one sentence each.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Each account leaves out something the other supplies. Name one thing each is missing, and say what the reader is meant to conclude as a result.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">Identify one unstated motive behind one teller's version, and give your evidence from the words printed above.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">One of these tellers was in the room when the other was recorded. Knowing that, which of your answers above would you now qualify, and why? One sentence.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="section-title">Check It Against the Source</p>
+    <p class="verify-instr">
+      These are the speaker's own words. Read the one that matches where your answers changed, against what you actually wrote above, and mark the one place where your words and his are different.
+    </p>
+    <div class="verify-window">
+      <p class="verify-src">Recorded interview, second part</p>
+      <p>
+        So one evening, after dinner, our block was surrounded by military police. They had rifles with bayonets on them, and they surrounded our whole block. And we were having dinner when they did this, and as we came out the door, there was a soldier, there was a soldier standing by the door, and he directed us to...
+      </p>
+    </div>
+    <div class="qitem">
+      <span class="num">1.</span>
+      <div class="qbody">
+        Where are your words different from his?
+        <span class="ans-line"></span>
+      </div>
+    </div>
+    <div class="verify-window">
+      <p class="verify-src">Recorded interview, first part</p>
+      <p>
+        My reason for not signing was I was a prisoner. I never did anything wrong, I wasn't convicted. If I was charged with something and I had a trial and I was convicted that I did this, whatever it was, and sentenced to jail, that's fine. But I wasn't charged with anything
+      </p>
+    </div>
+    <div class="qitem">
+      <span class="num">2.</span>
+      <div class="qbody">
+        Where are your words different from his?
+        <span class="ans-line"></span>
+      </div>
+    </div>
+    <p class="instr"><em>Now cover both boxes with your hand or a sheet of paper. You will hear these two stretches once more with the words hidden.</em></p>
+
+    <p class="section-title">Show What You Heard</p>
+    <div class="wrapup">
+      <div class="stop-flag">
+        <div class="stop-badge" aria-hidden="true">STOP</div>
+        <p class="instr">Don't read ahead. Your teacher will read a short story aloud first.</p>
+      </div>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Tell your partner the two places where the speaker turns against what they have just said, and what each turn tells you.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <p class="section-label">Check What You Heard</p>
+    <p class="instr"><em>This is printed upside-down on purpose. Don't turn the page around until after you have shared with your partner.</em></p>
+    <div class="refresher refresher-noline upside-down">
+      <p>The allotment holders met on Tuesday about the new gate lock. There was some pressure from the committee to sign the new key agreement, and I do not know if it was a deadline or just a suggestion, but there was pressure. Some people signed. A lot of us refused, period. We never held a meeting about it. Everyone made up their own mind. By Friday the committee had surrounded the whole issue with so many forms that two of the old sheds got carted away before anyone could count off who still wanted one.</p>
+    </div>
+
+    <div class="masthead masthead-later">
+      <h1>Unit 4B: The Block That Would Not Sign</h1>
+      <div class="masthead-meta">
+        <span class="masthead-tag">Listening &amp; Speaking <span class="masthead-sep">&#183;</span> Narrating</span>
+        <span class="masthead-tag">Advanced 2.1.4.0</span>
+      </div>
+    </div>
+
+    <p class="objective"><strong>Objective:</strong> I can ask for the part of a story I did not get, without making the speaker start again.</p>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Three ways to ask for what you missed</p>
+      <p class="model-step">All three are real. The two interviewers in the recording use them to get the story straight. They are three different tools, not three versions of one.</p>
+      <p class="model-step"><strong>1. Rewind.</strong> "Can we back up a little bit, and what your recollections are when you first heard of and saw that 'loyalty questionnaire.'" She does not say she is lost. She names a point earlier in the story and asks him to restart from there. Use it when you missed a whole stage.</p>
+      <p class="model-step"><strong>2. Narrow.</strong> "But Jim, before that, I mean, what was the reaction of the administration? Did they, were there any steps before carting you off?" He holds the story still and asks for one specific missing piece, then narrows again when the first try is vague. Use it when you have the events but not the detail.</p>
+      <p class="model-step"><strong>3. Check by restating.</strong> "So one group, like the ones went to one place, and the twos went to the other place, Klamath Falls and Alturas." Not a question in form at all. He says back what he thinks he heard and lets the speaker confirm or correct it. Use it when you think you have it and want to be sure. Your voice has to rise at the end or it is not a question.</p>
+    </div>
+
+    <p class="section-title">Practice It</p>
+    <p class="instr">Do one task below. When you are done, find someone who worked on a different task and take turns sharing what you found.</p>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task A</span> <span class="stars">&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">In pairs, take turns. Tell a short true story from your own life about a time you were asked to put your name to something: a form, a petition, a register, a group message, a receipt. Three or four sentences. Choose your own time connectors. End with what happened and one reason it happened.</span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">When you are the listener, use tool 2 at least once. Hold the story still and ask for one specific missing piece. Write the question you asked.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">In pairs, tell a longer account of a time you disagreed with a rule and had to decide whether to go along with it. Say why it mattered.</span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Include at least one action or detail that shows how you felt without naming the feeling.</span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">When you are the listener, name afterwards which detail was doing that work. If you cannot find one, the speaker adds one and tells it again from that point. Write the detail you found.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">&#9733;&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Work in threes: one speaker, one listener, one tracker. The speaker tells a complex event in which you and someone else remembered the same thing differently.</span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Report at least two things somebody actually said, in reported speech. Move between what happened and why it mattered more than once, and not in a fixed order.</span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">The listener reacts honestly at one point, by leaning in, by looking lost, or by interrupting with one of the three tools. The speaker changes how formally or how fast they are talking in response.</span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">The tracker writes down where that change happened and what changed.
+            <span class="ans-line"></span>
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="task-block">
+      <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span></p>
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">In pairs, tell the same true event twice, to two different audiences. Name the audience out loud before each telling. For example: a friend who will take your side, then a committee deciding whether you were in the right.</span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">The two versions must differ in what comes first and in what you give the most time to, not only in how polite they are.</span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">Repair at least one point aloud where your own order of events comes out unclear. Fix it smoothly and keep going. Do not apologise for it.</span>
+        </li>
+        <li>
+          <span class="num">4.</span>
+          <span class="qbody">Your partner says which version they found more convincing and names the choice that did it. Write what they named.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="spotlight-box">
+      <p class="spotlight-label">Say It Like a Native Speaker</p>
+      <p class="model-step">A sentence can be a statement or a question with no change in the words at all. The pitch at the end does the work.</p>
+      <p class="model-step">Mark an arrow up or down at the end of each line, then check against the recording.</p>
+      <p class="model-step">"So one group, like the ones went to one place, and the twos went to the other place, Klamath Falls and Alturas." &nbsp;&nbsp;______</p>
+      <p class="model-step">"Yeah. I don't know which group went where, but that's the way they separated them." &nbsp;&nbsp;______</p>
+      <p class="model-step">Now take one sentence from your own story above and say it twice to your partner: once falling, as a statement of what happened, and once rising, as a check that they have followed. Your partner closes their eyes and says which was which.</p>
+    </div>
+
+    <p class="section-title">Panels</p>
+    <p class="instr">Work in four groups, with the people sitting near you. Each group takes one question and becomes the group that has thought hardest about it. Prepare a position and one piece of evidence from the recording, and make sure every person in your group can give it. Then one person from each group speaks in turn, and the rest of the class asks them questions.</p>
+    <ol class="qlist">
+      <li>
+        <span class="num">1.</span>
+        <span class="qbody">What did Block 42 actually refuse to do, and why does the difference between refusing and answering "no" matter?</span>
+      </li>
+      <li>
+        <span class="num">2.</span>
+        <span class="qbody">What does this man's account let you see that an official record would not?</span>
+      </li>
+      <li>
+        <span class="num">3.</span>
+        <span class="qbody">What does the encyclopedia account let you see that his does not?</span>
+      </li>
+      <li>
+        <span class="num">4.</span>
+        <span class="qbody">Which of the questions the class wrote under "What I want to find out" can this recording actually settle, and which would need a different source?</span>
+      </li>
+    </ol>
+    <div class="stems">
+      <p class="headline">When you are questioning a panel, use one of these</p>
+      <p><span class="stars">&#9733;</span> "Can you go back to ...?"</p>
+      <p><span class="stars">&#9733;&#9733;</span> "Before that, what happened when ...?"</p>
+      <p><span class="stars">&#9733;&#9733;&#9733;</span> "So what you are saying is ... is that right?"</p>
+      <p><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> "You have used ... as your evidence. What would have to be true for that to be wrong?"</p>
+    </div>
+    <p class="instr">While a panel is speaking, everyone else fills in this form.</p>
+    <table class="notes-table">
+      <tr>
+        <th>Question asked</th>
+        <th>Did it get something new? (tick or cross)</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <p class="section-title">Before You Finish</p>
+    <div class="wrapup">
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <span class="qbody">Your partner describes how they got to school or work this morning, in about four sentences, and leaves one stage of the journey vague on purpose.</span>
+        </li>
+        <li>
+          <span class="num">2.</span>
+          <span class="qbody">Get the missing stage out of them using one of the three tools. Then say which one you used.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <span class="qbody">Swap. The second person must use a different tool from the first.
+            <span class="ans-line"></span>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+  </body>
+</html>

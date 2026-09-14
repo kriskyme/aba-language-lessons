@@ -1,4 +1,4 @@
-# Program Conventions (v1.14)
+# Program Conventions (v1.16)
 
 Shared, cross-modality reference for facts that are true of the whole program, not any one lesson
 type: the Level/Band taxonomy, the Task-Levels-by-Band table, what a Set is, the Set/Lesson folder
@@ -135,6 +135,19 @@ its own ordinary Set, its own folder nesting (ยงD), and its own version codes (ย
 described in this section. See `writing/academic-writing/Index.md`'s "Module Pairs" section for the
 mechanics (the 8-lesson content-role table, the wrapping Module-Pair Lesson-Plan doc, and how the two
 Modules' Focus choices stay distinct).
+
+**Standing exception, and an open question (2026-09-14, Academic Writing; extended the same day):**
+**Intermediate and Advanced Modules 1-2 no longer form Pairs.** Intermediate's Module 2 Set 1 was
+de-paired by user direction and regenerated as a standalone 4-lesson Set on its own Scenario;
+Advanced's Module 2 Set 1 was de-paired on the same direction and replanned the same way, before any
+of its lessons had been generated. Both follow the single-Module model described above. Each Band's
+Module 1 Set 1 is unchanged and therefore ends in a hand-off with no receiver, two known gaps logged
+in `writing/academic-writing/Index.md`'s Pending work, not a model this paragraph endorses. Whether
+the Module Pair stays mandatory, becomes an optional mechanic, or is retired program-wide is
+**deferred, not decided**, though the evidence has moved: two of the three eligible Bands are now
+de-paired and **Proficient Modules 1-2 is the only complete Pair left standing.** Until that question
+is settled, treat pairing as the default for Intermediate/Advanced/Proficient and a standalone Module
+as something a Module Lesson-Plan must declare explicitly.
 
 A Module/Band can hold more than one Set over time - a fresh rotation of lessons for a semester
 where the module is retaught, without discarding or conflating it with what was taught before.
@@ -377,4 +390,4 @@ Nobody hunts for images afterward.
 
 ## Changelog
 
-**Current version: v1.14.** See `Changelog.md` in this folder.
+**Current version: v1.16.** See `Changelog.md` in this folder.

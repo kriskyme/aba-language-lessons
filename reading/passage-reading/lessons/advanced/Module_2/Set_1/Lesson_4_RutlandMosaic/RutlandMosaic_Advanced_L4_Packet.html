@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Floor Under the Wheat: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .photo {
+        /* an embedded image (base64 data URI); sized by this rule, never per packet */
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin: 14px auto 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+        font-size: 0.72em;
+        vertical-align: super;
+        line-height: 0;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      /* Matching items and the two-source compare layout (§F). Base, not a modality delta:
+         any modality that prints two sources to compare needs these. */
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      /* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+         A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+         A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+         Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .discuss-block .prompt {
+        font-size: 14.5px;
+        margin: 10px 0 16px;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print this packet</button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 4A: The Floor Under the Wheat</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.4.11</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can tell what happened in order and show why one moment mattered more than
+        the others, without stopping to explain it.
+      </p>
+
+      <div class="section-title">Before You Read</div>
+
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">
+            Somebody finds something very old and very rare buried under a field they do not own. What should
+            happen to it? Circle one, then give one reason to somebody who circled a different one.<br />
+            (Dig it up and put it in a museum where people can see it / Record it, then cover it up again and
+            leave it where it is / Leave it completely alone and do not dig at all / It belongs to whoever owns
+            the field, and it is their decision)
+          </div>
+        </li>
+      </ol>
+
+      <p class="section-label">Words to Know</p>
+
+      <div class="vocab-list">
+        <div class="vrow"><span class="word">topsoil</span><span>the top layer of earth, the part that is ploughed</span></div>
+        <div class="vrow"><span class="word">survey</span><span>a careful look over a whole area to record what is there</span></div>
+        <div class="vrow"><span class="word">trench</span><span>a long narrow hole dug into the ground</span></div>
+        <div class="vrow"><span class="word">excavate</span><span>to dig something out of the ground carefully, to study it</span></div>
+        <div class="vrow"><span class="word">fragment</span><span>a small broken piece of something</span></div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item"><span class="idiom-phrase">word got out</span>: people found out about something that had been kept quiet.</div>
+        <div class="idiom-item"><span class="idiom-phrase">in the first place</span>: at the start, before anything else happened.</div>
+        <div class="idiom-item"><span class="idiom-phrase">above board</span>: open, honest, and legal, with nothing hidden.</div>
+      </div>
+
+      <div class="section-title">Read &amp; Mark It Up</div>
+
+      <p class="instr">
+        Read the article on your own first, with a pen in your hand, and mark it as the key says. Do not talk
+        about it yet. You will compare your marks with a partner afterwards.
+      </p>
+
+      <div class="article">
+        <div class="headline">The Floor Under the Wheat</div>
+        <div class="byline">Rutland, England</div>
+
+        <div class="annot-key">
+          <div class="annot-key-title">Mark It Up</div>
+          <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+          <div class="k-row"><span class="k-mark">( circle )</span> a connector that shows time or order: then, after, later, by the time</div>
+          <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+          <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+          <div class="k-row"><span class="k-mark">!</span> next to a word that feels like the writer's opinion</div>
+        </div>
+
+        <p>
+          <span class="para-letter">[A]</span> The field looks like every other field on this side of the county,
+          and for most of the last seventy years it has grown wheat. In the summer of 2020 a man walking the edge
+          of it picked a piece of pottery out of the topsoil, turned it over, and put it in his pocket. He went
+          back to the same corner of that field four times that week before he telephoned anybody.
+        </p>
+
+        <p>
+          <span class="para-letter">[B]</span> What lay under the crop, about a metre down, was the floor of a
+          Roman dining room, and set into it a mosaic eleven metres long showing Achilles dragging the body of
+          Hector<span class="footref">1</span> around the walls of Troy. No floor telling that story had been
+          recorded anywhere in Britain before. The room was part of a large villa, and the mosaic was its floor,
+          walked on at dinner.
+        </p>
+
+        <p class="clearfloat">
+          <span class="para-letter">[C]</span> He reported it to the county archaeologist in the end, and a
+          fortnight later somebody came out to look. The first trench went in that autumn, two metres by one, on
+          the strength of the pottery and an aerial survey that had shown a pale rectangle in the standing crop.
+          It reached coloured stone almost at once. The team filled the trench in again, left the field to the
+          winter, and told hardly anybody.
+        </p>
+
+        <p>
+          <span class="para-letter">[D]</span> The full dig ran for ten days the following August, in heat, with
+          a line of people on their knees excavating by hand and lifting fragments of burnt plaster into trays.
+          The room had been damaged by fire some time after it was built, and somebody had later cut a grave down
+          through the floor. Photographs were taken every evening, and the trays went up to the farm track at
+          dusk. "Nothing about this place is tidy," one of the site supervisors said. "People went on using the
+          room long after it stopped being grand, and that is the part I cannot stop thinking about."
+        </p>
+
+        <p>
+          <span class="para-letter">[E]</span> <span class="idiom-mark">Word got out</span> in November, when the
+          site was given legal protection<span class="footref">2</span>, which makes digging there without
+          permission a criminal offence and has a great deal to do with people who do not dig
+          <span class="idiom-mark">above board</span>. Two questions came back more than any others: can it be
+          seen, and who owns it? It cannot be seen. It was recorded, photographed, and buried again, which is
+          what usually happens, because a mosaic is safer under a field than under a roof nobody has yet paid
+          for.
+        </p>
+
+        <p>
+          <span class="para-letter">[F]</span> The family still farm the field. They plough around a rectangle
+          now, and the wheat above the dining room comes up exactly the same colour as the wheat either side of
+          it, which is how nobody noticed for seventeen hundred years
+          <span class="idiom-mark">in the first place</span>.
+        </p>
+
+        <div class="footnotes">
+          <div>1. Achilles and Hector: two warriors on opposite sides in the Trojan War, a story told in Greek poetry and known all over the Roman world. Achilles kills Hector and drags his body behind a chariot.</div>
+          <div>2. Legal protection: in Britain, an important site can be put on a national list that makes it a crime to dig or build there without permission. The land can still be farmed.</div>
+        </div>
+      </div>
+
+      <div class="section-title">Check Your Understanding</div>
+
+      <p class="instr">
+        Choose one task. When you finish, find someone who did a task with a different number of stars and tell
+        them what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span><span class="stars">&#9733;</span>Answer using the article.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Number these five events 1 to 5 in the order the article gives them.<br />
+              Order <span class="blank"></span> The site is given legal protection.<br />
+              Order <span class="blank"></span> A man picks up a piece of pottery.<br />
+              Order <span class="blank"></span> The first trench is dug.<br />
+              Order <span class="blank"></span> The mosaic is buried again.<br />
+              Order <span class="blank"></span> The ten-day dig takes place.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">In which season and year was the pottery found, and which paragraph tells you?<span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">The mosaic was covered over again instead of being put on show. Write in one sentence the reason the article gives.<span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">Circle the three things the article says were found in or under the field, and cross out the two that were not: (a piece of pottery / a mosaic floor / a grave / a coin / a wall painting)</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span><span class="stars">&#9733;&#9733;</span>Answer using the article.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">Summarise what happened in four sentences, from the walk in the field to the wheat growing back, using the paragraph letters as your guide.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">Paragraph [A] describes something the finder did four times. Name it, and say in one sentence what it tells you about how he was feeling. The article never names the feeling.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">Find one other action in the article that shows a feeling nobody names. Quote it and say whose feeling it is.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">Which single moment does the article treat as the one that mattered most? Give the paragraph letter and one phrase that shows you.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span><span class="stars">&#9733;&#9733;&#9733;</span>Answer using the article.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">Find the longest span of time the article covers in the fewest words, and the shortest span it gives the most words to. then say in two sentences what that pairing makes the reader weigh more heavily, and why an article about a Roman floor might want that.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Beside each line write E if it only reports something that happened, R if it only shows somebody's
+              reaction without naming a feeling, or B if it does both at once.<br />
+              <span class="blank"></span> "The first trench went in that autumn, two metres by one."<br />
+              <span class="blank"></span> "told hardly anybody"<br />
+              <span class="blank"></span> "The full dig ran for ten days the following August"<br />
+              <span class="blank"></span> "Two questions came back more than any others."<br />
+              <span class="blank"></span> "Photographs were taken every evening, and the trays went up to the farm track at dusk."<br />
+              <span class="blank"></span> "It was recorded, photographed, and buried again."
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">The article's tone shifts once, visibly. Name the paragraph where it shifts and quote the first line that shows the new tone.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">The article gives the mosaic's subject, Achilles and Hector, in half of one sentence in [B] and never returns to it. Say in one sentence what that choice tells you about what this article is about.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span><span class="stars">&#9733;&#9733;&#9733;&#9733;</span>Read the county heritage service's public note on the same site, then answer.</p>
+
+        <div class="refresher">
+          <div class="headline">County Heritage Service: Note on the Protected Site</div>
+          <div class="byline">A public note from the county heritage service</div>
+          <p><span class="para-letter">[G]</span> A nationally important Roman site in this county was added to the protected list in November following a programme of survey and controlled excavation carried out under licence by a professional team.</p>
+          <p><span class="para-letter">[H]</span> The site came to the service's attention through a reported surface find. Members of the public who notice archaeological material are asked to report it and to leave it in place. Removing or digging material without permission damages the record irreparably and is a criminal offence.</p>
+          <p><span class="para-letter">[I]</span> Following recording, the excavated area was backfilled to conserve it. Reburial is standard practice and is the option that best protects fragile floors of this type for the future.</p>
+          <p><span class="para-letter">[J]</span> The service thanks the landowners for their co-operation throughout. The location of protected sites is not published in detail, and the service does not respond to requests for access.</p>
+        </div>
+
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Both texts describe the same discovery. Find two things that both of them describe. For each one, write
+              the words the article uses and the words the heritage note uses, then say in one sentence what
+              each writer's wording is built to make the reader conclude.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">Something both texts describe (1)</span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Article:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Heritage note:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>What each one is built to make you conclude:</strong></span><span class="ans-line"></span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">Something both texts describe (2)</span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Article:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Heritage note:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>What each one is built to make you conclude:</strong></span><span class="ans-line"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">The article says the mosaic is reburied because nobody has paid for a roof. The note says reburial is the option that best protects the floor. In three to four sentences, say whether these are two accounts of the same decision or two different claims, and what each text needs its version for.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span>Complete each sentence with one word from the bank. Two words are not needed.</p>
+        <div class="wordbank">
+          <strong>Word bank:</strong> topsoil &middot; survey &middot; trench &middot; excavate &middot; fragment &middot; plaster &middot; floor
+        </div>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>The plough turns over only the <span class="blank"></span>, not the ground below it.</li>
+          <li><span class="num">2.</span>They dug a narrow <span class="blank"></span> across the field to see what was under it.</li>
+          <li><span class="num">3.</span>An aerial <span class="blank"></span> of the whole farm showed a shape in the crop.</li>
+          <li><span class="num">4.</span>It took ten days to <span class="blank"></span> the room by hand.</li>
+          <li><span class="num">5.</span>She lifted one <span class="blank"></span> of pottery out of the tray and held it up.</li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 4B: The Floor Under the Wheat</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.4.11</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can tell what happened in order and show why one moment mattered more than
+        the others, without stopping to explain it.
+      </p>
+
+      <div class="section-title">Warm-Up</div>
+
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">With a partner, find and say aloud: the only paragraph with a month in it, the only paragraph where somebody speaks, and the two paragraphs that mention the wheat.</div>
+        </li>
+      </ol>
+
+      <div class="refresher">
+        <div class="headline">Allotment Notice: The New Plots, Numbers 41 to 56</div>
+        <p><span class="para-letter">[A]</span> The new plots at the top end will be marked out in March. A survey of the whole site was done in January, and the sixteen plots fit, though numbers 53 and 54 are narrower than the rest and have been priced accordingly.</p>
+        <p><span class="para-letter">[B]</span> Three things to expect. A trench for the water pipe will be cut along the top path in the first week, so nobody should plant anything in that strip before April. Forty tonnes of topsoil are being delivered on the 12th, because the ground up there is thin and full of builders' rubble. Anyone who wants to excavate a pond on their own plot must ask the committee first.</p>
+        <p><span class="para-letter">[C]</span> Finally, please keep any fragment of old glass or china you turn up in the bucket by the gate rather than in the hedge. Somebody has been putting it in the hedge, and the committee would rather not have to say who.</p>
+      </div>
+
+      <ol class="qlist">
+        <li>
+          <span class="num">2.</span>
+          <div class="qbody">With a partner, find and circle the five words from Words to Know. Then say in one sentence which of the three things in the second paragraph would matter most to somebody taking plot 41, and why.</div>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <div class="qbody">Answer out loud, in a full sentence: What is the oldest thing you have ever held? If you could survey one place properly, which? What would somebody excavating this room in a thousand years find first?</div>
+        </li>
+      </ol>
+
+      <div class="section-title">Investigate the Text</div>
+
+      <p class="instr">
+        Choose one Task and do it on your own. When you have finished, get together with people who did a
+        different Task and take turns telling each other what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span><span class="stars">&#9733;</span>Choose the moment you would have put in the headline, and give one reason from the text.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span><span class="stars">&#9733;&#9733;</span>Name two actions the article describes without saying what anybody felt, and say what each one signals. Quote both.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span><span class="stars">&#9733;&#9733;&#9733;</span>Find every sentence in [F] and say what each one is doing that a news report would not do. Then say why the article saved them for the end.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span><span class="stars">&#9733;&#9733;&#9733;&#9733;</span>Take one sentence from the heritage note and rewrite it so it keeps every fact but puts a person in it. Then say what the original was buying by leaving the person out.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+
+      <p class="instr">
+        Talk in pairs. When you finish a question, find a new partner and go on to the next one. Use the line next
+        to your own star rating to start.
+      </p>
+
+      <div class="discuss-block">
+        <p class="prompt">The article spends its first and last paragraphs on a field and its middle on a floor. If you were the editor, would you have run it that way?</p>
+        <p class="prompt">The heritage note asks people who find something to leave it in place. The man in the article put it in his pocket and nothing was lost. Does the rule survive that?</p>
+        <p class="prompt">Nobody can see this mosaic. Is a thing that has been recorded, photographed, and buried again saved or lost?</p>
+
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span><span>"First ______, then ______." / "The moment that mattered was ______ because the article says ______."</span></li>
+          <li><span class="stars">&#9733;&#9733;</span><span>"What happened was ______, and it mattered because ______." / "The article never says ______, but ______ shows it."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;</span><span>"The article spends longest on ______, which makes ______ feel more important than ______." / "The tone changes at ______, from ______ to ______."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>"The heritage note is structured to make the reader conclude ______." / "The interest behind that choice is ______, which the text never states."</span></li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+
+      <div class="wrapup">
+        With a partner, out loud: in three or four sentences, tell your partner what you did in the five minutes
+        before you sat down today, in order, and make one part of it the part that mattered. Do not explain why it
+        mattered.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Listening/Speaking Module 1, Lesson 1 (Advanced) - The Lost Kitchen - TOEFL Track Tier variant
 
-**Module:** 1, Describing | **Band:** Advanced | **Version:** 1.1T.1.6
+**Module:** 1, Describing | **Band:** Advanced | **Version:** 1.1T.1.7
 
 **TOEFL Track Tier variant (added 2026-09-07, revised four times same day per
 `Generate_Lesson_Prompt_v1.7.md` Section 0.6):** this is a fork of

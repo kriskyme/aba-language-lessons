@@ -1,7 +1,7 @@
-# Academic Writing Assessment Student Print Formatting Prompt (v4)
+# Academic Writing Assessment Student Print Formatting Prompt (v4.1)
 
-Companion to the Academic Writing Assessment Generation Prompt. Takes one completed Set's (Beginner) or Module
-Pair's (Intermediate/Advanced/Proficient) assessment (Part A Grammar & Mechanics Check, Part B Writing Task) and
+Companion to the Academic Writing Assessment Generation Prompt. Takes one completed standalone Set's or Module
+Pair's assessment (Part A Grammar & Mechanics Check, Part B Writing Task) and
 produces a single, print-ready, black-and-white student handout with every teacher-facing element removed or
 translated: Part A's answer keys and point values; Part B's rubric. **The one exception:** a short self-check
 checklist derived from Part B's rubric Meets column appears on each Writing Task card (2.5).
@@ -11,7 +11,7 @@ stylesheet, §E translations, §F task rules, §G regeneration, §H.3 this modal
 `.checklist`, §I shared packet self-check). This prompt states only what is specific to a Writing assessment
 packet.
 
-**Current version: v4.** History: `Changelog.md`. Not yet run against a real Set or Pair.
+**Current version: v4.1.** History: `Changelog.md`. Not yet run against a real Set or Pair.
 
 **Input:** the completed Assessment `.md` in full: Part A's items across every task Level, and Part B's per-Level
 tasks, Scenario, and rubrics. Pull all content from it; invent nothing; drop no task Level. Student version only.

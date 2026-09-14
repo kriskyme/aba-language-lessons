@@ -1,4 +1,4 @@
-# Academic Writing Lesson Generation Prompt (v6.17)
+# Academic Writing Lesson Generation Prompt (v6.18)
 
 **Lesson type:** an **Academic Writing Lesson** is a fixed 2-day cycle (two 75-minute periods), one of a Set's
 four positions, differentiated into band-scoped task Levels that each produce their own written output calibrated
@@ -8,7 +8,14 @@ but one **Scenario**, carried from grammar input on a practice object to a finis
 **Mentor Text** or **Mentor Essay** because the form of a Level's output changes, not just its depth. For
 Intermediate, Advanced, and Proficient, one Scenario spans a **Module Pair** (two consecutive Sets, 8 lessons),
 each Module contributing its own Grammar/Essay Focus to the same piece (Conventions §C; "THE MODULE PAIR"
-below). Beginner keeps a single-Set, 4-lesson arc. The design was derived from a real grammar-in-context
+below) unless that Module's approved Lesson-Plan declares it **standalone**. Beginner is always standalone.
+
+**Standalone Set** is the term used throughout this prompt for a Set that is not part of a Module Pair: every
+Beginner Set, plus any Module of another band whose Module Lesson-Plan declares it standalone (Conventions §C's
+Standing exception). A standalone Set is the 4-lesson arc Conventions §C describes - one Scenario from grammar
+input on the practice object through a finished, **published** piece on the draft object - and every rule below
+written for Beginner applies to it unchanged. Pairing remains the default for Intermediate, Advanced, and
+Proficient; standalone is never assumed, only declared by a plan. The design was derived from a real grammar-in-context
 textbook unit (`Writing Content Sample`) and an essay-writing chapter (`Academic Writing Essay Content Sample`).
 
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (taxonomy, task Levels by band, Sets,
@@ -17,15 +24,18 @@ item-quality rule, plus the shared self-check) alongside it. This prompt states 
 lesson and points to those files for the rest. Conventions §E's CBI/TBLT framing applies with the Scenario as
 the content vehicle, layered with a process-writing cycle (model, practice, draft, revise).
 
-**Current version: v6.17.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v6.18.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Inputs:** a Module and a Band at minimum (e.g. "Intermediate band, Module 5: Evaluating"); for
-Intermediate/Advanced/Proficient, also which of the pair's two Modules and which Pair position (1-8); for
-Beginner, which Set position (1-4). If an approved Module Lesson-Plan exists (`Generate_Module_Lesson_Plan_Prompt_*.md`),
+a paired Intermediate/Advanced/Proficient Module, also which of the pair's two Modules and which Pair position
+(1-8); for Beginner or any standalone Set, which Set position (1-4). If an approved Module Lesson-Plan exists (`Generate_Module_Lesson_Plan_Prompt_*.md`),
 take its Scenario, genre, each Module's Focus A/B pairing, and Mentor Ladder direction as given; this prompt then
-writes one lesson's worth of content at that position. Without a plan, 0.9 applies in full for Pair position 1
-(Beginner: Set position 1); every later position continues what came before it, never re-deriving the Scenario or
-genre (position 5 introduces Module N+1's own Focus A/B but not a new Scenario).
+writes one lesson's worth of content at that position. A plan that declares its Module standalone is what
+switches this prompt out of the Pair arc; absent such a declaration, assume a Pair for these three bands. Without
+a plan, 0.9 applies in full for Pair position 1 (Beginner or a standalone Set: Set position 1); every later
+position within the same arc continues what came before it, never re-deriving the Scenario or genre (position 5
+introduces Module N+1's own Focus A/B but not a new Scenario). A standalone Set has no position 5: it derives its
+own Scenario at Set position 1, exactly as a Beginner Set does.
 
 **Output:** one Markdown lesson document. Directly under its H1, a metadata line:
 `**Module:** ... | **Band:** ... | **Task Levels:** ... | **Version:** <Module>.<Set>.<Lesson>.<Version>` (Conventions
@@ -214,17 +224,21 @@ Run `shared/Generation_Quality_Standards.md` §F first. Then, for the Writing-sp
    Scenario; any extension-down Level still gets its own row's content, folded into the same whole-class
    mini-lesson; Essay Focus A/B taught as real content for a band reaching Levels 6-8 (0.4c)?
 6. **Respectful Tiers (0.5):** every Level, frame-based included, has one moment of genuine authorial choice?
-7. **Module verb, Pair-aware:** for Pair positions 5-8 the shared piece still exercises Module N's verb only, and
-   Module N+1's verb gets separate coverage in Lesson 8's Closing Transfer Check (0.8)?
+7. **Module verb, arc-aware:** for Pair positions 5-8 the shared piece still exercises Module N's verb only, and
+   Module N+1's verb gets separate coverage in Lesson 8's Closing Transfer Check (0.8)? In a standalone Set the
+   piece exercises this Module's own verb, and no separate second verb task exists?
 8. **Editing (0.6):** the self-edit checklist names this lesson's focuses and required feature; Peer Editing
    scaffolds per Level and sits only where 0.6 places it?
 9. **Self-revision (0.4a):** a concrete mechanism with a template at Levels 7-8, at both Pair positions 4 and 8 for
-   Intermediate/Advanced/Proficient, recording revision for effect (joins, upgrades, order, a reader's request)
+   a paired Intermediate/Advanced/Proficient Module and at Lesson 4 Day 1 in a standalone Set, recording revision for effect (joins, upgrades, order, a reader's request)
    and never repeating position 3's correctness checklist?
-10. **Skill Spotlight, Pair-aware (0.8):** Lesson 5 adds Module N+1's Spotlight; Lesson 8's Closing Transfer Check
-    covers both Modules' skill plus the separate Module N+1 verb task?
+10. **Skill Spotlight, arc-aware (0.8):** Lesson 5 adds Module N+1's Spotlight; Lesson 8's Closing Transfer Check
+    covers both Modules' skill plus the separate Module N+1 verb task? A standalone Set has one Spotlight, at
+    Lesson 1 Day 1, and one Closing Transfer Check, at Lesson 4 Day 2?
 11. **Rotation (0.9):** different Focus pair, Scenario topic, and real-world writing form than the preceding
-    Set/Pair, checked against the Rotation Log; Module N+1's Focus A/B distinct from Module N's?
+    Set/Pair, checked against the Rotation Log across every Band by date; Module N+1's Focus A/B distinct from
+    Module N's? A standalone Set runs the check in full at Set position 1, including a Module de-paired after the
+    fact, which never ran one as a Pair's position 5?
 12. **Content volume (0.4b):** each grammar/practice day has at least 3 distinct activities meeting the item
     minimums and reads as a full page when printed?
 13. **Level 5 bridge (0.4c):** in Advanced and Proficient, Level 5 gets a light, receptive look at the shared model
@@ -371,8 +385,8 @@ lesson or in the same slot as the previous lesson, and homework follows the same
 | Transfer | The frame on a third object (0.8) | Lesson 4 Day 2 |
 
 The frame itself is stated once per day, in the grammar box or the Word Bank, and every later task says "the
-frame." A Module Pair's second Module rotates the same bank against Module N+1's frame; a Beginner Set uses the
-Lesson 1-4 column as written.
+frame." A Module Pair's second Module rotates the same bank against Module N+1's frame; a Beginner or
+standalone Set uses the Lesson 1-4 column as written.
 
 ### 0.4c Essay Focus: structure content for Levels 6-8
 
@@ -475,12 +489,13 @@ lesson's focuses and required feature, plus one specific compliment and one spec
 student's peer edit is an oral partner check (read your sentence aloud; does your partner understand the word?).
 Essay-regime Levels add structure questions: can your partner identify the hook, the thesis, and each topic
 sentence unaided; for Levels 7-8, what do they think the implication or the two audiences' concerns are, checked
-against the writer's intent. **Timing:** Beginner runs Peer Editing at Lesson 4 Day 1. Intermediate/Advanced/
-Proficient run it once, at Lesson 8 Day 1 (Pair position 8), covering both Modules' focuses; it is not run at Pair
-position 4, since the piece is not yet complete. The position 8 form names both Modules' features for the reader
+against the writer's intent. **Timing:** a standalone Set (Beginner, or a Module its plan declares standalone) runs Peer
+Editing at Lesson 4 Day 1. A paired Intermediate/Advanced/Proficient Module runs it once, at Lesson 8 Day 1 (Pair
+position 8), covering both Modules' focuses; it is not run at Pair position 4, since the piece is not yet
+complete. The position 8 form names both Modules' features for the reader
 to find, since the draft carries no marks from position 4.
 
-**Self-revision timing:** Beginner's hard Level 7-8 requirement (0.4a) applies at Lesson 4 Day 1. In a Module Pair
+**Self-revision timing:** in a standalone Set the hard Level 7-8 requirement (0.4a) applies at Lesson 4 Day 1. In a Module Pair
 it applies **twice**: Pair position 4 (Module N's tools, before hand-off) and Pair position 8 (Module N+1's tools,
 before publishing). This is deliberately more revision practice than the single-Set model. Levels 4-6 are
 encouraged to do the same at both points. At every position the revision is **for effect** (0.4a), distinct in
@@ -511,7 +526,7 @@ The rules (Quality Standards §D1-D3) are shared. Writing-specific placement:
   real reason for the comparison"). One sentence, the same for every Level, naming the skill and not the
   Scenario object; no "some of you will also" (Quality Standards §D1). A Level's own required feature, including
   the essay structure Levels 6-8 build toward, is stated inside that Level's tasks, not in the Spotlight.
-- **Closing Transfer Check: Lesson 4 Day 2** (Beginner's finale; a Pair's position 4 hand-off): every student
+- **Closing Transfer Check: Lesson 4 Day 2** (a standalone Set's finale; a Pair's position 4 hand-off): every student
   applies the spotlighted skill to something new (not their Scenario piece), out loud or on a small card; a few
   cold-called. Demonstration, not self-report.
 - **Module Pair only, a second Spotlight and Check at Lessons 5 and 8:** Lesson 5's Spotlight (Day 1, during Module
@@ -523,7 +538,9 @@ The rules (Quality Standards §D1-D3) are shared. Writing-specific placement:
 
 ### 0.9 Rotation
 
-**Applies in full only when generating Pair position 1 (Beginner: Set position 1) without an approved plan.** Do
+**Applies in full only when generating Pair position 1 (Beginner or a standalone Set: Set position 1) without an
+approved plan.** A Module de-paired after the fact runs this check for the first time at that point, since as a
+Pair's position 5 it never ran one. Do
 not repeat the same grammar focus pair, Scenario topic, or real-world writing form (table below) as the
 immediately preceding Set or Pair for the same class, and avoid clustering the same grammar focus across nearby
 Modules even when not consecutive (comparatives as Focus A for a Describing pair and an Evaluating pair back to
@@ -557,11 +574,13 @@ than forcing a bad-fit essay type:
 
 ---
 
-## THE MODULE PAIR: A FIXED 4-LESSON ARC (BEGINNER) OR 8-LESSON ARC ACROSS TWO MODULES (ALL OTHER BANDS)
+## THE ARC: A FIXED 4-LESSON STANDALONE SET, OR AN 8-LESSON MODULE PAIR ACROSS TWO MODULES
 
 This prompt generates **one 2-day lesson per run**; run it once per position against the same approved plan.
-Beginner's 4 lessons in one Set share one Scenario from grammar input (practice object) through a finished,
-published piece (draft object, 0.1a). Intermediate, Advanced, and Proficient pair two consecutive Modules (1-2,
+A standalone Set's 4 lessons share one Scenario from grammar input (practice object) through a finished,
+published piece (draft object, 0.1a); this is every Beginner Set, and any other band's Module whose plan declares
+it standalone, which then runs the Beginner column of every rule in this prompt. Otherwise Intermediate,
+Advanced, and Proficient pair two consecutive Modules (1-2,
 3-4, 5-6, 7-8) so one Scenario/essay, on the draft object, spans both Modules' Sets, 8 lessons, each Module contributing its own, different Grammar/Essay Focus and
 **drafting only its own part of the piece** (Conventions §C: essay Levels write the body paragraphs in Module N
 and the introduction and conclusion in Module N+1; paragraph Levels write one paragraph per Module; position 8
@@ -574,7 +593,7 @@ it is.
 | 1 | N | 1 | Grammar Focus A: input, modeling, deeper practice; Mentor Ladder |
 | 2 | N | 2 | Grammar Focus B, Essay Focus B's outlining and combining (where applicable); Day 2 prewriting introduces the draft object and Draft Word Bank |
 | 3 | N | 3 | Drafting Module N's part on the draft object: the body paragraphs under a working thesis (essay Levels) or the Module's one paragraph (paragraph Levels), complete on Day 1; check and improve on Day 2 |
-| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence, on Module N's part only; final copy of that part, kept unmarked for Module N+1 (not published, no hand-off note). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Beginner: peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
+| 4 | N | 4 | **Revise for effect** with Module N's tools (sentence variety, word upgrade, order, a reader's one request) with before/after evidence, on Module N's part only; final copy of that part, kept unmarked for Module N+1 (not published, no hand-off note). The correctness check happened once, at position 3 Day 2; position 4 never re-runs the self-edit checklist. **Standalone Set (Beginner, or a Module its plan declares standalone): peer editing, revision, publishing, Closing Transfer Check; the Set's finale.** |
 | 5 | N+1 | 1 | Re-engagement (re-read own kept part; short recap, no fresh hook) plus Module N+1's own Grammar Focus A: input, modeling; Essay Focus A (the five-paragraph shape, hook types in Module N+1's form); Mentor Ladder second look, now with introductions and conclusions added |
 | 6 | N+1 | 2 | Module N+1's Grammar Focus B; Essay Focus A continued (the introduction's connecting sentences, the conclusion's closing moves); planning Module N+1's part against the kept part (replaces prewriting) |
 | 7 | N+1 | 3 | Drafting Module N+1's part: the introduction and conclusion around the kept bodies (essay Levels) or the second paragraph in Module N+1's form (paragraph Levels), complete on Day 1; Day 2 the merged self-edit checklist over both parts |
@@ -740,7 +759,7 @@ _Phase 2: Revise for effect with Module N's tools (45 min)_
   sentences with Focus B's connector or turn a plain "but" into the concession form where taught; upgrade one
   plain word to a more exact one from the bank; add the sentence the reader asked for. The band's top Level adds
   a fourth: move one sentence so the order runs in one direction. Frame-regime Levels write one more frame
-  sentence about the part the reader asked for and circle the better of their two for the final copy (0.4d). **Beginner:**
+  sentence about the part the reader asked for and circle the better of their two for the final copy (0.4d). **Standalone Set:**
   open with the Peer Editing exchange (0.6) and revise from the partner's form as well. **Module Pair:** no Peer
   Editing here; it happens at position 8.
 
@@ -764,9 +783,11 @@ _Phase 3: Transfer share (15 min)_
 - Two or three pairs cold-called to read their cards; the instances captured on the board (the day's
   board-dependent moment). Demonstration, not self-report; nothing collected.
 
-**Beginner (the Set's finale):**
+**Standalone Set (Beginner, or a Module its plan declares standalone; the Set's finale):**
 
-_Phase 1: Final copy (20 min)_ as above.
+_Phase 1: Final copy (20 min)_ as above, minus the hand-off: the piece is finished here, so no line anywhere in
+the lesson or its packet says the student will keep working on it (Style Guide's do-not-print table allows a
+continuation line only at a Pair's position 4).
 
 _Phase 2: Publish/share (30 min)_
 - A read-aloud to two partners in turn, or copies passed around the class; the piece is genuinely finished.
@@ -776,7 +797,7 @@ _Phase 3: Closing Transfer Check (25 min)_ (0.8).
 
 ### Lessons 5-8 (Module Pair only): Module N+1's Set
 
-Not generated for Beginner. Lessons 5-8 run Lessons 1-4's structure (same phases, same minutes) with Module N+1's
+Not generated for a standalone Set, which ends at Lesson 4. Lessons 5-8 run Lessons 1-4's structure (same phases, same minutes) with Module N+1's
 own Focus A/B and these substitutions, applied to the kept part on the draft object rather than a new piece:
 
 - **Lesson 5 Day 1 Phase 1** is re-engagement, not a hook: students re-read their Module N part, which arrives

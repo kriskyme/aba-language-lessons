@@ -1,14 +1,13 @@
-# Academic Writing Homework Generation Prompt (v4.4)
+# Academic Writing Homework Generation Prompt (v4.5)
 
 Companion to the Academic Writing Lesson Generation Prompt. Generates one homework assignment from a single
-completed or partially completed lesson within a Beginner Set (4 lessons) or an Intermediate/Advanced/Proficient
-Module Pair (8 lessons): one section per task Level in the band, each keyed to that Level's composition regime.
+completed or partially completed lesson within a standalone Set (4 lessons) or a Module Pair (8 lessons): one section per task Level in the band, each keyed to that Level's composition regime.
 
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`
 alongside it. Quality Standards §A-§C govern every item and are not restated. This prompt states only what is
 specific to Writing homework.
 
-**Current version: v4.3.** History: `Changelog.md`.
+**Current version: v4.5.** History: `Changelog.md`.
 
 **Input:** the lesson content generated so far, in full (the Scenario, the Grammar Focus A/B and Essay Focus A/B
 content taught so far, the Leveled Mentor Ladder, the Skill Spotlight, Module(s), Band). If none is provided,
@@ -19,20 +18,20 @@ stop and ask. Never generate lesson content from this prompt.
 ### 0.1 Required inputs
 
 - The lesson content as above; invent no grammar point, Scenario detail, or skill.
-- **Timing:** which lesson has been reached (Beginner: Lesson 1-4; others: Pair position 1-8). Default: after
-  Lesson 2 (Beginner) or after Pair position 6, due before the next drafting or revision lesson. State the
+- **Timing:** which lesson has been reached (a standalone Set: Lesson 1-4; a Pair: Pair position 1-8). Default:
+  after Lesson 2 (a standalone Set) or after Pair position 6, due before the next drafting or revision lesson. State the
   assumption in the header.
 - **Task-Level information:** which Level each student is working at, or Foundation Support.
 
 ### 0.2 Timing determines what content is available
 
-Beginner (or Pair positions 1-4, with one difference at 4):
+A standalone Set (or Pair positions 1-4, with one difference at 4):
 - **After Lesson 1:** Focus A and the Mentor Ladder only. No Focus B, confusable pair, or prewriting.
 - **After Lesson 2 (default):** Focus A and B (and Essay Focus A/B where taught) and the prewriting. Drafting has
   not started; homework primes Lesson 3 without asking the student to draft the Scenario piece at home.
 - **After Lesson 3:** the student's draft of the Module's part and its self-edit pass exist; Part 2 may apply the
   checklist to a fresh instance of that part (a body paragraph, a paragraph), never the whole piece.
-- **After Lesson 4:** Beginner: the piece is published; Part 2 may extend the Closing Transfer Check response. Pair
+- **After Lesson 4:** a standalone Set: the piece is published; Part 2 may extend the Closing Transfer Check response. Pair
   position 4: the Module's part is complete and self-revised but **not published**; Part 2 may extend that
   part, never the other Module's part and never implying the piece is finished.
 

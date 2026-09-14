@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telling the Story of My Last Meal: Lesson 2</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .rule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .rule-table th,
+      .rule-table td {
+        border: 1px solid var(--rule);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .rule-table th {
+        font-weight: 700;
+        background: #f2f2f2;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .rule-table,
+        .discuss-block,
+        .wrapup {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print</button>
+    </div>
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 2A: Telling the Story of My Last Meal</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.2.3</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened, in order, and let what people
+        said carry how I felt about it.</p>
+
+      <div class="wordbank">
+        <strong>Cooking verbs:</strong> chopped &middot; boiled &middot; fried &middot; stirred &middot; heated &middot; burned<br />
+        <strong>Kitchen actions:</strong> measured &middot; poured &middot; tasted &middot; waited &middot; checked &middot; drained<br />
+        <strong>Getting and finding verbs:</strong> found &middot; bought &middot; borrowed &middot; forgot &middot; ran out of &middot; swapped<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; finally &middot; by the time &middot; one evening<br />
+        <strong>People and places:</strong> my brother &middot; my roommate &middot; the kitchen &middot; the stove &middot; the microwave &middot; my friend &middot; the shop
+      </div>
+
+      <div class="section-title">Grammar: Starting a Sentence Before the Sentence Starts</div>
+      <div class="callout">
+        <p>You can put a short piece in front of your sentence to tie two actions together or to jump the story
+          forward. The comma after it is not optional.</p>
+        <table class="rule-table">
+          <tr><th>Opener</th><th>Example</th><th>What it does</th></tr>
+          <tr><td>-ing</td><td><strong>Reaching for the pan,</strong> I knocked the bowl over.</td><td>ties two actions to the same moment</td></tr>
+          <tr><td>-ed</td><td><strong>Left on the heat too long,</strong> the sauce turned to paste.</td><td>puts the cause first</td></tr>
+          <tr><td>time phrase</td><td><strong>After three tries,</strong> I gave up on the sauce.</td><td>jumps the story forward</td></tr>
+          <tr><td>time phrase</td><td><strong>By the end of the week,</strong> I had stopped cooking altogether.</td><td>covers a long stretch fast</td></tr>
+        </table>
+        <p>An <em>-ing</em> opener attaches to whatever comes next, so that thing has to be the one doing it.</p>
+        <p class="model-step">Wrong: Reaching for the pan, the bowl fell over. &nbsp;&nbsp; Right: Reaching for
+          the pan, I knocked the bowl over.</p>
+        <p class="model-step">Wrong: Having burned the first batch, the second one came out better. &nbsp;&nbsp;
+          Right: Having burned the first batch, I watched the second one more carefully.</p>
+        <p>Ask yourself: who or what is doing the opener? That has to be the subject of the main sentence.</p>
+        <p>One opener slows a moment down or moves time along. Two or three in a row stop sounding chosen and
+          start sounding like a pattern.</p>
+      </div>
+
+      <div class="section-title">Try It</div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> Combine each pair into one sentence
+          using an opener. Put in the comma.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">I reached into the cupboard. I found the wrong kind of rice.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">I had read the recipe twice. I still measured the water wrong.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">I waited ten minutes. I gave up and turned the heat up.<span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">The pan was left on the heat. It started to smoke.<span class="ans-line"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">I opened the window. I told my roommate everything was fine.<span class="ans-line"></span></span></li>
+          <li><span class="num">6.</span><span class="qbody">Three days passed. I still had not cleaned the pan.<span class="ans-line"></span></span></li>
+          <li><span class="num">7.</span><span class="qbody">I tasted the soup. I understood what my brother had meant.<span class="ans-line"></span></span></li>
+          <li><span class="num">8.</span><span class="qbody">I had promised to cook. I ordered food instead.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;</span>
+          Each pair below has an opener on both sentences. Rewrite one of the two without its opener, and circle
+          the one you kept.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Stirring the sauce, I heard the door. / Reaching for a cloth, I turned the heat down.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Opening the oven, I saw the smoke. / Grabbing the tray, I burned my thumb.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">After ten minutes, the rice was still hard. / By then, my brother had given up waiting.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;</span>
+          Find the two sentences in each run that both start with an opener. Rewrite one of them without its
+          opener, and circle the one you kept.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">I put the pan on. Stirring the sauce, I heard the door. Reaching for a cloth, I turned the heat down. My brother came in.<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">The kitchen was full of smoke. Opening the oven, I saw how bad it was. I put the tray on the side. Grabbing it again, I burned my thumb.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">After ten minutes, the rice was still hard. I turned the heat up. By then, my brother had given up waiting. We ate at nine.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Read This, Then Write the Missing Parts</div>
+
+      <div class="callout">
+        <p><strong>The Cake I Did Not Read About</strong></p>
+        <p><em>(opening sentence missing)</em> I had made it twice before, both times with my mother standing
+          somewhere behind me, and I had decided that meant I knew how. The recipe was three lines long on a card
+          in her handwriting, and two of those lines turned out to matter. What I learned that afternoon was that
+          I had never actually made this cake at all.</p>
+        <p>The first hour went exactly as I expected. I creamed the butter and sugar, beat in the eggs one at a
+          time, and folded the flour through until the bowl looked the way it had always looked. My sister asked
+          whether I was supposed to add anything else, and I told her I had the card right there.</p>
+        <p>The second hour went differently. The cake came out of the oven flat, dense, and about half the height
+          it should have been, and it stayed that way while it cooled on the rack. I read the card again, properly
+          this time, and found the second line: a teaspoon of baking powder, which I had read past twice because
+          I already knew what the card said.</p>
+        <p><em>(conclusion missing)</em></p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+          Read the essay's shape, then write the missing opening sentence and the missing ending.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Mark the essay above. Underline the writer's main point, which is the last sentence of the first paragraph. Number the paragraphs that tell what happened. Put a box around the sentence where the writer stops telling what happened and starts saying what it meant.</span></li>
+          <li><span class="num">2.</span><span class="qbody">Write two different opening sentences: one that puts the reader in a short scene, and one that tells a very small story. Then write one sentence saying which you would keep and why.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Check that the writer's main point is still the last sentence of the first paragraph after your opening. If the join reads roughly, rewrite the sentence before it.<span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Write the ending. Say the main point again in new words, then do one of these: give advice, predict, ask, or give an opinion. Write which one you chose.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+          Do Task D's first step, then write the missing opening sentence and the missing ending.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write two different opening sentences: one that is a line somebody said, and one that is a detail you do not explain. Then write one sentence saying which you would keep and why.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Rewrite the last sentence of the first paragraph so that it signals there is a reason without naming it, and keep it in last position.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Write the ending. Say the main point again in new words, then close with advice, a prediction, a question, or an opinion. Do not explain the detail from your opening.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">A Word That Is Easy to Mix Up</div>
+      <div class="callout">
+        <p><strong>say</strong> takes no person after it. <strong>tell</strong> takes a person after it. A
+          question after a person needs <strong>ask</strong>.</p>
+        <p class="model-step">She said the pan was too small. / She told me the pan was too small. / She asked me
+          why I had used that pan.</p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> Write said, told, or asked in each
+          blank.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">My brother <span class="blank"></span> me the oven was already on.</span></li>
+          <li><span class="num">2.</span><span class="qbody">She <span class="blank"></span> that the sauce needed more salt.</span></li>
+          <li><span class="num">3.</span><span class="qbody">I <span class="blank"></span> my roommate I would clean up.</span></li>
+          <li><span class="num">4.</span><span class="qbody">Nobody <span class="blank"></span> anything about the smell.</span></li>
+          <li><span class="num">5.</span><span class="qbody">He <span class="blank"></span> me why I had not used the small pan.</span></li>
+          <li><span class="num">6.</span><span class="qbody">I <span class="blank"></span> that I had made it before, which was not quite true.</span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Find the Mistakes</div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> There are 8 mistakes in this
+          paragraph. Cross out each one with a single line, then write the whole paragraph out again,
+          corrected, on the lines below.</p>
+        <p class="fillblank">Last month I tried to make curry for four people. Opening the fridge, the chicken was
+          still frozen. I said my friend that we could eat late, and I told him that the chicken will be fine.
+          Checking the clock I put the chicken in warm water. Having waited twenty minutes, the chicken was still
+          hard in the middle. My friend insisted he was happy to wait, which he had not been asked about. He told
+          that he would chop the onions. By the time we ate, I thought the whole thing is my own fault for
+          starting late.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+          Once you have fixed Task G, do both steps.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three of its sentences start the same way in a row. Rewrite one of the three without an opener.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence saying what your rewrite does to the speed of the paragraph.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+          Once you have fixed Task G, do all three steps.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three of its sentences start the same way in a row. Rewrite one of the three without an opener.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence saying what your rewrite does to the speed of the paragraph.<span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Of the two openers still left, decide which one earns its place. Write one sentence saying what the other one was costing.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 2B: Planning a Story About a Meal That Went Wrong</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Writing <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.2.3</span>
+        </div>
+      </div>
+      <p class="objective"><strong>Objective:</strong> I can tell what happened, in order, and let what people
+        said carry how I felt about it.</p>
+
+      <div class="wordbank">
+        <strong>Cooking verbs:</strong> chopped &middot; boiled &middot; fried &middot; stirred &middot; heated &middot; burned<br />
+        <strong>Kitchen actions:</strong> measured &middot; poured &middot; tasted &middot; waited &middot; checked &middot; drained<br />
+        <strong>Getting and finding verbs:</strong> found &middot; bought &middot; borrowed &middot; forgot &middot; ran out of &middot; swapped<br />
+        <strong>Time words:</strong> first &middot; then &middot; next &middot; after that &middot; finally &middot; by the time &middot; one evening<br />
+        <strong>People and places:</strong> my brother &middot; my roommate &middot; the kitchen &middot; the stove &middot; the microwave &middot; my friend &middot; the shop
+      </div>
+
+      <div class="section-title">Warm Up</div>
+      <p class="instr">Write about the last thing you made to eat.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span> <span class="stars">&#9733;</span>
+          Write three sentences: what you did first, what you did next, and how it turned out. Use two time words
+          you choose yourself, and end with one sentence beginning "because".</p>
+        <p><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span> <span class="stars">&#9733;&#9733;</span>
+          Write two sentences, then trade with a partner.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write two sentences about the last thing you made to eat. One must contain a detail that lets a reader guess how you felt. Do not use any word that names a feeling.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Trade. Under your partner's sentences, write what you think they felt and which words made you think it.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+          Write the one sentence of a piece about the last thing you made to eat that says what the experience
+          showed you. Then write the sentence that would come immediately before it, so the two read together as
+          the end of an opening paragraph.</p>
+        <p><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></p>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+          Do both steps.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Write the sentence that says what the experience showed you, so that it signals there is a reason without naming it. Then write the sentence that would come immediately before it.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write one sentence saying what your version holds back.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Plan Your Piece</div>
+      <p class="instr">You are going to write about one time making or getting something to eat did not go as
+        planned. You are writing it for Mina, a friend who wants to make the same thing herself and is sure it is
+        simple.</p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span> Circle one of these to write about.</p>
+        <p class="fillblank">instant noodles &nbsp;&middot;&nbsp; rice &nbsp;&middot;&nbsp; eggs
+          &nbsp;&middot;&nbsp; soup &nbsp;&middot;&nbsp; pasta &nbsp;&middot;&nbsp; a sandwich
+          &nbsp;&middot;&nbsp; curry &nbsp;&middot;&nbsp; pancakes</p>
+      </div>
+
+      <div class="wordbank">
+        <strong>Going-wrong verbs:</strong> burned &middot; boiled over &middot; undercooked &middot; oversalted &middot; spilled &middot; dropped<br />
+        <strong>Kitchen actions:</strong> forgot &middot; misread &middot; guessed &middot; rushed &middot; swapped &middot; tasted<br />
+        <strong>What went wrong:</strong> the timer &middot; the heat &middot; the recipe &middot; the smoke &middot; the pan &middot; the smell<br />
+        <strong>Time words:</strong> at first &middot; halfway through &middot; by then &middot; in the end &middot; too late &middot; the next morning &middot; one evening<br />
+        <strong>People and places:</strong> my brother &middot; my roommate &middot; my friend &middot; the kitchen &middot; the bin &middot; the shop &middot; the table
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task F.</span> <span class="stars">&#9733;</span>
+          Write three words from the Word Bank that fit what you circled, then fill in the plan.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three words:<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">First <span class="blank"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Then <span class="blank"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">In the end <span class="blank"></span></span></li>
+          <li><span class="num">5.</span><span class="qbody">It turned out that way because <span class="blank"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task G.</span> <span class="stars">&#9733;&#9733;</span>
+          Write three words from the Word Bank that fit what you circled, then make your list.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three words:<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">List four or five things that happened, in order.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">Circle the one thing on your list that could show how you felt without you saying so.</span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task H.</span> <span class="stars">&#9733;&#9733;&#9733;</span>
+          Write three words from the Word Bank that fit what you circled, then plan your piece.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three words:<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write the one sentence saying what the experience showed you.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">List the two or three things that happened, in order, one line each. Next to each, write which part of your sentence it supports.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Mark where you will stop telling the story and start saying what it meant.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Write one line on what Mina is likely to think of you. Your piece will answer it.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task I.</span> <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+          Write three words from the Word Bank that fit what you circled, then plan your piece.</p>
+        <ol class="qlist">
+          <li><span class="num">1.</span><span class="qbody">Three words:<span class="ans-line"></span></span></li>
+          <li><span class="num">2.</span><span class="qbody">Write the one sentence saying what the experience showed you, so that it signals there is a reason without naming it.<span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">3.</span><span class="qbody">List the two or three things that happened, in order, one line each. Next to each, write which part of your sentence it supports.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></span></li>
+          <li><span class="num">4.</span><span class="qbody">Mark where you will stop telling the story and start saying what it meant. Mark the one detail you will put in early and not explain.</span></li>
+          <li><span class="num">5.</span><span class="qbody">Write one line naming the reason a reader should be able to work out on their own. It will not appear anywhere in the piece.<span class="ans-line"></span></span></li>
+        </ol>
+      </div>
+
+      <div class="section-title">Share a Line</div>
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task J.</span> Read out one line from your plan: one
+          thing that happened, or the sentence saying what it showed you. One line only.</p>
+      </div>
+    </div>
+  </body>
+</html>

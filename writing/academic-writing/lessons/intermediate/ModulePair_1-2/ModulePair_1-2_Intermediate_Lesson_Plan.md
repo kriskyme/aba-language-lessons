@@ -12,6 +12,19 @@ generated lessons exactly as they stand (`1.1.1.6`, `1.1.2.8`, `1.1.3.13`, `1.1.
 is re-derived. Module 2's decisions are new, and this is the first Pair planned before its lessons were
 written._
 
+> **Module 2's half of this plan is SUPERSEDED (2026-09-14).** Intermediate Modules 1-2 no longer form a Pair:
+> Module 2 was de-paired by user direction and replanned as a standalone Set on its own Scenario. Its live plan is
+> [`../Module_2/Module2_Intermediate_Lesson_Plan.md`](../Module_2/Module2_Intermediate_Lesson_Plan.md), and every
+> Module 2 section below — the Pair position table's rows 5-8, the inherited Scenario, Module 2's Focus A/B, the
+> Lesson 8 CSV-coverage task, the Mentor Ladder's second look, and Module 2's activity shapes — records what was
+> generated between 2026-09-09 and 2026-09-14 and is kept for that history only. Do not generate from it.
+>
+> **Module 1's half of this plan is still live** and still governs `Module_1/Set_1/`'s four lessons exactly as
+> written, including Lesson 4's hand-off role. That hand-off now has no receiver — a known gap logged in
+> `Index.md`'s Pending work, deliberately not fixed in the de-pairing pass. See `shared/Program_Conventions.md`
+> §C's Standing exception for the status of the Module Pair convention itself, which is deferred rather than
+> decided.
+
 ## Rotation Log check (Section 0)
 
 Read: `Rotation_Log.md`, `Rotation_Log_Intermediate.md`, `Rotation_Log_Advanced.md`. Highest global Lesson #

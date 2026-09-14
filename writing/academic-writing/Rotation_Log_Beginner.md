@@ -18,7 +18,7 @@ Levels sit entirely in the Guided Frame Composition regime.
 
 | # | Lesson # | Set position | Date | Content role | Scenario / Topic | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Beginner 1 | 1 of 4 | 2026-09-10 | Grammar Focus A (letter-sound spelling) input, modeling, deeper practice; Skill Spotlight; Mentor Ladder (teacher-presented, 3 Mentor Texts); holds the Set's one guided frame round | My notebook (practice object) | 1.1.1.0 |
+| 1 | Beginner 1 | 1 of 4 | 2026-09-10 | Grammar Focus A (letter-sound spelling) input, modeling, deeper practice; Skill Spotlight; Mentor Ladder (teacher-presented, 3 Mentor Texts); holds the Set's one guided frame round | My notebook (practice object) | 1.1.1.1 |
 | 2 | Beginner 2 | 2 of 4 | 2026-09-10 | Grammar Focus B ("and" in the two-slot frame); e / i confusable-pair drill; Day 2 partner dictation, then prewriting introduces the draft object and the Draft Word Bank | My notebook; then my hat introduced Day 2 (draft object: one of baseball cap, beanie, sun hat, wool hat, bucket hat, rain hat, visor, headband) | 1.1.2.0 |
 | 3 | Beginner 3 | 3 of 4 | 2026-09-10 | Drafting on the draft object: the frame completed once and complete on Day 1; check and improve on Day 2 | My hat (draft object) | 1.1.3.0 |
 | 4 | Beginner 4 | 4 of 4 | 2026-09-10 | Finale: a reader's request and Peer Editing (Beginner's placement, Lesson prompt 0.6), one more frame sentence and the better of the two chosen; final copy, publishing, Closing Transfer Check on the student's own shoe | My hat (same Scenario, continued) | 1.1.4.0 |
@@ -118,3 +118,10 @@ new `### Set N` subsection for a new Set - do not overwrite anything above):
 
 Add the Set's shared Grammar Focus (A/B), Real-world writing form, and Notes once, below the table, the same way
 this Set's entry does - they apply to all 4 rows, not repeated per row.
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 Lessons 1-4 and Module 2 Set 1 Lessons 1-4, including the **The Frames** section title in each, now **The Sentences**.
+
+**Writing room and answer space (2026-09-14).** Module 1 Lesson 1's Fix the Wrong Word Tasks and Module 2
+Lesson 2's Task A told students to write the correction above the printed word; both already print an answer
+line beside the item, so the instruction now sends the correction there (Style Guide v2.32 §F). `1.1.1.0` ->
+`1.1.1.1`, `2.1.2.0` -> `2.1.2.1`, before the "frame" sweep above moved every lesson in both Sets one further.

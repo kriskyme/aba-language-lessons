@@ -10,10 +10,10 @@ this Band, so the cross-Set and cross-Module adjacency checks were skipped per `
 
 | Lesson # | Genre | Reading Strategy | Phase 1 Hook | Phase 3 Protocol | Vocabulary Theme | Topic | Version |
 |---|---|---|---|---|---|---|---|
-| 1 | Label set with its images embedded in the packet | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Rotating Partners | School things and size | The things in a school bag, labeled | 1.1.1.0 |
-| 2 | Short personal note / postcard | Echo Reading | K-W-L Chart | Small-group discussion | Weather and clothing | A postcard about a sunny day at the beach and what the writer wore | 1.1.2.0 |
+| 1 | Label set with its images embedded in the packet | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Rotating Partners | School things and size | The things in a school bag, labeled | 1.1.1.1 |
+| 2 | Short personal note / postcard | Echo Reading | K-W-L Chart | Small-group discussion | Weather and clothing | A postcard about a sunny day at the beach and what the writer wore | 1.1.2.2 |
 | 3 | Simple 2-4 line dialogue | Reader's Theater | Take a Side | Panel Round | Fruit, size, and shape | Two friends and a seller at a fruit stand | 1.1.3.0 |
-| 4 | Short notice / simple sign | Partner / Shared Reading | Mystery Quote | Jigsaw Expert Panels | Animals and markings | A lost-and-found notice describing a lost cat | 1.1.4.0 |
+| 4 | Short notice / simple sign | Partner / Shared Reading | Mystery Quote | Jigsaw Expert Panels | Animals and markings | A lost-and-found notice describing a lost cat | 1.1.4.2 |
 
 Note: Beginner's task Levels are 1, 2, 3 - three, not four (`shared/Program_Conventions.md` §B) - and all three
 Module 1 Reading objectives end in matching a decoded word or frame to an image, so every lesson in this Set
@@ -52,3 +52,7 @@ black and white alone, since those survive a black-and-white print.
 for Set 2 onward. If this Module already has a section above, append this Set as a new subsection under it
 rather than creating a duplicate `## Module N` heading. Bump a lesson's own final digit in place here whenever
 that lesson is substantively revised after generation - `shared/Program_Conventions.md` §G.)
+
+**Writing room (2026-09-14).** Tasks B-D tell students to write the right word above a crossed-out one; the printed line now carries `.editable` leading so there is room (Style Guide §F, §I item 26). Lessons 2 and 4 move to `1.1.2.1` and `1.1.4.1`.
+
+**Instruction wording (2026-09-14).** Lessons 1, 2 and 4's ★★ picture task said "say the missing word out loud" over a sentence printed complete; each now names the describing word in the sentence the student marked (Quality Standards §C16, §F item 36). Versions bumped to 1.1.1.1, 1.1.2.2, 1.1.4.2.

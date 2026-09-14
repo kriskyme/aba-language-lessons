@@ -525,3 +525,20 @@ terrestrial, and the two ordeals share only the fact of someone being stuck, so 
 the end. The separate flag against Module 1 Set 2's planned Lesson 7 ("a real research facility or
 observatory") still stands and applies whenever that Set is generated.
 
+**Lesson 4 generated (2026-09-14), version `2.1.4.0`.** *The Block That Would Not Sign.* Oral-history archive
+interview clip; **no cell of the approved Lesson 4 row was amended** (Listen for Contrastive/Concession
+Language, Asking for Clarification, K-W-L Chart, Jigsaw Expert Panels, "Memory, testimony & historical
+reference"). Source: the Jim M. Tanimoto Interview, Densho Visual History Collection (`ddr-densho-1000-270`,
+recorded 2009-12-10 in Gridley, California; interviewers Tom Ikeda and Barbara Takei; CC BY-NC-SA 4.0 for
+non-commercial educational use with citation). The class plays a contiguous two-segment span, Densho's own
+segments 16 and 17 (04:19 and 03:25) on refusing to sign the so-called loyalty questionnaire at Tule Lake.
+Runtime sits inside the Band target, so no deviation is flagged, and Densho publishes a full verbatim
+transcript, so unlike Lesson 3 this lesson rests on a complete source record. Generated against
+`Generate_Lesson_Prompt_v2.6.md`. See
+`lessons/advanced/Module_2/Set_1/Lesson_4_Block42/Lesson4_Block42.md`.
+
+*(This entry was rebuilt 2026-09-14 after the file was truncated by a tooling error, from the lesson document
+and `Changelog.md`. The Set's earlier entries above came back intact from the last commit; anything logged for
+this lesson beyond what those two sources carry is not recovered.)*
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 Lessons 1-4 (LostKitchen in both the base Set and the TOEFL-track fork), Set 2 Lessons 5-8, and Module 2 Set 1 Lesson 3 (MountBowen).

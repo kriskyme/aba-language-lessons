@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Mixer on the Table: Student Packet</title>
+    <style>
+      :root {
+        --ink: #000000;
+        --ink-soft: #333333;
+        --paper: #ffffff;
+        --rule: #999999;
+        --rule-light: #cccccc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e8e8;
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+        line-height: 1.55;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: var(--paper);
+        padding: 48px 40px 60px;
+      }
+      .toolbar {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 14px 40px 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .print-btn:hover {
+        background: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        margin: 0;
+        color: var(--ink);
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      .masthead h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+      .masthead + .masthead,
+      .masthead.masthead-later {
+        margin-top: 60px;
+        page-break-before: always;
+        break-before: page;
+      }
+      .masthead-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+        margin-top: 0;
+        padding-top: 4px;
+      }
+      .masthead-tag {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .masthead-sep {
+        font-weight: 400;
+        color: var(--rule);
+        padding: 0 3px;
+      }
+
+      .objective {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+      .objective strong {
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+        margin: 32px 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule-light);
+      }
+
+      .exercise-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .instr-inline {
+        margin-top: 20px;
+      }
+      .instr-inline .exercise-label {
+        margin-right: 6px;
+      }
+
+      .section-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+      .instr {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+      }
+
+      .spotlight-box {
+        border: 1px solid var(--ink);
+        padding: 16px 20px;
+        margin: 14px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .spotlight-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .model-step {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .model-step:last-child {
+        margin-bottom: 0;
+      }
+      .model-step strong {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12.5px;
+        letter-spacing: .03em;
+      }
+
+      .vocab-list {
+        margin: 10px 0 6px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .vocab-list .vrow {
+        display: flex;
+        gap: 10px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .vocab-list .vrow:last-child {
+        border-bottom: none;
+      }
+      .vocab-list .word {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        white-space: nowrap;
+        width: 165px;
+        flex-shrink: 0;
+      }
+
+      .idiom-item {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+      .idiom-item:last-child {
+        margin-bottom: 0;
+      }
+      .idiom-phrase {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .annot-key {
+        float: right;
+        width: 190px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11.5px;
+        margin: 2px 0 12px 20px;
+        padding: 12px 14px;
+        border: 1px solid var(--ink);
+      }
+      .annot-key-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .annot-key .k-row {
+        margin: 7px 0;
+      }
+      .annot-key .k-mark {
+        font-family: Georgia, serif;
+        font-weight: 700;
+        display: block;
+      }
+      .clearfloat {
+        clear: both;
+      }
+
+      .image-placeholder {
+        /* a box the STUDENT draws in ("Draw your phone case here"); never a box the teacher must fill with a photo */
+        border: 2px dashed var(--ink);
+        padding: 44px 20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 14px 0 4px;
+      }
+      .photo {
+        /* an embedded image (base64 data URI); sized by this rule, never per packet */
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin: 14px auto 4px;
+      }
+      .image-caption {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        color: var(--ink-soft);
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      .article {
+        padding: 6px 0 0;
+        margin: 18px 0 22px;
+      }
+      .article .headline {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px 0 4px;
+      }
+      .byline {
+        text-align: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 20px;
+      }
+      .article p {
+        font-size: 15.5px;
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .para-letter {
+        font-weight: 700;
+        margin-right: 2px;
+      }
+      .footref {
+        font-weight: 700;
+        font-size: 0.72em;
+        vertical-align: super;
+        line-height: 0;
+      }
+      .idiom-mark {
+        text-decoration: underline dotted var(--ink);
+        text-decoration-thickness: 1.5px;
+      }
+      .article .footnotes {
+        margin-top: 22px;
+        padding: 14px 0 22px;
+        border-top: 1px solid var(--rule-light);
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .article .footnotes div {
+        margin-bottom: 6px;
+      }
+
+      /* Matching items and the two-source compare layout (§F). Base, not a modality delta:
+         any modality that prints two sources to compare needs these. */
+      .match-list {
+        margin: 8px 0 4px 4px;
+      }
+      .match-row {
+        margin-bottom: 14px;
+      }
+      .match-row .match-label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .match-row .match-src {
+        display: block;
+        margin: 0 0 5px 12px;
+      }
+
+      .qlist {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .qlist li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 11px;
+        font-size: 14.5px;
+      }
+      .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 20px;
+      }
+      .qbody {
+        flex: 1;
+      }
+
+      /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
+         blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
+         `.fillblank`, or none) - e.g. "My case is <span class="blank"></span> (thick).".
+         `.ans-line` / `.ans-line-sm` is a standalone full-width line by itself BELOW a prompt,
+         for writing a full answer - never place either one mid-sentence, and never use
+         `.ans-line-sm` where you mean `.blank`. */
+      .blank {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink-soft);
+        min-width: 70px;
+      }
+      .ans-line {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        height: 22px;
+        margin-top: 4px;
+      }
+      .ans-line-sm {
+        display: block;
+        border-bottom: 1px solid var(--ink-soft);
+        width: 100%;
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      .subgroup-label {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--ink);
+        margin: 14px 0 8px;
+      }
+
+      .fillblank {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .fillblank li {
+        margin-bottom: 9px;
+        font-size: 14.5px;
+      }
+      .fillblank .num {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      .refresher {
+        padding: 16px 0;
+        margin: 14px 0;
+        border-bottom: 1px solid var(--rule-light);
+      }
+      .refresher.refresher-noline {
+        border-bottom: none;
+      }
+      .refresher .headline {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .refresher p {
+        font-size: 14.5px;
+      }
+
+      .task-block {
+        margin: 18px 0 22px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .task-block .stars {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+      .task-block p,
+      .task-block li {
+        font-size: 14.5px;
+      }
+      .task-block .instr-line {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14.5px;
+        color: var(--ink);
+        margin-bottom: 10px;
+      }
+      .task-block .instr-line .exercise-label {
+        margin-right: 2px;
+      }
+      .task-block .instr-line .stars {
+        margin-right: 8px;
+      }
+      /* .wordbank holds plain inline text only: a bold label, then items separated by " &middot; ".
+         A single-list bank is one line: <strong>Word bank:</strong> a &middot; b &middot; c
+         A grouped bank is one <strong>Group:</strong> line per group, lines joined by <br />.
+         Never wrap its lines in <p>, .model-step, or any other class (see §F, Word banks). */
+      .wordbank {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13px;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-top: 1px dashed var(--rule-light);
+        border-bottom: 1px dashed var(--rule-light);
+      }
+      .task-block .starter {
+        font-style: italic;
+        padding: 8px 0 8px 14px;
+        margin: 10px 0;
+        border-left: 3px solid var(--ink);
+        font-size: 14px;
+      }
+
+      .discuss-block {
+        margin: 16px 0;
+      }
+      .discuss-block .prompt {
+        font-size: 14.5px;
+        margin: 10px 0 16px;
+      }
+      .stems {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+      }
+      .stems li {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        margin-bottom: 9px;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 13.5px;
+      }
+      .stems .stars {
+        font-size: 13px;
+        flex-shrink: 0;
+        width: 52px;
+        letter-spacing: 1px;
+      }
+
+      .wrapup {
+        margin: 16px 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .toolbar {
+          display: none;
+        }
+        .sheet {
+          padding: 0 12px;
+          max-width: 100%;
+        }
+        .spotlight-box,
+        .task-block,
+        .article p,
+        .refresher,
+        .discuss-block,
+        .wrapup,
+        .article {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">Print this packet</button>
+    </div>
+
+    <div class="sheet">
+      <div class="masthead">
+        <h1>Unit 3A: The Mixer on the Table</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.3.11</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can tell what happened in order and show why one moment mattered more than
+        the others, without stopping to explain it.
+      </p>
+
+      <div class="section-title">Before You Read</div>
+
+      <p class="instr">
+        A Repair Cafe is a place where volunteers mend people's broken things for free. Fill in the two lists
+        below on your own, then compare them with the person next to you.
+      </p>
+
+      <p class="section-label">What I already know about places like this</p>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+
+      <p class="section-label">What I want to know</p>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+
+      <p class="section-label">Words to Know</p>
+
+      <div class="vocab-list">
+        <div class="vrow"><span class="word">volunteer</span><span>somebody who does work without being paid for it</span></div>
+        <div class="vrow"><span class="word">secondhand</span><span>already owned and used by somebody else</span></div>
+        <div class="vrow"><span class="word">guarantee</span><span>a promise that something will work, or be put right if it does not</span></div>
+        <div class="vrow"><span class="word">dismantle</span><span>to take something apart into its separate pieces</span></div>
+        <div class="vrow"><span class="word">spare part</span><span>a new piece bought to replace a broken piece</span></div>
+      </div>
+
+      <div class="spotlight-box">
+        <div class="spotlight-label">Phrase Spotlight</div>
+        <div class="idiom-item"><span class="idiom-phrase">give it a go</span>: to try something without being sure it will work.</div>
+        <div class="idiom-item"><span class="idiom-phrase">at the end of the day</span>: when everything is considered; what it comes down to.</div>
+        <div class="idiom-item"><span class="idiom-phrase">get the wrong end of the stick</span>: to misunderstand something completely, usually in a way that makes somebody look bad.</div>
+      </div>
+
+      <div class="section-title">Read &amp; Mark It Up</div>
+
+      <p class="instr">
+        Read in pairs. One of you reads Paragraphs [A] and [B] aloud, the other reads [C] and [D], then swap back
+        for [E] and [F]. After each turn, the listener says in one sentence what has just changed. Mark the text
+        as the key says while you follow.
+      </p>
+
+      <div class="article">
+        <div class="headline">Ask Ruth: "I Took It Apart In Front Of Her"</div>
+        <div class="byline">A reader's letter and the columnist's reply</div>
+
+        <div class="annot-key">
+          <div class="annot-key-title">Mark It Up</div>
+          <div class="k-row"><span class="k-mark">underline</span> a word you don't know</div>
+          <div class="k-row"><span class="k-mark">( circle )</span> a connector that shows time or order: then, after, later, by the time</div>
+          <div class="k-row"><span class="k-mark">[ bracket ]</span> the sentence with the paragraph's main idea</div>
+          <div class="k-row"><span class="k-mark">?</span> next to anything that surprises you</div>
+          <div class="k-row"><span class="k-mark">!</span> next to a word that feels like the writer's opinion</div>
+        </div>
+
+        <p>
+          <span class="para-letter">[A]</span> Dear Ruth, I am a volunteer at a Repair
+          Cafe<span class="footref">1</span> in my town, one Saturday a month, and have been doing it for three
+          years. I mend small kitchen things, mostly secondhand ones people have been given. I am not an
+          engineer; I am careful, and I read the manuals. Last month something happened that I have not been able
+          to leave alone, and I want to know whether I was in the wrong.
+        </p>
+
+        <p>
+          <span class="para-letter">[B]</span> A woman came in at two o'clock with a food mixer that had belonged
+          to her mother. It was forty years old, and the motor ran, but the bowl would not turn. I told her what
+          I tell everybody, which is that I would <span class="idiom-mark">give it a go</span>, that we work for
+          nothing, and that there is no guarantee of any kind. She signed the form that says so in writing. Then
+          I dismantled it on the table in front of her.
+        </p>
+
+        <p class="clearfloat">
+          <span class="para-letter">[C]</span> The gear inside had gone, which I had expected. What I had not
+          expected was that the casing would crack as I opened it, because forty-year-old plastic does what
+          forty-year-old plastic does. I found the spare part online for eleven pounds and wrote the link on a
+          card. She looked at the two halves of the casing lying on the table and said, quietly, that she had
+          only wanted it to work. Then she put her coat on before I had finished the sentence I was saying.
+        </p>
+
+        <p>
+          <span class="para-letter">[D]</span> She has written about the evening online since. My name is not in
+          it, but the town is small, and three other volunteers have already asked me what happened. Somebody in
+          the comments has <span class="idiom-mark">got the wrong end of the stick</span> entirely and thinks we
+          charge people. <span class="idiom-mark">At the end of the day</span> I did exactly what the form says I
+          do. I stayed behind that night and swept a floor that did not need sweeping.
+        </p>
+
+        <p>Yours, Still Volunteering</p>
+
+        <p class="section-label">Ruth answers</p>
+
+        <p>
+          <span class="para-letter">[E]</span> Dear Still Volunteering, You did not do anything wrong, and that
+          is not the same as saying nothing went wrong, so let me separate the two. The form covers the casing,
+          but it does not cover the moment when a woman watches the last working thing of her mother's come apart
+          on a table, and that was never a repair question in the first place.
+        </p>
+
+        <p>
+          <span class="para-letter">[F]</span> Here is what I would change, and it is small. Say the sentence
+          about old plastic before you open the casing rather than after it, because a warning that arrives
+          afterwards is a defence. And stop reading her review for your name: you are not in it because she was
+          not writing about you, but about a mixer, and about a Saturday afternoon that she does not get to have
+          again.
+        </p>
+
+        <p>Ruth</p>
+
+        <div class="footnotes">
+          <div>1. Repair Cafe: a free meeting place where volunteers mend visitors' broken belongings. The first one opened in Amsterdam in 2009, and there are now several thousand around the world.</div>
+        </div>
+      </div>
+
+      <div class="section-title">Check Your Understanding</div>
+
+      <p class="instr">
+        Choose one task. When you finish, find someone who did a task with a different number of stars and tell
+        them what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span><span class="stars">&#9733;</span>Answer using the letter and the reply.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Number these five events 1 to 5 in the order the letter gives them.<br />
+              Order <span class="blank"></span> The visitor signs the form.<br />
+              Order <span class="blank"></span> The casing cracks.<br />
+              Order <span class="blank"></span> The volunteer sweeps the floor.<br />
+              Order <span class="blank"></span> The visitor arrives with the mixer.<br />
+              Order <span class="blank"></span> The volunteer writes a link on a card.
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">What was wrong with the mixer when the visitor brought it in? Which paragraph says so?<span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">The casing cracks when the volunteer opens it. Write in one sentence the reason the letter gives.<span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">Circle the three things the volunteer told the visitor before starting, and cross out the two he did not say: (that he would try / that the work is free / that there is no guarantee / that the casing might crack / that he is an engineer)</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span><span class="stars">&#9733;&#9733;</span>Answer using the letter and the reply.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">Summarise the afternoon in four sentences, using the paragraph letters as your guide.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">The letter ends on an action, not on an argument. Name the action, and say in one sentence what it tells you about how the writer felt. The letter never names the feeling.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">Find one action of the visitor's that shows a feeling the letter never names. Quote it and say whose feeling it is.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">Of everything in the letter, which single moment does the writer treat as the one that mattered? Give the paragraph letter and one phrase that shows you.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span><span class="stars">&#9733;&#9733;&#9733;</span>Answer using the letter and the reply.</p>
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">Find the longest span of time the letter covers in the fewest words, and the shortest span it gives the most words to. then say in two sentences what that pairing makes the reader weigh more heavily, and what it costs the writer.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">
+              Beside each line write E if it only reports something that happened, R if it only shows somebody's
+              reaction without naming a feeling, or B if it does both at once.<br />
+              <span class="blank"></span> "A woman came in at two o'clock with a food mixer that had belonged to her mother."<br />
+              <span class="blank"></span> "She signed the form that says so in writing."<br />
+              <span class="blank"></span> "three other volunteers have already asked me what happened"<br />
+              <span class="blank"></span> "I found the spare part online for eleven pounds."<br />
+              <span class="blank"></span> "I stayed behind that night and swept a floor that did not need sweeping."
+            </div>
+          </li>
+          <li>
+            <span class="num">3.</span>
+            <div class="qbody">The letter's tone shifts once, visibly, partway through. Name the paragraph where it shifts and quote the first line that shows the new tone.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+          <li>
+            <span class="num">4.</span>
+            <div class="qbody">Ruth's reply opens "You did not do anything wrong, and that is not the same as saying nothing went wrong." Say in one sentence what that opening lets her do for the rest of the reply.<span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span><span class="stars">&#9733;&#9733;&#9733;&#9733;</span>Read the visitor's own review of the same afternoon, then answer.</p>
+
+        <div class="refresher">
+          <div class="headline">Two stars: a review of the same Saturday</div>
+          <div class="byline">Posted online by the visitor</div>
+          <p><span class="para-letter">[G]</span> I took my mother's food mixer to the Repair Cafe on Saturday. It is forty years old, and until that afternoon it was the last thing of hers in this house that still switched on.</p>
+          <p><span class="para-letter">[H]</span> The volunteer was kind, and he told me there was no guarantee, and I signed a form that said so. I understood that part. What I did not understand was that it would be in pieces on the table about four minutes after I sat down.</p>
+          <p><span class="para-letter">[I]</span> It came apart and it did not go back together. The casing is in two halves in a bag under my stairs, with a card telling me where to buy a gear for eleven pounds, which I am not going to do.</p>
+          <p><span class="para-letter">[J]</span> I am not saying anybody did anything wrong. I am saying that if you are going to open something that cannot be closed again, say so first, and give people the minute they need to decide. Two stars. I will not go back.</p>
+        </div>
+
+        <ol class="qlist">
+          <li>
+            <span class="num">1.</span>
+            <div class="qbody">
+              Both texts describe the same afternoon. Find two things that both of them describe. For each one, write
+              the words the letter uses and the words the review uses, then say in one sentence what
+              each writer's wording is built to make the reader conclude.
+              <div class="match-list">
+                <div class="match-row">
+                  <span class="match-label">Something both texts describe (1)</span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Letter:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Review:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>What each one is built to make you conclude:</strong></span><span class="ans-line"></span>
+                </div>
+                <div class="match-row">
+                  <span class="match-label">Something both texts describe (2)</span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Letter:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>Review:</strong></span><span class="ans-line"></span>
+                  <span class="match-src"><strong>What each one is built to make you conclude:</strong></span><span class="ans-line"></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="num">2.</span>
+            <div class="qbody">The letter and the review both say that nobody did anything wrong, and both are unhappy. In three to four sentences, say what each text needs that sentence for, and whether the two texts are actually in disagreement about anything at all.<span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span><span class="ans-line"></span></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task E.</span>Complete each sentence with one word or phrase from the bank. Two are not needed.</p>
+        <div class="wordbank">
+          <strong>Word bank:</strong> volunteer &middot; secondhand &middot; guarantee &middot; dismantle &middot; spare part &middot; casing &middot; repair
+        </div>
+        <ol class="fillblank">
+          <li><span class="num">1.</span>Nobody is paid here; every person mending something is a <span class="blank"></span>.</li>
+          <li><span class="num">2.</span>The shop had no <span class="blank"></span> for the gear, so it had to be ordered online.</li>
+          <li><span class="num">3.</span>She bought the machine <span class="blank"></span> from a neighbour ten years ago.</li>
+          <li><span class="num">4.</span>You have to <span class="blank"></span> the whole thing to reach the motor inside.</li>
+          <li><span class="num">5.</span>There is no <span class="blank"></span> on this work, so it may still fail next week.</li>
+        </ol>
+      </div>
+
+      <div class="masthead masthead-later">
+        <h1>Unit 3B: The Mixer on the Table</h1>
+        <div class="masthead-meta">
+          <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Narrating</span>
+          <span class="masthead-tag">Advanced 2.1.3.11</span>
+        </div>
+      </div>
+
+      <p class="objective">
+        <strong>Objective:</strong> I can tell what happened in order and show why one moment mattered more than
+        the others, without stopping to explain it.
+      </p>
+
+      <div class="section-title">Warm-Up</div>
+
+      <ol class="qlist">
+        <li>
+          <span class="num">1.</span>
+          <div class="qbody">With a partner, find and say aloud: the paragraph where the visitor speaks, the paragraph where the writer stops telling the story and starts defending himself, and the two paragraphs written by Ruth.</div>
+        </li>
+      </ol>
+
+      <p class="section-label">What I learned</p>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+      <span class="ans-line"></span>
+
+      <div class="refresher">
+        <div class="headline">Club Notice: The Layout Comes Apart On The 14th</div>
+        <p><span class="para-letter">[A]</span> We dismantle the main layout on Saturday the 14th so that it can be rebuilt in the hall for the April exhibition. Every volunteer who can lift a board is wanted from nine in the morning, and there is tea at eleven.</p>
+        <p><span class="para-letter">[B]</span> Two notes. The new controller has a two-year guarantee, so nobody is to open it for any reason, and the old one goes in the spares box rather than the bin. We are still short of a spare part for the level crossing, and Derek has offered a secondhand one from a layout he bought in January.</p>
+        <p><span class="para-letter">[C]</span> The hall is booked from eight on the Sunday. Anyone who has taken a board home to work on should bring it back on the 14th and not on the day itself, because at the end of the day we would rather carry it twice than find out on the Sunday that it does not fit.</p>
+      </div>
+
+      <ol class="qlist">
+        <li>
+          <span class="num">2.</span>
+          <div class="qbody">With a partner, find and circle the five words from Words to Know and the one phrase from the Phrase Spotlight. Then say in one sentence what the club is worried about.</div>
+        </li>
+        <li>
+          <span class="num">3.</span>
+          <div class="qbody">Answer out loud, in a full sentence: What is the most useful secondhand thing you own? What have you dismantled and failed to put back together? What would you volunteer to do for free for one Saturday?</div>
+        </li>
+      </ol>
+
+      <div class="section-title">Investigate the Text</div>
+
+      <p class="instr">
+        Choose one Task and do it on your own. When you have finished, get together with people who did a
+        different Task and take turns telling each other what you found.
+      </p>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task A.</span><span class="stars">&#9733;</span>Choose the moment you think the visitor will remember longest, and give one reason from the text.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task B.</span><span class="stars">&#9733;&#9733;</span>For the letter and for the review, name one action each text describes and one feeling that action signals without naming it. Quote both actions.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task C.</span><span class="stars">&#9733;&#9733;&#9733;</span>Find the place in the letter where the writer stops telling the story and starts arguing. Say what he gains and what he loses at exactly that sentence.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="task-block">
+        <p class="instr-line"><span class="exercise-label">Task D.</span><span class="stars">&#9733;&#9733;&#9733;&#9733;</span>Ruth says a warning that arrives afterwards is a defence. Test that against the letter: find one sentence that would read differently if it had been said out loud at two o'clock, and say how.</p>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+        <span class="ans-line"></span>
+      </div>
+
+      <div class="section-title">Discuss It</div>
+
+      <p class="instr">
+        Get into a group of four or five. This is a meeting about how the Repair Cafe should run next month. Take
+        one of these parts each and keep it: a volunteer repairer, a visitor who has brought something in, the
+        person who organises the Saturdays, a neighbour who has only read the review. Every part speaks on every
+        question. Use the line next to your own star rating to start.
+      </p>
+
+      <div class="discuss-block">
+        <p class="prompt">Should the Repair Cafe change the form, change what is said out loud, or change nothing?</p>
+        <p class="prompt">The review is two stars and the service is free. Does free change what a fair review is?</p>
+        <p class="prompt">Ruth answers a question the writer did not ask. Was that the right thing to do?</p>
+
+        <ul class="stems">
+          <li><span class="stars">&#9733;</span><span>"First ______, then ______." / "The moment that mattered was ______ because the text says ______."</span></li>
+          <li><span class="stars">&#9733;&#9733;</span><span>"What happened was ______, and it mattered because ______." / "The text never says ______, but ______ shows it."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;</span><span>"The letter spends longest on ______, which makes ______ feel more important than ______." / "The tone changes at ______, from ______ to ______."</span></li>
+          <li><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>"The review is structured to make the reader conclude ______." / "The interest behind that choice is ______, which the text never states."</span></li>
+        </ul>
+      </div>
+
+      <div class="section-title">Wrap It Up</div>
+
+      <div class="wrapup">
+        With a partner, out loud: in three or four sentences, tell your partner about a time something you own
+        stopped working, what happened, in order, and make one moment in it the moment that mattered. Do not
+        explain why it mattered.
+      </div>
+    </div>
+  </body>
+</html>

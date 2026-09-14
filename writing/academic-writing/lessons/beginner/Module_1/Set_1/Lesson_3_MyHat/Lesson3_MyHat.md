@@ -1,6 +1,6 @@
 # Academic Writing Lesson 3
 
-**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.3.0
+**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.3.1
 
 **Set:** 1 | **Set position:** 3 of 4 (Drafting on the draft object, complete on Day 1; check and improve on Day 2)
 

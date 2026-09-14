@@ -291,7 +291,7 @@ p {
   text-align: center;
   margin: 20px 0 4px;
 }
-.article .byline {
+.byline {
   text-align: center;
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 11px;
@@ -312,6 +312,9 @@ p {
 }
 .footref {
   font-weight: 700;
+  font-size: 0.72em;
+  vertical-align: super;
+  line-height: 0;
 }
 .idiom-mark {
   text-decoration: underline dotted var(--ink);
@@ -349,6 +352,9 @@ p {
 .qbody {
   flex: 1;
 }
+      .editable {
+        line-height: 2.5;
+      }
 
 /* `.blank` and `.ans-line`/`.ans-line-sm` are not interchangeable. `.blank` is a short
    blank that sits INSIDE a sentence, mid-line, under any list wrapper (`.qlist`,
@@ -531,7 +537,7 @@ p {
     <h1>Unit 2A: A Postcard from the Sea</h1>
     <div class="masthead-meta">
       <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Describing</span>
-      <span class="masthead-tag">Beginner 1.1.2.0</span>
+      <span class="masthead-tag">Beginner 1.1.2.2</span>
     </div>
   </div>
   <p class="objective"><strong>Objective:</strong> I can sound out a word that tells how a place
@@ -658,7 +664,7 @@ p {
     <h1>Unit 2B: A Postcard from the Sea</h1>
     <div class="masthead-meta">
       <span class="masthead-tag">Reading <span class="masthead-sep">&#183;</span> Describing</span>
-      <span class="masthead-tag">Beginner 1.1.2.0</span>
+      <span class="masthead-tag">Beginner 1.1.2.2</span>
     </div>
   </div>
   <div class="section-title">Warm-Up</div>
@@ -687,7 +693,7 @@ p {
   </div>
   <div class="task-block">
     <p class="instr-line"><span class="exercise-label">Task B</span> <span class="stars">★</span><br />One word below does not fit the story. Cross it out and write the right word above it.</p>
-    <ol class="qlist">
+    <ol class="qlist editable">
       <li>
         <span class="num">1.</span>
         <div class="qbody">the dry seat</div>
@@ -696,7 +702,7 @@ p {
   </div>
   <div class="task-block">
     <p class="instr-line"><span class="exercise-label">Task C</span> <span class="stars">★★</span><br />One word below does not fit the story. Cross it out and write the right word above it.</p>
-    <ol class="qlist">
+    <ol class="qlist editable">
       <li>
         <span class="num">1.</span>
         <div class="qbody">It is cold at the end of the story.</div>
@@ -705,7 +711,7 @@ p {
   </div>
   <div class="task-block">
     <p class="instr-line"><span class="exercise-label">Task D</span> <span class="stars">★★★</span><br />One word below does not fit the story. Cross it out and write the right word above it. The other word is already right.</p>
-    <ol class="qlist">
+    <ol class="qlist editable">
       <li>
         <span class="num">1.</span>
         <div class="qbody">The seat is hot and cold.</div>
@@ -729,7 +735,7 @@ p {
     </ol>
   </div>
   <div class="task-block">
-    <p class="instr-line"><span class="exercise-label">Task F</span> <span class="stars">★★</span><br />Read the sentence, circle the picture it describes, then say the missing word out loud.</p>
+    <p class="instr-line"><span class="exercise-label">Task F</span> <span class="stars">★★</span><br />Read the sentence, circle the picture it describes, then say the sentence&#8217;s describing word out loud.</p>
     <ol class="qlist">
       <li>
         <span class="num">1.</span>

@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2 (Module 2)
 
-**Module:** 2, Narrating | **Band:** Proficient | **Task Levels:** 5, 6, 7, 8 | **Version:** 2.1.2.0
+**Module:** 2, Narrating | **Band:** Proficient | **Task Levels:** 5, 6, 7, 8 | **Version:** 2.1.2.2
 
 **Set:** 1 of Module 2 (Part 2 of Module Pair 1-2) | **Pair position:** 6 of 8 (Set position 2 of 4: Module 2's
 Grammar Focus B; Essay Focus A continued, the introduction's connecting sentences and the conclusion's closing
@@ -62,12 +62,15 @@ Every structure here says the same thing as its plain version; what changes is w
 
 Rule 1, fronting. Move an adverbial to the front of the sentence.
 
-| Plain | Fronted |
-|---|---|
-| I noticed the fraying only later. | Only later did I notice the fraying. |
-| The lining did not split until the second winter. | Not until the second winter did the lining split. |
-| I have never carried anything heavier in it since. | Never since have I carried anything heavier in it. |
-| The strap gave way at the station, of all places. | At the station, of all places, the strap gave way. |
+| Plain | Fronted | What moved to the front | Does the verb jump in front of the subject? |
+|---|---|---|---|
+| I noticed the fraying only later. | Only later did I notice the fraying. | only later (restrictive) | Yes: did I notice |
+| The lining did not split until the second winter. | Not until the second winter did the lining split. | not until the second winter (negative) | Yes: did the lining split |
+| I have never carried anything heavier in it since. | Never since have I carried anything heavier in it. | never since (negative) | Yes: have I carried |
+| The strap gave way at the station, of all places. | At the station, of all places, the strap gave way. | at the station (a plain place phrase) | No: a comma only, and the subject stays in front |
+
+The last row is the one that carries the rule: each example is annotated per feature, and the one that does not
+invert says so in its own column (Quality Standards §D14).
 
 Rule 2, the inversion rule. A **negative or restrictive** adverbial at the front (only, never, not until, rarely,
 hardly, no sooner) pulls the auxiliary in front of the subject: "Only later **did I** notice." A plain time or

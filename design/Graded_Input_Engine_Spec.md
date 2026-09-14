@@ -492,7 +492,7 @@ profile", and "lexical coverage" return zero hits repo-wide. What exists instead
   bands higher; replaced if found?"* - a self-check item that cannot actually be performed, because
   nothing defines which words belong to which band.
 - `writing/academic-writing/Index.md:116` - *"**No word-count ceiling corpus yet.**"*
-- `writing/academic-writing/prompts/Generate_Lesson_Prompt_v6.17.md:37` - *"not a verified corpus;
+- `writing/academic-writing/prompts/Generate_Lesson_Prompt_v6.18.md:47` - *"not a verified corpus;
   recalibrate once real student output exists."*
 
 There is a structural reason this matters most for Reading: unlike Listening/Speaking, **Reading's

@@ -5,7 +5,7 @@ Generated per `Generate_Lesson_Prompt_v3.5.md`, against Module 1's approved Set 
 pass as Lesson 3 and checked directly against it for the Section 0.6 / §D6 adjacency rules. Last lesson of
 this Set.
 
-**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.4.0
+**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.4.2
 **Genre:** Short notice / simple sign | **Reading strategy:** Partner / Shared Reading
 **Phase 1 hook:** Mystery Quote | **Phase 3 protocol:** Jigsaw Expert Panels
 **Vocabulary theme:** Animals and markings
@@ -177,7 +177,8 @@ A big dog lives next door to us. His name is Bruno. His coat is black and white 
 and it never stops. His ears feel very soft.
 
 *Task (3-4 min) - Fix the wrong word,* the 0.11 shape for this slot. Each line below is about the refresher
-text and has one word that does not fit. Cross it out and write the right word above it.
+text and has one word that does not fit. Cross it out and write the right word above it. The printed line carries `.editable` leading in the packet, so there is room to write the
+word above the crossed-out one (Style Guide §F).
 
 - **Level 1 (★):** the short tail
   **Answer note:** cross out *short*, write *long*.
@@ -214,7 +215,7 @@ support.")
 frame ('It is ___.') describing a familiar object, decoding the open-slot word... to identify the matching
 image, with visual support.")
 - Task: read **It is white.** and circle the picture it describes (Picture 1 / Picture 2 / Picture 3). Then
-  say the open-slot word out loud.
+  say the sentence's describing word out loud.
   **Answer note:** Picture 3.
 
 **Level 3 (extension-up)** - grounding: Level 3 Reading objective ("Can read one short sentence using the
@@ -328,7 +329,7 @@ Quality Standards §F ran first; the Reading-specific items follow.
 18. **Room-neutral (§D11):** nothing moves furniture, forms a circle, or posts anything on a wall. Both
     jigsaw rounds re-form groups where students already sit.
 19. **Style:** no em-dashes; ASCII pacing diagram present for each day; metadata line under the H1 carrying
-    the version code 1.1.4.0.
+    the version code 1.1.4.2.
 20. **Adjacency and overlap across the Set (§D6, §D3):** genre, reading strategy, Phase 1 hook, and Phase 3
     protocol all differ from Lesson 3's, and across the whole Set each of the four is used exactly once. The
     Closing Transfer Check object (a phone) is distinct from the pencil case, water bottle, and jacket. The

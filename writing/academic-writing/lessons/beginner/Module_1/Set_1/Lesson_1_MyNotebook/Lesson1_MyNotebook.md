@@ -1,6 +1,6 @@
 # Academic Writing Lesson 1
 
-**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.1.0
+**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.1.2
 
 **Set:** 1 | **Set position:** 1 of 4 (Grammar Focus A: input, modeling, deeper practice; Leveled Mentor Ladder)
 
@@ -180,7 +180,7 @@ are already on the printed page.
 ### Phase 1: Fix the wrong word (20 min)
 
 Three printed sentences per Level, each holding one word that is misspelled or that does not describe a notebook
-at all. Students cross out the wrong word and write the right one above it. Nothing is erased.
+at all. Students cross out the wrong word and write the right one on the answer line beside it, not above the printed word, which has no room for it (Style Guide §F). Nothing is erased.
 
 - **Levels 1-2:**
 

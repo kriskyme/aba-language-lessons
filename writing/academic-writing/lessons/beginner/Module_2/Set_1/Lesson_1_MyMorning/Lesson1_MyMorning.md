@@ -1,6 +1,6 @@
 # Academic Writing Lesson 1
 
-**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.1.0
+**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.1.1
 
 **Set:** 1 | **Set position:** 1 of 4 (Grammar Focus A: input, modeling, deeper practice; Leveled Mentor Ladder)
 

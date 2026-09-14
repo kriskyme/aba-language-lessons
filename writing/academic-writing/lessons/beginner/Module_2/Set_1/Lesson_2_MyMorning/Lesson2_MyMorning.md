@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.2.0
+**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.2.2
 
 **Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B and the confusable-pair drill; Day 2 prewriting introduces the draft event)
 
@@ -105,7 +105,7 @@ what changes about the story. Both stay on the board for Phase 2.
 
 **Activity 1: Fix the wrong word (15 min).** Three printed sentences per Level. Each has one thing wrong: a past
 form built with the wrong rule, or a time word that puts the story in an impossible order. Students cross it out
-and write the correction above it. Nothing is erased.
+and write the correction on the answer line beside it, not above the printed word, which has no room for it (Style Guide §F). Nothing is erased.
 
 - **Levels 1-2:**
 

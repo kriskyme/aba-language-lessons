@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.2.0
+**Module:** 1, Describing | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 1.1.2.1
 
 **Set:** 1 | **Set position:** 2 of 4 (Grammar Focus B and the confusable-pair drill; Day 2 prewriting introduces the draft object)
 

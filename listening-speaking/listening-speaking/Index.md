@@ -53,9 +53,9 @@ out of scoping this against that sample:
 | `Rotation_Log_Proficient.md`                                          | Same, for the Proficient Band. Created 2026-09-07 - the first Band file created purely from a plan, before any lesson in the Band had been generated; Lesson 1 generated the same day.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 (Lesson 1 of 4 generated) |
 | `Rotation_Log_Beginner.md`                                            | Same, for the Beginner Band. Created 2026-09-07.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Set 1 complete (Lessons 1-4 generated) |
 | `Changelog.md`                                                        | Version history for this prompt family. Not a prompt itself.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | N/A (data, not a prompt)                                                                                                                                                                                            |
-| `Generate_Student_Packet_Prompt_v2.7.md` | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) in two parts (Unit _A Listening / Unit _B Speaking). Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Listening/Speaking packet (the citebox and its placement and media-type wording, Good to Know boxes front-loaded, the Listening Notes organizer, fixed-frame and multi-source task rules, the Check It Against the Source block, the STOP-badged "Don't read ahead" callout and the upside-down Check What You Heard script, Learn the Phrase, `.qitem`-numbered Discuss It, jargon-free closing headings) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, the delta CSS (now §H.1 there, moved out of this prompt), and the shared packet self-check. TOEFL Track Tier rendering moved to `Generate_TOEFL_Track_Tier_Prompt_v1.1.md` Section 2. Section 5 is Style Guide §I plus 11 Listening/Speaking items. | Current (v2.7, 2026-09-10: new Section 2.8 "Check It Against the Source" prints the lesson's Day 1 Phase 5 verification windows in `.verify-window`, always after the response spaces of every task they could answer, and the input rule now lets that one bounded part of the transcript reach the packet; former 2.8-2.13 renumbered to 2.9-2.14; v2.6, 2026-09-09: both masthead sections carry the meta stack; v2.5, same day: "Don't read ahead" in a `.stop-flag` callout with a STOP badge; v2.4, same day: the Level 7 compare layout prints at least three verbatim excerpts per source on shared subjects, in one of the Style Guide's two layouts, on top of v2.3's Answer notes stripped, stems carried without answer-stating parentheticals, compare layout holds source content not the contrast - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.10 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 11 carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads and the STOP-badged "Don't read ahead" callout as of 2026-09-09 |
+| `Generate_Student_Packet_Prompt_v2.8.md` | Takes one completed lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) in two parts (Unit _A Listening / Unit _B Speaking). Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Listening/Speaking packet (the citebox and its placement and media-type wording, Good to Know boxes front-loaded, the Listening Notes organizer, fixed-frame and multi-source task rules, the Check It Against the Source block, the STOP-badged "Don't read ahead" callout and the upside-down Check What You Heard script, Learn the Phrase, `.qitem`-numbered Discuss It, jargon-free closing headings) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, the delta CSS (now §H.1 there, moved out of this prompt), and the shared packet self-check. TOEFL Track Tier rendering moved to `Generate_TOEFL_Track_Tier_Prompt_v1.1.md` Section 2. Section 5 is Style Guide §I plus 11 Listening/Speaking items. | Current (v2.8, 2026-09-14: the two-source compare classes it used to own moved from Style Guide §H.1 to the base stylesheet §B, so this prompt now points there for them - see `shared/Changelog.md`; v2.7, 2026-09-10: new Section 2.8 "Check It Against the Source" prints the lesson's Day 1 Phase 5 verification windows in `.verify-window`, always after the response spaces of every task they could answer, and the input rule now lets that one bounded part of the transcript reach the packet; former 2.8-2.13 renumbered to 2.9-2.14; v2.6, 2026-09-09: both masthead sections carry the meta stack; v2.5, same day: "Don't read ahead" in a `.stop-flag` callout with a STOP badge; v2.4, same day: the Level 7 compare layout prints at least three verbatim excerpts per source on shared subjects, in one of the Style Guide's two layouts, on top of v2.3's Answer notes stripped, stems carried without answer-stating parentheticals, compare layout holds source content not the contrast - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.10 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 11 carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads and the STOP-badged "Don't read ahead" callout as of 2026-09-09 |
 | `Generate_Assessment_Prompt_v2.1.md` | Generates a Set's Listening (Part A) and Speaking (Part B) assessments. Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Listening/Speaking-specific (2-3 new real clips sourced like a lesson's, vocabulary pooled across the Set and tested only inside items, objective-only formats, the single-period structure, Part B's mechanism-by-band table and countable content requirements, the 3-point rubric) and points to Quality Standards §C for item quality, which now carries the distractor, padded-bank, and time-balance rules this prompt introduced program-wide. Self-checks are Quality Standards §F plus 8 Part A and 6 Part B items. | Current (v2); two assessments generated under v1 (Intermediate and Advanced Set 1) |
-| `Generate_Assessment_Student_Packet_Prompt_v2.1.md` | Takes a completed Assessment and produces the student handout: Listening Test pages per Level with a citebox per clip, Speaking Task cards with the rubric's Meets column as a `.checklist` (now Style Guide §H.4), no answer keys, rubric tables, or submission information. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 items. | Current (v2); two packets generated under v1 |
+| `Generate_Assessment_Student_Packet_Prompt_v2.2.md` | Takes a completed Assessment and produces the student handout: Listening Test pages per Level with a citebox per clip, Speaking Task cards with the rubric's Meets column as a `.checklist` (now Style Guide §H.4), no answer keys, rubric tables, or submission information. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 items. | Current (v2.2, 2026-09-14: the `.match-list`/`.match-row` pointer follows those classes from Style Guide §H.1 to §B - see `shared/Changelog.md`); two packets generated under v1 |
 | `learningobjectives.csv` (project file, shared with Passage Reading) | Source of truth for every Learning Objective, including the Listening/Speaking modality rows this family pulls from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | N/A (data)                                                                                                                                                                                                          |
 
 Not yet started for this family: a homework-generation prompt and the Part-2/presentation-project extension
@@ -151,9 +151,9 @@ wording is corrected here.)
 
 | File | Lesson # | Real source | Status |
 | --- | --- | --- | --- |
-| `Module_1/Set_2/Lesson_5_IberianLynx/Lesson5_IberianLynx.md` | 5 | "Wild Cat Is Back from Near Extinction," VOA Learning English (the Iberian lynx) | Current, `1.2.5.0`. Flagged: runtime 5:29 against the 2-4 min Level 3 target, kept per Section 0.2's soft-target rule; the piece's recovery-effort layer is used only as opinion material, never as a describing task. Day 2's Level 2 Better-of-two pair was corrected the same day to Style Guide v2.27 (colour swapped for pattern), inside the same generation pass, so the version code did not move |
+| `Module_1/Set_2/Lesson_5_IberianLynx/Lesson5_IberianLynx.md` | 5 | "Wild Cat Is Back from Near Extinction," VOA Learning English (the Iberian lynx) | Current, `1.2.5.1`. Flagged: runtime 5:29 against the 2-4 min Level 3 target, kept per Section 0.2's soft-target rule; the piece's recovery-effort layer is used only as opinion material, never as a describing task. Day 2's Level 2 Better-of-two pair was corrected the same day to Style Guide v2.27 (colour swapped for pattern), inside the same generation pass, so the version code did not move |
 | `Module_1/Set_2/Lesson_6_TapestryFactory/Lesson6_TapestryFactory.md` | 6 | "Spanish Tapestry Factory Creating Pieces after 300 Years," VOA Learning English (Spain's Royal Tapestry Factory) | Current, `1.2.6.0`. Runtime 3:24, inside target. Flagged: a narrated report about a weaver's workshop rather than a first-person studio tour; the Day 2 speaking model is the narrator's real reported speech |
-| `Module_1/Set_2/Lesson_7_RosettaStone/Lesson7_RosettaStone.md` | 7 | "Museum Marks Rosetta Stone's Role in Understanding Hieroglyphs," VOA Learning English | Current, `1.2.7.0`. Runtime 3:59, inside target. Flagged: three of six target words taken from the real transcript because the source glossary has only four entries, one of them off-theme; the interrupting half of the Day 2 skill is taught from frames |
+| `Module_1/Set_2/Lesson_7_RosettaStone/Lesson7_RosettaStone.md` | 7 | "Museum Marks Rosetta Stone's Role in Understanding Hieroglyphs," VOA Learning English | Current, `1.2.7.1`. Runtime 3:59, inside target. Flagged: three of six target words taken from the real transcript because the source glossary has only four entries, one of them off-theme; the interrupting half of the Day 2 skill is taught from frames |
 | `Module_1/Set_2/Lesson_8_WrangellStElias/Lesson8_WrangellStElias.md` | 8 | "The Untouched Beauty of Wrangell-St. Elias National Park," VOA Learning English (America's National Parks) | Current, `1.2.8.0`. Flagged: full recording is 10:02, so the lesson is scoped to a defined opening portion of roughly 3:45 with a stated stopping line, marked in the transcript file and told to students in the packet |
 
 Each Set 2 lesson folder holds all three artifacts in generation order: a verbatim `<Slug>_Transcript.md`
@@ -201,7 +201,7 @@ every number in it (period length, item counts, target recording lengths) as a r
 real classroom feedback, per the prompt's own open items.
 
 **Student-facing packet:** `lessons/intermediate/Module_1/Set_1/Set1_Intermediate_Assessment_Packet.html`, generated
-against `Generate_Assessment_Student_Packet_Prompt_v2.1.md` - a Listening Test section (one printable page per
+against `Generate_Assessment_Student_Packet_Prompt_v2.2.md` - a Listening Test section (one printable page per
 task Level) and a Speaking Task section (a plain instruction card per Level), with every answer key, point
 value, holistic pass note, and rubric stripped. Not yet reviewed against a printed page, same as the six lesson
 packets.
@@ -247,7 +247,7 @@ during Lesson 1's search.
 `FireRescue_Intermediate_L2_Packet.html`, generated 2026-09-10 with three cited Wikimedia Commons photos added
 to `Module_2/Set_1/Set1_Intermediate_Image_Credits.md`. Its opening hook is a printed line from the clip rather
 than a photo. **This is the first lesson in this family built to the six-phase Day 1**
-(`Generate_Lesson_Prompt_v2.6.md` and `Generate_Student_Packet_Prompt_v2.7.md`, both released mid-pass that
+(`Generate_Lesson_Prompt_v2.6.md` and `Generate_Student_Packet_Prompt_v2.8.md`, both released mid-pass that
 day): the clip plays twice with nothing written on the page, answers are committed before the second listen,
 and a Phase 5 verification window of 49 verbatim words (the "So I ran there, I grab her" stretch, chosen for
 three word boundaries this Band mishears) prints after every listening task's response space and ends in the
@@ -328,7 +328,7 @@ so treat every number in it (period length, item counts, target recording/live l
 budget) as a reasoned starting point pending real classroom feedback, per the prompt's own open items.
 
 **Student-facing packet:** `lessons/advanced/Module_1/Set_1/Set1_Advanced_Assessment_Packet.html`, regenerated 2026-09-08
-against `Generate_Assessment_Student_Packet_Prompt_v2.1.md` - a Listening Test section (one printable page per task
+against `Generate_Assessment_Student_Packet_Prompt_v2.2.md` - a Listening Test section (one printable page per task
 Level, matching/fill-in-the-blank/multiple-choice items only, no vocabulary list, no notes organizer) and a
 Speaking Task section (a plain instruction card per Level: topic, countable content requirements, target length,
 and a self-check checklist derived from that Level's rubric Meets column), with every answer key, point value,
@@ -482,15 +482,17 @@ the Task D compare-row rebuild. Not yet given to a real class.
 Plan approved and logged 2026-09-10: `lessons/advanced/Module_2/Module2_Advanced_Lesson_Plan.md`,
 `Rotation_Log_Advanced.md` (this Band's first Module 2 entry). Task Levels 4, 5, 6, 7, same as this Band's
 Module 1; source calibrated to Level 5 (5-8 min, natural native pace). Set numbering and lesson numbering both
-restart for a new Module (`shared/Program_Conventions.md` §C), so this is Set 1, Lessons 1-4, versioned
-`2.1.1.0`-`2.1.4.0`. **Set 1 is 3 of 4 lessons generated** (Lessons 1-3, 2026-09-10):
+restart for a new Module (`shared/Program_Conventions.md` §C), so this is Set 1, Lessons 1-4. **Set 1 is complete, 4 of 4 lessons
+generated** (Lessons 1-3 on 2026-09-10, Lesson 4 on 2026-09-14). Lessons 1-3 were retrofitted to §D12 on
+2026-09-14 and are at `2.1.1.1`-`2.1.3.1`; Lesson 4 was built with the beat and is at `2.1.4.0`. The Set has
+no assessment yet:
 
 | Lesson # | Topic direction | Content format | Listening strategy | Speaking skill | Status |
 | --- | --- | --- | --- | --- | --- |
 | 1 | An astronaut's account of one high-stakes repair | Personal-story talk | Listen for Sequence Markers | Sequencing Language | **Generated 2026-09-10**, `2.1.1.0`. "A View of the Earth," Michael J. Massimino, The Moth (2009 Hubble spacewalk); NASA's own STS-125 record as the Level 7 second source. Flagged deviation: the telling runs ~20-24 min against a 5-8 min target, so the lesson plays a defined span |
 | 2 | An insider's account of uncovering something an organization hid | Investigative news feature with insider interview | Predict from Context Before Confirming | Summarizing What Someone Said | **Generated 2026-09-10**, `2.1.2.0`. "In Flint, public trust poisoned by toxic drinking water crisis," PBS NewsHour (Dr. Mona Hanna-Attisha on finding the lead); the CDC's own MMWR report on the same finding as the Level 7 second source. Runs ~9-10 min against a 5-8 min target |
 | 3 | An expedition, voyage, or survival ordeal told by a participant | Storytelling-podcast narrative episode segment | Listen for Stated vs. Implied Opinion | Giving Examples | **Generated 2026-09-10**, `2.1.3.0`. "Follow me up a mountain," ABC Radio National *Earshot* (Warren Macdonald, trapped under a boulder on Mount Bowen, 1997); the other two participants' telling as the Level 7 second narrator. No cell amended. Built on a **partial** source record: ABC publishes no transcript. Runs 29:45, played as a defined span |
-| 4 | A first-hand oral history of a documented historical event | Oral-history archive interview clip | Listen for Contrastive/Concession Language | Asking for Clarification | Not yet sourced - planned only |
+| 4 | A first-hand oral history of a documented historical event | Oral-history archive interview clip | Listen for Contrastive/Concession Language | Asking for Clarification | **Generated 2026-09-14**, `2.1.4.0`. Jim M. Tanimoto Interview, Densho Digital Repository (ddr-densho-1000-270, recorded 2009), Segments 16-17 on the 1943 "loyalty questionnaire" and the mass arrest of Block 42 at Tule Lake; the Densho Encyclopedia entry "Tule Lake" as the Level 7 second teller. No cell amended. **Runs 7:44, inside the 5-8 minute target, the Set's only lesson with no runtime flag** |
 
 Lesson 1's files: `Module_2/Set_1/Lesson_1_HubbleRepair/Lesson1_HubbleRepair.md`, its teacher-only
 `HubbleRepair_Transcript.md`, and `HubbleRepair_Advanced_L1_Packet.html`. **Its topic direction was amended
@@ -535,10 +537,27 @@ are flagged in the lesson's own self-check: the 29:45 runtime played as a define
 two narrators come from one published feature rather than two independent sources, and the content (a double
 amputation and a near-death rescue, worth a teacher preview).
 
-Next step for this Module/Band: generate Lesson 4, then the Set assessment, per the Generation workflow below.
-Lesson 1's flagged echo against Lesson 3 is resolved - Lesson 3 as generated is terrestrial. The flag against
-Module 1 Set 2's planned Lesson 7 ("a real research facility or observatory") still stands for whenever that Set
-is taken up.
+Lesson 4's files: `Module_2/Set_1/Lesson_4_Block42/Lesson4_Block42.md`, its teacher-only
+`Block42_Transcript.md`, and `Block42_Advanced_L4_Packet.html`. It embeds no images, so nothing was added to
+`Set1_Advanced_Image_Credits.md`. It is the first lesson in this Set whose runtime needs no deviation flag, the
+other three all running over the target and being played as defined spans, and the first built with the §D12 arc
+from the start. Its source record is complete and verbatim, as Lessons 1 and 2 were and Lesson 3 was not. Two things are flagged rather than hidden: the Level 7
+second teller is not fully independent, since Barbara Takei wrote the Densho Encyclopedia entry used as the
+second account and also sat in the Tanimoto interview as secondary interviewer (a fully independent second
+narrator does not exist, as Tanimoto is the last surviving member of Block 42, and the NPS timeline was
+retrieved and rejected because it never mentions the arrests); and the subject matter, incarceration without
+charge and a mass arrest at gunpoint, is worth a teacher preview as Lessons 2 and 3 are.
+
+**Set 1 Lessons 1-3 retrofitted to §D12 (2026-09-14)** and bumped to `2.1.1.1`, `2.1.2.1`, `2.1.3.1`, with
+packets regenerated. Day 1 in each is now six phases on the 15/15/10/20/7/8 budget, and each lesson's
+"Replay any segment on request" line was removed as contradicting the commit beat. This clears every Advanced
+Module 2 lesson from the §D12 backlog.
+
+Next step for this Module/Band: the Set assessment, per the Generation workflow below. Lesson 1's flagged echo
+against Lesson 3 is resolved - Lesson 3 as generated is terrestrial. The planning-stage cross-Band echo on
+Lesson 4 against Intermediate's Lesson 4 is also resolved; as generated they share only the genre. The flag
+against Module 1 Set 2's planned Lesson 7 ("a real research facility or observatory") still stands for whenever
+that Set is taken up.
 
 
 ## Module 1 progress, Proficient Band (Describing, Proficient)
@@ -594,7 +613,7 @@ words "watch" and "video" appear nowhere in it. No protocol is named in student-
 against a printed page, same as every other packet in this family.
 
 **Print formatting (student version), Lesson 4:** `Module_1/Set_1/Lesson_4_BeninPlaque/BeninPlaque_Proficient_L4_Packet.html`,
-generated fresh against `Generate_Student_Packet_Prompt_v2.7.md` and the current Style Guide. Two parts (Unit 4A
+generated fresh against `Generate_Student_Packet_Prompt_v2.8.md` and the current Style Guide. Two parts (Unit 4A
 Listening / Unit 4B Speaking), each with four star-rated task blocks, a three-column chart as the opening hook,
 three Good to Know boxes, a citebox at the point of listening, a five-row fillable Listening Notes organizer of
 signpost phrases, the Level 7 three-row multi-source compare layout, **two `.verify-window` blocks in a "Check
@@ -604,7 +623,7 @@ and the words "watch" and "video" appear nowhere. The four Jigsaw quotations are
 yet reviewed against a printed page, same as every other packet in this family.
 
 **Set 1 is now complete**, so Step 3 of the Generation workflow is runnable for this Band: run
-`Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.1.md` against the Set.
+`Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.2.md` against the Set.
 Set 2 has not been planned for this Band. Lesson 4 completes the Set and unblocks Step 3, the Set assessment.
 
 ## Generation workflow (current)
@@ -644,6 +663,13 @@ is actually wanted, not automatically for every Set.
 
 ## Pending work
 
+- **No lesson has been audited against §C9's extended self-answering-premise rule (2026-09-14).** Quality
+  Standards §C9 now states that a stem asserting a change, reversal, or negation has already handed over the
+  state it changed from, so it cannot then ask for that state (see `shared/Changelog.md`, v1.25). The rule was
+  extended after one such item was found in Passage Reading Module 2 Advanced Lesson 1 and fixed there. No
+  other already-generated lesson, homework, or assessment in this modality has been checked for the pattern.
+  This needs a read of every item stem, not a grep, since the failure is semantic: the search is for any stem
+  whose premise entails its own answer. Not started.
 - **Pronunciation has a rotation bank, not a progression (2026-09-10).** The new
   `design/Pronunciation_Scope_and_Sequence.md` sequences pronunciation across the program's 8 Levels;
   nothing in this family has been wired to it yet. Three separate items, all blocked on the same fold-in
@@ -677,7 +703,7 @@ is actually wanted, not automatically for every Set.
      and waits on item 1.
 
   3. **"Say It Like a Native Speaker" is printed in all 24 packets and codified nowhere.** It is a
-     `.spotlight-box` with a `.spotlight-label`, and neither `Generate_Student_Packet_Prompt_v2.7.md` nor
+     `.spotlight-box` with a `.spotlight-label`, and neither `Generate_Student_Packet_Prompt_v2.8.md` nor
      `shared/Student_Packet_Style_Guide.md` §H.1 defines it. §2.11 of the packet prompt instead describes
      a different thing ("any pronunciation marking exercise folded in as a short bonus line under the
      relevant task") that no packet actually does. Codify the real convention in Style Guide §H.1 with a
@@ -693,21 +719,22 @@ is actually wanted, not automatically for every Set.
   five-phase Day 1 with a single play and no window.** Fixing one is not mechanical: it means reading that
   lesson's transcript and choosing a stretch on evidence (one a Phase 4 item actually turned on, or one
   carrying a connected-speech feature that Band predictably mishears), then rewriting Day 1's phase budgets in
-  the `.md` and regenerating the packet against `Generate_Student_Packet_Prompt_v2.7.md`. Do it when each
+  the `.md` and regenerating the packet against `Generate_Student_Packet_Prompt_v2.8.md`. Do it when each
   lesson is next touched for any reason; bump its `<Version>` (Conventions §G) and add its
   `Rotation_Log_<Band>.md` row in the same pass. Do not generate any new lesson without the beat.
 
-  **18 lessons that have a transcript on disk and need only a window chosen plus the Day 1 rewrite**
+  **15 lessons that have a transcript on disk and need only a window chosen plus the Day 1 rewrite**
   (Intermediate Module 2's two lessons were cleared 2026-09-10: Lesson 2 was built to the six-phase Day 1 in
   the pass that generated it, and Lesson 1 was retrofitted to it the same day, `2.1.1.0` to `2.1.1.1`; **all
   four of Advanced Module 1 Set 2's lessons were cleared the same day**, retrofitted in the session that
-  generated them and bumped to `1.2.5.1`-`1.2.8.1`)**:**
+  generated them and bumped to `1.2.5.1`-`1.2.8.1`; **all three of Advanced Module 2 Set 1's generated lessons
+  were cleared 2026-09-14**, retrofitted in the pass that generated that Set's Lesson 4 and bumped to
+  `2.1.1.1`-`2.1.3.1`, so every Advanced Module 2 lesson is now clear)**:**
   `beginner/Module_1/Set_1/Lesson_2_AreYouBusy/`, `Lesson_3_FamilyPhotos/`, `Lesson_4_HowAboutThis/`;
   `intermediate/Module_1/Set_1/Lesson_1_NewBakery/`, `Lesson_4_GreatGrandmother/`;
   `intermediate/Module_1/Set_2/Lesson_5_IberianLynx/`, `Lesson_6_TapestryFactory/`, `Lesson_7_RosettaStone/`,
   `Lesson_8_WrangellStElias/`;
   `advanced/Module_1/Set_1/Lesson_2_LivingTextbooks/`, `Lesson_3_KeyDeer/`, `Lesson_4_GlassBender/`;
-  `advanced/Module_2/Set_1/Lesson_1_HubbleRepair/`, `Lesson_2_FlintWater/`, `Lesson_3_MountBowen/`;
   `proficient/Module_1/Set_1/Lesson_1_LowerNinthWard/`, `Lesson_2_NeoNurture/`, `Lesson_3_PapaHemingway/`
   (Proficient `Lesson_4_BeninPlaque/` was cleared 2026-09-10, built to the six-phase Day 1 in the same pass that
   generated it, and is this Band's worked example of the beats: two windows, one chosen for what a task turned
@@ -816,7 +843,7 @@ is actually wanted, not automatically for every Set.
 - **Homework Generation Prompt** - not started. Will need its own rules given a homework assignment can't
   hand a student the full copyrighted transcript the way Passage Reading homework reuses the anchor text.
 - **Generate Intermediate Set 2's assessment (now due)** - Intermediate Module 1 Set 2 was completed
-  2026-09-10, so `Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.1.md`
+  2026-09-10, so `Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.2.md`
   are due against it, the same way both were run for Advanced Set 1. Part A (Listening) needs 2-3 new verified
   real clips distinct from all four taught sources (Iberian lynx, Spanish tapestry factory, Rosetta Stone,
   Wrangell-St. Elias) and from Set 1's assessment clips (HaHaHouse Museum, Pompeii bathhouse), with items
@@ -825,7 +852,7 @@ is actually wanted, not automatically for every Set.
   (Speaking) is a scored Teams recording task at this Band. Output goes to
   `lessons/intermediate/Module_1/Set_2/Set2_Intermediate_Assessment.md` and `Set2_Intermediate_Assessment_Packet.html`.
 - **Generate Advanced Set 2's assessment (now due)** - Advanced Module 1 Set 2 was completed 2026-09-10, so
-  `Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.1.md` are due against
+  `Generate_Assessment_Prompt_v2.1.md` and `Generate_Assessment_Student_Packet_Prompt_v2.2.md` are due against
   it. Part A (Listening) needs 2-3 new verified real clips distinct from all four taught sources (the High
   Line, the MFA Boston ancient galleries, the National Radio Quiet Zone, Maison Lesage), from Set 1's four
   (The Lost Kitchen, Phoenix mid-century modern, the Key deer, the Boise glass bender) and from Set 1's

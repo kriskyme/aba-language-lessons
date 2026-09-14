@@ -1,7 +1,7 @@
-# Academic Writing Student Print Formatting Prompt (v3.17)
+# Academic Writing Student Print Formatting Prompt (v3.19)
 
 Companion to the Academic Writing Lesson Generation Prompt. Takes one completed Academic Writing lesson (a 2-day
-cycle, one position within a Beginner Set or an Intermediate/Advanced/Proficient Module Pair) and produces one
+cycle, one position within a standalone Set or a Module Pair) and produces one
 print-ready, black-and-white student handout for it: a single self-contained HTML document covering both days,
 with every teacher-facing pedagogical term translated into plain instructions.
 
@@ -11,7 +11,7 @@ teacher-to-student translations (§E), star ratings and lettered Tasks (§F), th
 regeneration of the Markdown (§G), this modality's delta classes (§H.3), and the shared packet self-check (§I).
 This prompt states only what is specific to an Academic Writing packet.
 
-**Current version: v3.17.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
+**Current version: v3.19.** For the dated version history and the reasoning behind each change, see `Changelog.md`.
 
 **Input:** which lesson is being formatted (Set position 1-4, Pair position 1-8 where applicable, global Lesson
 number) and its content for both days in full: the grammar mini-lesson(s) with rule and examples, the
@@ -118,7 +118,7 @@ packet task models a form with its own frame or steps, not with a reprinted mode
 
 A Set's fourth lesson, Day 2 (Unit `4B`) has a closing section. **Before writing it, check which kind of Lesson 4
 this is:**
-- **A true finale (Beginner's Lesson 4; a Pair's Lesson 8):** the piece is finished and published. Translate the
+- **A true finale (a standalone Set's Lesson 4; a Pair's Lesson 8):** the piece is finished and published. Translate the
   Closing Transfer Check into a plain "Wrap It Up" instruction applying the named objective to something new. For
   Pair position 8, also include the separate short task exercising Module N+1's own skill (Lesson prompt 0.8) as
   a second "Wrap It Up" prompt, not labeled as covering "a different Module."
@@ -172,20 +172,33 @@ wrap-up line after it. No "Write It"
 section, no "Finish your piece from last time," and no count-your-sentences task on Day 2; the draft was
 completed on Day 1. A partner check says which part a word describes; it never points (Style Guide §E).
 
-A drafting lesson's Write It tasks name the part the Module drafts: at Pair position 3 the essay Levels' task
-is "Write your body paragraphs" (two or three, each with a topic sentence, under the working thesis you wrote in
-Get Ready to Write), with no hook or conclusion step; at position 7 it is "Write your introduction and
-conclusion" with the kept body paragraphs in hand; paragraph Levels write "one paragraph" at both positions.
-Check and Improve Your Writing asks only about the part written that lesson (position 7's merged list also
-re-checks the kept part's features by name).
+A drafting lesson's Write It tasks name the part the arc has that lesson drafting, which differs by arc. **In a
+standalone Set (Set position 3) the piece is written whole:** the essay Levels' task is "Write your essay" (the
+introduction, the body paragraphs each with a topic sentence, and the conclusion, following the plan from Get
+Ready to Write), and paragraph Levels write "one paragraph." There is no part-of-a-piece language and nothing is
+deferred to a later Module. **In a Module Pair the piece is built in parts:** at Pair position 3 the essay
+Levels' task is "Write your body paragraphs" (two or three, each with a topic sentence, under the working thesis
+you wrote in Get Ready to Write), with no hook or conclusion step; at position 7 it is "Write your introduction
+and conclusion" with the kept body paragraphs in hand; paragraph Levels write "one paragraph" at both positions.
+Check and Improve Your Writing asks about what that lesson wrote: the whole piece in a standalone Set, the part
+written that lesson in a Pair (position 7's merged list also re-checks the kept part's features by name).
 
-A Pair position 4 lesson (Set position 4) prints no checklist at all. Its Day 1 unit is the Word Bank, then "A
+A Set position 4 lesson prints no checklist at all, in either arc. Its Day 1 unit is the Word Bank, then "A
 Reader's Request" (one unstarred Task: trade pieces, read, write one thing you want to know more about on your
 partner's page), then "Make It Stronger": one Task per star as steps, the before/after table under the
-composition-regime Tasks. Its Day 2 unit is "Final Copy" (one Task per star: copy the chosen sentence, or copy
-the paragraph cleanly, or copy your body paragraphs cleanly, then the one hand-off line, 2.7) and "Wrap It Up"
-(the Closing Transfer Check). No "Last Look," no proofread pass, no counting, no hand-off section. A position 8
-lesson's Day 2 unit is "Final Copy" of the assembled whole, then the publish/share step and "Wrap It Up."
+composition-regime Tasks. **In a standalone Set, Day 1 also carries the Set's one Peer Editing exchange as
+"Trade and Check" (2.8, Lesson prompt 0.6), placed before "Make It Stronger" so the revision answers the
+partner's form.** No "Last Look," no proofread pass, no counting.
+
+Day 2 differs by arc, and this is the distinction to check first. **A standalone Set's Lesson 4 is a finale:**
+"Final Copy" (one Task per star: copy the chosen sentence, or copy the paragraph cleanly, or copy your essay
+cleanly), then the publish/share step, then "Wrap It Up" (the one Closing Transfer Check). **No hand-off line
+and no continuation language anywhere in the packet** (Lesson prompt's Lesson 4 Day 2 Phase 1; the Style Guide's
+do-not-print table allows a continuation line only at a Pair's position 4), and no second "Wrap It Up" prompt,
+which belongs only to a Pair's position 8. **A Pair's position 4 is a hand-off:** "Final Copy" as above, then
+the one hand-off line (2.7), then "Wrap It Up," with no publish or share step and no hand-off section. **A
+Pair's position 8** is "Final Copy" of the assembled whole, then the publish/share step, then "Wrap It Up" plus
+the separate Module N+1 prompt.
 
 ## SECTION 3: FORMAT AND STYLE CONSTRAINTS
 

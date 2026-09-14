@@ -1,4 +1,4 @@
-# Student Packet Style Guide (v2.28)
+# Student Packet Style Guide (v2.42)
 
 Shared, cross-modality rules for every lesson type's Student Packet and Assessment Student Packet
 prompt: the universal format constraints (§A), the base stylesheet (§B), markup conventions (§C), how
@@ -348,6 +348,36 @@ p {
   margin: 0 0 20px;
 }
 
+/* Picture-choice items (§F). Base, not a modality delta: any modality whose objective
+   ends in matching something to a picture needs these. */
+.pic-options {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 8px 0 4px 4px;
+}
+.pic-option {
+  width: 110px;
+}
+.pic-option .pic-box {
+  /* holds an embedded <img>; never printed empty for the teacher to fill */
+  border: 1px solid var(--ink);
+  height: 70px;
+  padding: 0;
+  overflow: hidden;
+}
+.pic-option .pic-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pic-option .pic-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12.5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
 .article {
   padding: 6px 0 0;
   margin: 18px 0 22px;
@@ -358,7 +388,7 @@ p {
   text-align: center;
   margin: 20px 0 4px;
 }
-.article .byline {
+.byline {
   text-align: center;
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 11px;
@@ -379,6 +409,9 @@ p {
 }
 .footref {
   font-weight: 700;
+  font-size: 0.72em;
+  vertical-align: super;
+  line-height: 0;
 }
 .idiom-mark {
   text-decoration: underline dotted var(--ink);
@@ -394,6 +427,24 @@ p {
 }
 .article .footnotes div {
   margin-bottom: 6px;
+}
+
+/* Matching items and the two-source compare layout (§F). Base, not a modality delta:
+   any modality that prints two sources to compare needs these. */
+.match-list {
+  margin: 8px 0 4px 4px;
+}
+.match-row {
+  margin-bottom: 14px;
+}
+.match-row .match-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.match-row .match-src {
+  display: block;
+  margin: 0 0 5px 12px;
 }
 
 .qlist {
@@ -440,6 +491,15 @@ p {
   width: 100%;
   height: 18px;
   margin-top: 2px;
+}
+
+/* `.editable` opens the leading of printed text a task asks the student to write into or
+   above (a Fix the Wrong Word line, a Check What You Heard line). Put it on the list or
+   the block that holds that text, never on ordinary reading text. A printed paragraph of
+   several lines is not annotated between the lines at all - see §F, "Writing on printed
+   text." */
+.editable {
+  line-height: 2.5;
 }
 
 .subgroup-label {
@@ -643,8 +703,23 @@ packets converge on one look in view-source regardless of which prompt or sessio
 - **Multi-value properties** (`font-family` and similar) stay on one line, comma-and-space
   separated, rather than one value per line - keeps a simple stack like
   `system-ui, -apple-system, sans-serif` from costing three lines for no readability gain.
+- **Footnote references** are `<span class="footref">1</span>` with a plain ASCII digit, immediately after the
+  word with no space before it, and the matching note in the `.footnotes` footer opens with the same digit and a
+  full stop. The raised position comes from the `.footref` rule in §B, never from the markup: do not wrap it in
+  `<sup>` (which raises it a second time on top of the CSS) and do not type a Unicode superscript character
+  (`¹`, `²`), which cannot be styled, is unevenly covered across print fonts, and will not match the footer's
+  own numeral. One form everywhere, so a reference looks identical in every modality's packet.
 - **Quoted CSS values** (a font name with a space in it, `content: ""`) use double quotes, matching
   the double quotes already used for every HTML attribute.
+- **A reference list of paired items is a table, never a prose run.** Any student-facing list of
+  pairs - base form to past form, word to meaning, term to example, expression to the moment it is
+  used - prints as the modality's table class (`.rule-table` §H.3, `.notes-table` §H.1) with a header
+  row naming both columns, not as a comma-separated run of pairs inside a `<p>`, `.model-step`, or
+  word bank. A list students copy forms out of has to be scannable down a column; a prose run is the
+  hardest shape to read on the page and is worse still directly beneath a bordered table, which is
+  what it gets compared against. Short pairs may be laid two across (`Now | Past | Now | Past`) to
+  halve the row count and keep the table inside one page break. A bank of single words with no
+  pairing stays a word bank (§F).
 
 Head fragment showing the doctype/meta conventions together:
 
@@ -688,8 +763,9 @@ these.
 | Skill Spotlight | A can-do statement in the student's own voice near the start of the packet, mirroring the `learningobjectives.csv` row's "Can ..." form: "I can" plus the skill, with "my" or "me" where the sentence refers to the student ("Objective: I can describe something of my own by comparing it to something else and giving a real reason for the comparison."). Never "You will," "To describe," a bare verb phrase ("describe..."), or "today we are practicing X." One sentence naming the skill, not the lesson's object or text ("something of my own," never "my phone case"), identical for every student: never "Some of you will also," "if you are at," or any tier narration (Quality Standards §D1). |
 | Closing Transfer Check | A plain closing-activity instruction stating what to pick and what to do with it, never named as a check and never referencing assessment or evidence language, and with no stage directions about what the teacher will do next. |
 | Fishbowl / Town Hall / Concentric Circles / Jigsaw / discussion carousel / Four Corners / gallery walk / Stand Up-Move | A plain instruction for the protocol's room-neutral form (Quality Standards §D11), never the protocol's name and never a room setup. Rotating Partners prints as find-a-new-partner-as-you-go ("When you finish a question, find a new partner and go on to the next one"); a Panel Round prints the listener's own task; Town Hall, Jigsaw, and small-group discussion print as get into a group, here are your questions, take turns talking. Fold any tracking or listening task into a student's own task rather than dropping it. |
-| Activation hooks by name (K-W-L Walk, Mystery Quote, Stand Up/Move, Four Corners, etc.) | The plain instruction the activity produces (a warm-up question, a prompt to discuss), never the activity's name - in headings included. |
-| Internal item labels (STOP & CHECK, Fact Finder, Cause & Effect set, controlled-practice type names) | Ordinary numbered or lettered questions with no internal label carried into student view. |
+| Activation hooks by name (Visual Inquiry, Take a Side, Mystery Quote, K-W-L Chart, and any retired formation such as K-W-L Walk, Stand Up/Move, or Four Corners) | The plain instruction the activity produces (a warm-up question, a prompt to discuss), never the activity's name - in headings included. The hook's orienting sentence is not a teacher-facing term and is always printed: the student page states the topic before its first question (Quality Standards §D13). |
+| Frame / sentence frame / fixed frame / two-slot frame ("complete the frame," "say the frame," "use these frames," "not a memorized frame") | **Sentence.** "Complete the sentence," "Say the sentence," "Use these sentences," "Write your sentence three times." A frame is a teaching device, and the student's job is to finish a sentence; naming the device teaches nothing and a student who asks what a frame is gets a lesson in pedagogy instead of an answer. The word survives only where it is the content: a backpack's internal frame, a loom's wooden frame, the verb ("how the report frames the story"). "Frame" stays in the lesson `.md`, which is the teacher's document, and in this guide. |
+| Internal item labels (STOP & CHECK, Fact Finder, the native-Level item set's own name, controlled-practice type names) | Ordinary numbered or lettered questions with no internal label carried into student view. |
 | Board-dependent moment | Not shown to students at all; teacher-only classroom-management instruction. |
 | Differentiated participation / Foundation Support | Handled through the star system and task choice, never labeled or called out as a separate tier anywhere a student can see it. |
 | Section numbers, prompt names, version narrative | Never appear. |
@@ -708,9 +784,24 @@ state the plain action the student takes, never the pedagogical name for it.
 rating: the lowest task Level in the band gets ★, and each step up the band's Task Levels row adds one
 star, to ★★★★ for the highest (`Program_Conventions.md` §B has the per-band mapping). Show only filled
 stars, never a filled-vs-empty display out of a fixed total. Do not label the tiers and do not frame the
-choice as "choose your own adventure" or "pick your challenge"; state only the section heading and let
-the star count speak for itself. Which star a student works at is decided live by the teacher, not
-narrated on the page. Where two star levels' work differs in kind (a blank frame versus a blank writing
+set as a game ("choose your own adventure," "pick your challenge," "level up"); state only the section
+heading and let the star count speak for itself.
+
+**Routing: the page invites a plain choice, and never narrates who assigned what.** The lead-in is
+"Choose one task." Two forms are wrong for the same reason, that both put a decision about the student on
+the page instead of an instruction to them: routing by what the teacher does ("answer the Task your
+teacher points you to," "do the Task your teacher gives you," "your teacher will tell you which one"),
+and routing by an assigned star count ("do the Task with your number of stars"), which presumes the
+student has been given a number and labels them with it. The star count is still how a student tells the
+Tasks apart, and it still appears in the share instruction, where it does real work by pairing students
+across different Tasks: "Choose one task. When you finish, find someone who did a task with a different
+number of stars and tell them what you found." Where some Tasks are for everyone and the rest are
+star-rated, say so plainly, once, in the lead-in that introduces the set: "Everyone does Tasks A and B.
+Then choose one of the others." That sentence is not then repeated on the Tasks themselves. A Task printed
+with no star tag is already an everyone-Task - the absence of stars is what says so - and appending
+"Everyone does this one." to its instruction spends a line restating the page's own notation, which is the
+first thing a student skips. The teacher
+still steers individual students in the room; that steering is simply not printed.  Where two star levels' work differs in kind (a blank frame versus a blank writing
 space), present each star's actual instruction as written; do not paper over the difference with
 identical wording.
 
@@ -743,11 +834,46 @@ section followed by a revision section that repeats the same star sequence; like
 acts on the first are merged. The wording is "improve," "make it better," "change," "make each change you
 marked": never "fix" or "correct," since the piece is being improved, not repaired.
 
-**Instructions as steps.** A Task whose instruction has more than one action or question is a one-sentence
-lead line after the label and star ("Check your paragraph, then make it better.") followed by a numbered
-list, one action or one question per step, in the order the student does them; a check item is a question
-("Is there one clear reason with because, since, as, or given that?"), not a statement. Never a prose
-paragraph of chained instructions. A blank or answer line sits inside the step that needs it.
+**Writing on printed text.** An instruction to write a correction above, between, or next to text the
+packet itself printed only appears where the page has the room to write it. A line the student writes
+into carries `.editable` on its list or block, opening the leading enough for a handwritten word to sit
+above a printed one; crossing a word out, circling, or underlining needs no such room and is unaffected.
+A printed block of more than about two lines is never annotated between its lines: at body leading there
+is nowhere to put the words, and at `.editable` leading a paragraph runs off the page. Such a block is
+marked up in place (cross out what is wrong) and then **rewritten in full on answer lines below**, which
+also makes the corrected text, rather than a list of loose words, the thing the student produces. None of
+this governs a student's own handwriting: "cross out the old version and write the new one above it" on
+their own draft is theirs to space, and stays.
+
+**Instructions as steps, and when not to use them.** Numbered steps are for actions a student could stop
+between: each one has its own product, its own target, or a choice to make (a self-check list, a Task with a
+written answer per part). A Task like that is a one-sentence lead line after the label and star ("Check your
+paragraph, then make it better.") followed by a numbered list, one action or one question per step, in the
+order the student does them; a check item is a question ("Is there one clear reason with because, since, as,
+or given that?"), not a statement. A blank or answer line sits inside the step that needs it.
+
+**Counting answer lines.** Answer space is counted from the expected answer, at roughly **eight to ten
+handwritten words per full-width `.ans-line`** - student handwriting is far larger than the 14.5px body type,
+so lines are never counted off how many printed lines the same text occupies. Three cases follow from it, and
+each is counted rather than eyeballed:
+
+- **Copied or rewritten text** (an editing paragraph written out corrected, a sentence recopied): count the
+  words of the text itself and divide. An 82-word paragraph takes 9 lines, not the 5 it prints in.
+- **A sentence the student composes** at the frame and paragraph Levels: two lines, not one. They write large,
+  they cross out and try again, and a sentence that runs a few words long has nowhere to go.
+- **A prompt that asks for exactly one line** ("Write one line saying what it withholds") keeps one line.
+  That is the answer's stated length, not an under-sized space.
+
+Over-provisioning is its own fault: a dozen lines under a task that needs nine pushes what follows onto another
+page and tells the student the answer should be longer than it is.
+
+**One continuous procedure is one instruction, not a numbered list.** Where the parts run together on one
+object in a single pass and only the last leaves anything on the page - read this, mark what is wrong, write
+it out corrected - they are written as one instruction of two or three clauses, with the answer lines under
+it. Numbering them adds a lead sentence that says what the steps are about to say, then splits one motion
+into parts no student performs separately, and it reads on the page as being asked three questions. Two or
+three clauses in one sentence is not the prose paragraph of chained instructions this guide forbids; that
+means a block of prose burying several separable tasks with no numbering and no answer space of their own.
 
 **Ascending order within a Task.** Where a Task contains more than one star-rated block, blocks appear
 in ascending star order regardless of the source's order.
@@ -802,13 +928,33 @@ stem parenthetical that may carry source content; every other parenthetical in a
 Quality Standards §C9 (format, a choice menu with no correct option, or an untested gloss), and a
 two-source compare layout prints each source's own content, never its tone or the contrast asked for, and
 prints enough of it to compare from: at least three short verbatim excerpts per source on the same two or more
-subjects (Quality Standards §C9). Two layouts are allowed, chosen per lesson: one `.match-row` per source with
+subjects (Quality Standards §C9), and only where that source cannot be re-inspected; where both sources are
+printed in full on the student's page the layout carries no excerpts at all, just a labelled blank per source
+for the student to fill (§C9). Two layouts are allowed for the excerpt case, chosen per lesson, both built on
+the base `.match-list`/`.match-row` classes (§B): one `.match-row` per source with
 its excerpts under the source label, or, when both sources speak to the same subjects, one `.match-row` per
 subject with the subject as the `.match-label` and each source's excerpt on its own `.match-src` line opening
 with the source's short name in bold. A genuinely
 picture-based item embeds its real images (`.pic-options`, an `<img>` inside each `.pic-box`, the caption in
 `.pic-label`); a packet never ships an empty picture box or a "[TEACHER: insert ...]" note. If no image can be
 embedded, the item is rewritten around the student's own object or one in the room (Quality Standards §D8).
+
+**Every printed text names its source.** The anchor text, a second comparison text, and any other block of
+printed source material each carry a `.byline` under their headline saying where the text comes from ("From the
+notebook of a walker who finished the trail in June," "From the trail association's route notes"). `.byline` is
+not scoped to `.article` for exactly this reason: a second text sits in a `.refresher` block (each modality's own
+packet prompt says where), and a student who has to infer which block is "the route notes" is being given a
+puzzle the item never meant to set. Teacher-facing provenance stays out of it: never "Invented for this lesson."
+
+**A packet never names an artifact it does not print or locate.** Student-facing text may refer to a chart,
+organizer, list, model, or diagram only if the packet prints it or says where it is and gives the student their
+own way into it - "Add one row to the class chart on the board. Write the row here first," over the student's own
+answer line. A task that says "write it in the left column of your group's chart" when no chart is on the page
+sends the student looking for something that does not exist, and a teacher-facing artifact named without its
+location reads as a missing handout. A shared organizer built live on the board is a legitimate thing for a
+lesson to have; it is not a legitimate thing for a task instruction to assume the student is holding. The same
+applies to collaborative framing: a packet describes what one student does and then how they share it, never
+assigns the student a group deliverable the page cannot hold.
 
 **Embedded photos.** A hook photo or a task's picture prompt is one `<img class="photo" src="data:image/jpeg;base64,..."
 alt="...">` immediately followed by its `.image-caption`. The source file lives in the lesson folder under its
@@ -853,10 +999,7 @@ added to a packet only when generating that modality's packet.
 `.citebox` (What You'll Watch citation), `.notes-table` (Listening Notes organizer), `.upside-down`
 (closing script printed inverted), `.stop-flag`/`.stop-badge` (the Listening close's "Don't read ahead"
 instruction in a heavy-bordered callout with a black octagonal STOP badge at its left; the badge is a drawn
-shape with white text, never an emoji or image, so it prints identically everywhere), `.task-instr` (single top-of-task instruction line), `.pic-options`/
-`.pic-option` (picture items with embedded images), `.match-list`/`.match-row` (matching items, one pair per line,
-label above a full-width `.ans-line`; in a two-source compare layout, `.match-src` for each source's excerpt line
-under a subject label), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
+shape with white text, never an emoji or image, so it prints identically everywhere), `.task-instr` (single top-of-task instruction line), `.qitem` (standalone numbered question), `.mc-list`/`.mc-letter`
 (lettered answer choices), `.time-list` (response-time windows), `.verify-window`/`.verify-src`/`.verify-instr`
 (the bounded verification window: a short stretch of the source's own words, printed after the response
 spaces of every task it could answer, with its source label and timestamp range and the instruction to
@@ -938,50 +1081,6 @@ cover it for the re-encounter; Quality Standards §D12), `.reader-copy`/`.reader
   font-style: italic;
   color: var(--ink-soft);
   margin: 0 0 10px;
-}
-
-.pic-options {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin: 8px 0 4px 4px;
-}
-.pic-option {
-  width: 110px;
-}
-.pic-option .pic-box {
-  /* holds an embedded <img>; never printed empty for the teacher to fill */
-  border: 1px solid var(--ink);
-  height: 70px;
-  padding: 0;
-  overflow: hidden;
-}
-.pic-option .pic-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.pic-option .pic-label {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 12.5px;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.match-list {
-  margin: 8px 0 4px 4px;
-}
-.match-row {
-  margin-bottom: 14px;
-}
-.match-row .match-label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-.match-row .match-src {
-  display: block;
-  margin: 0 0 5px 12px;
 }
 
 .qitem {
@@ -1076,7 +1175,9 @@ cover it for the re-encounter; Quality Standards §D12), `.reader-copy`/`.reader
 
 ### H.2 Passage Reading
 
-None. The base stylesheet is the whole of what a Passage Reading packet needs.
+None. The base stylesheet is the whole of what a Passage Reading packet needs, including the
+`.match-list`/`.match-row` compare layout and the `.pic-options`/`.pic-option`/`.pic-box`/`.pic-label`
+picture-choice grid (both §B), each of which moved out of §H.1 once a second modality needed it.
 
 ### H.3 Academic Writing
 
@@ -1178,8 +1279,10 @@ Run this list first, then the modality's own list.
    label, a `.masthead-sep` dot, then the Module name, never its number; Band plus
    `<Module>.<Set>.<Lesson>.<Version>` as one string), no Name/Date field, kicker, subtitle, or
    footer?
-6. Stars: only filled stars, no Level number, tier name, or "choose your adventure" framing; share
-   instruction before the task list; one star per lettered Task, self-check lists included, with no
+6. Stars: only filled stars, no Level number, tier name, or game framing; the routing lead-in a plain
+   "Choose one task," never routing by what the teacher does ("the Task your teacher points you to") nor by
+   an assigned star count ("the Task with your number of stars"); share instruction before the task list,
+   with the star count used there to pair students across different Tasks; one star per lettered Task, self-check lists included, with no
    star on a list item or two stars on a line; letters continuous; ascending order within a Task; no star
    inside any teaching callout; no "Finished early?" or other speed-gated add-on; check and improve merged
    into one Task per star under "Check and Improve Your Writing," never two like-star sequences and never
@@ -1194,7 +1297,9 @@ Run this list first, then the modality's own list.
     and the one §F markup form (bold label, `&middot;` separators, `<br />` between category lines, a
     "Word Bank" section title only when the bank serves more than one task); no other ordinary content
     bordered?
-11. Answer space sized to the expected answer (`.blank` inside a sentence; `.ans-line-sm`/`.ans-line`
+11. Answer space counted from the expected answer at eight to ten handwritten words per full-width line, with
+    copied text counted from its own word count, a student-composed sentence given two lines, and a stated
+    one-line answer given one (`.blank` inside a sentence; `.ans-line-sm`/`.ans-line`
     standalone below a prompt, never mid-sentence), none where no written response is needed?
 12. Every decorative, non-load-bearing horizontal rule removed?
 13. Black-and-white only; no em-dashes; single self-contained HTML file with no external dependencies
@@ -1218,9 +1323,11 @@ Run this list first, then the modality's own list.
     `Image_Credits.md`, and no placeholder or teacher note anywhere? (§A.1, §F; Quality Standards §D8;
     Conventions §D, §I)
 19. No `Answer note:` line or other exemplar answer printed, and no stem parenthetical or compare-layout
-    text that states what its item asks the student to find; every two-source compare layout holding at least
-    three verbatim excerpts per source on shared subjects, in one of the two §C layouts? (§E, §F; Quality
-    Standards §C9)
+    text that states what its item asks the student to find? Where a source cannot be re-inspected (a clip, a
+    second source not printed), every two-source compare layout holds at least three verbatim excerpts per
+    source on shared subjects, in one of the two §F layouts. Where both sources are printed in full on the
+    page, the layout prints **no** excerpts and no subject labels: it gives ruled space for the student to
+    write each side's wording into, since finding and pairing them is the task. (§E, §F; Quality Standards §C9)
 20. In a Listening/Speaking packet, the "Don't read ahead" instruction printed inside a `.stop-flag` callout
     with its `.stop-badge`, ahead of the response space, and the badge used nowhere else on the page? (§H.1)
 21. No instruction to form a circle, move to a corner or station, walk the room, or rearrange seating; every
@@ -1234,8 +1341,31 @@ Run this list first, then the modality's own list.
     it could answer, carry its source label and timestamp range, stay inside the lesson's stated ceiling, hold
     no task, answer or `Answer note:` inside it, and close with the instruction to cover it for one more
     unsupported encounter? (Quality Standards §D12, §H.1)
+24. Does the opening section state the lesson's topic and what kind of text, clip, or scenario is coming before
+    its first question, and is every question there answerable from that orientation, from something printed on
+    the page, from the student's own life, or as an opinion? No "you do not know yet what this is," no asking who
+    is speaking in an unattributed quote or what an uncaptioned picture shows, and no answer line under a question
+    the page has made unanswerable. (Quality Standards §D13)
+25. Is every footnote reference a `<span class="footref">` holding a plain ASCII digit, with no `<sup>` wrapper
+    and no Unicode superscript character, and does the packet's `<style>` carry §B's current `.footref` rule so
+    the numeral actually prints raised rather than as a bold digit run into the word? (§B, §C)
+26. Every student-facing list of paired items (base form to past form, word to meaning, term to
+    example) rendered as a `.rule-table`/`.notes-table` with a header row naming both columns, laid
+    two across where the pairs are short, and never as a comma-run of pairs inside a `<p>` or
+    `.model-step`? (§C)
+27. Every instruction to write above, between, or next to packet-printed text backed by the room to do it:
+    `.editable` leading on the line or block written into, and no multi-line printed block annotated between
+    its lines rather than crossed out and rewritten in full on answer lines below? (§F)
+28. Numbered steps used only where a student could stop between them (each with its own product, target, or
+    choice), with any single continuous procedure on one object written as one instruction of two or three
+    clauses over its answer lines instead? (§F)
+29. Does every chart, organizer, list, model, or diagram named in student-facing text either appear on the page
+    or carry its location plus the student's own line into it, and does no instruction hand the student a group
+    deliverable the packet cannot hold? (§F)
+30. Is "everyone does this" stated once in the set's lead-in and nowhere else, with no un-starred Task
+    carrying a sentence restating that it is for everyone? (§F)
 
 ## Changelog
 
-**Current version: v2.28.** For the full dated version history and the reasoning behind each
+**Current version: v2.42.** For the full dated version history and the reasoning behind each
 change, see `Changelog.md`.

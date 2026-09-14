@@ -197,3 +197,9 @@ drafting task, or checklist is written here. Activity shapes differ for adjacent
   the body paragraphs under a working thesis (Levels 6-7) or its one paragraph (Levels 4-5); Essay Focus B and
   the working thesis move to Module 1, Essay Focus A to Module 2; the Level 6-7 Mentor Essays are bodies only.
   Lessons at `1.1.1.2`, `1.1.2.2`, `1.1.3.2`, `1.1.4.3`.
+- **Superseded 2026-09-14** by `lessons/advanced/ModulePair_1-2/ModulePair_1-2_Advanced_Lesson_Plan.md` (plan
+  1.0), as the note under the position table anticipated. That file restates everything above unchanged and
+  answers this plan's three stubs: Module 2's Grammar Focus A/B (reported speech and thought in narrative /
+  non-finite openers for pacing; said / told), the Pair's CSV-objective coverage (Lesson 8's separate verb
+  task), and the Mentor Ladder's Lesson 5 second look. This document is kept for its History block; read the
+  Pair plan for anything current.

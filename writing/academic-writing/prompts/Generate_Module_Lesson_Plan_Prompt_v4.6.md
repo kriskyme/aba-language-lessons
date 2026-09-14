@@ -1,8 +1,10 @@
-# Academic Writing Module Lesson-Plan Generation Prompt (v4.5)
+# Academic Writing Module Lesson-Plan Generation Prompt (v4.6)
 
-Companion to the Academic Writing Lesson Generation Prompt. Plans a full **Set** (Beginner: 4 lessons, one
-Module) or a full **Module Pair** (Intermediate/Advanced/Proficient: two consecutive Modules' Sets, 8 lessons;
-Conventions §C) in one pass. Reading and Listening/Speaking plan a Set at once to rotate across four independent
+Companion to the Academic Writing Lesson Generation Prompt. Plans a full **standalone Set** (4 lessons, one
+Module) or a full **Module Pair** (two consecutive Modules' Sets, 8 lessons; Conventions §C) in one pass. Beginner
+is always standalone; Intermediate, Advanced, and Proficient default to a Pair, and go standalone only when this
+plan declares it (Conventions §C's Standing exception), which is what switches the Lesson prompt out of the Pair
+arc. Reading and Listening/Speaking plan a Set at once to rotate across four independent
 lessons; Writing plans the whole arc at once because its lessons share one Scenario in a fixed arc, and the
 Scenario, genre, each Module's Focus A/B pairing, Essay Focus direction, and Mentor Ladder direction are decisions
 every later lesson-generation run reads identically. Planning both Modules of a Pair together is what catches a
@@ -11,7 +13,7 @@ Focus A/B collision or a gap in Module N+1's CSV coverage before 8 lessons are w
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` (Sets and Module Pair, §C; Rotation Log
 mechanics and adjacency rules, §F) and `shared/Generation_Quality_Standards.md` alongside it.
 
-**Current version: v4.5.** History: `Changelog.md`.
+**Current version: v4.6.** History: `Changelog.md`.
 
 ## 0. Rotation Log
 
@@ -20,7 +22,7 @@ form; Scenario topic gets the recency flag. Two Writing-specific additions: the 
 Band's `Rotation_Log_<Band>.md`, not only the Band being planned (adjacency on the Focus pair, recency flag on
 Scenario and form); and the **within-pair rule**: Module N+1's Focus A/B must not repeat Module N's in the same
 plan, a same-plan check stronger than adjacency. Append the approved plan's rows to that Band's file: 4 rows
-under one `### Set S` subsection for Beginner; 8 rows for a Pair split across the two Modules' own `## Module N`
+under one `### Set S` subsection for a standalone Set; 8 rows for a Pair split across the two Modules' own `## Module N`
 / `## Module N+1` sections (creating Module N+1's heading and `### Set 1` if new), each Module's 4 rows using
 its own Set and Lesson numbering, cross-referenced as Part 1 / Part 2 of the same Pair, using the Band file's
 own template.
@@ -28,8 +30,11 @@ own template.
 ## INPUTS (fill in before running)
 
 - **Band:** Beginner / Intermediate / Advanced / Proficient. Task Levels come from Conventions §B.
-- **Beginner: Module** (e.g. "Module 1: Describing"). **Others: Module Pair** (e.g. "Modules 1-2"), always the
-  fixed odd/even grouping, both Modules named.
+- **Module Pair** (e.g. "Modules 1-2"), always the fixed odd/even grouping, both Modules named - the default for
+  Intermediate, Advanced, and Proficient. **Or a single Module** (e.g. "Module 2: Narrating"), which is Beginner's
+  only form and is available to the other bands when the plan is explicitly asked to declare that Module
+  standalone. A standalone declaration is never inferred from the input naming one Module: say so in the plan's
+  header, with the reason, so the Lesson prompt and every later reader can see it was a decision.
 - **Set number(s):** each named Module's next Set (default: the next integer after the highest logged for that
   Module in this Band, or 1). Set numbering restarts per Module, even inside a Pair.
 - **Starting global Lesson # per Module:** default the next integer after the highest logged for that Module in
@@ -51,7 +56,7 @@ own template.
 3. Produce a single plan; these elements are decided once and shared across every lesson in the arc:
    - **Module(s), Set number(s), and global Lesson #s** each Module's lessons use, never shared or restarted
      mid-Pair.
-   - **Lesson-position table:** Beginner's 4-row Set-position table, or the Pair's 8-row table (Pair position,
+   - **Lesson-position table:** a standalone Set's 4-row Set-position table, or the Pair's 8-row table (Pair position,
      Module, Set position, global Lesson #, content role), from the Lesson prompt's "THE MODULE PAIR" section,
      filled with this Pair's Module numbers and Lesson #s, and naming the part of the piece each Module drafts
      (Conventions §C: bodies under a working thesis / introduction and conclusion for essay Levels; one paragraph
@@ -107,7 +112,8 @@ own template.
 
 ## OUTPUT
 
-The plan (shared fields plus the position table), then the self-check paragraph. Save a Beginner plan as
+The plan (shared fields plus the position table), then the self-check paragraph. Save a standalone Set's plan -
+Beginner's, or any band's declared-standalone Module - as
 `lessons/<band>/Module_<N>/Module<N>_<Band>_Lesson_Plan.md`; a Pair plan as
 `lessons/<band>/ModulePair_<N>-<N+1>/ModulePair_<N>-<N+1>_<Band>_Lesson_Plan.md`. Once approved, also the Rotation
 Log rows per Section 0, ready to append. Nothing else.

@@ -89,3 +89,12 @@ restart at 1 for Set 2 onward. If this Module already has a section above, appen
 subsection under it rather than creating a duplicate `## Module N` heading. `Version` follows
 `shared/Program_Conventions.md` §G - bump a lesson's own Iteration digit in place here whenever
 that lesson is substantively revised after generation.)
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 `Lesson_1_WhatIsIt/` and `Lesson_2_AreYouBusy/`.
+
+**Answer space and worked examples (2026-09-14).** `Lesson_3_FamilyPhotos/`: both "Write your sentence"
+prompts gained a second full-width line (Style Guide v2.34 §F), `1.1.3.0` -> `1.1.3.1`. `Lesson_1_WhatIsIt/`:
+Unit 1A's Task C modelled "It is big and heavy. = the book" directly above an item asking the student to
+complete "The book: It is ___ and ___" from a bank holding big and heavy, so the model answered its own item;
+it now models on the pen, which no item in either Unit describes (Quality Standards v1.22 §C9). `1.1.1.1` ->
+`1.1.1.2`. Both moved one further in the "frame" sweep above.

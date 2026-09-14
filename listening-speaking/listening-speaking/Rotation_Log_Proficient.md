@@ -217,3 +217,5 @@ for Set 2 onward. If this Module already has a section above, append this Set as
 rather than creating a duplicate `## Module N` heading. `Version` follows `shared/Program_Conventions.md` §G -
 bump a lesson's own Iteration digit in place here whenever that lesson is substantively revised after
 generation.)
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 Lessons 1-4.

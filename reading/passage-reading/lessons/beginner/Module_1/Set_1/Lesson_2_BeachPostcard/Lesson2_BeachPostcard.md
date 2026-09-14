@@ -4,7 +4,7 @@ Generated per `Generate_Lesson_Prompt_v3.5.md`, against Module 1's approved Set 
 (`../../Module1_Beginner_Lesson_Plan.md`; `Rotation_Log_Beginner.md`, Lesson 2 row). Generated in the same
 pass as Lesson 1 and checked directly against it for the Section 0.6 / §D6 adjacency rules.
 
-**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.2.0
+**Module:** 1, Describing | **Band:** Beginner (anchor Level 1, A1) | **Task Levels:** 1, 2, 3 | **Version:** 1.1.2.2
 **Genre:** Short personal note / postcard | **Reading strategy:** Echo Reading
 **Phase 1 hook:** K-W-L Chart | **Phase 3 protocol:** Small-group discussion
 **Vocabulary theme:** Weather and clothing
@@ -162,7 +162,8 @@ Tom waits at the bus stop. The seat is wet from the rain. His hands are cold. He
 dry. Then the sun comes out, and the day gets hot.
 
 *Task (3-4 min) - Fix the wrong word,* the 0.11 shape for this slot. Each sentence below is about the
-refresher text and has one word that does not fit. Cross it out and write the right word above it.
+refresher text and has one word that does not fit. Cross it out and write the right word above it. The printed line carries `.editable` leading in the packet, so there is room to write the
+word above the crossed-out one (Style Guide §F).
 
 - **Level 1 (★):** the dry seat
   **Answer note:** cross out *dry*, write *wet*.
@@ -199,7 +200,7 @@ support.")
 frame ('It is ___.') describing a familiar object, decoding the open-slot word... to identify the matching
 image, with visual support.")
 - Task: read **It is cold.** and circle the picture it describes (Picture 1 / Picture 2 / Picture 3). Then
-  say the open-slot word out loud.
+  say the sentence's describing word out loud.
   **Answer note:** Picture 3.
 
 **Level 3 (extension-up)** - grounding: Level 3 Reading objective ("Can read one short sentence using the
@@ -298,7 +299,7 @@ Quality Standards §F ran first; the Reading-specific items follow.
 18. **Room-neutral (§D11):** nothing moves furniture, forms a circle, or posts anything on a wall. The
     K-W-L chart is built from call-outs with nobody leaving their seat.
 19. **Style:** no em-dashes; ASCII pacing diagram present for each day; metadata line under the H1 carrying
-    the version code 1.1.2.0.
+    the version code 1.1.2.2.
 20. **Adjacency against Lesson 1 (§D6):** genre, reading strategy, Phase 1 hook, and Phase 3 protocol all
     differ, and the Closing Transfer Check object (a water bottle) differs from Lesson 1's pencil case and
     from the objects planned for Lessons 3 and 4 (jacket, phone). Vocabulary themes do not overlap: school

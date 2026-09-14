@@ -1,6 +1,6 @@
 # Listening/Speaking Module 2, Lesson 1 (Intermediate) - The New Kid and the Voice in the Hallway
 
-**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.1.1
+**Module:** 2, Narrating | **Band:** Intermediate | **Task Levels:** 2, 3, 4, 5 | **Version:** 2.1.1.3
 
 Generated against `Generate_Lesson_Prompt_v2.6.md` with `shared/Program_Conventions.md` and
 `shared/Generation_Quality_Standards.md`. Planned in

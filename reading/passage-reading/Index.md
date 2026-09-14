@@ -9,9 +9,10 @@ A single reference for everything in the Passage Reading prompt family: what eac
 with the current lesson-generation prompt, and the order to actually run them in to produce a Set of lessons.
 "Passage Reading" is the lesson type these prompts generate: a fixed 2-day cycle built around one shared anchor
 text. See `shared/Program_Conventions.md` §C for what a Set is; today that's **4 lessons** (4 x 2-day cycles),
-since a Passage Reading lesson is a 2-day cycle - do not plan or expect 8 lessons per Set. Since Set size and
-module size are numerically identical today, every Module/Band planned so far is that Module/Band's Set 1 - see
-"Module 1 progress" below. A second lesson type, **Novel Reading**
+since a Passage Reading lesson is a 2-day cycle - do not plan or expect 8 lessons per Set. Every Module/Band
+planned so far is that Module/Band's Set 1: all four Bands for Module 1, and the Advanced Band for Module 2 -
+see the progress sections below. Set numbering restarts with each new Module, and so does lesson numbering
+(`shared/Program_Conventions.md` §C), which is why Module 2 Advanced is Lessons 1-4 again rather than 5-8. A second lesson type, **Novel Reading**
 (variable-length, multi-chapter), is planned as a sibling `../novel-reading/` folder with its own file family,
 prompts, and rotation log - see `../Index.md` for the modality-level list of lesson types. Nothing here
 currently supports it.
@@ -31,7 +32,7 @@ currently supports it.
 | `Generate_Homework_Prompt_v2.3.md` | Generates one homework assignment (vocabulary/idiom production plus skill practice) from a single completed 2-day lesson, general track only, one section per task Level keyed to its position. Run with the two shared files pasted alongside; Respectful Tiers and item quality point to Quality Standards; Section 3 is Quality Standards §F plus 7 Reading items. | Current (v2.3, 2026-09-09: any exemplar on an `Answer note:` line, never in the item - see `Changelog.md`) |
 | `Generate_TOEFL_Extension_Prompt_v1.1.md` | Generates an optional TOEFL iBT Reading task packet from a completed Advanced/Proficient lesson, working from the shared anchor text and Phase 1 vocabulary only. v1.1 adds Markdown heading syntax (it was the only prompt without any), a paste bundle, and pointers to Quality Standards §C for distractor quality; content unchanged. | Current (v1.1) |
 | `Generate_Assessment_Prompt_v5.2.md` | Builds a differentiated assessment (one section per task Level plus study guides) from a completed Set (or an explicitly scoped checkpoint or multi-Set span). Run with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md` pasted alongside; keeps what is Reading-specific (Source/Tests tagging, lesson-blocks with one new passage per lesson and the skip-a-lesson procedure, task types by Level position, the Foundation Support check's format, the study guide, the Scoring Guide) and points to Quality Standards §C for item quality, which is where Reading's assessments now pick up the distractor-plausibility and padded-word-bank rules they never had. Section 3 is Quality Standards §F plus 11 Reading items. | Current (v5.2, 2026-09-09: embedded images cited in the `.md` and rowed into the Set's `Image_Credits.md`) |
-| `Generate_Student_Packet_Prompt_v2.7.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.6, 2026-09-09: room-neutral protocol translations; v2.5, same day: both masthead sections carry the meta stack; v2.3, same day: Answer notes stripped, stems carried without answer-stating parentheticals, stops printed as questions - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 8 carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads as of 2026-09-09 |
+| `Generate_Student_Packet_Prompt_v2.7.md` | Takes one completed 2-day lesson and produces a single, print-ready, black-and-white student handout (self-contained HTML) with every teacher-facing term translated to plain instructions. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; states only what is specific to a Reading packet (Unit A/B labels, the worked-model box, the standing annotation key, Phrase Spotlight idiom rendering with `.idiom-tag`, refresher-text blocks, Reading's own translation rows) and points to the Style Guide for the translation table, star and lettered-Task rules, the regeneration rule, and the shared packet self-check. Section 5 is Style Guide §I plus 9 Reading items. Student version only. | Current (v2.6, 2026-09-09: room-neutral protocol translations; v2.5, same day: both masthead sections carry the meta stack; v2.3, same day: Answer notes stripped, stems carried without answer-stating parentheticals, stops printed as questions - see `Changelog.md`); every packet under `lessons/` was generated against v1.3-v1.12 and hand-swept to the shared conventions in earlier passes (see `Changelog.md`); all 8 Module 1 packets carry the two-line `.masthead-meta` stack (modality `·` Module name, then Band and version code) on both mastheads as of 2026-09-09, as do Module 2 Advanced Set 1's four, generated against v2.7 on 2026-09-14 |
 | `Generate_Assessment_Student_Packet_Prompt_v2.0.md` | Takes one completed Assessment `.md` and produces the student handout: self-contained task-Level sections with page breaks, every tag and the Scoring Guide stripped, a per-Level `Objective:` statement, full passages reprinted per section, no checklist substitute for rubric-scored items. Run with `shared/Student_Packet_Style_Guide.md` pasted alongside; Section 5 is Style Guide §I plus 6 Reading items. | Current (v2.0) |
 | `learningobjectives.csv` (project file)                           | Source of truth for every Learning Objective: 192 rows across 8 Levels x 3 Modalities x 8 Modules (Describing, Narrating, Explaining, Instructing, Evaluating, Arguing, Transacting, Socializing). Every prompt above pulls from this, never from an invented difficulty curve.                                                                                                                                                                                | N/A (data)                         |
 | `TOEFL Reading.pdf` (project file)                                | Reference material for the TOEFL extension prompt.                                                                                                                                                                                                                                                                                                                                                                                                             | N/A (reference)                    |
@@ -243,7 +244,7 @@ genres, strategies, hooks, and protocols is used exactly once across the Set.
 
 | Lesson # | Topic | Genre | Strategy | Hook | Protocol | Version |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | The things in a school bag, labeled | Label set with embedded images | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Rotating Partners | 1.1.1.0 |
+| 1 | The things in a school bag, labeled | Label set with embedded images | Teacher Read-Aloud with Interactive Stops | Visual Inquiry | Rotating Partners | 1.1.1.1 |
 | 2 | A postcard about a sunny day at the beach and what the writer wore | Short personal note / postcard | Echo Reading | K-W-L Chart | Small-group discussion | 1.1.2.0 |
 | 3 | Two friends at a fruit stand deciding which fruit to buy | Simple 2-4 line dialogue | Reader's Theater | Take a Side | Panel Round | 1.1.3.0 |
 | 4 | A lost-and-found notice describing a lost cat | Short notice / simple sign | Partner / Shared Reading | Mystery Quote | Jigsaw Expert Panels | 1.1.4.0 |
@@ -252,13 +253,13 @@ genres, strategies, hooks, and protocols is used exactly once across the Set.
 
 | File | Lesson # | Topic | Status |
 | --- | --- | --- | --- |
-| `Module_1/Set_1/Lesson_1_SchoolBag/Lesson1_SchoolBag.md` | 1 | Bag Check: a label set for a school bag, a book, and a pen | Generated, self-check passed (20 items), version 1.1.1.0 |
+| `Module_1/Set_1/Lesson_1_SchoolBag/Lesson1_SchoolBag.md` | 1 | Bag Check: a label set for a school bag, a book, and a pen | Generated, self-check passed (20 items), version 1.1.1.1 |
 | `Module_1/Set_1/Lesson_1_SchoolBag/SchoolBag_Beginner_L1_Packet.html` | 1 | Student packet, three embedded photos | Generated |
-| `Module_1/Set_1/Lesson_2_BeachPostcard/Lesson2_BeachPostcard.md` | 2 | A Postcard from the Sea: Ana writes about a hot day | Generated, self-check passed (20 items), version 1.1.2.0 |
+| `Module_1/Set_1/Lesson_2_BeachPostcard/Lesson2_BeachPostcard.md` | 2 | A Postcard from the Sea: Ana writes about a hot day | Generated, self-check passed (20 items), version 1.1.2.2 |
 | `Module_1/Set_1/Lesson_2_BeachPostcard/BeachPostcard_Beginner_L2_Packet.html` | 2 | Student packet, three embedded photos | Generated |
 | `Module_1/Set_1/Lesson_3_FruitStand/Lesson3_FruitStand.md` | 3 | The Fruit Stand: Nina, Raj, and a seller compare an apple, a banana, and a pineapple | Generated, self-check passed (21 items), version 1.1.3.0 |
 | `Module_1/Set_1/Lesson_3_FruitStand/FruitStand_Beginner_L3_Packet.html` | 3 | Student packet, three embedded photos | Generated |
-| `Module_1/Set_1/Lesson_4_LostCat/Lesson4_LostCat.md` | 4 | Lost Cat: a lost-and-found notice for Pip, a black-and-white cat | Generated, self-check passed (21 items), version 1.1.4.0 |
+| `Module_1/Set_1/Lesson_4_LostCat/Lesson4_LostCat.md` | 4 | Lost Cat: a lost-and-found notice for Pip, a black-and-white cat | Generated, self-check passed (21 items), version 1.1.4.2 |
 | `Module_1/Set_1/Lesson_4_LostCat/LostCat_Beginner_L4_Packet.html` | 4 | Student packet, three embedded photos | Generated |
 | `Module_1/Set_1/Set1_Beginner_Image_Credits.md` | - | Credits for all twelve Wikimedia photos | Created |
 
@@ -362,6 +363,110 @@ word count when a genre has a strong native rhythm.
 No homework, TOEFL extension, assessment, or student packet exists for this Band yet. Step 6 (student packets)
 for all four lessons is the natural next pass.
 
+## Module 2 progress, Advanced Band (Narrating, Advanced) - Set 1 COMPLETE
+
+Plan generated against `Generate_Module_Lesson_Plan_Prompt_v2.2.md`, approved 2026-09-14, and saved as
+`Module_2/Module2_Advanced_Lesson_Plan.md`. This is the first Set of a new Module for this Band, so both Set
+numbering and lesson numbering restart (`shared/Program_Conventions.md` §C): this Set is Lessons 1-4 again, at
+versions `2.1.1.0` to `2.1.4.0`. The cross-Module adjacency check ran against Module 1 Set 1's Lesson 4
+(interview-profile / Reader's Theater / Take a Side / Rotating Partners), which is why Lesson 1 uses none of
+those and why Take a Side and Rotating Partners are held back to Lesson 4. **All 4 lessons and all 4 student
+packets are generated,** in two Step 2 passes (Lessons 1-2, then 3-4) followed by Step 6.
+
+| File | Lesson # | Topic | Anchor | Status |
+| --- | --- | --- | --- | --- |
+| `Module_2/Set_1/Lesson_1_Laugavegur/Lesson1_Laugavegur.md` | 1 | Four days hut to hut on the Laugavegur trail, Iceland | 455 words, 6 paragraphs, avg 18.2 | Generated, self-check run, version 2.1.1.0 |
+| `Module_2/Set_1/Lesson_1_Laugavegur/Laugavegur_Advanced_L1_Packet.html` | 1 | Student packet, Units 1A/1B | - | Generated |
+| `Module_2/Set_1/Lesson_2_EverGiven/Lesson2_EverGiven.md` | 2 | The six days the Ever Given blocked the Suez Canal, March 2021 | 459 words, 7 posts, avg 18.4 | Generated, self-check run, version 2.1.2.0 |
+| `Module_2/Set_1/Lesson_2_EverGiven/EverGiven_Advanced_L2_Packet.html` | 2 | Student packet, one embedded photo | - | Generated |
+| `Module_2/Set_1/Lesson_3_RepairCafe/Lesson3_RepairCafe.md` | 3 | An evening at a Repair Cafe that went wrong | 459 words, 6 paragraphs, avg 19.1 | Generated, self-check run, version 2.1.3.0 |
+| `Module_2/Set_1/Lesson_3_RepairCafe/RepairCafe_Advanced_L3_Packet.html` | 3 | Student packet, Units 3A/3B | - | Generated |
+| `Module_2/Set_1/Lesson_4_RutlandMosaic/Lesson4_RutlandMosaic.md` | 4 | The Rutland Roman villa mosaic, found 2020 and excavated 2021 | 450 words, 6 paragraphs, avg 22.5 | Generated, self-check run, version 2.1.4.0 |
+| `Module_2/Set_1/Lesson_4_RutlandMosaic/RutlandMosaic_Advanced_L4_Packet.html` | 4 | Student packet, Units 4A/4B | - | Generated |
+| `Module_2/Set_1/Set1_Advanced_Image_Credits.md` | - | Credit for the one Commons photo in this Set | - | Created |
+
+Four things about this Set worth carrying into the next one:
+
+- **Every lesson carries a second short narrative of the same events.** The Module 2 Level 7 Reading row requires
+  *two* extended narratives covering the same or related events, so each lesson's Level 7 task has one: a trail
+  association's route notes, a shipping line's customer update, the visitor's own review, a county heritage
+  notice. It is not a second anchor. Levels 4, 5, and 6 work the main text alone, and each pairing prints three
+  verbatim excerpts per source on the same three subjects, in the `.md` itself, per Quality Standards §C9.
+- **The native-Level set is a Sequence and Significance set, not a Cause and Effect set.**
+  `Generate_Lesson_Prompt_v3.5.md`'s Day 1 Phase 3 bullet names the latter as its default, which is Module 3's
+  verb and would drift a Narrating lesson into Explaining (§A4). All four lessons deviate deliberately and say so
+  in their self-checks. This is the already-logged v3.6 fix below; these four need no sweep when it lands.
+- **Genre rhythm pulls against the Level 5 sentence-length band in both directions.** The post thread's first
+  draft came in at 368 words and 17.5 average sentence length, under the floor on both; the feature article's
+  short-paragraph convention pushed it to 23.4, near the ceiling. Both were rewritten before finalizing. This is
+  the same failure mode Proficient Module 1 Lessons 3-4 hit, now seen at Advanced: count sentence length as well
+  as word count whenever a genre has a strong native rhythm.
+- **One image in the whole Set.** Only Lesson 2 needs one (its Visual Inquiry hook). It is a public-domain NASA
+  ASTER satellite photograph of the ships queued at the canal's southern entrance, chosen over photographs of the
+  ship itself because it withholds the cause, which is what the hook turns on. Lessons 1, 3, and 4 hook on a
+  printed quotation, a printed K-W-L chart, and a printed four-option choice, so they need none.
+
+Steps 3, 4, and 5 are not started for this Set: no homework, no TOEFL extension, no assessment, no study guides.
+See Pending work.
+
+## Module 2 progress, Intermediate Band (Narrating, Intermediate) - Set 1 COMPLETE (lessons)
+
+Plan generated against `Generate_Module_Lesson_Plan_Prompt_v2.2.md`, approved 2026-09-14, and saved as
+`lessons/intermediate/Module_2/Module2_Intermediate_Lesson_Plan.md`. First Set in a new Module for this Band, so
+Conventions §F's **cross-Module** adjacency check ran against Module 1 Set 1's last lesson (Wynwood Walls) and
+all four rotated columns differ. Set and lesson numbering restart for the new Module (§C): Lessons 1-4, version
+codes `2.1.1.0` to `2.1.4.0` at generation (now `2.1.1.4`, `2.1.2.1`, `2.1.3.1`, `2.1.4.1` after the 2026-09-14 revision passes). **All four lessons were generated 2026-09-14** against
+`Generate_Lesson_Prompt_v3.5.md`, two at a time (1-2, then 3-4).
+
+| Lesson # | Topic | Genre | Strategy | Hook | Protocol | Version |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | A volunteer's five nights on the beach at Tortuguero National Park, Costa Rica | Field-journal / diary entries | Say Something | Mystery Quote | Panel Round | 2.1.1.4 |
+| 2 | A newcomer's first Songkran in Chiang Mai | Personal-story article | Reciprocal Teaching | Visual Inquiry | Jigsaw Expert Panels | 2.1.2.1 |
+| 3 | Two friends email about selling their old things at Amsterdam's Koningsdag vrijmarkt | Email / message exchange | Partner / Shared Reading | Take a Side | Small-group discussion | 2.1.3.1 |
+| 4 | This year's cheese-rolling race down Cooper's Hill, Brockworth | Simple news brief | Teacher Read-Aloud with Interactive Stops | K-W-L Chart | Town Hall Role-Play | 2.1.4.1 |
+
+| File | Lesson # | Status |
+| --- | --- | --- |
+| `Module_2/Set_1/Lesson_1_Tortuguero/Lesson1_Tortuguero.md` | 1 | Generated, self-check passed; anchor 338 words, 3 embedded photos |
+| `Module_2/Set_1/Lesson_2_Songkran/Lesson2_Songkran.md` | 2 | Generated, self-check passed; anchor 320 words, 4 embedded photos |
+| `Module_2/Set_1/Lesson_3_Koningsdag/Lesson3_Koningsdag.md` | 3 | Generated, self-check passed; anchor 312 words, 3 embedded photos |
+| `Module_2/Set_1/Lesson_4_CheeseRolling/Lesson4_CheeseRolling.md` | 4 | Generated, self-check passed; anchor 309 words, 3 embedded photos |
+| `Module_2/Set_1/Lesson_1_Tortuguero/Tortuguero_Intermediate_L1_Packet.html` | 1 | Student packet, Units 1A/1B, three embedded photos (Step 6, generated 2026-09-14 against `Generate_Student_Packet_Prompt_v2.8.md`) |
+| `Module_2/Set_1/Set1_Intermediate_Image_Credits.md` | - | Created; 13 Wikimedia photos across the four lessons |
+
+Three things about this Module that differ from Module 1 at the same Band, and that the next Narrating Set
+should expect:
+
+- **Two fixed-output Levels, not one.** In Module 2 both the Level 2 row (the one-slot frame "I ___-ed." matched
+  to an image) and the Level 3 row (a two-slot frame naming two sequential actions, matched to a **picture
+  pair**) are frame-and-picture rows, so Quality Standards §D10 and §0.11 govern two Levels per lesson. Level 3
+  is also the anchor Level, so the anchor text still has to be a real 280-350 word narrative: §0.2 governs the
+  text, the CSV row governs the task.
+- **Every lesson needs three or four action photos.** Both fixed rows end in matching a decoded frame to a
+  picture, and §D8 rules out anything the teacher prepares, so each lesson carries real Commons photos fetched
+  at generation time (§I) and rowed into the Set's register. Photos were chosen for an action that survives
+  grayscale printing (Style Guide §A.2): walking, counting, carrying, spraying, pouring, searching, paying,
+  watching, chasing, lifting. Sourcing note for next time: Commons full-text search for "a person doing X"
+  is poor, and the API rate-limits hard at more than roughly one request every 8-10 seconds; browsing the
+  event's own category and then checking each candidate by eye was what actually worked.
+- **The native-Level Day 1 set is a "Sequence and Outcome set,"** not the "Cause & Effect set"
+  `Generate_Lesson_Prompt_v3.5.md` names in its Day 1 Phase 3 bullet. Cause and effect is Module 3's verb, and
+  following the prompt literally in a Narrating lesson produces the §A4 drift. All four lessons name the
+  substitution in their own self-checks. The prompt itself is still unbumped - see Pending work.
+
+Steps 3 to 5 are not started for this Module: no homework, no Set assessment, no study guides. Step 6 is started:
+**Lesson 1's packet is generated**, Lessons 2 to 4's are not. Every remaining lesson's images are already on
+disk, so no packet is blocked.
+
+**What Lesson 1's packet settled, for the three still to build.** Both picture Levels render with the base
+`.pic-options` grid, which this packet is the first Reading packet to need (the classes moved from Style Guide
+§H.1 to §B in the same pass - see `Changelog.md`). Two practical findings: a `.pic-box` is 110x70 and
+`object-fit: cover`, so a photo whose subject is small or off-centre has its action cropped straight out of the
+item - every picture was re-cropped with `sips --cropOffset` around the action before embedding, and the
+embedded copy is the crop, not the source file, which is left unchanged. And a Level 3 picture pair is printed
+wherever it is used: Day 2's pair is embedded again in its own Task rather than pointing back to Unit 1A's
+copy.
+
 ## Generation workflow (current)
 
 This is the process for producing one Set's worth of lessons, in order (see `shared/Program_Conventions.md` §C
@@ -419,6 +524,23 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
 
 ## Pending work
 
+- **No lesson has been audited against §C9's extended self-answering-premise rule (2026-09-14).** Quality
+  Standards §C9 now states that a stem asserting a change, reversal, or negation has already handed over the
+  state it changed from, so it cannot then ask for that state (see `shared/Changelog.md`, v1.25). The rule was
+  extended after one such item was found in Passage Reading Module 2 Advanced Lesson 1 and fixed there. No
+  other already-generated lesson, homework, or assessment in this modality has been checked for the pattern.
+  This needs a read of every item stem, not a grep, since the failure is semantic: the search is for any stem
+  whose premise entails its own answer. Not started.
+- **Intermediate Module 2 Set 1 (Narrating) has lessons only (2026-09-14).** All four lessons and their 13
+  images are generated and logged; nothing else in the workflow has been run for this Module/Band. Outstanding:
+  three student packets, for Lessons 2 to 4, via `Generate_Student_Packet_Prompt_v2.8.md` (Step 6, unblocked,
+  all images on disk; Lesson 1's is done);
+  four homework assignments via `Generate_Homework_Prompt_v2.3.md` (Step 3); the Set assessment plus four study
+  guides via `Generate_Assessment_Prompt_v5.2.md` (Step 5) and its packet via
+  `Generate_Assessment_Student_Packet_Prompt_v2.0.md` (Step 5a). The TOEFL extension does not apply below
+  Advanced. Note for whoever writes the packets: this Module's Level 2 **and** Level 3 items are picture items,
+  so each packet embeds three or four base64 photos, not one.
+
 - **Passage Reading has no §D12 beat (Quality Standards v1.17, 2026-09-10).** The new §D12 requires that any
   support carrying the answer arrive only after students commit a response, and that the lesson end with one
   unsupported re-encounter. Listening/Speaking's mechanics were built the same day (a second audio-only listen
@@ -429,7 +551,10 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   answer one more item without the citation aid. Building it needs a Day 1 budget decision (currently Phase 1
   Pre-Reading 15 / Phase 2 Text Engagement 35 / Phase 3 Comprehension and Vocab Check 25, with no slack) and a
   `Generate_Lesson_Prompt_v3.5.md` bump plus a matching packet block. Not started; logged so §D12 does not
-  quietly become a Listening/Speaking-only rule.
+  quietly become a Listening/Speaking-only rule. This entry covers **every** Passage Reading lesson generated to
+  date, including Module 2 Advanced Set 1's four (2026-09-14), which were generated against v3.5 as it stands and
+  say so in their own self-checks; the gap is the prompt's, so it stays one backlog item rather than one per
+  lesson.
 
 - **Resolved 2026-09-10 (packet prompt v2.7):** §2.9's annotation key is now band-conditioned. Two of the
   four default marks sit above the Level 1 ceiling ("circle a connector word: but, because, when" - a Beginner
@@ -463,6 +588,20 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   needs no shared-file change, since §A4 already states it; only Reading's own prompt contradicts it.
   `Generate_Student_Packet_Prompt_v2.7.md` (Section 2.3's merge rule) and `shared/Student_Packet_Style_Guide.md`
   §E's strip-list also name "Cause & Effect set" and should be reworded in the same pass.
+  **Still open as of 2026-09-14.** Intermediate Module 2 Set 1 (Narrating) hit the same line and worked around it
+  per lesson rather than waiting: all four lessons use a **Sequence and Outcome set** (order of events, the
+  outcome, the reason stated for it) and say so in their self-checks, and the Set's lesson plan fixes the rule for
+  the Module. The four Describing lessons that used the old label are still unswept, and the v3.6 bump still has
+  to generalize the rule (the native-Level set's shape follows the Module's verb, with Cause & Effect named as
+  the Explaining case) rather than add a second per-Module special case. **Not a growing
+  backlog:** Module 2 Advanced Set 1 (2026-09-14) was generated with the corrected reading, using a Sequence and
+  Significance set in all four lessons, so the sweep list is still the four Describing lessons named above.
+  **One thing for v3.6 to settle:** the two Narrating Sets generated on 2026-09-14 named the substitute set
+  differently, "Sequence and Significance" at Advanced (whose Level 5-6 rows ask why events mattered) and
+  "Sequence and Outcome" at Intermediate (whose Level 4 row asks for the outcome and its stated reason). Both
+  follow the Module's verb correctly, so neither needs rewriting, but the bump should say whether the set's name
+  is fixed per Module or tracks the band's own Level rows, rather than leaving two names in the log for the same
+  rule.
 
 - **Resolved 2026-09-10 (Quality Standards §D11, room-neutral participation):** all seven affected lessons were
   rewritten, not backlogged. Advanced `Module_1/Set_1/Lesson_1_SagradaFamilia/` (a Fishbowl that arranged 5-6
@@ -513,6 +652,12 @@ teacher-facing formatted version exists yet - out of scope for this prompt.
   Transfer Check Variety rule if that lesson is revised for any other reason.
 - **Module 1 Advanced Homework/TOEFL/Assessment** - not started; now that all 4 lessons of Set 1 are generated,
   this is the next work per Steps 3-5.
+- **Module 2 Advanced Set 1 has no homework, TOEFL extension, assessment, or study guides (2026-09-14).** All
+  four lessons and all four packets are generated, so the Set is ready for Steps 3 to 5. Outstanding: one
+  homework per lesson via `Generate_Homework_Prompt_v2.3.md` (four files, none written); the optional TOEFL
+  extension via `Generate_TOEFL_Extension_Prompt_v1.1.md`, which does apply at this Band; the Set assessment via
+  `Generate_Assessment_Prompt_v5.2.md`, producing four study guides at this Band; and its packet via
+  `Generate_Assessment_Student_Packet_Prompt_v2.0.md`.
 - **Print formatting for Advanced Set 1** - now complete for all 4 lessons (`SagradaFamilia_Advanced_L1_Packet.html`,
   `ForgeAtDawn_Advanced_L2_Packet.html`, `VinylComeback_Advanced_L3_Packet.html`,
   `PortlandHeadLight_Advanced_L4_Packet.html`); Set 1 Intermediate's print

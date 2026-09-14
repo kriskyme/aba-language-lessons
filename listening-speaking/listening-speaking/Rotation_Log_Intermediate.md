@@ -146,7 +146,7 @@ register sit inside the Level 3 ceiling and because every one of them publishes 
 next to the audio, which is what makes a verbatim `<Slug>_Transcript.md` possible):
 
 **Lesson 5 generated (2026-09-10):** "Wild Cat Is Back from Near Extinction," VOA Learning English, on the
-Iberian lynx. `lessons/intermediate/Module_1/Set_2/Lesson_5_IberianLynx/`. Version `1.2.5.0`.
+Iberian lynx. `lessons/intermediate/Module_1/Set_2/Lesson_5_IberianLynx/`. Version `1.2.5.2` (see the dated notes at the end of this file).
 **Flagged deviation:** runtime 5:29 against the 2-4 minute Level 3 target, kept per Section 0.2's soft-target
 rule because pace and register are graded and the stated-versus-implied opinion layer fits the plan row
 unusually well. Also flagged: the piece carries a recovery-effort layer closer to Module 3, used only as the
@@ -166,7 +166,7 @@ Phase 3 teaches. The Day 2 speaking model is the narrator's real reported speech
 no speaker-to-speaker summary to quote. Two Commons images embedded.
 
 **Lesson 7 generated (2026-09-10):** "Museum Marks Rosetta Stone's Role in Understanding Hieroglyphs," VOA
-Learning English. `lessons/intermediate/Module_1/Set_2/Lesson_7_RosettaStone/`. Version `1.2.7.0`. Runtime
+Learning English. `lessons/intermediate/Module_1/Set_2/Lesson_7_RosettaStone/`. Version `1.2.7.2` (see the dated notes at the end of this file). Runtime
 3:59, inside the target. **Flagged:** the source's own glossary has only four entries and one of them
 ("properly") is off-theme, so three glossary words are kept and three theme-matching words are taken from the
 real transcript instead. The interrupting half of the Day 2 skill is taught from frames, since a narrated
@@ -334,3 +334,18 @@ this Band predictably mishears ("after Reuben," "looked at me and said," "had lu
 required covered-window replay. The packet was regenerated against `Generate_Student_Packet_Prompt_v2.7.md`.
 **No task, item, answer, target word, or Day 2 content changed.** With this, both generated lessons in this
 Module carry the beats and neither remains on the §D12 backlog in `Index.md`.
+
+**"Frame" translated to "sentence" (2026-09-14).** Style Guide v2.35 §E adds the row: a frame is a teaching device and the student's job is to finish a sentence, so no packet prints the word except where it is the content (a backpack's internal frame, a loom's wooden frame, the verb "frames this as"). Lessons touched here, each bumped one version: Module 1 Set 1 Lessons 1-4, Set 2 Lessons 5-8, and Module 2 Set 1 Lessons 1-2; the Set 1 assessment packet was swept too and carries no version code (Conventions §G).
+
+**Writing room (2026-09-14).** Lessons 5 and 7 tell students to cross a word out of a quoted line and write the
+right one above it, but the line ran inside the item's instruction paragraph at body leading, with no room to
+write. The quoted line now prints on its own `.editable` block (Style Guide v2.32 §F, §I item 26). `1.2.5.0` ->
+`1.2.5.1`, `1.2.7.0` -> `1.2.7.1`.
+
+**Answer space (2026-09-14).** A composed-sentence prompt sitting on one answer line gained a second, per Style
+Guide v2.34 §F: Module 1 `Lesson_1_NewBakery/` (`1.1.1.1` -> `1.1.1.2`), `Lesson_3_Backpack/` (`1.1.3.0` ->
+`1.1.3.1`), Module 2 `Lesson_1_NewKid/` (`2.1.1.1` -> `2.1.1.2`), `Lesson_2_FireRescue/` (`2.1.2.0` ->
+`2.1.2.1`). Every lesson named here then moved one further in the "frame" sweep above.
+
+**Still outstanding:** Lessons 5 and 7 remain on the §D12 verification-window backlog in `Index.md`. Today's
+passes were presentational and did not choose a transcript window for either.

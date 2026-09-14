@@ -149,7 +149,20 @@ episode "Follow me up a mountain," with Geert van Keulen's and rescue crewman Da
 telling of the same hours as the Level 7 second narrator; see `Set_1/Lesson_3_MountBowen/`. **Lesson 3
 needed no cell amendment** - its source matches the planned format exactly - but it is the first
 lesson in this lesson type built on a *partial* source record, because ABC publishes no transcript for
-the episode. Lesson 4 is not started, and the Set has no assessment yet. Lessons save to
+the episode. **Lesson 4 (`2.1.4.0`) generated 2026-09-14 from the Jim M. Tanimoto Interview, Densho Digital
+Repository (`ddr-densho-1000-270`), Segments 16 and 17 on the 1943 "loyalty questionnaire" and the mass arrest
+of Block 42 at Tule Lake, with the Densho Encyclopedia entry "Tule Lake" as the Level 7 second teller; see
+`Set_1/Lesson_4_Block42/`. No cell of its row was amended** - the row's suggested angle named "an archival record
+or a second participant's testimony," and the archival record is what the evidence allowed, since Tanimoto is the
+last surviving member of Block 42. Its runtime of 7:44 sits inside the Level 5 target, making it the only lesson
+in this Set with no runtime flag, and it is the first here built on a complete published transcript. Its one
+flagged limitation is that the encyclopedia entry's author also sat in the interview as secondary interviewer, so
+the two accounts are not fully independent; Level 7 item 4 makes that part of the task.
+
+**This Set is now complete, 4 of 4 lessons.** Lessons 1 to 3 were retrofitted to Quality Standards §D12 in the
+same 2026-09-14 pass and carry Iteration digit `1` (`2.1.1.1`, `2.1.2.1`, `2.1.3.1`); Lesson 4 was built with the
+beat and is at `0`. **The Set has no assessment yet, and that is the next step for this Module and Band.**
+Lessons save to
 `lessons/advanced/Module_2/Set_1/Lesson_<N>_<Slug>/` (Conventions §D), one at a time, three artifacts each in
 order - transcript, lesson `.md`, packet `.html`.
 

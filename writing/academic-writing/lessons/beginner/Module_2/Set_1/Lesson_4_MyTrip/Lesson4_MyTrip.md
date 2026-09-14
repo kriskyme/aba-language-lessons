@@ -1,6 +1,6 @@
 # Academic Writing Lesson 4
 
-**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.4.0
+**Module:** 2, Narrating | **Band:** Beginner | **Task Levels:** 1, 2, 3 | **Version:** 2.1.4.1
 
 **Set:** 1 | **Set position:** 4 of 4 (The Set's finale: a reader's request and Peer Editing, then the final copy, publishing, and the Closing Transfer Check)
 

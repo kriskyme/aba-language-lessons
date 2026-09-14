@@ -1,8 +1,8 @@
-# Academic Writing Assessment Generation Prompt (v4.2)
+# Academic Writing Assessment Generation Prompt (v4.3)
 
 Companion to the Academic Writing Lesson Generation Prompt and Module Lesson-Plan Prompt. Generates the assessment
-layer on top of one completed **Beginner Set** (4 lessons) or one completed **Intermediate/Advanced/Proficient
-Module Pair** (8 lessons across two Modules; the piece only reaches a finished, gradable state at Pair position
+layer on top of one completed **standalone Set** (4 lessons) or one completed **Module Pair** (8 lessons across
+two Modules; the piece only reaches a finished, gradable state at Pair position
 8): a check of whether the arc's grammar content and writing skill transferred, not a lesson and not new teaching.
 
 **Paste bundle:** run this prompt with `shared/Program_Conventions.md` and `shared/Generation_Quality_Standards.md`
@@ -10,7 +10,7 @@ alongside it. Quality Standards §A-§C (task Levels, Respectful Tiers, item qua
 requires the centerpiece, plausible distractors and padded banks, time-balanced, counted, complete, traceable)
 govern every item here and are not restated. This prompt states only what is specific to a Writing assessment.
 
-**Current version: v4.2.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
+**Current version: v4.3.** For the dated version history and reasoning, see `Changelog.md`. Numbers below (item
 counts, sitting length, essay time budget) are reasoned starting points; neither this prompt nor its packet
 companion has yet been run against a real Set or Pair.
 
@@ -35,7 +35,7 @@ review aid.
 
 ### A.0 Scope and inputs
 
-Run after a Beginner Set (all 4 lessons) or a Module Pair (all 8 lessons) is complete, never at Pair position 4.
+Run after a standalone Set (all 4 lessons) or a Module Pair (all 8 lessons) is complete, never at Pair position 4.
 Inputs: Module(s), Band, and the completed Set's or Pair's content (to confirm which Focus A/B, which confusable
 pair(s), and which task Levels were actually taught).
 
@@ -46,7 +46,7 @@ be new is each item's sentence content.
 
 ### A.1 What Part A checks
 
-1. **Focus A's and Focus B's target forms** as actually taught: Module N's alone for a Beginner Set, both Modules'
+1. **Focus A's and Focus B's target forms** as actually taught: the Module's alone for a standalone Set, both Modules'
    for a Pair; only the rows this Set/Pair used, not the whole bank.
 2. **The confusable pair(s) taught** (it's/its, your/you're), tested directly.
 3. **Where the band reaches Essay Composition:** Essay Focus A/B's structural vocabulary (direct vs. indirect

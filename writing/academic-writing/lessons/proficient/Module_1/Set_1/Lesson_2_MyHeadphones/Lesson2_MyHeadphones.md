@@ -1,6 +1,6 @@
 # Academic Writing Lesson 2
 
-**Module:** 1, Describing | **Band:** Proficient | **Task Levels:** 5, 6, 7, 8 | **Version:** 1.1.2.0
+**Module:** 1, Describing | **Band:** Proficient | **Task Levels:** 5, 6, 7, 8 | **Version:** 1.1.2.1
 
 **Set:** 1 of Module Pair 1-2 | **Pair position:** 2 of 8 (Set position 2 of 4: Grammar Focus B; Essay Focus B
 continued, outlining and combining; Day 2's prewriting introduces the draft object and the Draft Word Bank)
@@ -76,12 +76,14 @@ Rule 1, reducing a relative clause. Yesterday you put the exact detail after the
 Most of those clauses can drop their pronoun and their verb and keep only a participle, which lets one sentence
 carry two details without reading as a list.
 
-| Full relative clause | Reduced |
-|---|---|
-| a ring that has hardened over three winters | a ring, hardened over three winters |
-| the fabric that is fraying along the top edge | the fabric fraying along the top edge |
-| the cups, which are covered in a woven fabric | the cups, covered in a woven fabric |
-| the strap that was repaired last spring | the strap, repaired last spring |
+| Full relative clause | Reduced | What dropped | Which participle |
+|---|---|---|---|
+| a ring that has hardened over three winters | a ring, hardened over three winters | that has | -ed: the ring did not harden anything, so the clause is passive |
+| the fabric that is fraying along the top edge | the fabric fraying along the top edge | that is | -ing: the fabric is doing the fraying, so the clause is active |
+| the cups, which are covered in a woven fabric | the cups, covered in a woven fabric | which are | -ed: passive |
+| the strap that was repaired last spring | the strap, repaired last spring | that was | -ed: passive |
+
+Each example is annotated per feature rather than shown as a before-and-after pair (Quality Standards §D14).
 
 An active clause reduces to an **-ing** participle (fraying, digging, catching). A passive clause reduces to an
 **-ed** participle (hardened, repaired, covered).
